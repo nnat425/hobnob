@@ -5,7 +5,6 @@ class CreateAdvisors < ActiveRecord::Migration
       t.string :lastname, null: false
       t.string :email, null: false
       t.string :password_digest, null: false
-      t.attachment :avatar
       t.string :current_title
       t.string :job_description
       t.string :charity
