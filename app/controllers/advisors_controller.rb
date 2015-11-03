@@ -16,6 +16,8 @@ class AdvisorsController < ApplicationController
   end
 
   def settings
+    @advisor = Advisor.find_by(id: params[:id])
+    render :settings
   end
 
   def show
