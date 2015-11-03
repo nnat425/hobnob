@@ -15,6 +15,10 @@ class AdvisorsController < ApplicationController
     end
   end
 
+  def edit
+    @advisor = current_user
+  end
+
   private
 
     def advisor_params
