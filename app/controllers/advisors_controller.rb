@@ -15,9 +15,14 @@ class AdvisorsController < ApplicationController
     end
   end
 
+  def show
+    @advisor = Advisor.find_by(id: params[:id])
+  end
+
   def edit
     @advisor = current_user
   end
+
 
   private
 
