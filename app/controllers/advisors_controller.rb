@@ -23,7 +23,6 @@ class AdvisorsController < ApplicationController
     @advisor = current_user
   end
 
-
   private
 
     def advisor_params
