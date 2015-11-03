@@ -27,7 +27,7 @@ class AdvisorsController < ApplicationController
   private
 
     def advisor_params
-      params.require(:advisor).permit(:firstname, :lastname, :email, :password)
+      params.require(:advisor).permit(:email, :password)
     end
 
 
