@@ -10,10 +10,16 @@ class AdvisorsController < ApplicationController
       session[:user_id] = advisor.id
       redirect_to advisor_path(advisor)
     else
-      @errors = user.errors.full_messages
-      render "new"
+      flash[:error] = advisor.errors.full_messages
+      redirect_to new_advisor_path
     end
   end
+
+  private
+
+    def advisor_params
+      params.require(:advisor).permit(:firstname, :lastname, :email, :password)
+    end
 
 
 end
