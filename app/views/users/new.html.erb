@@ -1,0 +1,27 @@
+    <% if flash[:errors] %>
+    <% flash[:errors].each do |msg| %>
+    <p class="error-message"><%= msg %></p>
+    <% end %>
+    <% end %>
+
+    <%= form_for @user do |f| %>
+
+    <%= f.text_field :first_name, placeholder: "First Name" %>
+    <%= f.text_field :last_name, placeholder: "Last Name" %>
+    <%= f.text_field :email, placeholder: "Email" %>
+    <%= f.password_field :password, placeholder: "Password" %>
+    <%= f.password_field :password_confirmation %>
+
+    Student -- > Yes
+    <%= radio_button("user","student",true) %>
+    Student -- > No
+    <%= radio_button("user","student",false) %>
+
+    <%= f.text_field :program, placeholder: "Program" %>
+
+    Expected Graduation Date
+    <%= f.select :graduation_date, (2016..2030) %>
+
+    <%=f.submit "Register" %>
+
+    <% end %>
