@@ -4,6 +4,17 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def create
+    user = User.new(user_params)
+    if user.save
+      user.create(user_params)
+      render :"thanks"
+    else
+      flash[:error] = user.error.full_messages
+      redirect_to new_user_path
+    end
+  end
+
 
 
 
