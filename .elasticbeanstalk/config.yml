@@ -1,6 +1,8 @@
 branch-defaults:
   deploying_to_aws:
     environment: hobnob-aws
+  master:
+    environment: hobnob-aws
 global:
   application_name: hobnob
   default_ec2_keyname: null
