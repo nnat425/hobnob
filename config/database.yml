@@ -81,5 +81,6 @@ test:
 production:
   <<: *default
   database: hobnob_production
+  host: hobnob-aws-qpqjamhqtq.elasticbeanstalk.com
   username: hobnob
   password: <%= ENV['HOBNOB_DATABASE_PASSWORD'] %>
