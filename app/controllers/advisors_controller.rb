@@ -15,17 +15,12 @@ class AdvisorsController < ApplicationController
     end
   end
 
-  def settings
-    @advisor = Advisor.find_by(id: params[:id])
-    render :settings
-  end
-
   def show
     @advisor = Advisor.find_by(id: params[:id])
   end
 
   def edit
-    @advisor = current_user
+    @advisor = Advisor.find_by(id: params[:id])
   end
 
   private
