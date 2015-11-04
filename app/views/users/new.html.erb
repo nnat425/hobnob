@@ -17,11 +17,11 @@
     Student -- > No
     <%= radio_button("user","student",false) %>
 
-    <%= f.text_field :program, placeholder: "Program" %>
+<!-- REMEMBER TO SET STYLE DISPLAY TO NONE-->
+ <%= f.text_field :program, placeholder: "Program" %>
 
-    Expected Graduation Date
     <%= f.select :graduation_date, (2016..2030) %>
-
+    <br>
     <%=f.submit "Register" %>
 
     <% end %>
