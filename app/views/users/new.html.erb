@@ -4,28 +4,36 @@
     <% end %>
     <% end %>
 
-<header class="hero">
-</header>
 
 
-    <%= form_for @user do |f| %>
-    <div class="row">
-        <div class="large-4 columns">
-            <%= f.text_field :first_name, placeholder: "First Name" %>
+
+    <header class="hero">
+    </header>
+
+
+  <div class="row">
+    <div class="large-6 columns">
+      <div class="signup-panel">
+        <p class="welcome"> Signup!</p>
+
+        <%= form_for @user do |f| %>
+        <div class="row">
+            <div class="large-4 columns">
+                <%= f.text_field :first_name, placeholder: "First Name" %>
+            </div>
         </div>
-    </div>
 
-    <div class="row">
-        <div class="large-4 columns">
-           <%= f.text_field :last_name, placeholder: "Last Name" %>
+        <div class="row">
+            <div class="large-4 columns">
+               <%= f.text_field :last_name, placeholder: "Last Name" %>
+           </div>
        </div>
-   </div>
-   <div class="row">
-    <div class="large-4 columns">
-     <%= f.text_field :email, placeholder: "Email" %>
+       <div class="row">
+        <div class="large-4 columns">
+         <%= f.text_field :email, placeholder: "Email" %>
+     </div>
  </div>
-</div>
-<div class="row">
+ <div class="row">
     <div class="large-4 columns">
      <%= f.password_field :password, placeholder: "Password" %>
  </div>
@@ -63,3 +71,7 @@
 </div>
 
 <% end %>
+
+</div>
+</div>
+</div>

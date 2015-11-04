@@ -115,3 +115,14 @@ $primary-color: #87D37C;
   height: 70vh;
   overflow: hidden; }
 
+.signup-panel {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  text-align:center;
+  margin-top: 30px;
+}
+
+.signup-panel form input{
+  width: 200px;
+}
