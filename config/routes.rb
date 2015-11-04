@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :advisors
-  get 'advisors/:id/settings' => 'advisors#settings'
+  get 'advisors/:id/settings' => 'advisors#settings', as: :advisor_settings
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

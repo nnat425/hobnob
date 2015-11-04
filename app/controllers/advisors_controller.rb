@@ -8,7 +8,7 @@ class AdvisorsController < ApplicationController
     advisor = Advisor.new(advisor_params)
     if advisor.save && advisor.valid?
       session[:user_id] = advisor.id
-      redirect_to "/advisors/#{advisor.id}/settings"
+      redirect_to advisor_settings_path(advisor)
     else
       flash[:error] = advisor.errors.full_messages
       redirect_to new_advisor_path
@@ -31,7 +31,7 @@ class AdvisorsController < ApplicationController
   private
 
     def advisor_params
-      params.require(:advisor).permit(:email, :password)
+      params.require(:advisor).permit(:email, :email_confirmation, :password, :password_confirmation)
     end
 
 

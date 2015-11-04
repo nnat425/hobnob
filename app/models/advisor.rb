@@ -1,8 +1,9 @@
 class Advisor < ActiveRecord::Base
   has_many :categories
-  validates :firstname, :lastname, :email, :presence => true
-  validates :email, uniqueness: true, confirmation: true
-  validates :email_confirmation, presence: true
-
+  validates :email, :presence => true
+  validates :email, uniqueness: true
+  validates_confirmation_of :password
+  validates_confirmation_of :email, :message => "Should match confirmation"
+  validates_presence_of :password_confirmation
   has_secure_password
 end

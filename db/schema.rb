@@ -29,8 +29,8 @@ ActiveRecord::Schema.define(version: 20151103194810) do
     t.datetime "updated_at",                      null: false
 
   create_table "advisors", force: :cascade do |t|
-    t.string   "firstname",           null: false
-    t.string   "lastname",            null: false
+    t.string   "firstname"
+    t.string   "lastname"
     t.string   "email",               null: false
     t.string   "password_digest",     null: false
     t.string   "current_title"
