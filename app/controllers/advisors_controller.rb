@@ -20,7 +20,17 @@ class AdvisorsController < ApplicationController
   end
 
   def edit
-    @advisor = Advisor.find_by(id: params[:id])
+    @advisor = current_user
+  end
+
+  def update
+    if params[:advisor]
+      current_user.update_attributes(advisor_params.merge(params[:advisor]))
+      render :show
+    else
+      flash[:error] = current_user.errors.full_messages
+      render :edit
+    end
   end
 
   private
