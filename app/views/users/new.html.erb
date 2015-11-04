@@ -4,24 +4,74 @@
     <% end %>
     <% end %>
 
-    <%= form_for @user do |f| %>
 
-    <%= f.text_field :first_name, placeholder: "First Name" %>
-    <%= f.text_field :last_name, placeholder: "Last Name" %>
-    <%= f.text_field :email, placeholder: "Email" %>
-    <%= f.password_field :password, placeholder: "Password" %>
-    <%= f.password_field :password_confirmation %>
 
-    Student -- > Yes
-    <%= radio_button("user","student",true) %>
-    Student -- > No
-    <%= radio_button("user","student",false) %>
 
-<!-- REMEMBER TO SET STYLE DISPLAY TO NONE-->
- <%= f.text_field :program, placeholder: "Program" %>
+    <header class="hero">
+    </header>
 
-    <%= f.select :graduation_date, (2016..2030) %>
-    <br>
-    <%=f.submit "Register" %>
 
-    <% end %>
+  <div class="row">
+    <div class="large-6 columns">
+      <div class="signup-panel">
+        <p class="welcome"> Signup!</p>
+
+        <%= form_for @user do |f| %>
+        <div class="row">
+            <div class="large-4 columns">
+                <%= f.text_field :first_name, placeholder: "First Name" %>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="large-4 columns">
+               <%= f.text_field :last_name, placeholder: "Last Name" %>
+           </div>
+       </div>
+       <div class="row">
+        <div class="large-4 columns">
+         <%= f.text_field :email, placeholder: "Email" %>
+     </div>
+ </div>
+ <div class="row">
+    <div class="large-4 columns">
+     <%= f.password_field :password, placeholder: "Password" %>
+ </div>
+</div>
+<div class="row">
+    <div class="large-4 columns">
+     <%= f.password_field :password_confirmation, placeholder: "Password Confirmation" %>
+ </div>
+</div>
+<div class="row">
+    <div class="large-4 columns">
+        Current Student
+        <br>
+        Yes <%= radio_button("user","student",true) %>
+        <br>
+        No <%= radio_button("user","student",false) %>
+    </div>
+</div>
+<div class="row">
+    <div class="large-4 columns">
+        <%= f.text_field :program, placeholder: "Program" %>
+    </div>
+</div>
+<div class="row">
+    <div class="large-4 columns">
+        Expected Graduation Date
+        <%= f.select :graduation_date, (2016..2030) %>
+    </div>
+</div>
+
+<div class="row">
+    <div class="large-4 columns">
+     <%=f.submit "Register" %>
+ </div>
+</div>
+
+<% end %>
+
+</div>
+</div>
+</div>
