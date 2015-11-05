@@ -42,13 +42,13 @@ $primary-color: #87D37C;
       padding-bottom: 0.5rem;
 
       &:hover {
-        color: $primary-color;
+        color: #43c7f4;
         transition: all .3s ease-in-out;
       }
     }
 
     .active a {
-      color: $primary-color;
+      color: #43c7f4;
     }
   }
 
@@ -71,7 +71,7 @@ $primary-color: #87D37C;
     }
 
     a:hover {
-      border-bottom: 2px solid $primary-color;
+      border-bottom: 2px solid #43c7f4;
     }
   }
 
@@ -95,13 +95,13 @@ $primary-color: #87D37C;
 
 .name {
   text-align: center;
-  font-size:  1.5rem;
-  line-height: 1;
+  font-size:  1.25rem;
   margin: 0 0 1rem 0;
   color: #fff;
+  letter-spacing: 5px;
 
   i {
-    color: $primary-color;
+    color: #43c7f4;
     margin-right: 0.5rem;
   }
 
