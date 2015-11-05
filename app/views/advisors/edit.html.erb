@@ -1,34 +1,115 @@
-<h1>Edit Your Profile</h1>
 
-<p>Please fill in the form below:</p>
-<p>*Fields will not be show up on your profile page</p>
-<%= form_for @advisor do |f| %>
+<% if flash[:errors] %>
+  <% flash[:errors].each do |msg| %>
+    <p class="error-message"><%= msg %></p>
+  <% end %>
 
-  <%= f.hidden_field :password_confirmation,:value => @advisor.password_digest %>
+<% end %>
+
+<div class="row">
+  <div class="small-12 small-centered medium-12 medium-centered large-12 large-centered columns">
+    <h1 id="page_header">Edit Your Profile</h1>
+  </div>
+</div>
+
+<div class="row">
+  <div class="large-12 columns">
+    <p>Please take some time to fill in the following details:</p>
+    <p>*Fields will not be shown on your profile page</p>
+  </div>
+</div>
+
+        <%= form_for @advisor do |f| %>
+        <%= f.hidden_field :password_confirmation,:value => @advisor.password_digest %>
 
   <%= f.hidden_field :email_confirmation, :value => @advisor.email %>
 
-  <%= f.text_field :alternative_email, placeholder: "Alternative Email" %>
-  <div class="spacer"></div>
-  <%= f.text_field :current_title, placeholder: "Current Title" %>
-  <div class="spacer"></div>
-  <%= f.text_field :job_description, placeholder: "Job Description" %>
-  <div class="spacer"></div>
-  <%= f.text_field :charity, placeholder: "Charity of Choice" %>
-  <div class="spacer"></div>
-  <%= f.text_field :location, placeholder: "Location" %>
-  <div class="spacer"></div>
-  <%= f.text_field :company, placeholder: "Current Company" %>
-  <div class="spacer"></div>
-  <%= f.text_field :years_of_experience, placeholder: "Years of Experience" %>
-  <div class="spacer"></div>
-  <%= f.text_field :other_companies, placeholder: "Previous Companies" %>
-  <div class="spacer"></div>
-  <%= f.text_field :education, placeholder: "Education" %>
-  <div class="spacer"></div>
-  <%= f.text_field :certifications, placeholder: "Certification" %>
-  <div class="spacer"></div>
-  <%= f.text_field :interesting_facts, placeholder: "Other Information" %>
-  <div class="spacer"></div>
-  <%= f.submit "Update Profile", :class => "button" %>
-<% end %>
+<div class="row">
+  <div class="small-12 medium-12 large-12 columns">
+    <div class="panel">
+      <div class="row">
+        <div class="small-11 small-centered large-8 columns">
+          <%= f.label "Alternative Email*" %>
+          <%= f.text_field :alternative_email, placeholder: "Alternative email" %>
+          <div class="spacer"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-11 small-centered large-8 columns">
+          <%= f.label "Current Company*" %>
+          <%= f.text_field :company, placeholder: "Company title" %>
+          <div class="spacer"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-11 small-centered large-8 columns">
+          <%= f.label "Current Title" %>
+          <%= f.text_field :current_title, placeholder: "Current title" %>
+          <div class="spacer"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-11 small-centered large-8 columns">
+          <%= f.label "Job Description" %>
+          <%= f.text_field :job_description, placeholder: "Job description" %>
+          <div class="spacer"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-11 small-centered large-8 columns">
+          <%= f.label "Charity/Organization(s)" %>
+          <%= f.text_field :charity, placeholder: "Charity of choice" %>
+          <div class="spacer"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-11 small-centered large-8 columns">
+          <%= f.label "Location" %>
+          <%= f.text_field :location, placeholder: "Location" %>
+          <div class="spacer"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-11 small-centered large-8 columns">
+          <%= f.label "Years of experience" %>
+          <%= f.text_field :years_of_experience, placeholder: "Years of Experience" %>
+          <div class="spacer"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-11 small-centered large-8 columns">
+          <%= f.label "Previous Companies" %>
+          <%= f.text_field :other_companies, placeholder: "Previous Companies" %>
+          <div class="spacer"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-11 small-centered large-8 columns">
+          <%= f.label "Education" %>
+          <%= f.text_field :education, placeholder: "Education" %>
+          <div class="spacer"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-11 small-centered large-8 columns">
+          <%= f.label "Certification(s)" %>
+          <%= f.text_field :certifications, placeholder: "Certification" %>
+          <div class="spacer"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-11 small-centered large-8 columns">
+          <%= f.label "Other Information" %>
+          <%= f.text_area(:interesting_facts, cols:10, rows: 10) %>
+          <div class="spacer"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-11 small-centered large-8 columns">
+          <%= f.submit "Update Profile", :class => "button" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        <% end %>

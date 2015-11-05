@@ -146,7 +146,7 @@ margin-top: 1em;
 #signup_header {
 text-align: center;
 letter-spacing: 2px;
-font-family: "Ubuntu";
+font-family: "Open Sans";
 font-weight: 100;
 }
 
@@ -208,4 +208,11 @@ $gradient2: linear-gradient(45deg, #2ecc71, dodgerblue);
   border:solid white 3px;
   padding: 1em;
   text-align:center;
+}
+
+#page_header {
+  text-align: center;
+  letter-spacing: 2px;
+  font-family: "Open Sans";
+  font-weight: 100;
 }
