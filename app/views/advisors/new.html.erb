@@ -1,13 +1,59 @@
-<h1>Advisor Sign Up</h1>
 
-<%= form_for @advisor do |f| %>
-  <%= f.text_field :email, placeholder: "Email" %>
-  <div class="spacer"></div>
-  <%= f.text_field :email_confirmation, placeholder: "Confirm Email" %>
-  <div class="spacer"></div>
-  <%= f.password_field :password, placeholder: "Password" %>
-  <div class="spacer"></div>
-  <%= f.password_field :password_confirmation, placeholder: "Confirm Password" %>
-  <div class="spacer"></div>
-  <%= f.submit "Register", :class => "button" %>
+<% if flash[:errors] %>
+  <% flash[:errors].each do |msg| %>
+    <p class="error-message"><%= msg %></p>
+  <% end %>
 <% end %>
+
+<div class="row">
+  <div class="large-6 large-centered small-12 small-centered columns">
+    <div class="signup-panel">
+      <div class="row">
+        <h2 id="signup_header">Join HOBNOB</h2>
+      </div>
+      <%= form_for @advisor do |f| %>
+        <div class="row">
+          <div class="large-10 large-centered small-11 small-centered columns">
+            <%= f.text_field :firstname, placeholder: "First Name" %>
+            <div class="spacer"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-10 large-centered small-11 small-centered columns">
+            <%= f.text_field :lastname, placeholder: "Last Name" %>
+            <div class="spacer"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-10 large-centered small-11 small-centered columns">
+            <%= f.text_field :email, placeholder: "Email" %>
+            <div class="spacer"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-10 large-centered small-11 small-centered columns">
+            <%= f.text_field :email_confirmation, placeholder: "Confirm Email" %>
+            <div class="spacer"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-10 large-centered small-11 small-centered columns">
+            <%= f.password_field :password, placeholder: "Password" %>
+            <div class="spacer"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-10 large-centered small-11 small-centered columns">
+            <%= f.password_field :password_confirmation, placeholder: "Confirm Password" %>
+            <div class="spacer"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-10 large-centered small-11 small-centered columns">
+            <%= f.submit "Register", :class => "button" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
