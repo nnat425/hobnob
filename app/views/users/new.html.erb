@@ -48,20 +48,22 @@
   <div class="large-5  small-11 small-centered columns">
     <label>Current Student</label>
     <%= radio_button("user","student",true) %><label for="user_student_true">Yes</label>
-    <%= radio_button("user","student",false) %>
+    <%= radio_button("user","student",false)%>
     <label for="user_student_false">No</label>
   </div>
 </div>
 
 <div class="row">
   <div class="large-10 large-centered small-11 small-centered columns">
-    <%= f.text_field :program, placeholder: "Program" %>
+    <%= f.text_field :program, placeholder: "Program"%>
   </div>
 </div>
 <div class="row">
   <div class="large-10 large-centered small-11 small-centered columns">
+    <div id='grad_date'>
     Expected Graduation Date
     <%= f.select :graduation_date, (2016..2030) %>
+  </div>
   </div>
 </div>
 
