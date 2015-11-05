@@ -25,9 +25,12 @@ $primary-color: #87D37C;
 }
 
 .menu {
-  background-color: $background-color;
+  background-color: rgba(0,0,0,.2);
   padding: 1.5rem 3rem;
   height: auto;
+  border-bottom: 1px solid #adadad;
+
+
 
   .inline-list {
     text-align: center;
