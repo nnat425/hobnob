@@ -113,16 +113,22 @@ $primary-color: #87D37C;
   background: url("http://cmcc.flywheelsites.com/cyp/wp-content/uploads/sites/7/2014/04/meeting-cyp-2.jpg") no-repeat center center;
   background-size: cover;
   height: 70vh;
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 .signup-panel {
   border-radius: 5px;
   border: 1px solid #ccc;
   padding: 15px;
   text-align:center;
-  margin-top: 30px;
+  margin: auto;
 }
 
 .signup-panel form input{
-  width: 200px;
+  width: 100%;
+
+}
+
+#signup_header {
+  text-align: center;
 }
