@@ -25,34 +25,32 @@ max-width: 100%;
 }
 
 .menu {
-background-color: rgba(0,0,0,.2);
-padding: 1.5rem 3rem;
-height: auto;
-border-bottom: 1px solid #adadad;
+  background-color: rgba(0,0,0,.2);
+  padding: 1.5rem 3rem;
+  height: auto;
+  border-bottom: 1px solid #adadad;
 
+  .inline-list {
+    text-align: center;
 
+    li {
+      float: none;
+      display: inline-block;
+    }
 
-.inline-list {
-text-align: center;
+    a {
+      color: #fff;
+      padding-bottom: 0.5rem;
 
-li {
-float: none;
-display: inline-block;
-}
+    &:hover {
+      color: #43c7f4;
+      transition: all .3s ease-in-out;
+    }
+  }
 
-a {
-color: #fff;
-padding-bottom: 0.5rem;
-
-&:hover {
-color: #43c7f4;
-transition: all .3s ease-in-out;
-}
-}
-
-.active a {
-color: #43c7f4;
-}
+  .active a {
+    color: #43c7f4;
+  }
 }
 
 .account {
@@ -103,9 +101,15 @@ margin: 0 0 1rem 0;
 color: #fff;
 letter-spacing: 5px;
 
+
 i {
 color: #43c7f4;
 margin-right: 0.5rem;
+
+}
+
+#nav_logo {
+  margin-right: 0.5rem;
 }
 
 @media only screen and (min-width: 40.063em) {
