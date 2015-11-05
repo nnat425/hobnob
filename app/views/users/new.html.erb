@@ -1,73 +1,72 @@
-    <% if flash[:errors] %>
-    <% flash[:errors].each do |msg| %>
+<% if flash[:errors] %>
+  <% flash[:errors].each do |msg| %>
     <p class="error-message"><%= msg %></p>
-    <% end %>
-    <% end %>
+  <% end %>
+<% end %>
 
 
 
 
-    <header class="hero">
-    </header>
+<header class="hero">
+</header>
 
 
-  <div class="row">
-    <div class="large-6 columns">
-      <div class="signup-panel">
-        <p class="welcome"> Signup!</p>
+<div class="row">
+  <div class="large-6 large-centered small-12 small-centered columns">
+    <div class="signup-panel">
+      <h2 id="signup_header"> Signup!</h2>
 
-        <%= form_for @user do |f| %>
-        <div class="row">
-            <div class="large-4 columns">
-                <%= f.text_field :first_name, placeholder: "First Name" %>
-            </div>
+      <%= form_for @user do |f| %>
+      <div class="row">
+        <div class="large-10 large-centered small-11 small-centered columns">
+          <%= f.text_field :first_name, placeholder: "First Name" %>
         </div>
+      </div>
 
-        <div class="row">
-            <div class="large-4 columns">
-               <%= f.text_field :last_name, placeholder: "Last Name" %>
-           </div>
+      <div class="row">
+        <div class="large-10 large-centered small-11 small-centered columns">
+         <%= f.text_field :last_name, placeholder: "Last Name" %>
        </div>
-       <div class="row">
-        <div class="large-4 columns">
-         <%= f.text_field :email, placeholder: "Email" %>
      </div>
+     <div class="row">
+      <div class="large-10 large-centered small-11 small-centered columns">
+       <%= f.text_field :email, placeholder: "Email" %>
+     </div>
+   </div>
+   <div class="row">
+    <div class="large-10 large-centered small-11 small-centered columns">
+     <%= f.password_field :password, placeholder: "Password" %>
+   </div>
  </div>
  <div class="row">
-    <div class="large-4 columns">
-     <%= f.password_field :password, placeholder: "Password" %>
+  <div class="large-10 large-centered small-11 small-centered columns">
+   <%= f.password_field :password_confirmation, placeholder: "Password Confirmation" %>
  </div>
 </div>
 <div class="row">
-    <div class="large-4 columns">
-     <%= f.password_field :password_confirmation, placeholder: "Password Confirmation" %>
- </div>
+  <div class="large-10 large-centered small-11 small-centered columns">
+    Current Student
+    <br>
+    Yes <%= radio_button("user","student",true) %>
+    No <%= radio_button("user","student",false) %>
+  </div>
 </div>
 <div class="row">
-    <div class="large-4 columns">
-        Current Student
-        <br>
-        Yes <%= radio_button("user","student",true) %>
-        <br>
-        No <%= radio_button("user","student",false) %>
-    </div>
+  <div class="large-10 large-centered small-11 small-centered columns">
+    <%= f.text_field :program, placeholder: "Program" %>
+  </div>
 </div>
 <div class="row">
-    <div class="large-4 columns">
-        <%= f.text_field :program, placeholder: "Program" %>
-    </div>
-</div>
-<div class="row">
-    <div class="large-4 columns">
-        Expected Graduation Date
-        <%= f.select :graduation_date, (2016..2030) %>
-    </div>
+  <div class="large-10 large-centered small-11 small-centered columns">
+    Expected Graduation Date
+    <%= f.select :graduation_date, (2016..2030) %>
+  </div>
 </div>
 
 <div class="row">
-    <div class="large-4 columns">
-     <%=f.submit "Register" %>
- </div>
+  <div class="large-10 large-centered small-11 small-centered columns">
+    <%=f.submit "Register", :class => "button" %>
+  </div>
 </div>
 
 <% end %>
