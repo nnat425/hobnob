@@ -10,7 +10,7 @@ class AdvisorsController < ApplicationController
       session[:user_id] = advisor.id
       redirect_to edit_advisor_path(advisor)
     else
-      flash[:error] = advisor.errors.full_messages
+      flash[:errorss] = advisor.errors.full_messages
       redirect_to new_advisor_path
     end
   end
@@ -27,7 +27,6 @@ class AdvisorsController < ApplicationController
     advisor = Advisor.find_by(id: params[:id])
     if advisor_params
       advisor.update(advisor_params)
-      binding.pry
       redirect_to advisor_path(advisor)
     else
       flash[:error] = advisor.errors.full_messages
@@ -38,7 +37,7 @@ class AdvisorsController < ApplicationController
   private
 
     def advisor_params
-      params.require(:advisor).permit(:email, :email_confirmation, :password, :password_confirmation, :firstname, :lastname, :alternative_email, :current_title, :job_description, :charity, :location, :company, :years_of_experience, :other_companies, :education, :certifications, :interesting_facts)
+      params.require(:advisor).permit(:email, :email_confirmation, :password,:password_confirmation,  :firstname, :lastname, :alternative_email, :current_title, :job_description, :charity, :location, :company, :years_of_experience, :other_companies, :education, :certifications, :interesting_facts)
     end
 
 end
