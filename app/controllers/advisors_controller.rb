@@ -26,11 +26,12 @@ class AdvisorsController < ApplicationController
   def update
     advisor = Advisor.find_by(id: params[:id])
     if advisor_params
-      advisor.update_attributes(advisor_params)
+      advisor.update(advisor_params)
+      binding.pry
       redirect_to advisor_path(advisor)
     else
-      flash[:error] = current_user.errors.full_messages
-      render :edit
+      flash[:error] = advisor.errors.full_messages
+      redirect_to edit_advisor_path(advisor)
     end
   end
 
