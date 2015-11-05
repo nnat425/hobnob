@@ -194,15 +194,10 @@ overflow: hidden;
 $gradient: linear-gradient(45deg, pink, skyblue);
 $gradient2: linear-gradient(45deg, #2ecc71, dodgerblue);
 
-.button {
-  color: transparent;
-  font-size: 2rem;
+.network_button {
+  color: #fff;
+  font-size: 1rem;
   letter-spacing: 5px;
-  border: 4px solid transparent;
-  border-image: $gradient;
-  border-image-slice: 1;
-  background: $gradient;
-  -webkit-background-clip: text;
   text-fill-color: transparent;
   transition: all 0.2s ease;
 
@@ -211,5 +206,6 @@ $gradient2: linear-gradient(45deg, #2ecc71, dodgerblue);
 #get_networking{
   margin-top:70px;
   border:solid white 3px;
+  padding: 1em;
   text-align:center;
 }
