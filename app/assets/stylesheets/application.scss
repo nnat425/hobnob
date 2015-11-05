@@ -1,18 +1,18 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- *= require foundation_and_overrides
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+* or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any styles
+* defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+* file per style scope.
+*
+*= require_tree .
+*= require_self
+*= require foundation_and_overrides
 /*= require foundation */
 */
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
@@ -21,168 +21,169 @@ $background-color: #292c2f;
 $primary-color: #87D37C;
 
 .row {
-  max-width: 100%;
+max-width: 100%;
 }
 
 .menu {
-  background-color: rgba(0,0,0,.2);
-  padding: 1.5rem 3rem;
-  height: auto;
-  border-bottom: 1px solid #adadad;
+background-color: rgba(0,0,0,.2);
+padding: 1.5rem 3rem;
+height: auto;
+border-bottom: 1px solid #adadad;
 
 
 
-  .inline-list {
-    text-align: center;
+.inline-list {
+text-align: center;
 
-    li {
-      float: none;
-      display: inline-block;
-    }
+li {
+float: none;
+display: inline-block;
+}
 
-    a {
-      color: #fff;
-      padding-bottom: 0.5rem;
+a {
+color: #fff;
+padding-bottom: 0.5rem;
 
-      &:hover {
-        color: #43c7f4;
-        transition: all .3s ease-in-out;
-      }
-    }
+&:hover {
+color: #43c7f4;
+transition: all .3s ease-in-out;
+}
+}
 
-    .active a {
-      color: #43c7f4;
-    }
-  }
+.active a {
+color: #43c7f4;
+}
+}
 
-  .account {
-    position: absolute;
-    top: 3%;
-    right: 3%;
+.account {
+position: absolute;
+top: 3%;
+right: 3%;
 
-    a , i {
-      color: #fff;
-    }
-  }
+a , i {
+color: #fff;
+}
+}
 
-  @media only screen and (min-width: 40.063em) {
-  height: 5rem;
+@media only screen and (min-width: 40.063em) {
+height: 5rem;
 
-  .inline-list {
-    float: left;
-    margin: 0 0 0 1.5rem;
-    }
+.inline-list {
+float: left;
+margin: 0 0 0 1.5rem;
+}
 
-    a:hover {
-      border-bottom: 2px solid #43c7f4;
-    }
-  }
+a:hover {
+border-bottom: 2px solid #43c7f4;
+}
+}
 
-  .account-action {
-    float: right;
-    margin: -.75rem 0 0 0;
+.account-action {
+float: right;
+margin: -.75rem 0 0 0;
 
-    li {
-      margin-left: .2rem;
-    }
+li {
+margin-left: .2rem;
+}
 
-    a { padding: 0.75rem 1rem;}
+a { padding: 0.75rem 1rem;}
 
-    a.signup {
-      font-weight: bold;
-      background-color: scale-color($background-color, $lightness: 10%);
-      border-radius: 3px;
-    }
-  }
+a.signup {
+font-weight: bold;
+background-color: scale-color($background-color, $lightness: 10%);
+border-radius: 3px;
+}
+}
 }
 
 .name {
-  text-align: center;
-  font-size:  1.25rem;
-  margin: 0 0 1rem 0;
-  color: #fff;
-  letter-spacing: 5px;
+text-align: center;
+font-size:  1.25rem;
+margin: 0 0 1rem 0;
+color: #fff;
+letter-spacing: 5px;
 
-  i {
-    color: #43c7f4;
-    margin-right: 0.5rem;
-  }
+i {
+color: #43c7f4;
+margin-right: 0.5rem;
+}
 
-  @media only screen and (min-width: 40.063em) {
-    float: left;
-  }
+@media only screen and (min-width: 40.063em) {
+float: left;
+}
 }
 
 .hero {
-  background: url("http://cmcc.flywheelsites.com/cyp/wp-content/uploads/sites/7/2014/04/meeting-cyp-2.jpg") no-repeat center center;
-  background-size: cover;
-  height: 70vh;
-  overflow: hidden;
+background: url("http://cmcc.flywheelsites.com/cyp/wp-content/uploads/sites/7/2014/04/meeting-cyp-2.jpg") no-repeat center center;
+background-size: cover;
+height: 70vh;
+overflow: hidden;
 }
 
 #home_header {
-  text-align: right;
+text-align: right;
 }
 
 #home_subheader {
-  text-align: right;
-  float: right;
+text-align: right;
+float: right;
 
 }
 
 .signup-panel {
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  padding: 15px;
-  text-align:center;
-  margin: auto;
-  margin-top: 1em;
+border-radius: 5px;
+border: 1px solid #ccc;
+padding: 15px;
+text-align:center;
+margin: auto;
+margin-top: 1em;
 }
 
 #signup_header {
-  text-align: center;
-  letter-spacing: 2px;
-  font-family: "Ubuntu";
-  font-weight: 100;
+text-align: center;
+letter-spacing: 2px;
+font-family: "Ubuntu";
+font-weight: 100;
 }
 
 footer {
-  background-color: #292c2f;
-  text-align: center;
-  font-size: 1.2rem;
-  padding: 4rem;
-  p {
-    &.slogan {
-      color: #8d9093;
-      font-size: 1.8rem;
-      margin: 0 0 1rem;
-    }
-    &.copywrite {
-      color: #8f9296;
-      font-size: 0.875rem;
-      margin: 0;
-    }
-  }
-  .links a {
-    list-style: none;
-    font-weight: bold;
-    color: #ffffff;
-    padding: 3rem 0 2rem;
-    margin: 0;
-    &::after {
-      content: "•";
-      padding: 0 0.4rem 0 0.8rem;
-    }
-    &:last-child::after {
-      content: "";
-      padding: 0 0.4rem 0 0.8rem;
-    }
-  }
+background-color: #292c2f;
+text-align: center;
+font-size: 1.2rem;
+padding: 4rem;
+p {
+&.slogan {
+color: #8d9093;
+font-size: 1.8rem;
+margin: 0 0 1rem;
+}
+&.copywrite {
+color: #8f9296;
+font-size: 0.875rem;
+margin: 0;
+}
+}
+.links a {
+list-style: none;
+font-weight: bold;
+color: #ffffff;
+padding: 3rem 0 2rem;
+margin: 0;
+&::after {
+content: "•";
+padding: 0 0.4rem 0 0.8rem;
+}
+&:last-child::after {
+content: "";
+padding: 0 0.4rem 0 0.8rem;
+}
+}
 }
 
-.body_1 {
-  background: url("midtown.jpg") no-repeat center center;
-  background-size: cover;
-  height: 70vh;
-  overflow: hidden;
+.home_body_1 {
+background-color: white;
+background-size: cover;
+height: 70vh;
+overflow: hidden;
 }
+
