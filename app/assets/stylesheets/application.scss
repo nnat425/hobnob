@@ -14,8 +14,9 @@
  *= require_self
  *= require foundation_and_overrides
 /*= require foundation */
- */
-
+*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
 $background-color: #292c2f;
 $primary-color: #87D37C;
 
@@ -122,13 +123,20 @@ $primary-color: #87D37C;
   padding: 15px;
   text-align:center;
   margin: auto;
+  margin-top: 1em;
 }
 
 .signup-panel form input{
   width: 100%;
-
+  font-size: 1em;
+  height: 3.5em;
+  padding: 1em;
+  margin-top: 1em;
 }
 
 #signup_header {
   text-align: center;
+  letter-spacing: 2px;
+  font-family: "Ubuntu";
+  font-weight: 100;
 }
