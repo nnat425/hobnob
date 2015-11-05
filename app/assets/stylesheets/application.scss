@@ -117,6 +117,16 @@ $primary-color: #87D37C;
   overflow: hidden;
 }
 
+#home_header {
+  text-align: right;
+}
+
+#home_subheader {
+  text-align: right;
+  float: right;
+
+}
+
 .signup-panel {
   border-radius: 5px;
   border: 1px solid #ccc;
