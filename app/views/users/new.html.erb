@@ -53,11 +53,11 @@
   </div>
 
   <div class="row">
-    <div class="large-6  small-11 small-centered columns">
-      <label>Current Student</label>
-      <%= radio_button("user","student",true) %><label for="user_student_true">Yes</label>
+    <div class="large-6  small-11 small-centered columns" id="radio_choices">
+      <label class="choice_label">Current Student</label>
+      <%= radio_button("user","student",true) %><label for="user_student_true" class="choice_label">Yes</label>
       <%= radio_button("user","student",false)%>
-      <label for="user_student_false">No</label>
+      <label for="user_student_false" class="choice_label">No</label>
     </div>
   </div>
 

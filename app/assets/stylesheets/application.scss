@@ -165,10 +165,11 @@ margin-bottom: 1em;
 
 
 #signup_header {
-text-align: center;
-letter-spacing: 2px;
-font-family: "Open Sans";
-font-weight: 100;
+  text-align: center;
+  letter-spacing: 2px;
+  font-family: "Open Sans";
+  font-weight: 100;
+  color: #43c7f4;
 }
 
 footer {
@@ -241,10 +242,15 @@ $gradient2: linear-gradient(45deg, #2ecc71, dodgerblue);
   text-transform: uppercase;
 }
 
+
 #page_header img {
   width: 1em;
   height: 1em;
 
+}
+
+.choice_label {
+  font-size: 1.2em;
 }
 
 .button {
@@ -252,6 +258,9 @@ $gradient2: linear-gradient(45deg, #2ecc71, dodgerblue);
   text-transform: uppercase;
 }
 
+#radio_choices radio {
+  display: inline;
+}
 #form_directions {
   letter-spacing: 1px;
   font-weight: 200;
@@ -286,5 +295,4 @@ $gradient2: linear-gradient(45deg, #2ecc71, dodgerblue);
   font-size: 1em;
   border-radius: 5px;
 }
-
 
