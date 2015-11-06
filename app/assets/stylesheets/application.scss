@@ -118,11 +118,23 @@ float: left;
 }
 
 .hero {
-background: url("http://cmcc.flywheelsites.com/cyp/wp-content/uploads/sites/7/2014/04/meeting-cyp-2.jpg") no-repeat center center;
-background-size: cover;
-height: 70vh;
-overflow: hidden;
+  background: url("http://cmcc.flywheelsites.com/cyp/wp-content/uploads/sites/7/2014/04/meeting-cyp-2.jpg") no-repeat center center;
+  background-size: cover;
+  height: 70vh;
+  overflow: hidden;
 }
+
+.signup_hero {
+  background-size: cover;
+  overflow: hidden;
+}
+
+.edit_hero {
+  background-size: cover;
+  height: 50vh;
+  overflow: hidden;
+}
+
 
 #home_header {
 text-align: right;
@@ -215,4 +227,9 @@ $gradient2: linear-gradient(45deg, #2ecc71, dodgerblue);
   letter-spacing: 2px;
   font-family: "Open Sans";
   font-weight: 100;
+}
+
+.button {
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }

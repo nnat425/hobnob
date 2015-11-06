@@ -1,3 +1,6 @@
+<header class="edit_hero">
+  <img src="/assets/header_2.png"/>
+</header>
 
 <% if flash[:errors] %>
   <% flash[:errors].each do |msg| %>
@@ -20,13 +23,12 @@
 </div>
 
         <%= form_for @advisor do |f| %>
-        <%= f.hidden_field :password_confirmation,:value => @advisor.password_digest %>
-
-  <%= f.hidden_field :email_confirmation, :value => @advisor.email %>
+          <%= f.hidden_field :password_confirmation,:value => @advisor.password_digest %>
+          <%= f.hidden_field :email_confirmation, :value => @advisor.email %>
 
 <div class="row">
   <div class="small-12 medium-12 large-12 columns">
-    <div class="panel">
+    <div class="panel" id="edit_profile_panel">
       <div class="row">
         <div class="small-11 small-centered large-8 columns">
           <%= f.label "Alternative Email*" %>
