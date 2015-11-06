@@ -162,6 +162,14 @@ margin-bottom: 1em;
   border-radius: 5px;
 }
 
+#signup_advisor {
+  letter-spacing: 2px;
+  font-size: 1.2em;
+  font-family: "Open Sans";
+  color: #C0C0C0;
+  text-transform: uppercase;
+
+}
 
 
 #signup_header {
@@ -308,6 +316,11 @@ input[type=text], textarea {
 }
 
 input[type=text]:focus, textarea:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  border: 1px solid rgba(81, 203, 238, 1);
+}
+
+input[type=password]:focus, textarea:focus {
   box-shadow: 0 0 5px rgba(81, 203, 238, 1);
   border: 1px solid rgba(81, 203, 238, 1);
 }
