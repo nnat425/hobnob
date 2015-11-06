@@ -226,10 +226,28 @@ $gradient2: linear-gradient(45deg, #2ecc71, dodgerblue);
   text-align: center;
   letter-spacing: 2px;
   font-family: "Open Sans";
-  font-weight: 100;
+  font-weight: 200;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: #43c7f4;
 }
 
 .button {
   letter-spacing: 2px;
   text-transform: uppercase;
+}
+
+#form_directions {
+  letter-spacing: 1px;
+  font-weight: 200;
+  font-size: 1.2em;
+}
+
+#form_note {
+  margin-top: -1.5rem;
+  color: #C0C0C0;
+  letter-spacing: 1px;
+  font-size: 1em;
+  font-weight: 200;
+
 }
