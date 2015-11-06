@@ -53,13 +53,19 @@
   </div>
 
   <div class="row">
-    <div class="large-5  small-11 small-centered columns">
-      <label>Current Student</label>
-      <%= radio_button("user","student",true) %><label for="user_student_true">Yes</label>
-      <%= radio_button("user","student",false)%>
-      <label for="user_student_false">No</label>
+    <div class="large-6  small-11 small-centered columns">
+      <div class="switch round">
+        <p class="choice_label">Current Student?</p>
+        <input id="yes-no" type="checkbox">
+        <label for="yes-no">
+          <span class="switch-on" id="user_student_true">Yes</span>
+          <span class="switch-off" id="user_student_false">No</span>
+        </label>
+      </div>
     </div>
   </div>
+
+
 
   <div class="row">
     <div class="large-10 large-centered small-11 small-centered columns">

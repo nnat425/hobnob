@@ -131,7 +131,6 @@ float: left;
 
 .edit_hero {
   background-size: cover;
-  height: 50vh;
   overflow: hidden;
 }
 
@@ -153,13 +152,32 @@ padding: 15px;
 text-align:center;
 margin: auto;
 margin-top: 1em;
+margin-bottom: 1em;
 }
 
+.signup-panel form input {
+  padding: 1em;
+  height: 3.5em;
+  font-size: 1em;
+  border-radius: 5px;
+}
+
+#signup_advisor {
+  letter-spacing: 2px;
+  font-size: 1.2em;
+  font-family: "Open Sans";
+  color: #C0C0C0;
+  text-transform: uppercase;
+
+}
+
+
 #signup_header {
-text-align: center;
-letter-spacing: 2px;
-font-family: "Open Sans";
-font-weight: 100;
+  text-align: center;
+  letter-spacing: 2px;
+  font-family: "Open Sans";
+  font-weight: 100;
+  color: #43c7f4;
 }
 
 footer {
@@ -227,10 +245,20 @@ $gradient2: linear-gradient(45deg, #2ecc71, dodgerblue);
   letter-spacing: 2px;
   font-family: "Open Sans";
   font-weight: 200;
-  margin-top: 1rem;
   margin-bottom: 1rem;
   color: #43c7f4;
   text-transform: uppercase;
+}
+
+
+#page_header img {
+  width: 1em;
+  height: 1em;
+
+}
+
+.choice_label {
+  font-size: 1.2em;
 }
 
 .button {
@@ -241,27 +269,29 @@ $gradient2: linear-gradient(45deg, #2ecc71, dodgerblue);
 #form_directions {
   letter-spacing: 1px;
   font-weight: 200;
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 
 #form_note {
   margin-top: -1.5rem;
   color: #C0C0C0;
   letter-spacing: 1px;
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: 200;
 
 }
 
 #edit-panel {
   background-color: #fff;
-  border-radius: 5px;
   border: 1px solid #ccc;
   padding: 15px;
   margin: auto;
   margin-top: 1em;
   margin-bottom: 1em;
   padding-top: 2em;
+  -webkit-box-shadow: 4px 4px 4px 0px #ccc;
+  -moz-box-shadow:    4px 4px 4px 0px #ccc;
+  box-shadow:         4px 4px 4px 0px #ccc;
 }
 
 #edit-panel form input {
@@ -269,5 +299,26 @@ $gradient2: linear-gradient(45deg, #2ecc71, dodgerblue);
   height: 3.5em;
   font-size: 1em;
   border-radius: 5px;
+}
+
+input[type=text], textarea {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #DDDDDD;
+}
+
+input[type=text]:focus, textarea:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  border: 1px solid rgba(81, 203, 238, 1);
+}
+
+input[type=password]:focus, textarea:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  border: 1px solid rgba(81, 203, 238, 1);
 }
 
