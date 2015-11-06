@@ -136,14 +136,28 @@ float: left;
 
 
 #home_header {
-  margin-top: 5.5em;
+  margin-top: 6em;
   text-align: right;
+}
 
+#home_header h1 {
+  color: #fff;
+  font-family: "Open Sans";
+  letter-spacing: 3px;
+  font-size: 70px;
 }
 
 #home_subheader {
   text-align: right;
   float: right;
+  margin-top: 1em;
+}
+
+#home_subheader h3 {
+  color: #fff;
+  font-family: "Open Sans";
+  font-weight: 100;
+
 }
 
 .signup-panel {
@@ -199,19 +213,19 @@ footer {
   }
 }
 .links a {
-list-style: none;
-font-weight: bold;
-color: #ffffff;
-padding: 3rem 0 2rem;
-margin: 0;
-&::after {
-content: "•";
-padding: 0 0.4rem 0 0.8rem;
-}
-&:last-child::after {
-content: "";
-padding: 0 0.4rem 0 0.8rem;
-}
+  list-style: none;
+  font-weight: bold;
+  color: #ffffff;
+  padding: 3rem 0 2rem;
+  margin: 0;
+  &::after {
+    content: "•";
+    padding: 0 0.4rem 0 0.8rem;
+  }
+  &:last-child::after {
+    content: "";
+    padding: 0 0.4rem 0 0.8rem;
+  }
 }
 }
 
@@ -235,7 +249,7 @@ $gradient2: linear-gradient(45deg, #2ecc71, dodgerblue);
 }
 
 #get_networking{
-  margin-top:70px;
+  margin-top:2em;
   border:solid white 3px;
   padding: 1em;
   text-align:center;
