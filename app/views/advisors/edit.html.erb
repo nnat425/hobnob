@@ -2,19 +2,10 @@
   <img src="/assets/header_2.png"/>
 </header>
 
-
-
-
-
 <div class="row">
   <div class="small-12 medium-12 large-12 columns">
     <div class="panel" id="edit-panel">
-      <% if flash[:errors] %>
-      <% flash[:errors].each do |msg| %>
-      <p class="error-message"><%= msg %></p>
-      <% end %>
 
-      <% end %>
 
       <div class="row">
         <div class="small-12 small-centered medium-12 medium-centered large-12 large-centered columns">
@@ -23,11 +14,18 @@
       </div>
 
       <div class="row">
-        <div class="large-10 large-offset-1 columns">
+        <div class="small-10 small-centered large-10 large-offset-1 columns">
           <p id="form_directions">Please take some time to fill in the following details:</p>
           <p id="form_note">*Fields will not be shown on your profile page</p>
         </div>
       </div>
+
+      <% if flash[:errors] %>
+      <% flash[:errors].each do |msg| %>
+      <p class="error-message"><%= msg %></p>
+      <% end %>
+
+      <% end %>
       <%= form_for @advisor do |f| %>
       <%= f.hidden_field :password_confirmation,:value => @advisor.password_digest %>
       <%= f.hidden_field :email_confirmation, :value => @advisor.email %>

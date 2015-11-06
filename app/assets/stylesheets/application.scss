@@ -131,7 +131,6 @@ float: left;
 
 .edit_hero {
   background-size: cover;
-  height: 50vh;
   overflow: hidden;
 }
 
@@ -240,14 +239,14 @@ $gradient2: linear-gradient(45deg, #2ecc71, dodgerblue);
 #form_directions {
   letter-spacing: 1px;
   font-weight: 200;
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 
 #form_note {
   margin-top: -1.5rem;
   color: #C0C0C0;
   letter-spacing: 1px;
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: 200;
 
 }
