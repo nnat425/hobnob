@@ -25,34 +25,32 @@ max-width: 100%;
 }
 
 .menu {
-background-color: rgba(0,0,0,.2);
-padding: 1.5rem 3rem;
-height: auto;
-border-bottom: 1px solid #adadad;
+  background-color: rgba(0,0,0,.2);
+  padding: 1.5rem 3rem;
+  height: auto;
+  border-bottom: 1px solid #adadad;
 
+  .inline-list {
+    text-align: center;
 
+    li {
+      float: none;
+      display: inline-block;
+    }
 
-.inline-list {
-text-align: center;
+    a {
+      color: #fff;
+      padding-bottom: 0.5rem;
 
-li {
-float: none;
-display: inline-block;
-}
+    &:hover {
+      color: #43c7f4;
+      transition: all .3s ease-in-out;
+    }
+  }
 
-a {
-color: #fff;
-padding-bottom: 0.5rem;
-
-&:hover {
-color: #43c7f4;
-transition: all .3s ease-in-out;
-}
-}
-
-.active a {
-color: #43c7f4;
-}
+  .active a {
+    color: #43c7f4;
+  }
 }
 
 .account {
@@ -103,9 +101,15 @@ margin: 0 0 1rem 0;
 color: #fff;
 letter-spacing: 5px;
 
+
 i {
 color: #43c7f4;
 margin-right: 0.5rem;
+
+}
+
+#nav_logo {
+  margin-right: 0.5rem;
 }
 
 @media only screen and (min-width: 40.063em) {
@@ -114,11 +118,23 @@ float: left;
 }
 
 .hero {
-background: url("http://cmcc.flywheelsites.com/cyp/wp-content/uploads/sites/7/2014/04/meeting-cyp-2.jpg") no-repeat center center;
-background-size: cover;
-height: 70vh;
-overflow: hidden;
+  background: url("http://cmcc.flywheelsites.com/cyp/wp-content/uploads/sites/7/2014/04/meeting-cyp-2.jpg") no-repeat center center;
+  background-size: cover;
+  height: 70vh;
+  overflow: hidden;
 }
+
+.signup_hero {
+  background-size: cover;
+  overflow: hidden;
+}
+
+.edit_hero {
+  background-size: cover;
+  height: 50vh;
+  overflow: hidden;
+}
+
 
 #home_header {
 text-align: right;
@@ -142,7 +158,7 @@ margin-top: 1em;
 #signup_header {
 text-align: center;
 letter-spacing: 2px;
-font-family: "Ubuntu";
+font-family: "Open Sans";
 font-weight: 100;
 }
 
@@ -190,15 +206,10 @@ overflow: hidden;
 $gradient: linear-gradient(45deg, pink, skyblue);
 $gradient2: linear-gradient(45deg, #2ecc71, dodgerblue);
 
-.button {
-  color: transparent;
-  font-size: 2rem;
+.network_button {
+  color: #fff;
+  font-size: 1rem;
   letter-spacing: 5px;
-  border: 4px solid transparent;
-  border-image: $gradient;
-  border-image-slice: 1;
-  background: $gradient;
-  -webkit-background-clip: text;
   text-fill-color: transparent;
   transition: all 0.2s ease;
 
@@ -207,5 +218,56 @@ $gradient2: linear-gradient(45deg, #2ecc71, dodgerblue);
 #get_networking{
   margin-top:70px;
   border:solid white 3px;
+  padding: 1em;
   text-align:center;
 }
+
+#page_header {
+  text-align: center;
+  letter-spacing: 2px;
+  font-family: "Open Sans";
+  font-weight: 200;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: #43c7f4;
+  text-transform: uppercase;
+}
+
+.button {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#form_directions {
+  letter-spacing: 1px;
+  font-weight: 200;
+  font-size: 1.2em;
+}
+
+#form_note {
+  margin-top: -1.5rem;
+  color: #C0C0C0;
+  letter-spacing: 1px;
+  font-size: 1em;
+  font-weight: 200;
+
+}
+
+#edit-panel {
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-top: 2em;
+}
+
+#edit-panel form input {
+  padding: 1em;
+  height: 3.5em;
+  font-size: 1em;
+  border-radius: 5px;
+}
+
