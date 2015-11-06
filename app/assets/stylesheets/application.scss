@@ -152,7 +152,17 @@ padding: 15px;
 text-align:center;
 margin: auto;
 margin-top: 1em;
+margin-bottom: 1em;
 }
+
+.signup-panel form input {
+  padding: 1em;
+  height: 3.5em;
+  font-size: 1em;
+  border-radius: 5px;
+}
+
+
 
 #signup_header {
 text-align: center;
@@ -232,8 +242,9 @@ $gradient2: linear-gradient(45deg, #2ecc71, dodgerblue);
 }
 
 #page_header img {
-  width: 1em;;
-  height: 1em;;
+  width: 1em;
+  height: 1em;
+
 }
 
 .button {
@@ -275,4 +286,5 @@ $gradient2: linear-gradient(45deg, #2ecc71, dodgerblue);
   font-size: 1em;
   border-radius: 5px;
 }
+
 
