@@ -14,4 +14,12 @@ class Advisor < ActiveRecord::Base
 
   has_secure_password
 
+  def add_categories(params)
+    params.each do |category|
+    added_category = Category.find_or_create_by(name:category,advisor_id: self.id)
+
+    end
+
+  end
+
 end

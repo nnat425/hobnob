@@ -21,12 +21,12 @@ class AdvisorsController < ApplicationController
 
   def edit
     @advisor = Advisor.find_by(id: params[:id])
-    @categories = Category.new
   end
 
   def update
     advisor = Advisor.find_by(id: params[:id])
     if advisor_params
+
       advisor.update(advisor_params)
       redirect_to advisor_path(advisor)
     else
