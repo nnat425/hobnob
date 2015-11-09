@@ -81,6 +81,17 @@
       </div>
       <div class="row">
         <div class="small-11 small-centered medium-10 large-7 columns">
+          <%= f.label "Areas of experience" %>
+          <%= check_box_tag "list[]", "Investment Banking" %>Investment Banking
+          <%= check_box_tag "list[]", "Asset Management" %>Asset Management
+          <%= check_box_tag "list[]", "Corporate Finance Divisions" %>Corporate Finance Divisions
+          <%= check_box_tag "list[]", "Other" %>Other Finance Opportunities
+          <%= check_box_tag "list[]", "Resume/Interview" %>Resume building & Interview Prep
+          <div class="spacer"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-11 small-centered medium-10 large-7 columns">
           <%= f.label "Years of experience" %>
           <%= f.text_field :years_of_experience, placeholder: "Years of Experience" %>
           <div class="spacer"></div>

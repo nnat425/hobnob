@@ -21,6 +21,7 @@ class AdvisorsController < ApplicationController
 
   def edit
     @advisor = Advisor.find_by(id: params[:id])
+    @categories = Category.new
   end
 
   def update
