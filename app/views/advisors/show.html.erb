@@ -1,9 +1,4 @@
-<h1>Profile</h1>
-<%= image_tag @advisor.avatar.url(:medium) %>
-<%= @advisor.firstname %>
-<%= @advisor.email %>
-<%= @advisor.alternative_email %>
-
+<div></div>
 
       <div class="row">
         <div class="large-12 columns">
@@ -22,22 +17,10 @@
             <h4><%= @advisor.firstname %></h4>
               <div class="section-container vertical-nav" data-section data-options="deep_linking: false; one_up: true">
               <section class="section">
-                <h5 class="title"><a href="#">Section 1</a></h5>
+                <h5 class="title"><%= @advisor.location %>
               </section>
               <section class="section">
-                <h5 class="title"><a href="#">Section 2</a></h5>
-              </section>
-              <section class="section">
-                <h5 class="title"><a href="#">Section 3</a></h5>
-              </section>
-              <section class="section">
-                <h5 class="title"><a href="#">Section 4</a></h5>
-              </section>
-              <section class="section">
-                <h5 class="title"><a href="#">Section 5</a></h5>
-              </section>
-              <section class="section">
-                <h5 class="title"><a href="#">Section 6</a></h5>
+                <h5 class="title"><%=link_to "Book An Appointment", '#' %></h5>
               </section>
             </div>
 
