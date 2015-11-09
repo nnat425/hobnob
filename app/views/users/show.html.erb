@@ -12,11 +12,14 @@
 <p>Email:</p>
 <%= @user.email %>
 <div class="spacer"></div>
-<p>University/School:</p>
-<%= @user.school %>
-<div class="spacer"></div>
-<p>Program:</p>
-<%= @user.program %>
-<div class="spacer"></div>
-<p>Graduation Date:</p>
-<%= @user.graduation_date %>
+
+<% if @user.student == true %>
+  <p>University/School:</p>
+  <%= @user.school %>
+  <div class="spacer"></div>
+  <p>Program:</p>
+  <%= @user.program %>
+  <div class="spacer"></div>
+  <p>Graduation Date:</p>
+  <%= @user.graduation_date %>
+<% end %>
