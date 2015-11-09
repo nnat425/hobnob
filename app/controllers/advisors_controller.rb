@@ -26,7 +26,7 @@ class AdvisorsController < ApplicationController
   def update
     advisor = Advisor.find_by(id: params[:id])
     if advisor_params
-
+      advisor.add_categories(params[:list])
       advisor.update(advisor_params)
       redirect_to advisor_path(advisor)
     else
