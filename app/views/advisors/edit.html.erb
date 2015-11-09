@@ -26,9 +26,17 @@
       <% end %>
 
       <% end %>
-      <%= form_for @advisor do |f| %>
+      <%= form_for @advisor, url: advisor_path(@advisor), html: { multipart: true } do |f| %>
       <%= f.hidden_field :password_confirmation,:value => @advisor.password_digest %>
       <%= f.hidden_field :email_confirmation, :value => @advisor.email %>
+
+      <div class="row">
+        <div class="small-11 small-centered medium-10 large-7 columns">
+          <%= f.label "Upload a photo" %>
+          <%= f.file_field :avatar %>
+          <div class="spacer"></div>
+        </div>
+      </div>
       <div class="row">
         <div class="small-11 small-centered medium-10 large-7 columns">
           <%= f.label "Alternative Email*" %>

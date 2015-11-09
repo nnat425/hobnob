@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $( "#user_program" ).hide();
+  $("#user_program" ).hide();
   $("#grad_date").hide();
   $("#user_school").hide();
 
@@ -9,12 +9,6 @@ $(document).ready(function(){
     $("#user_school").slideToggle();
   });
 
- //  $( "#user_student_false" ).on('click',function() {
-   // $( "#user_program" ).hide();
-   // $("#grad_date").hide();
-   //  $("#user_school").hide();
-
- // });
 
 });
 
