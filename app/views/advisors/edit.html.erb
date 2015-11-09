@@ -83,15 +83,15 @@
       <div class="row">
         <div class="small-11 small-centered medium-10 large-7 columns">
           <%= f.label "Areas of experience" %>
-          <%= check_box_tag "list[]", "Investment Banking" %>Investment Banking
+          <%= check_box_tag "list[]", "Investment Banking", @current_categories.include?("Investment Banking") %>Investment Banking
           <br>
-          <%= check_box_tag "list[]", "Asset Management" %>Asset Management
+          <%= check_box_tag "list[]", "Asset Management", @current_categories.include?("Asset Management") %>Asset Management
           <br>
-          <%= check_box_tag "list[]", "Corporate Finance Divisions" %>Corporate Finance Divisions
+          <%= check_box_tag "list[]", "Corporate Finance Divisions", @current_categories.include?("Corporate Finance Divisions")  %>Corporate Finance Divisions
           <br>
-          <%= check_box_tag "list[]", "Other" %>Other Finance Opportunities
+          <%= check_box_tag "list[]", "Other",  @current_categories.include?("Other") %>Other Finance Opportunities
           <br>
-          <%= check_box_tag "list[]", "Resume/Interview" %>Resume building & Interview Prep
+          <%= check_box_tag "list[]", "Resume/Interview",@current_categories.include?("Resume/Interview") %>Resume building & Interview Prep
         </div>
       </div>
       <div class="spacer"></div>
