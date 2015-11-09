@@ -1,0 +1,39 @@
+<p class="alert-message"><%= flash[:message] %></p>
+<div class="row">
+  <div class="small-12 medium-12 medium-centered large-12 large-centered columns">
+    <div class="panel">
+      <div class="row">
+        <div class="small-10 medium-10 large-10 columns">
+          <h1>Your Profile</h1>
+      </div>
+      <div class="small-2 medium-2 large-2 columns">
+        <div id="edit-profile-link">
+          <% if current_user == @user %>
+            <%= link_to "Edit Profile", edit_user_path(@user) %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+      <div class="row">
+        <div class="small-12 medium-3 large-3 columns">
+          <div id="profile-avatar">
+            <%= image_tag @user.avatar.url(:medium) %>
+          </div>
+        </div>
+        <div class="small-12 medium-9 large-9 columns">
+          <p><%= @user.first_name %> <%= @user.last_name %></p>
+          <div class="spacer"></div>
+          <p class="profile-label">Primary Email:</p><p><%= @user.email %></p>
+          <div class="spacer"></div>
+          <% if @user.student == true %>
+            <p class="profile-label">University/School:</p><p><%= @user.school %></p>
+            <div class="spacer"></div>
+            <p class="profile-label">Program:</p><p><%= @user.program %></p>
+            <div class="spacer"></div>
+            <p class="profile-label">Graduation Date:</p><p><%= @user.graduation_date %></p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

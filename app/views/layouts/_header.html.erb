@@ -4,13 +4,13 @@
 <nav class="menu">
   <h1 class="name"><img id="nav_logo" src="/assets/hn_logo_xs2.png"/>HOBNOB</h1>
   <ul class="inline-list">
-    <li><a href="#">Home</a></li>
+    <li><%= link_to "Home", root_path %></li>
     <li class="active"><a href="#">About</a></li>
     <li><a href="#">Advisors</a></li>
   </ul>
   <ul class="inline-list hide-for-small-only account-action">
     <li><a href="#" data-reveal-id="myModal">Login</a></li>
-    <li class=""><a class="signup" href="#" data-reveal-id="myModal">Signup</a></li>
+    <li class=""><a class="signup" href="/users/new" data-reveal-id="myModal">Signup</a></li>
   </ul>
   <a class="account hide-for-medium-up" href="#" data-reveal-id="myModal"><i class="fi-unlock"></i></a>
 </nav>
