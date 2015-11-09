@@ -14,4 +14,13 @@ class Advisor < ActiveRecord::Base
 
   has_secure_password
 
+  def add_categories(params)
+    if self.categories.length != 0
+      self.categories.each {|category| category.destroy}
+    end
+    params.each do |category|
+      added_category = Category.create(name:category,advisor_id: self.id)
+    end
+  end
+
 end
