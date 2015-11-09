@@ -1,8 +1,8 @@
 
 <div class="row">
   <div class="large-12 columns">
-    <div class="panel">
-      <h1>Profile</h1>
+    <div class="panel" id='profile_header'>
+      <h1><%= @advisor.current_title + " at " + @advisor.company %></h1>
     </div>
   </div>
 </div>
@@ -28,17 +28,14 @@
 
 
 
-    <div class="large-6 columns">
+    <div class="large-6 columns" id='advisor_profile'>
 
 
       <div class="row">
-        <div class="large-2 columns small-3"><img src="http://placehold.it/80x80&text=[img]"/></div>
+
         <div class="large-10 columns">
-          <p><strong>Some Person said:</strong> Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
-          <ul class="inline-list">
-            <li><a href="">Reply</a></li>
-            <li><a href="">Share</a></li>
-          </ul>
+          <p class='advisor_pro_text'>
+            Experience</p>
 
 
           <h6>2 Comments</h6>
@@ -54,28 +51,21 @@
       </div>
 
 
-      <hr/>
 
 
       <div class="row">
-        <div class="large-2 columns small-3"><img src="http://placehold.it/80x80&text=[img]"/></div>
         <div class="large-10 columns">
-          <p><strong>Some Person said:</strong> Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
-          <ul class="inline-list">
-            <li><a href="">Reply</a></li>
-            <li><a href="">Share</a></li>
-          </ul>
+          <p class='advisor_pro_text'>Education</p>
+
         </div>
       </div>
 
 
-      <hr/>
 
 
       <div class="row">
-        <div class="large-2 columns small-3"><img src="http://placehold.it/80x80&text=[img]"/></div>
         <div class="large-10 columns">
-          <p><strong>Some Person said:</strong> Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
+          <p class='advisor_pro_text'>Other Information</p>
           <ul class="inline-list">
             <li><a href="">Reply</a></li>
             <li><a href="">Share</a></li>

@@ -351,3 +351,23 @@ background-size: cover;
 height: 70vh;
 overflow: hidden;
 }
+
+#profile_header{
+  margin-top:90px;
+}
+
+#advisor_profile{
+margin-bottom:15px;
+background-color: #fff;
+border: 1px solid #ccc;
+-webkit-box-shadow: 4px 4px 4px 0px #ccc;
+-moz-box-shadow:    4px 4px 4px 0px #ccc;
+box-shadow:         4px 4px 4px 0px #ccc;
+}
+
+.advisor_pro_text{
+  font-family: "Open Sans";
+  font-size:30px;
+  color: #43c7f4;
+  border-bottom: grey solid 1px;
+}
