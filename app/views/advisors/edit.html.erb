@@ -26,7 +26,7 @@
       <% end %>
 
       <% end %>
-      <%= form_for @advisor, url: advisors_path, html: { multipart: true } do |f| %>
+      <%= form_for @advisor, url: advisor_path(@advisor), html: { multipart: true } do |f| %>
       <%= f.hidden_field :password_confirmation,:value => @advisor.password_digest %>
       <%= f.hidden_field :email_confirmation, :value => @advisor.email %>
 
