@@ -10,7 +10,7 @@ class AdvisorsController < ApplicationController
       session[:user_id] = advisor.id
       redirect_to edit_advisor_path(advisor)
     else
-      flash[:errorss] = advisor.errors.full_messages
+      flash[:errors] = advisor.errors.full_messages
       redirect_to new_advisor_path
     end
   end

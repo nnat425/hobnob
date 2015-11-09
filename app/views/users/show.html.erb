@@ -1,14 +1,22 @@
 <h1>Your Profile</h1>
+<%= flash[:message] %>
+<p>Current Avatar:</p>
 <%= image_tag @user.avatar.url(:medium) %>
 <div class="spacer"></div>
+<p>First Name:</p>
 <%= @user.firstname %>
 <div class="spacer"></div>
+<p>Last Name:</p>
 <%= @user.last_name %>
 <div class="spacer"></div>
+<p>Email:</p>
 <%= @user.email %>
 <div class="spacer"></div>
+<p>University/School:</p>
 <%= @user.school %>
 <div class="spacer"></div>
+<p>Program:</p>
 <%= @user.program %>
 <div class="spacer"></div>
+<p>Graduation Date:</p>
 <%= @user.graduation_date %>
