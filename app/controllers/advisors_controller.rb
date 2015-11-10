@@ -32,6 +32,7 @@ class AdvisorsController < ApplicationController
     if advisor_params
       advisor.add_categories(params[:list])
       advisor.update(advisor_params)
+      advisor.join_companies(params[:companies])
       redirect_to advisor_path(advisor)
     else
       flash[:error] = advisor.errors.full_messages

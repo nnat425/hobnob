@@ -23,4 +23,8 @@ class Advisor < ActiveRecord::Base
     end
   end
 
+  def join_companies(param_companies)
+     self.update(other_companies:param_companies.join(","))
+  end
+
 end
