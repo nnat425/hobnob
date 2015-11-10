@@ -26,7 +26,7 @@
       <% end %>
 
       <% end %>
-      <%= form_for @advisor, url: advisor_path(@advisor), html: { multipart: true } do |f| %>
+      <%= form_for @advisor, url: advisor_path(@advisor), html: { multipart: true, :class => "custom" } do |f| %>
       <%= f.hidden_field :password_confirmation,:value => @advisor.password_digest %>
       <%= f.hidden_field :email_confirmation, :value => @advisor.email %>
 
@@ -83,15 +83,46 @@
       <div class="row">
         <div class="small-11 small-centered medium-10 large-7 columns">
           <%= f.label "Areas of experience" %>
-          <%= check_box_tag "list[]", "Investment Banking", @current_categories.include?("Investment Banking") %>Investment Banking
-          <br>
-          <%= check_box_tag "list[]", "Asset Management", @current_categories.include?("Asset Management") %>Asset Management
-          <br>
-          <%= check_box_tag "list[]", "Corporate Finance Divisions", @current_categories.include?("Corporate Finance Divisions")  %>Corporate Finance Divisions
-          <br>
-          <%= check_box_tag "list[]", "Other",  @current_categories.include?("Other") %>Other Finance Opportunities
-          <br>
-          <%= check_box_tag "list[]", "Resume/Interview",@current_categories.include?("Resume/Interview") %>Resume building & Interview Prep
+          <div class="row">
+            <div class="small-1 medium-1 large-1 columns">
+              <%= check_box_tag "list[]", "Investment Banking", @current_categories.include?("Investment Banking"), class: "category-checkbox" %>
+            </div>
+            <div class="small-11 medium-11 large-11 columns">
+              <p class="checkbox-label">Investment Banking</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-1 medium-1 large-1 columns">
+              <%= check_box_tag "list[]", "Asset Management", @current_categories.include?("Asset Management"), class: "category-checkbox" %>
+            </div>
+            <div class="small-11 medium-11 large-11 columns">
+              <p class="checkbox-label">Asset Management</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-1 medium-1 large-1 columns">
+              <%= check_box_tag "list[]", "Corporate Finance Divisions", @current_categories.include?("Corporate Finance Divisions"), class: "category-checkbox"  %>
+            </div>
+            <div class="small-11 medium-11 large-11 columns">
+              <p class="checkbox-label">Corporate Finance Divisions</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-1 medium-1 large-1 columns">
+              <%= check_box_tag "list[]", "Other",  @current_categories.include?("Other"), class: "category-checkbox" %>
+            </div>
+            <div class="small-11 medium-11 large-11 columns">
+              <p class="checkbox-label">Other Finance Opportunities</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-1 medium-1 large-1 columns">
+              <%= check_box_tag "list[]", "Resume/Interview",@current_categories.include?("Resume/Interview"), class: "category-checkbox" %>
+            </div>
+            <div class="small-11 medium-11 large-11 columns">
+              <p class="checkbox-label">Resume building & Interview Prep</p>
+            </div>
+          </div>
         </div>
       </div>
       <div class="spacer"></div>
