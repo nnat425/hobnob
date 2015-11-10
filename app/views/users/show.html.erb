@@ -1,19 +1,16 @@
-<p class="alert-message"><%= flash[:message] %></p>
+<div class="row" id="profile_header">
+  <div class="small-12 medium-12 large-12 columns">
+    <p class="alert-message"><%= flash[:message] %></p>
+  </div>
+</div>
 <div class="row">
   <div class="small-12 medium-12 medium-centered large-12 large-centered columns">
-    <div class="panel">
+    <div class="panel" id="profile-panel">
       <div class="row">
-        <div class="small-10 medium-10 large-10 columns">
-          <h1>Your Profile</h1>
-      </div>
-      <div class="small-2 medium-2 large-2 columns">
-        <div id="edit-profile-link">
-          <% if current_user == @user %>
-            <%= link_to "Edit Profile", edit_user_path(@user) %>
-          <% end %>
+        <div class="small-12 medium-12 large-12 columns">
+          <p class="profile-subheader"><%= @user.first_name %>'s Profile</p>
         </div>
       </div>
-    </div>
       <div class="row">
         <div class="small-12 medium-3 large-3 columns">
           <div id="profile-avatar">
@@ -32,6 +29,18 @@
             <div class="spacer"></div>
             <p class="profile-label">Graduation Date:</p><p><%= @user.graduation_date %></p>
           <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="small-12 medium-12 medium-centered large-12 large-centered columns">
+    <div class="panel" id="profile-panel">
+      <div class="row">
+        <div class="small-12 medium-12 large-12 columns">
+          <p class="profile-subheader">Your Appointments</p>
         </div>
       </div>
     </div>
