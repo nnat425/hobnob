@@ -258,10 +258,13 @@ float: right;
 
 #page_header {
 text-align: center;
+margin-bottom: 1rem;
+}
+
+#page_header h1 {
 letter-spacing: 2px;
 font-family: "Open Sans";
 font-weight: 200;
-margin-bottom: 1rem;
 color: #43c7f4;
 text-transform: uppercase;
 }
@@ -372,7 +375,7 @@ overflow: hidden;
   margin-top:90px;
 }
 
-#advisor_profile{
+#profile-panel {
 margin-bottom:15px;
 background-color: #fff;
 border: 1px solid #ccc;
@@ -381,7 +384,7 @@ border: 1px solid #ccc;
 box-shadow:         4px 4px 4px 0px #ccc;
 }
 
-.advisor_pro_text{
+.profile-subheader{
   font-family: "Open Sans";
   font-size:30px;
   color: #43c7f4;
