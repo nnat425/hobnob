@@ -127,48 +127,54 @@
       </div>
       <div class="spacer"></div>
 
-    <div class="row">
-      <div class="small-11 small-centered medium-10 large-7 columns">
-        <%= f.label "Years of experience" %>
-        <%= f.select :years_of_experience,['< 5 years', '5 - 15 years', '> 15 years'] %>
-        <div class="spacer"></div>
+      <div class="row">
+        <div class="small-11 small-centered medium-10 large-7 columns">
+          <%= f.label "Years of experience" %>
+          <%= f.select :years_of_experience,['< 5 years', '5 - 15 years', '> 15 years'] %>
+          <div class="spacer"></div>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="small-11 small-centered medium-10 large-7 columns">
-        <%= f.label "Previous Companies" %>
-        <%= f.text_field :other_companies, placeholder: "Previous Companies" %>
-    <div class='button'> Add Company </div>
-        <div class="spacer"></div>
+
+      <div id='prev_comp' class="row">
+        <div class="small-11 small-centered medium-10 large-7 columns">
+          <%= f.label "Previous Companies" %>
+          <%= text_field_tag "companies[]",nil,placeholder: "1. Company Name" %>
+          <%= text_field_tag "companies[]",nil,placeholder: "2. Company Name" %>
+          <%= text_field_tag "companies[]",nil,placeholder: "3. Company Name" %>
+          <div class="spacer"></div>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="small-11 small-centered medium-10 large-7 columns">
-        <%= f.label "Education" %>
-        <%= f.text_field :education, placeholder: "Education" %>
-        <div class="spacer"></div>
+
+
+      <div id='test' class="row"></div>
+      <div class="row">
+        <div class="small-11 small-centered medium-10 large-7 columns">
+          <%= f.label "Education" %>
+          <%= f.text_field :education, placeholder: "Education" %>
+          <div class="spacer"></div>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="small-11 small-centered medium-10 large-7 columns">
-        <%= f.label "Certification(s)" %>
-        <%= f.text_field :certifications, placeholder: "Certification" %>
-        <div class="spacer"></div>
+      <div class="row">
+        <div class="small-11 small-centered medium-10 large-7 columns">
+          <%= f.label "Certification(s)" %>
+          <%= f.text_field :certifications, placeholder: "Certification" %>
+          <div class="spacer"></div>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="small-11 small-centered medium-10 large-7 columns">
-        <%= f.label "Other Information" %>
-        <%= f.text_area(:interesting_facts, cols:10, rows: 10) %>
-        <div class="spacer"></div>
+      <div class="row">
+        <div class="small-11 small-centered medium-10 large-7 columns">
+          <%= f.label "Other Information" %>
+          <%= f.text_area(:interesting_facts, cols:10, rows: 10) %>
+          <div class="spacer"></div>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="small-11 small-centered medium-10 large-7 columns">
-        <%= f.submit "Update Profile", :class => "button" %>
+      <div class="row">
+        <div class="small-11 small-centered medium-10 large-7 columns">
+          <%= f.submit "Update Profile", :class => "button" %>
+        </div>
       </div>
     </div>
   </div>
 </div>
-</div>
 <% end %>
+
