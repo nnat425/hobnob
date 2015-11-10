@@ -138,9 +138,9 @@
       <div id='prev_comp' class="row">
         <div class="small-11 small-centered medium-10 large-7 columns">
           <%= f.label "Previous Companies" %>
-          <%= text_field_tag "companies[]",nil,placeholder: "1. Company Name" %>
-          <%= text_field_tag "companies[]",nil,placeholder: "2. Company Name" %>
-          <%= text_field_tag "companies[]",nil,placeholder: "3. Company Name" %>
+          <%= text_field_tag "companies[]",@advisor.other_companies.split(',')[0],placeholder: "1. Company Name" %>
+          <%= text_field_tag "companies[]",@advisor.other_companies.split(',')[1],placeholder: "2. Company Name" %>
+          <%= text_field_tag "companies[]",@advisor.other_companies.split(',')[2],placeholder: "3. Company Name" %>
           <div class="spacer"></div>
         </div>
       </div>
