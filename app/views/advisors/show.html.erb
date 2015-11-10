@@ -32,64 +32,58 @@
 
 
       <div class="row">
-
         <div class="large-10 columns">
           <p class='advisor_pro_text'>
             Previous Companies</p>
-
-
-          <h6>2 Comments</h6>
-          <div class="row">
-            <div class="large-2 columns small-3"><img src="http://placehold.it/50x50&text=[img]"/></div>
-            <div class="large-10 columns"><p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit</p></div>
-          </div>
-          <div class="row">
-            <div class="large-2 columns small-3"><img src="http://placehold.it/50x50&text=[img]"/></div>
-            <div class="large-10 columns"><p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit</p></div>
+            <div class="row">
+              <% @advisor.other_companies.split(',').each do |company| %>
+              <div class="large-10 columns"><p><%= company %></p></div>
+            </div>
+            <div class="row">
+              <% end %>
+            </div>
           </div>
         </div>
-      </div>
 
 
 
 
-      <div class="row">
-        <div class="large-10 columns">
-          <p class='advisor_pro_text'>Education</p>
-
-        </div>
-      </div>
-
-
-
-
-      <div class="row">
-        <div class="large-10 columns">
-          <p class='advisor_pro_text'>Other Information</p>
-          <ul class="inline-list">
-            <li><a href="">Reply</a></li>
-            <li><a href="">Share</a></li>
-          </ul>
-
-
-          <h6>2 Comments</h6>
-          <div class="row">
-            <div class="large-2 columns small-3"><img src="http://placehold.it/50x50&text=[img]"/></div>
-            <div class="large-10 columns"><p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit</p></div>
+        <div class="row">
+          <div class="large-10 columns">
+            <p class='advisor_pro_text'>Education</p>
+            <div class="row">
+              <div class="large-10 columns">
+                <p><%= @advisor.education %></p></div>
+              </div>
+              <div class="row">
+              </div>
+            </div>
           </div>
+
+
+
+          <div class="row">
+          <div class="large-10 columns">
+            <p class='advisor_pro_text'>Other Information</p>
+            <div class="row">
+              <div class="large-10 columns">
+                <p><%= @advisor.interesting_facts %></p></div>
+              </div>
+              <div class="row">
+              </div>
+            </div>
+          </div>
+
+
         </div>
+
+
+
+        <aside class="large-3 columns hide-for-small">
+
+        </aside>
+
       </div>
-
-
-    </div>
-
-
-
-    <aside class="large-3 columns hide-for-small">
-
-    </aside>
-
-  </div>
 
 
 
