@@ -20,72 +20,64 @@
           <h4><%= @advisor.firstname %></h4>
         </div>
       </div>
-
-      <div class="section-container vertical-nav" data-section data-options="deep_linking: false; one_up: true">
-        <section class="section">
+      <div class="row">
+        <div class="small-12 medium-12 large-12 columns">
           <h5 class="title"><%= @advisor.location %></h5>
-          </section>
-          <section class="section">
-            <%=link_to "Book An Appointment", '#', class: "button" %>
-            <%=link_to "Edit Profile", edit_advisor_path, class: "button" %>
-          </section>
         </div>
-
+      </div>
+      <div class="row">
+        <div class="small-12 medium-12 large-12 columns">
+          <%=link_to "Book An Appointment", '#', class: "button" %>
+          <%=link_to "Edit Profile", edit_advisor_path, class: "button" %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="large-9 columns" id='profile-panel'>
+    <div class="row">
+      <div class="large-10 columns">
+        <p class='profile-subheader'>Previous Companies</p>
+        <div class="row">
+          <% @advisor.other_companies.split(',').each do |company| %>
+          <div class="large-10 columns"><p><%= company %></p></div>
+        </div>
+        <div class="row">
+          <% end %>
+        </div>
       </div>
     </div>
 
-
-
-    <div class="large-8 columns" id='profile-panel'>
-
+    <div class="row">
+      <div class="large-10 columns">
+        <p class='profile-subheader'>Education</p>
+        <div class="row">
+          <div class="large-10 columns">
+            <p><%= @advisor.education %></p></div>
+          </div>
+          <div class="row">
+          </div>
+        </div>
+      </div>
 
       <div class="row">
         <div class="large-10 columns">
-          <p class='profile-subheader'>
-            Previous Companies</p>
-            <div class="row">
-              <% @advisor.other_companies.split(',').each do |company| %>
-              <div class="large-10 columns"><p><%= company %></p></div>
-            </div>
-            <div class="row">
-              <% end %>
-            </div>
-          </div>
-        </div>
-
-
-
-
-        <div class="row">
-          <div class="large-10 columns">
-            <p class='profile-subheader'>Education</p>
-            <div class="row">
-              <div class="large-10 columns">
-                <p><%= @advisor.education %></p></div>
-              </div>
-              <div class="row">
-              </div>
-            </div>
-          </div>
-
-
-
+          <p class='profile-subheader'>Other Information</p>
           <div class="row">
-          <div class="large-10 columns">
-            <p class='profile-subheader'>Other Information</p>
+            <div class="large-10 columns">
+              <p><%= @advisor.interesting_facts %></p></div>
+            </div>
             <div class="row">
-              <div class="large-10 columns">
-                <p><%= @advisor.interesting_facts %></p></div>
-              </div>
-              <div class="row">
-              </div>
             </div>
           </div>
         </div>
-
-        <aside class="large-3 columns hide-for-small">
-        </aside>
       </div>
+
+      <aside class="large-3 columns hide-for-small">
+      </aside>
+
+    </div>
+  </div>
+</div>
 
 <div class="row">
   <div class="small-12 medium-12 medium-centered large-12 large-centered columns">
