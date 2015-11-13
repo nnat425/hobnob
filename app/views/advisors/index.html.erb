@@ -6,11 +6,15 @@
       <div class="row">
         <div class="small-12 medium-12 large-12 columns">
           <div class="panel">
-            <%= advisor.firstname %>
+
+            <div class="small-" id="profile-avatar">
+              <%= image_tag @user.avatar.url(:medium) %>
+            </div>
+            <p><%= advisor.firstname %></p>
             <div class="spacer"></div>
-            <%= advisor.current_title %>
+            <p><%= advisor.current_title %></p>
             <div class="spacer"></div>
-            <%= advisor.job_description %>
+            <p><%= advisor.job_description %></p>
             <div class="spacer"></div>
           </div>
         </div>
