@@ -9,6 +9,7 @@ class SessionsController < ApplicationController
     if user
       if user.try(:authenticate, session_params[:password])
         session[:user_or_advisor_id] = user.id
+        session[:class_type] = user.class.name
         redirect_to root_path
       else
         flash[:login_fail] = "Please input the correct username/password!"
@@ -16,6 +17,7 @@ class SessionsController < ApplicationController
       end
     elsif advisor.try(:authenticate, session_params[:password])
       session[:user_or_advisor_id] = advisor.id
+      session[:class_type] = advisor.class.name
       redirect_to root_path
     else
       flash[:login_fail] = "Please input the correct username/password!"
