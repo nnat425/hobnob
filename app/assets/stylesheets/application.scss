@@ -402,3 +402,20 @@ box-shadow:         4px 4px 4px 0px #ccc;
   font-weight: 200;
   letter-spacing: 1px;
 }
+
+.login_pic{
+background: url("login.jpg") no-repeat center center;
+background-size: cover;
+height: 60vh;
+overflow: hidden;
+}
+
+.login-panel {
+border-radius: 5px;
+border: 1px solid #ccc;
+padding: 15px;
+text-align:center;
+margin: auto;
+margin-top: 1em;
+margin-bottom: 1em;
+}
