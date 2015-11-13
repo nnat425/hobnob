@@ -1,0 +1,1 @@
+$(document).ready(function(){$("#edit_signup").on("submit",function(e){1==!$(".category-checkbox").is(":checked")&&(e.preventDefault(),alert("You must pick at least 1 area of experience"))})});
