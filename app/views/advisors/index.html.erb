@@ -1,0 +1,25 @@
+<h1>Advisors</h1>
+
+<div class="row">
+  <div class="small-12 medium-12 large-12 columns">
+    <% @advisors.each do |advisor| %>
+      <div class="row">
+        <div class="small-12 medium-12 large-12 columns">
+          <div class="panel">
+
+            <div class="small-" id="profile-avatar">
+              <%= image_tag @advisor.avatar.url(:medium) %>
+            </div>
+            <p><%= advisor.firstname %></p>
+            <div class="spacer"></div>
+            <p><%= advisor.current_title %></p>
+            <div class="spacer"></div>
+            <p><%= advisor.job_description %></p>
+            <div class="spacer"></div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+

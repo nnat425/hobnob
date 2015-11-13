@@ -1,5 +1,9 @@
 class AdvisorsController < ApplicationController
 
+  def index
+    @advisors = Advisor.all
+  end
+
   def new
     @advisor = Advisor.new
   end
