@@ -24,7 +24,6 @@ class AdvisorsController < ApplicationController
     @current_categories = []
     @advisor.categories.each {|category|
     @current_categories.push(category.name)}
-
   end
 
   def update
