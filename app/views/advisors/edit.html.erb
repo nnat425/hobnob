@@ -3,7 +3,7 @@
 </header>
 
 <div class="row">
-  <div class="small-12 medium-12 large-12 columns">
+  <div class="small-12 medium-12 large-12 columns" id='test'>
     <div class="panel" id="edit-panel">
 
 
@@ -26,7 +26,7 @@
       <% end %>
 
       <% end %>
-      <%= form_for @advisor, url: advisor_path(@advisor), html: { multipart: true, :class => "custom" } do |f| %>
+      <%= form_for @advisor, url: advisor_path(@advisor), html: { multipart: true, :class => "custom", :id => "edit_signup" } do |f| %>
       <%= f.hidden_field :password_confirmation,:value => @advisor.password_digest %>
       <%= f.hidden_field :email_confirmation, :value => @advisor.email %>
 
@@ -138,9 +138,15 @@
       <div id='prev_comp' class="row">
         <div class="small-11 small-centered medium-10 large-7 columns">
           <%= f.label "Previous Companies" %>
+          <% if @advisor.other_companies == nil %>
+          <%= text_field_tag "companies[]",nil,placeholder: "1. Company Name" %>
+          <%= text_field_tag "companies[]",nil,placeholder: "2. Company Name" %>
+          <%= text_field_tag "companies[]",nil,placeholder: "3. Company Name" %>
+          <% else %>
           <%= text_field_tag "companies[]",@advisor.other_companies.split(',')[0],placeholder: "1. Company Name" %>
           <%= text_field_tag "companies[]",@advisor.other_companies.split(',')[1],placeholder: "2. Company Name" %>
           <%= text_field_tag "companies[]",@advisor.other_companies.split(',')[2],placeholder: "3. Company Name" %>
+          <% end %>
           <div class="spacer"></div>
         </div>
       </div>
@@ -169,8 +175,8 @@
         </div>
       </div>
       <div class="row">
-        <div class="small-11 small-centered medium-10 large-7 columns">
-          <%= f.submit "Update Profile", :class => "button" %>
+        <div class="small-11 small-centered medium-10 large-7 columns" id='pro'>
+          <%= f.submit "Update Profile", :class => "button", :id => "update_profile_button" %>
         </div>
       </div>
     </div>

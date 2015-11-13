@@ -23,8 +23,8 @@ class SessionsController < ApplicationController
     end
   end
 
-  def delete
-    session[:user_id] = nil
+  def destroy
+    session[:user_or_advisor_id] = nil
     redirect_to login_path
   end
 

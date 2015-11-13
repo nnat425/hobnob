@@ -12,9 +12,7 @@
 
 
       <% if flash[:login_fail] %>
-      <% flash[:login_fail].each do |msg| %>
-      <p class="error-message"><%= msg %></p>
-      <% end %>
+      <%= flash[:login_fail] %>
       <% end %>
 
 
