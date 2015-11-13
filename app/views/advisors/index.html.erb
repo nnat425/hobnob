@@ -1,6 +1,21 @@
 <h1>Advisors</h1>
-<% @advisors.each do |advisor| %>
-  <%= advisor.firstname %>
-  <%= advisor.current_title %>
-  <%= advisor.job_description %>
-<% end %>
+
+<div class="row">
+  <div class="small-12 medium-12 large-12 columns">
+    <% @advisors.each do |advisor| %>
+      <div class="row">
+        <div class="small-12 medium-12 large-12 columns">
+          <div class="panel">
+            <%= advisor.firstname %>
+            <div class="spacer"></div>
+            <%= advisor.current_title %>
+            <div class="spacer"></div>
+            <%= advisor.job_description %>
+            <div class="spacer"></div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
