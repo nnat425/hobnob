@@ -1,1 +1,6 @@
-index.html.erb
+<h1>Advisors</h1>
+<% @advisors.each do |advisor| %>
+  <%= advisor.firstname %>
+  <%= advisor.current_title %>
+  <%= advisor.job_description %>
+<% end %>
