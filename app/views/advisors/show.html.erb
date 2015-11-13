@@ -27,8 +27,10 @@
       </div>
       <div class="row">
         <div class="small-12 medium-12 large-12 columns">
-          <%=link_to "Book An Appointment", '#', class: "button" %>
+          <%=link_to "Book An Appointment", '#', class: "button",id: "appointment_button" %>
+          <% if session[:user_or_advisor_id] == @advisor.id && session[:class_type] == @advisor.class.name %>
           <%=link_to "Edit Profile", edit_advisor_path, class: "button" %>
+          <% end %>
         </div>
       </div>
     </div>
