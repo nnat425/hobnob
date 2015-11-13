@@ -11,8 +11,8 @@
       <%= form_for :session, url: '/login', html: {id: "login"} do |f| %>
 
 
-      <% if flash[:errors] %>
-      <% flash[:errors].each do |msg| %>
+      <% if flash[:login_fail] %>
+      <% flash[:login_fail].each do |msg| %>
       <p class="error-message"><%= msg %></p>
       <% end %>
       <% end %>

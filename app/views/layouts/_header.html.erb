@@ -9,6 +9,7 @@
     <li><a href="#">Advisors</a></li>
   </ul>
   <ul class="inline-list hide-for-small-only account-action">
+    <%= if session[]
     <li><%= link_to "Login", login_path %></li>
     <li class=""><a class="signup" href="/users/new" data-reveal-id="myModal">Signup</a></li>
   </ul>
