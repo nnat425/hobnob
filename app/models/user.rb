@@ -10,7 +10,7 @@ validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i,
 validates_confirmation_of :email, :message => "should match email"
 validates_presence_of :email_confirmation
 
-has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
+has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "http://prepgenie.ie/gamsat/wp-content/uploads/2015/08/default-avatar_man.png"
 validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
 validates_attachment_file_name :avatar, matches: [/png\Z/, /jpe?g\Z/]
 
