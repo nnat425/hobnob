@@ -11,6 +11,11 @@
   <ul class="inline-list hide-for-small-only account-action">
     <% if logged_in? %>
     <li><%= link_to "Logout", logout_path, method: :delete, id: "logout-link" %></li>
+    <% if session[:class_type] == "User" %>
+    <%= link_to "Profile",user_path(session[:user_or_advisor_id]) %>
+    <% else %>
+    <%= link_to "Profile", advisor_path(session[:user_or_advisor_id]) %>
+    <% end %>
     <% else %>
     <li><%= link_to "Login", login_path %></li>
     <li class=""><a class="signup" href="/users/new" data-reveal-id="myModal">Signup</a></li>
