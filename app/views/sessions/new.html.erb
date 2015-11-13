@@ -1,0 +1,107 @@
+
+  <header class="signup_hero">
+    <img src="/assets/sign_up_header4.png"/>
+  </header>
+
+
+
+  <div class="row">
+    <div class="large-6 large-centered small-12 small-centered columns">
+      <div class="signup-panel">
+        <h2 id="signup_header"> Login!</h2>
+        <%= form_for :session, url: '/login', html: {id: "login"} do |f| %>
+
+
+        <% if flash[:errors] %>
+        <% flash[:errors].each do |msg| %>
+        <p class="error-message"><%= msg %></p>
+        <% end %>
+        <% end %>
+
+
+        <div class="row">
+          <div class="large-10 large-centered small-11 small-centered columns">
+            <%= f.text_field :first_name, placeholder: "First Name" %>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="large-10 large-centered small-11 small-centered columns">
+           <%= f.text_field :last_name, placeholder: "Last Name" %>
+         </div>
+       </div>
+       <div class="row">
+        <div class="large-10 large-centered small-11 small-centered columns">
+         <%= f.text_field :email, placeholder: "Email" %>
+       </div>
+     </div>
+    <div class="row">
+      <div class="large-10 large-centered small-11 small-centered columns">
+        <%= f.text_field :email_confirmation, placeholder: "Confirm Email" %>
+        <div class="spacer"></div>
+      </div>
+    </div>
+     <div class="row">
+      <div class="large-10 large-centered small-11 small-centered columns">
+       <%= f.password_field :password, placeholder: "Password" %>
+     </div>
+   </div>
+   <div class="row">
+    <div class="large-10 large-centered small-11 small-centered columns">
+     <%= f.password_field :password_confirmation, placeholder: "Password Confirmation" %>
+   </div>
+  </div>
+  <div class="row">
+    <div class="large-10 large-centered small-11 small-centered columns">
+ <%= f.file_field :avatar, placeholder: "Profile Picture" %>
+   </div>
+  </div>
+
+  <div class="row">
+    <div class="large-6  small-11 small-centered columns">
+      <div class="switch round">
+        <p class="choice_label">Current Student?</p>
+        <input id="yes-no" type="checkbox" name="user[student]">
+        <label for="yes-no">
+          <span class="switch-on" id="user_student_true">Yes</span>
+          <span class="switch-off" id="user_student_false">No</span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <div class="large-10 large-centered small-11 small-centered columns">
+      <%= f.text_field :school, placeholder: "University"%>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="large-10 large-centered small-11 small-centered columns">
+      <%= f.text_field :program, placeholder: "Program"%>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="large-10 large-centered small-11 small-centered columns">
+      <div id='grad_date'>
+        Expected Graduation Date
+        <%= f.select :graduation_date, (2016..2030) %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="large-10 large-centered small-11 small-centered columns">
+      <%=f.submit "Register", :class => "button" %>
+    </div>
+  </div>
+
+  <% end %>
+
+  </div>
+  </div>
+  </div>
