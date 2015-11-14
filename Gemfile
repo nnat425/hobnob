@@ -31,17 +31,15 @@ gem "paperclip", "~> 4.3"
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
+  gem "factory_girl_rails"
+  gem "faker"
 end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
+  # Use postgresql as the database for Active Records
   gem 'pg'
-
-  # Use postgresql as the database for Active Record
-
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
@@ -49,5 +47,11 @@ end
 group :production do
   gem 'unicorn'
   gem 'mysql'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'rspec-rails'
+  gem 'database_cleaner'
 end
 
