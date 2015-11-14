@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20151109012520) do
     t.string   "location"
     t.string   "alternative_email"
     t.string   "company"
-    t.integer  "years_of_experience"
+    t.string   "years_of_experience"
     t.string   "other_companies"
     t.string   "education"
     t.string   "certifications"
