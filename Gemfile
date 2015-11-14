@@ -31,7 +31,7 @@ gem "paperclip", "~> 4.3"
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-
+  gem "factory_girl_rails"
 end
 
 group :development do
