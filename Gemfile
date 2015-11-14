@@ -50,6 +50,6 @@ group :production do
 end
 
 group :test do
-
+  gem 'capybara'
 end
 
