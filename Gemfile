@@ -38,10 +38,8 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
+  # Use postgresql as the database for Active Records
   gem 'pg'
-
-  # Use postgresql as the database for Active Record
-
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
@@ -49,5 +47,9 @@ end
 group :production do
   gem 'unicorn'
   gem 'mysql'
+end
+
+group :test do
+
 end
 
