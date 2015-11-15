@@ -427,9 +427,10 @@ margin-bottom: 1em;
 
 .index-categories-list {
   display: inline;
-  border: 1px solid black;
   padding: .5em;
   letter-spacing: 1px;
+  margin-right: .5em;
+  font-family: "Open Sans";
 }
 
 #index-advisor-name {
@@ -440,4 +441,10 @@ margin-bottom: 1em;
 
 #page-header {
   margin-top: 90px;
+}
+
+#page-header h1 {
+  letter-spacing: 2px;
+  font-family: "Open Sans";
+  font-weight: 100;
 }
