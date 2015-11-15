@@ -8,36 +8,18 @@
 </div>
 
 <div class="row">
-  <div class="large-3 columns ">
-    <div class="panel">
-      <div class="row">
-        <div class="small-12 medium-12 large-12 columns">
-          <%= image_tag @advisor.avatar.url(:medium) %>
-        </div>
-      </div>
-      <div class="row">
-        <div class="small-12 medium-12 large-12 columns">
-          <h4><%= @advisor.firstname %></h4>
-        </div>
-      </div>
-      <div class="row">
-        <div class="small-12 medium-12 large-12 columns">
-          <h5 class="title"><%= @advisor.location %></h5>
-        </div>
-      </div>
-      <div class="row">
-        <div class="small-12 medium-12 large-12 columns">
-          <%=link_to "Book An Appointment", '#', class: "button",id: "appointment_button" %>
-          <% if session[:user_or_advisor_id] == @advisor.id && session[:class_type] == @advisor.class.name %>
-          <%=link_to "Edit Profile", edit_advisor_path, class: "button" %>
-          <% end %>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="large-9 columns" id='profile-panel'>
+  <div class="small-12 medium-12 slarge-12 columns" id='profile-panel'>
     <div class="row">
-      <div class="large-10 columns">
+      <div class="small-2 medium-2 large-2 columns">
+        <%= image_tag @advisor.avatar.url(:medium) %>
+        <h4><%= @advisor.firstname %></h4>
+        <h5 class="title"><%= @advisor.location %></h5>
+        <%=link_to "Book An Appointment", '#', class: "button",id: "appointment_button" %>
+          <% if session[:user_or_advisor_id] == @advisor.id && session[:class_type] == @advisor.class.name %>
+            <%=link_to "Edit Profile", edit_advisor_path, class: "button" %>
+          <% end %>
+      </div>
+      <div class="small-10 medium-10 large-10 columns">
         <p class='profile-subheader'>Previous Companies</p>
         <div class="row">
           <% @advisor.other_companies.split(',').each do |company| %>
@@ -50,10 +32,10 @@
     </div>
 
     <div class="row">
-      <div class="large-10 columns">
+      <div class="small-10 medium-10 large-10 columns">
         <p class='profile-subheader'>Education & Certifications</p>
         <div class="row">
-          <div class="large-10 columns">
+          <div class="small-10 medium-10 large-10 columns">
             <p><%= @advisor.education %></p>
             <p><%= @advisor.certifications %></p>
           </div>
