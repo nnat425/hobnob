@@ -384,6 +384,9 @@ border: 1px solid #ccc;
 box-shadow:         4px 4px 4px 0px #ccc;
 }
 
+#profile-panel p {
+  font-family: "Open Sans";
+}
 .profile-subheader {
   font-family: "Open Sans";
   font-size:30px;
@@ -435,7 +438,7 @@ margin-bottom: 1em;
 
 #index-advisor-name {
   font-family: "Open Sans";
-  font-size: 1.5em;
+  font-size: 2em;
   letter-spacing: 1px;
 }
 
@@ -447,4 +450,9 @@ margin-bottom: 1em;
   letter-spacing: 2px;
   font-family: "Open Sans";
   font-weight: 100;
+}
+
+#index-advisor-info {
+  margin-top: auto;
+  margin-bottom: auto;
 }
