@@ -239,22 +239,7 @@ overflow: hidden;
 $gradient: linear-gradient(45deg, pink, skyblue);
 $gradient2: linear-gradient(45deg, #2ecc71, dodgerblue);
 
-.network_button {
-color: #fff;
-font-size: 1rem;
-letter-spacing: 5px;
-text-fill-color: transparent;
-transition: all 0.2s ease;
 
-}
-
-#get_networking{
-margin-top:2em;
-border:solid white 3px;
-padding: 1em;
-text-align:center;
-float: right;
-}
 
 #page_header {
 text-align: center;
@@ -280,10 +265,7 @@ height: 1em;
 font-size: 1.2em;
 }
 
-.button {
-letter-spacing: 2px;
-text-transform: uppercase;
-}
+
 
 #form_directions {
 letter-spacing: 1px;
@@ -450,9 +432,14 @@ margin-bottom: 1em;
   letter-spacing: 2px;
   font-family: "Open Sans";
   font-weight: 100;
+  color: #43c7f4;
 }
 
 #index-advisor-info {
   margin-top: auto;
   margin-bottom: auto;
+}
+
+#view-advisor-link {
+  float: right;
 }
