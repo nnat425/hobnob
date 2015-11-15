@@ -425,9 +425,19 @@ margin-bottom: 1em;
   text-align:center;
 }
 
-.categories-list {
+.index-categories-list {
   display: inline;
   border: 1px solid black;
   padding: .5em;
   letter-spacing: 1px;
+}
+
+#index-advisor-name {
+  font-family: "Open Sans";
+  font-size: 1.5em;
+  letter-spacing: 1px;
+}
+
+#page-header {
+  margin-top: 90px;
 }

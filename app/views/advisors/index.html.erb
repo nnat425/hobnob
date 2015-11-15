@@ -1,4 +1,8 @@
-<h1>Advisors</h1>
+<div class="row">
+  <div class="small-12 medium-12 large-12 columns" id="page-header">
+    <h1>Advisors</h1>
+  </div>
+</div>
 
 <div class="row">
   <div class="small-12 medium-12 large-12 columns">
@@ -13,7 +17,7 @@
               <div class="small-9 medium-9 large-9 columns">
                 <div class-"row">
                   <div class="small-12 medium-12 large-12 columns">
-                    <p id="advisor-name"><%= advisor.firstname %></p>
+                    <p id="index-advisor-name"><%= advisor.firstname %></p>
                     <div class="spacer"></div>
                   </div>
                 </div>
@@ -32,7 +36,7 @@
                 <div class="row">
                   <div class="small-12 medium-12 large-12 columns">
                     <% advisor.categories.each do |category| %>
-                      <p class="categories-list"><%= category.name %></p>
+                      <p class="index-categories-list"><%= category.name %></p>
                     <% end %>
                   </div>
                 </div>
