@@ -1,7 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+User.create([{first_name: "Jenny", last_name: "Lee", email: "asdfcrazydog@gmail.com", password: "password"}, {first_name: "Jason", last_name: "Lee", email: "jason@example.com", password: "password"}, {first_name: "Chris", last_name: "Lee", email: "chris@example.com", password: "password"}, {first_name: "Young", last_name: "Rhee", email: "young@example.com", password: "password"}])
+
+Advisor.create([{firstname: "Raj", lastname: "Nat", email: "raj@example.com", password:"password", current_title: "CTO", job_description: "I'm the CTO", charity: "Charity 1", location: "New York City", alternative_email: "rajtree@example.com", company: "JP Morgan", years_of_experience: "4", other_companies:"Bank of America", education: "UMass", certifications: "CPR", interesting_facts:"I am a tree"}, {firstname: "River", lastname: "Phoenix", email: "river@example.com", password:"password",current_title: "CEO", job_description:"I'm the CEO",charity:"charity2", location: "California", alternative_email: "phoenix@example.com", company: "Phoenix Company", years_of_experience: "5", other_companies: "Arizona Ice Tea", education: "None", certifications: "CPR", interesting_facts: "I love Jenny"}])
