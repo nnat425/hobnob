@@ -362,22 +362,28 @@ margin-top: 90px;
 margin-bottom:15px;
 background-color: #fff;
 border: 1px solid #ccc;
--webkit-box-shadow: 4px 4px 4px 0px #ccc;
--moz-box-shadow:    4px 4px 4px 0px #ccc;
-box-shadow:         4px 4px 4px 0px #ccc;
+-webkit-box-shadow: 1px 1px 1px 0px #ccc;
+-moz-box-shadow:    1px 1px 1px 0px #ccc;
+box-shadow:         1px 1px 1px 0px #ccc;
 padding-top: 2em;
 padding-bottom: 2em;
 }
 
+#advisor-name-profile-page {
+  font-size: 3em;
+}
+
+#advisor-title-profile-page {
+  font-size: 1.5em;
+}
 #profile-panel p {
   font-family: "Open Sans";
 }
 .profile-subheader {
   font-family: "Open Sans";
-  font-size:30px;
+  font-size: 1em;
   color: #43c7f4;
   letter-spacing: 2px;
-  border-bottom: grey solid 1px;
 }
 
 .category-checkbox {

@@ -13,19 +13,43 @@
       </div>
       <div class="small-9 medium-9 large-9 columns">
         <div class="row">
-          <p><%= @advisor.firstname %></p>
-          <p><%= @advisor.current_title %></p>
-          <p><%= @advisor.company %></p>
-          <p class="title"><%= @advisor.location %></p>
-          <p class='profile-subheader'>Previous Companies</p>
-          <% @advisor.other_companies.split(',').each do |company| %>
-          <p><%= company %></p>
-          <% end %>
-          <p class='profile-subheader'>Education & Certifications</p>
-          <p><%= @advisor.education %></p>
-          <p><%= @advisor.certifications %></p>
-          <p class='profile-subheader'>Other Information</p>
-          <p><%= @advisor.interesting_facts %></p>
+          <p id="advisor-name-profile-page"><%= @advisor.firstname %></p>
+          <p id="advisor-title-profile-page"><%= @advisor.current_title %> | <%= @advisor.company %></p>
+          <p class="profile-info"><%= @advisor.location %></p>
+          <div class="row">
+            <div class="small-2 medium-2 large-2 columns">
+              <p class='profile-subheader'>Previous Companies</p>
+            </div>
+            <div class="small-10 medium-10 large-10 columns">
+              <% @advisor.other_companies.split(',').each do |company| %>
+                <p class="profile-info"><%= company %></p>
+              <% end %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-2 medium-2 large-2 columns">
+              <p class='profile-subheader'>Education</p>
+            </div>
+            <div class="small-10 medium-10 large-10 columns">
+              <p class="profile-info"><%= @advisor.education %></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-2 medium-2 large-2 columns">
+              <p class="profile-subheader">Certifications</p>
+            </div>
+            <div class="small-10 medium-10 large-10 columns">
+              <p class="profile-info"><%= @advisor.certifications %></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-2 medium-2 large-2 columns">
+              <p class='profile-subheader'>Other Information</p>
+            </div>
+            <div class="small-10 medium-10 large-10 columns">
+              <p class="profile-info"><%= @advisor.interesting_facts %></p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
