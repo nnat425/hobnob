@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(version: 20151116170044) do
 
   create_table "potential_appointments", force: :cascade do |t|
     t.integer  "advisor_id",                     null: false
-    t.integer  "cart_id",                        null: false
+    t.integer  "cart_id"
     t.time     "start_time",                     null: false
     t.time     "end_time",                       null: false
     t.date     "date",                           null: false

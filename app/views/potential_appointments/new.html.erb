@@ -4,17 +4,18 @@
 <h1> Create appointment </h1>
 <%= form_for @potential_appointment do |f| %>
 <%= f.label :date %>
-<%= f.date_select :date %>
+<%= date_select("potential_appointment", "date", order: [:month, :day])
+ %>
 <%= f.label :Start_Time %>
-<%= time_select 'appointment', 'start_time', {ampm: true}
+<%= time_select 'potential_appointment', 'start_time', {ampm: true}
  %>
  <%= f.label :End_Time %>
-<%= time_select 'appointment', 'end_time', {ampm: true}
+<%= time_select 'potential_appointment', 'end_time', {ampm: true}
  %>
 <%= f.submit "Create" %>
 
-<%= month_calendar do |date| %>
-  <%= date %>
+<%= month_calendar(attribute: :start_time) do |date| %>
+  <%= date.day %>
 <% end %>
 
 <% end %>
