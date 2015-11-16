@@ -2,7 +2,7 @@
 </header>
 
 <h1> Create appointment </h1>
-<%= form_for @appointment do |f| %>
+<%= form_for @potential_appointment do |f| %>
 <%= f.label :date %>
 <%= f.date_select :date %>
 <%= f.label :Start_Time %>
@@ -11,6 +11,10 @@
  <%= f.label :End_Time %>
 <%= time_select 'appointment', 'end_time', {ampm: true}
  %>
+<%= f.submit "Create" %>
 
+<%= month_calendar do |date| %>
+  <%= date %>
+<% end %>
 
 <% end %>

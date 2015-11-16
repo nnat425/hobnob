@@ -6,7 +6,13 @@ class ApplicationController < ActionController::Base
 
   def current_user
     if logged_in?
-      return User.find_by(id: session[:user_id])
+      return User.find_by(id: session[:user_or_advisor_id])
+    end
+  end
+
+  def current_advisor
+    if logged_in?
+      return Advisor.find_by(id: session[:user_or_advisor_id])
     end
   end
 
