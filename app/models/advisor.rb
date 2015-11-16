@@ -1,5 +1,6 @@
 class Advisor < ActiveRecord::Base
   has_many :categories
+  has_many :potential_appointments
 
   validates :email, :presence => true
   validates :email, uniqueness: true

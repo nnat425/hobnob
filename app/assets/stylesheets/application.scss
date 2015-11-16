@@ -12,9 +12,11 @@
 *
 *= require_tree .
 *= require_self
+*= require simple_calendar
 *= require foundation_and_overrides
 /*= require foundation */
 */
+
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 @import url(http://fonts.googleapis.com/css?family=Ubuntu);
 
@@ -431,3 +433,11 @@ overflow: hidden;
 #view-advisor-link {
   float: right;
 }
+
+.calendar_page {
+background-color:blue;
+background-size: cover;
+height: 30vh;
+overflow: hidden;
+}
+
