@@ -8,77 +8,38 @@
 </div>
 
 <div class="row">
-  <div class="large-3 columns ">
-    <div class="panel">
-      <div class="row">
-        <div class="small-12 medium-12 large-12 columns">
+  <div class="small-12 medium-12 large-12 columns" id='profile-panel'>
+    <div class="row">
+      <div class="small-3 medium-3 large-3 columns">
+        <div id="advisor-profile-image">
           <%= image_tag @advisor.avatar.url(:medium) %>
         </div>
-      </div>
-      <div class="row">
-        <div class="small-12 medium-12 large-12 columns">
-          <h4><%= @advisor.firstname %></h4>
-        </div>
-      </div>
-      <div class="row">
-        <div class="small-12 medium-12 large-12 columns">
-          <h5 class="title"><%= @advisor.location %></h5>
-        </div>
-      </div>
-      <div class="row">
-        <div class="small-12 medium-12 large-12 columns">
-          <%=link_to "Book An Appointment", '#', class: "button",id: "appointment_button" %>
+        <h4><%= @advisor.firstname %></h4>
+        <h5 class="title"><%= @advisor.location %></h5>
+        <%=link_to "Book An Appointment", '#', class: "button",id: "appointment_button" %>
           <% if session[:user_or_advisor_id] == @advisor.id && session[:class_type] == @advisor.class.name %>
-          <%=link_to "Edit Profile", edit_advisor_path, class: "button" %>
+            <%=link_to "Edit Profile", edit_advisor_path, class: "button" %>
           <% end %>
-        </div>
       </div>
-    </div>
-  </div>
-  <div class="large-9 columns" id='profile-panel'>
-    <div class="row">
-      <div class="large-10 columns">
-        <p class='profile-subheader'>Previous Companies</p>
+      <div class="small-9 medium-9 large-9 columns">
         <div class="row">
+          <p class='profile-subheader'>Previous Companies</p>
           <% @advisor.other_companies.split(',').each do |company| %>
-          <div class="large-10 columns"><p><%= company %></p></div>
+          <p><%= company %></p>
         </div>
         <div class="row">
           <% end %>
         </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="large-10 columns">
-        <p class='profile-subheader'>Education & Certifications</p>
         <div class="row">
-          <div class="large-10 columns">
-            <p><%= @advisor.education %></p>
-            <p><%= @advisor.certifications %></p>
-          </div>
-          </div>
-          <div class="row">
-          </div>
+          <p class='profile-subheader'>Education & Certifications</p>
+          <p><%= @advisor.education %></p>
+          <p><%= @advisor.certifications %></p>
         </div>
-      </div>
-
-      <div class="row">
-        <div class="large-10 columns">
+        <div class="row">
           <p class='profile-subheader'>Other Information</p>
-          <div class="row">
-            <div class="large-10 columns">
-              <p><%= @advisor.interesting_facts %></p></div>
-            </div>
-            <div class="row">
-            </div>
-          </div>
+          <p><%= @advisor.interesting_facts %></p>
         </div>
       </div>
-
-      <aside class="large-3 columns hide-for-small">
-      </aside>
-
     </div>
   </div>
 </div>
