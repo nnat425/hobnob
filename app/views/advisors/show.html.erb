@@ -11,7 +11,7 @@
             <%=link_to "Edit Profile", edit_advisor_path, class: "button" %>
           <% end %>
       </div>
-      <div class="small-9 medium-9 large-9 columns">
+      <div class="small-9 medium-9 large-9 columns" id="advisor-profile-bio">
         <div class="row">
           <p id="advisor-name-profile-page"><%= @advisor.firstname %></p>
           <p id="advisor-title-profile-page"><%= @advisor.current_title %> | <%= @advisor.company %></p>
