@@ -1,0 +1,16 @@
+<header class="calendar_page">
+</header>
+
+<h1> Create appointment </h1>
+<%= form_for @appointment do |f| %>
+<%= f.label :date %>
+<%= f.date_select :date %>
+<%= f.label :Start_Time %>
+<%= time_select 'appointment', 'start_time', {ampm: true}
+ %>
+ <%= f.label :End_Time %>
+<%= time_select 'appointment', 'end_time', {ampm: true}
+ %>
+
+
+<% end %>
