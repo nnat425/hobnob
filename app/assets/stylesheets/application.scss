@@ -368,6 +368,16 @@ box-shadow:         1px 1px 1px 0px #ccc;
 padding: 2em;
 }
 
+#advisor-bio-panel {
+  margin-bottom:15px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: 1px 1px 1px 0px #ccc;
+  -moz-box-shadow:    1px 1px 1px 0px #ccc;
+  box-shadow:         1px 1px 1px 0px #ccc;
+  padding: 2em;
+}
+
 #advisor-timeslot-panel {
   margin-bottom:15px;
   background-color: #fff;
@@ -399,7 +409,7 @@ padding: 2em;
 }
 .profile-subheader {
   font-family: "Open Sans";
-  font-size: .9em;
+  font-size: 1em;
   color: #43c7f4;
   letter-spacing: 1px;
   margin-bottom: .5em;
@@ -436,6 +446,8 @@ overflow: hidden;
   letter-spacing: 1px;
   margin-right: .5em;
   font-family: "Open Sans";
+  border: 1px solid #43c7f4;
+  font-color: #43c7f4;
 }
 
 #index-advisor-name {
