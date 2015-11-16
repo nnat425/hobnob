@@ -1,4 +1,4 @@
-class PotentialAppointments < ApplicationController
+class PotentialAppointmentsController < ApplicationController
 
 def new
 end
