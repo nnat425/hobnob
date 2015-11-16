@@ -1,13 +1,5 @@
 
 <div class="row">
-  <div class="large-12 columns">
-    <div class="panel" id='profile_header'>
-      <h1><%= @advisor.current_title + " at " + @advisor.company %></h1>
-    </div>
-  </div>
-</div>
-
-<div class="row">
   <div class="small-12 medium-12 large-12 columns" id='profile-panel'>
     <div class="row">
       <div class="small-3 medium-3 large-3 columns">
@@ -22,22 +14,16 @@
       <div class="small-9 medium-9 large-9 columns">
         <div class="row">
           <p><%= @advisor.firstname %></p>
+          <p><%= @advisor.current_title %></p>
+          <p><%= @advisor.company %></p>
           <p class="title"><%= @advisor.location %></p>
-        </div>
-        <div class="row">
           <p class='profile-subheader'>Previous Companies</p>
           <% @advisor.other_companies.split(',').each do |company| %>
           <p><%= company %></p>
-        </div>
-        <div class="row">
           <% end %>
-        </div>
-        <div class="row">
           <p class='profile-subheader'>Education & Certifications</p>
           <p><%= @advisor.education %></p>
           <p><%= @advisor.certifications %></p>
-        </div>
-        <div class="row">
           <p class='profile-subheader'>Other Information</p>
           <p><%= @advisor.interesting_facts %></p>
         </div>

@@ -356,17 +356,17 @@ height: 70vh;
 overflow: hidden;
 }
 
-#profile_header{
-  margin-top:90px;
-}
 
 #profile-panel {
+margin-top: 90px;
 margin-bottom:15px;
 background-color: #fff;
 border: 1px solid #ccc;
 -webkit-box-shadow: 4px 4px 4px 0px #ccc;
 -moz-box-shadow:    4px 4px 4px 0px #ccc;
 box-shadow:         4px 4px 4px 0px #ccc;
+padding-top: 2em;
+padding-bottom: 2em;
 }
 
 #profile-panel p {
