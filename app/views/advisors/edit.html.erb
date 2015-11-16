@@ -61,7 +61,7 @@
       <div class="row">
         <div class="small-11 small-centered medium-10 large-7 columns">
           <%= f.label "Job Description" %>
-          <%= f.text_field :job_description, placeholder: "Job description" %>
+          <%= f.text_area(:job_description, cols:10, rows: 10) %>
           <div class="spacer"></div>
         </div>
       </div>
