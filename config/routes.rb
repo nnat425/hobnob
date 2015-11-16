@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'about' => 'welcome#about'
   resources :advisors
   resources :users
+  resources :potential_appointments
 
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
