@@ -14,14 +14,16 @@
         <div id="advisor-profile-image">
           <%= image_tag @advisor.avatar.url(:medium) %>
         </div>
-        <h4><%= @advisor.firstname %></h4>
-        <h5 class="title"><%= @advisor.location %></h5>
         <%=link_to "Book An Appointment", '#', class: "button" %>
           <% if session[:user_or_advisor_id] == @advisor.id && session[:class_type] == @advisor.class.name %>
             <%=link_to "Edit Profile", edit_advisor_path, class: "button" %>
           <% end %>
       </div>
       <div class="small-9 medium-9 large-9 columns">
+        <div class="row">
+          <h4><%= @advisor.firstname %></h4>
+          <h5 class="title"><%= @advisor.location %></h5>
+        </div>
         <div class="row">
           <p class='profile-subheader'>Previous Companies</p>
           <% @advisor.other_companies.split(',').each do |company| %>
