@@ -4,8 +4,8 @@ class CreatePotentialAppointments < ActiveRecord::Migration
       t.references :advisor, null: false
       t.references :cart
 
-      t.time :start_time , null: false
-      t.time :end_time, null: false
+      t.datetime :start_time , null: false
+      t.datetime :end_time, null: false
       t.date :date, null: false
       t.boolean :booked_status?, default: false
       t.timestamps null: false
