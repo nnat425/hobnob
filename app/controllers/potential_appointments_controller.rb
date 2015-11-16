@@ -5,8 +5,7 @@ class PotentialAppointmentsController < ApplicationController
   end
 
   def create
-    # binding.pry
-  # potential_appointment = PotentialAppointment.create(:start_time, end_time:, date:)
+    potential_appointment = current_advisor.potential_appointments.create(:start_time, end_time:, date:)
   end
 
 
