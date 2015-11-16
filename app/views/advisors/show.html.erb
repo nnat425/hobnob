@@ -18,12 +18,13 @@
           <p class="profile-info"><%= @advisor.location %></p>
           <div class="row">
             <div class="small-2 medium-2 large-2 columns">
-              <p class='profile-subheader'>Previous Companies</p>
+              <p class='profile-subheader'>Previous</p>
             </div>
             <div class="small-10 medium-10 large-10 columns">
-              <% @advisor.other_companies.split(',').each do |company| %>
-                <p class="profile-info"><%= company %></p>
+              <p class="profile-info"><% @advisor.other_companies.split(',').each do |company| %>
+                <%= company %>
               <% end %>
+              </p>
             </div>
           </div>
           <div class="row">

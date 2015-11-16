@@ -369,6 +369,9 @@ padding-top: 2em;
 padding-bottom: 2em;
 }
 
+#advisor-profile-image {
+  margin-bottom: 1em;
+}
 #advisor-name-profile-page {
   font-size: 3em;
 }
@@ -376,6 +379,7 @@ padding-bottom: 2em;
 #advisor-title-profile-page {
   font-size: 1.5em;
 }
+
 #profile-panel p {
   font-family: "Open Sans";
 }
@@ -383,7 +387,11 @@ padding-bottom: 2em;
   font-family: "Open Sans";
   font-size: 1em;
   color: #43c7f4;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
+}
+
+.profile-info {
+  margin-bottom: 0em;
 }
 
 .category-checkbox {
