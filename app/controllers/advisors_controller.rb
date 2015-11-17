@@ -2,6 +2,7 @@ class AdvisorsController < ApplicationController
 
   def index
     @advisors = Advisor.all
+    @categories = Category.all
   end
 
   def new
