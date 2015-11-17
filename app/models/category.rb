@@ -1,4 +1,4 @@
 class Category < ActiveRecord::Base
-belongs_to :advisor
+has_and_belongs_to_many :advisors
 
 end
