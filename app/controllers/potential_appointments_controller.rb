@@ -2,6 +2,9 @@ class PotentialAppointmentsController < ApplicationController
 
   def new
     @potential_appointment = PotentialAppointment.new
+
+    @all_appointments =
+    PotentialAppointment.all
   end
 
   def create

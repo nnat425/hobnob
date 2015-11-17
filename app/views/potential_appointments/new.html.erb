@@ -5,18 +5,23 @@
 <%= form_for @potential_appointment do |f| %>
 <%= f.label :date %>
 <%= date_select("potential_appointment", "date", order: [:month, :day])
- %>
+%>
 <%= f.label :Start_Time %>
 <%= time_select 'potential_appointment', 'start_time', {ampm: true}
- %>
- <%= f.label :End_Time %>
+%>
+<%= f.label :End_Time %>
 <%= time_select 'potential_appointment', 'end_time', {ampm: true}
- %>
+%>
 <%= f.submit "Create" %>
 
-<%= month_calendar(attribute: :start_time) do |date| %>
-  <%= date.day %>
-<% end %>
+<%= month_calendar events: @all_appointments do |date, appointments| %>
+<%= date.day %>
 
+<% appointments.each do |appointment| %>
+<div>
+  <%= appointment.date %>
+</div>
+<% end %>
+<% end %>
 <% end %>
 
