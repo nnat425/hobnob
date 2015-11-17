@@ -1,5 +1,5 @@
 class RemoveAdvisorFromCategories < ActiveRecord::Migration
   def change
-    remove_column :categories, :advisor, :references
+    remove_reference :categories, :advisor
   end
 end
