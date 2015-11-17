@@ -35,8 +35,6 @@ class AdvisorsController < ApplicationController
       params[:category][:name].each do |category_name|
         advisor.categories.find_or_create_by(name: category_name)
       end
-
-      # advisor.add_categories(params[:list])
       advisor.update(advisor_params)
       advisor.join_companies(params[:companies])
       redirect_to advisor_path(advisor)
