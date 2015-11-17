@@ -85,7 +85,7 @@
           <%= f.label "Areas of experience" %>
           <div class="row">
             <div class="small-1 medium-1 large-1 columns">
-              <%= check_box_tag "category[name]", "Investment Banking", @current_categories.include?("Investment Banking"), class: "category-checkbox" %>
+              <%= check_box_tag "category[name]", "Investment Banking", @current_categories.find_by(name: "Investment Banking"), class: "category-checkbox" %>
             </div>
             <div class="small-11 medium-11 large-11 columns">
               <p class="checkbox-label">Investment Banking</p>
@@ -93,7 +93,7 @@
           </div>
           <div class="row">
             <div class="small-1 medium-1 large-1 columns">
-              <%= check_box_tag "category[name]", "Asset Management", @current_categories.include?("Asset Management"), class: "category-checkbox" %>
+              <%= check_box_tag "category[name]", "Asset Management", @current_categories.find_by(name: "Asset Management"), class: "category-checkbox" %>
             </div>
             <div class="small-11 medium-11 large-11 columns">
               <p class="checkbox-label">Asset Management</p>
@@ -101,7 +101,7 @@
           </div>
           <div class="row">
             <div class="small-1 medium-1 large-1 columns">
-              <%= check_box_tag "category[name]", "Corporate Finance Divisions", @current_categories.include?("Corporate Finance Divisions"), class: "category-checkbox"  %>
+              <%= check_box_tag "category[name]", "Corporate Finance Divisions", @current_categories.find_by(name: "Corporate Finance Divisions"), class: "category-checkbox"  %>
             </div>
             <div class="small-11 medium-11 large-11 columns">
               <p class="checkbox-label">Corporate Finance Divisions</p>
@@ -109,7 +109,7 @@
           </div>
           <div class="row">
             <div class="small-1 medium-1 large-1 columns">
-              <%= check_box_tag "category[name]", "Other",  @current_categories.include?("Other"), class: "category-checkbox" %>
+              <%= check_box_tag "category[name]", "Other",  @current_categories.find_by(name: "Other"), class: "category-checkbox" %>
             </div>
             <div class="small-11 medium-11 large-11 columns">
               <p class="checkbox-label">Other Finance Opportunities</p>
@@ -117,7 +117,7 @@
           </div>
           <div class="row">
             <div class="small-1 medium-1 large-1 columns">
-              <%= check_box_tag "category[name]", "Resume/Interview",@current_categories.include?("Resume/Interview"), class: "category-checkbox" %>
+              <%= check_box_tag "category[name]", "Resume/Interview",@current_categories.find_by(name: "Resume/Interview"), class: "category-checkbox" %>
             </div>
             <div class="small-11 medium-11 large-11 columns">
               <p class="checkbox-label">Resume building & Interview Prep</p>
