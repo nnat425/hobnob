@@ -26,10 +26,7 @@ class AdvisorsController < ApplicationController
 
   def edit
     @advisor = Advisor.find_by(id: params[:id])
-    @current_categories = []
-    @advisor.categories.each do |category|
-      @current_categories.push(category.name)
-    end
+    @current_categories = @advisor.categories
   end
 
   def update
