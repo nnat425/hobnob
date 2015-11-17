@@ -517,3 +517,13 @@ overflow: hidden;
   font-family: "Open Sans";
   margin-bottom: 0px;
 }
+
+#advisor-index-avatar {
+  border: 1px solid #d9d9d9;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  overflow: hidden;
+  text-align: center;
+  img { width: 100% }
+}
