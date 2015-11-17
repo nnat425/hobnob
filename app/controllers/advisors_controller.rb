@@ -31,8 +31,9 @@ class AdvisorsController < ApplicationController
 
   def update
     advisor = Advisor.find_by(id: params[:id])
-    if advisor_params
-      advisor.add_categories(params[:list])
+    if advisor_params && params[:category]
+      advisor.categories.find_or_create_by(name: params[:category])
+      # advisor.add_categories(params[:list])
       advisor.update(advisor_params)
       advisor.join_companies(params[:companies])
       redirect_to advisor_path(advisor)
