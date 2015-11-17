@@ -1,12 +1,3 @@
-
-<div class="row">
-  <div class="large-12 columns">
-    <div class="panel" id='profile_header'>
-      <h1><%= @advisor.current_title + " at " + @advisor.company %></h1>
-    </div>
-  </div>
-</div>
-
 <div class="row">
   <div class="small-12 medium-12 large-12 columns" id='profile-panel'>
     <div class="row">
@@ -14,43 +5,103 @@
         <div id="advisor-profile-image">
           <%= image_tag @advisor.avatar.url(:medium) %>
         </div>
-        <h4><%= @advisor.firstname %></h4>
-        <h5 class="title"><%= @advisor.location %></h5>
         <%=link_to "Book An Appointment", '#', class: "button" %>
-          <% if session[:user_or_advisor_id] == @advisor.id && session[:class_type] == @advisor.class.name %>
-            <%=link_to "Edit Profile", edit_advisor_path, class: "button" %>
-          <% end %>
+        <% if session[:user_or_advisor_id] == @advisor.id && session[:class_type] == @advisor.class.name %>
+        <%=link_to "Edit Profile", edit_advisor_path, class: "button" %>
+        <% end %>
       </div>
-      <div class="small-9 medium-9 large-9 columns">
+      <div class="small-9 medium-9 large-9 columns" id="advisor-profile-bio">
         <div class="row">
-          <p class='profile-subheader'>Previous Companies</p>
-          <% @advisor.other_companies.split(',').each do |company| %>
-          <p><%= company %></p>
-        </div>
-        <div class="row">
-          <% end %>
-        </div>
-        <div class="row">
-          <p class='profile-subheader'>Education & Certifications</p>
-          <p><%= @advisor.education %></p>
-          <p><%= @advisor.certifications %></p>
-        </div>
-        <div class="row">
-          <p class='profile-subheader'>Other Information</p>
-          <p><%= @advisor.interesting_facts %></p>
+          <p id="advisor-name-profile-page"><%= @advisor.firstname %></p>
+          <p id="advisor-title-profile-page"><%= @advisor.current_title %> | <%= @advisor.company %></p>
+          <p class="profile-info"><%= @advisor.location %></p>
+          <div class="row">
+            <div class="small-2 medium-2 large-2 columns">
+              <p class='profile-subheader'>Description</p>
+            </div>
+            <div class="small-10 medium-10 large-10 columns">
+              <p class="profile-info"><%= @advisor.job_description %></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-2 medium-2 large-2 columns">
+              <p class='profile-subheader'>Services</p>
+            </div>
+            <div class="small-10 medium-10 large-10 columns">
+            <% @advisor.categories.each do |category| %>
+              <%= link_to category.name, advisors_path, class: "index-categories-list" %>
+            <% end %>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
 
+<div class="row"  id="advisor-bio-panel">
+  <div class="small-6 medium-6 medium large-6 columns">
+    <div class="row">
+      <div class="small-3 medium-3 large-3 columns">
+        <p class='profile-subheader'>Previous</p>
+      </div>
+      <div class="small-9 medium-9 large-9 columns">
+        <p class="profile-info">
+        <% @advisor.other_companies.split(',').each do |company| %>
+          <%= company %>
+        <% end %>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-3 medium-3 large-3 columns">
+        <p class='profile-subheader'>Education</p>
+      </div>
+      <div class="small-9 medium-9 large-9 columns">
+        <p class="profile-info"><%= @advisor.education %></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-3 medium-3 large-3 columns">
+        <p class='profile-subheader'>Years of Experience</p>
+      </div>
+      <div class="small-9 medium-9 large-9 columns">
+        <p class="profile-info"><%= @advisor.years_of_experience %></p>
+      </div>
+    </div>
+  </div>
+  <div class="small-6 medium-6 large-6 columns">
+    <div class="row">
+      <div class="small-3 medium-3 large-3 columns">
+        <p class="profile-subheader">Certifications</p>
+      </div>
+      <div class="small-9 medium-9 large-9 columns">
+        <p class="profile-info"><%= @advisor.certifications %></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-3 medium-3 large-3 columns">
+        <p class='profile-subheader'>Charities</p>
+      </div>
+      <div class="small-9 medium-9 large-9 columns">
+        <p class="profile-info"><%= @advisor.charity %></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-3 medium-3 large-3 columns">
+        <p class="profile-subheader">Other Information</p>
+      </div>
+      <div class="small-9 medium-9 large-9 columns">
+        <p class="profile-info"><%= @advisor.interesting_facts %></p>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="row">
-  <div class="small-12 medium-12 medium-centered large-12 large-centered columns">
-    <div class="panel" id="profile-panel">
-      <div class="row">
-        <div class="small-12 medium-12 large-12 columns">
-          <p class="profile-subheader">Available Times</p>
-        </div>
+  <div class="small-12 medium-12 medium-centered large-12 large-centered columns" id="advisor-timeslot-panel">
+    <div class="row">
+      <div class="small-12 medium-12 large-12 columns">
+        <p class="profile-subheader">Available Times</p>
       </div>
     </div>
   </div>
