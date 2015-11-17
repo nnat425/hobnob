@@ -2,6 +2,7 @@ class AdvisorsController < ApplicationController
 
   def index
     @advisors = Advisor.all
+    @categories = Category.all
   end
 
   def new
@@ -26,8 +27,9 @@ class AdvisorsController < ApplicationController
   def edit
     @advisor = Advisor.find_by(id: params[:id])
     @current_categories = []
-    @advisor.categories.each {|category|
-    @current_categories.push(category.name)}
+    @advisor.categories.each do |category|
+      @current_categories.push(category.name)
+    end
   end
 
   def update
