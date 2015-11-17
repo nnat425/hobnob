@@ -1,5 +1,5 @@
 class Advisor < ActiveRecord::Base
-  has_many :categories
+  has_and_belongs_to_many :categories
   has_many :potential_appointments
 
   validates :email, :presence => true
