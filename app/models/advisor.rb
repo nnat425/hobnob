@@ -1,5 +1,5 @@
 class Advisor < ActiveRecord::Base
-  has_many :categories
+  has_and_belongs_to_many :categories
   has_many :potential_appointments
 
   validates :email, :presence => true
@@ -15,15 +15,6 @@ class Advisor < ActiveRecord::Base
   validates_attachment_file_name :avatar, matches: [/png\Z/, /jpe?g\Z/]
 
   has_secure_password
-
-  def add_categories(params)
-    if self.categories.length != 0
-      self.categories.each {|category| category.destroy}
-    end
-    params.each do |category|
-      added_category = Category.create(name:category,advisor_id: self.id)
-    end
-  end
 
   def join_companies(param_companies)
      self.update(other_companies:param_companies.join(","))
