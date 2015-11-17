@@ -23,6 +23,9 @@
 $background-color: #292c2f;
 $primary-color: #87D37C;
 
+.container {
+  padding-top: 90px;
+}
 .row {
 max-width: 100%;
 }
@@ -475,7 +478,6 @@ overflow: hidden;
 }
 
 #page-header {
-  margin-top: 90px;
   margin-bottom: 5px;
 }
 
