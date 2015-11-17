@@ -6,9 +6,13 @@
           <div id="advisor-index-avatar">
             <%= image_tag @advisor.avatar.url(:medium) %>
           </div>
-          <%=link_to "Book An Appointment", '#', class: "button small" %>
+          <%=link_to "Book An Appointment", new_potential_appointment_path, class: "button small" %>
         </div>
 
+
+        <% if session[:user_or_advisor_id] == @advisor.id && session[:class_type] == @advisor.class.name %>
+        <%=link_to "Edit Profile", edit_advisor_path, class: "button" %>
+        <% end %>
       </div>
       <div class="small-12 medium-8 large-9 columns" id="advisor-profile-bio">
         <div class="row">
