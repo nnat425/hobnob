@@ -3,7 +3,7 @@
   <div class="small-12 medium-12 large-12 columns" id="page-header">
     <p>Advisors</p>
     <% @categories.each do |category| %>
-      <%= link_to category.name, advisors_path, class: "index-categories-list" %>
+      <%= link_to category, advisors_path, class: "index-categories-list" %>
     <% end %>
   </div>
 </div>
