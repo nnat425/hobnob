@@ -1,6 +1,7 @@
 class CreatePotentialAppointments < ActiveRecord::Migration
   def change
     create_table :potential_appointments do |t|
+      t.string :title, null: false
       t.references :advisor, null: false
       t.references :cart
       t.datetime :start_time , null: false
