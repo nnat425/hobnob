@@ -54,11 +54,11 @@ ActiveRecord::Schema.define(version: 20151116170044) do
   end
 
   create_table "potential_appointments", force: :cascade do |t|
+    t.string   "title",                          null: false
     t.integer  "advisor_id",                     null: false
     t.integer  "cart_id"
     t.datetime "start_time",                     null: false
     t.datetime "end_time",                       null: false
-    t.date     "date",                           null: false
     t.boolean  "booked_status?", default: false
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false

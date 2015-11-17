@@ -3,9 +3,13 @@
 
 <h1> Create appointment </h1>
 <%= form_for @potential_appointment do |f| %>
+
+<%= f.label :title %>
+<%= f.text_field :title %>
+
 <%= f.label :date %>
-<%= date_select("potential_appointment", "date", order: [:month, :day])
-%>
+<%= date_field(:appointment_date,"date") %>
+
 <%= f.label :Start_Time %>
 <%= time_select 'potential_appointment', 'start_time', {ampm: true}
 %>
@@ -21,7 +25,7 @@
 
 <% appointments.each do |appointment| %>
 <div>
-  <%= appointment.date %>
+  <%= appointment.title %>
 </div>
 <% end %>
 <% end %>

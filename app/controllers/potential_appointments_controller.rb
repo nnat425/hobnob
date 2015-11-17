@@ -9,14 +9,16 @@ class PotentialAppointmentsController < ApplicationController
 
   def create
 
-    start_time = Time.new(params[:potential_appointment].values[0].to_i, params[:potential_appointment].values[1].to_i,params[:potential_appointment].values[2].to_i,params[:potential_appointment].values[6].to_i,params[:potential_appointment].values[7].to_i).to_s
+    date = params[:appointment_date][:date].split('-')
 
-    end_time = Time.new(params[:potential_appointment].values[0].to_i, params[:potential_appointment].values[1].to_i,params[:potential_appointment].values[2].to_i,params[:potential_appointment].values[11].to_i,params[:potential_appointment].values[12].to_i).to_s
+    start_time = Time.new(date[0],date[1],date[2],params[:potential_appointment].values[4].to_i,params[:potential_appointment].values[5].to_i).to_s
 
-    potential_appointment = current_advisor.potential_appointments.create(start_time: start_time, end_time: end_time)
+    end_time = Time.new(date[0],date[1],date[2],params[:potential_appointment].values[9].to_i,params[:potential_appointment].values[10].to_i).to_s
+
+    potential_appointment = current_advisor.potential_appointments.create(title: params[:potential_appointment][:title],start_time: start_time, end_time: end_time)
 
     # if potential_appointment.start_time != nil
-      redirect_to root_path
+    redirect_to root_path
     # else
     #   redirect_to new_potential_appointment_path
     # end
