@@ -356,6 +356,15 @@ height: 70vh;
 overflow: hidden;
 }
 
+#advisor-index-panel {
+margin-bottom:15px;
+background-color: #fff;
+border: 1px solid #ccc;
+-webkit-box-shadow: 1px 1px 1px 0px #ccc;
+-moz-box-shadow:    1px 1px 1px 0px #ccc;
+box-shadow:         1px 1px 1px 0px #ccc;
+padding: 2em;
+}
 
 #profile-panel {
 margin-top: 90px;
