@@ -13,7 +13,7 @@
     <li><%= link_to "Logout", logout_path, method: :delete, id: "logout-link" %></li>
     <% if session[:class_type] == "User" %>
     <%= link_to "Profile",user_path(session[:user_or_advisor_id]) %>
-    <%= link_to "Cart", '#' %>
+    <%= link_to "Cart", cart_path(current_user.carts.last) %>
     <% else %>
     <%= link_to "Profile", advisor_path(session[:user_or_advisor_id]) %>
     <% end %>
