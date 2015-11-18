@@ -6,9 +6,12 @@
           <div id="advisor-index-avatar">
             <%= image_tag @advisor.avatar.url(:medium) %>
           </div>
-          <%=link_to "Book An Appointment", '#', class: "button small" %>
         </div>
 
+        <% if session[:user_or_advisor_id] == @advisor.id && session[:class_type] == @advisor.class.name %>
+        <%=link_to "Edit Profile", edit_advisor_path, class: "button" %>
+         <%=link_to "Create An Appointment", new_potential_appointment_path, class: "button small" %>
+        <% end %>
       </div>
       <div class="small-12 medium-8 large-9 columns" id="advisor-profile-bio">
         <div class="row">
@@ -95,6 +98,29 @@
       </div>
     </div>
   </div>
+<<<<<<< HEAD
+=======
+</div>
+<div class="row">
+  <div class="small-12 medium-12 medium-centered large-12 large-centered columns" id="advisor-timeslot-panel">
+    <div class="row">
+      <div class="small-12 medium-12 large-12 columns">
+        <p class="profile-subheader">Available Times</p>
+<div class="small-3 medium-3 large-3 columns">
+  <p class='profile-subheader'>
+    <% @advisor.potential_appointments.each do |pot_appointment| %>
+    <%= pot_appointment.start_time %>
+    <%= pot_appointment.end_time %>
+    <%= pot_appointment.title %>
+    <% if session[:class_type] != "Advisor" %>
+    <%= link_to "Add to Cart", '#', class: "button" %>
+    <% end %>
+    <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+>>>>>>> Add carts in config
 
   <div class="small-12 medium-12 large-12 columns">
     <p>Availability</p>

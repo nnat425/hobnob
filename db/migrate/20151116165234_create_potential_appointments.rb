@@ -3,7 +3,6 @@ class CreatePotentialAppointments < ActiveRecord::Migration
     create_table :potential_appointments do |t|
       t.string :title, null: false
       t.references :advisor, null: false
-      t.references :cart
       t.datetime :start_time , null: false
       t.datetime :end_time, null: false
       t.boolean :booked_status?, default: false

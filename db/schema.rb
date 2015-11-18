@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151117040759) do
+ActiveRecord::Schema.define(version: 20151118023033) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,9 +49,10 @@ ActiveRecord::Schema.define(version: 20151117040759) do
   add_index "advisors_categories", ["category_id"], name: "index_advisors_categories_on_category_id", using: :btree
 
   create_table "carts", force: :cascade do |t|
-    t.integer  "user_id",    null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "user_id",                      null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.boolean  "checked_out?", default: false
   end
 
   create_table "categories", force: :cascade do |t|
@@ -63,13 +64,20 @@ ActiveRecord::Schema.define(version: 20151117040759) do
   create_table "potential_appointments", force: :cascade do |t|
     t.string   "title",                          null: false
     t.integer  "advisor_id",                     null: false
-    t.integer  "cart_id"
     t.datetime "start_time",                     null: false
     t.datetime "end_time",                       null: false
     t.boolean  "booked_status?", default: false
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
   end
+
+  create_table "potential_appointments_carts", force: :cascade do |t|
+    t.integer "potential_appointment_id"
+    t.integer "cart_id"
+  end
+
+  add_index "potential_appointments_carts", ["cart_id"], name: "index_potential_appointments_carts_on_cart_id", using: :btree
+  add_index "potential_appointments_carts", ["potential_appointment_id"], name: "index_potential_appointments_carts_on_potential_appointment_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "first_name",                          null: false
@@ -90,4 +98,6 @@ ActiveRecord::Schema.define(version: 20151117040759) do
 
   add_foreign_key "advisors_categories", "advisors"
   add_foreign_key "advisors_categories", "categories"
+  add_foreign_key "potential_appointments_carts", "carts"
+  add_foreign_key "potential_appointments_carts", "potential_appointments"
 end

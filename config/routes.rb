@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :advisors
   resources :users
   resources :potential_appointments
+  resources :carts
 
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'

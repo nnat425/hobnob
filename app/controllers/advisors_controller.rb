@@ -12,7 +12,8 @@ class AdvisorsController < ApplicationController
   def create
     advisor = Advisor.new(advisor_params)
     if advisor.save && advisor.valid?
-      session[:user_id] = advisor.id
+      session[:user_or_advisor_id] = advisor.id
+      session[:class_type] = advisor.class.name
       redirect_to edit_advisor_path(advisor)
     else
       flash[:errors] = advisor.errors.full_messages
