@@ -1,9 +1,9 @@
 class PotentialAppointment < ActiveRecord::Base
 
 
-
   belongs_to :advisor
-  belongs_to :cart
+  has_many :purchases
+  has_many :carts, through: :purchases
 
 
 

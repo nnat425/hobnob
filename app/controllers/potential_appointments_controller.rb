@@ -17,11 +17,11 @@ class PotentialAppointmentsController < ApplicationController
 
     potential_appointment = current_advisor.potential_appointments.create(title: params[:potential_appointment][:title],start_time: start_time, end_time: end_time)
 
-    # if potential_appointment.start_time != nil
     redirect_to root_path
-    # else
-    #   redirect_to new_potential_appointment_path
-    # end
+  end
+
+  def update
+
   end
 
   private

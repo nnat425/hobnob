@@ -108,12 +108,12 @@
         <p class="profile-subheader">Available Times</p>
 <div class="small-3 medium-3 large-3 columns">
   <p class='profile-subheader'>
-    <%= @advisor.potential_appointments.each do |pot_appointment| %>
+    <% @advisor.potential_appointments.each do |pot_appointment| %>
     <%= pot_appointment.start_time %>
     <%= pot_appointment.end_time %>
     <%= pot_appointment.title %>
-    <%=link_to "Add to Cart", new_potential_appointment_path, class: "button" %>
-
+    <%= link_to "Add to Cart", '#', class: "button" %>
+    <% end %>
       </div>
     </div>
   </div>
