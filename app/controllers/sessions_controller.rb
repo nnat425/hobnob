@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     advisor = Advisor.find_by(email: session_params[:email])
     if user
       if user.try(:authenticate, session_params[:password])
-       if user.carts.last.checkout_out? == true
+       if user.carts.last.checked_out? == true
         user.carts.create
       end
       session[:user_or_advisor_id] = user.id

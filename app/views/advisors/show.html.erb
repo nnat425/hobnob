@@ -112,7 +112,9 @@
     <%= pot_appointment.start_time %>
     <%= pot_appointment.end_time %>
     <%= pot_appointment.title %>
+    <% if session[:class_type] != "Advisor" %>
     <%= link_to "Add to Cart", '#', class: "button" %>
+    <% end %>
     <% end %>
       </div>
     </div>
