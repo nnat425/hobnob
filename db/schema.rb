@@ -95,6 +95,14 @@ ActiveRecord::Schema.define(version: 20151118202508) do
     t.datetime "updated_at",                     null: false
   end
 
+  create_table "potential_appointments_carts", force: :cascade do |t|
+    t.integer "potential_appointment_id"
+    t.integer "cart_id"
+  end
+
+  add_index "potential_appointments_carts", ["cart_id"], name: "index_potential_appointments_carts_on_cart_id", using: :btree
+  add_index "potential_appointments_carts", ["potential_appointment_id"], name: "index_potential_appointments_carts_on_potential_appointment_id", using: :btree
+
   create_table "users", force: :cascade do |t|
     t.string   "first_name",                          null: false
     t.string   "last_name",                           null: false
@@ -116,4 +124,6 @@ ActiveRecord::Schema.define(version: 20151118202508) do
   add_foreign_key "advisors_categories", "categories"
   add_foreign_key "carts_potential_appointments", "carts"
   add_foreign_key "carts_potential_appointments", "potential_appointments"
+  add_foreign_key "potential_appointments_carts", "carts"
+  add_foreign_key "potential_appointments_carts", "potential_appointments"
 end
