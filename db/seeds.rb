@@ -1,1 +1,1 @@
-Category.create([{name: "Investment Banking"},{name: "Asset MAnagement"}, {name: "Corporate Finance Divisions"}, {name: "Resume/Interview"}, {name: "Other"}])
+Category.create([{name: "Investment Banking"},{name: "Asset Management"}, {name: "Corporate Finance Divisions"}, {name: "Resume/Interview"}, {name: "Other"}])
