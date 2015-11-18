@@ -14,14 +14,22 @@
 *= require_self
 *= require simple_calendar
 *= require foundation_and_overrides
-/*= require foundation */
 */
 
+@import "foundation_and_overrides";
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 @import url(http://fonts.googleapis.com/css?family=Ubuntu);
 
-$background-color: #292c2f;
+$background-color: black;
 $primary-color: #87D37C;
+
+html, body {
+  background: #transparent;
+}
+
+body {
+  background: #000;
+}
 
 .container {
   padding-top: 90px;

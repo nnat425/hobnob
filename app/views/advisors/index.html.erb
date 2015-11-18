@@ -2,7 +2,7 @@
   <div class="small-3 medium-3 large-3 columns" id="left-side-bar">
     <p>Advisors</p>
     <% @categories.each do |category| %>
-      <%= link_to category, advisors_path, class: "index-categories-list" %>
+      <%= link_to category.name, "/categories/#{category.id}", class: "index-categories-list" %>
     <% end %>
   </div>
 
