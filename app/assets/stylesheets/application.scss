@@ -397,6 +397,7 @@ padding: 2em;
 #advisor-profile-image {
   margin-bottom: 1em;
   padding: auto;
+  text-align: center;
 }
 #advisor-name-profile-page {
   font-size: 3em;
@@ -520,5 +521,8 @@ overflow: hidden;
   overflow: hidden;
   text-align: center;
   img { width: 100% }
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em;
 }
 
