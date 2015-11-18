@@ -20,6 +20,9 @@ class ApplicationController < ActionController::Base
     session[:user_or_advisor_id]
   end
 
+  def current_cart
+    current_user.carts.last
+  end
 
 
 end

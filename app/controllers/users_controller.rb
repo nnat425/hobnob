@@ -8,7 +8,6 @@ class UsersController < ApplicationController
     user = User.new(user_params)
     if user.save && user.valid?
       session[:user_or_advisor_id] = user.id
-      user.carts.create
       session[:class_type] = "User"
       flash[:message] = "Thanks for signing up!"
       redirect_to user_path(user)

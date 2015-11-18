@@ -98,8 +98,7 @@
       </div>
     </div>
   </div>
-<<<<<<< HEAD
-=======
+
 </div>
 <div class="row">
   <div class="small-12 medium-12 medium-centered large-12 large-centered columns" id="advisor-timeslot-panel">
@@ -113,14 +112,17 @@
     <%= pot_appointment.end_time %>
     <%= pot_appointment.title %>
     <% if session[:class_type] != "Advisor" %>
-    <%= link_to "Add to Cart", '#', class: "button" %>
+    <%= form_for @advisor, url: cart_path do |f| %>
+    <%= f.hidden_field :appointment_id, :value => pot_appointment.id %>
+    <%= f.submit "Add to Cart" %>
+
+    <% end %>
     <% end %>
     <% end %>
       </div>
     </div>
   </div>
 </div>
->>>>>>> Add carts in config
 
   <div class="small-12 medium-12 large-12 columns">
     <p>Availability</p>
