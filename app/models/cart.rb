@@ -6,20 +6,18 @@ class Cart < ActiveRecord::Base
 
   after_update :create_timer
 
-
   def create_timer
-  # if User.find_by(id: session[:user_or_advisor_id]).carts.last.checked_out? == false
-    User.find_by(id: session[:user_or_advisor_id]).carts.last.potential_appointments.each do|item_in_cart|
-      User.find_by(id: session[:user_or_advisor_id]).carts.last.potential_appointments.delete(item_in_cart)
-    # end
+  if self.checked_out? == false
+   self.potential_appointments.each do|item_in_cart|
+     self.potential_appointments.delete(item_in_cart)
+    end
   end
 end
-  # handle_asynchronously :in_the_future, :run_at => Proc.new { 10.seconds.from_now }
-
-
+  handle_asynchronously :create_timer, :run_at => Proc.new { 10.seconds.from_now }
 
 end
 
+#rake jobs:work ... to test timer in development
 
 #Need to clear items from shopping cart
 #1. How do I start the timer?
