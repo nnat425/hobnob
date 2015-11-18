@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151118023033) do
+ActiveRecord::Schema.define(version: 20151118045142) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +55,14 @@ ActiveRecord::Schema.define(version: 20151118023033) do
     t.boolean  "checked_out?", default: false
   end
 
+  create_table "carts_potential_appointments", force: :cascade do |t|
+    t.integer "potential_appointment_id"
+    t.integer "cart_id"
+  end
+
+  add_index "carts_potential_appointments", ["cart_id"], name: "index_carts_potential_appointments_on_cart_id", using: :btree
+  add_index "carts_potential_appointments", ["potential_appointment_id"], name: "index_carts_potential_appointments_on_potential_appointment_id", using: :btree
+
   create_table "categories", force: :cascade do |t|
     t.string   "name",       null: false
     t.datetime "created_at", null: false
@@ -70,14 +78,6 @@ ActiveRecord::Schema.define(version: 20151118023033) do
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
   end
-
-  create_table "potential_appointments_carts", force: :cascade do |t|
-    t.integer "potential_appointment_id"
-    t.integer "cart_id"
-  end
-
-  add_index "potential_appointments_carts", ["cart_id"], name: "index_potential_appointments_carts_on_cart_id", using: :btree
-  add_index "potential_appointments_carts", ["potential_appointment_id"], name: "index_potential_appointments_carts_on_potential_appointment_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "first_name",                          null: false
@@ -98,6 +98,6 @@ ActiveRecord::Schema.define(version: 20151118023033) do
 
   add_foreign_key "advisors_categories", "advisors"
   add_foreign_key "advisors_categories", "categories"
-  add_foreign_key "potential_appointments_carts", "carts"
-  add_foreign_key "potential_appointments_carts", "potential_appointments"
+  add_foreign_key "carts_potential_appointments", "carts"
+  add_foreign_key "carts_potential_appointments", "potential_appointments"
 end

@@ -16,6 +16,12 @@ validates_attachment_file_name :avatar, matches: [/png\Z/, /jpe?g\Z/]
 
 has_secure_password
 
+after_save :create_cart
+
+def create_cart
+  self.carts.create
+end
+
 
 
 end
