@@ -23,6 +23,9 @@
 $background-color: #292c2f;
 $primary-color: #87D37C;
 
+.container {
+  padding-top: 90px;
+}
 .row {
 max-width: 100%;
 }
@@ -367,7 +370,6 @@ padding: 2em;
 }
 
 #profile-panel {
-margin-top: 90px;
 margin-bottom:15px;
 background-color: #fff;
 border: 1px solid #ccc;
@@ -459,11 +461,14 @@ overflow: hidden;
 }
 
 .index-categories-list {
-  display: inline;
-  padding: .5em;
+  display: block;
+  padding-left: .5em;
+  padding-right: .5em;
+  padding-top: 1em;
+  padding-bottom: 1em;
   letter-spacing: 1px;
-  margin-right: .5em;
   font-family: "Open Sans";
+  font-size: 1em;
   border: 1px solid #43c7f4;
   font-color: #43c7f4;
 }
@@ -475,7 +480,6 @@ overflow: hidden;
 }
 
 #page-header {
-  margin-top: 90px;
   margin-bottom: 5px;
 }
 
@@ -505,3 +509,23 @@ height: 30vh;
 overflow: hidden;
 }
 
+#left-side-bar p {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #43c7f4;
+  font-size: 1.5em;
+  font-family: "Open Sans";
+  margin-bottom: 0px;
+}
+
+#advisor-index-avatar {
+  border: 1px solid #d9d9d9;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
+  text-align: center;
+  img { width: 100% }
+}

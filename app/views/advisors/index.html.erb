@@ -1,22 +1,21 @@
-
-<div class="row">
-  <div class="small-12 medium-12 large-12 columns" id="page-header">
+<div class="container">
+  <div class="small-3 medium-3 large-3 columns" id="left-side-bar">
     <p>Advisors</p>
     <% @categories.each do |category| %>
-      <%= link_to category.name, advisors_path, class: "index-categories-list" %>
+      <%= link_to category, advisors_path, class: "index-categories-list" %>
     <% end %>
   </div>
-</div>
 
-<div class="row">
-  <div class="small-12 medium-12 large-12 columns">
+  <div class="small-9 medium-9 large-9 columns">
     <% @advisors.each do |advisor| %>
       <div class="row">
         <div class="small-12 medium-12 large-12 columns">
           <div class="panel" id="advisor-index-panel">
             <div class="row">
               <div class="small-3 medium-3 large-3 columns">
-                <%= image_tag advisor.avatar.url(:thumb) %>
+                <div id="advisor-index-avatar">
+                  <%= image_tag advisor.avatar.url(:medium) %>
+                </div>
               </div>
               <div class="small-9 medium-9 large-9 columns">
                 <div class-"row" id="index-advisor-info">
@@ -52,4 +51,3 @@
     <% end %>
   </div>
 </div>
-
