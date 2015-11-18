@@ -396,6 +396,7 @@ padding: 2em;
 }
 #advisor-profile-image {
   margin-bottom: 1em;
+  padding: auto;
 }
 #advisor-name-profile-page {
   font-size: 3em;
@@ -445,7 +446,6 @@ overflow: hidden;
 
 .advisor-categories-list {
   display: inline;
-  padding: .5em;
   letter-spacing: 1px;
   margin-right: .5em;
   font-family: "Open Sans";
