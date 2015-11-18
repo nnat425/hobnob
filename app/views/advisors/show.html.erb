@@ -112,7 +112,11 @@
     <%= pot_appointment.end_time %>
     <%= pot_appointment.title %>
     <% if session[:class_type] != "Advisor" %>
-    <%= link_to "Add to Cart", '#', class: "button" %>
+    <%= form_for @advisor, url: cart_path do |f| %>
+    <%= f.hidden_field :appointment_id, :value => pot_appointment.id %>
+    <%= f.submit "Add to Cart" %>
+
+    <% end %>
     <% end %>
     <% end %>
       </div>

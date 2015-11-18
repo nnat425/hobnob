@@ -7,7 +7,6 @@ class UsersController < ApplicationController
   def create
     user = User.new(user_params)
     if user.save && user.valid?
-      # Cart.create(user_id:user.id)
       session[:user_or_advisor_id] = user.id
       session[:class_type] = "User"
       flash[:message] = "Thanks for signing up!"

@@ -23,6 +23,7 @@ class AdvisorsController < ApplicationController
 
   def show
     @advisor = Advisor.find_by(id: params[:id])
+    @advisor_appointments = @advisor.potential_appointments
   end
 
   def edit
