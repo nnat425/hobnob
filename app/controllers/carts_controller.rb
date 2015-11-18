@@ -8,8 +8,10 @@ def show
 end
 end
 
-def update ##Updating objects into cart
+
+def update
 current_cart.potential_appointments.push(PotentialAppointment.find_by(id:params[:advisor][:appointment_id]))
+current_cart.update(checked_out?: false)
 redirect_to root_path
 end
 
