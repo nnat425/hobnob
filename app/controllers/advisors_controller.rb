@@ -2,7 +2,7 @@ class AdvisorsController < ApplicationController
 
   def index
     @advisors = Advisor.all
-    @categories = Category.all.pluck(:name).uniq!
+    @categories = Category.all
   end
 
   def new
