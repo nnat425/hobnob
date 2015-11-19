@@ -9,6 +9,29 @@ $(document).ready(function(){
     $("#user_school").slideToggle();
   });
 
+  $(".services-toggle").hide();
+  $(".the-network-toggle").hide();
+  $(".getting-connected-toggle").hide();
 
+  $("#home-services-link").on("click", function(event) {
+    event.preventDefault();
+    $(".the-network-toggle").hide();
+    $(".getting-connected-toggle").hide();
+    $(".services-toggle").fadeIn();
+  });
+
+  $("#home-network-link").on("click", function(event) {
+    event.preventDefault();
+    $(".the-network-toggle").fadeIn();
+    $(".getting-connected-toggle").hide();
+    $(".services-toggle").hide();
+  });
+
+  $("#home-get-connected-link").on("click", function(event) {
+    event.preventDefault();
+    $(".the-network-toggle").hide();
+    $(".getting-connected-toggle").fadeIn();
+    $(".services-toggle").hide();
+  });
 });
 
