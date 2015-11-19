@@ -86,7 +86,7 @@ ActiveRecord::Schema.define(version: 20151119035255) do
   add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority", using: :btree
 
   create_table "orders", force: :cascade do |t|
-    t.integer "cart"
+    t.integer "cart_id"
     t.string  "ip_address"
     t.string  "first_name"
     t.string  "last_name"
@@ -105,20 +105,16 @@ ActiveRecord::Schema.define(version: 20151119035255) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "first_name",                          null: false
-    t.string   "last_name",                           null: false
-    t.string   "email",                               null: false
-    t.string   "password_digest",                     null: false
-    t.boolean  "student",             default: false
+    t.string   "first_name",                      null: false
+    t.string   "last_name",                       null: false
+    t.string   "email",                           null: false
+    t.string   "password_digest",                 null: false
+    t.boolean  "student",         default: false
     t.string   "school"
     t.string   "program"
     t.integer  "graduation_date"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-    t.string   "avatar_file_name"
-    t.string   "avatar_content_type"
-    t.integer  "avatar_file_size"
-    t.datetime "avatar_updated_at"
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
   end
 
   add_foreign_key "advisors_categories", "advisors"

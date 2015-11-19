@@ -1,7 +1,7 @@
 class CreateOrders < ActiveRecord::Migration
   def change
     create_table :orders do |t|
-      t.integer :cart
+      t.references :cart
       t.string :ip_address
       t.string :first_name
       t.string :last_name
