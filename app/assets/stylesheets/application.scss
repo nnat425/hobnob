@@ -17,7 +17,7 @@
 */
 
 @import "foundation_and_overrides";
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
 @import url(http://fonts.googleapis.com/css?family=Ubuntu);
 
 $background-color: black;
@@ -434,7 +434,7 @@ overflow: hidden;
   letter-spacing: 1px;
   margin-right: .5em;
   font-family: "Open Sans";
-  font-color: #43c7f4;
+  color: #43c7f4;
 }
 
 .index-categories-list {
