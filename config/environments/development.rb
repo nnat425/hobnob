@@ -10,6 +10,14 @@ Rails.application.configure do
   config.eager_load = false
 
 
+  config.after_initialize do
+  ActiveMerchant::Billing::Base.mode = :test
+  ::GATEWAY = ActiveMerchant::Billing::PaypalGateway.new(
+     :login => "nnat425_api1.gmail.com",
+  :password => "E4K9VB34SAMURQMR",
+  :signature => "Apr.MwRNY2TvVsOaij7C8HWIfcBHAgVvHCQ9DqHIUyhoEe-KLIYKk3sr"
+  )
+end
 
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true
