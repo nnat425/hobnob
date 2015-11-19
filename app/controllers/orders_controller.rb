@@ -11,7 +11,7 @@ class OrdersController < ApplicationController
       if @order.purchase
         render :action => "success"
       else
-        render :action => "failure"
+        render template: "failure"
       end
     else
       render :action => 'new'
