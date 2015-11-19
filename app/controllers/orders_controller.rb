@@ -9,7 +9,7 @@ class OrdersController < ApplicationController
     @order.ip_address = request.remote_ip
     if @order.save
       if @order.purchase
-        render :action => "success"
+        render template: "success"
       else
         render template: "failure"
       end

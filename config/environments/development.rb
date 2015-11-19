@@ -13,7 +13,7 @@ Rails.application.configure do
   config.after_initialize do
   ActiveMerchant::Billing::Base.mode = :test
   ::GATEWAY = ActiveMerchant::Billing::PaypalGateway.new(
-     :login => "nnat425-facilitator_api1.gmail.com",
+  :login => "nnat425-facilitator_api1.gmail.com",
   :password => "W4489B4A67VM7LLW",
   :signature => "AFcWxV21C7fd0v3bYYYRCpSSRl31Ac2TI1VnHra3rj5--RCzUAntxx8R"
   )
