@@ -1,0 +1,38 @@
+.home-subheader {
+  border: 1px solid #D0D0D0;
+  height: 400px;
+  padding: 1em;
+  text-align: center;
+  margin-top: 1em;
+  background-color: #202020;
+}
+
+.home-subheader h2 {
+  color: #D0D0D0;
+  font-family: "Open Sans";
+  font-weight: lighters;
+  margin-top: 1.75em;
+  letter-spacing: 2px;
+}
+
+.home-subheader p {
+  color: #D0D0D0;
+  font-family: "Open Sans";
+  font-weight: 100;
+  font-size: 1.1em;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+.home-subheader .learn-more a {
+  font-family: "Open Sans";
+  font-size: .8em;
+  color: #43c7f4;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  padding-left: 2em;
+  padding-right: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 1px solid #43c7f4;
+}
