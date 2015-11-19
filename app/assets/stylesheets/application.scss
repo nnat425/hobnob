@@ -17,7 +17,7 @@
 */
 
 @import "foundation_and_overrides";
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
 @import url(http://fonts.googleapis.com/css?family=Ubuntu);
 
 $background-color: black;
@@ -148,26 +148,6 @@ overflow: hidden;
 #home_header {
 margin-top: 6em;
 text-align: right;
-}
-
-#home_header h1 {
-color: #fff;
-font-family: "Open Sans";
-letter-spacing: 3px;
-font-size: 5em;
-}
-
-#home_subheader {
-text-align: right;
-float: right;
-margin-top: 1em;
-}
-
-#home_subheader h3 {
-color: #fff;
-font-family: "Open Sans";
-font-weight: 100;
-
 }
 
 .signup-panel {
@@ -454,7 +434,7 @@ overflow: hidden;
   letter-spacing: 1px;
   margin-right: .5em;
   font-family: "Open Sans";
-  font-color: #43c7f4;
+  color: #43c7f4;
 }
 
 .index-categories-list {
