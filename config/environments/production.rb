@@ -7,6 +7,17 @@ Rails.application.configure do
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
   # and those relying on copy on write to perform better.
+
+
+  config.after_initialize do
+  ActiveMerchant::Billing::Base.mode = :production
+  ::GATEWAY = ActiveMerchant::Billing::PaypalGateway.new(
+     :login => "nnat425-facilitator_api1.gmail.com",
+  :password => "W4489B4A67VM7LLW",
+  :signature => "AFcWxV21C7fd0v3bYYYRCpSSRl31Ac2TI1VnHra3rj5--RCzUAntxx8R"
+  )
+end
+
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
   listen_addresses = '*'

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151118202508) do
+ActiveRecord::Schema.define(version: 20151119223606) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 20151118202508) do
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
     t.boolean  "checked_out?", default: false
+    t.time     "purchased_at"
   end
 
   create_table "carts_potential_appointments", force: :cascade do |t|
@@ -85,6 +86,29 @@ ActiveRecord::Schema.define(version: 20151118202508) do
 
   add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority", using: :btree
 
+  create_table "order_transactions", force: :cascade do |t|
+    t.integer  "order_id"
+    t.string   "action"
+    t.integer  "amount"
+    t.boolean  "success"
+    t.string   "authorization"
+    t.string   "message"
+    t.text     "params"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "order_transactions", ["order_id"], name: "index_order_transactions_on_order_id", using: :btree
+
+  create_table "orders", force: :cascade do |t|
+    t.integer "cart_id"
+    t.string  "ip_address"
+    t.string  "first_name"
+    t.string  "last_name"
+    t.string  "card_type"
+    t.date    "card_expires_on"
+  end
+
   create_table "potential_appointments", force: :cascade do |t|
     t.string   "title",                          null: false
     t.integer  "advisor_id",                     null: false
@@ -95,35 +119,22 @@ ActiveRecord::Schema.define(version: 20151118202508) do
     t.datetime "updated_at",                     null: false
   end
 
-  create_table "potential_appointments_carts", force: :cascade do |t|
-    t.integer "potential_appointment_id"
-    t.integer "cart_id"
-  end
-
-  add_index "potential_appointments_carts", ["cart_id"], name: "index_potential_appointments_carts_on_cart_id", using: :btree
-  add_index "potential_appointments_carts", ["potential_appointment_id"], name: "index_potential_appointments_carts_on_potential_appointment_id", using: :btree
-
   create_table "users", force: :cascade do |t|
-    t.string   "first_name",                          null: false
-    t.string   "last_name",                           null: false
-    t.string   "email",                               null: false
-    t.string   "password_digest",                     null: false
-    t.boolean  "student",             default: false
+    t.string   "first_name",                      null: false
+    t.string   "last_name",                       null: false
+    t.string   "email",                           null: false
+    t.string   "password_digest",                 null: false
+    t.boolean  "student",         default: false
     t.string   "school"
     t.string   "program"
     t.integer  "graduation_date"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-    t.string   "avatar_file_name"
-    t.string   "avatar_content_type"
-    t.integer  "avatar_file_size"
-    t.datetime "avatar_updated_at"
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
   end
 
   add_foreign_key "advisors_categories", "advisors"
   add_foreign_key "advisors_categories", "categories"
   add_foreign_key "carts_potential_appointments", "carts"
   add_foreign_key "carts_potential_appointments", "potential_appointments"
-  add_foreign_key "potential_appointments_carts", "carts"
-  add_foreign_key "potential_appointments_carts", "potential_appointments"
+  add_foreign_key "order_transactions", "orders"
 end
