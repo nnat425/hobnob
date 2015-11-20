@@ -376,8 +376,9 @@ padding: 2em;
 
 
 #advisor-profile-bio {
-  padding-left: 2em;
+  text-align: center;
 }
+
 #advisor-profile-image {
   margin-bottom: 1em;
   padding: auto;
@@ -386,20 +387,25 @@ padding: 2em;
 #advisor-name-profile-page {
   font-size: 3em;
   margin-bottom: 0em;
+  text-align: center;
+  font-weight: 300;
 }
 
 #advisor-title-profile-page {
   font-size: 1.5em;
   margin-bottom: 0em;
+  font-weight: 300;
 }
 
 #profile-panel p {
   font-family: "Open Sans";
 }
+
 .profile-subheader {
   font-family: "Open Sans";
   font-size: 1em;
   color: #43c7f4;
+  font-weight: 300;
   letter-spacing: 1px;
   margin-bottom: .5em;
 }
