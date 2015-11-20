@@ -529,7 +529,7 @@ overflow: hidden;
   color: #989898;
 }
 
-.home-page-text {
+.page-text {
   font-family: "Open Sans";
   font-size: 1.5em;
   font-weight: 300;
@@ -540,5 +540,9 @@ overflow: hidden;
   font-family: "Open Sans";
   font-weight: 300;
   color: #43c7f4;
+  text-align: center;
+}
+
+#home-info-box {
   text-align: center;
 }

@@ -13,10 +13,9 @@ $(document).ready(function(){
   $(".the-network-toggle").hide();
   $(".getting-connected-toggle").hide();
 
-  $("#home-services-link").on("click", function(event) {
+  $("#home-services-box").on("click", "#home-services-link", function(event) {
     event.preventDefault();
-    $(".the-network-toggle").hide();
-    $(".getting-connected-toggle").hide();
+    $()
     $(".services-toggle").fadeIn();
   });
 
