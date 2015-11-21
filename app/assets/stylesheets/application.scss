@@ -24,7 +24,7 @@ $background-color: black;
 $primary-color: #87D37C;
 
 body {
-  background: #202020;;
+  background: #fff;
 }
 
 .container {
@@ -344,14 +344,23 @@ height: 70vh;
 overflow: hidden;
 }
 
+#advisor-index-container {
+
+  background: #fff;
+  border: 1px solid #C0C0C0;
+  width: 90%;
+}
+
+
+
 #advisor-index-panel {
-margin-bottom:15px;
+margin: 10px;
 background-color: #fff;
 border: 1px solid #ccc;
--webkit-box-shadow: 1px 1px 1px 0px #ccc;
--moz-box-shadow:    1px 1px 1px 0px #ccc;
-box-shadow:         1px 1px 1px 0px #ccc;
 padding: 2em;
+width: 600px;
+display: inline-block;
+
 }
 
 #profile-panel {
@@ -441,26 +450,19 @@ overflow: hidden;
   letter-spacing: 1px;
   margin-right: .5em;
   font-family: "Open Sans";
-  color: #43c7f4;
+  color: #C0C0C0;
+  text-transform: uppercase;
+  font-size: .7em;
+  font-weight: bold;
 }
 
-.index-categories-list {
-  display: block;
-  padding-left: .5em;
-  padding-right: .5em;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  letter-spacing: 1px;
-  font-family: "Open Sans";
-  font-size: 1em;
-  border: 1px solid #43c7f4;
-  font-color: #43c7f4;
-}
+
 
 #index-advisor-name {
   font-family: "Open Sans";
-  font-size: 2em;
+  font-size: 1.5em;
   letter-spacing: 1px;
+  display: inline-block;
 }
 
 #page-header {
@@ -478,10 +480,15 @@ overflow: hidden;
 }
 
 #index-advisor-info {
+  margin-left: .7em;
   margin-top: auto;
   margin-bottom: auto;
 }
 
+#index-advisor-info p {
+  margin-bottom: 0px;
+  font-family: "Open Sans";
+}
 #view-advisor-link {
   float: right;
 }
@@ -493,13 +500,17 @@ height: 30vh;
 overflow: hidden;
 }
 
-#left-side-bar p {
-  text-transform: uppercase;
+.index-categories-list {
+  display: inline-block;
+  padding: 1em;
   letter-spacing: 2px;
-  color: #43c7f4;
-  font-size: 1.5em;
   font-family: "Open Sans";
-  margin-bottom: 0px;
+  font-size: .9em;
+  border-top: 1px solid #C0C0C0;
+  border-left: 1px solid #C0C0C0;
+  border-right: 1px solid #C0C0C0;
+  color: #C0C0C0;
+  text-transform: uppercase;
 }
 
 #advisor-index-avatar {
@@ -507,8 +518,8 @@ overflow: hidden;
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
   overflow: hidden;
   text-align: center;
   img { width: 100% }
