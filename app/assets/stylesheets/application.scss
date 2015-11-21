@@ -158,6 +158,7 @@ text-align:center;
 margin: auto;
 margin-top: 1em;
 margin-bottom: 1em;
+background-color: #fff;
 }
 
 .signup-panel form input {
@@ -516,3 +517,39 @@ overflow: hidden;
   margin-bottom: 1em;
 }
 
+#network-overview h1 {
+  font-family: "Open Sans";
+  font-weight: 300;
+  color: #43c7f4;
+}
+
+#network-overview p {
+  font-family: "Open Sans";
+  font-size: 1.5em;
+  font-weight: 300;
+  color: #989898;
+}
+
+.category-subtopic-list {
+  font-family: "Open Sans";
+  font-size: 1em;
+  color: #989898;
+}
+
+.page-text {
+  font-family: "Open Sans";
+  font-size: 1.5em;
+  font-weight: 300;
+  color: #989898;
+}
+
+#page-info-header {
+  font-family: "Open Sans";
+  font-weight: 300;
+  color: #43c7f4;
+  text-align: center;
+}
+
+#home-info-box {
+  text-align: center;
+}

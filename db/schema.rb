@@ -119,17 +119,29 @@ ActiveRecord::Schema.define(version: 20151119223606) do
     t.datetime "updated_at",                     null: false
   end
 
+  create_table "potential_appointments_carts", force: :cascade do |t|
+    t.integer "potential_appointment_id"
+    t.integer "cart_id"
+  end
+
+  add_index "potential_appointments_carts", ["cart_id"], name: "index_potential_appointments_carts_on_cart_id", using: :btree
+  add_index "potential_appointments_carts", ["potential_appointment_id"], name: "index_potential_appointments_carts_on_potential_appointment_id", using: :btree
+
   create_table "users", force: :cascade do |t|
-    t.string   "first_name",                      null: false
-    t.string   "last_name",                       null: false
-    t.string   "email",                           null: false
-    t.string   "password_digest",                 null: false
-    t.boolean  "student",         default: false
+    t.string   "first_name",                          null: false
+    t.string   "last_name",                           null: false
+    t.string   "email",                               null: false
+    t.string   "password_digest",                     null: false
+    t.boolean  "student",             default: false
     t.string   "school"
     t.string   "program"
     t.integer  "graduation_date"
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   add_foreign_key "advisors_categories", "advisors"
@@ -137,4 +149,6 @@ ActiveRecord::Schema.define(version: 20151119223606) do
   add_foreign_key "carts_potential_appointments", "carts"
   add_foreign_key "carts_potential_appointments", "potential_appointments"
   add_foreign_key "order_transactions", "orders"
+  add_foreign_key "potential_appointments_carts", "carts"
+  add_foreign_key "potential_appointments_carts", "potential_appointments"
 end

@@ -22,21 +22,22 @@
 <div class="container">
 
   <div class="row">
-    <div class="small-12 medium-12 large-4 columns">
+    <div class="small-12 medium-12 large-4 columns" id="home-services-box">
       <div class="home-subheader">
+
         <h2>Services</h2>
         <p>Tailored to meet your career needs. Find out how to differentiate yourself in a competitive environment.</p>
         <p class="learn-more"><%= link_to "Learn More", root_path, id: "home-services-link" %></p>
       </div>
     </div>
-    <div class="small-12 medium-12 large-4 columns">
+    <div class="small-12 medium-12 large-4 columns" id="home-network-box">
       <div class="home-subheader">
         <h2>The Network</h2>
         <p>A network of finance professionals that have volunteered their time and expertise to speak with you about your career.</p>
         <p class="learn-more"><%= link_to "Learn More", root_path, id: "home-network-link" %></p>
       </div>
     </div>
-    <div class="small-12 medium-12 large-4 columns">
+    <div class="small-12 medium-12 large-4 columns" id="home-connect-box">
       <div class="home-subheader">
         <h2>Getting Connected</h2>
         <p>Start searching our exclusive network for a professional that has the information you are seeking.</p>
@@ -47,7 +48,7 @@
 
   <div class="small-12 medium-12 large-12 columns" id="home-toggle-info">
     <h1 class="services-toggle">Services</h1>
-    <p class="services-toggle">If you are a student or are just starting your Finance career and want to understand different opportunities within Finance or want to know how to differentiate yourself in a competitive environment, click <%= link_to "Network Overview" %></p>
+    <p class="services-toggle">If you are a student or are just starting your Finance career and want to understand different opportunities within Finance or want to know how to differentiate yourself in a competitive environment, click <%= link_to "Network Overview", "/network_overview" %></p>
     <p class="services-toggle">If you already know what area of Finance you want and are ready to start searching through our network, then click <%= link_to "Get Networking" %></p>
     <h1 class="the-network-toggle">The Network</h1>
     <p class="the-network-toggle">Our Finance Professionals are prepared to answer questions in many different areas of Finance and on various different topics. A portion of each connect session will be donated to a charity of their choice. Help support the community we live in by meeting those in our Network today! To start, click <%= link_to "Get Networking" %></p>
@@ -55,4 +56,20 @@
     <p class="getting-connected-toggle">Search through our Network for the professional with the information you need. After reviewing what they have to offer, check for available dates, times and fees. To schedule your conversation, click <%= link_to "Get Connected" %></p>
   </div>
 
+  <div class="row" id="home-info-box">
+    <h1 id="page-info-header">Make your move</h1>
+
+    <div class="small-10 small-centered medium-10 medium-centered large-9 large-centered columns">
+      <p class="page-text">STEP 1: NETWORK OVERVIEW: There are 5 main categories of Finance Professional with a brief outline of roles within that area. If you are just starting your career, we recommend that you speak with professionals that have 1-5 years of experience. These professionals have an excellent idea of some of the challenges you will face. If you are writing your resume or want to be as prepared as possible for an interview, we have experts on the Network that specialize in resume writing and intensive 1 on 1 interview preparation.</p>
+    </div>
+
+    <div class="small-10 small-centered medium-10 medium-centered large-9 large-centered columns">
+      <p class="page-text">STEP 2: GET NETWORKING: Spend time reviewing the Network and see what the professionals have to offer. We carefully selected these professionals based upon their experience and background. Select one or a few professionals that can provide you with the career answers you need to make the best decision possible.</p>
+    </div>
+
+    <div class="small-10 small-centered medium-10 medium-centered large-9 large-centered columns">
+      <p class="page-text">STEP 3: GET CONNECTED: Once you have identified professionals to speak with, you will click the GET CONNECTED button. This will bring you to the payment page. Each professional has provided dates and times when they are available. If you don’t see a date or time, then select another professional or add your name to the waiting list. Working in Finance requires time and commitment. Please respect the professional’s privacy and work within their schedule. Everyone on the Network wants to speak with you. Please be patient.</p>
+    </div>
+
+  </div>
 </div>
