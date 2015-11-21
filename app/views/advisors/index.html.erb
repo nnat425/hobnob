@@ -1,42 +1,34 @@
-<div class="container">
-  <div class="small-3 medium-3 large-3 columns" id="left-side-bar">
-    <p>Advisors</p>
+<div class="container" id="advisors-container">
+   <p>Advisors</p>
+  <div class="small-12 medium-12 large-12 columns" id="left-side-bar">
     <% @categories.each do |category| %>
       <%= link_to category.name, "/categories/#{category.id}", class: "index-categories-list" %>
     <% end %>
   </div>
 
-  <div class="small-9 medium-9 large-9 columns">
+  <div class="small-12 medium-12 large-12 columns">
     <% @advisors.each do |advisor| %>
-      <div class="row">
-        <div class="small-12 medium-12 large-12 columns">
+
+        <div class="small-12 medium-12 large-6 columns">
           <div class="panel" id="advisor-index-panel">
             <div class="row">
               <div class="small-3 medium-3 large-3 columns">
                 <div id="advisor-index-avatar">
                   <%= image_tag advisor.avatar.url(:medium) %>
                 </div>
+
               </div>
               <div class="small-9 medium-9 large-9 columns">
                 <div class-"row" id="index-advisor-info">
-                  <div class="small-6 medium-6 large-6 columns">
+                  <div class="small-12 medium-12 large-12 columns">
                     <p id="index-advisor-name"><%= advisor.firstname %></p>
                   </div>
-                  <div class="small-6 medium-6 large-6 columns" id="view-advisor-link">
-                    <%= link_to "View Advisor", advisor_path(advisor), class: "button" %>
-                  </div>
-                </div>
-                <div class="row">
                   <div class="small-12 medium-12 large-12 columns">
                     <p><%= advisor.current_title %></p>
                   </div>
-                </div>
-                <div class="row">
                   <div class="small-12 medium-12 large-12 columns">
                     <p><%= advisor.job_description %></p>
                   </div>
-                </div>
-                <div class="row">
                   <div class="small-12 medium-12 large-12 columns">
                     <% advisor.categories.each do |category| %>
                       <%= link_to category.name, advisors_path, class: "advisor-categories-list" %>
@@ -47,7 +39,6 @@
             </div>
           </div>
         </div>
-      </div>
     <% end %>
   </div>
 </div>
