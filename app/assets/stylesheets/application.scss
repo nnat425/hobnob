@@ -344,19 +344,23 @@ height: 70vh;
 overflow: hidden;
 }
 
-#advisors-container {
+#advisor-index-container {
+
   background: #fff;
+  border: 1px solid #C0C0C0;
+  width: 90%;
 }
 
+
+
 #advisor-index-panel {
-margin-bottom:15px;
+margin: 10px;
 background-color: #fff;
 border: 1px solid #ccc;
--webkit-box-shadow: 1px 1px 1px 0px #ccc;
--moz-box-shadow:    1px 1px 1px 0px #ccc;
-box-shadow:         1px 1px 1px 0px #ccc;
 padding: 2em;
 width: 600px;
+display: inline-block;
+
 }
 
 #profile-panel {
@@ -446,15 +450,19 @@ overflow: hidden;
   letter-spacing: 1px;
   margin-right: .5em;
   font-family: "Open Sans";
-  color: #43c7f4;
+  color: #C0C0C0;
+  text-transform: uppercase;
+  font-size: .7em;
+  font-weight: bold;
 }
 
 
 
 #index-advisor-name {
   font-family: "Open Sans";
-  font-size: 2em;
+  font-size: 1.5em;
   letter-spacing: 1px;
+  display: inline-block;
 }
 
 #page-header {
@@ -479,6 +487,7 @@ overflow: hidden;
 
 #index-advisor-info p {
   margin-bottom: 0px;
+  font-family: "Open Sans";
 }
 #view-advisor-link {
   float: right;
@@ -497,8 +506,10 @@ overflow: hidden;
   letter-spacing: 2px;
   font-family: "Open Sans";
   font-size: .9em;
-  border: 1px solid #43c7f4;
-  color: #43c7f4;
+  border-top: 1px solid #C0C0C0;
+  border-left: 1px solid #C0C0C0;
+  border-right: 1px solid #C0C0C0;
+  color: #C0C0C0;
   text-transform: uppercase;
 }
 
