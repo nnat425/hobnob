@@ -1,12 +1,12 @@
 <div class="container">
- <div class="row" id="advisor-index-container">
-   <div class="small-12 medium-12 large-12 columns" id="top-category-bar">
+
+   <div class="small-12 medium-3 large-3 columns" id="left-category-bar">
     <% @categories.each do |category| %>
     <%= link_to category.name, "/categories/#{category.id}", class: "index-categories-list" %>
     <% end %>
     </div>
 
-    <div class="small-12 medium-12 large-12 columns">
+    <div class="small-12 medium-9 large-9 columns">
       <% @advisors.each do |advisor| %>
       <div class="panel" id="advisor-index-panel">
         <div class="row">
@@ -34,5 +34,4 @@
       </div>
       <% end %>
     </div>
-  </div>
 </div>

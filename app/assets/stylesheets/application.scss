@@ -339,16 +339,9 @@ height: 70vh;
 overflow: hidden;
 }
 
-#advisor-index-container {
-  background: #fff;
-  border: 1px solid #C0C0C0;
-  width: 90%;
-}
-
-
 
 #advisor-index-panel {
-margin: 10px;
+margin-bottom: 10px;
 background-color: #fff;
 border: 1px solid #ccc;
 padding: 2em;
@@ -494,8 +487,12 @@ height: 30vh;
 overflow: hidden;
 }
 
+#left-category-bar {
+  border-bottom: 1px solid #C0C0C0;
+}
+
 .index-categories-list {
-  display: inline-block;
+  display: block;
   padding: 1em;
   letter-spacing: 2px;
   font-family: "Open Sans";
