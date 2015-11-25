@@ -17,16 +17,29 @@
           </div>
           <div class="small-9 medium-9 large-9 columns">
             <div class-"row" id="index-advisor-info">
-              <div class="small-12 medium-12 large-12 columns">
+              <div class="small-6 medium-6 large-6 columns">
                 <p id="index-advisor-name"><%= advisor.firstname %></p>
+              </div>
+              <div class="small-6 medium-6 large-6 columns" id="advisor-index-price">
+              <% if logged_in? %>
+                <p class="advisor-price-number">$<% if current_user.student == true %>
+                <%= advisor.student_price %>
+                <% else %>
+                <%= advisor.regular_price %></p><p class="advisor-price-session"> per session</p>
+              <% end %>
+
+              <% end %>
               </div>
               <div class="small-12 medium-12 large-12 columns">
                 <p><%= advisor.current_title %> | <%= advisor.location %></p>
               </div>
-              <div class="small-12 medium-12 large-12 columns">
+              <div class="small-12 medium-12 large-12 columns" id="advisor-categories-list">
                 <% advisor.categories.each do |category| %>
-                <%= link_to category.name, advisors_path, class: "advisor-categories-list" %>
+                <p><%= category.name %></p>
                 <% end %>
+              </div>
+              <div class="small-12 medium-12 large-12 columns">
+                <%= link_to "Book Appointment", advisor_path(advisor), class: "book-appt-button" %>
               </div>
             </div>
           </div>

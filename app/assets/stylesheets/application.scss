@@ -347,7 +347,23 @@ border: 1px solid #ccc;
 padding: 2em;
 width: 600px;
 display: inline-block;
+height: 240px;
 
+}
+
+#advisor-index-price {
+  text-align: right;
+}
+
+#advisor-index-price .advisor-price-number {
+  font-size: 1.5em;
+  color: #2f5287;
+}
+
+#advisor-index-price .advisor-price-session {
+  color: #C0C0C0;
+  font-size: .5em;
+  font-family: "Open Sans";
 }
 
 #profile-panel {
@@ -432,7 +448,7 @@ overflow: hidden;
 
 
 
-.advisor-categories-list {
+#advisor-categories-list p {
   display: inline;
   letter-spacing: 1px;
   margin-right: .5em;
