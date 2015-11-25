@@ -38,7 +38,8 @@ ActiveRecord::Schema.define(version: 20151125154230) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
-    t.integer  "price"
+    t.integer  "student_price"
+    t.integer  "regular_price"
   end
 
   create_table "advisors_categories", force: :cascade do |t|

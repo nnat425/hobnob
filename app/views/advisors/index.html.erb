@@ -28,6 +28,10 @@
                 <%= link_to category.name, advisors_path, class: "advisor-categories-list" %>
                 <% end %>
               </div>
+              <div class="small-12 medium-12 large-12 columns">
+              <% if logged_in? && current_user.student == true %>
+              <%
+              </div>
             </div>
           </div>
         </div>
