@@ -50,6 +50,7 @@ class AdvisorsController < ApplicationController
         advisor.student_price = 60
         advisor.regular_price = 75
       end
+      advisor.save
       redirect_to advisor_path(advisor)
     else
       flash[:error] = advisor.errors.full_messages
