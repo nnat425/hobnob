@@ -38,13 +38,15 @@
                 <p><%= category.name %></p>
                 <% end %>
               </div>
-              <div class="small-12 medium-12 large-12 columns">
-                <%= link_to "Book Appointment", advisor_path(advisor), class: "book-appt-button" %>
-              </div>
+
             </div>
+
           </div>
         </div>
-      </div>
+         <div class="small-12 medium-12 large-12 columns">
+            <%= link_to "Book Appointment", advisor_path(advisor), class: "book-appt-button" %>
+          </div>
+        </div>
       <% end %>
     </div>
 </div>
