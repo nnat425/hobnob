@@ -506,22 +506,27 @@ overflow: hidden;
 #left-category-bar {
   border-bottom: 1px solid #C0C0C0;
 }
+.advisors-filter-subheader {
+  font-family: "Open Sans";
+  color: #385c93;
+  font-size: 1.5em;
+  font-weight: 300;
+}
 
 .index-categories-list {
   display: block;
   padding: 1em;
   letter-spacing: 2px;
   font-family: "Open Sans";
-  font-size: .9em;
-  border-top: 1px solid #C0C0C0;
+  font-size: 1em;
   border-left: 1px solid #C0C0C0;
-  border-right: 1px solid #C0C0C0;
   color: #C0C0C0;
   text-transform: uppercase;
 }
 
 .index-categories-list p {
   display: inline;
+  font-size: .85em;
 }
 
 .advisors-filter-checkbox {
