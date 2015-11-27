@@ -4,7 +4,8 @@
 <h1> Create appointment </h1>
 
 
-
+<div class='row'>
+  <div class='large-3 columns'>
 <%= form_for @potential_appointment do |f| %>
 
 
@@ -40,17 +41,18 @@
 </div>
 </div>
 
-<<div class="row">
+<div class="row">
         <div class="small-11 small-centered medium-10 large-7 columns">
 <%= f.submit "Create" %>
+<% end %>
+
 </div>
 </div>
+</div>
 
 
 
-
-
-
+  <div class='large-8 columns'>
 <%= month_calendar events: @all_appointments do |date, appointments| %>
 <%= date.day %>
 
@@ -60,9 +62,8 @@
 </div>
 <% end %>
 <% end %>
-<% end %>
-
-
+</div>
+</div>
 
 
 
