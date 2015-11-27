@@ -9,11 +9,6 @@
     <%= form_for @potential_appointment do |f| %>
     <h3 id='appointment_header'>Create appointment </h3>
     <%= flash[:pick_date_or_enter_title] %>
-    <% if flash[:potential_appointment_error] %>
-    <% flash[:potential_appointment_error].each do |msg| %>
-    <p class="error-message"><%= msg %></p>
-    <% end %>
-    <% end %>
 
 
 
