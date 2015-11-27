@@ -344,8 +344,8 @@ overflow: hidden;
 margin-bottom: 10px;
 background-color: #fff;
 border: 1px solid #ccc;
-padding: 2em;
-width: 600px;
+padding: 1em;
+width: 550px;
 display: inline-block;
 height: 240px;
 
@@ -504,11 +504,12 @@ overflow: hidden;
 }
 
 #left-category-bar {
-  border-bottom: 1px solid #C0C0C0;
+  background-color: #203451;
+
 }
 .advisors-filter-subheader {
   font-family: "Open Sans";
-  color: #385c93;
+  color: #C0C0C0;
   font-size: 1.5em;
   font-weight: 300;
 }
