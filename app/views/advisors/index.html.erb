@@ -1,12 +1,31 @@
 <div class="container">
 
-   <div class="small-12 medium-3 large-3 columns" id="left-category-bar">
-    <% @categories.each do |category| %>
-    <%= link_to category.name, "/categories/#{category.id}", class: "index-categories-list" %>
-    <% end %>
+  <div class="small-12 medium-12 large-3 columns" id="left-category-bar">
+
+      <p class="advisors-filter-subheader">Finance Category</p>
+
+      <% @categories.each do |category| %>
+      <div class="index-categories-list" >
+        <p><%= category.name %></p>
+        <%= check_box_tag "category[name][]", category.name, false, class: "advisors-filter-checkbox" %>
+      </div>
+      <% end %>
+      <p class="advisors-filter-subheader">Years of Experience</p>
+      <div class="index-categories-list" >
+        <p>Less than 5 years</p>
+        <%= check_box_tag "years_of_experience", "< 5 years", false, class: "advisors-filter-checkbox" %>
+      </div>
+      <div class="index-categories-list" >
+        <p>5 to 15 years</p>
+        <%= check_box_tag "years_of_experience", "< 5 - 15 years", false, class: "advisors-filter-checkbox" %>
+      </div>
+      <div class="index-categories-list" >
+        <p>More than 15 years</p>
+        <%= check_box_tag "years_of_experience", "15 years <", false, class: "advisors-filter-checkbox" %>
+      </div>
     </div>
 
-    <div class="small-12 medium-9 large-9 columns">
+    <div class="small-12 medium-12 large-9 columns">
       <% @advisors.each do |advisor| %>
       <div class="panel" id="advisor-index-panel">
         <div class="row">
@@ -22,13 +41,14 @@
               </div>
               <div class="small-6 medium-6 large-6 columns" id="advisor-index-price">
               <% if logged_in? %>
-                <p class="advisor-price-number">$<% if current_user.student == true %>
-                <%= advisor.student_price %>
-                <% else %>
-                <%= advisor.regular_price %></p><p class="advisor-price-session"> per session</p>
-              <% end %>
-
-              <% end %>
+                <p class="advisor-price-number">$
+                  <% if current_user.student == true %>
+                    <%= advisor.student_price %>
+                  <% else %>
+                    <%= advisor.regular_price %></p>
+                    <p class="advisor-price-session"> per session</p>
+                  <% end %>
+                <% end %>
               </div>
               <div class="small-12 medium-12 large-12 columns">
                 <p><%= advisor.current_title %> | <%= advisor.location %></p>
@@ -38,13 +58,14 @@
                 <p><%= category.name %></p>
                 <% end %>
               </div>
-              <div class="small-12 medium-12 large-12 columns">
-                <%= link_to "Book Appointment", advisor_path(advisor), class: "book-appt-button" %>
-              </div>
             </div>
           </div>
         </div>
+        <div class="small-12 medium-12 large-12 columns">
+          <%= link_to "Availability", advisor_path(advisor), class: "book-appt-button" %>
+        </div>
       </div>
       <% end %>
-    </div>
+
+  </div>
 </div>
