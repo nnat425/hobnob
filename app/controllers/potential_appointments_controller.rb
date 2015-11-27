@@ -20,8 +20,10 @@ class PotentialAppointmentsController < ApplicationController
 
       redirect_to new_potential_appointment_path
     else
+       # flash[:pick_date_or_enter_title] = "Please pick a date/Enter a title"
+       # flash[:errors] = user.errors.full_messages
       redirect_to new_potential_appointment_path
-      flash[:pick_date_or_enter_title] = "Please pick a date/Enter a title"
+
     end
   end
 

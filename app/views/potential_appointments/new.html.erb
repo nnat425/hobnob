@@ -6,61 +6,69 @@
 <div class='row'>
   <div class='large-3 columns'>
 
-<%= form_for @potential_appointment do |f| %>
+    <%= form_for @potential_appointment do |f| %>
     <h3 id='appointment_header'>Create appointment </h3>
-<%= flash[:pick_date_or_enter_title] %>
+    <%= flash[:pick_date_or_enter_title] %>
+    <% if flash[:errors] %>
+    <% flash[:errors].each do |msg| %>
+    <p class="error-message"><%= msg %></p>
+    <% end %>
+    <% end %>
 
-<div class="row">
-  <div class="small-11 small-centered medium-10 large-7 columns">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
+
+
+
+    <div class="row">
+      <div class="small-11 small-centered medium-10 large-7 columns">
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="small-11 small-centered medium-10 large-7 columns">
+        <%= f.label :date %>
+        <%= date_field(:appointment_date,"date") %>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="small-11 small-centered medium-10 large-7 columns">
+        <%= f.label :Start_Time %>
+        <%= time_select 'potential_appointment', 'start_time', {ampm: true}
+        %>
+      </div>
+    </div>
+
+
+    <%= f.label :End_Time %>
+    <%= time_select 'potential_appointment', 'end_time', {ampm: true}, class: "end_time"
+    %>
+
+    <div class="row">
+      <div class="small-11 small-centered medium-10 large-7 columns">
+        <%= f.submit "Create" %>
+        <% end %>
+
+      </div>
+    </div>
   </div>
-</div>
-
-<div class="row">
-        <div class="small-11 small-centered medium-10 large-7 columns">
-<%= f.label :date %>
-<%= date_field(:appointment_date,"date") %>
-</div>
-</div>
-
-
-<div class="row">
-        <div class="small-11 small-centered medium-10 large-7 columns">
-<%= f.label :Start_Time %>
-<%= time_select 'potential_appointment', 'start_time', {ampm: true}
-%>
-</div>
-</div>
-
-
-<%= f.label :End_Time %>
-<%= time_select 'potential_appointment', 'end_time', {ampm: true}, class: "end_time"
-%>
-
-<div class="row">
-        <div class="small-11 small-centered medium-10 large-7 columns">
-<%= f.submit "Create" %>
-<% end %>
-
-</div>
-</div>
-</div>
 
 
 
   <div class='large-8 columns'>
-<%= month_calendar events: @advisor_appointments do |date, appointments| %>
-<%= date.day %>
+    <%= month_calendar events: @advisor_appointments do |date, appointments| %>
+    <%= date.day %>
 
-<% appointments.each do |appointment| %>
-<div>
+    <% appointments.each do |appointment| %>
+    <div>
 
-  <%= appointment.title %>
-</div>
-<% end %>
-<% end %>
-</div>
+      <%= appointment.title %>
+    </div>
+    <% end %>
+    <% end %>
+  </div>
 </div>
 
 
