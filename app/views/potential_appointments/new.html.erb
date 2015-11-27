@@ -5,9 +5,10 @@
 
 <div class='row'>
   <div class='large-3 columns'>
-<%= form_for @potential_appointment do |f| %>
 
+<%= form_for @potential_appointment do |f| %>
     <h3 id='appointment_header'>Create appointment </h3>
+<%= flash[:pick_date_or_enter_title] %>
 
 <div class="row">
   <div class="small-11 small-centered medium-10 large-7 columns">
@@ -49,11 +50,12 @@
 
 
   <div class='large-8 columns'>
-<%= month_calendar events: @all_appointments do |date, appointments| %>
+<%= month_calendar events: @advisor_appointments do |date, appointments| %>
 <%= date.day %>
 
 <% appointments.each do |appointment| %>
 <div>
+
   <%= appointment.title %>
 </div>
 <% end %>
