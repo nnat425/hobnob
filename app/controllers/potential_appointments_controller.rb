@@ -10,7 +10,7 @@ class PotentialAppointmentsController < ApplicationController
   def create
 
     date = params[:appointment_date][:date].split('-')
-    if date[0] != nil
+    if date[0] != nil && params[:potential_appointment][:title] != ""
 
       start_time = Time.new(date[0],date[1],date[2],params[:potential_appointment].values[4].to_i,params[:potential_appointment].values[5].to_i).to_s
 
@@ -20,8 +20,10 @@ class PotentialAppointmentsController < ApplicationController
 
       redirect_to new_potential_appointment_path
     else
+       flash[:pick_date_or_enter_title] = "Please pick a date/Enter a title"
+
       redirect_to new_potential_appointment_path
-      flash[:pick_date_or_enter_title] = "Please pick a date/Enter a title"
+
     end
   end
 
