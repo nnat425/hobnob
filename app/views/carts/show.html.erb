@@ -2,22 +2,44 @@
 </header>
 
 <div id='cart_header' class='row'>
-  <h1>Shopping Cart</h1>
+  <div class='large-5 columns'><h1>Shopping Cart</h1></div>
+  <div class='large-4 large-offset-4 columns'><h6>Price</h6></div>
 </div>
 
 <% @cart.potential_appointments.each do |appointment|  %>
 <div id='item_in_cart' class='row'>
   <div class='large-3 columns'>
     <div id="advisor-index-avatar">
-      <%= image_tag advisor.avatar.url(:medium) %>
+      <%= image_tag Advisor.find_by(id:appointment.advisor_id).avatar.url(:medium) %>
     </div>
-    <h4 id='advisor_name_cart'> <%= advisor.firstname %> </h4>
+    <h3 id='advisor_name_cart'> <%= Advisor.find_by(id:appointment.advisor_id).firstname %> </h3>
   </div>
-  <div class='large-7 columns'>
-    <%= appointment.title %>
-    <%= appointment.
+  <div id='item_info' class='large-7 columns'>
+    <div class='row'>
+      <div class='large-1 columns'>
+        <h4 id='app_title'><%= appointment.title %></h4></div>
+        <div class='large-4 columns'>
+          <% if current_user.student == true %>
+          <p class='app_price'> <%='$' + Advisor.find_by(id:appointment.advisor_id).student_price.to_s %></p>
+          <% else %>
+          <p class='app_price'> <%='$' + Advisor.find_by(id:appointment.advisor_id).regular_price.to_s %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <%= appointment.start_time.strftime("%A, %B %d, %Y at %l:%M %p") %>
+      <%= appointment.end_time.strftime("to %l:%M %p") %><br>
+      <%= link_to "Delete", {:controller => 'carts', :action => 'destroy', :potential_appointment => appointment.id}, :method => :delete %>
+    </div>
+  </div>
+  <% end %>
+  <div class ='row'>
+    <div id='cart_total' class='large-2 large-offset-9 columns'>
+    <% if current_user.student == true %>
+    <%= "Subtotal (" + @cart.potential_appointments.count + "):" + @cart.total_price_student %>
+    <% else %>
+    <%= "Subtotal (" + @cart.potential_appointments.count.to_s + " items):" + @cart.total_price_regular.to_s %>
+    <% end %>
+     <%= link_to "Checkout", new_order_path %>
+  </div>
 </div>
-
-<% end %>
-
-<%= link_to "Checkout", new_order_path %>

@@ -682,9 +682,30 @@ overflow: hidden;
 
 #item_in_cart{
   margin-top:20px;
+  border-bottom:solid grey 1px;
+  width:1300px;
 }
 
 #advisor_name_cart{
 margin-top:-10px;
 text-align:center;
+}
+
+#item_info{
+  float:left;
+  margin-right:180px;
+  margin-top:60px;
+}
+
+#app_title{
+margin-left:-15px;
+}
+
+.app_price{
+margin-left:40px;
+}
+
+#cart_total{
+  font-size:20px;
+  margin-top:10px;
 }
