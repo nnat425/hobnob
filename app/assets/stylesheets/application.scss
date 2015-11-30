@@ -515,6 +515,12 @@ overflow: hidden;
   color: #C0C0C0;
   font-size: 1.5em;
   font-weight: 300;
+  display: inline;
+}
+
+.btn {
+  float: right;
+  margin-top: 5px;
 }
 
 
@@ -634,4 +640,10 @@ text-decoration: underline;
   float:left;
   width:40%;
   margin:10px;
+}
+
+#no-matches-message {
+  font-family: "Open Sans";
+  font-size: 1.5em;
+  font-weight: 300;
 }
