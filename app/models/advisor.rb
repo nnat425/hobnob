@@ -21,16 +21,23 @@ class Advisor < ActiveRecord::Base
   end
 
   def self.filter(chosen_categories,chosen_years)
-    advisor_results = []
-    chosen_categories.each do |chosen_category|
-      Category.where(name: chosen_category).each do |category|
-        advisor_results += category.advisors
+    if chosen_categories
+      results_by_category = chosen_categories.map do |chosen_category|
+        Category.find_by(name: chosen_category).advisors
       end
+      results_by_category.flatten!.uniq!
+    else
+      results_by_category = all
     end
-    chosen_years.each do |years|
-      advisor_results << where(years_of_experience: years)
+    if chosen_years
+      results_by_year = chosen_years.map do |range|
+        where(years_of_experience: range)
+      end
+      results_by_year.flatten!
+      advisor_results = results_by_category & results_by_year
+    else
+      advisor_results = results_by_category
     end
-    advisor_results.flatten!.uniq!
+    advisor_results
   end
-
 end
