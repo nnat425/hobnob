@@ -1,7 +1,11 @@
 class AdvisorsController < ApplicationController
 
   def index
-    @advisors = Advisor.all
+    if params[:filter]
+      @advisors = Advisor.search(params[:filter])
+    else
+      @advisors = Advisor.all
+    end
     @categories = Category.all
   end
 
