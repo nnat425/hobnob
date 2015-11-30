@@ -1,30 +1,30 @@
 <div class="container">
 
   <div class="small-12 medium-12 large-3 columns" id="left-category-bar">
-  <%= form_tag(advisors_path, :method => "get", id: "advisors-filter-form") do %>
+    <%= form_tag(advisors_path, :method => "get", id: "advisors-filter-form") do %>
       <p class="advisors-filter-subheader">Finance Category</p>
 
       <% @categories.each do |category| %>
       <div class="index-categories-list" >
         <p><%= category.name %></p>
-        <%= check_box_tag "category[name][]", category.name, false, class: "advisors-filter-checkbox" %>
+        <%= check_box_tag "filter[category][]", category.name, false, class: "advisors-filter-checkbox" %>
       </div>
       <% end %>
       <p class="advisors-filter-subheader">Years of Experience</p>
       <div class="index-categories-list" >
         <p>Less than 5 years</p>
-        <%= check_box_tag "years_of_experience", "< 5 years", false, class: "advisors-filter-checkbox" %>
+        <%= check_box_tag "filter[years_of_experience][]", "< 5 years", false, class: "advisors-filter-checkbox" %>
       </div>
       <div class="index-categories-list" >
         <p>5 to 15 years</p>
-        <%= check_box_tag "years_of_experience", "< 5 - 15 years", false, class: "advisors-filter-checkbox" %>
+        <%= check_box_tag "filter[years_of_experience][]", "< 5 - 15 years", false, class: "advisors-filter-checkbox" %>
       </div>
       <div class="index-categories-list" >
         <p>More than 15 years</p>
-        <%= check_box_tag "years_of_experience", "15 years <", false, class: "advisors-filter-checkbox" %>
+        <%= check_box_tag "filter[years_of_experience][]", "15 years <", false, class: "advisors-filter-checkbox" %>
       </div>
-  <% end %>
-  </div>
+    <% end %>
+    </div>
 
     <div class="small-12 medium-12 large-9 columns">
       <% @advisors.each do |advisor| %>
