@@ -1,3 +1,6 @@
+<% if @advisors == nil %>
+  <p>Sorry, there were no advisors that matched your search!</p>
+<% else %>
 <% @advisors.each do |advisor| %>
 <div class="panel" id="advisor-index-panel">
   <div class="row">
@@ -37,4 +40,5 @@
     <%= link_to "Availability", advisor_path(advisor), class: "book-appt-button" %>
   </div>
 </div>
+<% end %>
 <% end %>

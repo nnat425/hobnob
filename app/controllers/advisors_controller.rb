@@ -3,9 +3,14 @@ class AdvisorsController < ApplicationController
   def index
     if params[:filter]
       @advisors = Advisor.filter(params[:filter][:category],params[:filter][:years_of_experience])
-      render partial: "results_index", layout: false
+      if request.xhr?
+        render partial: "results_index", layout: false
+      end
     else
       @advisors = Advisor.all
+      if request.xhr?
+        render partial: "results_index", layout: false
+      end
     end
     @categories = Category.all
   end

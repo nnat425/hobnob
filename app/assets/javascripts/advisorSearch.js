@@ -8,8 +8,8 @@ $(document).ready(function(){
       data: $(event.target).serialize()
     }).done(function(data) {
       $("#advisors-list").html(data);
-    }).fail(function(){
-
+    }).fail(function(response){
+      console.log(response);
     })
 
   });
