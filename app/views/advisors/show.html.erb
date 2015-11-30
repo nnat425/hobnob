@@ -9,8 +9,8 @@
         </div>
 
         <% if session[:user_or_advisor_id] == @advisor.id && session[:class_type] == @advisor.class.name %>
-        <%=link_to "Edit Profile", edit_advisor_path, class: "button" %>
-         <%=link_to "Create An Appointment", new_potential_appointment_path, class: "button small" %>
+        <%= link_to "Edit Profile", edit_advisor_path(@advisor) %>
+         <%= link_to "Create An Appointment", new_potential_appointment_path %>
         <% end %>
       </div>
         <div class="row" id="advisor-profile-bio">
