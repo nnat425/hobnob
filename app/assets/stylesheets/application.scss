@@ -500,7 +500,7 @@ overflow: hidden;
 }
 
 .calendar_page {
-background-color:blue;
+background-color:white;
 background-size: cover;
 height: 30vh;
 overflow: hidden;
@@ -646,4 +646,10 @@ text-decoration: underline;
   font-family: "Open Sans";
   font-size: 1.5em;
   font-weight: 300;
+}
+.start_time {
+  display:inline;
+  float:left;
+  width:40%;
+  margin:10px;
 }

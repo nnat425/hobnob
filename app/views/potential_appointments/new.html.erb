@@ -27,23 +27,17 @@
       </div>
     </div>
 
-
-    <div class="row">
-      <div class="small-11 small-centered medium-10 large-7 columns">
         <%= f.label :Start_Time %>
-        <%= time_select 'potential_appointment', 'start_time', {ampm: true}
+        <%= time_select 'potential_appointment', 'start_time', {ampm: true, :time_separator => ""}, class: "start_time"
         %>
-      </div>
-    </div>
-
 
     <%= f.label :End_Time %>
-    <%= time_select 'potential_appointment', 'end_time', {ampm: true}, class: "end_time"
+    <%= time_select('potential_appointment', 'end_time', {ampm: true, :time_separator => "" }, class: "end_time")
     %>
 
     <div class="row">
-      <div class="small-11 small-centered medium-10 large-7 columns">
-        <%= f.submit "Create" %>
+      <div class="large-12 large-centered columns">
+        <%= f.submit "Create Appointment", {:class => "button",:id => "calendar_button" } %>
         <% end %>
 
       </div>
