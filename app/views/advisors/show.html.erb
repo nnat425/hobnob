@@ -1,4 +1,5 @@
 <div class="container">
+
   <div class="small-12 medium-12 large-12 columns" id='profile-panel'>
     <div class="row">
       <div class="small-12 medium-4 medium-centered large-3 large-centered columns">
@@ -9,10 +10,9 @@
         </div>
 
         <% if session[:user_or_advisor_id] == @advisor.id && session[:class_type] == @advisor.class.name %>
-        <%= link_to "Edit Profile", edit_advisor_path(@advisor) %>
-         <%= link_to "Create An Appointment", new_potential_appointment_path %>
+          <%= link_to "Edit Profile", edit_advisor_path(@advisor) %>
+          <%= link_to "Create An Appointment", new_potential_appointment_path %>
         <% end %>
-      </div>
         <div class="row" id="advisor-profile-bio">
           <p id="advisor-name-profile-page"><%= @advisor.firstname %></p>
           <p id="advisor-title-profile-page"><%= @advisor.current_title %> | <%= @advisor.location %></p>
