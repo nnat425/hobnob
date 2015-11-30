@@ -16,6 +16,12 @@ class Cart < ActiveRecord::Base
 end
   handle_asynchronously :create_timer, :run_at => Proc.new { 10.seconds.from_now }
 
+  def total_price
+    if current_user.student == true
+      self.potential_appointments.each do |advisor|
+        Advisor.find_by(id: advisor.id)
+  end
+
 end
 
 #rake jobs:work ... to test timer in development
