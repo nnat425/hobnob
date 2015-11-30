@@ -500,9 +500,9 @@ overflow: hidden;
 }
 
 .calendar_page {
-background-color:blue;
+background:url("phone.jpeg");
 background-size: cover;
-height: 30vh;
+height: 80vh;
 overflow: hidden;
 }
 
@@ -646,4 +646,45 @@ text-decoration: underline;
   font-family: "Open Sans";
   font-size: 1.5em;
   font-weight: 300;
+}
+.start_time {
+  display:inline;
+  float:left;
+  width:40%;
+  margin:10px;
+}
+
+#appointment_title{
+  font-size:25px;
+  margin-top:15px;
+  margin-bottom:-5px;
+}
+
+#flash_add_cart{
+  color:blue;
+}
+
+#flash_already_cart{
+  color:red;
+}
+
+#cart_page{
+background-color:white;
+background-size:cover;
+height:25vh;
+overflow: hidden;
+}
+
+#cart_header{
+  border-bottom:solid grey 1px;
+  width:1300px;
+}
+
+#item_in_cart{
+  margin-top:20px;
+}
+
+#advisor_name_cart{
+margin-top:-10px;
+text-align:center;
 }
