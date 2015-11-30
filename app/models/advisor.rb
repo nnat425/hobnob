@@ -22,9 +22,9 @@ class Advisor < ActiveRecord::Base
 
   def self.filter(chosen_categories,chosen_years)
     advisor_results = []
-    chosen_categories.each do |category|
-      if categories.include?(category)
-        advisor_results << self
+    chosen_categories.each do |chosen_category|
+      Category.where(name: chosen_category).each do |category|
+        advisor_results += category.advisors
       end
     end
     chosen_years.each do |years|
@@ -32,4 +32,5 @@ class Advisor < ActiveRecord::Base
     end
     advisor_results
   end
+
 end

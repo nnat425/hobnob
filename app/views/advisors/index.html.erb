@@ -3,7 +3,7 @@
   <div class="small-12 medium-12 large-3 columns" id="left-category-bar">
     <%= form_tag(advisors_path, :method => "get", id: "advisors-filter-form") do %>
       <p class="advisors-filter-subheader">Finance Category</p>
-
+      <button class="btn" type="submit"><i class="icon-search"></i></button>
       <% @categories.each do |category| %>
       <div class="index-categories-list" >
         <p><%= category.name %></p>
