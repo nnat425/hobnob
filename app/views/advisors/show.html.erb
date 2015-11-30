@@ -97,9 +97,10 @@
       <div class="small-12 medium-12 large-12 columns">
         <p class="profile-subheader">Available Times</p>
         <% @advisor.potential_appointments.each do |pot_appointment| %>
-          <%= pot_appointment.start_time %>
-          <%= pot_appointment.end_time %>
           <%= pot_appointment.title %>
+          <br>
+          <%= pot_appointment.start_time.strftime("%A, %B %d, %Y at %l:%M %p") %>
+          <%= pot_appointment.end_time.strftime("to %l:%M %p") %>
           <% if session[:class_type] != "Advisor" %>
             <%= form_for @advisor, url: cart_path, method: "patch" do |f| %>
               <%= f.hidden_field :appointment_id, :value => pot_appointment.id %>
