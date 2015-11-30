@@ -20,4 +20,9 @@ class Advisor < ActiveRecord::Base
      self.update(other_companies:param_companies.join(","))
   end
 
+  def self.filter(options)
+
+  end
+
+
 end
