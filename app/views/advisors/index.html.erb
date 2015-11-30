@@ -1,7 +1,7 @@
 <div class="container">
 
   <div class="small-12 medium-12 large-3 columns" id="left-category-bar">
-
+  <%= form_tag(advisors_path, :method => "get", id: "advisors-filter-form") do %>
       <p class="advisors-filter-subheader">Finance Category</p>
 
       <% @categories.each do |category| %>
@@ -23,7 +23,8 @@
         <p>More than 15 years</p>
         <%= check_box_tag "years_of_experience", "15 years <", false, class: "advisors-filter-checkbox" %>
       </div>
-    </div>
+  <% end %>
+  </div>
 
     <div class="small-12 medium-12 large-9 columns">
       <% @advisors.each do |advisor| %>
