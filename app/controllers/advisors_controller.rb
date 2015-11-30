@@ -5,9 +5,6 @@ class AdvisorsController < ApplicationController
     @categories = Category.all
   end
 
-  def filter
-  end
-
   def new
     @advisor = Advisor.new
   end
