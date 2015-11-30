@@ -12,7 +12,7 @@ class CartsController < ApplicationController
   def update
     potential_appointment = PotentialAppointment.find_by(id:params[:advisor][:appointment_id])
     if current_cart.potential_appointments.include?(potential_appointment)
-      flash[:already_in_card] = "This Appointment is already in your cart"
+      flash[:already_in_cart] = "This appointment is already in your cart"
       redirect_to advisor_path
     else
       current_cart.potential_appointments.push(potential_appointment)
