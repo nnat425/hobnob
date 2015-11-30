@@ -15,7 +15,18 @@
     <h3 id='advisor_name_cart'> <%= Advisor.find_by(id:appointment.advisor_id).firstname %> </h3>
   </div>
   <div id='item_info' class='large-7 columns'>
-    <h4><%= appointment.title %></h4>
+    <div class='row'>
+      <div class='large-1 columns'>
+        <h4 id='app_title'><%= appointment.title %></h4></div>
+        <div class='large-4 columns'>
+          <% if current_user.student == true %>
+          <p class='app_price'> <%='$' + Advisor.find_by(id:appointment.advisor_id).student_price.to_s %></p>
+          <% else %>
+          <p class='app_price'> <%='$' + Advisor.find_by(id:appointment.advisor_id).regular_price.to_s %>
+            <% end %>
+        </div>
+      </div>
+    </div>
     <%= appointment.start_time.strftime("%A, %B %d, %Y at %l:%M %p") %>
     <%= appointment.end_time.strftime("to %l:%M %p") %>
   </div>
