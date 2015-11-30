@@ -20,9 +20,16 @@ class Advisor < ActiveRecord::Base
      self.update(other_companies:param_companies.join(","))
   end
 
-  def self.filter(options)
-
+  def self.filter(chosen_categories,chosen_years)
+    advisor_results = []
+    chosen_categories.each do |category|
+      if categories.include?(category)
+        advisor_results << self
+      end
+    end
+    chosen_years.each do |years|
+      advisor_results << where(years_of_experience: years)
+    end
+    advisor_results
   end
-
-
 end
