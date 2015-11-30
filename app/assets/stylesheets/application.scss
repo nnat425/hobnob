@@ -500,9 +500,9 @@ overflow: hidden;
 }
 
 .calendar_page {
-background-color:white;
+background:url("phone.jpeg");
 background-size: cover;
-height: 30vh;
+height: 80vh;
 overflow: hidden;
 }
 
@@ -652,4 +652,9 @@ text-decoration: underline;
   float:left;
   width:40%;
   margin:10px;
+}
+
+#appointment_title{
+  font-size:25px;
+  margin-bottom:-5px;
 }
