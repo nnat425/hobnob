@@ -8,22 +8,32 @@ class Cart < ActiveRecord::Base
   after_update :create_timer
 
   def create_timer
-  if self.checked_out? == false
-   self.potential_appointments.each do|item_in_cart|
-     self.potential_appointments.delete(item_in_cart)
-    end
+    if self.checked_out? == false
+     self.potential_appointments.each do|item_in_cart|
+       self.potential_appointments.delete(item_in_cart)
+     end
+   end
+ end
+ handle_asynchronously :create_timer, :run_at => Proc.new { 10.seconds.from_now }
+
+ def total_price_student
+  total_price = []
+  self.potential_appointments.each do |potential_appointment|
+    total_price.push(Advisor.find_by(id: potential_appointment.advisor_id).student_price)
   end
 end
-  handle_asynchronously :create_timer, :run_at => Proc.new { 10.seconds.from_now }
 
-  def total_price
-    if current_user.student == true
-      self.potential_appointments.each do |advisor|
-        Advisor.find_by(id: advisor.id)
+
+def total_price_regular
+  total_price = []
+  self.potential_appointments.each do |potential_appointment|
+    total_price.push(Advisor.find_by(id: potential_appointment.advisor_id).regular_price)
   end
-
+  return (total_price).reduce(:+)
 end
 
+
+end
 #rake jobs:work ... to test timer in development
 
 #Need to clear items from shopping cart
