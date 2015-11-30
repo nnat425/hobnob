@@ -30,7 +30,7 @@ class Advisor < ActiveRecord::Base
     chosen_years.each do |years|
       advisor_results << where(years_of_experience: years)
     end
-    advisor_results
+    advisor_results.flatten!.uniq!
   end
 
 end
