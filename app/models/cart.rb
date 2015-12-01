@@ -33,6 +33,9 @@ def total_price_regular
   return (total_price).reduce(:+)
 end
 
+def update_booked_status
+self.potential_appointments.each {|potential_appointment| potential_appointment.update(booked_status?: true)}
+end
 
 end
 #rake jobs:work ... to test timer in development
