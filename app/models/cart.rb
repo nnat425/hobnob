@@ -21,7 +21,7 @@ class Cart < ActiveRecord::Base
   self.potential_appointments.each do |potential_appointment|
     total_price.push(Advisor.find_by(id: potential_appointment.advisor_id).student_price)
   end
-    return (total_price).reduce(:+)
+  return (total_price).reduce(:+)
 end
 
 
@@ -34,7 +34,19 @@ def total_price_regular
 end
 
 def update_booked_status
-self.potential_appointments.each {|potential_appointment| potential_appointment.update(booked_status?: true)}
+  self.potential_appointments.each {|potential_appointment| potential_appointment.update(booked_status?: true)}
+end
+
+def check_booked_status
+  boolean_array = []
+  self.potential_appointments.each do |potential_appointment|
+    boolean_array.push(potential_appointment.booked_status?)
+  end
+  if boolean_array.include?(false)
+    return true
+  else
+    return false
+  end
 end
 
 end
