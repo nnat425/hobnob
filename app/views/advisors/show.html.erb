@@ -9,10 +9,10 @@
       <div class="row" id="advisor-profile-bio">
         <p id="advisor-name-profile-page"><%= @advisor.firstname %></p>
         <p id="advisor-title-profile-page"><%= @advisor.current_title %> | <%= @advisor.location %></p>
+        <% if session[:user_or_advisor_id] == @advisor.id && session[:class_type] == @advisor.class.name %>
+        <%= link_to "Edit Profile", edit_advisor_path(@advisor), id: "edit-profile-btn", class: "button small" %>
+        <% end %>
       </div>
-      <% if session[:user_or_advisor_id] == @advisor.id && session[:class_type] == @advisor.class.name %>
-      <%= link_to "Edit Profile", edit_advisor_path(@advisor), class: "button small" %>
-      <% end %>
     </div>
 
 
