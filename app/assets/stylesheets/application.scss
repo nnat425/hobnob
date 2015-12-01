@@ -371,7 +371,9 @@ height: 220px;
 
 #profile-panel {
 background-color: #203451;
-padding: 2em;
+padding: 2.5em;
+height: 100%;
+margin-bottom: 0px;
 
 
 }
@@ -418,9 +420,10 @@ padding: 2em;
 
 .profile-subheader {
   font-family: "Open Sans";
-  font-size: 1em;
-  color: #43c7f4;
-  font-weight: 300;
+  font-size: .85em;
+  color: #203451;
+  font-weight: bold;
+  text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: .5em;
 }
@@ -429,6 +432,7 @@ padding: 2em;
   margin-bottom: .5em;
   font-size: 1.1em;
   font-family: "Open Sans";
+  font-weight: 300;
 }
 
 .category-checkbox {
@@ -456,7 +460,18 @@ overflow: hidden;
   letter-spacing: 1px;
   margin-right: .5em;
   font-family: "Open Sans";
+  font-size: 1.1em;
+  font-weight: 300;
 }
+
+#advisor-availability {
+  color: #203451;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1em;
+  display: inline;
+}
+
 
 
 
