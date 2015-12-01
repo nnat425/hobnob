@@ -20,7 +20,6 @@ class CartsController < ApplicationController
 #Deleting an item from cart
 def destroy
   current_cart.potential_appointments.delete(PotentialAppointment.find_by(id: params[:potential_appointment]))
-  binding.pry
   flash[:item_remove] = 'The appointment has been removed the cart'
   redirect_to cart_path(params[:id])
 end
