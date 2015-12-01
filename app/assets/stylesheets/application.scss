@@ -397,16 +397,18 @@ padding: 2em;
   text-align: center;
 }
 #advisor-name-profile-page {
-  font-size: 3em;
+  font-size: 2.5em;
   margin-bottom: 0em;
   text-align: center;
   font-weight: 300;
+  color: #fff;
 }
 
 #advisor-title-profile-page {
-  font-size: 1.5em;
+  font-size: 1.2em;
   margin-bottom: 0em;
   font-weight: 300;
+  color: #fff;
 }
 
 #profile-panel p {
@@ -447,7 +449,7 @@ overflow: hidden;
 
 
 
-#advisor-categories-list p {
+.advisor-categories-list {
   display: inline;
   letter-spacing: 1px;
   margin-right: .5em;

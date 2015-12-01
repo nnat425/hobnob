@@ -1,105 +1,105 @@
 <div class="container">
-<div class="row">
-  <div class="small-12 medium-4 large-4 columns" id='profile-panel'>
-    <div id="advisor-profile-image">
-      <div id="advisor-index-avatar">
-        <%= image_tag @advisor.avatar.url(:medium) %>
-      </div>
-    </div>
-    <% if session[:user_or_advisor_id] == @advisor.id && session[:class_type] == @advisor.class.name %>
-      <%= link_to "Edit Profile", edit_advisor_path(@advisor) %>
-      <%= link_to "Create An Appointment", new_potential_appointment_path %>
-    <% end %>
-    <div class="row" id="advisor-profile-bio">
-      <p id="advisor-name-profile-page"><%= @advisor.firstname %></p>
-      <p id="advisor-title-profile-page"><%= @advisor.current_title %> | <%= @advisor.location %></p>
-    </div>
-  </div>
-
-
-  <div class="small-12 medium-8 large-8 columns" id="advisor-bio-panel">
-    <div class="row">
-      <p class='profile-subheader'>Description</p>
-      <p class="profile-info"><%= @advisor.job_description %></p>
-    </div>
-    <div class="row">
-      <p class='profile-subheader'>Services</p>
-      <% @advisor.categories.each do |category| %>
-        <p class="advisor-categories-list"><%= link_to category.name, advisors_path %></p>
-      <% end %>
-    </div>
-    <div class="small-6 medium-5 large-3 columns">
-      <p class='profile-subheader'>Previous</p>
-    </div>
-    <div class="small-6 medium-7 large-9 columns">
-      <p class="profile-info">
-      <% @advisor.other_companies.split(',').each do |company| %>
-        <%= company %>
-      <% end %>
-      </p>
-    </div>
-    <div class="row">
-      <div class="small-6 medium-5 large-3 columns">
-        <p class='profile-subheader'>Education</p>
-      </div>
-      <div class="small-6 medium-7 large-9 columns">
-        <p class="profile-info"><%= @advisor.education %></p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="small-6 medium-5 large-3 columns">
-        <p class='profile-subheader'>Years of Experience</p>
-      </div>
-      <div class="small-6 medium-7 large-9 columns">
-        <p class="profile-info"><%= @advisor.years_of_experience %></p>
-      </div>
-    </div>
-  </div>
-  <div class="small-12 medium-6 large-6 columns" id="advisor-bio-panel">
-    <div class="row">
-      <div class="small-6 medium-5 large-3 columns">
-        <p class="profile-subheader">Certifications</p>
-      </div>
-      <div class="small-6 medium-7 large-9 columns">
-        <p class="profile-info"><%= @advisor.certifications %></p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="small-6 medium-5 large-3 columns">
-        <p class='profile-subheader'>Charities</p>
-      </div>
-      <div class="small-6 medium-7 large-9 columns">
-        <p class="profile-info"><%= @advisor.charity %></p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="small-6 medium-5 large-3 columns">
-        <p class="profile-subheader">Other Information</p>
-      </div>
-      <div class="small-6 medium-7 large-9 columns">
-        <p class="profile-info"><%= @advisor.interesting_facts %></p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="small-12 medium-8 large-8 columns" id="advisor-timeslot-panel">
   <div class="row">
-    <div class="small-12 medium-12 large-12 columns">
-      <p class="profile-subheader">Available Times</p>
-      <% @advisor.potential_appointments.each do |pot_appointment| %>
-      <p id='appointment_title'><%= pot_appointment.title %></p>
-      <%= pot_appointment.start_time.strftime("%A, %B %d, %Y at %l:%M %p") %>
-      <%= pot_appointment.end_time.strftime("to %l:%M %p") %>
-      <% if session[:class_type] != "Advisor" %>
-      <%= form_for @advisor, url: cart_path, method: "patch" do |f| %>
-      <%= f.hidden_field :appointment_id, :value => pot_appointment.id %>
-      <%= f.submit "Add to Cart", {:class => "button", :id => "add_to_cart"} %>
-      <% end %>
-      <% end %>
+    <div class="small-12 medium-3 large-3 columns" id='profile-panel'>
+      <div id="advisor-profile-image">
+        <div id="advisor-index-avatar">
+          <%= image_tag @advisor.avatar.url(:medium) %>
+        </div>
+      </div>
+      <div class="row" id="advisor-profile-bio">
+        <p id="advisor-name-profile-page"><%= @advisor.firstname %></p>
+        <p id="advisor-title-profile-page"><%= @advisor.current_title %> | <%= @advisor.location %></p>
+      </div>
+      <% if session[:user_or_advisor_id] == @advisor.id && session[:class_type] == @advisor.class.name %>
+      <%= link_to "Edit Profile", edit_advisor_path(@advisor), class: "button small" %>
+      <%= link_to "Create Appointment", new_potential_appointment_path, class: "button small" %>
       <% end %>
     </div>
+
+
+    <div class="small-12 medium-9 large-9 columns" id="advisor-bio-panel">
+      <div class="row">
+        <p class='profile-subheader'>Description</p>
+        <p class="profile-info"><%= @advisor.job_description %></p>
+      </div>
+      <div class="row">
+        <p class='profile-subheader'>Services</p>
+        <% @advisor.categories.each do |category| %>
+        <p class="advisor-categories-list"><%= category.name %></p>
+        <% end %>
+      </div>
+      <div class="small-6 medium-5 large-3 columns">
+        <p class='profile-subheader'>Previous</p>
+      </div>
+      <div class="small-6 medium-7 large-9 columns">
+        <p class="profile-info">
+          <% @advisor.other_companies.split(',').each do |company| %>
+          <%= company %>
+          <% end %>
+        </p>
+      </div>
+      <div class="row">
+        <div class="small-6 medium-5 large-3 columns">
+          <p class='profile-subheader'>Education</p>
+        </div>
+        <div class="small-6 medium-7 large-9 columns">
+          <p class="profile-info"><%= @advisor.education %></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-6 medium-5 large-3 columns">
+          <p class='profile-subheader'>Years of Experience</p>
+        </div>
+        <div class="small-6 medium-7 large-9 columns">
+          <p class="profile-info"><%= @advisor.years_of_experience %></p>
+        </div>
+      </div>
+    </div>
+    <div class="small-12 medium-6 large-6 columns" id="advisor-bio-panel">
+      <div class="row">
+        <div class="small-6 medium-5 large-3 columns">
+          <p class="profile-subheader">Certifications</p>
+        </div>
+        <div class="small-6 medium-7 large-9 columns">
+          <p class="profile-info"><%= @advisor.certifications %></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-6 medium-5 large-3 columns">
+          <p class='profile-subheader'>Charities</p>
+        </div>
+        <div class="small-6 medium-7 large-9 columns">
+          <p class="profile-info"><%= @advisor.charity %></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-6 medium-5 large-3 columns">
+          <p class="profile-subheader">Other Information</p>
+        </div>
+        <div class="small-6 medium-7 large-9 columns">
+          <p class="profile-info"><%= @advisor.interesting_facts %></p>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+
+  <div class="small-12 medium-8 large-8 columns" id="advisor-timeslot-panel">
+    <div class="row">
+      <div class="small-12 medium-12 large-12 columns">
+        <p class="profile-subheader">Available Times</p>
+        <% @advisor.potential_appointments.each do |pot_appointment| %>
+        <p id='appointment_title'><%= pot_appointment.title %></p>
+        <%= pot_appointment.start_time.strftime("%A, %B %d, %Y at %l:%M %p") %>
+        <%= pot_appointment.end_time.strftime("to %l:%M %p") %>
+        <% if session[:class_type] != "Advisor" %>
+        <%= form_for @advisor, url: cart_path, method: "patch" do |f| %>
+        <%= f.hidden_field :appointment_id, :value => pot_appointment.id %>
+        <%= f.submit "Add to Cart", {:class => "button", :id => "add_to_cart"} %>
+        <% end %>
+        <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
 
