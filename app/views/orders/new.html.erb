@@ -1,32 +1,64 @@
-<%= form_for @order do |f| %>
-  <% if @order.errors %>
-  <% @order.errors.full_messages.each do |message| %>
-  <%= message %>
-  <% end %>
-  <% end %>
-  <p>
-    <%= f.label :first_name %><br />
-    <%= f.text_field :first_name %>
-  </p>
-  <p>
-    <%= f.label :last_name %><br />
-    <%= f.text_field :last_name %>
-  </p>
-  <p>
-    <%= f.label :card_type %><br />
-    <%= f.select :card_type, [["Visa", "visa"], ["MasterCard", "master"], ["Discover", "discover"], ["American Express", "american_express"]] %>
-  </p>
-  <p>
-    <%= f.label :card_number %><br />
-    <%= f.text_field :card_number %>
-  </p>
-  <p>
-    <%= f.label :card_verification, "Card Verification Value (CVV)" %><br />
-    <%= f.text_field :card_verification %>
-  </p>
-  <p>
-    <%= f.label :card_expires_on %><br />
-    <%= date_select(:order,:card_expires_on, :use_month_numbers => true) %>
-  </p>
-  <p><%= f.submit "Submit" %></p>
-<% end %>
+<header id="order_page">
+</header>
+
+<p> Order Summary </p>
+
+
+<div class="row">
+  <div id='order_div' class="large-5 centered-columns">
+    <%= form_for @order do |f| %>
+    <% if @order.errors %>
+    <% @order.errors.full_messages.each do |message| %>
+    <%= message %>
+    <% end %>
+    <% end %>
+
+    <div class="row">
+      <div class="large-10 large-centered small-11 small-centered columns">
+        <%= f.label :first_name %>
+        <%= f.text_field :first_name %>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="large-10 large-centered small-11 small-centered columns">
+        <%= f.label :last_name %>
+        <%= f.text_field :last_name %>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="large-10 large-centered small-11 small-centered columns">
+        <%= f.label :card_type %>
+        <%= f.select :card_type, [["Visa", "visa"], ["MasterCard", "master"], ["Discover", "discover"], ["American Express", "american_express"]] %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-10 large-centered small-11 small-centered columns">
+        <%= f.label :card_number %>
+        <%= f.text_field :card_number %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-10 large-centered small-11 small-centered columns">
+        <%= f.label :card_verification, "Card Verification Value (CVV)" %>
+        <%= f.text_field :card_verification %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-10 large-centered small-11 small-centered columns">
+        <%= f.label :card_expires_on %>
+        <%= date_select(:order,:card_expires_on, :use_month_numbers => true) %>
+        <%= f.submit "Submit" %>
+        <% end %>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>

@@ -9,6 +9,9 @@ class OrdersController < ApplicationController
     @order.ip_address = request.remote_ip
     if @order.save
       if @order.purchase
+        current_cart.update(checked_out?: true)
+        current_cart.update_booked_status
+        current_user.carts.create
         render template: "success"
       else
         render template: "failure"
@@ -18,10 +21,10 @@ class OrdersController < ApplicationController
     end
   end
 
-private
+  private
 
-def order_params
-params.require(:order).permit(:first_name,:last_name,:card_type,:card_number,:card_verification,:card_expires_on)
-end
+  def order_params
+    params.require(:order).permit(:first_name,:last_name,:card_type,:card_number,:card_verification,:card_expires_on)
+  end
 
 end
