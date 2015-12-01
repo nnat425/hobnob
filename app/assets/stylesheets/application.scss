@@ -370,22 +370,17 @@ height: 220px;
 }
 
 #profile-panel {
-margin-bottom:15px;
-background-color: #fff;
-border: 1px solid #ccc;
--webkit-box-shadow: 1px 1px 1px 0px #ccc;
--moz-box-shadow:    1px 1px 1px 0px #ccc;
-box-shadow:         1px 1px 1px 0px #ccc;
-padding: 2em;
+background-color: #203451;
+padding: 2.5em;
+height: 100%;
+margin-bottom: 0px;
+
+
 }
 
 #advisor-bio-panel {
   margin-bottom:15px;
   background-color: #fff;
-  border: 1px solid #ccc;
-  -webkit-box-shadow: 1px 1px 1px 0px #ccc;
-  -moz-box-shadow:    1px 1px 1px 0px #ccc;
-  box-shadow:         1px 1px 1px 0px #ccc;
   padding: 2em;
 }
 
@@ -401,16 +396,18 @@ padding: 2em;
   text-align: center;
 }
 #advisor-name-profile-page {
-  font-size: 3em;
+  font-size: 2.5em;
   margin-bottom: 0em;
   text-align: center;
   font-weight: 300;
+  color: #fff;
 }
 
 #advisor-title-profile-page {
-  font-size: 1.5em;
+  font-size: 1.2em;
   margin-bottom: 0em;
   font-weight: 300;
+  color: #fff;
 }
 
 #profile-panel p {
@@ -419,9 +416,10 @@ padding: 2em;
 
 .profile-subheader {
   font-family: "Open Sans";
-  font-size: 1em;
-  color: #43c7f4;
-  font-weight: 300;
+  font-size: .85em;
+  color: #203451;
+  font-weight: bold;
+  text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: .5em;
 }
@@ -429,6 +427,8 @@ padding: 2em;
 .profile-info {
   margin-bottom: .5em;
   font-size: 1.1em;
+  font-family: "Open Sans";
+  font-weight: 300;
 }
 
 .category-checkbox {
@@ -451,16 +451,23 @@ overflow: hidden;
 
 
 
-#advisor-categories-list p {
+.advisor-categories-list {
   display: inline;
   letter-spacing: 1px;
   margin-right: .5em;
   font-family: "Open Sans";
-  color: #C0C0C0;
-  text-transform: uppercase;
-  font-size: .7em;
-  font-weight: bold;
+  font-size: 1.1em;
+  font-weight: 300;
 }
+
+#advisor-availability {
+  color: #203451;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1em;
+  display: inline;
+}
+
 
 
 
@@ -708,4 +715,21 @@ margin-left:40px;
 #cart_total{
   font-size:20px;
   margin-top:10px;
+}
+
+.appointment_title {
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: 1.25em;
+
+}
+
+.appointment-time-box {
+  margin: 1.5em;
+}
+
+.appointment-time {
+  font-size: .85em;
+  color: #C0C0C0;
+  letter-spacing: 1px;
 }
