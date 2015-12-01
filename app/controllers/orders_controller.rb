@@ -2,13 +2,14 @@ class OrdersController < ApplicationController
 
   def new
     @order = Order.new
+    @current_cart = current_cart
   end
 
   def create
     @order = current_cart.build_order(order_params)
     @order.ip_address = request.remote_ip
     if @order.save
-      if @order.purchase
+      if @order.purchase && current_cart.check_booked_status
         current_cart.update(checked_out?: true)
         current_cart.update_booked_status
         current_user.carts.create
