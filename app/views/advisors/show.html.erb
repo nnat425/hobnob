@@ -91,6 +91,7 @@
       <% end %>
       <% @advisor.potential_appointments.each do |pot_appointment| %>
 
+      <% if pot_appointment.booked_status? == false %>
       <div class="appointment-time-box">
         <p class='appointment_title'><%= pot_appointment.title %></p>
         <p class="appointment-time"><%= pot_appointment.start_time.strftime("%A, %B %d, %Y at %l:%M %p") %>
@@ -100,6 +101,7 @@
         <%= form_for @advisor, url: cart_path, method: "patch" do |f| %>
         <%= f.hidden_field :appointment_id, :value => pot_appointment.id %>
         <%= f.submit "Add to Cart", {:class => "button", :id => "add_to_cart"} %>
+        <% end %>
         <% end %>
         <% end %>
       </div>
