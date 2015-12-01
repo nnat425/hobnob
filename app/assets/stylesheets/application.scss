@@ -731,3 +731,28 @@ margin-left:40px;
   color: #C0C0C0;
   letter-spacing: 1px;
 }
+
+#order_page{
+background-color:white;
+background-size:cover;
+height:25vh;
+overflow: hidden;
+}
+
+#order_div{
+  margin:auto;
+}
+
+#new_order{
+border-radius: 5px;
+border: 1px solid #ccc;
+padding: 15px;
+text-align:center;
+margin-top: 1em;
+margin-bottom: 1em;
+background-color: #fff;
+}
+
+#order_card_expires_on_3i{
+display:none;
+}
