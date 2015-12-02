@@ -743,16 +743,14 @@ height:25vh;
 overflow: hidden;
 }
 
-#order_div{
-  margin: auto;
-}
-
-#new_order{
+#order_div {
 border-radius: 5px;
 border: 1px solid #ccc;
 padding: 15px;
 margin-top: 1em;
 margin-bottom: 1em;
+margin-right: .5em;
+margin-left: .5em;
 background-color: #fff;
 }
 
@@ -793,16 +791,29 @@ display:none;
 }
 
 #order_summary{
-  border:solid 1px black;
-  text-align:center;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-right: .5em;
+  margin-left: .5em;
+  background-color: #fff;
+  float: left;
+  margin-top: 1em;
+  margin-bottom: 1em;
+
 }
 
 #order_p{
-  border-bottom:solid 1px black;
+  color: #203451;
+  font-family: "Open Sans";
+  font-size: 1em;
+  border-bottom: solid 1px #C0C0C0;
+
 }
+
 #order_item{
 margin-top:15px;
-border-bottom:solid 1px grey;
+border-bottom: 1px solid #C0C0C0;
 
 }
 
@@ -851,4 +862,5 @@ height: 100%;
 
 #checkout-container {
   text-align: center;
+  background-color: #f0f1ee;
 }
