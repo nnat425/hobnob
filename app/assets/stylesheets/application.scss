@@ -744,17 +744,48 @@ overflow: hidden;
 }
 
 #order_div{
-  margin:auto;
+  margin: auto;
 }
 
 #new_order{
 border-radius: 5px;
 border: 1px solid #ccc;
 padding: 15px;
-text-align:center;
 margin-top: 1em;
 margin-bottom: 1em;
 background-color: #fff;
+}
+
+#order_div form {
+  padding: 2em;
+}
+
+#order_div form label {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 1em;
+  font-size: .8em;
+  text-align: right;
+}
+
+#order_div form i {
+  float: right;
+}
+
+#order_div form input {
+padding: 1em;
+height: 3.5em;
+font-size: 1em;
+border-radius: 5px;
+margin-bottom: .5em;
+}
+
+#order_div form select {
+padding: 1em;
+height: 3.5em;
+font-size: 1em;
+border-radius: 5px;
+margin-bottom: .5em;
 }
 
 #order_card_expires_on_3i{
