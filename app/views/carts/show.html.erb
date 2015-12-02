@@ -29,7 +29,7 @@
       </div>
       <%= appointment.start_time.strftime("%A, %B %d, %Y at %l:%M %p") %>
       <%= appointment.end_time.strftime("to %l:%M %p") %><br>
-      <%= link_to "Delete", {:controller => 'carts', :action => 'destroy', :potential_appointment => appointment.id}, :method => :delete %>
+      <%= link_to "Delete ", {:controller => 'carts', :action => 'destroy', :potential_appointment => appointment.id}, :method => :delete %><i class="fa fa-trash"></i>
     </div>
   </div>
   <% end %>
