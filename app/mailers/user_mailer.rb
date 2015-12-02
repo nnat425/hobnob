@@ -1,9 +1,9 @@
 class UserMailer < ApplicationMailer
   default from: 'notifications@example.com'
 
-  def confirmation_email(user)
+  def confirmation_email(user, appointment)
     @user = user
-    # @url  = 'http://example.com/login'
+    @appointment  = appointment
     mail(to: @user.email, subject: 'You Appointment has been set!')
   end
 end
