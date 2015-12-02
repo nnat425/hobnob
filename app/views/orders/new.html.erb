@@ -78,11 +78,11 @@
       <p id='order_p'><%= "Order Summary (" + @current_cart.potential_appointments.count.to_s + " item)" %></p>
       <% current_user.carts.last.potential_appointments.each do |appointment| %>
       <div class='row' id='order_item'>
-        <div>
-         <%= image_tag Advisor.find_by(id:appointment.advisor_id).avatar.url(:thumb) %>
+        <div class="">
+         <%= image_tag appointment.advisor.avatar.url(:thumb) %>
         </div>
         <div>
-          <%= Advisor.find_by(id:appointment.advisor_id).firstname %>
+          <%= appointment.advisor.firstname %>
         </div>
         <div>
           <%= appointment.title  %>
