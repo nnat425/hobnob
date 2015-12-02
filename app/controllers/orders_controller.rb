@@ -14,6 +14,7 @@ class OrdersController < ApplicationController
         current_cart.update_booked_status
         current_cart.potential_appointments.each do |appointment|
         UserMailer.confirmation_email(current_user,appointment).deliver_now
+      end
         current_user.carts.create
         render template: "success"
       else

@@ -1,6 +1,6 @@
-<h5><%= "Hi" + @user.first_name + "!" %></h5>
+<h5><%= "Hi " + @user.first_name + "!" %></h5>
 <br>
-<p><%="Your appointment has been set with " + Advisor.find_by(id: @appointment.advisor_id).firstname + " on " +  @appointment.start_time.strftime("%A, %B %d, %Y at %l:%M %p")appointment.end_time.strftime(" to %l:%M %p") %>
+<p><%="Your appointment has been set with " + Advisor.find_by(id: @appointment.advisor_id).firstname + " on " +  @appointment.start_time.strftime("%A, %B %d, %Y at %l:%M %p") +""+ @appointment.end_time.strftime(" to %l:%M %p") %>
 </p>
 <br>
 <h5>Within 24 hours you will be notified with the next steps!</h5>
