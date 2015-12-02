@@ -19,6 +19,7 @@
           <p class="advisor-price-number">$
           <% if current_user.student == true %>
             <%= advisor.student_price %>
+            <p class="advisor-price-session"> per session</p>
           <% else %>
             <%= advisor.regular_price %></p>
             <p class="advisor-price-session"> per session</p>
@@ -28,7 +29,7 @@
         <div class="small-12 medium-12 large-12 columns">
           <p><%= advisor.current_title %> | <%= advisor.location %></p>
         </div>
-        <div class="small-12 medium-12 large-12 columns">
+        <div class="small-12 medium-12 large-12 columns" id="index-advisor-services">
         <% advisor.categories.each do |category| %>
           <p><%= category.name %></p>
         <% end %>
