@@ -64,7 +64,7 @@
 <div class='row'>
   <div id='order_summary' class='large-3 columns'>
     <p id='order_p'><%= "Order Summary (" + @current_cart.potential_appointments.count.to_s + " item)" %></p>
-    <% @current_cart.potential_appointments.each do |appointment| %>
+    <% current_user.carts.last.potential_appointments.each do |appointment| %>
     <div class='row' id='order_item'>
       <div class='large-3 columns'>
        <%= image_tag Advisor.find_by(id:appointment.advisor_id).avatar.url(:thumb) %>
