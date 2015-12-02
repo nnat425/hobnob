@@ -28,7 +28,11 @@ class PotentialAppointmentsController < ApplicationController
   end
 
   def update
+  end
 
+  def edit
+  @potential_appointment = PotentialAppointment.find_by(id: params[:id])
+  @advisor_appointments = current_advisor.potential_appointments
   end
 
   private
