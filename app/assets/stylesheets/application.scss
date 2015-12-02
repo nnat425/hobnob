@@ -25,12 +25,10 @@ $background-color: black;
 $primary-color: #87D37C;
 
 body {
-  background: #fff;
+  background: #ffffff;
 }
 
-.container {
-  padding-top: 90px;
-}
+
 .row {
 max-width: 100%;
 }
@@ -342,6 +340,7 @@ overflow: hidden;
 
 
 #advisor-index-panel {
+margin-top: 10px;
 margin-bottom: 10px;
 background-color: #fff;
 border: 1px solid #ccc;
@@ -362,6 +361,12 @@ height: 220px;
 #advisor-index-price .advisor-price-number {
   font-size: 1.5em;
   color: #2f5287;
+}
+
+#index-advisor-services p {
+  font-size: .8em;
+  display: inline;
+
 }
 
 #advisor-index-price .advisor-price-session {
@@ -494,7 +499,7 @@ overflow: hidden;
 }
 
 #index-advisor-info {
-  margin-left: .7em;
+  margin-left: 1em;
   margin-top: auto;
   margin-bottom: auto;
 }
@@ -519,22 +524,23 @@ overflow: hidden;
 
 }
 .advisors-filter-subheader {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.advisors-filter-subheader p {
   font-family: "Open Sans";
   color: #C0C0C0;
   font-size: 1.5em;
   font-weight: 300;
   display: inline;
-}
 
-.btn {
-  float: right;
-  margin-top: 5px;
 }
 
 
 .index-categories-list {
   display: block;
-  padding: 1em;
+  padding: 1.2em;
   letter-spacing: 2px;
   font-family: "Open Sans";
   font-size: 1em;

@@ -1,16 +1,24 @@
+<header class="edit_hero">
+  <img src="/assets/city_header1.png"/>
+</header>
+
 <div class="container">
 
   <div class="small-12 medium-12 large-3 columns" id="left-category-bar">
   <%= form_tag(advisors_path, :method => "get", id: "advisors-filter-form") do %>
-    <p class="advisors-filter-subheader">Finance Category</p>
-    <button class="btn" type="submit"><i class="fa fa-search fa-lg"></i></button>
+    <div class="advisors-filter-subheader">
+      <p>Finance Category</p>
+      <button class="fa fa-search fa-lg" id="advisor-search-btn" type="submit"></button>
+    </div>
     <% @categories.each do |category| %>
       <div class="index-categories-list" >
         <p><%= category.name %></p>
         <%= check_box_tag "filter[category][]", category.name, false, class: "advisors-filter-checkbox" %>
       </div>
     <% end %>
-    <p class="advisors-filter-subheader">Years of Experience</p>
+    <div class="advisors-filter-subheader">
+      <p>Years of Experience</p>
+    </div>
     <div class="index-categories-list" >
       <p>Less than 5 years</p>
       <%= check_box_tag "filter[years_of_experience][]", "< 5 years", false, class: "advisors-filter-checkbox" %>
