@@ -68,11 +68,12 @@
       <div class='large-3 columns'>
        <%= image_tag Advisor.find_by(id:appointment.advisor_id).avatar.url(:thumb) %>
      </div>
-     <div class='large-7 columns'><%= Advisor.find_by(id:appointment.advisor_id).firstname %></div>
+     <div class='large-7 columns'><%= Advisor.find_by(id:appointment.advisor_id).firstname %>
+     </div>
      <div class='large-7 columns'>
        <%= appointment.title  %>
      </div>
-     <div class='large-12 columns'>
+     <div id='order_time' class='large-7 columns'>
       <%= appointment.start_time.strftime("%A, %B %d, %Y at %l:%M %p") %>
       <%= appointment.end_time.strftime("to %l:%M %p") %>
     </div>
