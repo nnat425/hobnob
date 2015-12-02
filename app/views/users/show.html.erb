@@ -1,5 +1,5 @@
 
-<div class="container">
+<div class="container" id="user-profile-container">
 
   <div class="row" id="profile_header">
     <div class="small-12 medium-12 large-12 columns">
@@ -7,41 +7,60 @@
     </div>
   </div>
 
-
   <div class="small-12 medium-8 medium-centered large-6 large-centered columns">
-    <div class="panel" id="profile-panel">
-      <div class="row">
-        <div class="small-12 medium-12 large-12 columns">
-          <p class="profile-subheader">Basic Info</p>
+    <div class="panel" id="user-profile-panel">
+      <div class="small-12 medium-12 large-12 columns" id="profile-header">
+        <p>Basic Info</p>
+      </div>
+      <div class="small-12 medium-12 large-12 columns">
+        <div class="row">
+          <div class="small-6 medium-4 large-4 columns">
+            <p class="profile-subheader">Name:</p>
+          </div>
+          <div class="small-6 medium-8 large-8 columns">
+            <p class="user-info"><%= @user.first_name %> <%= @user.last_name %></p>
+          </div>
         </div>
+        <div class="row">
+          <div class="small-6 medium-4 large-4 columns">
+            <p class="profile-subheader">Primary Email:</p>
+          </div>
+          <div class="small-6 medium-8 large-8 columns">
+            <p class="user-info"><%= @user.email %></p>
+          </div>
+        </div>
+        <% if @user.student == true %>
+        <div class="row">
+          <div class="small-6 medium-4 large-4 columns">
+            <p class="profile-subheader">University/School:</p>
+          </div>
+          <div class="small-6 medium-8 large-8 columns">
+            <p class="user-info"><%= @user.school %></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="small-6 medium-4 large-4 columns">
+            <p class="profile-subheader">Program:</p>
+          </div>
+          <div class="small-6 medium-8 large-8 columns">
+            <p class="user-info"><%= @user.program %></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="small-6 medium-4 large-4 columns">
+            <p class="profile-subheader">Graduation Date:</p>
+          </div>
+          <div class="small-6 medium-8 large-8 columns">
+            <p class="user-info"><%= @user.graduation_date %></p>
+          </div>
+        </div>
+        <% end %>
       </div>
       <div class="row">
-        <div class="small-12 medium-9 large-9 columns">
-          <p><%= @user.first_name %> <%= @user.last_name %></p>
-          <div class="spacer"></div>
-          <p class="profile-label">Primary Email:</p><p><%= @user.email %></p>
-          <div class="spacer"></div>
-          <% if @user.student == true %>
-            <p class="profile-label">University/School:</p><p><%= @user.school %></p>
-            <div class="spacer"></div>
-            <p class="profile-label">Program:</p><p><%= @user.program %></p>
-            <div class="spacer"></div>
-            <p class="profile-label">Graduation Date:</p><p><%= @user.graduation_date %></p>
-          <% end %>
+        <div class="small-12 medium-12 large-12 columns" id="profile-header">
+          <p>Your Appointments</p>
         </div>
       </div>
     </div>
   </div>
-
-
-  <div class="small-12 medium-8 medium-centered large-6 large-centered columns">
-    <div class="panel" id="profile-panel">
-      <div class="row">
-        <div class="small-12 medium-12 large-12 columns">
-          <p class="profile-subheader">Your Appointments</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
 </div>

@@ -28,7 +28,6 @@ body {
   background: #ffffff;
 }
 
-
 .row {
 max-width: 100%;
 }
@@ -380,8 +379,6 @@ background-color: #203451;
 padding: 2.5em;
 height: 100%;
 margin-bottom: 0px;
-
-
 }
 
 #advisor-bio-panel {
@@ -780,4 +777,29 @@ border-bottom:solid 1px grey;
 
 #order_time{
 text-align:center;
+}
+
+#user-profile-container {
+  padding-top: 90px;
+  background-color: #304770;
+  padding-bottom: 10px;
+}
+
+#user-profile-panel {
+background-color: #fff;
+padding: 2.5em;
+height: 100%;
+}
+
+#profile-header p {
+  font-size: 2em;
+  font-family: "Open Sans";
+  letter-spacing: 2px;
+  color: #203451;
+  border-bottom: 1px solid #C0C0C0;
+}
+
+.user-info {
+  font-family: "Open Sans";
+
 }
