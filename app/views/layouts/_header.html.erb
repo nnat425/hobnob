@@ -11,7 +11,7 @@
      <li id='flash_already_cart'><%=flash[:already_in_cart] %></li>
      <li id='flash_already_cart'><%=flash[:item_remove] %></li>
   </ul>
-  <ul class="inline-list hide-for-small-only account-action">
+  <ul class="inline-list hidte-for-small-only account-action">
     <% if logged_in? %>
     <li><%= link_to "Logout", logout_path, method: :delete, id: "logout-link" %></li>
     <% if session[:class_type] == "User" %>
@@ -26,7 +26,6 @@
     <li class=""><a class="signup" href="/users/new" data-reveal-id="myModal">Signup</a></li>
     <% end %>
   </ul>
-  <a class="account hide-for-medium-up" href="#" data-reveal-id="myModal"><i class="fi-unlock"></i></a>
 </nav>
 
 <!-- modal content -->
