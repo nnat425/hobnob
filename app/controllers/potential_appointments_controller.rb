@@ -54,6 +54,13 @@ def update
  end
 end
 
+def destroy
+  potential_appointment = PotentialAppointment.find_by(id: params[:potential_appointment])
+  potential_appointment.destroy
+  redirect_to advisor_path(current_advisor)
+
+end
+
 
 
 private
