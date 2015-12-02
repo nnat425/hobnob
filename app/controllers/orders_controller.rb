@@ -13,6 +13,7 @@ class OrdersController < ApplicationController
         current_cart.update(checked_out?: true)
         current_cart.update_booked_status
         current_user.carts.create
+        UserMailer.confirmation_email(current_user).deliver_now
         render template: "success"
       else
         render template: "failure"
