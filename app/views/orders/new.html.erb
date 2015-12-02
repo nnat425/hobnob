@@ -1,10 +1,8 @@
 <header id="order_page">
 </header>
 
-
-
-
-<div id='order_div' class="large-4 centered-columns">
+<div class="container" id="checkout-container">
+<div id='order_div' class="small-12 medium-12 large-6 columns">
   <%= form_for @order do |f| %>
   <% if @order.errors %>
   <% @order.errors.full_messages.each do |message| %>
@@ -13,7 +11,7 @@
   <% end %>
 
   <div class="row">
-    <div class="large-10 large-centered small-11 small-centered columns">
+    <div class="small-10 medium-10 large-10 columns">
       <%= f.label :first_name %>
       <%= f.text_field :first_name %>
     </div>
@@ -21,7 +19,7 @@
 
 
   <div class="row">
-    <div class="large-10 large-centered small-11 small-centered columns">
+    <div class="small-10 medium-10 large-10 columns">
       <%= f.label :last_name %>
       <%= f.text_field :last_name %>
     </div>
@@ -29,7 +27,7 @@
 
 
   <div class="row">
-    <div class="large-10 large-centered small-11 small-centered columns">
+    <div class="small-10 medium-10 large-10 columns">
       <%= f.label :card_type %>
       <i class="fa fa-credit-card"></i>
       <%= f.select :card_type, [["Visa", "visa"], ["MasterCard", "master"], ["Discover", "discover"], ["American Express", "american_express"]] %>
@@ -37,21 +35,21 @@
   </div>
 
   <div class="row">
-    <div class="large-10 large-centered small-11 small-centered columns">
+    <div class="small-10 medium-10 large-10 columns">
       <%= f.label :card_number %>
       <%= f.text_field :card_number %>
     </div>
   </div>
 
   <div class="row">
-    <div class="large-10 large-centered small-11 small-centered columns">
+    <div class="small-10 medium-10 large-10 columns">
       <%= f.label :card_verification, "Card Verification Value (CVV)" %>
       <%= f.text_field :card_verification %>
     </div>
   </div>
 
   <div class="row">
-    <div class="large-10 large-centered small-11 small-centered columns">
+    <div class="small-10 medium-10 large-10 columns">
       <%= f.label :card_expires_on %>
       <%= date_select(:order,:card_expires_on, :use_month_numbers => true) %>
       <%= f.submit "Submit" %>
@@ -62,7 +60,7 @@
 
 
 <div class='row'>
-  <div id='order_summary' class='large-3 columns'>
+  <div id='order_summary' class='small-12 medium-12 large-4 columns'>
     <p id='order_p'><%= "Order Summary (" + @current_cart.potential_appointments.count.to_s + " item)" %></p>
     <% current_user.carts.last.potential_appointments.each do |appointment| %>
     <div class='row' id='order_item'>
@@ -80,4 +78,5 @@
     </div>
   </div>
   <% end %>
+</div>
 </div>
