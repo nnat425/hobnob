@@ -17,6 +17,8 @@
     <% if session[:class_type] == "User" %>
     <%= link_to "Profile",user_path(session[:user_or_advisor_id]) %>
     <%= link_to "Cart", cart_path(current_user.carts.last) %>
+    <i class="fa fa-shopping-bag fa-lg"></i>
+    <i class="fa fa-shopping-cart fa-lg"></i>
     <% else %>
     <%= link_to "Profile", advisor_path(session[:user_or_advisor_id]) %>
     <% end %>
