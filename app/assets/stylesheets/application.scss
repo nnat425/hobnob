@@ -796,9 +796,23 @@ height: 100%;
   font-family: "Open Sans";
   letter-spacing: 2px;
   color: #203451;
-  border-bottom: 1px solid #C0C0C0;
+  display: inline;
 }
 
+#profile-header {
+  border-bottom: 1px solid #C0C0C0;
+  padding-bottom: .8em;
+  margin-bottom: 1.5em;
+}
+
+#user-edit-profile-btn {
+  float: right;
+  font-size: .8em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 2em;
+  color: #203451;
+}
 .user-info {
   font-family: "Open Sans";
 
