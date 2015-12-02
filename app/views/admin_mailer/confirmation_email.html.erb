@@ -1,0 +1,16 @@
+<h5>An appointment has been booked by an end-user </h5>
+
+<h5>User Information</h5>
+<br>
+<p><%="Name: " + @user.first_name + @user.last_name%></p>
+<p><%="Email: " + @user.email + @user.last_name%></p>
+<br>
+
+<h5>Advisor Information</h5>
+<p><%="Name: " + @advisor.firstname + @advisor.lastname%></p>
+<p><%="Email: " + @advisor.email%> </p>
+<br>
+
+<h5>Appointment Information</h5>
+<p><%="Appointment title: " + @appointment.title %>
+<p><%="Date & Time: " +  @appointment.start_time.strftime("%A, %B %d, %Y at %l:%M %p") +""+ @appointment.end_time.strftime(" to %l:%M %p") %> </p>

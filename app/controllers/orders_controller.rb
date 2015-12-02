@@ -15,6 +15,7 @@ class OrdersController < ApplicationController
         current_cart.potential_appointments.each do |appointment|
         UserMailer.confirmation_email(current_user,appointment).deliver_now
         AdvisorMailer.confirmation_email(current_user,appointment).deliver_now
+        AdminMailer.confirmation_email(current_user,appointment).deliver_now
       end
         current_user.carts.create
         render template: "success"
