@@ -519,17 +519,23 @@ overflow: hidden;
 
 }
 .advisors-filter-subheader {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.advisors-filter-subheader p {
   font-family: "Open Sans";
   color: #C0C0C0;
   font-size: 1.5em;
   font-weight: 300;
   display: inline;
+
 }
 
 
 .index-categories-list {
   display: block;
-  padding: 1em;
+  padding: 1.2em;
   letter-spacing: 2px;
   font-family: "Open Sans";
   font-size: 1em;
