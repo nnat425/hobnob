@@ -12,7 +12,6 @@ class AdvisorsController < ApplicationController
         render partial: "results_index", layout: false
       end
     end
-    @categories = Category.all
   end
 
   def new
