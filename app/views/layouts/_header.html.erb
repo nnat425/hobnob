@@ -1,71 +1,96 @@
 <div class='fixed'>
-<link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
 
-<nav class="menu">
-  <h1 class="name"><img id="nav_logo" src="/assets/hn_logo_small.png"/>HOBNOB</h1>
-  <ul class="inline-list">
-    <li><%= link_to "Home", root_path %></li>
-    <li class="active"><%= link_to "About", about_path %></li>
-    <li ><%= link_to "Advisors", advisors_path %></li>
-    <li id='flash_add_cart'><%=flash[:added_to_cart] %></li>
-     <li id='flash_already_cart'><%=flash[:already_in_cart] %></li>
-     <li id='flash_already_cart'><%=flash[:item_remove] %></li>
-  </ul>
-  <ul class="inline-list hide-for-small-only account-action">
-    <% if logged_in? %>
-    <li><%= link_to "Logout", logout_path, method: :delete, id: "logout-link" %></li>
-    <% if session[:class_type] == "User" %>
-    <%= link_to "Profile",user_path(session[:user_or_advisor_id]) %>
-    <%= link_to "Cart", cart_path(current_user.carts.last) %>
-    <i class="fa fa-shopping-cart fa-lg"></i>
-    <% else %>
-    <%= link_to "Profile", advisor_path(session[:user_or_advisor_id]) %>
-    <% end %>
-    <% else %>
-    <li><%= link_to "Login", login_path %></li>
-    <li class=""><a class="signup" href="/users/new" data-reveal-id="myModal">Signup</a></li>
-    <% end %>
-  </ul>
-</nav>
+  <nav class="menu">
+    <h1 class="name"><img id="nav_logo" src="/assets/hn_logo_small.png"/>HOBNOB</h1>
+    <ul class="inline-list">
+      <li><%= link_to "Home", root_path %>
+      </li>
+      <li class="active"><%= link_to "About", about_path %>
+      </li>
+      <li ><%= link_to "Advisors", advisors_path %>
+      </li>
+      <% if logged_in? %>
+      <div class='show-for-small-only'>
+      <p class='header_mobile'><%= link_to "Logout", logout_path, method: :delete, id: "logout-link" %></p>
+      <% if session[:class_type] == "User" %>
+        <p class='header_mobile'> <%= link_to "Profile",user_path(session[:user_or_advisor_id]) %></p>
+        <p class='header_mobile'><%= link_to "Cart", cart_path(current_user.carts.last) %>
+        </p>
+          <% else %>
+          <p class='header_mobile'><%= link_to "Profile", advisor_path(session[:user_or_advisor_id]) %></p>
+        </div>
+        <% end %>
+        <% else %>
+        <div class='show-for-small-only'>
+          <p class='header_mobile'><%= link_to "Login", login_path %>
+          </p>
+          <p class='header_mobile'><%= link_to "Signup", new_user_path %>
+          </p>
+        </div>
+        <% end %>
 
-<!-- modal content -->
+        <li id='flash_add_cart'><%=flash[:added_to_cart] %></li>
+        <li id='flash_already_cart'><%=flash[:already_in_cart] %></li>
+        <li id='flash_already_cart'><%=flash[:item_remove] %></li>
 
-<div id="myModal" class="reveal-modal" data-reveal aria-labelledby="login or sign up" aria-hidden="true" role="dialog">
-  <div class="row">
-    <div class="large-6 columns auth-plain">
-      <div class="signup-panel left-solid">
-        <p class="welcome">Registered Users</p>
-        <form>
-          <div class="row collapse">
-            <div class="small-2  columns">
-              <span class="prefix"><i class="fi-torso-female"></i></span>
-            </div>
-            <div class="small-10  columns">
-              <input type="text" placeholder="username">
-            </div>
+
+      </ul>
+      <ul class="inline-list hide-for-small-only account-action">
+        <% if logged_in? %>
+        <li><%= link_to "Logout", logout_path, method: :delete, id: "logout-link" %></li>
+        <% if session[:class_type] == "User" %>
+        <%= link_to "Profile",user_path(session[:user_or_advisor_id]) %>
+        <%= link_to "Cart", cart_path(current_user.carts.last) %>
+        <i class="fa fa-shopping-cart fa-lg"></i>
+        <% else %>
+        <%= link_to "Profile", advisor_path(session[:user_or_advisor_id]) %>
+        <% end %>
+        <% else %>
+        <li><%= link_to "Login", login_path %></li>
+        <li class=""><a class="signup" href="/users/new" data-reveal-id="myModal">Signup</a></li>
+        <% end %>
+      </ul>
+    </nav>
+
+    <!-- modal content -->
+
+    <div id="myModal" class="reveal-modal" data-reveal aria-labelledby="login or sign up" aria-hidden="true" role="dialog">
+      <div class="row">
+        <div class="large-6 columns auth-plain">
+          <div class="signup-panel left-solid">
+            <p class="welcome">Registered Users</p>
+            <form>
+              <div class="row collapse">
+                <div class="small-2  columns">
+                  <span class="prefix"><i class="fi-torso-female"></i></span>
+                </div>
+                <div class="small-10  columns">
+                  <input type="text" placeholder="username">
+                </div>
+              </div>
+              <div class="row collapse">
+                <div class="small-2 columns ">
+                  <span class="prefix"><i class="fi-lock"></i></span>
+                </div>
+                <div class="small-10 columns ">
+                  <input type="text" placeholder="password">
+                </div>
+              </div>
+            </form>
+            <a href="#" class="button ">Log In </a>
           </div>
-          <div class="row collapse">
-            <div class="small-2 columns ">
-              <span class="prefix"><i class="fi-lock"></i></span>
-            </div>
-            <div class="small-10 columns ">
-              <input type="text" placeholder="password">
-            </div>
+        </div>
+
+        <div class="large-6 columns auth-plain">
+          <div class="signup-panel newusers">
+            <p class="welcome"> New User?</p>
+            <p>By creating an account with us, you will be able to move through the checkout process faster, view and track your orders, and more.</p><br>
+            <a href="#" class="button ">Sign Up</a></br>
           </div>
-        </form>
-        <a href="#" class="button ">Log In </a>
-      </div>
-    </div>
+        </div>
 
-    <div class="large-6 columns auth-plain">
-      <div class="signup-panel newusers">
-        <p class="welcome"> New User?</p>
-        <p>By creating an account with us, you will be able to move through the checkout process faster, view and track your orders, and more.</p><br>
-        <a href="#" class="button ">Sign Up</a></br>
       </div>
+      <a class="close-reveal-modal" aria-label="Close">&#215;</a>
     </div>
-
-   </div>
-  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-</div>
-</div>
+  </div>

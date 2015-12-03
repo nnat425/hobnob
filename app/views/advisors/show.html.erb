@@ -86,7 +86,7 @@
     <div class="small-12 medium-9 large-9 columns" id="advisor-timeslot-panel">
       <p id="advisor-availability">Available Times</p>
       <% if session[:user_or_advisor_id] == @advisor.id && session[:class_type] == @advisor.class.name %>
-      <%= link_to "Create Appointment", new_potential_appointment_path, id: "create-appointment-btn", class: "button small" %>
+      <div><%= link_to "Create Appointment", new_potential_appointment_path, id: "create-appointment-btn", class: "button small" %></div>
       <% end %>
       <% @advisor.potential_appointments.each do |pot_appointment| %>
 
