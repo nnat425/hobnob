@@ -697,8 +697,6 @@ overflow: hidden;
 }
 
 #advisor_name_cart{
-margin-top:-10px;
-text-align:center;
 }
 
 #item_info{
@@ -708,7 +706,7 @@ text-align:center;
 }
 
 #app_title{
-margin-left:-15px;
+margin-left:0px;
 }
 
 .app_price{
@@ -717,6 +715,7 @@ margin-left:40px;
 
 #cart_total{
   font-size:20px;
+  text-align:center;
   margin-top:10px;
 }
 
