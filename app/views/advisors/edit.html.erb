@@ -85,7 +85,11 @@
           <%= f.label "Areas of experience" %>
           <div class="row">
             <div class="small-1 medium-1 large-1 columns">
-              <%= check_box_tag "category[name][]", "Investment Banking", @current_categories.find_by(name: "Investment Banking"), class: "category-checkbox" %>
+              <% if @advisor.categories != nil %>
+              <%= check_box_tag "category[name][]", "Investment Banking", @advisor.categories.include?("Investment Banking"), class: "category-checkbox" %>
+              <% else %>
+              <%= check_box_tag "category[name][]", "Investment Banking", false, class: "category-checkbox" %>
+              <% end %>
             </div>
             <div class="small-11 medium-11 large-11 columns">
               <p class="checkbox-label">Investment Banking</p>
@@ -93,7 +97,11 @@
           </div>
           <div class="row">
             <div class="small-1 medium-1 large-1 columns">
-              <%= check_box_tag "category[name][]", "Asset Management", @current_categories.find_by(name: "Asset Management"), class: "category-checkbox" %>
+              <% if @advisor.categories != nil%>
+              <%= check_box_tag "category[name][]", "Asset Management", @advisor.categories.include?("Asset Management"), class: "category-checkbox" %>
+              <% else %>
+              <%= check_box_tag "category[name][]", "Asset Management", false, class: "category-checkbox" %>
+              <% end %>
             </div>
             <div class="small-11 medium-11 large-11 columns">
               <p class="checkbox-label">Asset Management</p>
@@ -101,7 +109,11 @@
           </div>
           <div class="row">
             <div class="small-1 medium-1 large-1 columns">
-              <%= check_box_tag "category[name][]", "Corporate Finance Divisions", @current_categories.find_by(name: "Corporate Finance Divisions"), class: "category-checkbox"  %>
+              <% if  @advisor.categories != nil %>
+              <%= check_box_tag "category[name][]", "Corporate Finance Divisions", @advisor.categories.include?("Corporate Finance Divisions"), class: "category-checkbox"  %>
+              <% else %>
+              <%= check_box_tag "category[name][]", "Corporate Finance Divisions", false, class: "category-checkbox"  %>
+              <% end %>
             </div>
             <div class="small-11 medium-11 large-11 columns">
               <p class="checkbox-label">Corporate Finance Divisions</p>
@@ -109,7 +121,11 @@
           </div>
           <div class="row">
             <div class="small-1 medium-1 large-1 columns">
-              <%= check_box_tag "category[name][]", "Other",  @current_categories.find_by(name: "Other"), class: "category-checkbox" %>
+              <% if @advisor.categories != nil %>
+              <%= check_box_tag "category[name][]", "Other Finance Opportunities", @advisor.categories.include?("Other Finance Opportunities"), class: "category-checkbox" %>
+              <% else %>
+              <%= check_box_tag "category[name][]", "Other Finance Opportunities", false, class: "category-checkbox" %>
+              <% end %>
             </div>
             <div class="small-11 medium-11 large-11 columns">
               <p class="checkbox-label">Other Finance Opportunities</p>
@@ -117,10 +133,14 @@
           </div>
           <div class="row">
             <div class="small-1 medium-1 large-1 columns">
-              <%= check_box_tag "category[name][]", "Resume/Interview",@current_categories.find_by(name: "Resume/Interview"), class: "category-checkbox" %>
+              <% if @advisor.categories != nil %>
+              <%= check_box_tag "category[name][]", "Resume & Interview Prep", @advisor.categories.include?("Resume & Interview Prep"), class: "category-checkbox" %>
+              <% else %>
+              <%= check_box_tag "category[name][]", "Resume & Interview Prep", false, class: "category-checkbox" %>
+              <% end %>
             </div>
             <div class="small-11 medium-11 large-11 columns">
-              <p class="checkbox-label">Resume building & Interview Prep</p>
+              <p class="checkbox-label">Resume & Interview Prep</p>
             </div>
           </div>
         </div>

@@ -12,7 +12,6 @@ class AdvisorsController < ApplicationController
         render partial: "results_index", layout: false
       end
     end
-    @categories = Category.all
   end
 
   def new
@@ -38,15 +37,14 @@ class AdvisorsController < ApplicationController
 
   def edit
     @advisor = Advisor.find_by(id: params[:id])
-    @current_categories = @advisor.categories
   end
 
   def update
     advisor = Advisor.find_by(id: params[:id])
     if advisor_params && params[:category]
       advisor.categories = []
-      params[:category][:name].each do |category_name|
-        advisor.categories << Category.find_by(name: category_name)
+      params[:category][:name].each do |category|
+        advisor.categories << category
       end
       advisor.update(advisor_params)
       advisor.join_companies(params[:companies])
