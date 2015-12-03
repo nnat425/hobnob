@@ -15,7 +15,7 @@
           <p id="index-advisor-name"><%= advisor.firstname %></p>
         </div>
         <div class="small-6 medium-6 large-6 columns" id="advisor-index-price">
-        <% if logged_in? %>
+        <% if logged_in? && current_user%>
           <p class="advisor-price-number">$
           <% if current_user.student == true %>
             <%= advisor.student_price %>
