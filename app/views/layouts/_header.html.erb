@@ -6,12 +6,25 @@
   <ul class="inline-list">
     <li><%= link_to "Home", root_path %></li>
     <li class="active"><%= link_to "About", about_path %></li>
-    <li><%= link_to "Advisors", advisors_path %></li>
+    <li ><%= link_to "Advisors", advisors_path %></li>
+    <% if logged_in? %>
+    <li class='hide-for-medium-up'><%= link_to "Logout", logout_path, method: :delete, id: "logout-link" %></li>
+    <% if session[:class_type] == "User" %>
+    <li class='hide-for-medium-up'><%= link_to "Profile",user_path(session[:user_or_advisor_id]) %></li>
+    <li class='hide-for-medium-up'><%= link_to "Cart", cart_path(current_user.carts.last) %></li>
+    <i class="fa fa-shopping-cart fa-lg"></i>
+    <% else %>
+    <li class='hide-for-medium-up'><%= link_to "Profile", advisor_path(session[:user_or_advisor_id]) %></li>
+    <% end %>
+    <% else %>
+    <li class='show-for-small-only'><%= link_to "Login", login_path %></li>
+    <li class='show-for-small-only'><%= link_to "SignUp", new_user_path %></li>
+    <% end %>
     <li id='flash_add_cart'><%=flash[:added_to_cart] %></li>
      <li id='flash_already_cart'><%=flash[:already_in_cart] %></li>
      <li id='flash_already_cart'><%=flash[:item_remove] %></li>
   </ul>
-  <ul class="inline-list hidte-for-small-only account-action">
+  <ul class="inline-list hide-for-small-only account-action">
     <% if logged_in? %>
     <li><%= link_to "Logout", logout_path, method: :delete, id: "logout-link" %></li>
     <% if session[:class_type] == "User" %>
