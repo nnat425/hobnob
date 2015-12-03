@@ -53,7 +53,8 @@ end
 
 group :production do
   gem 'unicorn'
-  gem 'mysql'
+  # gem 'mysql'
+  gem 'pg'
 end
 
 group :test do
