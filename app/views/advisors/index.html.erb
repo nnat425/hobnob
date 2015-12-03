@@ -10,12 +10,26 @@
       <p>Finance Category</p>
       <button class="fa fa-search fa-lg" id="advisor-search-btn" type="submit"></button>
     </div>
-    <% @categories.each do |category| %>
-      <div class="index-categories-list" >
-        <p><%= category.name %></p>
-        <%= check_box_tag "filter[category][]", category.name, false, class: "advisors-filter-checkbox" %>
-      </div>
-    <% end %>
+    <div class="index-categories-list" >
+      <p>Investment Banking</p>
+      <%= check_box_tag "filter[category][]", "Investment Banking", false, class: "advisors-filter-checkbox" %>
+    </div>
+    <div class="index-categories-list" >
+      <p>Asset Management</p>
+      <%= check_box_tag "filter[category][]", "Asset Management", false, class: "advisors-filter-checkbox" %>
+    </div>
+    <div class="index-categories-list" >
+      <p>Corporate Finance Divisions</p>
+      <%= check_box_tag "filter[category][]", "Corporate Finance Divisions", false, class: "advisors-filter-checkbox" %>
+    </div>
+    <div class="index-categories-list" >
+      <p>Resume & Interview Prep</p>
+      <%= check_box_tag "filter[category][]", "Resume & Interview Prep", false, class: "advisors-filter-checkbox" %>
+    </div>
+    <div class="index-categories-list" >
+      <p>Other Finance Opportunities</p>
+      <%= check_box_tag "filter[category][]", "Other Finance Opportunities", false, class: "advisors-filter-checkbox" %>
+    </div>
     <div class="advisors-filter-subheader">
       <p>Years of Experience</p>
     </div>
