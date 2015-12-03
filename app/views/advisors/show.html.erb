@@ -97,7 +97,9 @@
         <p class="appointment-time"><%= pot_appointment.start_time.strftime("%A, %B %d, %Y at %l:%M %p") %>
           <%= pot_appointment.end_time.strftime("to %l:%M %p") %>
         </p>
-        <% if pot_appointment.advisor_id == current_advisor.id %>
+        <% if current_advisor == nil %>
+        <% elsif %>
+        <% pot_appointment.advisor_id == current_advisor.id && session[:class_type] == current_advisor.class.name %>
         <%= link_to "Edit Appointment",edit_potential_appointment_path(pot_appointment) %>
         <br>
         <%= link_to "Delete Appointment",{:controller => 'potential_appointments', :action => 'destroy', :potential_appointment => pot_appointment.id}, :method => :delete %>
