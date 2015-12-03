@@ -889,4 +889,26 @@ height: 100%;
   padding-left: 1em;
   padding-right: 1em;
   border-bottom: 1px solid #C0C0C0;
+
+}
+
+#order-total {
+  float:right;
+
+}
+
+#order-total label {
+  display: inline;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: .8em;
+  margin-top: 1em;
+  color: #505050;
+  margin-right: 3em;
+}
+
+#order-total p {
+  font-size: 1.5em;
+  font-family: "Open Sans";
+
 }
