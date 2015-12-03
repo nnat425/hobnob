@@ -384,7 +384,7 @@ margin-bottom: 0px;
 }
 
 #advisor-bio-panel {
-  margin-bottom:15px;
+  margin-bottom: 0px;
   background-color: #fff;
   padding: 2em;
 }
@@ -404,17 +404,25 @@ margin-bottom: 0px;
   font-size: 2.5em;
   margin-bottom: 0em;
   text-align: center;
-  font-weight: 300;
+  font-weight: 400;
   color: #fff;
+  letter-spacing: 2px;
 }
 
 #advisor-title-profile-page {
-  font-size: 1.2em;
+  font-size: 1.1em;
   margin-bottom: 0em;
-  font-weight: 300;
+  font-weight: 400;
+  letter-spacing: 2px;
   color: #fff;
 }
 
+#advisor-location-profile-page {
+  font-size: 1.0em;
+  color: #fff;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
 #profile-panel p {
   font-family: "Open Sans";
 }
@@ -472,11 +480,6 @@ overflow: hidden;
   font-size: 1em;
   display: inline;
 }
-
-#advisor-show-container {
-
-}
-
 
 #index-advisor-name {
   font-family: "Open Sans";
@@ -920,6 +923,7 @@ height: 100%;
 
 }
 
+
 .header_mobile {
   display: inline;
   word-spacing: 15px;
@@ -928,3 +932,11 @@ height: 100%;
   margin-left:1em;
 }
 
+
+#edit-profile-btn {
+  background: none;
+  color: #fff;
+  font-size: .8em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
