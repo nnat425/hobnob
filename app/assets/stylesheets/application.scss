@@ -752,6 +752,7 @@ margin-bottom: 1em;
 margin-right: .5em;
 margin-left: .5em;
 background-color: #fff;
+float: left;
 }
 
 #order_div form {
@@ -764,6 +765,7 @@ background-color: #fff;
   margin-top: 1em;
   font-size: .8em;
   text-align: right;
+  color: #505050;
 }
 
 #order_div form i {
@@ -797,10 +799,8 @@ display:none;
   margin-right: .5em;
   margin-left: .5em;
   background-color: #fff;
-  float: left;
   margin-top: 1em;
   margin-bottom: 1em;
-
 }
 
 #order_p{
@@ -811,15 +811,6 @@ display:none;
 
 }
 
-#order_item{
-margin-top:15px;
-border-bottom: 1px solid #C0C0C0;
-
-}
-
-#order_time{
-text-align:center;
-}
 
 #user-profile-container {
   padding-top: 90px;
@@ -863,4 +854,39 @@ height: 100%;
 #checkout-container {
   text-align: center;
   background-color: #f0f1ee;
+}
+
+.advisor-checkout-avatar {
+  border: 1px solid #d9d9d9;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  overflow: hidden;
+  text-align: center;
+  img { width: 100% };
+
+}
+
+.order-info-label{
+  float: right;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: .8em;
+  margin-top: .3em;
+  color: #505050;
+}
+
+.order-info {
+  float: left;
+  font-family: "Open Sans";
+  font-size: 1.1em;
+  font-weight: 300;
+}
+
+#order_item {
+  padding-left: 1em;
+  padding-right: 1em;
+  border-bottom: 1px solid #C0C0C0;
 }
