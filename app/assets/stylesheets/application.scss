@@ -347,12 +347,13 @@ border: 1px solid #ccc;
 -webkit-box-shadow: 1px 1px 1px 0px #ccc;
 -moz-box-shadow:    1px 1px 1px 0px #ccc;
 box-shadow:         1px 1px 1px 0px #ccc;
+width:35em;
 padding: 1em;
-width: 550px;
 display: inline-block;
 height: 220px;
 
 }
+
 
 #advisor-index-price {
   text-align: right;
@@ -364,7 +365,7 @@ height: 220px;
 }
 
 #index-advisor-services p {
-  font-size: .8em;
+  font-size: .7em;
   display: inline;
 
 }
@@ -563,13 +564,12 @@ overflow: hidden;
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
-  height: 150px;
-  width: 150px;
+  height: 120px;
+  width: 120px;
   overflow: hidden;
   text-align: center;
   img { width: 100% }
-  margin-left: auto;
-  margin-right: auto;
+  margin-left:-25px;
   margin-bottom: 1em;
 }
 
