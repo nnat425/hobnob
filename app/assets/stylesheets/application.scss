@@ -826,17 +826,21 @@ height: 100%;
 }
 
 #profile-header p {
-  font-size: 2em;
+  font-size: 1.3em;
   font-family: "Open Sans";
   letter-spacing: 2px;
   color: #203451;
   display: inline;
 }
 
+
+
 #profile-header {
   border-bottom: 1px solid #C0C0C0;
   padding-bottom: .8em;
   margin-bottom: 1.5em;
+  margin-top:3em;
+
 }
 
 #user-edit-profile-btn {
@@ -921,3 +925,4 @@ height: 100%;
   text-align:center;
   margin-left:1em;
 }
+

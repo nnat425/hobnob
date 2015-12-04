@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
 
 has_many :carts
-has_many :appointments
+has_many :potential_appointments
 
 
 validates :first_name,:last_name, :email, :presence => true
