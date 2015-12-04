@@ -13,6 +13,19 @@
     <p id="advisor-title-profile-page"><%= @advisor.current_title %></p>
     <p id="advisor-location-profile-page"><%= @advisor.location %></p>
   </div>
+  <% if logged_in? && current_user %>
+      <div class="row" id="advisor-consultation-price-box">
+            <p class="dollar-sign">$</p>
+              <% if current_user.student == true %>
+              <p class="advisor-consultation-price"><%= @advisor.student_price %></p>
+              <p class="advisor-consultation-label"> / consultation</p>
+              <% else %>
+              <p class="advisor-consultation-price"><%= @advisor.regular_price %></p>
+              <p class="advisor-consultation-label"> / consultation</p>
+              <% end %>
+
+      </div>
+      <% end %>
 </div>
 
 <div class="small-12 medium-9 large-9 columns" id="advisor-bio-panel">
@@ -92,6 +105,7 @@
     <% if session[:user_or_advisor_id] == @advisor.id && session[:class_type] == @advisor.class.name %>
     <%= link_to "Create Appointment", new_potential_appointment_path, id: "create-appointment-btn", class: "fa fa-calendar-plus-o" %>
     <% end %>
+
     <% @advisor.potential_appointments.each do |pot_appointment| %>
 
       <% if pot_appointment.booked_status? == false %>
@@ -103,23 +117,26 @@
               <p class="appointment-month"><%= pot_appointment.start_time.strftime("%b") %></p>
             </div>
           </div>
-          <div class="small-8 medium-8 large-8 columns">
+          <div class="small-8 medium-7 large-7 columns">
+            <p class="appointment-time"><%= pot_appointment.start_time.strftime("%l:%M %p") %>
+            <%= pot_appointment.end_time.strftime("to %l:%M %p EST") %>
+            </p>
             <p class='appointment_title'><%= pot_appointment.title %></p>
-            <p class="appointment-time"><%= pot_appointment.start_time.strftime("%A, %B %d, %Y at %l:%M %p") %>
-            <%= pot_appointment.end_time.strftime("to %l:%M %p") %>
+            <p class="appointment-full-date"><%= pot_appointment.start_time.strftime("%A, %B %d, %Y") %>
             </p>
           </div>
-          <div class="small-1 medium-1 large-2 columns">
+          <div class="small-1 medium-2 large-3 columns" id="available-times-right-btn">
             <% if current_advisor == nil %>
             <% elsif %>
             <% pot_appointment.advisor_id == current_advisor.id && session[:class_type] == current_advisor.class.name %>
             <%= link_to "",edit_potential_appointment_path(pot_appointment), id: "profile-edit-appointment", class: "fa fa-edit" %>
             <%= link_to "",{:controller => 'potential_appointments', :action => 'destroy', :potential_appointment => pot_appointment.id}, :method => :delete, id: "profile-delete-appointment", class: "fa fa-trash" %>
             <% end %>
+
             <% if session[:class_type] != "Advisor" %>
               <%= form_for @advisor, url: cart_path, method: "patch" do |f| %>
                 <%= f.hidden_field :appointment_id, :value => pot_appointment.id %>
-                <%= f.submit "Add to Cart", {:class => "button", :id => "add_to_cart"} %>
+                <%= f.submit "add", {:class => "fa fa-cart-plus", :id => "add_to_cart"} %>
               <% end %>
             <% end %>
           </div>

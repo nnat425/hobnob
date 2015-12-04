@@ -675,11 +675,15 @@ text-decoration: underline;
   margin:10px;
 }
 
+#available-times-right-btn {
+  margin-top: 2em;
+}
 .appointment_title {
   font-size: 2.5em;
-  margin-top: 1em;
+  margin-top: 0em;
   margin-bottom: 0em;
   font-family: "Open Sans";
+  font-weight: 400;
 
 }
 
@@ -691,6 +695,9 @@ text-decoration: underline;
   color:red;
 }
 
+#add_to_cart {
+  background: none;
+}
 #cart_page{
 background-color:white;
 background-size:cover;
@@ -745,12 +752,49 @@ margin-left:40px;
 
 }
 
-.appointment-time {
+.appointment-full-date {
   font-size: .85em;
   color: #C0C0C0;
   letter-spacing: 1px;
   text-transform: uppercase;
-  margin-top: .1em;
+}
+
+.appointment-time {
+  font-family: "Open Sans";
+  font-size: 1em;
+  margin-bottom: -.2em;
+  margin-top: .8em;
+  font-weight: 300;
+
+}
+
+#advisor-consultation-price-box {
+  text-align: center;
+}
+
+#advisor-consultation-price-box p {
+  display: inline;
+}
+
+#advisor-consultation-price-box .dollar-sign {
+  font-weight: 500;
+  color: #C0C0C0;
+  margin-top: -57px;
+
+}
+
+.advisor-consultation-price {
+  font-size: 4em;
+  font-family: "Open Sans";
+  font-weight: 200;
+  margin-bottom: 0px;
+  color: #C0C0C0;
+}
+
+.advisor-consultation-label {
+  font-size: .85em;
+  text-transform: uppercase;
+  color: #C0C0C0;
 }
 
 #order_page{
