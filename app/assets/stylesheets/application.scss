@@ -975,13 +975,13 @@ height: 100%;
   padding: auto;
 }
 
-.appointment-date p {
+.appointment-date .appointment-day {
   color: #004b7e;
   font-size: 2.5em;
-  margin-top: .4em;
-  margin-bottom: .4em;
   font-family: "Open Sans";
   font-weight: 300;
+  margin-bottom: 0px;
+  margin-top: .35em;
 }
 
 .user-appointment-label{
@@ -1002,4 +1002,11 @@ height: 100%;
 
 #cart-empty{
   margin-left:-9em;
+
+}
+.appointment-date .appointment-month {
+  color: #004b7e;
+  margin-top: -.7em;
+  text-transform: uppercase;
+  font-size: .8em;
 }

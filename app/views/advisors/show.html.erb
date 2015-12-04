@@ -99,7 +99,8 @@
 
           <div class="small-3 medium-3 large-2 columns">
             <div class="appointment-date">
-              <p><%= pot_appointment.start_time.strftime("%d") %></p>
+              <p class="appointment-day"><%= pot_appointment.start_time.strftime("%d") %></p>
+              <p class="appointment-month"><%= pot_appointment.start_time.strftime("%b") %></p>
             </div>
           </div>
           <div class="small-8 medium-8 large-8 columns">
