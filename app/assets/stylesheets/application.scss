@@ -671,10 +671,12 @@ text-decoration: underline;
   margin:10px;
 }
 
-#appointment_title{
-  font-size:25px;
-  margin-top:15px;
-  margin-bottom:-5px;
+.appointment_title {
+  font-size: 2.5em;
+  margin-top: 1em;
+  margin-bottom: 0em;
+  font-family: "Open Sans";
+
 }
 
 #flash_add_cart{
@@ -733,14 +735,17 @@ margin-left:40px;
 
 }
 
-.appointment-time-box {
+#appointment-time-box {
   margin: 1.5em;
+
 }
 
 .appointment-time {
   font-size: .85em;
   color: #C0C0C0;
   letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: .1em;
 }
 
 #order_page{
@@ -950,3 +955,27 @@ height: 100%;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+
+
+.appointment-date {
+
+  border: 1px solid #004b7e;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  text-align: center;
+  padding: auto;
+}
+
+.appointment-date p {
+  color: #004b7e;
+  font-size: 2.5em;
+  margin-top: .4em;
+  margin-bottom: .4em;
+  font-family: "Open Sans";
+  font-weight: 300;
+}
+
+
