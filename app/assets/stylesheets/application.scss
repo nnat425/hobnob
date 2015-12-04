@@ -375,6 +375,9 @@ height: 220px;
   font-size: .5em;
   font-family: "Open Sans";
 }
+#advisor-appointment-box {
+  margin-top: 75px;
+}
 
 #profile-panel {
 background-color: #203451;
@@ -384,7 +387,7 @@ margin-bottom: 0px;
 }
 
 #advisor-bio-panel {
-  margin-bottom: 0px;
+  margin-bottom: 1em;
   background-color: #f0f1ee;
   padding: 2em;
   height: 100%;
@@ -576,8 +579,9 @@ overflow: hidden;
   overflow: hidden;
   text-align: center;
   img { width: 100% }
-  margin-left:-25px;
   margin-bottom: 1em;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 #network-overview h1 {
@@ -954,6 +958,7 @@ height: 100%;
   font-size: .8em;
   text-transform: uppercase;
   letter-spacing: 1px;
+  float: right;
 }
 
 

@@ -85,12 +85,13 @@
     </div>
   </div>
 
-  <p class="advisor-profile-header">Available Times</p>
-  <% if session[:user_or_advisor_id] == @advisor.id && session[:class_type] == @advisor.class.name %>
-  <%= link_to "Create Appointment", new_potential_appointment_path, id: "create-appointment-btn", class: "fa fa-calendar-plus-o" %>
-  <% end %>
+
 
   <div id="advisor-appointment-box">
+    <p class="advisor-profile-header">Available Times</p>
+    <% if session[:user_or_advisor_id] == @advisor.id && session[:class_type] == @advisor.class.name %>
+    <%= link_to "Create Appointment", new_potential_appointment_path, id: "create-appointment-btn", class: "fa fa-calendar-plus-o" %>
+    <% end %>
     <% @advisor.potential_appointments.each do |pot_appointment| %>
 
       <% if pot_appointment.booked_status? == false %>
