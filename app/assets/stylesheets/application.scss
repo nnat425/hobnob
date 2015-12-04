@@ -983,4 +983,18 @@ height: 100%;
   font-weight: 300;
 }
 
+.user-appointment-label{
+  float: right;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: .8em;
+  margin-top: .3em;
+  color: #505050;
+}
 
+.user-appointment{
+  float: left;
+  font-family: "Open Sans";
+  font-size: 1.1em;
+  font-weight: 300;
+}
