@@ -3,7 +3,9 @@
 
 <div id='cart_header' class='row'>
   <div class='large-5 columns'><h1>Shopping Cart</h1></div>
+  <% if @cart.potential_appointments.count > 0 %>
   <div class='large-4 large-offset-4 small-3 columns'><h6>Price</h6></div>
+  <% end %>
 </div>
 
 <% @cart.potential_appointments.each do |appointment|  %>
@@ -16,7 +18,7 @@
   </div>
   <div id='item_info' class='large-7 small-12 columns'>
     <div class='row'>
-      <div class='large-1 columns'>
+      <div class='large-3 columns'>
         <h4 class='hide-for-small-only' id='app_title'><%= appointment.title %></h4></div>
         <div class='large-4 small-4 columns '>
           <% if current_user.student == true %>
@@ -40,11 +42,18 @@
   <% end %>
   <div class ='row'>
     <div id='cart_total' class='large-3 large-offset-6 small-4 small-offset-8 columns'>
+<% if @cart.potential_appointments.count > 0 %>
       <% if current_user.student == true %>
       <%= "Subtotal (" + @cart.potential_appointments.count.to_s + " items): $" + @cart.total_price_student.to_s %>
       <% else %>
       <%= "Subtotal (" + @cart.potential_appointments.count.to_s + " items): $" + @cart.total_price_regular.to_s %>
       <% end %>
       <%= link_to "Checkout", new_order_path %>
+    </div>
+        <% else %>
+        <div class'row'>
+        <h1 id='cart-empty'>Your cart is empty!</h1>
+      </div>
+      <% end %>
     </div>
   </div>

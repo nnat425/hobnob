@@ -710,6 +710,7 @@ overflow: hidden;
 }
 
 #advisor_name_cart{
+text-align:center;
 }
 
 #item_info{
@@ -997,4 +998,8 @@ height: 100%;
   font-family: "Open Sans";
   font-size: 1.1em;
   font-weight: 300;
+}
+
+#cart-empty{
+  margin-left:-9em;
 }
