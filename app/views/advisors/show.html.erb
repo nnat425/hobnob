@@ -97,7 +97,7 @@
       <% if pot_appointment.booked_status? == false %>
         <div class="row" id="appointment-time-box">
 
-          <div class="small-2 medium-2 large-2 columns">
+          <div class="small-3 medium-3 large-2 columns">
             <div class="appointment-date">
               <p><%= pot_appointment.start_time.strftime("%d") %></p>
             </div>
@@ -108,7 +108,7 @@
             <%= pot_appointment.end_time.strftime("to %l:%M %p") %>
             </p>
           </div>
-          <div class="small-2 medium-2 large-2 columns">
+          <div class="small-1 medium-1 large-2 columns">
             <% if current_advisor == nil %>
             <% elsif %>
             <% pot_appointment.advisor_id == current_advisor.id && session[:class_type] == current_advisor.class.name %>
