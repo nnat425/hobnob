@@ -64,7 +64,7 @@
           <p>Your Appointments</p>
         </div>
 
-          <% @booked_appointments.each do |appointment| %>
+          <% @booked_appointments.reverse.each do |appointment| %>
           <div class='row' id='order_item'>
             <div class="small-2 medium-3 large-4 columns">
               <div class="advisor-checkout-avatar">
