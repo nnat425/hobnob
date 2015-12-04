@@ -5,7 +5,7 @@
   <div class="row">
     <div id='order_summary' class='small-12 medium-12 large-5 large-offset-1 columns'>
 
-      <p id='order_p'><%= "Order Summary (" + @current_cart.potential_appointments.count.to_s + " item)" %></p>
+      <p id='order_p'><%= "Order Summary (" + current_cart.potential_appointments.count.to_s + " item)" %></p>
       <% current_user.carts.last.potential_appointments.each do |appointment| %>
       <div class='row' id='order_item'>
         <div class="small-2 medium-3 large-4 columns">
@@ -55,9 +55,9 @@
       <div class="row" id="order-total">
         <label>Order Total:</label>
         <% if current_user.student == true %>
-        <p><%= "$" + @current_cart.total_price_student.to_s %></p>
+        <p><%= "$" + current_cart.total_price_student.to_s %></p>
         <% else %>
-        <p><%= "$" + @current_cart.total_price_regular.to_s %></p>
+        <p><%= "$" + current_cart.total_price_regular.to_s %></p>
         <% end %>
       </div>
     </div>
@@ -67,6 +67,7 @@
       <% if @order.errors %>
       <% @order.errors.full_messages.each do |message| %>
       <%= message %>
+      <br>
       <% end %>
       <% end %>
 
