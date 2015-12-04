@@ -375,6 +375,9 @@ height: 220px;
   font-size: .5em;
   font-family: "Open Sans";
 }
+#advisor-appointment-box {
+  margin-top: 75px;
+}
 
 #profile-panel {
 background-color: #203451;
@@ -384,9 +387,10 @@ margin-bottom: 0px;
 }
 
 #advisor-bio-panel {
-  margin-bottom:15px;
-  background-color: #fff;
+  margin-bottom: 1em;
+  background-color: #f0f1ee;
   padding: 2em;
+  height: 100%;
 }
 
 
@@ -404,17 +408,25 @@ margin-bottom: 0px;
   font-size: 2.5em;
   margin-bottom: 0em;
   text-align: center;
-  font-weight: 300;
+  font-weight: 400;
   color: #fff;
+  letter-spacing: 2px;
 }
 
 #advisor-title-profile-page {
-  font-size: 1.2em;
+  font-size: 1.5em;
   margin-bottom: 0em;
-  font-weight: 300;
-  color: #fff;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #C0C0C0;
 }
 
+#advisor-location-profile-page {
+  font-size: 1.0em;
+  color: #C0C0C0;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
 #profile-panel p {
   font-family: "Open Sans";
 }
@@ -433,7 +445,7 @@ margin-bottom: 0px;
   margin-bottom: .5em;
   font-size: 1.1em;
   font-family: "Open Sans";
-  font-weight: 300;
+
 }
 
 .category-checkbox {
@@ -465,16 +477,14 @@ overflow: hidden;
   font-weight: 300;
 }
 
-#advisor-availability {
+.advisor-profile-header {
   color: #203451;
-  text-transform: uppercase;
+  font-family: "Open Sans";
   letter-spacing: 2px;
-  font-size: 1em;
-  display: inline;
+  font-size: 2em;
+  font-weight: 300;
+  display: inline-block;
 }
-
-
-
 
 #index-advisor-name {
   font-family: "Open Sans";
@@ -569,8 +579,9 @@ overflow: hidden;
   overflow: hidden;
   text-align: center;
   img { width: 100% }
-  margin-left:-25px;
   margin-bottom: 1em;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 #network-overview h1 {
@@ -664,10 +675,12 @@ text-decoration: underline;
   margin:10px;
 }
 
-#appointment_title{
-  font-size:25px;
-  margin-top:15px;
-  margin-bottom:-5px;
+.appointment_title {
+  font-size: 2.5em;
+  margin-top: 1em;
+  margin-bottom: 0em;
+  font-family: "Open Sans";
+
 }
 
 #flash_add_cart{
@@ -726,14 +739,17 @@ margin-left:40px;
 
 }
 
-.appointment-time-box {
+#appointment-time-box {
   margin: 1.5em;
+
 }
 
 .appointment-time {
   font-size: .85em;
   color: #C0C0C0;
   letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: .1em;
 }
 
 #order_page{
@@ -918,6 +934,7 @@ height: 100%;
 
 }
 
+
 .header_mobile {
   display: inline;
   word-spacing: 15px;
@@ -925,4 +942,45 @@ height: 100%;
   text-align:center;
   margin-left:1em;
 }
+
+
+#edit-profile-btn {
+  background: none;
+  color: #004b7e;
+  font-size: .8em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#create-appointment-btn {
+  background: none;
+  color: #004b7e;
+  font-size: .8em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  float: right;
+}
+
+
+.appointment-date {
+
+  border: 1px solid #004b7e;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  text-align: center;
+  padding: auto;
+}
+
+.appointment-date p {
+  color: #004b7e;
+  font-size: 2.5em;
+  margin-top: .4em;
+  margin-bottom: .4em;
+  font-family: "Open Sans";
+  font-weight: 300;
+}
+
 
