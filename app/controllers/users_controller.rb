@@ -19,6 +19,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @booked_appointments = @user.booked_appointments
   end
 
   private
