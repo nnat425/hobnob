@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151203023606) do
+ActiveRecord::Schema.define(version: 20151205164445) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,8 +40,17 @@ ActiveRecord::Schema.define(version: 20151203023606) do
     t.datetime "avatar_updated_at"
     t.integer  "student_price"
     t.integer  "regular_price"
-    t.string   "categories",                       array: true
   end
+
+  create_table "advisors_categories", force: :cascade do |t|
+    t.integer  "advisor_id"
+    t.integer  "category_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "advisors_categories", ["advisor_id"], name: "index_advisors_categories_on_advisor_id", using: :btree
+  add_index "advisors_categories", ["category_id"], name: "index_advisors_categories_on_category_id", using: :btree
 
   create_table "carts", force: :cascade do |t|
     t.integer  "user_id",                      null: false
@@ -58,6 +67,12 @@ ActiveRecord::Schema.define(version: 20151203023606) do
 
   add_index "carts_potential_appointments", ["cart_id"], name: "index_carts_potential_appointments_on_cart_id", using: :btree
   add_index "carts_potential_appointments", ["potential_appointment_id"], name: "index_carts_potential_appointments_on_potential_appointment_id", using: :btree
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "delayed_jobs", force: :cascade do |t|
     t.integer  "priority",   default: 0, null: false
@@ -121,6 +136,8 @@ ActiveRecord::Schema.define(version: 20151203023606) do
     t.datetime "updated_at",                      null: false
   end
 
+  add_foreign_key "advisors_categories", "advisors"
+  add_foreign_key "advisors_categories", "categories"
   add_foreign_key "carts_potential_appointments", "carts"
   add_foreign_key "carts_potential_appointments", "potential_appointments"
   add_foreign_key "order_transactions", "orders"
