@@ -43,8 +43,8 @@ class AdvisorsController < ApplicationController
     advisor = Advisor.find_by(id: params[:id])
     if advisor_params && params[:category]
       advisor.categories = []
-      params[:category][:name].each do |category|
-        advisor.categories << category
+      params[:category][:name].each do |category_name|
+        advisor.categories << Category.find_or_create_by(name: category_name)
       end
       advisor.update(advisor_params)
       advisor.join_companies(params[:companies])
