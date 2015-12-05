@@ -37,6 +37,7 @@ class AdvisorsController < ApplicationController
 
   def edit
     @advisor = Advisor.find_by(id: params[:id])
+    @current_categories = @advisor.categories
   end
 
   def update
