@@ -126,12 +126,7 @@ float: left;
 }
 }
 
-.hero {
-background: url("http://cmcc.flywheelsites.com/cyp/wp-content/uploads/sites/7/2014/04/meeting-cyp-2.jpg") no-repeat center center;
-background-size: cover;
-height: 70vh;
-overflow: hidden;
-}
+
 
 .signup_hero {
 background-size: cover;
@@ -607,25 +602,30 @@ overflow: hidden;
   font-family: "Open Sans";
   font-size: 2em;
   font-weight: 300;
-  color: #989898;
+  color: #004b7e;
   letter-spacing: 2px;
 }
 
-.steps-more-info {
+.more-info {
   font-size: 1.25em;
   font-family: "Open Sans";
   font-weight: 300;
   letter-spacing: 1px;
 }
+
 #page-info-header {
   font-family: "Open Sans";
   font-weight: 300;
   color: #004b7e;
   text-align: center;
+  margin-top: .75em;
+  margin-bottom: .75em;
+  font-size: 5em;
 }
 
 #home-info-box {
   text-align: center;
+  margin-bottom: 2em;
 }
 
 #new_potential_appointment {
@@ -1065,4 +1065,64 @@ height: 100%;
 #advisors-index-container {
   background-color: #f0f1ee;
 
+}
+
+.more-info a {
+  color: #004b7e;
+}
+
+.more-info a:hover {
+  color: #C0C0C0;
+  padding-bottom: 0.5rem;
+  transition: all .3s ease-in-out;
+  border-bottom: 2px solid #C0C0C0;
+}
+
+#search-advisors-link {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+#search-advisors-link a {
+  background-color: #004b7e;
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+}
+
+
+.parallax-background {
+  background: url("http://cmcc.flywheelsites.com/cyp/wp-content/uploads/sites/7/2014/04/meeting-cyp-2.jpg");
+  height: 100%;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: fixed;
+  width: 100%;
+}
+
+.intro-text {
+  font-size: 50px;
+  color: #fff;
+  text-align: center;
+  margin-top: 15%;
+}
+
+.parallax-content {
+  max-width: 100%;
+  position: relative;
+  top: 600px;
+  padding: 50px;
+  background-color: #fff;
+}
+
+.footer {
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+}
+
+.footer p {
+  display: inline;
 }
