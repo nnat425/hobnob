@@ -1,4 +1,5 @@
 class Advisor < ActiveRecord::Base
+  has_and_belongs_to_many :categories
   has_many :potential_appointments
 
   validates :email, :presence => true
@@ -21,7 +22,9 @@ class Advisor < ActiveRecord::Base
 
   def self.filter(chosen_categories,chosen_years)
     if chosen_categories
-      results_by_category = where("categories = ?",chosen_categories)
+      results_by_category = chosen_categories.map do |chosen_category|
+        Category.find_by(name:chosen_category).advisors
+      end
       results_by_category.flatten!.uniq!
     else
       results_by_category = all
