@@ -4,7 +4,7 @@
 
 
 <div class='row'>
-  <div class='large-3 columns'>
+  <div class='small-12 medium-3 large-4 columns' id="appointment-form">
 
     <%= form_for @potential_appointment do |f| %>
     <h3 id='appointment_header'>Create appointment </h3>
@@ -35,18 +35,15 @@
     <%= time_select 'potential_appointment', 'end_time', {ampm: true, :time_separator => "" }, class: "end_time"
     %>
 
-    <div class="row">
-      <div class="large-12 large-centered columns">
-        <%= f.submit "Create Appointment", {:class => "button",:id => "calendar_button" } %>
-        <% end %>
-
-      </div>
+    <div class="row" id="calendar-button-div">
+      <%= f.submit "Create Appointment", { :class => "button", id: "calendar_button" } %>
     </div>
+    <% end %>
   </div>
 
 
 
-  <div class='large-8 columns'>
+  <div class='small-12 medium-9 large-8 columns'>
     <%= month_calendar events: @advisor_appointments do |date, appointments| %>
     <%= date.day %>
 

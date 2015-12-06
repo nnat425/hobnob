@@ -37,10 +37,30 @@ float: right;
   transition: all 0.2s ease;
 }
 
-#calendar_button{
-  letter-spacing: 0px;
-  margin-top:20px;
-  margin-left:18px;
+#calendar-button-div {
+  text-align: center;
+}
+
+#calendar_button {
+  font-size: .85em;
+  margin-top: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
+  letter-spacing: 2px;
+  background-color: #203451;
+  color: #fff;
+  border: 1px solid #203451;
+  transition: all 0.2s ease;
+
+}
+
+.simple-calendar a {
+  font-size:1em;
+  text-transform: uppercase;
+  font-family: "Open Sans";
+  letter-spacing: 2px;
+  color: #C0C0C0;
+
 }
 
 #add_to_cart{

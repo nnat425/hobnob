@@ -673,6 +673,8 @@ border-radius: 5px;
 #appointment_header{
 text-align:center;
 text-decoration: underline;
+font-family: "Open Sans";
+letter-spacing: 2px;
 }
 
 .end_time {
@@ -1021,6 +1023,31 @@ height: 100%;
   text-transform: uppercase;
   letter-spacing: 1px;
   float: right;
+}
+
+#appointment-form form input {
+padding: 1em;
+height: 3.5em;
+font-size: 1em;
+border-radius: 5px;
+margin-bottom: .5em;
+}
+
+#appointment-form form select {
+padding: 1em;
+height: 3.5em;
+font-size: 1em;
+border-radius: 5px;
+margin-bottom: .5em;
+}
+
+#appointment-form form label {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 1em;
+  font-size: .8em;
+  text-align: left;
+  color: #505050;
 }
 
 
