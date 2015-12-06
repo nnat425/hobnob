@@ -19,28 +19,67 @@ text-align:center;
 float: right;
 }
 
-.book-appt-button {
+#book-appt-btn {
   float: right;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: .80em;
-  border: 1px solid #203451;
   padding-top: .5em;
   padding-bottom: .5em;
   padding-left: 1.5em;
   padding-right: 1.5em;
-  margin-right: -.5em;
-  margin-top: -1.5em;
-  color: #fff;
-  background-color: #203451;
-  text-fill-color: #203451;
-  transition: all 0.2s ease;
+  color: #C0C0C0;
 }
 
-#calendar_button{
-  letter-spacing: 0px;
-  margin-top:20px;
-  margin-left:18px;
+#calendar-button-div {
+  text-align: center;
+}
+
+#calendar_button {
+  font-size: .85em;
+  margin-top: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
+  letter-spacing: 2px;
+  background-color: #203451;
+  color: #fff;
+  border: 1px solid #203451;
+  transition: all 0.2s ease;
+
+}
+#simple-cal {
+  text-align: center;
+
+}
+
+
+#simple-cal a {
+  font-size:1em;
+  text-transform: uppercase;
+  font-family: "Open Sans";
+  letter-spacing: 2px;
+  color: #C0C0C0;
+  display: inline;
+  font-weight: 300;
+
+}
+
+#table-holder table {
+  width: 100%;
+}
+#simple-cal p {
+  font-weight: 300;
+  font-family: "Open Sans";
+  font-size: 2.5em;
+  display: inline;
+  letter-spacing: 2px;
+  color: #888888;
+}
+#simple-cal #previous-link {
+  float: left;
+  text-align: left;
+}
+
+#simple-cal #next-link {
+  float: right;
+  text-align: right;
 }
 
 #add_to_cart{

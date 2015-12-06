@@ -1,0 +1,36 @@
+<div class="simple-calendar">
+  <div class="row" id="simple-cal">
+  <%= link_to "Previous", start_date: date_range.first - 1.day, class: "fa fa-chevron-left", id: "previous-link" %>
+  <p><%= I18n.t("date.month_names")[start_date.month] %> <%= start_date.year %></p>
+  <%= link_to "Next", start_date: date_range.last + 1.day,class: "fa fa-chevron-right", id: "next-link" %>
+  </div>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <% date_range.slice(0, 7).each do |day| %>
+          <th class="days-of-week"><%= I18n.t("date.abbr_day_names")[day.wday] %></th>
+        <% end %>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% date_range.each_slice(7) do |week| %>
+        <tr class="calendar-day-box">
+          <% week.each do |day| %>
+            <%= content_tag :td, class: calendar.td_classes_for(day) do %>
+              <% if defined?(Haml) && block_is_haml?(block) %>
+                <% capture_haml do %>
+                  <p><% block.call day, sorted_events.fetch(day, []) %></p>
+                <% end %>
+              <% else %>
+                <p><% block.call day, sorted_events.fetch(day, []) %></p>
+              <% end %>
+            <% end %>
+          <% end %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+</div>
