@@ -660,10 +660,20 @@ border-radius: 5px;
   color: #C0C0C0;
 }
 
+.calendar-day-box td div {
+  font-size: 1em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #304770;
+  letter-spacing: 1px;
+}
+
 .days-of-week {
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-family: "Open Sans";
   font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 
