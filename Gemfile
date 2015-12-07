@@ -53,9 +53,9 @@ end
 
 group :production do
   gem 'unicorn'
-  gem 'mysql'
-  # gem 'rails_12factor'
-  # gem 'pg'
+  # gem 'mysql'
+  gem 'rails_12factor'
+  gem 'pg'
 end
 
 group :test do
