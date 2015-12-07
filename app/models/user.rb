@@ -20,7 +20,6 @@ class User < ActiveRecord::Base
 
   def booked_appointments
     booked_appointment = []
-    booked_advisor = []
     self.carts.each do |cart|
       booked_appointment.push(cart.potential_appointments.where(booked_status?: true ))
     end
