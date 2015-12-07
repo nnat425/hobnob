@@ -754,24 +754,40 @@ overflow: hidden;
   color: #C0C0C0;
   letter-spacing: 1px;
   text-transform: uppercase;
-
+  font-family: "Open Sans";
+  font-weight: 300;
 }
 
 .app_title{
   font-family: "Open Sans";
   font-weight: 300;
-  font-size: 1.25em;
+  font-size: 1.5em;
+  margin-top: 0px;
+}
+
+.app_date {
+  margin-bottom: 0px;
 }
 
 .app_price{
   font-family: "Open Sans";
   font-size: 2.5em;
+  margin-top: 1.25em;
+  font-weight: 300;
+
 }
 
-#cart_total{
-  font-size:20px;
-  text-align:center;
-  margin-top:10px;
+#cart_total {
+  margin-top: 1em;
+  text-align: right;
+}
+
+#cart_total p {
+  font-size: 1.25em;
+  font-family: "Open Sans";
+  font-weight: 300;
+  letter-spacing: 2px;
+
 }
 
 .appointment_title {
@@ -1212,23 +1228,27 @@ font-family: "Open Sans";
 #shopping-cart-container {
   padding-left: 2em;
   padding-right: 2em;
-  background-color: #F8F8F8;
+  background-color: #fff;
 }
 
 #items-holder {
   padding: 2em;
   border-radius: 10px;
   border: 1px solid #ccc;
-  background-color: #fff;
+  background-color: #F8F8F8;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 #item_in_cart {
   border-radius: 5px;
   border: 1px solid #ccc;
   padding: 1em;
-  background-color: #F8F8F8;
+  background-color: #fff;
 
 }
+
+
 
 #items-holder-header h4 {
   font-family: "Open Sans";
@@ -1236,4 +1256,18 @@ font-family: "Open Sans";
   text-transform: uppercase;
   letter-spacing: 2px;
   text-align: center;
+}
+
+#remove-appointment-link {
+  color: #C0C0C0;
+  margin-top: 3.5em;
+
+}
+
+#checkout-button {
+  border-radius: 5px;
+  letter-spacing: 2px;
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+
 }
