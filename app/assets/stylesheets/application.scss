@@ -381,9 +381,13 @@ height: 220px;
   font-family: "Open Sans";
 }
 #advisor-appointment-box {
-  margin-top: 75px;
+  margin-top: 2.5em;
+  padding: 1.5em;
 }
 
+#advisor-bio-box {
+  padding: 1.5em;
+}
 #profile-panel {
 background-color: #203451;
 padding: 2.5em;
@@ -391,14 +395,29 @@ height: 100%;
 margin-bottom: 0px;
 }
 
+#advisor-profile-container {
+  padding-bottom: 0px;
+}
+#advisor-times {
+  border-radius: 10px;
+  padding: 2em;
+  background-color: #fff;
+  border: 1px solid #C0C0C0;
+}
+
 #advisor-bio-panel {
-  background-color: #f0f1ee;
+  background-color: #F8F8F8;
   padding: 2em;
   height: 100%;
   margin-bottom: 0px;
 }
 
-
+#advisor-about {
+  background-color: #fff;
+  border: 1px solid #C0C0C0;
+  border-radius: 10px;
+  padding: 2em;
+}
 
 #advisor-profile-bio {
   text-align: center;
@@ -489,6 +508,7 @@ overflow: hidden;
   font-size: 2em;
   font-weight: 300;
   display: inline-block;
+  text-transform: uppercase;
 }
 
 #index-advisor-name {
@@ -791,6 +811,10 @@ overflow: hidden;
 
 #appointment-time-box {
   margin: 1.5em;
+  border: 1px solid #C0C0C0;
+  padding: 2em;
+  background-color: #fff;
+  border-radius: 10px;
 
 }
 
