@@ -336,11 +336,11 @@ height: 70vh;
 overflow: hidden;
 }
 
-.about_1 {
+#about-container {
 background-color:white;
 background-size: cover;
-height: 70vh;
 overflow: hidden;
+text-align: center;
 }
 
 
@@ -589,13 +589,13 @@ overflow: hidden;
   margin-left: auto;
 }
 
-#network-overview h1 {
+#about-container h1 {
   font-family: "Open Sans";
   font-weight: 300;
   color: #43c7f4;
 }
 
-#network-overview p {
+#about-container p {
   font-family: "Open Sans";
   font-size: 1.5em;
   font-weight: 300;
@@ -1237,11 +1237,25 @@ font-family: "Open Sans";
   background-color: #fff;
 }
 
-.intro-text p {
+#intro-text #header {
   font-size: 4em;
   color: #fff;
+  margin-top: 12.5%;
+  float: right;
+  font-family: "Open Sans";
+  font-weight: 300;
+  letter-spacing: 2px;
+
+}
+
+#intro-subtext p {
+  font-size: 1.5em;
+  font-family: "Open Sans";
+  color: #fff;
+  letter-spacing: 2px;
   text-align: right;
-  margin-top: 15%;
+
+
 }
 
 

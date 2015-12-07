@@ -3,19 +3,19 @@ letter-spacing: 2px;
 text-transform: uppercase;
 }
 
-.network_button {
+#network_button {
 color: #fff;
 font-size: 1rem;
 letter-spacing: 5px;
+text-transform: uppercase;
 text-fill-color: transparent;
 transition: all 0.2s ease;
-}
-
-#get_networking{
 margin-top:2em;
-border:solid white 3px;
-padding: 1em;
-text-align:center;
+border:solid white 2px;
+padding-left: 2.5em;
+padding-right: 2.5em;
+padding-top: 1em;
+padding-bottom: 1em;
 float: right;
 }
 

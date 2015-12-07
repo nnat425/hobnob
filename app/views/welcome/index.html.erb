@@ -1,8 +1,14 @@
 
 <div class="container">
   <div class="parallax-background">
-    <div class="intro-text">
-      <p>HOB NOB</p>
+    <div class="row">
+      <div class="small-12 medium-12 large-12 columns" id="intro-text">
+        <p id="header">HOB NOB</p>
+      </div>
+      <div class="small-6 medium-6 large-6 columns" id="intro-subtext">
+        <p>Empowering individuals to make strong career decisions today and in the future</p>
+        <%= link_to "Get Networking", advisors_path, id: "network_button" %>
+      </div>
     </div>
   </div>
 
@@ -65,18 +71,18 @@
       <div class="small-10 small-centered medium-10 medium-centered large-9 large-centered columns">
         <p class="page-text"> Services</p>
         <p class="more-info">Tailored to meet your career needs. Find out how to differentiate yourself in a competitive environment.</p>
-        <p class="more-info">If you are a student or are just starting your Finance career and want to understand different opportunities within Finance or want to know how to differentiate yourself in a competitive environment, click <%= link_to "Network Overview", "/network_overview" %></p>
+        <p class="more-info">If you are a student or are just starting your Finance career and want to understand different opportunities within Finance or want to know how to differentiate yourself in a competitive environment, click <%= link_to "Network Overview", "/about" %></p>
       </div>
 
       <div class="small-10 small-centered medium-10 medium-centered large-9 large-centered columns">
         <p class="page-text">The Network</p>
         <p class="more-info">A network of finance professionals that have volunteered their time and expertise to speak with you about your career.</p>
-        <p class="more-info">Our Finance Professionals are prepared to answer questions in many different areas of Finance and on various different topics. A portion of each connect session will be donated to a charity of their choice. Help support the community we live in by meeting those in our Network today! To start, click <%= link_to "Get Networking" %></p>
+        <p class="more-info">Our Finance Professionals are prepared to answer questions in many different areas of Finance and on various different topics. A portion of each connect session will be donated to a charity of their choice. Help support the community we live in by meeting those in our Network today!</p>
       </div>
 
       <div class="small-10 small-centered medium-10 medium-centered large-9 large-centered columns">
         <p class="page-text">Getting Connected</p>
-        <p class="more-info">Search through our Network for the professional with the information you need. After reviewing what they have to offer, check for available dates, times and fees. To schedule your conversation, click <%= link_to "Get Connected" %></p>
+        <p class="more-info">Search through our Network for the professional with the information you need. After reviewing what they have to offer, check for available dates, times and fees. To schedule your conversation, click <%= link_to "Get Connected", advisors_path %></p>
       </div>
 
     </div>
