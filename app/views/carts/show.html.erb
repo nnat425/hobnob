@@ -19,25 +19,25 @@
     <% end %>
     <% @cart.potential_appointments.each do |appointment|  %>
     <div id='item_in_cart' class='row'>
-      <div class="small-2 medium-2 large-2 columns">
+      <div class="small-12 medium-2 large-2 columns">
         <div class='row' id="advisor-index-avatar">
           <%= image_tag appointment.advisor.avatar.url(:medium) %>
         </div>
         <h3 id='advisor_name_cart'><%= appointment.advisor.firstname %></h3>
       </div>
-      <div id='item_info' class='small-7 medium-7 large-7 columns'>
+      <div id='item_info' class='small-12 medium-7 large-7 columns'>
         <p class="app_date"><%= appointment.start_time.strftime("%A, %B %d, %Y") %></p>
         <h4 class="app_title"><%= appointment.title %></h4>
         <p><%= appointment.start_time.strftime("%l:%M %p") %><%= appointment.end_time.strftime(" to %l:%M %p") %></p>
       </div>
-      <div class='small-2 medium-2 large-2 columns'>
+      <div class='small-8 medium-2 large-2 columns'>
         <% if current_user.student == true %>
         <p class='app_price'> <%='$' + appointment.advisor.student_price.to_s %></p>
         <% else %>
         <p class='app_price'> <%='$' + appointment.advisor.regular_price.to_s %></p>
         <% end %>
       </div>
-      <div class="small-1 medium-1 large-1 columns">
+      <div class="small-4 medium-1 large-1 columns">
         <%= link_to " ", {:controller => 'carts', :action => 'destroy', :potential_appointment => appointment.id}, :method => :delete, class: "fa fa-trash fa-lg", id: "remove-appointment-link" %>
       </div>
     </div>

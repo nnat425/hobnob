@@ -915,11 +915,17 @@ display:none;
   font-size:0.8em;
 }
 
-#order_p{
+#order_p {
   color: #203451;
+  font-weight: 300;
   font-family: "Open Sans";
-  font-size: 1em;
+  font-size: 2em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   border-bottom: solid 1px #C0C0C0;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  padding-bottom: 1em;
 
 }
 
@@ -969,7 +975,7 @@ height: 100%;
 
 #checkout-container {
   text-align: center;
-  background-color: #f0f1ee;
+  background-color: #F8F8F8;
 }
 
 .advisor-checkout-avatar {
@@ -985,26 +991,44 @@ height: 100%;
 
 }
 
-.order-info-label{
+#order-info-label {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+#order-info-label label {
   float: right;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: .8em;
-  margin-top: .3em;
   color: #505050;
+  margin-top: 0px;
+  margin-bottom: 0px;
+
 }
 
-.order-info {
+#order-info {
+  margin-top: 0px;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 0px;
+}
+
+#order-info p {
   float: left;
   font-family: "Open Sans";
   font-size: 1.1em;
   font-weight: 300;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 #order_item {
-  padding-left: 1em;
-  padding-right: 1em;
-  border-bottom: 1px solid #C0C0C0;
+  margin: 1em;
+  padding: 1.5em;
+  border: 1px solid #C0C0C0;
+  border-radius: 5px;
 
 }
 
@@ -1024,8 +1048,9 @@ height: 100%;
 }
 
 #order-total p {
-  font-size: 1.5em;
+  font-size: 2em;
   font-family: "Open Sans";
+  font-weight: 300;
 
 }
 
