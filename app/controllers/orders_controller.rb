@@ -17,7 +17,6 @@ class OrdersController < ApplicationController
         AdminMailer.confirmation_email(current_user,appointment).deliver_now
       end
         current_user.carts.create
-        redirect_to
         render template: "success"
       else
         render template: "failure"

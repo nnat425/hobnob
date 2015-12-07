@@ -34,8 +34,12 @@ def total_price_regular
 end
 
 def update_booked_status
-  self.potential_appointments.each {|potential_appointment| potential_appointment.update(booked_status?: true)}
+  self.potential_appointments.each do|potential_appointment|
+    potential_appointment.update(booked_status?: true)
+    potential_appointment.carts.where(checked_out?: false).each {|appointment| appointment.destroy}
+  end
 end
+
 
 def check_booked_status
   boolean_array = []
