@@ -9,7 +9,6 @@ font-size: 1rem;
 letter-spacing: 5px;
 text-transform: uppercase;
 text-fill-color: transparent;
-transition: all 0.2s ease;
 margin-top:2em;
 border:solid white 2px;
 padding-left: 2.5em;
@@ -17,6 +16,13 @@ padding-right: 2.5em;
 padding-top: 1em;
 padding-bottom: 1em;
 float: right;
+margin-right: 3em;
+}
+
+#network_button:hover {
+  background-color: #2996cc;
+  transition: all 0.2s ease;
+  border: solid #2996cc 2px;
 }
 
 #book-appt-btn {
@@ -82,8 +88,19 @@ float: right;
   text-align: right;
 }
 
-#add_to_cart{
-letter-spacing: 0px;
+
+#add_to_cart {
+  background: none;
+  border: 1px solid #203451;
+  color: #203451;
+  border-radius: 10px;
+}
+
+#add_to_cart:hover {
+  background-color: #000;
+  transition: all 0.2s ease;
+  border: solid black 1px;
+  color: #fff;
 }
 
 #create-appointment-btn {

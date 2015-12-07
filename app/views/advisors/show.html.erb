@@ -136,7 +136,7 @@
             <% if session[:class_type] != "Advisor" %>
               <%= form_for @advisor, url: cart_path, method: "patch" do |f| %>
                 <%= f.hidden_field :appointment_id, :value => pot_appointment.id %>
-                <%= f.submit "add", {:class => "fa fa-cart-plus", :id => "add_to_cart"} %>
+                <%= f.submit "Get Connected", {:class => "button", :id => "add_to_cart"} %>
               <% end %>
             <% end %>
           </div>

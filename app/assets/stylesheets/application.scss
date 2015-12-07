@@ -589,12 +589,6 @@ overflow: hidden;
   margin-left: auto;
 }
 
-#about-container h1 {
-  font-family: "Open Sans";
-  font-weight: 300;
-  color: #43c7f4;
-}
-
 #about-container p {
   font-family: "Open Sans";
   font-size: 1.5em;
@@ -720,9 +714,7 @@ font-weight: 300;
   color:red;
 }
 
-#add_to_cart {
-  background: none;
-}
+
 #cart_page{
 background-color:white;
 background-size:cover;
@@ -1209,11 +1201,18 @@ font-family: "Open Sans";
   border-radius: 10px;
   padding-left: 2.5em;
   padding-right: 2.5em;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
 }
 
 #search-advisors-link a {
-  background-color: #282828;
+  background-color: #2996cc;
+  letter-spacing: 2px;
+}
 
+#search-advisors-link a:hover {
+  background-color: #000;
+  transition: all .3s ease-in-out;
 }
 
 .parallax-background {
@@ -1238,13 +1237,14 @@ font-family: "Open Sans";
 }
 
 #intro-text #header {
-  font-size: 4em;
+  font-size: 4.5em;
   color: #fff;
   margin-top: 12.5%;
   float: right;
   font-family: "Open Sans";
   font-weight: 300;
   letter-spacing: 2px;
+  margin-right: 1em;
 
 }
 
@@ -1254,6 +1254,7 @@ font-family: "Open Sans";
   color: #fff;
   letter-spacing: 2px;
   text-align: right;
+  margin-right: 2em;
 
 
 }
@@ -1319,6 +1320,7 @@ font-family: "Open Sans";
   padding-top: 1.5em;
   padding-bottom: 1.5em;
   letter-spacing: 2px;
+  background-color: #2996cc;
 }
 
 #learn-more {
