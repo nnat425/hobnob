@@ -1,0 +1,1 @@
+$(document).ready(function(){$("#user_program").hide(),$("#grad_date").hide(),$("#user_school").hide(),$("#yes-no").on("click",function(){$("#user_program").slideToggle(),$("#grad_date").slideToggle(),$("#user_school").slideToggle()}),$(".learn-toggle").hide(),$("#learn-more").on("click","#home-learn-link",function(e){e.preventDefault(),$(".learn-toggle").fadeToggle()})});
