@@ -9,29 +9,13 @@ $(document).ready(function(){
     $("#user_school").slideToggle();
   });
 
-  $(".search-toggle").hide();
-  $(".schedule-toggle").hide();
-  $(".connect-toggle").hide();
+  $(".learn-toggle").hide();
 
-  $("#home-search-link").on("click", function(event) {
+  $("#learn-more").on("click", "#home-learn-link", function(event) {
     event.preventDefault();
-    $(".search-toggle").fadeIn();
-    $(".schedule-toggle").hide();
-    $(".connect-toggle").hide();
+    $(".learn-toggle").fadeToggle();
   });
 
-  $("#home-schedule-link").on("click", function(event) {
-    event.preventDefault();
-    $(".search-toggle").hide();
-    $(".schedule-toggle").fadeIn();
-    $(".connect-toggle").hide();
-  });
 
-  $("#home-connect-link").on("click", function(event) {
-    event.preventDefault();
-    $(".search-toggle").hide();
-    $(".schedule-toggle").hide();
-    $(".connect-toggle").fadeIn();
-  });
 });
 

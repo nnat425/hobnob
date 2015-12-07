@@ -1,9 +1,12 @@
+
 <div class="container">
   <div class="parallax-background">
     <div class="intro-text">
-      <p><i class="fi-arrow-down"></i></p>
+      <p>HOB NOB</p>
     </div>
   </div>
+
+
 
   <div class="parallax-content">
 
@@ -12,41 +15,51 @@
     <div class="row" id="search-advisors-link">
       <%= link_to "Search Advisors", advisors_path, class: "button", id: "search-advisors-link" %>
     </div>
-    <div class="small-12 medium-12 large-4 columns" id="home-small-box">
-      <div class="home-subheader">
-        <h1><i class="fa fa-users fa-lg"></i></h1>
-        <h3>Search our Network </h3>
-        <p>Start searching our exclusive network for a professional that has the information you are seeking.</p>
-        <%= link_to "More", root_path, class: "learn-more", id: "home-search-link" %>
+    <div class="row">
+      <div class="small-12 medium-12 large-4 columns" id="home-small-box">
+        <div class="home-subheader">
+          <h1><i class="fa fa-users fa-lg"></i></h1>
+          <h3>Search our Network </h3>
+          <p>Start searching our exclusive network for a professional that has the information you are seeking.</p>
+        </div>
+      </div>
+
+      <div class="small-12 medium-12 large-4 columns" id="home-small-box">
+        <div class="home-subheader">
+          <h1><i class="fa fa-calendar-plus-o fa-lg"></i></h1>
+          <h3>Schedule an Appointment</h3>
+          <p>Select a professional you would like to speak with and see what times work for you.</p>
+        </div>
+      </div>
+      <div class="small-12 medium-12 large-4 columns" id="home-small-box">
+        <div class="home-subheader">
+          <h1><i class="fa fa-phone fa-lg"></i></h1>
+          <h3>Get Connected</h3>
+          <p>Speak with a professional about a finance topic of your choice.</p>
+        </div>
       </div>
     </div>
-    <div class="small-12 medium-12 large-4 columns" id="home-small-box">
-      <div class="home-subheader">
-        <h1><i class="fa fa-calendar-plus-o fa-lg"></i></h1>
-        <h3>Schedule an Appointment</h3>
-        <p>Select a professional you would like to speak with and see what times work for you.</p>
-        <%= link_to "More", root_path, class: "learn-more", id: "home-search-link" %>
+    <div class="row" id="learn-more">
+      <p>For step by step directions, click MORE below:</p>
+      <%= link_to "More", root_path, class: "button", id: "home-learn-link" %>
+    </div>
+    <div class="row">
+      <div class="small-12 medium-12 large-12 columns" id="home-toggle-info">
+        <div class="row">
+          <h1 class="learn-toggle">1. Search our Network</h1>
+          <p class="learn-toggle">There are 5 main categories of Finance Professional with a brief outline of roles within that area. If you are just starting your career, we recommend that you speak with professionals that have 1-5 years of experience. These professionals have an excellent idea of some of the challenges you will face. If you are writing your resume or want to be as prepared as possible for an interview, we have experts on the Network that specialize in resume writing and intensive 1 on 1 interview preparation.</p>
+        </div>
+        <div class="row">
+
+          <h1 class="learn-toggle">2. Schedule an Appointment </h1>
+          <p class="learn-toggle">Spend time reviewing the Network and see what the professionals have to offer. We carefully selected these professionals based upon their experience and background. Select one or a few professionals that can provide you with the career answers you need to make the best decision possible.</p>
+        </div>
+        <div class="row">
+          <h1 class="learn-toggle">3. Get Connected</h1>
+          <p class="learn-toggle">Once you have identified professionals to speak with, you will click the GET CONNECTED button. This will bring you to the payment page. Each professional has provided dates and times when they are available. If you don’t see a date or time, then select another professional or add your name to the waiting list. Working in Finance requires time and commitment. Please respect the professional’s privacy and work within their schedule. Everyone on the Network wants to speak with you. Please be patient.</p>
+        </div>
       </div>
     </div>
-    <div class="small-12 medium-12 large-4 columns" id="home-small-box">
-      <div class="home-subheader">
-        <h1><i class="fa fa-phone fa-lg"></i></h1>
-        <h3>Get Connected</h3>
-        <p>Speak with a professional about a finance topic of your choice.</p>
-        <%= link_to "More", root_path, class: "learn-more", id: "home-search-link" %>
-      </div>
-    </div>
-
-    <div class="small-12 medium-12 large-12 columns" id="home-toggle-info">
-      <h1 class="search-toggle">Search our Network</h1>
-      <p class="search-toggle">There are 5 main categories of Finance Professional with a brief outline of roles within that area. If you are just starting your career, we recommend that you speak with professionals that have 1-5 years of experience. These professionals have an excellent idea of some of the challenges you will face. If you are writing your resume or want to be as prepared as possible for an interview, we have experts on the Network that specialize in resume writing and intensive 1 on 1 interview preparation.</p>
-
-      <h1 class="schedule-toggle">Schedule an Appointment </h1>
-      <p class="schedule-toggle">Spend time reviewing the Network and see what the professionals have to offer. We carefully selected these professionals based upon their experience and background. Select one or a few professionals that can provide you with the career answers you need to make the best decision possible.</p>
-      <h1 class="connect-toggle">Get Connected</h1>
-      <p class="connect-toggle">Once you have identified professionals to speak with, you will click the GET CONNECTED button. This will bring you to the payment page. Each professional has provided dates and times when they are available. If you don’t see a date or time, then select another professional or add your name to the waiting list. Working in Finance requires time and commitment. Please respect the professional’s privacy and work within their schedule. Everyone on the Network wants to speak with you. Please be patient.</p>
-    </div>
-
     <div class="row" id="home-info-box">
 
       <div class="small-10 small-centered medium-10 medium-centered large-9 large-centered columns">
@@ -65,6 +78,9 @@
         <p class="page-text">Getting Connected</p>
         <p class="more-info">Search through our Network for the professional with the information you need. After reviewing what they have to offer, check for available dates, times and fees. To schedule your conversation, click <%= link_to "Get Connected" %></p>
       </div>
+
     </div>
-</div>
+
+
+  </div>
 </div>
