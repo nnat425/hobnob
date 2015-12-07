@@ -730,10 +730,7 @@ height:25vh;
 overflow: hidden;
 }
 
-#cart_header{
-  border-bottom:solid grey 1px;
-  width:1300px;
-}
+
 
 #item_in_cart{
   margin-top:20px;
@@ -742,21 +739,33 @@ overflow: hidden;
 }
 
 #advisor_name_cart{
-text-align:center;
+  font-size: 1.5em;
+  font-family: "Open Sans";
+  text-align: center;
+
 }
 
 #item_info{
-  float:left;
-  margin-right:180px;
-  margin-top:60px;
+  margin-top: 2em;
 }
 
-#app_title{
-margin-left:0px;
+#item_info p {
+  font-size: 1em;
+  color: #C0C0C0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+}
+
+.app_title{
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: 1.25em;
 }
 
 .app_price{
-margin-left:40px;
+  font-family: "Open Sans";
+  font-size: 2.5em;
 }
 
 #cart_total{
@@ -1191,4 +1200,40 @@ font-family: "Open Sans";
   top: 600px;
   padding: 50px;
   background-color: #fff;
+}
+
+
+#shopping-cart-header h1 {
+  font-family: "Open Sans";
+  font-weight: 300;
+  text-align: center;
+}
+
+#shopping-cart-container {
+  padding-left: 2em;
+  padding-right: 2em;
+  background-color: #F8F8F8;
+}
+
+#items-holder {
+  padding: 2em;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+#item_in_cart {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 1em;
+  background-color: #F8F8F8;
+
+}
+
+#items-holder-header h4 {
+  font-family: "Open Sans";
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
 }
