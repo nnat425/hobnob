@@ -1216,10 +1216,9 @@ font-family: "Open Sans";
 
 }
 
-
 .parallax-background {
   background: url("http://cmcc.flywheelsites.com/cyp/wp-content/uploads/sites/7/2014/04/meeting-cyp-2.jpg");
-  height: 100%;
+  height: 800px;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -1229,19 +1228,20 @@ font-family: "Open Sans";
   width: 100%;
 }
 
-.intro-text {
-  font-size: 50px;
-  color: #fff;
-  text-align: center;
-  margin-top: 15%;
-}
 
 .parallax-content {
   max-width: 100%;
   position: relative;
-  top: 600px;
+  top: 700px;
   padding: 50px;
   background-color: #fff;
+}
+
+.intro-text p {
+  font-size: 4em;
+  color: #fff;
+  text-align: right;
+  margin-top: 15%;
 }
 
 
@@ -1296,4 +1296,25 @@ font-family: "Open Sans";
   padding-left: 2.5em;
   padding-right: 2.5em;
 
+}
+
+#home-learn-link {
+  border-radius: 10px;
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  letter-spacing: 2px;
+}
+
+#learn-more {
+  margin-top: 2.5em;
+  text-align: center;
+}
+
+#learn-more p {
+  font-family: "Open Sans";
+  font-weight: 300;
+  letter-spacing: 2px;
+  font-size: 1.5em;
 }
