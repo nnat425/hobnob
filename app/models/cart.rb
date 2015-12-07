@@ -36,7 +36,7 @@ end
 def update_booked_status
   self.potential_appointments.each do|potential_appointment|
     potential_appointment.update(booked_status?: true)
-    potential_appointment.carts.where(checked_out?: false).each {|appointment| appointment.destroy}
+    potential_appointment.carts.where(checked_out?: false).each {|cart| cart.potential_appointments.delete(potential_appointment)}
   end
 end
 
