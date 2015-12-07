@@ -381,24 +381,43 @@ height: 220px;
   font-family: "Open Sans";
 }
 #advisor-appointment-box {
-  margin-top: 75px;
+  margin-top: 2.5em;
+  padding: 1.5em;
 }
 
+#advisor-bio-box {
+  padding: 1.5em;
+}
 #profile-panel {
-background-color: #203451;
+background-color: #202020;
 padding: 2.5em;
 height: 100%;
 margin-bottom: 0px;
 }
 
+#advisor-profile-container {
+  padding-bottom: 0px;
+}
+#advisor-times {
+  border-radius: 10px;
+  padding: 2em;
+  background-color: #fff;
+  border: 1px solid #C0C0C0;
+}
+
 #advisor-bio-panel {
-  background-color: #f0f1ee;
+  background-color: #F8F8F8;
   padding: 2em;
   height: 100%;
   margin-bottom: 0px;
 }
 
-
+#advisor-about {
+  background-color: #fff;
+  border: 1px solid #C0C0C0;
+  border-radius: 10px;
+  padding: 2em;
+}
 
 #advisor-profile-bio {
   text-align: center;
@@ -413,25 +432,22 @@ margin-bottom: 0px;
   font-size: 2.5em;
   margin-bottom: 0em;
   text-align: center;
-  font-weight: 400;
+  font-weight: 300;
+  font-family: "Open Sans";
   color: #fff;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
+
 }
 
 #advisor-title-profile-page {
-  font-size: 1.5em;
+  font-size: 1.25em;
   margin-bottom: 0em;
-  font-weight: 400;
+  font-weight: 300;
+  font-family: "Open Sans";
   letter-spacing: 2px;
   color: #C0C0C0;
 }
 
-#advisor-location-profile-page {
-  font-size: 1.0em;
-  color: #C0C0C0;
-  font-weight: 300;
-  letter-spacing: 1px;
-}
 #profile-panel p {
   font-family: "Open Sans";
 }
@@ -489,6 +505,7 @@ overflow: hidden;
   font-size: 2em;
   font-weight: 300;
   display: inline-block;
+  text-transform: uppercase;
 }
 
 #index-advisor-name {
@@ -587,12 +604,6 @@ overflow: hidden;
   margin-bottom: 1em;
   margin-right: auto;
   margin-left: auto;
-}
-
-#about-container h1 {
-  font-family: "Open Sans";
-  font-weight: 300;
-  color: #43c7f4;
 }
 
 #about-container p {
@@ -720,9 +731,7 @@ font-weight: 300;
   color:red;
 }
 
-#add_to_cart {
-  background: none;
-}
+
 #cart_page{
 background-color:white;
 background-size:cover;
@@ -799,6 +808,10 @@ overflow: hidden;
 
 #appointment-time-box {
   margin: 1.5em;
+  border: 1px solid #C0C0C0;
+  padding: 2em;
+  background-color: #fff;
+  border-radius: 10px;
 
 }
 
@@ -819,7 +832,7 @@ overflow: hidden;
 }
 
 #advisor-consultation-price-box {
-  text-align: center;
+  float: right;
 }
 
 #advisor-consultation-price-box p {
@@ -829,15 +842,13 @@ overflow: hidden;
 #advisor-consultation-price-box .dollar-sign {
   font-weight: 500;
   color: #C0C0C0;
-  margin-top: -57px;
 
 }
 
 .advisor-consultation-price {
-  font-size: 4em;
+  font-size: 3.0em;
   font-family: "Open Sans";
   font-weight: 200;
-  margin-bottom: 0px;
   color: #C0C0C0;
 }
 
@@ -1120,7 +1131,7 @@ margin-bottom: .5em;
 
 .appointment-date {
 
-  border: 1px solid #004b7e;
+  border: 1px solid #C0C0C0;
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -1128,10 +1139,11 @@ margin-bottom: .5em;
   width: 100px;
   text-align: center;
   padding: auto;
+  background-color: #fff;
 }
 
 .appointment-date .appointment-day {
-  color: #004b7e;
+  color: #404040;
   font-size: 2.5em;
   font-family: "Open Sans";
   font-weight: 300;
@@ -1160,7 +1172,7 @@ margin-bottom: .5em;
 
 }
 .appointment-date .appointment-month {
-  color: #004b7e;
+  color: #404040;
   margin-top: -.7em;
   text-transform: uppercase;
   font-size: .8em;
@@ -1209,11 +1221,18 @@ font-family: "Open Sans";
   border-radius: 10px;
   padding-left: 2.5em;
   padding-right: 2.5em;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
 }
 
 #search-advisors-link a {
-  background-color: #282828;
+  background-color: #2996cc;
+  letter-spacing: 2px;
+}
 
+#search-advisors-link a:hover {
+  background-color: #000;
+  transition: all .3s ease-in-out;
 }
 
 .parallax-background {
@@ -1238,13 +1257,14 @@ font-family: "Open Sans";
 }
 
 #intro-text #header {
-  font-size: 4em;
+  font-size: 4.5em;
   color: #fff;
   margin-top: 12.5%;
   float: right;
   font-family: "Open Sans";
   font-weight: 300;
   letter-spacing: 2px;
+  margin-right: 1em;
 
 }
 
@@ -1254,6 +1274,7 @@ font-family: "Open Sans";
   color: #fff;
   letter-spacing: 2px;
   text-align: right;
+  margin-right: 2em;
 
 
 }
@@ -1319,6 +1340,7 @@ font-family: "Open Sans";
   padding-top: 1.5em;
   padding-bottom: 1.5em;
   letter-spacing: 2px;
+  background-color: #2996cc;
 }
 
 #learn-more {
