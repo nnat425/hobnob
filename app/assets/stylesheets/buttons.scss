@@ -117,8 +117,21 @@ background-color: #000;
 }
 
 #advisor-search-btn {
-  float: right;
-  background: none;
+  background-color: #2996cc;
+  font-weight: 300;
+  letter-spacing: 2px;
+  border-radius: 10px;
+  border: 1px solid #2996cc;
+  color: #fff;
+  margin-top: 2em;
+
+}
+
+#advisor-search-btn:hover {
+  background-color: #000;
+  transition: all 0.2s ease;
+  border: solid black 1px;
+  color: #fff;
 }
 
 #profile-edit-appointment {

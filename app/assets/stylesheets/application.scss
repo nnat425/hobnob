@@ -357,6 +357,7 @@ padding: 1em;
 display: inline-block;
 height: 220px;
 
+
 }
 
 
@@ -545,43 +546,62 @@ overflow: hidden;
 
 #left-category-bar {
   background-color: #202020;
+  text-align: center;
+  padding: 2em;
 
 }
 .advisors-filter-subheader {
   margin-top: 1em;
   margin-bottom: 1em;
+
 }
 
 .advisors-filter-subheader p {
   font-family: "Open Sans";
   color: #C0C0C0;
-  font-size: 1.5em;
+  font-size: 1.25em;
   font-weight: 300;
   display: inline;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 
 }
 
 
 .index-categories-list {
-  display: block;
-  padding: 1.2em;
+  display: inline-block;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  padding-left: 2em;
+  padding-right: 2em;
   letter-spacing: 2px;
   font-family: "Open Sans";
   font-size: 1em;
-  border-left: 1px solid #C0C0C0;
+  border-radius: 10px;
+  background-color: #282828;
   color: #C0C0C0;
   text-transform: uppercase;
+  margin: .5em;
+  position: relative;
 }
 
-.index-categories-list p {
-  display: inline;
+.index-categories-list label {
   font-size: .85em;
+  display: inline;
+  margin-top: 1em;
+  margin-bottom: 1.5em;
+  color: #fff;
+
 }
 
+.index-categories-list input[type="checkbox"] {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
 .advisors-filter-checkbox {
-  float: right;
-  width: 2em;
-  height: 2em;
+  width: 1.75em;
+  height: 1.75em;
+
 }
 
 #advisor-index-avatar {
@@ -1172,7 +1192,7 @@ margin-bottom: .5em;
 }
 
 #advisors-index-container {
-  background-color: #f0f1ee;
+  background-color: #F8F8F8;
 
 }
 
@@ -1207,6 +1227,20 @@ font-family: "Open Sans";
   transition: all .3s ease-in-out;
   border-bottom: 2px solid #C0C0C0;
 }
+
+#edit-panel {
+background-color: #fff;
+border: 1px solid #ccc;
+padding: 15px;
+margin: auto;
+margin-top: 1em;
+margin-bottom: 1em;
+padding-top: 2em;
+-webkit-box-shadow: 4px 4px 4px 0px #ccc;
+-moz-box-shadow:    4px 4px 4px 0px #ccc;
+box-shadow:         4px 4px 4px 0px #ccc;
+}
+
 
 #search-advisors-link {
   text-align: center;
@@ -1357,4 +1391,9 @@ font-family: "Open Sans";
   font-weight: 300;
   letter-spacing: 2px;
   font-size: 1.5em;
+}
+
+#advisors-list {
+  padding-right: auto;
+  padding-left: auto;
 }
