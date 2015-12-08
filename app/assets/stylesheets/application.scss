@@ -480,13 +480,6 @@ margin-bottom: 0px;
   letter-spacing: 1px;
 }
 
-.login_pic{
-background: url("login.jpg") no-repeat center center;
-background-size: cover;
-height: 60vh;
-overflow: hidden;
-}
-
 
 
 .advisor-categories-list {
@@ -551,7 +544,7 @@ overflow: hidden;
 }
 
 #left-category-bar {
-  background-color: #203451;
+  background-color: #202020;
 
 }
 .advisors-filter-subheader {
@@ -1235,36 +1228,46 @@ font-family: "Open Sans";
   transition: all .3s ease-in-out;
 }
 
-.parallax-background {
-  background: url("http://cmcc.flywheelsites.com/cyp/wp-content/uploads/sites/7/2014/04/meeting-cyp-2.jpg");
+.hero {
+  background:
+  linear-gradient(transparent, black 90%),
+  linear-gradient(0deg, #fff, transparent),url("/assets/city_header5.jpg");
   height: 800px;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  position: fixed;
   width: 100%;
 }
 
 
 .parallax-content {
   max-width: 100%;
-  position: relative;
-  top: 700px;
   padding: 50px;
   background-color: #fff;
+}
+
+#intro-text {
+  margin-top: 5em;
+  text-align: center;
+  margin-bottom: 2em;
+
+}
+
+#intro-subtext {
+  text-align: center;
+
 }
 
 #intro-text #header {
   font-size: 4.5em;
   color: #fff;
   margin-top: 12.5%;
-  float: right;
   font-family: "Open Sans";
   font-weight: 300;
   letter-spacing: 2px;
-  margin-right: 1em;
+
 
 }
 
@@ -1273,8 +1276,9 @@ font-family: "Open Sans";
   font-family: "Open Sans";
   color: #fff;
   letter-spacing: 2px;
-  text-align: right;
-  margin-right: 2em;
+  margin-bottom: 3em;
+  font-weight: 300;
+  margin-top: 3em;
 
 
 }
