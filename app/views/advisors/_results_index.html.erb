@@ -2,44 +2,51 @@
 <p id="no-matches-message">Sorry, there were no advisors that matched your search!</p>
 <% else %>
 <% @advisors.each do |advisor| %>
-<div class="panel " id="advisor-index-panel">
+
+<div class="small-12 medium-12 large-4 columns" id="advisor-index-panel">
   <div class="row">
     <div class="small-4 medium-3 large-3 columns">
-      <div id="advisor-index-avatar">
+      <div class="row" id="advisor-index-avatar">
         <%= image_tag advisor.avatar.url(:medium) %>
       </div>
     </div>
     <div class="small-8 medium-9 large-9 columns">
-      <div class-"row" id="index-advisor-info">
-        <div class="small-6 medium-6 large-6 columns">
-          <p id="index-advisor-name"><%= advisor.firstname %></p>
+      <div class-"row">
+        <div class="small-6 medium-6 large-6 columns" id="index-advisor-name">
+          <p><%= advisor.firstname %></p>
         </div>
         <div class="small-6 medium-6 large-6 columns" id="advisor-index-price">
           <% if logged_in? && current_user%>
-          <p class="advisor-price-number">$
             <% if current_user.student == true %>
-            <%= advisor.student_price %>
+            <p class="advisor-price-number">$<%= advisor.student_price %></p>
             <p class="advisor-price-session"> per session</p>
             <% else %>
-            <%= advisor.regular_price %></p>
+            <p class="advisor-price-number">$<%= advisor.regular_price %></p>
             <p class="advisor-price-session"> per session</p>
             <% end %>
-            <% end %>
-          </div>
-          <div class="small-12 medium-12 large-12 columns">
-            <p><%= advisor.current_title %> | <%= advisor.location %></p>
-          </div>
-          <div class="small-12 medium-12 large-12 columns" id="index-advisor-services">
+          <% end %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-12 medium-12 large-12 columns" id="index-advisor-title-location">
+          <p><%= advisor.current_title %> | <%= advisor.location %></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-12 medium-12 large-12 columns" id="index-advisor-services">
             <% advisor.categories.each do |category| %>
             <p><%= category.name %></p>
             <% end %>
-          </div>
         </div>
       </div>
     </div>
-    <div class="small-11 medium-12 large-12 columns">
-      <%= link_to "", advisor_path(advisor), class: "fa fa-calendar-o fa-lg", id: "book-appt-btn" %>
+    <div class="row">
+      <div class="small-11 medium-12 large-12 columns">
+        <%= link_to "", advisor_path(advisor), class: "fa fa-calendar-o fa-lg", id: "book-appt-btn" %>
+      </div>
     </div>
   </div>
+</div>
   <% end %>
+
   <% end %>
