@@ -25,9 +25,11 @@ $background-color: black;
 $primary-color: #87D37C;
 
 body {
-  background: #ffffff;
-  z-index: 0;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !important;
+
 }
+
+
 
 .body-container {
  z-index: 1;
@@ -54,6 +56,9 @@ display: inline-block;
 a {
 color: #fff;
 padding-bottom: 0.5rem;
+text-transform: uppercase;
+letter-spacing: 2px;
+font-size: .85em;
 
 &:hover {
 color: #43c7f4;
@@ -99,11 +104,6 @@ margin-left: .2rem;
 
 a { padding: 0.75rem 1rem;}
 
-a.signup {
-font-weight: bold;
-background-color: scale-color($background-color, $lightness: 10%);
-border-radius: 3px;
-}
 }
 }
 
@@ -1271,25 +1271,28 @@ box-shadow:         4px 4px 4px 0px #ccc;
 .hero {
   background:
   linear-gradient(transparent, black 90%),
-  linear-gradient(0deg, #fff, transparent),url("/assets/city_header5.jpg");
-  height: 800px;
+  url("/assets/meeting_header1.png");
+  height: 100%;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   width: 100%;
+  position: fixed;
 }
-
 
 .parallax-content {
   max-width: 100%;
   padding: 50px;
   background-color: #fff;
+  position: relative;
+  top: 850px;
+
 }
 
 #intro-text {
-  margin-top: 5em;
+  margin-top: 2.5em;
   text-align: center;
   margin-bottom: 2em;
 
@@ -1301,7 +1304,7 @@ box-shadow:         4px 4px 4px 0px #ccc;
 }
 
 #intro-text #header {
-  font-size: 4.5em;
+  font-size: 5.5em;
   color: #fff;
   margin-top: 12.5%;
   font-family: "Open Sans";
@@ -1386,6 +1389,13 @@ box-shadow:         4px 4px 4px 0px #ccc;
   letter-spacing: 2px;
   background-color: #2996cc;
 }
+
+#home-learn-link:hover {
+  background-color: #202020;
+  color: #fff;
+  transition: all 0.4s ease;
+}
+
 
 #learn-more {
   margin-top: 2.5em;
