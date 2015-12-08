@@ -349,12 +349,10 @@ margin-top: 10px;
 margin-bottom: 10px;
 background-color: #fff;
 border: 1px solid #ccc;
--webkit-box-shadow: 1px 1px 1px 0px #ccc;
--moz-box-shadow:    1px 1px 1px 0px #ccc;
-box-shadow:         1px 1px 1px 0px #ccc;
 padding: 1em;
 display: inline-block;
 height: 220px;
+border-radius: 5px;
 
 
 }
@@ -369,12 +367,21 @@ height: 220px;
   color: #2f5287;
 }
 
+
 #index-advisor-services p {
-  font-size: .8em;
+  font-size: .85em;
   display: inline;
+  font-family: "Open Sans";
+  text-transform: uppercase;
+  color: #C0C0C0;
 
 }
 
+#index-advisor-title-location p {
+  font-family: "Open Sans";
+  letter-spacing: 1px;
+
+}
 #advisor-index-price .advisor-price-session {
   color: #C0C0C0;
   font-size: .5em;
@@ -502,10 +509,15 @@ margin-bottom: 0px;
 }
 
 #index-advisor-name {
+  display: inline-block;
+  margin-left: 0px;
+}
+#index-advisor-name p {
   font-family: "Open Sans";
   font-size: 1.5em;
   letter-spacing: 1px;
-  display: inline-block;
+  font-weight: 300;
+
 }
 
 #page-header {

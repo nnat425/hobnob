@@ -12,8 +12,8 @@
     </div>
     <div class="small-8 medium-9 large-9 columns">
       <div class-"row">
-        <div class="small-6 medium-6 large-6 columns">
-          <p id="index-advisor-name"><%= advisor.firstname %></p>
+        <div class="small-6 medium-6 large-6 columns" id="index-advisor-name">
+          <p><%= advisor.firstname %></p>
         </div>
         <div class="small-6 medium-6 large-6 columns" id="advisor-index-price">
           <% if logged_in? && current_user%>
@@ -28,7 +28,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="small-12 medium-12 large-12 columns">
+        <div class="small-12 medium-12 large-12 columns" id="index-advisor-title-location">
           <p><%= advisor.current_title %> | <%= advisor.location %></p>
         </div>
       </div>
