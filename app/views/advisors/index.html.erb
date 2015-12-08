@@ -1,54 +1,70 @@
 <header class="edit_hero">
-  <img src="/assets/city_header1.png"/>
+  <img src="/assets/city_header2-2.jpg"/>
 </header>
 
 <div class="row" id="advisors-index-container">
 
-  <div class="small-12 medium-12 large-3 columns" id="left-category-bar">
-  <%= form_tag(advisors_path, :method => "get", id: "advisors-filter-form") do %>
+  <div class="small-12 medium-12 large-12 columns" id="left-category-bar">
+    <%= form_tag(advisors_path, :method => "get", id: "advisors-filter-form") do %>
     <div class="advisors-filter-subheader">
       <p>Finance Category</p>
-      <button class="fa fa-search fa-lg" id="advisor-search-btn" type="submit"></button>
+
     </div>
     <div class="index-categories-list" >
-      <p>Investment Banking</p>
+
       <%= check_box_tag "filter[category][]", "Investment Banking", false, class: "advisors-filter-checkbox" %>
+      <label>Investment Banking</label>
     </div>
     <div class="index-categories-list" >
-      <p>Asset Management</p>
+
       <%= check_box_tag "filter[category][]", "Asset Management", false, class: "advisors-filter-checkbox" %>
+
+      <label>Asset Management</label>
     </div>
     <div class="index-categories-list" >
-      <p>Corporate Finance Divisions</p>
+
       <%= check_box_tag "filter[category][]", "Corporate Finance Divisions", false, class: "advisors-filter-checkbox" %>
+      <label>Corporate Finance Divisions</label>
     </div>
     <div class="index-categories-list" >
-      <p>Resume & Interview Prep</p>
+
       <%= check_box_tag "filter[category][]", "Resume & Interview Prep", false, class: "advisors-filter-checkbox" %>
+      <label>Resume & Interview Prep</label>
     </div>
     <div class="index-categories-list" >
-      <p>Other Finance Opportunities</p>
+
       <%= check_box_tag "filter[category][]", "Other Finance Opportunities", false, class: "advisors-filter-checkbox" %>
+      <label>Other Finance Opportunities</label>
     </div>
     <div class="advisors-filter-subheader">
       <p>Years of Experience</p>
     </div>
     <div class="index-categories-list" >
-      <p>Less than 5 years</p>
+
       <%= check_box_tag "filter[years_of_experience][]", "< 5 years", false, class: "advisors-filter-checkbox" %>
+      <label>Less than 5 years</label>
     </div>
     <div class="index-categories-list" >
-      <p>5 to 15 years</p>
+
       <%= check_box_tag "filter[years_of_experience][]", "5 - 15 years", false, class: "advisors-filter-checkbox" %>
+      <label>5 to 15 years</label>
     </div>
     <div class="index-categories-list" >
-      <p>More than 15 years</p>
+
       <%= check_box_tag "filter[years_of_experience][]", "15 years <", false, class: "advisors-filter-checkbox" %>
+      <label>More than 15 years</label>
     </div>
-  <% end %>
+    <div class="row">
+      <button class="fa fa-search" id="advisor-search-btn" type="submit"> SEARCH</button>
+    </div>
+    <% end %>
   </div>
 
-  <div class="small-12 medium-12 large-9 columns" id="advisors-list">
+
+  <div class="small-12 medium-12 large-12 columns" id="advisors-list">
+    <div class="row">
     <%= render partial: "advisors/results_index" %>
   </div>
+  </div>
+
 </div>

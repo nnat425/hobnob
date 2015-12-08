@@ -4,25 +4,25 @@ text-transform: uppercase;
 }
 
 #network_button {
-color: #fff;
 font-size: 1rem;
 letter-spacing: 5px;
 text-transform: uppercase;
-text-fill-color: transparent;
-margin-top:2em;
-border:solid white 2px;
+color: #fff;
+border: solid #000 2px;
 padding-left: 2.5em;
 padding-right: 2.5em;
 padding-top: 1em;
 padding-bottom: 1em;
-float: right;
-margin-right: 3em;
+margin-top: 3em;
+border-radius: 5px;
+background-color: #000;
 }
 
 #network_button:hover {
   background-color: #2996cc;
-  transition: all 0.2s ease;
-  border: solid #2996cc 2px;
+  color: #fff;
+  transition: all 0.4s ease;
+  border:solid #2996cc 2px;
 }
 
 #book-appt-btn {
@@ -117,8 +117,21 @@ margin-right: 3em;
 }
 
 #advisor-search-btn {
-  float: right;
-  background: none;
+  background-color: #2996cc;
+  font-weight: 300;
+  letter-spacing: 2px;
+  border-radius: 10px;
+  border: 1px solid #2996cc;
+  color: #fff;
+  margin-top: 2em;
+
+}
+
+#advisor-search-btn:hover {
+  background-color: #000;
+  transition: all 0.2s ease;
+  border: solid black 1px;
+  color: #fff;
 }
 
 #profile-edit-appointment {
