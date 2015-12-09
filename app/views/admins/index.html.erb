@@ -1,0 +1,29 @@
+<h1 id='net_mem_header'> Network Members </h1>
+
+<% @advisors.each do |advisor| %>
+
+<table>
+  <thead>
+    <th>First Name </th>
+    <th>Last Name </th>
+    <th>Email </th>
+    <th>Alternative Email </th>
+    <th>Charity</th>
+    <th>Location</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= advisor.firstname %> </td>
+      <td><%= advisor.lastname %></td>
+      <td><%= advisor.email %></td>
+      <td><%= advisor.alternative_email %></td>
+      <td><%= advisor.charity %></td>
+      <td><%= advisor.location %></td>
+      <td><%= link_to "Edit", edit_advisor_path(advisor) %></td>
+      <td><%= link_to "X", advisor, :data => {:confirm => 'Are you sure you want to remove this advisor from the Network? This cannot be undone.'}, :method => :delete %> </td>
+    </tr>
+  </tbody>
+  <% end %>
+</table>

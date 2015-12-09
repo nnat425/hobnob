@@ -47,6 +47,9 @@
         <% else %>
         <%= link_to "Profile", advisor_path(session[:user_or_advisor_id]) %>
         <% end %>
+        <% elsif admin_logged_in? %>
+        <li><%= link_to "Logout", admin_logout_path, method: :delete, id: "logout-link" %></li>
+        <li><%= link_to "Show Network", network_members_path %>
         <% else %>
         <li><%= link_to "Login", login_path %></li>
         <li class=""><a class="signup" href="/users/new" data-reveal-id="myModal">Signup</a></li>
