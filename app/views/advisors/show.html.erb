@@ -44,8 +44,11 @@
           </div>
           <div class="small-7 medium-8 large-3 columns">
             <p class="profile-info">
+              <% if @advisor.other_companies == nil %>
+              <% else %>
               <% @advisor.other_companies.split(',').each do |company| %>
               <%= company %>
+              <% end %>
               <% end %>
             </p>
           </div>
