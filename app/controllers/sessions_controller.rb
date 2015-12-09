@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
       session[:class_type] = user.class.name
       redirect_to root_path
     else
-      flash[:login_fail] = "Please input the correct username/password!"
+      flash[:login_fail] = "Please input the correct email/password!"
       redirect_to login_path
     end
   elsif advisor.try(:authenticate, session_params[:password])
@@ -23,7 +23,7 @@ class SessionsController < ApplicationController
     session[:class_type] = advisor.class.name
     redirect_to root_path
   else
-    flash[:login_fail] = "Please input the correct username/password!"
+    flash[:login_fail] = "Please input the correct email/password!"
     redirect_to login_path
   end
 end
