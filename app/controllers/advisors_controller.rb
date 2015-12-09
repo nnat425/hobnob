@@ -69,6 +69,12 @@ class AdvisorsController < ApplicationController
     end
   end
 
+  def destroy
+    advisor = Advisor.find_by(id: params[:id])
+    advisor.destroy
+    redirect_to network_members_path
+  end
+
   private
 
     def advisor_params
