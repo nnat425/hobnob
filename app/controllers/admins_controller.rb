@@ -1,5 +1,9 @@
 class AdminsController < ApplicationController
 
+
+  def new
+  end
+
   def create #Create Admin session
     admin = Admin.find_by(username: session[:username])
     if admin.try(:authenticate, session_params[:password])
@@ -8,7 +12,7 @@ class AdminsController < ApplicationController
      redirect_to root_path
    else
     flash[:login_fail] = "Please input the correct username/password!"
-    redirect_to
+    redirect_to admin_login_path
   end
 end
 
