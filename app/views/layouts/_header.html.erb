@@ -49,7 +49,7 @@
         <% end %>
         <% elsif admin_logged_in? %>
         <li><%= link_to "Logout", admin_logout_path, method: :delete, id: "logout-link" %></li>
-        <li><%= link_to "Show Network",
+        <li><%= link_to "Show Network", '#' %>
         <% else %>
         <li><%= link_to "Login", login_path %></li>
         <li class=""><a class="signup" href="/users/new" data-reveal-id="myModal">Signup</a></li>

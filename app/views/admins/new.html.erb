@@ -4,6 +4,8 @@
     <div class="signup-panel">
       <div class="row">
         <h2 id="signup_header"> Login!</h2>
+        <p id="signup_advisor">Admin</p>
+
         <%= flash[:login_fail] %>
       </div>
       <%= form_for :session, url: '/admin_login', html: {id: "login"} do |f| %>
@@ -19,7 +21,7 @@
       </div>
       <%=f.submit "Login", :class => "button" %>
       <% end %>
-     </div>
-   </div>
-   </div>
- </div>
+    </div>
+  </div>
+</div>
+</div>
