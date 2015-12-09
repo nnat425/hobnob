@@ -28,9 +28,9 @@ class ApplicationController < ActionController::Base
     current_user.carts.last
   end
 
-def cities
-["Boston","Calgary","Hong Kong","Houston","London","Montreal","NYC","San Francisco","Shanghai","Singapore","Toronto","UAE","Vancouver"]
-end
+  def cities
+    ["Boston","Calgary","Hong Kong","Houston","London","Montreal","NYC","San Francisco","Shanghai","Singapore","Toronto","UAE","Vancouver"]
+  end
 
 
 end
