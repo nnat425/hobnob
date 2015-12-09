@@ -16,6 +16,15 @@ $(document).ready(function(){
     $(".learn-toggle").fadeToggle();
   });
 
+  $(".home-box-info").hide();
+
+  $( ".home-subheader").hover(function() {
+    var id = $(this).attr('id');
+    $("#info" + id).fadeToggle();
+  });
+
+
+
 
 });
 
