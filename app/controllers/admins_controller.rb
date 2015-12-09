@@ -5,8 +5,7 @@ class AdminsController < ApplicationController
   end
 
   def create #Create Admin session
-    binding.pry
-    admin = Admin.find_by(username: session[:username])
+    admin = Admin.find_by(username: admin_session_params[:username])
     if admin.try(:authenticate, admin_session_params[:password])
      session[:admin_id] = admin.id
      session[:class_type] = admin.class.name
@@ -15,6 +14,11 @@ class AdminsController < ApplicationController
     flash[:login_fail] = "Please input the correct username/password!"
     redirect_to admin_login_path
   end
+end
+
+def destroy
+ session[:admin_id] = nil
+ redirect_to admin_login_path
 end
 
 private
