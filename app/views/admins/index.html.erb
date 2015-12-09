@@ -1,2 +1,24 @@
 <h1> Network Members </h1>
-<%
+<% @advisors.each do |advisor| %>
+
+<table>
+  <thead>
+    <th>First Name </th>
+    <th>Last Name </th>
+    <th>Email </th>
+    <th>Alternative Email </th>
+    <th>Charity</th>
+    <th>Location</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td><% advisor.firstname %> </td>
+      <td><% advisor.lastname %></td>
+      <td><% advisor.email %></td>
+      <td><% advisor.alternative_email %></td>
+      <td><% advisor.charity %></td>
+      <td><% advisor.location %></td>
+    </tr>
+  </tbody>
+  <% end %>
+</table>
