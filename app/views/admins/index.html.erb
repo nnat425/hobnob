@@ -9,15 +9,19 @@
     <th>Alternative Email </th>
     <th>Charity</th>
     <th>Location</th>
+    <th>Edit</th>
+    <th>Delete</th>
   </thead>
   <tbody>
     <tr>
-      <td><% advisor.firstname %> </td>
-      <td><% advisor.lastname %></td>
-      <td><% advisor.email %></td>
-      <td><% advisor.alternative_email %></td>
-      <td><% advisor.charity %></td>
-      <td><% advisor.location %></td>
+      <td><%= advisor.firstname %> </td>
+      <td><%= advisor.lastname %></td>
+      <td><%= advisor.email %></td>
+      <td><%= advisor.alternative_email %></td>
+      <td><%= advisor.charity %></td>
+      <td><%= advisor.location %></td>
+      <td><%= link_to "Edit", edit_advisor(advisor) %></td>
+      <td><%= link_to "X",:confirm => 'Are you sure you want to remove this comment? This cannot be undone.', :method => :delete %>
     </tr>
   </tbody>
   <% end %>
