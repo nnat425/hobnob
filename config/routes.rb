@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   get 'admin/login' => 'admins#new'
   post 'admin_login' => 'admins#create'
+  delete 'admin_logout' => 'admins#destroy'
 
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
