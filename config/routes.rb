@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :carts
   resources :orders
 
+  get 'network_members' => 'admins#index'
   get 'admin/login' => 'admins#new'
   post 'admin_login' => 'admins#create'
   delete 'admin_logout' => 'admins#destroy'

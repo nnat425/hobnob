@@ -1,6 +1,10 @@
 class AdminsController < ApplicationController
 
 
+  def index #Shows Network Members
+    @advisors = Advisor.all
+  end
+
   def new
   end
 
