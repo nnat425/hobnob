@@ -1,5 +1,6 @@
 class AdminsController < ApplicationController
 
+  before_action :admin_only, only:[:index]
 
   def index #Shows Network Members
     @advisors = Advisor.all
@@ -22,6 +23,7 @@ end
 
 def destroy
  session[:admin_id] = nil
+ session[:class_type] = nil
  redirect_to admin_login_path
 end
 
@@ -29,6 +31,10 @@ private
 
 def admin_session_params
   params.require(:session).permit(:username, :password)
+end
+
+def admin_only
+  redirect_to(root_path) unless admin_logged_in?
 end
 
 

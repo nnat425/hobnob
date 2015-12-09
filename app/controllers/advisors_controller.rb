@@ -83,7 +83,7 @@ class AdvisorsController < ApplicationController
 
     def correct_advisor
       @advisor = Advisor.find(params[:id])
-      redirect_to(root_url) unless @advisor == current_advisor
+      redirect_to(root_url) unless @advisor == current_advisor || session[:class_type] == "Admin"
     end
 
 end

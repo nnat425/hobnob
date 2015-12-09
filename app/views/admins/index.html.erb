@@ -20,8 +20,8 @@
       <td><%= advisor.alternative_email %></td>
       <td><%= advisor.charity %></td>
       <td><%= advisor.location %></td>
-      <td><%= link_to "Edit", edit_advisor(advisor) %></td>
-      <td><%= link_to "X",:confirm => 'Are you sure you want to remove this comment? This cannot be undone.', :method => :delete %>
+      <td><%= link_to "Edit", edit_advisor_path(advisor) %></td>
+      <td><%= link_to "X", advisor, :confirm => 'Are you sure you want to remove this comment? This cannot be undone.', :method => :delete %> </td>
     </tr>
   </tbody>
   <% end %>
