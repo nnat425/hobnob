@@ -1,5 +1,7 @@
 class AdvisorsController < ApplicationController
 
+  before_action :correct_advisor, only:[:edit, :update]
+
   def index
     if params[:filter]
       @advisors = Advisor.filter(params[:filter][:category],params[:filter][:years_of_experience])
@@ -71,6 +73,11 @@ class AdvisorsController < ApplicationController
 
     def advisor_params
       params.require(:advisor).permit(:email, :email_confirmation, :password,:password_confirmation,  :firstname, :lastname, :avatar, :alternative_email, :current_title, :job_description, :charity, :location, :company, :years_of_experience, :other_companies, :education, :certifications, :interesting_facts)
+    end
+
+    def correct_advisor
+      @advisor = Advisor.find(params[:id])
+      redirect_to(root_url) unless @advisor == current_advisor
     end
 
 end
