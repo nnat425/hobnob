@@ -25,14 +25,14 @@ $background-color: black;
 $primary-color: #87D37C;
 
 body {
-  font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !important;
+font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !important;
 
 }
 
 
 
 .body-container {
- z-index: 1;
+z-index: 1;
 }
 .row {
 max-width: 100%;
@@ -305,8 +305,8 @@ border-radius: 5px;
 }
 
 #edit-panel form label {
-  font-weight: bold;
-  letter-spacing: 1px;
+font-weight: bold;
+letter-spacing: 1px;
 }
 
 input[type=text], textarea {
@@ -337,6 +337,8 @@ height: 70vh;
 overflow: hidden;
 }
 
+
+
 #about-container {
 background-color:white;
 background-size: cover;
@@ -360,41 +362,41 @@ border-radius: 5px;
 
 
 #advisor-index-price {
-  text-align: right;
+text-align: right;
 }
 
 #advisor-index-price .advisor-price-number {
-  font-size: 1.5em;
-  color: #2f5287;
+font-size: 1.5em;
+color: #2f5287;
 }
 
 
 #index-advisor-services p {
-  font-size: .85em;
-  display: inline;
-  font-family: "Open Sans";
-  text-transform: uppercase;
-  color: #C0C0C0;
+font-size: .85em;
+display: inline;
+font-family: "Open Sans";
+text-transform: uppercase;
+color: #C0C0C0;
 
 }
 
 #index-advisor-title-location p {
-  font-family: "Open Sans";
-  letter-spacing: 1px;
+font-family: "Open Sans";
+letter-spacing: 1px;
 
 }
 #advisor-index-price .advisor-price-session {
-  color: #C0C0C0;
-  font-size: .5em;
-  font-family: "Open Sans";
+color: #C0C0C0;
+font-size: .5em;
+font-family: "Open Sans";
 }
 #advisor-appointment-box {
-  margin-top: 2.5em;
-  padding: 1.5em;
+margin-top: 2.5em;
+padding: 1.5em;
 }
 
 #advisor-bio-box {
-  padding: 1.5em;
+padding: 1.5em;
 }
 #profile-panel {
 background-color: #202020;
@@ -404,144 +406,144 @@ margin-bottom: 0px;
 }
 
 #advisor-profile-container {
-  padding-bottom: 0px;
+padding-bottom: 0px;
 }
 #advisor-times {
-  border-radius: 10px;
-  padding: 2em;
-  background-color: #fff;
-  border: 1px solid #C0C0C0;
+border-radius: 10px;
+padding: 2em;
+background-color: #fff;
+border: 1px solid #C0C0C0;
 }
 
 #advisor-bio-panel {
-  background-color: #F8F8F8;
-  padding: 2em;
-  height: 100%;
-  margin-bottom: 0px;
+background-color: #F8F8F8;
+padding: 2em;
+height: 100%;
+margin-bottom: 0px;
 }
 
 #advisor-about {
-  background-color: #fff;
-  border: 1px solid #C0C0C0;
-  border-radius: 10px;
-  padding: 2em;
+background-color: #fff;
+border: 1px solid #C0C0C0;
+border-radius: 10px;
+padding: 2em;
 }
 
 #advisor-profile-bio {
-  text-align: center;
+text-align: center;
 }
 
 #advisor-profile-image {
-  margin-bottom: 1em;
-  padding: auto;
-  text-align: center;
+margin-bottom: 1em;
+padding: auto;
+text-align: center;
 }
 #advisor-name-profile-page {
-  font-size: 2.5em;
-  margin-bottom: 0em;
-  text-align: center;
-  font-weight: 300;
-  font-family: "Open Sans";
-  color: #fff;
-  letter-spacing: 3px;
+font-size: 2.5em;
+margin-bottom: 0em;
+text-align: center;
+font-weight: 300;
+font-family: "Open Sans";
+color: #fff;
+letter-spacing: 3px;
 
 }
 
 #advisor-title-profile-page {
-  font-size: 1.25em;
-  margin-bottom: 0em;
-  font-weight: 300;
-  font-family: "Open Sans";
-  letter-spacing: 2px;
-  color: #C0C0C0;
+font-size: 1.25em;
+margin-bottom: 0em;
+font-weight: 300;
+font-family: "Open Sans";
+letter-spacing: 2px;
+color: #C0C0C0;
 }
 
 #profile-panel p {
-  font-family: "Open Sans";
+font-family: "Open Sans";
 }
 
 .profile-subheader {
-  font-family: "Open Sans";
-  font-size: .85em;
-  color: #203451;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: .5em;
+font-family: "Open Sans";
+font-size: .85em;
+color: #203451;
+font-weight: bold;
+text-transform: uppercase;
+letter-spacing: 1px;
+margin-bottom: .5em;
 }
 
 .profile-info {
-  margin-bottom: .5em;
-  font-size: 1.1em;
-  font-family: "Open Sans";
+margin-bottom: .5em;
+font-size: 1.1em;
+font-family: "Open Sans";
 
 }
 
 .category-checkbox {
-  width: 20px;
+width: 20px;
 }
 
 .checkbox-label {
-  font-size: 1em;
-  padding-top: 15px;
-  font-weight: 200;
-  letter-spacing: 1px;
+font-size: 1em;
+padding-top: 15px;
+font-weight: 200;
+letter-spacing: 1px;
 }
 
 
 
 .advisor-categories-list {
-  display: inline;
-  letter-spacing: 1px;
-  margin-right: .5em;
-  font-family: "Open Sans";
-  font-size: 1.1em;
-  font-weight: 300;
+display: inline;
+letter-spacing: 1px;
+margin-right: .5em;
+font-family: "Open Sans";
+font-size: 1.1em;
+font-weight: 300;
 }
 
 .advisor-profile-header {
-  color: #203451;
-  font-family: "Open Sans";
-  letter-spacing: 2px;
-  font-size: 2em;
-  font-weight: 300;
-  display: inline-block;
-  text-transform: uppercase;
+color: #203451;
+font-family: "Open Sans";
+letter-spacing: 2px;
+font-size: 2em;
+font-weight: 300;
+display: inline-block;
+text-transform: uppercase;
 }
 
 #index-advisor-name {
-  display: inline-block;
-  margin-left: 0px;
+display: inline-block;
+margin-left: 0px;
 }
 #index-advisor-name p {
-  font-family: "Open Sans";
-  font-size: 1.5em;
-  letter-spacing: 1px;
-  font-weight: 300;
+font-family: "Open Sans";
+font-size: 1.5em;
+letter-spacing: 1px;
+font-weight: 300;
 
 }
 
 #page-header {
-  margin-bottom: 5px;
+margin-bottom: 5px;
 }
 
 #page-header p {
-  letter-spacing: 2px;
-  font-family: "Open Sans";
-  font-weight: 100;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-size: 1.5em;
-  color: #43c7f4;
+letter-spacing: 2px;
+font-family: "Open Sans";
+font-weight: 100;
+letter-spacing: 2px;
+text-transform: uppercase;
+font-size: 1.5em;
+color: #43c7f4;
 }
 
 
 #index-advisor-info p {
-  margin-bottom: 0px;
-  font-family: "Open Sans";
+margin-bottom: 0px;
+font-family: "Open Sans";
 }
 #view-advisor-link {
-  float: right;
+float: right;
 }
 
 .calendar_page {
@@ -552,121 +554,121 @@ overflow: hidden;
 }
 
 #left-category-bar {
-  background-color: #202020;
-  text-align: center;
-  padding: 2em;
+background-color: #202020;
+text-align: center;
+padding: 2em;
 
 }
 .advisors-filter-subheader {
-  margin-top: 1em;
-  margin-bottom: 1em;
+margin-top: 1em;
+margin-bottom: 1em;
 
 }
 
 .advisors-filter-subheader p {
-  font-family: "Open Sans";
-  color: #C0C0C0;
-  font-size: 1.25em;
-  font-weight: 300;
-  display: inline;
-  letter-spacing: 3px;
-  text-transform: uppercase;
+font-family: "Open Sans";
+color: #C0C0C0;
+font-size: 1.25em;
+font-weight: 300;
+display: inline;
+letter-spacing: 3px;
+text-transform: uppercase;
 
 }
 
 
 .index-categories-list {
-  display: inline-block;
-  padding-top: .5em;
-  padding-bottom: .5em;
-  padding-left: 2em;
-  padding-right: 2em;
-  letter-spacing: 2px;
-  font-family: "Open Sans";
-  font-size: 1em;
-  border-radius: 10px;
-  background-color: #282828;
-  color: #C0C0C0;
-  text-transform: uppercase;
-  margin: .5em;
-  position: relative;
+display: inline-block;
+padding-top: .5em;
+padding-bottom: .5em;
+padding-left: 2em;
+padding-right: 2em;
+letter-spacing: 2px;
+font-family: "Open Sans";
+font-size: 1em;
+border-radius: 10px;
+background-color: #282828;
+color: #C0C0C0;
+text-transform: uppercase;
+margin: .5em;
+position: relative;
 }
 
 .index-categories-list label {
-  font-size: .85em;
-  display: inline;
-  margin-top: 1em;
-  margin-bottom: 1.5em;
-  color: #fff;
+font-size: .85em;
+display: inline;
+margin-top: 1em;
+margin-bottom: 1.5em;
+color: #fff;
 
 }
 
 .index-categories-list input[type="checkbox"] {
-  margin-top: 1em;
-  margin-bottom: 1em;
+margin-top: 1em;
+margin-bottom: 1em;
 }
 .advisors-filter-checkbox {
-  width: 1.75em;
-  height: 1.75em;
+width: 1.75em;
+height: 1.75em;
 
 }
 
 #advisor-index-avatar {
-  border: 1px solid #d9d9d9;
-  border-radius: 50%;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  height: 120px;
-  width: 120px;
-  overflow: hidden;
-  text-align: center;
-  img { width: 100% }
-  margin-bottom: 1em;
-  margin-right: auto;
-  margin-left: auto;
+border: 1px solid #d9d9d9;
+border-radius: 50%;
+-moz-border-radius: 50%;
+-webkit-border-radius: 50%;
+height: 120px;
+width: 120px;
+overflow: hidden;
+text-align: center;
+img { width: 100% }
+margin-bottom: 1em;
+margin-right: auto;
+margin-left: auto;
 }
 
 #about-container p {
-  font-family: "Open Sans";
-  font-size: 1.5em;
-  font-weight: 300;
-  color: #989898;
+font-family: "Open Sans";
+font-size: 1.5em;
+font-weight: 300;
+color: #989898;
 }
 
 .category-subtopic-list {
-  font-family: "Open Sans";
-  font-size: 1em;
-  color: #989898;
+font-family: "Open Sans";
+font-size: 1em;
+color: #989898;
 }
 
 .page-text {
-  font-family: "Open Sans";
-  font-size: 2em;
-  font-weight: 300;
-  color: #004b7e;
-  letter-spacing: 2px;
+font-family: "Open Sans";
+font-size: 2em;
+font-weight: 300;
+color: #004b7e;
+letter-spacing: 2px;
 }
 
 .more-info {
-  font-size: 1.25em;
-  font-family: "Open Sans";
-  font-weight: 300;
-  letter-spacing: 1px;
+font-size: 1.25em;
+font-family: "Open Sans";
+font-weight: 300;
+letter-spacing: 1px;
 }
 
 #page-info-header {
-  font-family: "Open Sans";
-  font-weight: 300;
-  color: #004b7e;
-  text-align: center;
-  margin-top: .75em;
-  margin-bottom: .75em;
-  font-size: 5em;
+font-family: "Open Sans";
+font-weight: 300;
+color: #004b7e;
+text-align: center;
+margin-top: .75em;
+margin-bottom: .75em;
+font-size: 5em;
 }
 
 #home-info-box {
-  text-align: center;
-  margin-bottom: 2em;
+text-align: center;
+margin-bottom: 2em;
 }
 
 #new_potential_appointment {
@@ -689,30 +691,30 @@ border-radius: 5px;
 border: 1px solid #ccc;
 }
 .calendar-day-box {
-  height: 150px;
+height: 150px;
 }
 
 .calendar-day-box p {
-  font-family: "Open Sans";
-  font-weight: 300;
-  font-size: 1.5em;
-  color: #C0C0C0;
+font-family: "Open Sans";
+font-weight: 300;
+font-size: 1.5em;
+color: #C0C0C0;
 }
 
 .calendar-day-box td div {
-  font-size: 1em;
-  text-transform: uppercase;
-  text-align: center;
-  color: #304770;
-  letter-spacing: 1px;
+font-size: 1em;
+text-transform: uppercase;
+text-align: center;
+color: #304770;
+letter-spacing: 1px;
 }
 
 .days-of-week {
-  font-size: 1.2em;
-  font-family: "Open Sans";
-  font-weight: 300;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+font-size: 1.2em;
+font-family: "Open Sans";
+font-weight: 300;
+text-transform: uppercase;
+letter-spacing: 2px;
 }
 
 
@@ -724,40 +726,40 @@ font-weight: 300;
 }
 
 .end_time {
-  display:inline;
-  width:40%;
-  margin:10px;
+display:inline;
+width:40%;
+margin:10px;
 }
 
 #no-matches-message {
-  font-family: "Open Sans";
-  font-size: 1.5em;
-  font-weight: 300;
+font-family: "Open Sans";
+font-size: 1.5em;
+font-weight: 300;
 }
 .start_time {
-  display:inline;
-  width:40%;
-  margin:10px;
+display:inline;
+width:40%;
+margin:10px;
 }
 
 #available-times-right-btn {
-  margin-top: 2em;
+margin-top: 2em;
 }
 .appointment_title {
-  font-size: 2.5em;
-  margin-top: 0em;
-  margin-bottom: 0em;
-  font-family: "Open Sans";
-  font-weight: 400;
+font-size: 2.5em;
+margin-top: 0em;
+margin-bottom: 0em;
+font-family: "Open Sans";
+font-weight: 400;
 
 }
 
 #flash_add_cart{
-  color:blue;
+color:blue;
 }
 
 #flash_already_cart{
-  color:red;
+color:red;
 }
 
 
@@ -771,120 +773,120 @@ overflow: hidden;
 
 
 #item_in_cart{
-  margin-top:20px;
-  border-bottom:solid grey 1px;
-  width:1300px;
+margin-top:20px;
+border-bottom:solid grey 1px;
+width:1300px;
 }
 
 #advisor_name_cart{
-  font-size: 1.5em;
-  font-family: "Open Sans";
-  text-align: center;
+font-size: 1.5em;
+font-family: "Open Sans";
+text-align: center;
 
 }
 
 #item_info{
-  margin-top: 2em;
+margin-top: 2em;
 }
 
 #item_info p {
-  font-size: 1em;
-  color: #C0C0C0;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-family: "Open Sans";
-  font-weight: 300;
+font-size: 1em;
+color: #C0C0C0;
+letter-spacing: 1px;
+text-transform: uppercase;
+font-family: "Open Sans";
+font-weight: 300;
 }
 
 .app_title{
-  font-family: "Open Sans";
-  font-weight: 300;
-  font-size: 1.5em;
-  margin-top: 0px;
+font-family: "Open Sans";
+font-weight: 300;
+font-size: 1.5em;
+margin-top: 0px;
 }
 
 .app_date {
-  margin-bottom: 0px;
+margin-bottom: 0px;
 }
 
 .app_price{
-  font-family: "Open Sans";
-  font-size: 2.5em;
-  margin-top: 1.25em;
-  font-weight: 300;
+font-family: "Open Sans";
+font-size: 2.5em;
+margin-top: 1.25em;
+font-weight: 300;
 
 }
 
 #cart_total {
-  margin-top: 1em;
-  text-align: right;
+margin-top: 1em;
+text-align: right;
 }
 
 #cart_total p {
-  font-size: 1.25em;
-  font-family: "Open Sans";
-  font-weight: 300;
-  letter-spacing: 2px;
+font-size: 1.25em;
+font-family: "Open Sans";
+font-weight: 300;
+letter-spacing: 2px;
 
 }
 
 .appointment_title {
-  font-family: "Open Sans";
-  font-weight: 300;
-  font-size: 1.25em;
+font-family: "Open Sans";
+font-weight: 300;
+font-size: 1.25em;
 
 }
 
 #appointment-time-box {
-  margin: 1.5em;
-  border: 1px solid #C0C0C0;
-  padding: 2em;
-  background-color: #fff;
-  border-radius: 10px;
+margin: 1.5em;
+border: 1px solid #C0C0C0;
+padding: 2em;
+background-color: #fff;
+border-radius: 10px;
 
 }
 
 .appointment-full-date {
-  font-size: .85em;
-  color: #C0C0C0;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+font-size: .85em;
+color: #C0C0C0;
+letter-spacing: 1px;
+text-transform: uppercase;
 }
 
 .appointment-time {
-  font-family: "Open Sans";
-  font-size: 1em;
-  margin-bottom: -.2em;
-  margin-top: .8em;
-  font-weight: 300;
+font-family: "Open Sans";
+font-size: 1em;
+margin-bottom: -.2em;
+margin-top: .8em;
+font-weight: 300;
 
 }
 
 #advisor-consultation-price-box {
-  float: right;
+float: right;
 }
 
 #advisor-consultation-price-box p {
-  display: inline;
+display: inline;
 }
 
 #advisor-consultation-price-box .dollar-sign {
-  font-weight: 500;
-  color: #C0C0C0;
+font-weight: 500;
+color: #C0C0C0;
 
 }
 
 .advisor-consultation-price {
-  font-size: 3.0em;
-  font-family: "Open Sans";
-  font-weight: 200;
-  color: #C0C0C0;
+font-size: 3.0em;
+font-family: "Open Sans";
+font-weight: 200;
+color: #C0C0C0;
 }
 
 .advisor-consultation-label {
-  font-size: .85em;
-  text-transform: uppercase;
-  color: #C0C0C0;
+font-size: .85em;
+text-transform: uppercase;
+color: #C0C0C0;
 }
 
 #order_page{
@@ -907,20 +909,20 @@ float: left;
 }
 
 #order_div form {
-  padding: 2em;
+padding: 2em;
 }
 
 #order_div form label {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-top: 1em;
-  font-size: .8em;
-  text-align: right;
-  color: #505050;
+text-transform: uppercase;
+letter-spacing: 1px;
+margin-top: 1em;
+font-size: .8em;
+text-align: right;
+color: #505050;
 }
 
 #order_div form i {
-  float: right;
+float: right;
 }
 
 #order_div form input {
@@ -944,36 +946,36 @@ display:none;
 }
 
 #order_summary{
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  padding: 15px;
-  margin-right: .5em;
-  margin-left: .5em;
-  background-color: #fff;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  font-size:0.8em;
+border-radius: 5px;
+border: 1px solid #ccc;
+padding: 15px;
+margin-right: .5em;
+margin-left: .5em;
+background-color: #fff;
+margin-top: 1em;
+margin-bottom: 1em;
+font-size:0.8em;
 }
 
 #order_p {
-  color: #203451;
-  font-weight: 300;
-  font-family: "Open Sans";
-  font-size: 2em;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  border-bottom: solid 1px #C0C0C0;
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
-  padding-bottom: 1em;
+color: #203451;
+font-weight: 300;
+font-family: "Open Sans";
+font-size: 2em;
+letter-spacing: 2px;
+text-transform: uppercase;
+border-bottom: solid 1px #C0C0C0;
+margin-top: 1.5em;
+margin-bottom: 1.5em;
+padding-bottom: 1em;
 
 }
 
 
 #user-profile-container {
-  padding-top: 90px;
-  background-color: #f0f1ee;
-  padding-bottom: 10px;
+padding-top: 90px;
+background-color: #f0f1ee;
+padding-bottom: 10px;
 }
 
 #user-profile-panel {
@@ -983,153 +985,153 @@ height: 100%;
 }
 
 #profile-header p {
-  font-size: 1.3em;
-  font-family: "Open Sans";
-  letter-spacing: 2px;
-  color: #203451;
-  display: inline;
+font-size: 1.3em;
+font-family: "Open Sans";
+letter-spacing: 2px;
+color: #203451;
+display: inline;
 }
 
 
 
 #profile-header {
-  border-bottom: 1px solid #C0C0C0;
-  padding-bottom: .8em;
-  margin-bottom: 1.5em;
-  margin-top:3em;
+border-bottom: 1px solid #C0C0C0;
+padding-bottom: .8em;
+margin-bottom: 1.5em;
+margin-top:3em;
 
 }
 
 #user-edit-profile-btn {
-  float: right;
-  font-size: .8em;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-top: 2em;
-  color: #203451;
+float: right;
+font-size: .8em;
+text-transform: uppercase;
+letter-spacing: 1px;
+margin-top: 2em;
+color: #203451;
 }
 .user-info {
-  font-family: "Open Sans";
+font-family: "Open Sans";
 
 }
 
 #checkout-container {
-  text-align: center;
-  background-color: #F8F8F8;
+text-align: center;
+background-color: #F8F8F8;
 }
 
 .advisor-checkout-avatar {
-  border: 1px solid #d9d9d9;
-  border-radius: 50%;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  height: 100px;
-  width: 100px;
-  overflow: hidden;
-  text-align: center;
-  img { width: 100% };
+border: 1px solid #d9d9d9;
+border-radius: 50%;
+-moz-border-radius: 50%;
+-webkit-border-radius: 50%;
+height: 100px;
+width: 100px;
+overflow: hidden;
+text-align: center;
+img { width: 100% };
 
 }
 
 #order-info-label {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding-top: 0px;
-  padding-bottom: 0px;
+margin-top: 0px;
+margin-bottom: 0px;
+padding-top: 0px;
+padding-bottom: 0px;
 }
 #order-info-label label {
-  float: right;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: .8em;
-  color: #505050;
-  margin-top: 0px;
-  margin-bottom: 0px;
+float: right;
+text-transform: uppercase;
+letter-spacing: 1px;
+font-size: .8em;
+color: #505050;
+margin-top: 0px;
+margin-bottom: 0px;
 
 }
 
 #order-info {
-  margin-top: 0px;
-  padding-top: 0em;
-  padding-bottom: 0em;
-  margin-bottom: 0px;
+margin-top: 0px;
+padding-top: 0em;
+padding-bottom: 0em;
+margin-bottom: 0px;
 }
 
 #order-info p {
-  float: left;
-  font-family: "Open Sans";
-  font-size: 1.1em;
-  font-weight: 300;
-  margin-top: 0px;
-  margin-bottom: 0px;
+float: left;
+font-family: "Open Sans";
+font-size: 1.1em;
+font-weight: 300;
+margin-top: 0px;
+margin-bottom: 0px;
 }
 
 #order_item {
-  margin: 1em;
-  padding: 1.5em;
-  border: 1px solid #C0C0C0;
-  border-radius: 5px;
+margin: 1em;
+padding: 1.5em;
+border: 1px solid #C0C0C0;
+border-radius: 5px;
 
 }
 
 #order-total {
-  float:right;
+float:right;
 
 }
 
 #order-total label {
-  display: inline;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: .8em;
-  margin-top: 1em;
-  color: #505050;
-  margin-right: 3em;
+display: inline;
+text-transform: uppercase;
+letter-spacing: 1px;
+font-size: .8em;
+margin-top: 1em;
+color: #505050;
+margin-right: 3em;
 }
 
 #order-total p {
-  font-size: 2em;
-  font-family: "Open Sans";
-  font-weight: 300;
+font-size: 2em;
+font-family: "Open Sans";
+font-weight: 300;
 
 }
 
 
 .header_mobile {
-  display: inline;
-  word-spacing: 15px;
-  padding:4px;
-  text-align:center;
-  margin-left:1em;
+display: inline;
+word-spacing: 15px;
+padding:4px;
+text-align:center;
+margin-left:1em;
 }
 
 
 #edit-profile-btn {
-  background: none;
-  color: #004b7e;
-  font-size: .8em;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+background: none;
+color: #004b7e;
+font-size: .8em;
+text-transform: uppercase;
+letter-spacing: 1px;
 }
 
 #create-appointment-btn {
-  background: none;
-  color: #004b7e;
-  font-size: .8em;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  float: right;
+background: none;
+color: #004b7e;
+font-size: .8em;
+text-transform: uppercase;
+letter-spacing: 1px;
+float: right;
 }
 
 #appointment-calendar {
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  text-align: center;
+border-radius: 5px;
+border: 1px solid #ccc;
+text-align: center;
 
 }
 
 #calendar-container {
-  padding: 1.5em;
+padding: 1.5em;
 }
 
 #appointment-form form input {
@@ -1149,66 +1151,66 @@ margin-bottom: .5em;
 }
 
 #appointment-form form label {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-top: 1em;
-  font-size: .8em;
-  text-align: left;
-  color: #505050;
+text-transform: uppercase;
+letter-spacing: 1px;
+margin-top: 1em;
+font-size: .8em;
+text-align: left;
+color: #505050;
 }
 
 
 .appointment-date {
 
-  border: 1px solid #C0C0C0;
-  border-radius: 50%;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  height: 100px;
-  width: 100px;
-  text-align: center;
-  padding: auto;
-  background-color: #fff;
+border: 1px solid #C0C0C0;
+border-radius: 50%;
+-moz-border-radius: 50%;
+-webkit-border-radius: 50%;
+height: 100px;
+width: 100px;
+text-align: center;
+padding: auto;
+background-color: #fff;
 }
 
 .appointment-date .appointment-day {
-  color: #404040;
-  font-size: 2.5em;
-  font-family: "Open Sans";
-  font-weight: 300;
-  margin-bottom: 0px;
-  margin-top: .35em;
+color: #404040;
+font-size: 2.5em;
+font-family: "Open Sans";
+font-weight: 300;
+margin-bottom: 0px;
+margin-top: .35em;
 }
 
 .user-appointment-label{
-  float: right;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: .8em;
-  margin-top: .3em;
-  color: #505050;
+float: right;
+text-transform: uppercase;
+letter-spacing: 1px;
+font-size: .8em;
+margin-top: .3em;
+color: #505050;
 }
 
 .user-appointment{
-  float: left;
-  font-family: "Open Sans";
-  font-size: 1.1em;
-  font-weight: 300;
+float: left;
+font-family: "Open Sans";
+font-size: 1.1em;
+font-weight: 300;
 }
 
 #cart-empty{
-  margin-left:-9em;
+margin-left:-9em;
 
 }
 .appointment-date .appointment-month {
-  color: #404040;
-  margin-top: -.7em;
-  text-transform: uppercase;
-  font-size: .8em;
+color: #404040;
+margin-top: -.7em;
+text-transform: uppercase;
+font-size: .8em;
 }
 
 #advisors-index-container {
-  background-color: #F8F8F8;
+background-color: #F8F8F8;
 
 }
 
@@ -1234,14 +1236,14 @@ font-family: "Open Sans";
 }
 
 .more-info a {
-  color: #004b7e;
+color: #004b7e;
 }
 
 .more-info a:hover {
-  color: #C0C0C0;
-  padding-bottom: 0.5rem;
-  transition: all .3s ease-in-out;
-  border-bottom: 2px solid #C0C0C0;
+color: #C0C0C0;
+padding-bottom: 0.5rem;
+transition: all .3s ease-in-out;
+border-bottom: 2px solid #C0C0C0;
 }
 
 #edit-panel {
@@ -1259,190 +1261,208 @@ box-shadow:         4px 4px 4px 0px #ccc;
 
 
 #search-advisors-link {
-  text-align: center;
-  margin-bottom: 1.5em;
-  border-radius: 10px;
-  padding-left: 2.5em;
-  padding-right: 2.5em;
-  padding-top: 1.5em;
-  padding-bottom: 1.5em;
-  color:white;
+text-align: center;
+margin-bottom: 1.5em;
+border-radius: 10px;
+padding-left: 2.5em;
+padding-right: 2.5em;
+padding-top: 1.5em;
+padding-bottom: 1.5em;
+color:white;
 }
 
 #search-advisors-link a {
-  background-color: #2996cc;
-  letter-spacing: 2px;
+background-color: #2996cc;
+letter-spacing: 2px;
 }
 
 #search-advisors-link a:hover {
-  background-color: #000;
-  transition: all .3s ease-in-out;
+background-color: #000;
+transition: all .3s ease-in-out;
 }
 
 .hero {
-  background:
-  linear-gradient(transparent, black 90%),
-  url("/assets/meeting_header1.png");
-  height: 100%;
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  width: 100%;
-  position: fixed;
+background:
+linear-gradient(transparent, black 90%),
+url("/assets/meeting_header1.png");
+height: 100%;
+background-repeat: no-repeat;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+width: 100%;
+position: fixed;
 }
 
 #home-container {
-  margin-top: 6em;
+margin-top: 6em;
 }
 
 .home-icon {
-  border: 1px solid #eeeeee;
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  padding-top: 1em;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  background-color: #eeeeee;
+border: 1px solid #eeeeee;
+border-radius: 50%;
+width: 100px;
+height: 100px;
+padding-top: 1em;
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+background-color: #eeeeee;
 }
 
 .home-icon h1 {
-  margin: auto;
-  color: #004480;
+margin: auto;
+color: #004480;
 }
 
 .parallax-content {
-  max-width: 100%;
-  padding: 50px;
-  background-color: #fff;
-  position: relative;
-  top: 850px;
+max-width: 100%;
+padding: 50px;
+background-color: #fff;
+position: relative;
+top: 850px;
 
 }
 
 #intro-text {
-  margin-top: 2.5em;
-  text-align: center;
-  margin-bottom: 2em;
+margin-top: 2.5em;
+text-align: center;
+margin-bottom: 2em;
 
 }
 
 #intro-subtext {
-  text-align: center;
+text-align: center;
 
 }
 
 #intro-text #header {
-  font-size: 5.5em;
-  color: #fff;
-  margin-top: 12.5%;
-  font-family: "Open Sans";
-  font-weight: 300;
-  letter-spacing: 2px;
+font-size: 5.5em;
+color: #fff;
+margin-top: 12.5%;
+font-family: "Open Sans";
+font-weight: 300;
+letter-spacing: 2px;
 
 
 }
 
 #intro-subtext p {
-  font-size: 1.5em;
-  font-family: "Open Sans";
-  color: #fff;
-  letter-spacing: 2px;
-  margin-bottom: 3em;
-  font-weight: 300;
-  margin-top: 3em;
-
+font-size: 1.5em;
+font-family: "Open Sans";
+color: #fff;
+letter-spacing: 2px;
+margin-bottom: 3em;
+font-weight: 300;
+margin-top: 3em;
 
 }
 
+#about-subtext{
+color: #fff;
+margin-top: 5.0em;
+}
+
+#about-subtext p{
+font-size: 1.5em;
+font-family: "Open Sans";
+letter-spacing: 2px;
+font-weight: 300;
+}
+
+#about_1{
+margin-left:3.0em;
+}
+
+#about_2{
+margin-left:5.0em;
+}
 
 #shopping-cart-header h1 {
-  font-family: "Open Sans";
-  font-weight: 300;
-  text-align: center;
+font-family: "Open Sans";
+font-weight: 300;
+text-align: center;
 }
 
 #shopping-cart-container {
-  padding-left: 2em;
-  padding-right: 2em;
-  background-color: #fff;
+padding-left: 2em;
+padding-right: 2em;
+background-color: #fff;
 }
 
 #items-holder {
-  padding: 2em;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  background-color: #F8F8F8;
-  margin-top: 2em;
-  margin-bottom: 2em;
+padding: 2em;
+border-radius: 10px;
+border: 1px solid #ccc;
+background-color: #F8F8F8;
+margin-top: 2em;
+margin-bottom: 2em;
 }
 
 #item_in_cart {
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  padding: 1em;
-  background-color: #fff;
+border-radius: 5px;
+border: 1px solid #ccc;
+padding: 1em;
+background-color: #fff;
 
 }
 
 
 
 #items-holder-header h4 {
-  font-family: "Open Sans";
-  font-weight: 300;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  text-align: center;
+font-family: "Open Sans";
+font-weight: 300;
+text-transform: uppercase;
+letter-spacing: 2px;
+text-align: center;
 }
 
 #remove-appointment-link {
-  color: #C0C0C0;
-  margin-top: 3.5em;
+color: #C0C0C0;
+margin-top: 3.5em;
 
 }
 
 #checkout-button {
-  border-radius: 5px;
-  letter-spacing: 2px;
-  padding-left: 2.5em;
-  padding-right: 2.5em;
+border-radius: 5px;
+letter-spacing: 2px;
+padding-left: 2.5em;
+padding-right: 2.5em;
 
 }
 
 #home-learn-link {
-  border-radius: 10px;
-  padding-left: 2.5em;
-  padding-right: 2.5em;
-  padding-top: 1.5em;
-  padding-bottom: 1.5em;
-  letter-spacing: 2px;
-  background-color: #2996cc;
+border-radius: 10px;
+padding-left: 2.5em;
+padding-right: 2.5em;
+padding-top: 1.5em;
+padding-bottom: 1.5em;
+letter-spacing: 2px;
+background-color: #2996cc;
 }
 
 #home-learn-link:hover {
-  background-color: #202020;
-  color: #fff;
-  transition: all 0.4s ease;
+background-color: #202020;
+color: #fff;
+transition: all 0.4s ease;
 }
 
 
 #learn-more {
-  margin-top: 2.5em;
-  text-align: center;
+margin-top: 2.5em;
+text-align: center;
 }
 
 #learn-more p {
-  font-family: "Open Sans";
-  font-weight: 300;
-  letter-spacing: 2px;
-  font-size: 1.5em;
+font-family: "Open Sans";
+font-weight: 300;
+letter-spacing: 2px;
+font-size: 1.5em;
 }
 
 #advisors-list {
-  padding: auto;
+padding: auto;
 }
 
 .signup_hero_6 {
@@ -1452,18 +1472,18 @@ height: 80vh;
 }
 
 table {
-    margin: auto;
-    margin-top:1em;
-    font-size: 30px
+margin: auto;
+margin-top:1em;
+font-size: 30px
 }
 
 th, td {
-    padding: 5px;
-    border: 1px solid #999;
+padding: 5px;
+border: 1px solid #999;
 }
 
 th {
-    background: #ccc;
+background: #ccc;
 }
 
 #net_mem_header{
@@ -1472,6 +1492,6 @@ margin-top:4em;
 }
 
 #exc_point{
-  font-size:1.7em;
+font-size:1.7em;
 }
 
