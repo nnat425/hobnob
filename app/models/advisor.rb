@@ -20,24 +20,34 @@ class Advisor < ActiveRecord::Base
      self.update(other_companies:param_companies.join(","))
   end
 
-  def self.filter(chosen_categories,chosen_years)
+  def self.filter(chosen_categories,chosen_locations,chosen_years)
     if chosen_categories
       results_by_category = chosen_categories.map do |chosen_category|
         Category.find_by(name:chosen_category).advisors
       end
-      results_by_category.flatten!.uniq!
+      results_by_category = results_by_category.flatten!.uniq!
     else
       results_by_category = all
+    end
+    if chosen_locations
+      results_by_location = chosen_locations.map do |location|
+        where(location: location)
+      end
+      results_by_location = results_by_location.flatten!.uniq!
+    else
+      results_by_location = all
     end
     if chosen_years
       results_by_year = chosen_years.map do |range|
         where(years_of_experience: range)
       end
-      results_by_year.flatten!
-      advisor_results = results_by_category & results_by_year
+      results_by_year = results_by_year.flatten!
     else
-      advisor_results = results_by_category
+      results_by_year = all
     end
+    advisor_results = results_by_category & results_by_year
+    advisor_results = advisor_results & results_by_location
     advisor_results
   end
+
 end
