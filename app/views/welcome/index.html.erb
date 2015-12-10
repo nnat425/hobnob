@@ -6,7 +6,7 @@
         <p id="header">HOB NOB</p>
       </div>
       <div class="small-12 medium-12 large-12 columns" id="intro-subtext">
-        <a id='network_button' href='/advisors'>GET NETWORKING<span id='exc_point'>!</span></a>
+        <%= link_to "Start Networking", advisors_path, id: "network_button" %>
         <p>Make strong career decisions today and in the future</p>
       </div>
     </div>
@@ -16,30 +16,33 @@
   <div class="parallax-content">
 
 
-    <div class="row">
+    <div class="row" id="home-container">
       <div class="small-12 medium-12 large-4 columns" id="home-small-box">
-        <div class="home-subheader">
-          <h1><i class="fa fa-calendar-plus-o fa-lg"></i></h1>
-          <h3>Services </h3>
-          <p> Networking and the informational interview are two of the most valuable tools in a successful career. Hob Nob makes it easy to expand your network and reach your goals.</p>
-          <p> Get valuable insight direct from the source!</p>
+        <div class="home-subheader" id="1">
+          <div class="home-icon">
+            <h1><i class="fa fa-calendar-plus-o fa-lg"></i></h1>
+          </div>
+          <h3>Services</h3>
+          <p class="home-box-info" id="info1">Networking and the informational interview are two of the most valuable tools in a successful career. Hob Nob makes it easy to expand your network and reach your goals. Get valuable insight direct from the source!</p>
         </div>
       </div>
 
       <div class="small-12 medium-12 large-4 columns" id="home-small-box">
-        <div class="home-subheader">
-          <h1><i class="fa fa-users fa-lg"></i></h1>
+        <div class="home-subheader" id="2">
+          <div class="home-icon">
+            <h1><i class="fa fa-users fa-lg"></i></h1>
+          </div>
           <h3>Network</h3>
-          <p> Our Professionals have volunteered their time and are prepared to answer your questions. A portion of each connection fee will be donated to a charity of their choice. </p>
-          <p> Help support the communities we live in!</p>
+          <p class="home-box-info" id="info2">Our Professionals have volunteered their time and are prepared to answer your questions. A portion of each connection fee will be donated to a charity of their choice. Help support the communities we live in!</p>
         </div>
       </div>
       <div class="small-12 medium-12 large-4 columns" id="home-small-box">
-        <div class="home-subheader">
-          <h1><i class="fa fa-phone fa-lg"></i></h1>
+        <div class="home-subheader" id="3">
+          <div class="home-icon">
+            <h1><i class="fa fa-phone fa-lg"></i></h1>
+          </div>
           <h3>Connection</h3>
-          <p> Search our Network, check for available dates, times and fees and get connected. Have a meaningful career discussion and make the best informed career decision possible.</p>
-          <p> Start building your Network today!</p>
+          <p class="home-box-info" id="info3">Search our Network, check for available dates, times and fees and get connected. Have a meaningful career discussion and make the best informed career decision possible.</p>
         </div>
       </div>
     </div>
@@ -67,6 +70,11 @@
           <p class="learn-toggle">Once you have identified professionals to speak with, you will click the GET CONNECTED button. This will bring you to the payment page. Each professional has provided dates and times when they are available. If you don’t see a date or time, then select another professional or add your name to the waiting list. Working in Finance requires time and commitment. Please respect the professional’s privacy and work within their schedule. Everyone on the Network wants to speak with you. Please be patient.</p>
         </div>
       </div>
+    </div>
+
+    <h1 id="page-info-header">Make your move</h1>
+    <div class="row" id="search-advisors-link">
+      <%= link_to "Get Networking", advisors_path, class: "button", id: "search-advisors-link" %>
     </div>
     <div class="row" id="home-info-box">
 

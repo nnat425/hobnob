@@ -4,7 +4,28 @@ class AdvisorsController < ApplicationController
 
   def index
     if params[:filter]
-      @advisors = Advisor.filter(params[:filter][:category],params[:filter][:years_of_experience])
+      if params[:filter][:category]
+        advisors_by_category = Category.find_by(name: params[:filter][:category]).advisors
+      else
+        advisors_by_category = Advisor.all
+      end
+      if params[:filter][:location]
+        advisors_by_location = params[:filter][:location].map do |location|
+          Advisor.where(location: location)
+        end
+        advisors_by_location.flatten!.uniq!
+      else
+        advisors_by_location = Advisor.all
+      end
+      if params[:filter][:years_of_experience]
+        advisors_by_years = params[:filter][:years_of_experience].map do |range|
+          Advisor.where(years_of_experience: range)
+        end
+        advisors_by_years.flatten!.uniq!
+      else
+        advisors_by_years = Advisor.all
+      end
+      @advisors = advisors_by_category & advisors_by_location & advisors_by_years
       if request.xhr?
         render partial: "results_index", layout: false
       end
