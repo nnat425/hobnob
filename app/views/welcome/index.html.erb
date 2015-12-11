@@ -110,6 +110,7 @@
       <% if admin_logged_in? %>
       <div class="form-box">
         <div class="form-holder">
+          <%= render partial: "charity_form" %>
         </div>
         <%= link_to "Add Charity", root_path, class: "admin-button" %>
       </div>
