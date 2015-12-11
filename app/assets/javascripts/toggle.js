@@ -37,9 +37,25 @@ $(document).ready(function(){
 
     });
 
+  $("#categories-toggle").hide();
+  $("#locations-toggle").hide();
+  $("#experience-toggle").hide();
 
+  $("#show-options-categories").on("click", function(event) {
+    event.preventDefault();
+    $("#categories-toggle").slideToggle();
 
+  });
 
+  $("#show-options-locations").on("click", function(event) {
+    event.preventDefault();
+    $("#locations-toggle").slideToggle();
+
+  });
+  $("#show-options-years").on("click", function(event) {
+    event.preventDefault();
+    $("#experience-toggle").slideToggle();
+  });
 
 });
 
