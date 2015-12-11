@@ -1,6 +1,7 @@
 class WelcomeController < ApplicationController
   def index
-    @comments = Comment.all
+    @user_comments = Comment.where(charity?: false)
+    @charities = Comment.where(charity?: true)
   end
 
   def about

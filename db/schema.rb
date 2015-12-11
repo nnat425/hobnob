@@ -80,11 +80,11 @@ ActiveRecord::Schema.define(version: 20151211030335) do
   end
 
   create_table "comments", force: :cascade do |t|
-    t.string   "author",     null: false
-    t.string   "body",       null: false
+    t.string   "body",                       null: false
     t.string   "subtext"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.boolean  "charity?",   default: false, null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   create_table "delayed_jobs", force: :cascade do |t|

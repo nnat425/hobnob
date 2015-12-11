@@ -20,7 +20,7 @@ $(document).ready(function(){
 
   $( ".home-subheader").hover(function() {
       var id = $(this).attr('id');
-      $(this).css('border','1px solid #87CEFF');
+      $(this).css('border','3px solid #87CEFF');
       $("#home-icon-" + id).css("background-color", "#fff");
       $("#home-icon-" + id).css("border", "1px solid #fff");
       $("#home-icon-" + id + " > h1").css("color", "#2996cc");
