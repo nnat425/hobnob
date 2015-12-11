@@ -5,4 +5,10 @@ class CommentsController < ApplicationController
 
   end
 
+private
+
+  def comment_params
+    params.require(:comment).permit(:subtext,:body,:charity?)
+  end
+
 end
