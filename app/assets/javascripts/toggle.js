@@ -57,5 +57,19 @@ $(document).ready(function(){
     $("#experience-toggle").slideToggle();
   });
 
+
+$("#add-comment-btn").on("click", function(event) {
+  event.preventDefault();
+  $("#comments-form-holder").slideDown();
+  $("#add-comment-btn").hide();
+});
+
+$("#add-charity-btn").on("click", function(event) {
+  event.preventDefault();
+  $("#charities-form-holder").slideDown();
+  $("#add-charity-btn").hide();
+});
+
+
 });
 
