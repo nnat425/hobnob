@@ -1,18 +1,19 @@
 $(document).ready(function(){
 
-  $("#form-holder").on("submit", ".submit-comment", function(event) {
-    event.preventDefault();
+  // $("#form-box").on("submit", ".submit-comment", function(event) {
+  //   event.preventDefault();
+  //   console.log("prevented default");
 
-    $.ajax({
-      method: 'GET',
-      url: "/advisors",
-      data: $(event.target).serialize()
-    }).done(function(data) {
-      $("#advisors-list").html(data);
-    }).fail(function(response){
-      console.log(response);
-    })
-  }
+  //   $.ajax({
+  //     method: 'post',
+  //     url: "/comments",
+  //     data: $(event.target).serialize()
+  //   }).done(function(data) {
+  //     $("#comment-holder").append(data);
+  //   }).fail(function(response){
+  //     console.log(response);
+  //   });
+  // });
 
 
 });
