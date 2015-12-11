@@ -1916,4 +1916,25 @@ transition: all .3s ease-in-out;
 #element_to_pop_up {
 display:none;
 background-color:white;
+border-radius: 1.5em;
+
+}
+
+#popup-box{
+  width:80em;
+  height:25em;
+
+}
+
+.popup_header_text{
+  color: #008CBA;
+  font-family: "Open Sans"
+}
+
+.popup-subtopic-list{
+font-size:1em;
+font-family: "Open Sans";
+font-weight: 300;
+list-style-type:none;
+float:left;
 }
