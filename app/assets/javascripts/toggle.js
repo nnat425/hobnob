@@ -19,23 +19,23 @@ $(document).ready(function(){
   $(".home-box-toggle").hide();
 
   $( ".home-subheader").hover(function() {
-      var id = $(this).attr('id');
-      $(this).css('border','3px solid #87CEFF');
-      $("#home-icon-" + id).css("background-color", "#fff");
-      $("#home-icon-" + id).css("border", "1px solid #fff");
-      $("#home-icon-" + id + " > h1").css("color", "#2996cc");
-      $("#info-" + id).hide();
-      $( "#info" + id).slideDown();
-    },
-    function() {
-      var id = $(this).attr('id');
-      $(this).css('border','1px solid #C0C0C0');
-      $("#home-icon-" + id).css("background-color", "#2996cc");
-      $("#home-icon-" + id + " > h1").css("color", "#fff");
-      $("#info" + id).hide();
-      $( "#info-" + id).slideDown();
+    var id = $(this).attr('id');
+    $(this).css('border','3px solid #87CEFF');
+    $("#home-icon-" + id).css("background-color", "#fff");
+    $("#home-icon-" + id).css("border", "1px solid #fff");
+    $("#home-icon-" + id + " > h1").css("color", "#2996cc");
+    $("#info-" + id).hide();
+    $( "#info" + id).slideDown();
+  },
+  function() {
+    var id = $(this).attr('id');
+    $(this).css('border','1px solid #C0C0C0');
+    $("#home-icon-" + id).css("background-color", "#2996cc");
+    $("#home-icon-" + id + " > h1").css("color", "#fff");
+    $("#info" + id).hide();
+    $( "#info-" + id).slideDown();
 
-    });
+  });
 
   $("#categories-toggle").hide();
   $("#locations-toggle").hide();
@@ -56,6 +56,36 @@ $(document).ready(function(){
     event.preventDefault();
     $("#experience-toggle").slideToggle();
   });
+
+
+  $("#add-comment-btn").on("click", function(event) {
+    event.preventDefault();
+    $("#comments-form-holder").slideDown();
+    $("#add-comment-btn").hide();
+  });
+
+  $("#add-charity-btn").on("click", function(event) {
+    event.preventDefault();
+    $("#charities-form-holder").slideDown();
+    $("#add-charity-btn").hide();
+  });
+
+  $("#close-comment-btn").on("click", function(event) {
+    event.preventDefault();
+    var id = $(this).parent().parent().attr("id");
+    $("#"+id).slideUp();
+    $("#add-comment-btn").show();
+
+  });
+
+  $("#close-charity-btn").on("click", function(event) {
+    event.preventDefault();
+    var id = $(this).parent().parent().attr("id");
+    $("#"+id).slideUp();
+    $("#add-charity-btn").show();
+  });
+
+
 
 });
 

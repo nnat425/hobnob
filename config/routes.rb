@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :potential_appointments
   resources :carts
   resources :orders
+  resources :comments
 
   get 'network_members' => 'admins#index'
   get 'admin/login' => 'admins#new'

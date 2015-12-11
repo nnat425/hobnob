@@ -53,7 +53,7 @@
 
     <h1 id="page-info-header">Ready to make your move?</h1>
     <div class="row" id="search-advisors-link">
-      <%= link_to "Get Networking!", advisors_path, class: "button", id: "search-advisors-link" %>
+      <%= link_to "Get Networking!", advisors_path, class: "button" %>
     </div>
     <div class="line-break"></div>
     <div class="row" id="learn-more">
@@ -83,22 +83,37 @@
     <div class="row" id="home-info-box">
       <h2>What people are saying about Hob Nob!</h2>
       <i class="fa fa-comments-o fa-5x"></i>
-      <p class="hn-comment">"Comment about Hob Nob goes here!"</p>
-      <p class="commenter-name">- Student</p>
       <% if @user_comments %>
       <% @user_comments.each do |comment| %>
-      <p class="hn-comment"><%= comment.body %></p>
-      <p class="commenter-name">-<%= comment.subtext %></p>
+      <p class="hn-comment">"<%= comment.body %>"</p>
+      <p class="commenter-name">- <%= comment.subtext %></p>
       <% end %>
+      <% end %>
+      <% if admin_logged_in? %>
+      <div class="small-12 medium-12 large-6 large-centered columns" id="form-box">
+        <div class="form-holder" id="comments-form-holder">
+          <%= render partial: "comments_form" %>
+        </div>
+        <%= link_to "Add Comment", root_path, class: "admin-button", id: "add-comment-btn" %>
+      </div>
       <% end %>
     </div>
     <div id="home-charity-box">
       <h2>Help support the communities we live in!</h2>
-      <p>Example Charity</p>
       <% if @charities %>
+      <ul id="charity-list">
       <% @charities.each do |charity| %>
-      <p><%= charity.body %></p>
+        <li><%= charity.body %></li>
       <% end %>
+      </ul>
+      <% end %>
+      <% if admin_logged_in? %>
+      <div class="small-12 medium-12 large-6 large-centered columns" id="form-box">
+        <div class="form-holder" id="charities-form-holder">
+          <%= render partial: "charity_form" %>
+        </div>
+        <%= link_to "Add Charity", root_path, class: "admin-button", id: "add-charity-btn" %>
+      </div>
       <% end %>
     </div>
 <div class="row">
