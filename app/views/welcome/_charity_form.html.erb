@@ -1,5 +1,5 @@
 <%= form_for @comment do |f| %>
   <%= f.text_field :body, placeholder: "Charity Name" %>
   <%= f.hidden_field :charity?, value: true %>
-  <%= f.submit "Submit Charity", class: "button" %>
+  <%= f.submit "Submit Charity", class: "submit-comment" %>
 <% end %>

@@ -1603,10 +1603,6 @@ transition: all .3s ease-in-out;
   text-align: center;
 }
 
-.button {
-letter-spacing: 2px;
-text-transform: uppercase;
-}
 
 #network_button {
 font-size: 1rem;
@@ -1750,9 +1746,7 @@ background-color: #2996cc;
   color: #004b7e;
 }
 
-.form-box {
-  padding: 1.5em;
-}.flip-container {
+.flip-container {
   perspective: 1000;
 }
   /* flip the pane when hovered */
@@ -1850,4 +1844,57 @@ font-size:0.9em;
   letter-spacing: 2px;
   margin-top:1.5em;
   text-align:center;
+
+}
+
+#form-box {
+  padding: 1.5em;
+}
+
+.form-holder {
+  border-radius: 5px;
+  border: 1px solid #C0C0C0;
+  background-color: #F8F8F8;
+  padding: 2.5em;
+}
+
+.form-holder form input {
+  padding: 1em;
+  height: 3.5em;
+  font-size: 1em;
+  border-radius: 5px;
+}
+
+.form-holder input[type=text], textarea {
+  border-radius: 5px;
+  font-size: 1em;
+  padding: 1em;
+}
+
+
+.submit-comment {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  border-radius: 5px;
+  background-color: #2996cc;
+  border: 1px solid #2996cc;
+  text-align: center;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+
+}
+
+.form-holder input[type=submit] {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: .85em;
+  color:white;
+  padding-left: 5em;
+  padding-right: 5em;
+ }
+
+.submit-comment:hover {
+background-color: #000;
+transition: all .3s ease-in-out;
+
 }
