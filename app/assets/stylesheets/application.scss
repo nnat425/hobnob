@@ -1749,7 +1749,10 @@ background-color: #2996cc;
 #profile-delete-appointment {
   color: #004b7e;
 }
-.flip-container {
+
+.form-box {
+  padding: 1.5em;
+}.flip-container {
   perspective: 1000;
 }
   /* flip the pane when hovered */
