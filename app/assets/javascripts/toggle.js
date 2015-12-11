@@ -20,8 +20,7 @@ $(document).ready(function(){
 
   $( ".home-subheader").hover(function() {
       var id = $(this).attr('id');
-      $(this).css('background-color','#F0F8FF');
-      $(this).css('border','1px solid #2996cc');
+      $(this).css('border','1px solid #87CEFF');
       $("#home-icon-" + id).css("background-color", "#fff");
       $("#home-icon-" + id).css("border", "1px solid #fff");
       $("#home-icon-" + id + " > h1").css("color", "#2996cc");
@@ -30,7 +29,6 @@ $(document).ready(function(){
     },
     function() {
       var id = $(this).attr('id');
-      $(this).css('background-color','#fff');
       $(this).css('border','1px solid #C0C0C0');
       $("#home-icon-" + id).css("background-color", "#2996cc");
       $("#home-icon-" + id + " > h1").css("color", "#fff");

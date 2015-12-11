@@ -668,30 +668,55 @@ letter-spacing: 1px;
 }
 
 #page-info-header {
-<<<<<<< HEAD
-font-family: "Open Sans";
-font-weight: 300;
-color: #004b7e;
-text-align: center;
-margin-top: .75em;
-margin-bottom: .75em;
-font-size: 5em;
-=======
+
   font-family: "Open Sans";
   font-weight: 300;
   color: #004b7e;
   text-align: center;
-  margin-top: .25em;
+  margin-top: .75em;
   margin-bottom: .75em;
   font-size: 5em;
->>>>>>>  slide toggle when hovering over div boxes on home page
+
 }
 
 #home-info-box {
 text-align: center;
+margin-top: 2em;
 margin-bottom: 2em;
+
 }
 
+#home-info-box i {
+  color: #004b7e;
+  margin-bottom: .75em;
+}
+#home-info-box h2 {
+  font-family: "Open Sans";
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: #004b7e;
+  margin-bottom: 1em;
+}
+
+.hn-comment {
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: 1.5em;
+  letter-spacing: 1px;
+}
+
+.commenter-name {
+  font-family: "Open Sans";
+  font-weight: strong;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: .85em;
+
+}
+
+.line-break {
+  border-bottom: 1px solid #eeeeee;
+}
 #new_potential_appointment {
 background-color: #F8F8F8;
 margin-top: 4em;
@@ -1473,6 +1498,7 @@ transition: all 0.4s ease;
 #learn-more {
   margin-top: 5em;
   text-align: center;
+
 }
 
 #learn-more p {
