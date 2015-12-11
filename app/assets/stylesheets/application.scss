@@ -1311,27 +1311,6 @@ box-shadow:         4px 4px 4px 0px #ccc;
 }
 
 
-#search-advisors-link {
-text-align: center;
-margin-bottom: 1.5em;
-border-radius: 10px;
-padding-left: 2.5em;
-padding-right: 2.5em;
-padding-top: 1.5em;
-padding-bottom: 1.5em;
-color:white;
-}
-
-#search-advisors-link a {
-background-color: #2996cc;
-letter-spacing: 2px;
-}
-
-#search-advisors-link a:hover {
-background-color: #000;
-transition: all .3s ease-in-out;
-}
-
 .hero {
 background:
 linear-gradient(transparent, black 90%),
@@ -1484,21 +1463,6 @@ padding-right: 2.5em;
 
 }
 
-#home-learn-link {
-border-radius: 10px;
-padding-left: 2.5em;
-padding-right: 2.5em;
-padding-top: 1.5em;
-padding-bottom: 1.5em;
-letter-spacing: 2px;
-background-color: #2996cc;
-}
-
-#home-learn-link:hover {
-background-color: #202020;
-color: #fff;
-transition: all 0.4s ease;
-}
 
 
 #learn-more {
@@ -1557,10 +1521,11 @@ margin-top:4em;
   width: 100%;
   margin-left: 0px;
   margin-right: 0px;
+  margin-bottom: 5em;
 }
 
 #home-charity-box h2 {
-  color: #C0C0C0;
+  color: #004b7e;
   font-family: "Open Sans";
   margin-top: 1.5em;
   font-weight: 300;
@@ -1569,12 +1534,14 @@ margin-top:4em;
 
 }
 
-#home-charity-box p {
-  color: #282828;
+#home-charity-box li {
+  color: #C0C0C0;
   font-family: "Open Sans";
   font-size: 1.5em;
   text-transform: uppercase;
   letter-spacing: 2px;
+  list-style-type: none;
+  font-weight: 300;
 }
 
 #home-footer {
@@ -1585,6 +1552,203 @@ margin-top:4em;
   widht: 100%;
 }
 
+#charity-list {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+}
+
+.admin-button {
+text-align: center;
+margin-bottom: 1.5em;
+font-size: .85em;
+border-radius: 5px;
+padding-left: 2.5em;
+padding-right: 2.5em;
+padding-top: 1.5em;
+padding-bottom: 1.5em;
+color:white;
+background-color: #2996cc;
+letter-spacing: 2px;
+text-transform: uppercase;
+}
+
+.admin-button:hover {
+background-color: #000;
+transition: all .3s ease-in-out;
+
+}
+
+.button {
+text-align: center;
+margin-bottom: 1.5em;
+font-size: .85em;
+border-radius: 5px;
+padding-left: 2.5em;
+padding-right: 2.5em;
+padding-top: 1.5em;
+padding-bottom: 1.5em;
+color:white;
+background-color: #2996cc;
+letter-spacing: 2px;
+text-transform: uppercase;
+}
+
+.button:hover {
+background-color: #000;
+transition: all .3s ease-in-out;
+}
+
+#search-advisors-link {
+  text-align: center;
+}
+
+.button {
+letter-spacing: 2px;
+text-transform: uppercase;
+}
+
+#network_button {
+font-size: 1rem;
+letter-spacing: 5px;
+text-transform: uppercase;
+color: #fff;
+border: solid #2996cc 2px;
+padding-left: 2.5em;
+padding-right: 2.5em;
+padding-top: 1em;
+padding-bottom: 1em;
+margin-top: 3em;
+border-radius: 5px;
+background-color: #2996cc;
+}
+
+#network_button:hover {
+  background-color: #202020;
+  color: #fff;
+  transition: all 0.4s ease;
+  border:solid #202020 2px;
+}
+
+#book-appt-btn {
+  float: right;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  color: #C0C0C0;
+}
+
+#calendar-button-div {
+  text-align: center;
+}
+
+#calendar_button {
+  font-size: .85em;
+  margin-top: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
+  letter-spacing: 2px;
+  background-color: #203451;
+  color: #fff;
+  border: 1px solid #203451;
+  transition: all 0.2s ease;
+
+}
+#simple-cal {
+  text-align: center;
+
+}
+
+
+#simple-cal a {
+  font-size:1em;
+  text-transform: uppercase;
+  font-family: "Open Sans";
+  letter-spacing: 2px;
+  color: #C0C0C0;
+  display: inline;
+  font-weight: 300;
+
+}
+
+#table-holder table {
+  width: 100%;
+}
+#simple-cal p {
+  font-weight: 300;
+  font-family: "Open Sans";
+  font-size: 2.5em;
+  display: inline;
+  letter-spacing: 2px;
+  color: #888888;
+}
+#simple-cal #previous-link {
+  float: left;
+  text-align: left;
+}
+
+#simple-cal #next-link {
+  float: right;
+  text-align: right;
+}
+
+
+#add_to_cart {
+  background: #2996cc;
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 10px;
+}
+
+#add_to_cart:hover {
+  background-color: #000;
+  transition: all 0.2s ease;
+  border: solid black 1px;
+  color: #fff;
+}
+
+#create-appointment-btn {
+  background-color: #203451;
+}
+
+#edit-profile-btn {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.5em;
+  color: #203451;
+  background-color: #B0B0B0;
+  float: right;
+}
+
+#advisor-search-btn {
+  background-color: #2996cc;
+  font-weight: 300;
+  letter-spacing: 2px;
+  border-radius: 10px;
+  border: 1px solid #2996cc;
+  color: #fff;
+  margin-top: 2em;
+  padding-left: 5em;
+  padding-right: 5em;
+
+}
+
+#advisor-search-btn:hover {
+  background-color: #000;
+  transition: all 0.2s ease;
+  border: solid black 1px;
+  color: #fff;
+}
+
+#profile-edit-appointment {
+  display: inline;
+  color: #004b7e;
+}
+
+#profile-delete-appointment {
+  color: #004b7e;
+}
 .flip-container {
   perspective: 1000;
 }

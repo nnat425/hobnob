@@ -53,7 +53,7 @@
 
     <h1 id="page-info-header">Ready to make your move?</h1>
     <div class="row" id="search-advisors-link">
-      <%= link_to "Get Networking!", advisors_path, class: "button", id: "search-advisors-link" %>
+      <%= link_to "Get Networking!", advisors_path, class: "button" %>
     </div>
     <div class="line-break"></div>
     <div class="row" id="learn-more">
@@ -91,15 +91,26 @@
       <p class="commenter-name">-<%= comment.subtext %></p>
       <% end %>
       <% end %>
+      <% if admin_logged_in? %>
+      <div class="admin-box">
+        <%= link_to "Add Comment", root_path, class: "admin-button" %>
+      <% end %>
+      </div>
     </div>
     <div id="home-charity-box">
       <h2>Help support the communities we live in!</h2>
-      <p>Example Charity</p>
       <% if @charities %>
+      <ul id="charity-list">
       <% @charities.each do |charity| %>
-      <p><%= charity.body %></p>
+        <li><%= charity.body %></li>
       <% end %>
+      </ul>
       <% end %>
+      <% if admin_logged_in? %>
+      <div class="admin-box">
+        <%= link_to "Add Charity", root_path, class: "admin-button" %>
+      <% end %>
+      </div>
     </div>
 <div class="row">
 </div>
