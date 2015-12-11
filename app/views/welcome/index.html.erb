@@ -50,6 +50,12 @@
         </div>
       </div>
     </div>
+
+    <h1 id="page-info-header">Ready to make your move?</h1>
+    <div class="row" id="search-advisors-link">
+      <%= link_to "Get Networking!", advisors_path, class: "button", id: "search-advisors-link" %>
+    </div>
+    <div class="line-break"></div>
     <div class="row" id="learn-more">
       <p>For step by step directions, click MORE below:</p>
       <%= link_to "More", root_path, class: "button", id: "home-learn-link" %>
@@ -72,18 +78,44 @@
       </div>
     </div>
 
-    <h1 id="page-info-header">Ready to make your move?</h1>
-    <div class="row" id="search-advisors-link">
-      <%= link_to "Get Networking!", advisors_path, class: "button", id: "search-advisors-link" %>
-    </div>
+
+    <div class="line-break"></div>
     <div class="row" id="home-info-box">
-
-
-
+      <h2>What people are saying about Hob Nob!</h2>
+      <i class="fa fa-comments-o fa-5x"></i>
+      <p class="hn-comment">"Comment about Hob Nob goes here!"</p>
+      <p class="commenter-name">- Student</p>
+      <% if @user_comments %>
+      <% @user_comments.each do |comment| %>
+      <p class="hn-comment"><%= comment.body %></p>
+      <p class="commenter-name">-<%= comment.subtext %></p>
+      <% end %>
+      <% end %>
     </div>
+    <div id="home-charity-box">
+      <h2>Help support the communities we live in!</h2>
+      <p>Example Charity</p>
+      <% if @charities %>
+      <% @charities.each do |charity| %>
+      <p><%= charity.body %></p>
+      <% end %>
+      <% end %>
+    </div>
+<div class="row">
+</div>
+<footer class="footer" id="home-footer">
+      <p class="slogan">HOBNOB</p>
+      <p class="links">
+        <%= link_to "Home", root_path %>
+        <%= link_to "About", about_path %>
+        <%= link_to "Contact Us" %>
+      </p>
+      <p class="copywrite">© 2015 T-Tree</p>
+</footer>
 
 
   </div>
+
 
 
 

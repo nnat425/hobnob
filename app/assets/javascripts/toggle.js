@@ -20,8 +20,7 @@ $(document).ready(function(){
 
   $( ".home-subheader").hover(function() {
       var id = $(this).attr('id');
-      $(this).css('background-color','#F0F8FF');
-      $(this).css('border','1px solid #2996cc');
+      $(this).css('border','3px solid #87CEFF');
       $("#home-icon-" + id).css("background-color", "#fff");
       $("#home-icon-" + id).css("border", "1px solid #fff");
       $("#home-icon-" + id + " > h1").css("color", "#2996cc");
@@ -30,7 +29,6 @@ $(document).ready(function(){
     },
     function() {
       var id = $(this).attr('id');
-      $(this).css('background-color','#fff');
       $(this).css('border','1px solid #C0C0C0');
       $("#home-icon-" + id).css("background-color", "#2996cc");
       $("#home-icon-" + id + " > h1").css("color", "#fff");
@@ -39,9 +37,25 @@ $(document).ready(function(){
 
     });
 
+  $("#categories-toggle").hide();
+  $("#locations-toggle").hide();
+  $("#experience-toggle").hide();
 
+  $("#show-options-categories").on("click", function(event) {
+    event.preventDefault();
+    $("#categories-toggle").slideToggle();
 
+  });
 
+  $("#show-options-locations").on("click", function(event) {
+    event.preventDefault();
+    $("#locations-toggle").slideToggle();
+
+  });
+  $("#show-options-years").on("click", function(event) {
+    event.preventDefault();
+    $("#experience-toggle").slideToggle();
+  });
 
 });
 
