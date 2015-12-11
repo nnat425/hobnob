@@ -84,10 +84,12 @@
       <h2>What people are saying about Hob Nob!</h2>
       <i class="fa fa-comments-o fa-5x"></i>
       <% if @user_comments %>
-      <% @user_comments.each do |comment| %>
-      <p class="hn-comment">"<%= comment.body %>"</p>
-      <p class="commenter-name">- <%= comment.subtext %></p>
-      <% end %>
+      <div id="comment-holder">
+        <% @user_comments.each do |comment| %>
+        <p class="hn-comment">"<%= comment.body %>"</p>
+        <p class="commenter-name">- <%= comment.subtext %></p>
+        <% end %>
+      </div>
       <% end %>
       <% if admin_logged_in? %>
       <div class="small-12 medium-12 large-6 large-centered columns" id="form-box">
