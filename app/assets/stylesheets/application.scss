@@ -1897,5 +1897,18 @@ font-size:0.9em;
 .submit-comment:hover {
 background-color: #000;
 transition: all .3s ease-in-out;
+}
 
+#close-charity-btn {
+  float: right;
+  margin-top: -2em;
+  margin-right: -1.5em;
+  color: #C0C0C0;
+}
+
+#close-comment-btn {
+  float: right;
+  margin-top: -2em;
+  margin-right: -1.5em;
+  color: #C0C0C0;
 }

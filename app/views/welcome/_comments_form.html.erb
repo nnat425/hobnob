@@ -1,4 +1,5 @@
 <%= form_for @comment do |f| %>
+  <%= link_to "", root_path, class: "fa fa-close", id: "close-comment-btn" %>
   <%= f.text_field :subtext, placeholder: "Name" %>
   <%= f.text_area :body, size: "60x15", placeholder: "Comment" %>
   <%= f.submit "Submit Comment", class: "submit-comment" %>

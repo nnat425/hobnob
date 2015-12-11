@@ -58,17 +58,33 @@ $(document).ready(function(){
   });
 
 
-$("#add-comment-btn").on("click", function(event) {
-  event.preventDefault();
-  $("#comments-form-holder").slideDown();
-  $("#add-comment-btn").hide();
-});
+  $("#add-comment-btn").on("click", function(event) {
+    event.preventDefault();
+    $("#comments-form-holder").slideDown();
+    $("#add-comment-btn").hide();
+  });
 
-$("#add-charity-btn").on("click", function(event) {
-  event.preventDefault();
-  $("#charities-form-holder").slideDown();
-  $("#add-charity-btn").hide();
-});
+  $("#add-charity-btn").on("click", function(event) {
+    event.preventDefault();
+    $("#charities-form-holder").slideDown();
+    $("#add-charity-btn").hide();
+  });
+
+   $("#close-comment-btn").on("click", function(event) {
+    event.preventDefault();
+    var id = $(this).parent().parent().attr("id");
+    $("#"+id).slideUp();
+    $("#add-comment-btn").show();
+
+  });
+
+  $("#close-charity-btn").on("click", function(event) {
+    event.preventDefault();
+    var id = $(this).parent().parent().attr("id");
+    $("#"+id).slideUp();
+    $("#add-charity-btn").show();
+  });
+
 
 
 });
