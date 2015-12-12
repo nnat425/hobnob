@@ -1639,6 +1639,7 @@ color:white;
 background-color: #2996cc;
 letter-spacing: 2px;
 text-transform: uppercase;
+width: 20em;
 }
 
 .button:hover {
@@ -1925,6 +1926,30 @@ letter-spacing: 1px;
 color: #fff;
 }
 
-#my-button {
- width: 20em;
+
+#popup-levels {
+  display:none;
+  border-radius: 1.5em;
+  padding: 1.5em;
+  background-color: #000;
+
+
+}
+.popup-year-range {
+  color: #2996cc;
+  font-family: "Open Sans";
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+.popup-info-text {
+  font-size:1.25em;
+  font-family: "Open Sans";
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: #C0C0C0;
+  text-align: center;
 }
