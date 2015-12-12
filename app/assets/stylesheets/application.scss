@@ -361,7 +361,7 @@ overflow: hidden;
   background-color:#282828;
   background-size: cover;
   overflow: hidden;
-  margin-top:7em;
+  margin-top:5em;
   padding-left: 1em;
   padding-right: 1em;
   padding-top: 2.5em;
@@ -1442,23 +1442,20 @@ margin-top: 3em;
 
 #about-subtext{
 color: #fff;
-margin-top: 5.0em;
+margin-top: 6em;
+float: right;
+text-align: right;
+opacity: 0.5;
+padding: 2.5em;
 }
 
 #about-subtext p{
-font-size: 1.5em;
+font-size: 2em;
 font-family: "Open Sans";
 letter-spacing: 2px;
 font-weight: 300;
 }
 
-#about_1{
-margin-left:3.0em;
-}
-
-#about_2{
-margin-left:5.0em;
-}
 
 #shopping-cart-header h1 {
 font-family: "Open Sans";
@@ -1903,17 +1900,18 @@ transition: all .3s ease-in-out;
 display:none;
 background-color:white;
 border-radius: 1.5em;
+padding: 1.5em;
 
 }
 
-#popup-box{
-  width:80em;
-  height:25em;
-}
 
 .popup_header_text{
-  color: #008CBA;
-  font-family: "Open Sans"
+  color: #2996cc;
+  font-family: "Open Sans";
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 1.25em;
 }
 
 .popup-subtopic-list{
@@ -1922,6 +1920,7 @@ font-family: "Open Sans";
 font-weight: 300;
 list-style-type:none;
 float:left;
+letter-spacing: 1px;
 }
 
 #my-button {
