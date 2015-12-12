@@ -357,7 +357,7 @@ color: #989898;
 .about_container_2{
   background-color:#008CBA;
   background-size: cover;
-  height: 80vh;
+  height: 90vh;
   overflow: hidden;
   margin-top:7em;
 }
@@ -1815,8 +1815,8 @@ background-color: #2996cc;
   margin-bottom:2em;
   background-color:white;
   text-align:center;
-  width:25em;
-  height:25em;
+  width:30em;
+  height:30em;
   border: 0.5em double ;
   font-family: "Open Sans";
 
@@ -1936,4 +1936,8 @@ font-family: "Open Sans";
 font-weight: 300;
 list-style-type:none;
 float:left;
+}
+
+#all_about_boxes{
+  margin-left:-5em;
 }
