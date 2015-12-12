@@ -1898,9 +1898,10 @@ transition: all .3s ease-in-out;
 
 #element_to_pop_up {
 display:none;
-background-color:white;
+
 border-radius: 1.5em;
 padding: 1.5em;
+
 
 }
 
@@ -1921,6 +1922,7 @@ font-weight: 300;
 list-style-type:none;
 float:left;
 letter-spacing: 1px;
+color: #fff;
 }
 
 #my-button {
