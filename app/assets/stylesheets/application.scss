@@ -1746,47 +1746,7 @@ background-color: #2996cc;
   color: #004b7e;
 }
 
-.flip-container {
-  perspective: 1000;
-}
-  /* flip the pane when hovered */
-  .flip-container:hover .flipper, .flip-container.hover .flipper {
-    transform: rotateY(180deg);
-  }
 
-.flip-container, .front, .back {
-  width: 320px;
-  height: 480px;
-}
-
-/* flip speed goes here */
-.flipper {
-  transition: 1.0s;
-  transform-style: preserve-3d;
-
-  position: relative;
-}
-
-/* hide back of pane during swap */
-.front, .back {
-  backface-visibility: hidden;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-/* front pane, placed above back */
-.front {
-  z-index: 2;
-  /* for firefox 31 */
-  transform: rotateY(0deg);
-}
-
-/* back, initially hidden pane */
-.back {
-  transform: rotateY(180deg);
-}
 
 .about-icon{
   margin-top:2em;
@@ -1810,32 +1770,7 @@ background-color: #2996cc;
   color: #fff;
 }
 
-#about-box{
-  margin:5em;
-  margin-bottom:2em;
-  background-color:white;
-  text-align:center;
-  width:30em;
-  height:30em;
-  border: 0.5em double ;
-  font-family: "Open Sans";
 
-}
-
-
-
-.about_text {
-  color:#004b7e;
-  font-family: "Open Sans";
-  font-weight: 300;
-  letter-spacing:2px;
-  margin-top:2.7em;
-}
-
-.about_box_text{
-margin-top:2em;
-font-size:0.9em;
-}
 
 #network_over{
   color:white;
@@ -1938,6 +1873,3 @@ list-style-type:none;
 float:left;
 }
 
-#all_about_boxes{
-  margin-left:-5em;
-}
