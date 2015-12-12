@@ -339,7 +339,9 @@ overflow: hidden;
   background-color:white;
   background-size: cover;
   overflow: hidden;
-  margin-top:7em;
+  margin-top: 2.5em;
+  border-bottom: 1px solid #eeeeee;
+  padding: 2em;
 }
 
 #about_container_1_subtext p {
@@ -351,9 +353,8 @@ overflow: hidden;
 }
 
 #about_container_1_subtext{
-  float:right;
-  margin-right:6em;
-  font-family: "Open Sans";
+  text-align: center;
+
 }
 
 .about_container_2 {
@@ -698,11 +699,16 @@ margin-right: auto;
 margin-left: auto;
 }
 
+#about-container {
+  text-align: center;
+  padding: 3em;
+}
 #about-container p {
 font-family: "Open Sans";
-font-size: 1.5em;
+font-size: 1.25em;
 font-weight: 300;
-color: #989898;
+color: #282828;
+letter-spacing: 1px;
 }
 
 .category-subtopic-list {
