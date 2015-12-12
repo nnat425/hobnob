@@ -356,11 +356,26 @@ overflow: hidden;
   font-family: "Open Sans";
 }
 
-.about_container_2{
+.about_container_2 {
   background-color:#282828;
   background-size: cover;
   overflow: hidden;
   margin-top:7em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
+  text-align: center;
+}
+
+#simple-steps-header {
+  text-align: center;
+  color: #2996cc;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-family: "Open Sans";
+  font-weight: 300;
+  letter-spacing: 2px;
 }
 
 #about-box h1 {
@@ -368,8 +383,13 @@ overflow: hidden;
   margin-bottom: 1em;
 }
 
+#about-box h1 i {
+  color: #fff;
+  font-weight: 300;
+}
+
 #about-box h3 {
-  color: #C0C0C0;
+  color: #fff;
   font-family: "Open Sans";
   font-weight: 300;
   text-transform: uppercase;
@@ -567,6 +587,16 @@ font-weight: 300;
 margin-bottom: 5px;
 }
 
+#page-info-header {
+  text-align: center;
+  letter-spacing: 2px;
+  font-family: "Open Sans";
+  font-weight: 100;
+  letter-spacing: 2px;
+  color: #282828;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
 #page-header p {
 letter-spacing: 2px;
 font-family: "Open Sans";
@@ -735,6 +765,7 @@ margin-bottom: 2em;
 .line-break {
   border-bottom: 1px solid #eeeeee;
 }
+
 #new_potential_appointment {
 background-color: #F8F8F8;
 margin-top: 4em;
@@ -1786,7 +1817,7 @@ background-color: #2996cc;
 
 
 #network_over{
-  color:white;
+  color: #000;
   font-family: "Open Sans";
   font-weight:300;
   letter-spacing: 2px;
@@ -1887,3 +1918,6 @@ list-style-type:none;
 float:left;
 }
 
+#my-button {
+ width: 20em;
+}
