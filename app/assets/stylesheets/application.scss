@@ -338,30 +338,75 @@ overflow: hidden;
 .about_container_1{
   background-color:white;
   background-size: cover;
-  height: 80vh;
   overflow: hidden;
-  margin-top:7em;
+  margin-top: 2.5em;
+  border-bottom: 1px solid #eeeeee;
+  padding: 2em;
 }
 
-#about_container_1 p {
-font-family: "Open Sans";
-color: #989898;
+#about_container_1_subtext p {
+  font-family: "Open Sans";
+  color: #000;
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-size: 1.25em;
 }
 
 #about_container_1_subtext{
-  float:right;
-  margin-right:6em;
-  font-family: "Open Sans";
+  text-align: center;
+
 }
 
-.about_container_2{
-  background-color:#008CBA;
+.about_container_2 {
+  background-color:#282828;
   background-size: cover;
-  height: 90vh;
   overflow: hidden;
-  margin-top:7em;
+  margin-top:5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
+  text-align: center;
 }
 
+#simple-steps-header {
+  text-align: center;
+  color: #2996cc;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-family: "Open Sans";
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+#about-box h1 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+#about-box h1 i {
+  color: #fff;
+  font-weight: 300;
+}
+
+#about-box h3 {
+  color: #fff;
+  font-family: "Open Sans";
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 1.5em;
+
+}
+
+#about-box p {
+  color: #C0C0C0;
+  font-family: "Open Sans";
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-size: 1.25em;
+}
 
 #advisor-index-panel {
 margin-top: 10px;
@@ -543,6 +588,16 @@ font-weight: 300;
 margin-bottom: 5px;
 }
 
+#page-info-header {
+  text-align: center;
+  letter-spacing: 2px;
+  font-family: "Open Sans";
+  font-weight: 100;
+  letter-spacing: 2px;
+  color: #282828;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
 #page-header p {
 letter-spacing: 2px;
 font-family: "Open Sans";
@@ -644,11 +699,16 @@ margin-right: auto;
 margin-left: auto;
 }
 
+#about-container {
+  text-align: center;
+  padding: 3em;
+}
 #about-container p {
 font-family: "Open Sans";
-font-size: 1.5em;
+font-size: 1.25em;
 font-weight: 300;
-color: #989898;
+color: #282828;
+letter-spacing: 1px;
 }
 
 .category-subtopic-list {
@@ -672,17 +732,6 @@ font-weight: 300;
 letter-spacing: 1px;
 }
 
-#page-info-header {
-
-  font-family: "Open Sans";
-  font-weight: 300;
-  color: #004b7e;
-  text-align: center;
-  margin-top: .75em;
-  margin-bottom: .75em;
-  font-size: 5em;
-
-}
 
 #home-info-box {
 text-align: center;
@@ -722,6 +771,7 @@ margin-bottom: 2em;
 .line-break {
   border-bottom: 1px solid #eeeeee;
 }
+
 #new_potential_appointment {
 background-color: #F8F8F8;
 margin-top: 4em;
@@ -1392,23 +1442,20 @@ margin-top: 3em;
 
 #about-subtext{
 color: #fff;
-margin-top: 5.0em;
+margin-top: 6em;
+float: right;
+text-align: right;
+opacity: 0.5;
+padding: 2.5em;
 }
 
 #about-subtext p{
-font-size: 1.5em;
+font-size: 2em;
 font-family: "Open Sans";
 letter-spacing: 2px;
 font-weight: 300;
 }
 
-#about_1{
-margin-left:3.0em;
-}
-
-#about_2{
-margin-left:5.0em;
-}
 
 #shopping-cart-header h1 {
 font-family: "Open Sans";
@@ -1592,6 +1639,7 @@ color:white;
 background-color: #2996cc;
 letter-spacing: 2px;
 text-transform: uppercase;
+width: 20em;
 }
 
 .button:hover {
@@ -1746,47 +1794,7 @@ background-color: #2996cc;
   color: #004b7e;
 }
 
-.flip-container {
-  perspective: 1000;
-}
-  /* flip the pane when hovered */
-  .flip-container:hover .flipper, .flip-container.hover .flipper {
-    transform: rotateY(180deg);
-  }
 
-.flip-container, .front, .back {
-  width: 320px;
-  height: 480px;
-}
-
-/* flip speed goes here */
-.flipper {
-  transition: 1.0s;
-  transform-style: preserve-3d;
-
-  position: relative;
-}
-
-/* hide back of pane during swap */
-.front, .back {
-  backface-visibility: hidden;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-/* front pane, placed above back */
-.front {
-  z-index: 2;
-  /* for firefox 31 */
-  transform: rotateY(0deg);
-}
-
-/* back, initially hidden pane */
-.back {
-  transform: rotateY(180deg);
-}
 
 .about-icon{
   margin-top:2em;
@@ -1810,40 +1818,16 @@ background-color: #2996cc;
   color: #fff;
 }
 
-#about-box{
-  margin:5em;
-  margin-bottom:2em;
-  background-color:white;
-  text-align:center;
-  width:30em;
-  height:30em;
-  border: 0.5em double ;
-  font-family: "Open Sans";
 
-}
-
-
-
-.about_text {
-  color:#004b7e;
-  font-family: "Open Sans";
-  font-weight: 300;
-  letter-spacing:2px;
-  margin-top:2.7em;
-}
-
-.about_box_text{
-margin-top:2em;
-font-size:0.9em;
-}
 
 #network_over{
-  color:white;
+  color: #000;
   font-family: "Open Sans";
   font-weight:300;
   letter-spacing: 2px;
   margin-top:1.5em;
   text-align:center;
+  margin-bottom: 1em;
 
 }
 
@@ -1915,19 +1899,21 @@ transition: all .3s ease-in-out;
 
 #element_to_pop_up {
 display:none;
-background-color:white;
+
 border-radius: 1.5em;
+padding: 1.5em;
+
 
 }
 
-#popup-box{
-  width:80em;
-  height:25em;
-}
 
 .popup_header_text{
-  color: #008CBA;
-  font-family: "Open Sans"
+  color: #2996cc;
+  font-family: "Open Sans";
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 1.25em;
 }
 
 .popup-subtopic-list{
@@ -1936,8 +1922,34 @@ font-family: "Open Sans";
 font-weight: 300;
 list-style-type:none;
 float:left;
+letter-spacing: 1px;
+color: #fff;
 }
 
-#all_about_boxes{
-  margin-left:-5em;
+
+#popup-levels {
+  display:none;
+  border-radius: 1.5em;
+  padding: 1.5em;
+  background-color: #000;
+
+
+}
+.popup-year-range {
+  color: #2996cc;
+  font-family: "Open Sans";
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+.popup-info-text {
+  font-size:1.25em;
+  font-family: "Open Sans";
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: #C0C0C0;
+  text-align: center;
 }
