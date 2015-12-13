@@ -22,9 +22,7 @@ $(document).ready(function(){
     var id = $(this).attr('id');
     $(this).css('border','2px solid #87CEFF');
     $(this).css("box-shadow","0 0 5px rgba(81, 203, 238, 1)");
-    $("#home-icon-" + id).css("background-color", "#fff");
-    $("#home-icon-" + id).css("border", "1px solid #fff");
-    $("#home-icon-" + id + " > h1").css("color", "#2996cc");
+
     $("#info-" + id).hide();
     $( "#info" + id).slideDown();
   },
@@ -32,8 +30,6 @@ $(document).ready(function(){
     var id = $(this).attr('id');
     $(this).css('border','1px solid #C0C0C0');
     $(this).css("box-shadow","none");
-    $("#home-icon-" + id).css("background-color", "#2996cc");
-    $("#home-icon-" + id + " > h1").css("color", "#fff");
     $("#info" + id).hide();
     $( "#info-" + id).slideDown();
 
