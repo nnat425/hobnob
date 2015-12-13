@@ -735,21 +735,27 @@ letter-spacing: 1px;
 
 #home-info-box {
 text-align: center;
-margin-top: 2em;
-margin-bottom: 2em;
+margin-top: 0em;
+margin-bottom: 0em;
+background-color: #282828;
+background-size: cover;
+overflow: hidden;
+padding: 2em;
 
 }
 
 #home-info-box i {
-  color: #004b7e;
+  color: #0198E1;
   margin-bottom: .75em;
 }
 #home-info-box h2 {
   font-family: "Open Sans";
   font-weight: 300;
   letter-spacing: 2px;
-  color: #004b7e;
+  color: #0198E1;
   margin-bottom: 1em;
+  margin-top: 1.5em;
+
 }
 
 .hn-comment {
@@ -757,6 +763,7 @@ margin-bottom: 2em;
   font-weight: 300;
   font-size: 1.5em;
   letter-spacing: 1px;
+  color: #fff;
 }
 
 .commenter-name {
@@ -765,11 +772,18 @@ margin-bottom: 2em;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: .85em;
+  color: #C0C0C0;
 
 }
 
 .line-break {
+  width: 50%;
   border-bottom: 1px solid #eeeeee;
+  margin-right: auto;
+  margin-left:auto;
+  margin-top:3em;
+  margin-bottom: 3em;
+
 }
 
 #new_potential_appointment {
@@ -1380,7 +1394,6 @@ margin-top: 6em;
 }
 
 .home-icon {
-  border: 1px solid #eeeeee;
   border-radius: 50%;
   width: 100px;
   height: 100px;
@@ -1388,18 +1401,19 @@ margin-top: 6em;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  background-color: #2996cc;
+
 }
 
 
 .home-icon h1 {
   margin: auto;
-  color: #fff;
+  color: #0198E1;
 }
 
 .parallax-content {
 max-width: 100%;
-padding: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
 background-color: #fff;
 position: relative;
 top: 850px;
@@ -1513,9 +1527,11 @@ padding-right: 2.5em;
 
 
 #learn-more {
-  margin-top: 5em;
   text-align: center;
-
+  padding: 2em;
+  background-color: #fff;
+  background-size: cover;
+  overflow: hidden;
 }
 
 #learn-more p {
@@ -1524,6 +1540,7 @@ padding-right: 2.5em;
   letter-spacing: 2px;
   font-size: 1.5em;
   margin-bottom: 2.5em;
+  color: #C0C0C0;
 }
 
 #advisors-list {
@@ -1561,14 +1578,16 @@ margin-top:4em;
 }
 
 #home-charity-box {
-  border-top: 1px solid #eeeeee;
+  background-size: cover;
   text-align: center;
-  left: 0;
-  right: 0;
+  overflow: hidden;
   width: 100%;
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-bottom: 5em;
+  height: 100%;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding: 2em;
+  background-color:#F8F8F8;
+
 }
 
 #home-charity-box h2 {
