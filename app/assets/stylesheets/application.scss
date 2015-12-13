@@ -782,7 +782,7 @@ padding: 2em;
   margin-right: auto;
   margin-left:auto;
   margin-top:3em;
-  margin-bottom: 3em;
+  margin-bottom:3em;
 
 }
 
@@ -1421,14 +1421,16 @@ top: 850px;
 }
 
 #intro-text {
-margin-top: 2.5em;
+margin-top: 0em;
 text-align: center;
-margin-bottom: 2em;
+margin-bottom: 1.5em;
 
 }
 
 #intro-subtext {
 text-align: center;
+margin-bottom: 2em;
+margin-top: 2em;
 
 }
 
@@ -1441,6 +1443,7 @@ font-weight: 300;
 letter-spacing: 2px;
 
 
+
 }
 
 #intro-subtext p {
@@ -1451,7 +1454,6 @@ letter-spacing: 2px;
 margin-bottom: 3em;
 font-weight: 300;
 margin-top: 3em;
-
 }
 
 #about-subtext{
@@ -1527,6 +1529,7 @@ padding-right: 2.5em;
 
 
 #learn-more {
+  margin-bottom: 2.5em;
   text-align: center;
   padding: 2em;
   background-color: #fff;
@@ -1668,6 +1671,7 @@ transition: all .3s ease-in-out;
 
 #search-advisors-link {
   text-align: center;
+  margin-bottom: 1em;
 }
 
 
