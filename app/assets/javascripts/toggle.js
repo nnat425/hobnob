@@ -9,11 +9,12 @@ $(document).ready(function(){
     $("#user_school").slideToggle();
   });
 
-  $(".learn-toggle").hide();
+  $("#learn-toggle").hide();
 
   $("#learn-more").on("click", "#home-learn-link", function(event) {
     event.preventDefault();
-    $(".learn-toggle").fadeToggle();
+    $("#learn-toggle").fadeToggle();
+
   });
 
   $(".home-box-toggle").hide();
