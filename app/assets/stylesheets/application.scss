@@ -1675,27 +1675,9 @@ transition: all .3s ease-in-out;
 }
 
 
-#network_button {
-font-size: 1rem;
-letter-spacing: 5px;
-text-transform: uppercase;
-color: #fff;
-border: solid #2996cc 2px;
-padding-left: 2.5em;
-padding-right: 2.5em;
-padding-top: 1em;
-padding-bottom: 1em;
-margin-top: 3em;
-border-radius: 5px;
-background-color: #2996cc;
-}
 
-#network_button:hover {
-  background-color: #202020;
-  color: #fff;
-  transition: all 0.4s ease;
-  border:solid #202020 2px;
-}
+
+
 
 #book-appt-btn {
   float: right;
