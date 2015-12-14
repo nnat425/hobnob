@@ -50,7 +50,9 @@ text-align: center;
 li {
 float: none;
 display: inline-block;
-margin-top: .4em;
+margin-top: .35em;
+font-family: "Open Sans";
+font-weight: 300;
 }
 
 a {
@@ -130,8 +132,31 @@ float: left;
 }
 }
 
+#mobile-header-dropdown {
+  float: right;
+  font-family: "Open Sans";
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-top: .4em;
+}
 
+.mobile-header-menu {
+  float: right;
+  text-align: center;
+  list-style-type: none;
+  display: none;
+  padding: 1em;
+}
 
+.mobile-header-menu a {
+  font-family: "Open Sans";
+  color: #fff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
 .signup_hero_6 {
 background-size: cover;
 overflow: hidden;
