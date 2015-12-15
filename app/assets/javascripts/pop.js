@@ -31,6 +31,13 @@
 
             });
 
+            $(".menu").on('click', ".mobile-header-dropdown", function(e) {
+
+                e.preventDefault();
+
+                $('.mobile-header-menu').bPopup();
+            })
+
         });
 
     })(jQuery);
