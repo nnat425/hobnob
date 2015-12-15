@@ -22,7 +22,7 @@ config.action_mailer.smtp_settings = {
 
 
   config.after_initialize do
-  ActiveMerchant::Billing::Base.mode = :test
+  ActiveMerchant::Billing::Base.mode = :production
   ::GATEWAY = ActiveMerchant::Billing::PaypalGateway.new(
      :login => ENV["PAYPAL_LOGIN"],
   :password => ENV["PAYPAL_PASSWORD"],
