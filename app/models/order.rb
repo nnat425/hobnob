@@ -16,13 +16,12 @@ class Order < ActiveRecord::Base
   end
 
   def price_in_cents
-    # if cart.user.student == true
-    #   return self.cart.total_price_student * 100
-    # else
+    if cart.user.student == true
+      return self.cart.total_price_student * 100
+    else
     # (cart.total_price*100).round
-  #   return  self.cart.total_price_regular * 100
-  # end
-  return 1
+    return  self.cart.total_price_regular * 100
+  end
 end
 
 
