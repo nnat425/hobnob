@@ -2,12 +2,20 @@ Rails.application.routes.draw do
   resources :meetings
   root 'welcome#index'
   get 'about' => 'welcome#about'
-  resources :advisors
+
   resources :users
   resources :potential_appointments
   resources :carts
   resources :orders
   resources :comments
+
+  get '/FinNetwork' => 'advisors#index'
+  get '/FinNetwork/new' => 'advisors#new'
+  post '/FinNetwork' => 'advisors#create'
+  get '/FinNetwork/:id' => 'advisors#show'
+  get '/FinNetwork/:id/edit' => 'advisors#edit'
+  patch '/FinNetwork/:id' => 'advisors#update'
+  delete '/FinNetwork/:id' =? 'advisors#destroy'
 
   get 'network_members' => 'admins#index'
   get 'admin/login' => 'admins#new'
