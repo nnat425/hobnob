@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  get 'password_resets/new'
-
-  get 'password_resets/edit'
-
   resources :meetings
   root 'welcome#index'
   get 'about' => 'welcome#about'
@@ -12,6 +8,7 @@ Rails.application.routes.draw do
   resources :carts
   resources :orders
   resources :comments
+  resources :password_resets, only: [:new, :create, :edit, :update]
 
   get 'FinNetwork' => 'advisors#index', as: 'advisors'
   get 'FinNetwork/new' => 'advisors#new', as: 'advisor_new'
