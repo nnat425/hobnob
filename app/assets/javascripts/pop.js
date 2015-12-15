@@ -31,7 +31,7 @@
 
             });
 
-            $(".menu").on('click', "#mobile-header-dropdown", function(e) {
+            $(".menu").on('click', ".mobile-header-dropdown", function(e) {
 
                 e.preventDefault();
 

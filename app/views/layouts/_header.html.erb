@@ -31,14 +31,26 @@
       </ul>
     </nav>
 
-    <nav class="menu hide-for-large-up ">
+
+    <nav class="menu show-for-medium-only">
       <h1 class="name"><img id="nav_logo" src="/assets/hn_logo_small.png"/></h1>
       <ul class="inline-list">
         <li id='flash_add_cart'><%=flash[:added_to_cart] %></li>
         <li id='flash_already_cart'><%=flash[:already_in_cart] %></li>
         <li id='flash_already_cart'><%=flash[:item_remove] %></li>
+
       </ul>
-      <%= link_to "Menu", "#", id: "mobile-header-dropdown" %>
+      <%= link_to "Menu", "#", class: "mobile-header-dropdown", id: "medium-header-dropdown" %>
+    </nav>
+
+    <nav class="menu show-for-small-only">
+      <ul class="inline-list">
+        <h1 class="name" id="mobile-header-logo"><img id="nav_logo" src="/assets/hn_logo_small.png"/></h1>
+        <li id='flash_add_cart'><%=flash[:added_to_cart] %></li>
+        <li id='flash_already_cart'><%=flash[:already_in_cart] %></li>
+        <li id='flash_already_cart'><%=flash[:item_remove] %></li>
+        <%= link_to "Menu", "#", class: "mobile-header-dropdown", id: "small-header-dropdown" %>
+      </ul>
     </nav>
 
     <ul class="mobile-header-menu">
