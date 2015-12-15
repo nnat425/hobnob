@@ -2,12 +2,20 @@ Rails.application.routes.draw do
   resources :meetings
   root 'welcome#index'
   get 'about' => 'welcome#about'
-  resources :advisors
+
   resources :users
   resources :potential_appointments
   resources :carts
   resources :orders
   resources :comments
+
+  get 'FinNetwork' => 'advisors#index', as: 'advisors'
+  get 'FinNetwork/new' => 'advisors#new', as: 'advisor_new'
+  post 'FinNetwork' => 'advisors#create'
+  get 'FinNetwork/:id' => 'advisors#show', as: 'advisor'
+  get 'FinNetwork/:id/edit' => 'advisors#edit', as: 'edit_advisor'
+  patch 'FinNetwork/:id' => 'advisors#update'
+  delete 'FinNetwork/:id' => 'advisors#destroy'
 
   get 'network_members' => 'admins#index'
   get 'admin/login' => 'admins#new'
@@ -18,9 +26,6 @@ Rails.application.routes.draw do
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
 
-  get '/categories/:id/' => 'categories#show'
-
-  get '/network_overview' => 'welcome#network_overview'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
