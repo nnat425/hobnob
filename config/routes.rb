@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   get '/FinNetwork/:id' => 'advisors#show'
   get '/FinNetwork/:id/edit' => 'advisors#edit'
   patch '/FinNetwork/:id' => 'advisors#update'
-  delete '/FinNetwork/:id' =? 'advisors#destroy'
+  delete '/FinNetwork/:id' => 'advisors#destroy'
 
   get 'network_members' => 'admins#index'
   get 'admin/login' => 'admins#new'
