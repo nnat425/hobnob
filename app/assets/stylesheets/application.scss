@@ -160,12 +160,27 @@ float: left;
   margin-top: 1em;
   }
 
+.mobile-header-menu li{
+  padding-bottom: 1em;
+}
 .mobile-header-menu a {
-  font-family: "Open Sans";
   color: #fff;
   letter-spacing: 2px;
   text-transform: uppercase;
-  font-weight: 300;
+  padding: 1em;
+
+}
+#network-photo{
+  text-align: center;
+  margin-top: 1em;
+}
+.mobile-header-menu a:hover {
+color: #0BB5FF;
+
+transition: all .3s ease-in-out;
+border: 1px solid #0BB5FF;
+border-radius: 10px;
+
 }
 .signup_hero_6 {
 background-size: cover;
