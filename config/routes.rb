@@ -9,13 +9,13 @@ Rails.application.routes.draw do
   resources :orders
   resources :comments
 
-  get '/FinNetwork' => 'advisors#index'
-  get '/FinNetwork/new' => 'advisors#new'
-  post '/FinNetwork' => 'advisors#create'
-  get '/FinNetwork/:id' => 'advisors#show'
-  get '/FinNetwork/:id/edit' => 'advisors#edit'
-  patch '/FinNetwork/:id' => 'advisors#update'
-  delete '/FinNetwork/:id' => 'advisors#destroy'
+  get 'FinNetwork' => 'advisors#index', as: 'advisors'
+  get 'FinNetwork/new' => 'advisors#new', as: 'advisor_new'
+  post 'FinNetwork' => 'advisors#create'
+  get 'FinNetwork/:id' => 'advisors#show', as: 'advisor'
+  get 'FinNetwork/:id/edit' => 'advisors#edit', as: 'edit_advisor'
+  patch 'FinNetwork/:id' => 'advisors#update'
+  delete 'FinNetwork/:id' => 'advisors#destroy'
 
   get 'network_members' => 'admins#index'
   get 'admin/login' => 'admins#new'
