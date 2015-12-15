@@ -20,9 +20,21 @@
           <%= f.password_field :password, placeholder: "Password" %>
         </div>
       </div>
-      <%=f.submit "Login", :class => "button" %>
+      <div class="row" id="forgot-password">
+        <div class="large-10 large-centered small-11 small-centered columns">
+          <%= link_to "Forgot Password?" %>
+        </div>
+      </div>
+      <div class="row">
+        <%=f.submit "Login", :class => "button" %>
+      </div>
       <% end %>
-     </div>
-   </div>
-   </div>
- </div>
+    </div>
+
+    <div class="enter-email-form-holder">
+
+
+    </div>
+
+  </div>
+</div>
