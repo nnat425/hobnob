@@ -3,10 +3,10 @@
 </header>
 
 <div class="row">
-  <div class="large-5 large-centered small-12 small-centered columns">
-    <div class="signup-panel">
+  <div class="small-12 medium-8 medium-centered large-6 large-centered columns">
+    <div class="login-panel">
       <div class="row">
-        <h2 id="signup_header"> Login!</h2>
+        <h2 id="login-header"> Login!</h2>
         <%= flash[:login_fail] %>
       </div>
       <%= form_for :session, url: '/login', html: {id: "login"} do |f| %>
@@ -18,15 +18,14 @@
       </div>
       <div class="row">
         <div class="large-10 large-centered small-11 small-centered columns">
-          <%= f.label "Password" %><%= link_to "(Forgot Password)", new_password_reset_path, id: "forgot-password-link" %>
+          <%= f.label "Password" %><%= link_to " (Forgot Password)", new_password_reset_path, id: "forgot-password-link" %>
           <%= f.password_field :password, placeholder: "Password" %>
         </div>
       </div>
-
-
-
       <div class="row">
-        <%=f.submit "Login", :class => "button" %>
+        <div class="large-10 large-centered small-11 small-centered columns">
+          <%=f.submit "Login", :class => "full-button" %>
+        </div>
       </div>
       <% end %>
     </div>

@@ -4,7 +4,7 @@ $(document).ready(function(){
 
     $.ajax({
       method: 'GET',
-      url: "/advisors",
+      url: '/FinNetwork',
       data: $(event.target).serialize()
     }).done(function(data) {
       $("#advisors-list").html(data);
