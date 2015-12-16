@@ -11,4 +11,5 @@ class AdvisorMailer < ApplicationMailer
     @advisor = advisor
     mail :to => advisor.email, :subject => "Password Reset"
   end
+
 end
