@@ -235,6 +235,7 @@ color: #43c7f4;
 
 footer {
 bottom: 0;
+z-index: 1000;
 width: 100%;
 background-color: #292c2f;
 text-align: center;
@@ -2042,7 +2043,22 @@ color: #fff;
   height: 3.5em;
   font-size: 1em;
   border-radius: 5px;
+}
 
+::-webkit-input-placeholder {
+  color: #C0C0C0;
+}
+
+:-moz-placeholder {
+  color: #C0C0C0;
+}
+
+::-moz-placeholder {
+  color: #C0C0C0;
+}
+
+:-ms-input-placeholder {
+  color: #C0C0C0;
 }
 
 .login-panel form label {
@@ -2067,5 +2083,6 @@ width: 100%;
 
 .full-button:hover {
 background-color: #000;
+border: 1px solid black;
 transition: all .3s ease-in-out;
 }
