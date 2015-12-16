@@ -21,20 +21,32 @@ class PasswordResetsController < ApplicationController
   end
 
   def edit
-    @user_or_advisor
     if User.find_by_password_reset_token!(params[:id])
+      @user_or_advisor = User.find_by_password_reset_token!(params[:id])
+    else
+      @user_or_advisor = Advisor.find_by_password_reset_token!(params[:id])
+    end
   end
 
 
   def update
-    @user = User.find_by_password_reset_token!(params[:id])
-    if @user.password_reset_sent_at < 2.hours.ago
+    if User.find_by_password_reset_token!(params[:id])
+      @user_or_advisor = User.find_by_password_reset_token!(params[:id])
+    else
+      @user_or_advisor = Advisor.find_by_password_reset_token!(params[:id])
+    end
+    if @user_or_advisor.password_reset_sent_at < 2.hours.ago
       redirect_to new_password_reset_path, :alert => "Password reset has expired."
-    elsif @user.update_attributes(password:params[:user][:password],password_confirmation:params[:user][:password_confirmation],email_confirmation: @user.email)
+    elsif @user_or_advisor.class.name == "User"
+      @user_or_advisor.update_attributes(password:params[:user][:password],password_confirmation:params[:user][:password_confirmation],email_confirmation: @user_or_advisor.email)
+      flash[:pw_reset_confirm] = "Password has been reset!"
+      redirect_to root_url
+    elsif @user_or_advisor.class.name == "Advisor"
+      @user_or_advisor.update_attributes(password:params[:advisor][:password],password_confirmation:params[:advisor][:password_confirmation],email_confirmation: @user_or_advisor.email)
       flash[:pw_reset_confirm] = "Password has been reset!"
       redirect_to root_url
     else
-      flash[:errors] = @user.errors.full_messages
+      flash[:errors] = @user_or_advisor.errors.full_messages
       render :edit
     end
   end

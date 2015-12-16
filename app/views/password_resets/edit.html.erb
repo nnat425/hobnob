@@ -8,7 +8,7 @@
         <div class="row">
           <h2 id="signup_header"> Update Password!</h2>
         </div>
-        <%= form_for @user, :url => password_reset_path(params[:id]) do |f| %>
+        <%= form_for @user_or_advisor, :url => password_reset_path(params[:id]) do |f| %>
 
 
         <% if flash[:errors] %>
