@@ -49,7 +49,7 @@ class AdvisorsController < ApplicationController
       redirect_to edit_advisor_path(advisor)
     else
       flash[:errors] = advisor.errors.full_messages
-      redirect_to new_advisor_path
+      redirect_to advisor_new_path
     end
   end
 
