@@ -10,8 +10,8 @@ Rails.application.configure do
       :address              => "smtp.gmail.com",
       :port                 => 587,
       :domain               => "gmail.com",
-      :user_name            => "xxx@gmail.com",
-      :password             => "yyy",
+      :user_name            => "nnat425@gmail.com",
+      :password             => "soccer425",
       :authentication       => :plain,
       :enable_starttls_auto => true
 }
@@ -56,7 +56,7 @@ end
   # yet still be able to expire them through the digest params.
   config.assets.digest = true
 
-  config.action_mailer.default_url_options = { :host => "localhost:3000" }
+  config.action_mailer.default_url_options = { :host => "localhost" }
 
   # Adds additional error checking when serving assets at runtime.
   # Checks for improperly declared sprockets dependencies.
