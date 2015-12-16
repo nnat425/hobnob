@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :carts
   resources :orders
   resources :comments
+  resources :password_resets, only: [:new, :create, :edit, :update]
 
   get 'FinNetwork' => 'advisors#index', as: 'advisors'
   get 'FinNetwork/new' => 'advisors#new', as: 'advisor_new'
