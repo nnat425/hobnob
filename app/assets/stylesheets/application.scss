@@ -2034,6 +2034,7 @@ color: #fff;
   margin-top: 1em;
   margin-bottom: 1em;
   background-color: #fff;
+  padding: 2.5em;
 }
 
 .login-panel form input {
@@ -2046,4 +2047,25 @@ color: #fff;
 
 .login-panel form label {
   display: inline;
+}
+
+.full-button {
+text-align: center;
+font-size: .85em;
+border-radius: 5px;
+padding-left: 2.5em;
+padding-right: 2.5em;
+padding-top: 1.5em;
+padding-bottom: 1.5em;
+color: white;
+background-color: #2996cc;
+letter-spacing: 2px;
+text-transform: uppercase;
+border: 1px solid #2996cc;
+width: 100%;
+}
+
+.full-button:hover {
+background-color: #000;
+transition: all .3s ease-in-out;
 }
