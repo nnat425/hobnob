@@ -21,8 +21,8 @@ class PasswordResetsController < ApplicationController
   end
 
   def edit
-    if User.find_by_password_reset_token!(params[:id])
-      @user_or_advisor = User.find_by_password_reset_token!(params[:id])
+    if User.find_by(password_reset_token:params[:id])
+      @user_or_advisor = User.find_by(password_reset_token:params[:id])
     else
       @user_or_advisor = Advisor.find_by_password_reset_token!(params[:id])
     end
@@ -30,7 +30,7 @@ class PasswordResetsController < ApplicationController
 
 
   def update
-    if User.find_by_password_reset_token!(params[:id])
+    if User.find_by(password_reset_token:params[:id])
       @user_or_advisor = User.find_by_password_reset_token!(params[:id])
     else
       @user_or_advisor = Advisor.find_by_password_reset_token!(params[:id])
