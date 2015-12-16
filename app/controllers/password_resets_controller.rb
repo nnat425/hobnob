@@ -9,5 +9,7 @@ class PasswordResetsController < ApplicationController
   end
 
   def edit
+    @user = User.find_by(password_reset_token!:(params[:id])
   end
+
 end
