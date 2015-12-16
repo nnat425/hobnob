@@ -7,9 +7,9 @@
     <div class="signup-panel">
       <div class="row">
         <h2 id="signup_header"> Reset Password!</h2>
-        <%= flash[:login_fail] %>
       </div>
       <%= form_tag password_resets_path, :method => :post do %>
+      <%= flash[:not_valid] %>
       <div class="row">
         <div class="large-10 large-centered small-11 small-centered columns">
           <%= label_tag "Email" %>

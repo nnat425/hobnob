@@ -5,9 +5,19 @@ class PasswordResetsController < ApplicationController
 
   def create
     user = User.find_by(email: params[:email])
-    user.send_password_reset if user
-    flash[:pw_reset] = "Email sent with password reset instructions."
-    redirect_to root_url
+    advisor = Advisor.find_by(email: params[:email])
+    if user
+      user.send_password_reset
+      flash[:pw_reset] = "Email sent with password reset instructions."
+      redirect_to root_url
+    elsif advisor
+      advisor.send_password_reset
+      flash[:pw_reset] = "Email sent with password reset instructions."
+      redirect_to root_url
+    else
+      flash[:not_valid] = "Email does not exist"
+      redirect_to new_password_reset_path
+    end
   end
 
   def edit
@@ -20,8 +30,10 @@ class PasswordResetsController < ApplicationController
     if @user.password_reset_sent_at < 2.hours.ago
       redirect_to new_password_reset_path, :alert => "Password reset has expired."
     elsif @user.update_attributes(password:params[:user][:password],password_confirmation:params[:user][:password_confirmation],email_confirmation: @user.email)
-      redirect_to root_url, :notice => "Password has been reset!"
+      flash[:pw_reset_confirm] = "Password has been reset!"
+      redirect_to root_url
     else
+      flash[:errors] = @user.errors.full_messages
       render :edit
     end
   end
