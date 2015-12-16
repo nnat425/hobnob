@@ -2033,10 +2033,8 @@ color: #fff;
 
 
 #forgot-password-link {
-  color: #C0C0C0;
   font-size: .8em;
   font-family: "Open Sans";
-
 }
 
 #forgot-password-link:hover {
@@ -2044,6 +2042,13 @@ color: #fff;
 
 }
 
+#flash_pw_reset{
+  color:white;
+}
+
+#flash_pw_confirm{
+  color:white;
+}
 #login-header {
   text-align: center;
   font-family: "Open Sans";

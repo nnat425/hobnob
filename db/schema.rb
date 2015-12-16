@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151211030335) do
+ActiveRecord::Schema.define(version: 20151216203949) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,10 +22,10 @@ ActiveRecord::Schema.define(version: 20151211030335) do
   end
 
   create_table "advisors", force: :cascade do |t|
-    t.string   "firstname",           null: false
-    t.string   "lastname",            null: false
-    t.string   "email",               null: false
-    t.string   "password_digest",     null: false
+    t.string   "firstname",              null: false
+    t.string   "lastname",               null: false
+    t.string   "email",                  null: false
+    t.string   "password_digest",        null: false
     t.string   "current_title"
     t.string   "job_description"
     t.string   "charity"
@@ -37,14 +37,16 @@ ActiveRecord::Schema.define(version: 20151211030335) do
     t.string   "education"
     t.string   "certifications"
     t.string   "interesting_facts"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
     t.integer  "student_price"
     t.integer  "regular_price"
+    t.string   "password_reset_token"
+    t.datetime "password_reset_sent_at"
   end
 
   create_table "advisors_categories", force: :cascade do |t|
@@ -137,16 +139,18 @@ ActiveRecord::Schema.define(version: 20151211030335) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "first_name",                      null: false
-    t.string   "last_name",                       null: false
-    t.string   "email",                           null: false
-    t.string   "password_digest",                 null: false
-    t.boolean  "student",         default: false
+    t.string   "first_name",                             null: false
+    t.string   "last_name",                              null: false
+    t.string   "email",                                  null: false
+    t.string   "password_digest",                        null: false
+    t.boolean  "student",                default: false
     t.string   "school"
     t.string   "program"
     t.integer  "graduation_date"
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
+    t.string   "password_reset_token"
+    t.datetime "password_reset_sent_at"
   end
 
   add_foreign_key "advisors_categories", "advisors"

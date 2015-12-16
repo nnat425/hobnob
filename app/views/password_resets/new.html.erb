@@ -1,2 +1,27 @@
-<h1>PasswordResets#new</h1>
-<p>Find me in app/views/password_resets/new.html.erb</p>
+<header class="edit_hero">
+  <img src="/assets/city_header2-1.jpg"/>
+</header>
+
+<div class="row">
+  <div class="large-5 large-centered small-12 small-centered columns">
+    <div class="signup-panel">
+      <div class="row">
+        <h2 id="signup_header"> Reset Password!</h2>
+      </div>
+      <%= form_tag password_resets_path, :method => :post do %>
+      <%= flash[:not_valid] %>
+      <div class="row">
+        <div class="large-10 large-centered small-11 small-centered columns">
+          <%= label_tag "Email" %>
+          <%= text_field_tag :email, params[:email] %>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <%= submit_tag "Reset Password", :class => "button" %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

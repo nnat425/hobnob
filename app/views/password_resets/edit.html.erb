@@ -1,2 +1,41 @@
-<h1>PasswordResets#edit</h1>
-<p>Find me in app/views/password_resets/edit.html.erb</p>
+  <header class="edit_hero">
+    <img src="/assets/city_header2-1.jpg"/>
+  </header>
+
+  <div class="row">
+    <div class="large-5 large-centered small-12 small-centered columns">
+      <div class="signup-panel">
+        <div class="row">
+          <h2 id="signup_header"> Update Password!</h2>
+        </div>
+        <%= form_for @user_or_advisor, :url => password_reset_path(params[:id]) do |f| %>
+
+
+        <% if flash[:errors] %>
+        <% flash[:errors].each do |msg| %>
+        <p class="error-message"><%= msg %></p>
+        <% end %>
+        <% end %>
+
+
+        <div class="row">
+          <div class="large-10 large-centered small-11 small-centered columns">
+            <%= f.label :password %>
+            <%= f.password_field :password %>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="large-10 large-centered small-11 small-centered columns">
+           <%= f.label :password_confirmation %>
+           <%= f.password_field :password_confirmation %>
+         </div>
+       </div>
+
+       <div class="row">
+        <%= f.submit "Update Password", :class => "button" %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

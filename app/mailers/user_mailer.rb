@@ -6,4 +6,10 @@ class UserMailer < ApplicationMailer
     @appointment  = appointment
     mail(to: @user.email, subject: 'You Appointment has been set!')
   end
+
+  def password_reset(user)
+    @user = user
+    mail :to => user.email, :subject => "Password Reset"
+  end
+
 end
