@@ -7,13 +7,13 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address:              "relay-hosting.secureserver.net",
-    port:                 25,
-    domain:               'www.hob-nob.heroku.com',
+    address:              "smtpout.secureserver.net",
+    port:                 80,
+    domain:               'www.example.com',
     user_name:            ENV['USERNAME'],
     password:             ENV['PASSWORD'],
     authentication:       'plain',
-    enable_starttls_auto: true  }
+   }
 ##In AWD need to set user and password.
 
   # Eager load code on boot. This eager loads most of Rails and
