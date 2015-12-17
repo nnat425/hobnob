@@ -830,7 +830,7 @@ padding: 2em;
 .hn-comment {
   font-family: "Open Sans";
   font-weight: 300;
-  font-size: 1.5em;
+  font-size: 1.1em;
   letter-spacing: 1px;
   color: #fff;
 }
@@ -840,7 +840,7 @@ padding: 2em;
   font-weight: strong;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: .85em;
+  font-size: .75em;
   color: #C0C0C0;
 
 }
@@ -1477,6 +1477,7 @@ margin-top: 6em;
 .home-icon h1 {
   margin: auto;
   color: #0198E1;
+  font-size: 2em;
 }
 
 .parallax-content {
@@ -1765,6 +1766,10 @@ margin-bottom: -.3em;
     -moz-column-count: 3;
     column-count: 3;
     padding: 2em;
+}
+
+#charity-list li {
+  font-size: 1em;
 }
 
 .admin-button {
