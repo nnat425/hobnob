@@ -1631,28 +1631,63 @@ overflow: hidden;
 height: 80vh;
 }
 
-table {
-margin: auto;
-margin-top:1em;
-font-size: 30px
+#network-members-container {
+  background-color: #fff;
+}
+table.members-table {
+padding: 1em;
+margin-top: 1.5em;
+margin-bottom: 1.5em;
+margin-left: auto;
+margin-right: auto;
+
+
+
 }
 
-th, td {
-padding: 5px;
-border: 1px solid #999;
+.members-table td {
+padding: 1em;
+
+font-family: "Open Sans";
+text-align: center;
+font-size: 1.1em;
+font-weight: 300;
+letter-spacing: 1px;
+
 }
 
-th {
-background: #ccc;
+.members-table th {
+background: #fff;
+border-bottom: 1px solid #C0C0C0;
+text-transform: uppercase;
+letter-spacing: 1px;
+color: #0198E1;
+font-size: .3em;
+text-align: center;
+background-color: #282828;
+
+
+
 }
 
+.members-table td a {
+  color: #0198E1;
+}
+
+.members-table td a:hover {
+  color: #000;
+  transition: all .3s ease-in-out;
+}
 #net_mem_header{
 text-align:center;
-margin-top:4em;
-}
-
-#exc_point{
-  font-size:1.7em;
+margin-top: -3em;
+font-family: "Open Sans";
+font-weight: 700;
+letter-spacing: 2px;
+color: #fff;
+font-size: 5em;
+text-align: right;
+margin-bottom: -.3em;
 }
 
 #home-charity-box {
