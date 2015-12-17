@@ -6,8 +6,8 @@
         <p id="header">HOB NOB</p>
       </div>
       <div class="small-12 medium-12 large-12 columns" id="intro-subtext">
-        <%= link_to "Get Networking!", advisors_path, class: "button" %>
         <p>Make strong career decisions today and in the future</p>
+        <%= link_to "Get Networking!", advisors_path, class: "button" %>
       </div>
     </div>
   </div>
@@ -96,7 +96,7 @@
         <div class="form-holder" id="comments-form-holder">
           <%= render partial: "comments_form" %>
         </div>
-        <%= link_to "Add Comment", root_path, class: "admin-button", id: "add-comment-btn" %>
+        <%= link_to "Add Comment", root_path, class: "button", id: "add-comment-btn" %>
       </div>
       <% end %>
     </div>
@@ -117,7 +117,7 @@
         <div class="form-holder" id="charities-form-holder">
           <%= render partial: "charity_form" %>
         </div>
-        <%= link_to "Add Charity", root_path, class: "admin-button", id: "add-charity-btn" %>
+        <%= link_to "Add Charity", root_path, class: "button", id: "add-charity-btn" %>
       </div>
       <% end %>
     </div>
