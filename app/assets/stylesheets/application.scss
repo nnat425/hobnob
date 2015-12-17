@@ -1659,14 +1659,14 @@ padding: 1em;
 
 font-family: "Open Sans";
 text-align: center;
-font-size: 1.1em;
+font-size: 1em;
 font-weight: 300;
 letter-spacing: 1px;
 
 }
 
 .members-table th {
-border-bottom: 1px solid #C0C0C0;
+
 text-transform: uppercase;
 letter-spacing: 2px;
 color: #0198E1;
@@ -1678,6 +1678,9 @@ background-color: #fff;
 
 }
 
+.members-table thead {
+  border-bottom: 1px solid #C0C0C0;
+}
 .members-table td a {
   color: #0198E1;
 }
