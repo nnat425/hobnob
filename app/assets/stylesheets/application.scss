@@ -406,7 +406,6 @@ border: 1px solid rgba(81, 203, 238, 1);
 .about {
 background: asset_url("city_header7.jpeg") no-repeat center center;
 background-size: cover;
-height: 70vh;
 overflow: hidden;
 }
 
@@ -1629,6 +1628,16 @@ padding: auto;
 background-size: cover;
 overflow: hidden;
 height: 80vh;
+}
+
+
+h1#about-page-header {
+  color: #fff;
+  font-size: 8em;
+  font-weight: bold;
+  margin-bottom: -.35em;
+
+
 }
 
 #network-members-container {
