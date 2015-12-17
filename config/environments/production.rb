@@ -5,15 +5,15 @@ Rails.application.configure do
   config.cache_classes = true
 
 
-config.action_mailer.delivery_method = :smtp
-config.action_mailer.smtp_settings = {
-  address:              'smtp.gmail.com',
-  port:                 587,
-  domain:               'www.hob-nob.heroku.com',
-  user_name:            ENV['USERNAME'],
-  password:             ENV['PASSWORD'],
-  authentication:       'plain',
-  enable_starttls_auto: true  }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              "relay-hosting.secureserver.net",
+    port:                 25,
+    domain:               'www.hob-nob.heroku.com',
+    user_name:            ENV['USERNAME'],
+    password:             ENV['PASSWORD'],
+    authentication:       'plain',
+    enable_starttls_auto: true  }
 ##In AWD need to set user and password.
 
   # Eager load code on boot. This eager loads most of Rails and
@@ -22,13 +22,13 @@ config.action_mailer.smtp_settings = {
 
 
   config.after_initialize do
-  ActiveMerchant::Billing::Base.mode = :production
-  ::GATEWAY = ActiveMerchant::Billing::PaypalGateway.new(
+    ActiveMerchant::Billing::Base.mode = :production
+    ::GATEWAY = ActiveMerchant::Billing::PaypalGateway.new(
      :login => ENV["PAYPAL_LOGIN"],
-  :password => ENV["PAYPAL_PASSWORD"],
-  :signature => ENV["PAYPAL_SIGNATURE"]
-  )
-end
+     :password => ENV["PAYPAL_PASSWORD"],
+     :signature => ENV["PAYPAL_SIGNATURE"]
+     )
+  end
 
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
@@ -75,8 +75,8 @@ end
     :s3_credentials => {
       :access_key_id => ENV['AWSAccessKeyId'],
       :secret_access_key => ENV['AWSSecretKey']
-      }
     }
+  }
 
   # Use the lowest log level to ensure availability of diagnostic information
   # when problems arise.
@@ -101,7 +101,7 @@ end
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
-  config.i18n.fallbacks = true
+config.i18n.fallbacks = true
 
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
