@@ -1,0 +1,1 @@
+$(document).ready(function(){$("#left-category-bar").on("submit","#advisors-filter-form",function(t){t.preventDefault(),$.ajax({method:"GET",url:"/FinNetwork",data:$(t.target).serialize()}).done(function(t){$("#advisors-list").html(t)}).fail(function(t){console.log(t)})})});
