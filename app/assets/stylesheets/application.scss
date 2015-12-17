@@ -1642,15 +1642,17 @@ h1#about-page-header {
   background-color: #fff;
 }
 table.members-table {
-padding: 1em;
 margin-top: 1.5em;
 margin-bottom: 1.5em;
 margin-left: auto;
 margin-right: auto;
-
+padding: 0px;
+width: 100%;
+border-radius: 10px;
 
 
 }
+
 
 .members-table td {
 padding: 1em;
@@ -1664,14 +1666,13 @@ letter-spacing: 1px;
 }
 
 .members-table th {
-background: #fff;
 border-bottom: 1px solid #C0C0C0;
 text-transform: uppercase;
-letter-spacing: 1px;
+letter-spacing: 2px;
 color: #0198E1;
-font-size: .3em;
+font-size: .7em;
 text-align: center;
-background-color: #282828;
+background-color: #fff;
 
 
 
