@@ -60,7 +60,7 @@ color: #fff;
 padding-bottom: 0.5rem;
 text-transform: uppercase;
 letter-spacing: 2px;
-font-size: .85em;
+font-size: .70em;
 
 &:hover {
 color: #43c7f4;
@@ -142,10 +142,11 @@ float: left;
 }
 
 #small-header-dropdown {
-  margin-top: 1.75em;
+  margin-top: 2em;
 }
 #medium-header-dropdown {
-  margin-top: .4em;
+  margin-top: .5em;
+  font-size: .7em;
 }
 .mobile-header-menu {
   float: right;
@@ -162,6 +163,7 @@ float: left;
 
 .mobile-header-menu li{
   padding-bottom: 1em;
+  font-size: .7em;
 }
 .mobile-header-menu a {
   color: #fff;
