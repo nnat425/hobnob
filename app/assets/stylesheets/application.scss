@@ -1719,11 +1719,11 @@ margin-bottom: -.3em;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background: asset_url("city_header5.jpg") no-repeat center center;
+  background: linear-gradient(transparent, black 90%),asset_url("city_header5.jpg") no-repeat center center;
   background-size: cover;
   overflow: hidden;
   padding-top: 2em;
-  opacity: .95;
+
 }
 
 #home-charity-header h1 {
