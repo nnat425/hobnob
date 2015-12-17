@@ -811,7 +811,7 @@ letter-spacing: 1px;
 text-align: center;
 margin-top: 0em;
 margin-bottom: 0em;
-background: none;
+background-color: #282828;
 background-size: cover;
 overflow: hidden;
 padding: 2em;
@@ -819,24 +819,17 @@ padding: 2em;
 
 }
 
-#home-box-wrapper {
-  background: url("/assets/city-sky-lights-night.jpg");
-  background-size: cover;
-  overflow: hidden;
-}
+
 #home-info-box i {
   color: #fff;
   margin-bottom: .75em;
 }
 #home-info-box h2 {
-  font-size: 3.5em;
-  font-weight: strong;
-  letter-spacing: 2px;
-  color: #fff;
-  margin-bottom: 1em;
-  margin-top: 1em;
-  opacity: .25;
-
+  color: #0198E1;
+  font-family: "Open Sans";
+  margin-top: 1.5em;
+  font-weight: 300;
+  margin-bottom: 1.5em;
 }
 
 .hn-comment {
@@ -1707,38 +1700,61 @@ margin-bottom: -.3em;
 }
 
 #home-charity-box {
-  background-size: cover;
-  background-color: #282828;
+
   text-align: center;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
   margin-bottom: 0px;
   margin-top: 0px;
-  padding: 2em;
-  opacity: .75;
-
 
 }
 
-#home-charity-box h2 {
-  color: #0198E1;
-  font-family: "Open Sans";
-  margin-top: 1.5em;
-  font-weight: 300;
-  margin-bottom: 1.5em;
+#home-charity-header {
+
+  height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background: asset_url("city_header5.jpg") no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+  padding-top: 2em;
+  opacity: .85;
+}
+
+#home-charity-header h1 {
+
+
+  font-size: 8em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #fff;
+  margin-top: 1em;
+
+  text-align: left;
+
+
+}
+#home-charity-header h2 {
+
+
+  font-size: 4.5em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #fff;
+  margin-bottom: -.34em;
+
+  text-align: left;
 
 
 }
 
 #home-charity-box li {
-  color: #C0C0C0;
+  color: #282828;
   font-family: "Open Sans";
   font-size: 1.5em;
   text-transform: uppercase;
   letter-spacing: 2px;
   list-style-type: none;
-  font-weight: 300;
+
 }
 
 #home-footer {
@@ -1753,6 +1769,7 @@ margin-bottom: -.3em;
     -webkit-column-count: 3;
     -moz-column-count: 3;
     column-count: 3;
+    padding: 2em;
 }
 
 .admin-button {

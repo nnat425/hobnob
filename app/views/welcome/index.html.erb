@@ -79,7 +79,7 @@
         </div>
       </div>
     </div>
-    <div id='home-box-wrapper'>
+
     <div class="row" id="home-info-box">
       <h2>What people are saying about Hob Nob!</h2>
       <i class="fa fa-comments-o fa-5x"></i>
@@ -101,7 +101,10 @@
       <% end %>
     </div>
     <div id="home-charity-box">
-      <h2>Help support the communities we live in!</h2>
+      <div id="home-charity-header">
+        <h1>Help support</h1>
+        <h2>the communities we live in!</h2>
+      </div>
       <% if @charities %>
       <ul id="charity-list">
       <% @charities.each do |charity| %>
@@ -118,7 +121,7 @@
       </div>
       <% end %>
     </div>
-</div>
+
 <footer class="footer" id="home-footer">
       <p class="slogan">HOBNOB</p>
       <p class="links">
