@@ -60,7 +60,7 @@ color: #fff;
 padding-bottom: 0.5rem;
 text-transform: uppercase;
 letter-spacing: 2px;
-font-size: .85em;
+font-size: .70em;
 
 &:hover {
 color: #43c7f4;
@@ -142,10 +142,11 @@ float: left;
 }
 
 #small-header-dropdown {
-  margin-top: 1.75em;
+  margin-top: 2em;
 }
 #medium-header-dropdown {
-  margin-top: .4em;
+  margin-top: .5em;
+  font-size: .7em;
 }
 .mobile-header-menu {
   float: right;
@@ -162,6 +163,7 @@ float: left;
 
 .mobile-header-menu li{
   padding-bottom: 1em;
+  font-size: .7em;
 }
 .mobile-header-menu a {
   color: #fff;
@@ -403,11 +405,6 @@ box-shadow: 0 0 5px rgba(81, 203, 238, 1);
 border: 1px solid rgba(81, 203, 238, 1);
 }
 
-.about {
-background: asset_url("city_header7.jpeg") no-repeat center center;
-background-size: cover;
-overflow: hidden;
-}
 
 .about_container_1{
   background-color:white;
@@ -423,7 +420,7 @@ overflow: hidden;
   color: #000;
   font-weight: 300;
   letter-spacing: 1px;
-  font-size: 1.25em;
+  font-size: 1.1em;
 }
 
 #about_container_1_subtext{
@@ -479,7 +476,7 @@ overflow: hidden;
   font-family: "Open Sans";
   font-weight: 300;
   letter-spacing: 1px;
-  font-size: 1.25em;
+  font-size: 1em;
 }
 
 #advisor-index-panel {
@@ -779,7 +776,7 @@ margin-left: auto;
 }
 #about-container p {
 font-family: "Open Sans";
-font-size: 1.25em;
+font-size: 1.1em;
 font-weight: 300;
 color: #282828;
 letter-spacing: 1px;
@@ -811,7 +808,7 @@ letter-spacing: 1px;
 text-align: center;
 margin-top: 0em;
 margin-bottom: 0em;
-background: none;
+background-color: #282828;
 background-size: cover;
 overflow: hidden;
 padding: 2em;
@@ -819,30 +816,23 @@ padding: 2em;
 
 }
 
-#home-box-wrapper {
-  background: url("/assets/city-sky-lights-night.jpg");
-  background-size: cover;
-  overflow: hidden;
-}
+
 #home-info-box i {
   color: #fff;
   margin-bottom: .75em;
 }
 #home-info-box h2 {
-  font-size: 3.5em;
-  font-weight: strong;
-  letter-spacing: 2px;
-  color: #fff;
-  margin-bottom: 1em;
-  margin-top: 1em;
-  opacity: .25;
-
+  color: #0198E1;
+  font-family: "Open Sans";
+  margin-top: 1.5em;
+  font-weight: 300;
+  margin-bottom: 1.5em;
 }
 
 .hn-comment {
   font-family: "Open Sans";
   font-weight: 300;
-  font-size: 1.5em;
+  font-size: 1.1em;
   letter-spacing: 1px;
   color: #fff;
 }
@@ -852,7 +842,7 @@ padding: 2em;
   font-weight: strong;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: .85em;
+  font-size: .75em;
   color: #C0C0C0;
 
 }
@@ -1489,6 +1479,7 @@ margin-top: 6em;
 .home-icon h1 {
   margin: auto;
   color: #0198E1;
+  font-size: 2em;
 }
 
 .parallax-content {
@@ -1539,7 +1530,7 @@ margin-top: 3em;
 
 #about-subtext{
 color: #fff;
-margin-top: 6em;
+margin-top: -28em;
 float: right;
 text-align: right;
 opacity: 0.5;
@@ -1547,7 +1538,7 @@ padding: 2.5em;
 }
 
 #about-subtext p{
-font-size: 2em;
+font-size: 1.5em;
 font-family: "Open Sans";
 letter-spacing: 2px;
 font-weight: 300;
@@ -1642,7 +1633,7 @@ h1#about-page-header {
   color: #fff;
   font-size: 8em;
   font-weight: bold;
-  margin-bottom: -.35em;
+  margin-top: -1.05em;
 
 
 }
@@ -1651,41 +1642,45 @@ h1#about-page-header {
   background-color: #fff;
 }
 table.members-table {
-padding: 1em;
 margin-top: 1.5em;
 margin-bottom: 1.5em;
 margin-left: auto;
 margin-right: auto;
-
+padding: 0px;
+width: 100%;
+border-radius: 10px;
 
 
 }
+
 
 .members-table td {
 padding: 1em;
 
 font-family: "Open Sans";
 text-align: center;
-font-size: 1.1em;
+font-size: 1em;
 font-weight: 300;
 letter-spacing: 1px;
 
 }
 
 .members-table th {
-background: #fff;
-border-bottom: 1px solid #C0C0C0;
+
 text-transform: uppercase;
-letter-spacing: 1px;
+letter-spacing: 2px;
 color: #0198E1;
-font-size: .3em;
+font-size: .7em;
 text-align: center;
-background-color: #282828;
+background-color: #fff;
 
 
 
 }
 
+.members-table thead {
+  border-bottom: 1px solid #C0C0C0;
+}
 .members-table td a {
   color: #0198E1;
 }
@@ -1707,38 +1702,61 @@ margin-bottom: -.3em;
 }
 
 #home-charity-box {
-  background-size: cover;
-  background-color: #282828;
+
   text-align: center;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
   margin-bottom: 0px;
   margin-top: 0px;
-  padding: 2em;
-  opacity: .75;
-
 
 }
 
-#home-charity-box h2 {
-  color: #0198E1;
-  font-family: "Open Sans";
-  margin-top: 1.5em;
-  font-weight: 300;
-  margin-bottom: 1.5em;
+#home-charity-header {
+
+  height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background: asset_url("city_header5.jpg") no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+  padding-top: 2em;
+  opacity: .85;
+}
+
+#home-charity-header h1 {
+
+
+  font-size: 8em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #fff;
+  margin-top: 1em;
+
+  text-align: left;
+
+
+}
+#home-charity-header h2 {
+
+
+  font-size: 4.5em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #fff;
+  margin-bottom: -.34em;
+
+  text-align: left;
 
 
 }
 
 #home-charity-box li {
-  color: #C0C0C0;
+  color: #282828;
   font-family: "Open Sans";
   font-size: 1.5em;
   text-transform: uppercase;
   letter-spacing: 2px;
   list-style-type: none;
-  font-weight: 300;
+
 }
 
 #home-footer {
@@ -1753,6 +1771,11 @@ margin-bottom: -.3em;
     -webkit-column-count: 3;
     -moz-column-count: 3;
     column-count: 3;
+    padding: 2em;
+}
+
+#charity-list li {
+  font-size: 1em;
 }
 
 .admin-button {
@@ -1779,7 +1802,7 @@ transition: all .3s ease-in-out;
 .button {
 text-align: center;
 margin-bottom: 1.5em;
-font-size: .85em;
+font-size: .80em;
 border-radius: 5px;
 padding-left: 2.5em;
 padding-right: 2.5em;
@@ -1792,6 +1815,9 @@ text-transform: uppercase;
 width: 20em;
 }
 
+.button input text {
+  font-size: .80em;
+}
 .button:hover {
 background-color: #000;
 transition: all .3s ease-in-out;
@@ -1954,7 +1980,7 @@ transition: all .3s ease-in-out;
   font-family: "Open Sans";
   font-weight:300;
   letter-spacing: 2px;
-  margin-top:1.5em;
+  margin-top:1em;
   text-align:center;
   margin-bottom: 1em;
 
