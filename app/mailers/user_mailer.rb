@@ -1,5 +1,5 @@
 class UserMailer < ApplicationMailer
-  default from: 'nnat425@gmail.com'
+  default from: 'info@global.com'
 
   def confirmation_email(user, appointment)
     @user = user
