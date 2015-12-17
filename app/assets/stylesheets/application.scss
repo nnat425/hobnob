@@ -403,11 +403,6 @@ box-shadow: 0 0 5px rgba(81, 203, 238, 1);
 border: 1px solid rgba(81, 203, 238, 1);
 }
 
-.about {
-background: asset_url("city_header7.jpeg") no-repeat center center;
-background-size: cover;
-overflow: hidden;
-}
 
 .about_container_1{
   background-color:white;
@@ -423,7 +418,7 @@ overflow: hidden;
   color: #000;
   font-weight: 300;
   letter-spacing: 1px;
-  font-size: 1.25em;
+  font-size: 1.1em;
 }
 
 #about_container_1_subtext{
@@ -479,7 +474,7 @@ overflow: hidden;
   font-family: "Open Sans";
   font-weight: 300;
   letter-spacing: 1px;
-  font-size: 1.25em;
+  font-size: 1em;
 }
 
 #advisor-index-panel {
@@ -779,7 +774,7 @@ margin-left: auto;
 }
 #about-container p {
 font-family: "Open Sans";
-font-size: 1.25em;
+font-size: 1.1em;
 font-weight: 300;
 color: #282828;
 letter-spacing: 1px;
@@ -1532,7 +1527,7 @@ margin-top: 3em;
 
 #about-subtext{
 color: #fff;
-margin-top: 6em;
+margin-top: -28em;
 float: right;
 text-align: right;
 opacity: 0.5;
@@ -1540,7 +1535,7 @@ padding: 2.5em;
 }
 
 #about-subtext p{
-font-size: 2em;
+font-size: 1.5em;
 font-family: "Open Sans";
 letter-spacing: 2px;
 font-weight: 300;
@@ -1635,7 +1630,7 @@ h1#about-page-header {
   color: #fff;
   font-size: 8em;
   font-weight: bold;
-  margin-bottom: -.35em;
+  margin-top: -1.05em;
 
 
 }
@@ -1796,7 +1791,7 @@ transition: all .3s ease-in-out;
 .button {
 text-align: center;
 margin-bottom: 1.5em;
-font-size: .85em;
+font-size: .80em;
 border-radius: 5px;
 padding-left: 2.5em;
 padding-right: 2.5em;
@@ -1809,6 +1804,9 @@ text-transform: uppercase;
 width: 20em;
 }
 
+.button input text {
+  font-size: .80em;
+}
 .button:hover {
 background-color: #000;
 transition: all .3s ease-in-out;
@@ -1971,7 +1969,7 @@ transition: all .3s ease-in-out;
   font-family: "Open Sans";
   font-weight:300;
   letter-spacing: 2px;
-  margin-top:1.5em;
+  margin-top:1em;
   text-align:center;
   margin-bottom: 1em;
 
