@@ -9,9 +9,9 @@ config.action_mailer.delivery_method = :smtp
 config.action_mailer.smtp_settings = {
   address:              'smtp.gmail.com',
   port:                 587,
-  domain:               'example.com',
-  user_name:            '<username>',
-  password:             '<password>',
+  domain:               'www.hob-nob.heroku.com',
+  user_name:            ENV['USERNAME'],
+  password:             ENV['PASSWORD'],
   authentication:       'plain',
   enable_starttls_auto: true  }
 ##In AWD need to set user and password.
