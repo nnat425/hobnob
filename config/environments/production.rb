@@ -9,7 +9,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     address:              "smtpout.secureserver.net",
     port:                 80,
-    domain:               'www.example.com',
+    domain:               'hobnob.global',
     user_name:            ENV['USERNAME'],
     password:             ENV['PASSWORD'],
     authentication:       'plain',
