@@ -12,7 +12,7 @@ Rails.application.configure do
     domain:               "www.hobnob.global",
     user_name:            ENV['USERNAME'],
     password:             ENV['PASSWORD'],
-    authentication:       'plain',
+    authentication:       :login,
    }
 ##In AWD need to set user and password.
 
