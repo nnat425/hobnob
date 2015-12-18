@@ -7,9 +7,9 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address:              "smtpout.secureserver.net",
-    port:                 80,
-    domain:               'domain.com',
+    address:              "localhost",
+    port:                 25,
+    domain:               'www.honob.global',
     user_name:            ENV['USERNAME'],
     password:             ENV['PASSWORD'],
     authentication:       'plain',
