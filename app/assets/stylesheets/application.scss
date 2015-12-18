@@ -1591,7 +1591,10 @@ margin-top: 3.5em;
 
 }
 
-
+#remove-appointment-link:hover {
+  color: #000;
+  transition: all .3s ease-in-out;
+}
 
 #learn-more {
   margin-bottom: 2.5em;
