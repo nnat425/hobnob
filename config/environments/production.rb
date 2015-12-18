@@ -9,7 +9,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     address:              "relay-hosting.secureserver.net",
     port:                 3535,
-    domain:               'hobnob.global',
+    domain:               'secureserver.net',
     user_name:            ENV['USERNAME'],
     password:             ENV['PASSWORD'],
     authentication:       'plain',
