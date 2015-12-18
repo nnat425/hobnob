@@ -9,10 +9,9 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     address:              "smtp.office365.com",
     port:                 587,
-    domain:               "www.hobnob.global",
+    domain:               "hobnob.global",
     user_name:            ENV['USERNAME'],
     password:             ENV['PASSWORD'],
-    authentication:       :login,
    }
 ##In AWD need to set user and password.
 
