@@ -961,15 +961,18 @@ overflow: hidden;
 
 
 #item_in_cart{
-margin-top:20px;
+margin-top:1.25em;
 border-bottom:solid grey 1px;
-width:1300px;
+width: 100%;
 }
 
 #advisor_name_cart{
-font-size: 1.5em;
+font-size: 1.25em;
 font-family: "Open Sans";
 text-align: center;
+font-weight: 300;
+text-transform: uppercase;
+letter-spacing: 1px;
 
 }
 
@@ -978,7 +981,7 @@ margin-top: 2em;
 }
 
 #item_info p {
-font-size: 1em;
+font-size: .85em;
 color: #C0C0C0;
 letter-spacing: 1px;
 text-transform: uppercase;
@@ -1011,7 +1014,7 @@ text-align: right;
 }
 
 #cart_total p {
-font-size: 1.25em;
+font-size: 1em;
 font-family: "Open Sans";
 font-weight: 300;
 letter-spacing: 2px;
@@ -1548,11 +1551,6 @@ font-weight: 300;
 }
 
 
-#shopping-cart-header h1 {
-font-family: "Open Sans";
-font-weight: 300;
-text-align: center;
-}
 
 #shopping-cart-container {
 padding-left: 2em;
@@ -1564,7 +1562,7 @@ background-color: #fff;
 padding: 2em;
 border-radius: 10px;
 border: 1px solid #ccc;
-background-color: #F8F8F8;
+background-color: #eeeeee;
 margin-top: 2em;
 margin-bottom: 2em;
 }
@@ -1590,14 +1588,6 @@ text-align: center;
 #remove-appointment-link {
 color: #C0C0C0;
 margin-top: 3.5em;
-
-}
-
-#checkout-button {
-border-radius: 5px;
-letter-spacing: 2px;
-padding-left: 2.5em;
-padding-right: 2.5em;
 
 }
 
