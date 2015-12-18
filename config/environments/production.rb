@@ -9,6 +9,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     address:              "smtp.office365.com",
     domain:               "hobnob.global",
+    port:                 587
     user_name:            ENV['USERNAME'],
     password:             ENV['PASSWORD'],
     authentication:       :login,
