@@ -7,12 +7,12 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address:              "smtp.office365.com",
-    domain:               "hobnob.global",
+    address:              "smtp.sendgrid.net",
+    domain:               "heroku.com",
     port:                 587,
     user_name:            ENV['USERNAME'],
     password:             ENV['PASSWORD'],
-    authentication:       :login,
+    authentication:       :plain,
    }
 ##In AWD need to set user and password.
 
