@@ -858,6 +858,10 @@ padding: 2em;
   margin-bottom:3em;
 
 }
+.new_order {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
 
 #new_potential_appointment {
 background-color: #F8F8F8;
@@ -961,15 +965,18 @@ overflow: hidden;
 
 
 #item_in_cart{
-margin-top:20px;
+margin-top:1.25em;
 border-bottom:solid grey 1px;
-width:1300px;
+width: 100%;
 }
 
 #advisor_name_cart{
-font-size: 1.5em;
+font-size: 1.25em;
 font-family: "Open Sans";
 text-align: center;
+font-weight: 300;
+text-transform: uppercase;
+letter-spacing: 1px;
 
 }
 
@@ -978,7 +985,7 @@ margin-top: 2em;
 }
 
 #item_info p {
-font-size: 1em;
+font-size: .85em;
 color: #C0C0C0;
 letter-spacing: 1px;
 text-transform: uppercase;
@@ -1011,7 +1018,7 @@ text-align: right;
 }
 
 #cart_total p {
-font-size: 1.25em;
+font-size: 1em;
 font-family: "Open Sans";
 font-weight: 300;
 letter-spacing: 2px;
@@ -1077,23 +1084,15 @@ text-transform: uppercase;
 color: #C0C0C0;
 }
 
-#order_page{
-background-color:white;
-background-size:cover;
-height:25vh;
-overflow: hidden;
+#orders-div-wrapper {
+  border-bottom: 1px solid #ccc;
 }
-
 #order_div {
-border-radius: 5px;
-border: 1px solid #ccc;
-padding: 15px;
-margin-top: 0.8em;
-margin-bottom: 1em;
-margin-right: .5em;
-margin-left: .5em;
+padding: 1em;
 background-color: #fff;
-float: left;
+margin-top: 1em;
+margin-bottom: 1em;
+
 }
 
 #order_div form {
@@ -1104,7 +1103,7 @@ padding: 2em;
 text-transform: uppercase;
 letter-spacing: 1px;
 margin-top: 1em;
-font-size: .8em;
+font-size: .75em;
 text-align: right;
 color: #505050;
 }
@@ -1134,11 +1133,8 @@ display:none;
 }
 
 #order_summary{
-border-radius: 5px;
-border: 1px solid #ccc;
-padding: 15px;
-margin-right: .5em;
-margin-left: .5em;
+
+padding: 1em;
 background-color: #fff;
 margin-top: 1em;
 margin-bottom: 1em;
@@ -1155,7 +1151,6 @@ text-transform: uppercase;
 border-bottom: solid 1px #C0C0C0;
 margin-top: 1.5em;
 margin-bottom: 1.5em;
-padding-bottom: 1em;
 
 }
 
@@ -1204,8 +1199,7 @@ font-family: "Open Sans";
 }
 
 #checkout-container {
-text-align: center;
-background-color: #F8F8F8;
+background-color: #fff;
 }
 
 .advisor-checkout-avatar {
@@ -1548,11 +1542,6 @@ font-weight: 300;
 }
 
 
-#shopping-cart-header h1 {
-font-family: "Open Sans";
-font-weight: 300;
-text-align: center;
-}
 
 #shopping-cart-container {
 padding-left: 2em;
@@ -1564,7 +1553,7 @@ background-color: #fff;
 padding: 2em;
 border-radius: 10px;
 border: 1px solid #ccc;
-background-color: #F8F8F8;
+background-color: #eeeeee;
 margin-top: 2em;
 margin-bottom: 2em;
 }
@@ -1593,15 +1582,10 @@ margin-top: 3.5em;
 
 }
 
-#checkout-button {
-border-radius: 5px;
-letter-spacing: 2px;
-padding-left: 2.5em;
-padding-right: 2.5em;
-
+#remove-appointment-link:hover {
+  color: #000;
+  transition: all .3s ease-in-out;
 }
-
-
 
 #learn-more {
   margin-bottom: 2.5em;

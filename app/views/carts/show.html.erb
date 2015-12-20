@@ -1,31 +1,31 @@
-<header id="cart_page">
+<header class="edit_hero">
+  <img src="/assets/office_header.jpg"/>
+
+  <h1 id="about-page-header">Your Briefcase</h1>
 </header>
 
 <div class="container" id="shopping-cart-container">
-  <div class="small-12 medium-12 large-10 large-centered columns" id="shopping-cart-header">
-    <h1>Your Briefcase</h1>
-  </div>
 
-  <div class="small-12 medium-12 large-10 large-centered columns" id="items-holder">
+  <div class="small-12 medium-12 large-11 large-centered columns" id="items-holder">
     <% if @cart.potential_appointments.count > 0 %>
     <div class="row" id="items-holder-header">
       <div class="small-6 medium-6 large-6 columns">
         <h4>Appointment</h4>
       </div>
-      <div class='small-6 medium-6 large-6 columns'>
+      <div class='small-6 medium-6 large-6 hide-for-small columns'>
         <h4>Price</h4>
       </div>
     </div>
     <% end %>
     <% @cart.potential_appointments.each do |appointment|  %>
     <div id='item_in_cart' class='row'>
-      <div class="small-12 medium-2 large-2 columns">
+      <div class="small-12 medium-3 large-2 columns">
         <div class='row' id="advisor-index-avatar">
           <%= image_tag appointment.advisor.avatar.url(:medium) %>
         </div>
         <h3 id='advisor_name_cart'><%= appointment.advisor.firstname %></h3>
       </div>
-      <div id='item_info' class='small-12 medium-7 large-7 columns'>
+      <div id='item_info' class='small-12 medium-6 large-7 columns'>
         <p class="app_date"><%= appointment.start_time.strftime("%A, %B %d, %Y") %></p>
         <h4 class="app_title"><%= appointment.title %></h4>
         <p><%= appointment.start_time.strftime("%l:%M %p") %><%= appointment.end_time.strftime(" to %l:%M %p") %></p>
@@ -49,9 +49,9 @@
       <% else %>
       <p class="subtotal-checkout"><%= "Subtotal (" + @cart.potential_appointments.count.to_s + " items): $" + @cart.total_price_regular.to_s %></p>
       <% end %>
-      <p><%= link_to "Checkout", new_order_path, class: "button", id: "checkout-button" %></p>
+      <%= link_to "Checkout", new_order_path, class: "button" %>
       <% else %>
-      <h1 id='cart-empty'>Your cart is empty!</h1>
+      <h1 id='cart-empty'>Your briefcase is empty!</h1>
       <% end %>
     </div>
 
