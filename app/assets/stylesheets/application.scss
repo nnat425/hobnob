@@ -858,6 +858,10 @@ padding: 2em;
   margin-bottom:3em;
 
 }
+.new_order {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
 
 #new_potential_appointment {
 background-color: #F8F8F8;
@@ -1080,23 +1084,15 @@ text-transform: uppercase;
 color: #C0C0C0;
 }
 
-#order_page{
-background-color:white;
-background-size:cover;
-height:25vh;
-overflow: hidden;
+#orders-div-wrapper {
+  border-bottom: 1px solid #ccc;
 }
-
 #order_div {
-border-radius: 5px;
-border: 1px solid #ccc;
-padding: 15px;
-margin-top: 0.8em;
-margin-bottom: 1em;
-margin-right: .5em;
-margin-left: .5em;
+padding: 1em;
 background-color: #fff;
-float: left;
+margin-top: 1em;
+margin-bottom: 1em;
+
 }
 
 #order_div form {
@@ -1107,7 +1103,7 @@ padding: 2em;
 text-transform: uppercase;
 letter-spacing: 1px;
 margin-top: 1em;
-font-size: .8em;
+font-size: .75em;
 text-align: right;
 color: #505050;
 }
@@ -1137,11 +1133,8 @@ display:none;
 }
 
 #order_summary{
-border-radius: 5px;
-border: 1px solid #ccc;
-padding: 15px;
-margin-right: .5em;
-margin-left: .5em;
+
+padding: 1em;
 background-color: #fff;
 margin-top: 1em;
 margin-bottom: 1em;
@@ -1158,7 +1151,6 @@ text-transform: uppercase;
 border-bottom: solid 1px #C0C0C0;
 margin-top: 1.5em;
 margin-bottom: 1.5em;
-padding-bottom: 1em;
 
 }
 
@@ -1207,8 +1199,7 @@ font-family: "Open Sans";
 }
 
 #checkout-container {
-text-align: center;
-background-color: #F8F8F8;
+background-color: #fff;
 }
 
 .advisor-checkout-avatar {

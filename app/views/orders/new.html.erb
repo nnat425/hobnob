@@ -1,9 +1,11 @@
-<header id="order_page">
+<header class="edit_hero">
+  <img src="/assets/city_skyline1.jpg"/>
+  <h1 id="about-page-header">checkout</h1>
 </header>
 
 <div class="container" id="checkout-container">
-  <div class="row">
-    <div id='order_summary' class='small-12 medium-12 large-5 large-offset-1 columns'>
+  <div class="row" id="orders-div-wrapper">
+    <div id='order_summary' class='small-12 medium-12 large-6 columns'>
 
       <p id='order_p'><%= "Order Summary (" + current_cart.potential_appointments.count.to_s + " items)" %></p>
       <% current_user.carts.last.potential_appointments.each do |appointment| %>
@@ -16,37 +18,34 @@
 
         <div class="small-9 medium-9 large-7 columns">
 
-            <div class="small-5 medium-3 large-2 columns" id="order-info-label">
-              <label>Advisor:</label>
-            </div>
-            <div class="small-7 medium-9 large-10 columns" id="order-info">
-              <p><%= appointment.advisor.firstname %></p>
-            </div>
+          <div class="small-5 medium-3 large-2 columns" id="order-info-label">
+            <label>Advisor:</label>
+          </div>
+          <div class="small-7 medium-9 large-10 columns" id="order-info">
+            <p><%= appointment.advisor.firstname %></p>
+          </div>
 
+          <div class="small-5 medium-3 large-2 columns" id="order-info-label">
+            <label>Appointment:</label>
+          </div>
+          <div class="small-7 medium-9 large-10 columns" id="order-info">
+            <p><%= appointment.title  %></p>
+          </div>
 
+          <div class="small-5 medium-3 large-2 columns" id="order-info-label">
+            <label>Date:</label>
+          </div>
+          <div class="small-7 medium-9 large-10 columns" id="order-info">
+            <p><%= appointment.start_time.strftime("%A, %B %d, %Y") %></p>
+          </div>
 
-            <div class="small-5 medium-3 large-2 columns" id="order-info-label">
-              <label>Appointment:</label>
-            </div>
-            <div class="small-7 medium-9 large-10 columns" id="order-info">
-              <p><%= appointment.title  %></p>
-            </div>
-
-
-            <div class="small-5 medium-3 large-2 columns" id="order-info-label">
-              <label>Date:</label>
-            </div>
-            <div class="small-7 medium-9 large-10 columns" id="order-info">
-              <p><%= appointment.start_time.strftime("%A, %B %d, %Y") %></p>
-            </div>
-
-            <div class="small-5 medium-3 large-2 columns" id="order-info-label">
-              <label>Time:</label>
-            </div>
-            <div class="small-7 medium-9 large-10 columns" id="order-info">
-              <p><%= appointment.start_time.strftime("%l:%M %p ") %></p>
-              <p> <%= appointment.end_time.strftime("-%l:%M %p") %></p>
-            </div>
+          <div class="small-5 medium-3 large-2 columns" id="order-info-label">
+            <label>Time:</label>
+          </div>
+          <div class="small-7 medium-9 large-10 columns" id="order-info">
+            <p><%= appointment.start_time.strftime("%l:%M %p ") %></p>
+            <p> <%= appointment.end_time.strftime("-%l:%M %p") %></p>
+          </div>
 
         </div>
       </div>
@@ -61,7 +60,8 @@
       </div>
     </div>
 
-    <div id='order_div' class="small-12 medium-12 large-5 columns">
+    <div id='order_div' class="small-12 medium-12 large-6 columns">
+      <p id='order_p'>Card Information</p>
       <%= form_for @order do |f| %>
       <% if @order.errors %>
       <% @order.errors.full_messages.each do |message| %>
@@ -125,13 +125,12 @@
         <div class="small-8 medium-8 large-9 columns">
           <%= date_select(:order,:card_expires_on, :use_month_numbers => true) %>
         </div>
-        <%= f.submit "Submit", class: "button" %>
+        <div class="small-12 medium-8 large-9 columns">
+          <%= f.submit "Submit", class: "full-button" %>
+        </div>
         <% end %>
       </div>
     </div>
-
-
-
 
   </div>
 </div>
