@@ -8,6 +8,13 @@
       <div class="row">
         <h2 id="login-header"> Login!</h2>
       </div>
+      <div class="small-12 medium-11 medium-centered large-10 large-centered columns">
+          <% if flash[:login_fail] %>
+          <div data-alert class="alert-box alert radius">
+            <%= flash[:login_fail] %>
+          </div>
+          <% end %>
+        </div>
       <%= form_for :session, url: '/login', html: {id: "login"} do |f| %>
       <div class="row">
         <div class="small-12 medium-11 medium-centered large-10 large-centered columns">

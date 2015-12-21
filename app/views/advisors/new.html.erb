@@ -1,6 +1,6 @@
 
 <header class="signup_hero">
-  <img src="/assets/sign_up_header1.png"/>
+  <img src="/assets/meeting_header.png"/>
 </header>
 
 
@@ -10,14 +10,27 @@
     <div class="signup-panel">
       <div class="row">
         <h2 id="signup_header">Join HOBNOB</h2>
-        <p id="signup_advisor">Advisor</p>
+        <p id="signup_advisor">Professional</p>
+      </div>
+      <div class="small-12 medium-11 medium-centered large-10 large-centered columns">
+        <% if flash[:errors] %>
+        <% flash[:errors].each do |msg| %>
+        <div data-alert class="alert-box alert radius">
+          <%= msg %>
+        </div>
+        <% end %>
+        <% end %>
       </div>
 
-      <% if flash[:errors] %>
-      <% flash[:errors].each do |msg| %>
-      <p class="error-message"><%= msg %></p>
-      <% end %>
-      <% end %>
+
+<div class="small-12 medium-11 medium-centered large-10 large-centered columns">
+          <% if flash[:error] %>
+          <div data-alert class="alert-box alert radius">
+            <%= flash[:error] %>
+          </div>
+          <% end %>
+        </div>
+
 
       <%= form_for @advisor do |f| %>
       <div class="row">

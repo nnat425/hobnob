@@ -200,6 +200,21 @@ margin-top: 6em;
 text-align: right;
 }
 
+.alert-box {
+  .close {
+    background: none;
+  }
+
+  &.alert {
+    background-color: #fff;
+    color: #f04124;
+    border-top: 1px solid #f04124;
+    border-borrom: 1px solid #f04124;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+}
+
 .signup-panel {
 border-radius: 5px;
 border: 1px solid #ccc;

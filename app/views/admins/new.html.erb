@@ -9,8 +9,13 @@
       <div class="row">
         <h2 id="signup_header"> Login!</h2>
         <p id="signup_advisor">Admin</p>
-
-        <%= flash[:login_fail] %>
+        <div class="small-12 medium-11 medium-centered large-10 large-centered columns">
+          <% if flash[:error] %>
+          <div data-alert class="alert-box alert radius">
+            <%= flash[:error] %>
+          </div>
+          <% end %>
+        </div>
       </div>
       <%= form_for :session, url: '/admin_login', html: {id: "login"} do |f| %>
       <div class="row">
