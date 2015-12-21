@@ -22,8 +22,6 @@ class UsersController < ApplicationController
     @booked_appointments = @user.booked_appointments
   end
 
-
-
   private
 
   def user_params

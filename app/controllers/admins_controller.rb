@@ -16,7 +16,7 @@ class AdminsController < ApplicationController
      session[:class_type] = admin.class.name
      redirect_to root_path
    else
-    flash[:login_fail] = "Please input the correct username/password!"
+    flash[:error] = "Please input the correct username/password!"
     redirect_to admin_login_path
   end
 end
