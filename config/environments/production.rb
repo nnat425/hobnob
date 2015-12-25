@@ -20,8 +20,8 @@ Rails.application.configure do
   # your application in memory, allowing both threaded web servers
   # and those relying on copy on write to perform better.
 
-# config.assets.initialize_on_precompile = false
-  config.after_precompile do
+config.assets.initialize_on_precompile = false
+  config.after_initialize do
     ActiveMerchant::Billing::Base.mode = :production
     ::GATEWAY = ActiveMerchant::Billing::PaypalGateway.new(
      :login => ENV["PAYPAL_LOGIN"],
