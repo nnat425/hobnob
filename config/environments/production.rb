@@ -13,15 +13,15 @@ Rails.application.configure do
     user_name:            ENV['USERNAME'],
     password:             ENV['PASSWORD'],
     authentication:       :plain,
-   }
+  }
 ##In AWD need to set user and password.
 
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
   # and those relying on copy on write to perform better.
 
-
-  config.after_initialize do
+# config.assets.initialize_on_precompile = false
+  config.after_precompile do
     ActiveMerchant::Billing::Base.mode = :production
     ::GATEWAY = ActiveMerchant::Billing::PaypalGateway.new(
      :login => ENV["PAYPAL_LOGIN"],
@@ -54,7 +54,7 @@ Rails.application.configure do
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  # config.assets.compile = true
+  config.assets.compile = true
   config.assets.precompile = ['*.js', '*.scss', '*.scss.erb']
 
   # Asset digests allow you to set far-future HTTP expiration dates on all assets,
