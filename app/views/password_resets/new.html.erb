@@ -1,6 +1,3 @@
-<header class="edit_hero">
-  <img src="/assets/city_header2-1.jpg"/>
-</header>
 
 <div class="row">
   <div class="large-5 large-centered small-12 small-centered columns">
@@ -11,16 +8,17 @@
       <%= form_tag password_resets_path, :method => :post do %>
       <%= flash[:not_valid] %>
       <div class="row">
-        <div class="large-10 large-centered small-11 small-centered columns">
+        <div class="small-11 small-centered medium-11 medium-centered large-10 large-centered columns">
           <%= label_tag "Email" %>
           <%= text_field_tag :email, params[:email] %>
         </div>
       </div>
-
-
       <div class="row">
-        <%= submit_tag "Reset Password", :class => "button" %>
+        <div class="small-11 small-centered medium-11 medium-centered large-10 large-centered columns">
+          <%= submit_tag "Reset Password", :class => "full-button" %>
+        </div>
       </div>
+
       <% end %>
     </div>
   </div>
