@@ -3,6 +3,7 @@ require 'rails_helper'
 feature "Signing up" do
   let(:user){ create(:user) }
   let(:user_attr){ attributes_for(:user) }
+  let(:dummy_user) { create(:faker_user) }
 
   describe "with invalid information" do
     context "invalid email address" do
@@ -21,14 +22,18 @@ feature "Signing up" do
 
     context "email already taken" do
       scenario "flashes error message" do
+        user
         visit new_user_path
         fill_in "First Name", :with => user_attr[:first_name]
         fill_in "Last Name", :with => user_attr[:last_name]
-        fill_in "Email", :with => "invalid_email"
-        fill_in "Confirm Email", :with => "invalid_email"
+        fill_in "Email", :with => user[:email]
+        fill_in "Confirm Email", :with => user[:email]
         fill_in "Password", :with => user_attr[:password]
         fill_in "Password Confirmation", :with => user_attr[:password]
         click_button "Register"
+        expect(page).to have_content "Email has already been taken"
+      end
+    end
   end
 
   describe "with valid information" do
