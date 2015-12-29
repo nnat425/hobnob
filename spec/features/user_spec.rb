@@ -34,6 +34,20 @@ feature "Signing up" do
         expect(page).to have_content "Email has already been taken"
       end
     end
+
+    context "password not matching" do
+      scenario "flashes error message" do
+        visit new_user_path
+        fill_in "First Name", :with => user_attr[:first_name]
+        fill_in "Last Name", :with => user_attr[:last_name]
+        fill_in "Email", :with => user_attr[:email]
+        fill_in "Confirm Email", :with => user_attr[:email]
+        fill_in "Password", :with => user_attr[:password]
+        fill_in "Password Confirmation", :with => "invalidpw"
+        click_button "Register"
+        expect(page).to have_content "Password confirmation doesn't match Password"
+      end
+    end
   end
 
   describe "with valid information" do

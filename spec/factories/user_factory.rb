@@ -11,6 +11,7 @@ FactoryGirl.define do
     first_name Faker::Name.first_name
     last_name Faker::Name.last_name
     email Faker::Internet.email
+    email_confirmation = email
     password Faker::Internet.password
   end
 
