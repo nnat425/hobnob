@@ -64,3 +64,25 @@ feature "Signing up" do
     end
   end
 end
+
+feature "Logging in" do
+  let(:user){ create(:user) }
+  let(:user_attr){ attributes_for(:user) }
+
+  describe "with invalid information" do
+
+    before :each do
+      user
+    end
+
+    scenario "shows login page" do
+      visit login_path
+      fill_in "Email", :with => user_attr[:email]
+      fill_in "Password", :with => user[:password]
+      click_button "Login"
+      expect(page).to have_content("Login")
+    end
+  end
+
+
+end
