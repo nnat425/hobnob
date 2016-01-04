@@ -100,27 +100,7 @@
       </div>
       <% end %>
     </div>
-    <div id="home-charity-box">
-      <div id="home-charity-header">
-        <h1>Help support</h1>
-        <h2>the communities we live in!</h2>
-      </div>
-      <% if @charities %>
-      <ul id="charity-list">
-      <% @charities.each do |charity| %>
-        <li><%= charity.body %></li>
-      <% end %>
-      </ul>
-      <% end %>
-      <% if admin_logged_in? %>
-      <div class="small-12 medium-12 large-6 large-centered columns" id="form-box">
-        <div class="form-holder" id="charities-form-holder">
-          <%= render partial: "charity_form" %>
-        </div>
-        <%= link_to "Add Charity", root_path, class: "button", id: "add-charity-btn" %>
-      </div>
-      <% end %>
-    </div>
+
 
 <footer class="footer" id="home-footer">
       <p class="slogan">HOBNOB</p>
