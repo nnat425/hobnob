@@ -1611,13 +1611,14 @@ margin-top: 3.5em;
   overflow: hidden;
 }
 
-#learn-more p {
+#learn-more h3 {
+  color: #004b7e;
   font-family: "Open Sans";
   font-weight: 300;
+  margin-top: 1em;
+  margin-bottom: 1.5em;
   letter-spacing: 2px;
-  font-size: 1.5em;
-  margin-bottom: 2.5em;
-  color: #C0C0C0;
+  text-transform: uppercase;
 }
 
 #advisors-list {
