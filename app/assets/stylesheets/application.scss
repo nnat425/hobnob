@@ -676,16 +676,6 @@ font-weight: 300;
 margin-bottom: 5px;
 }
 
-#page-info-header {
-  text-align: center;
-  letter-spacing: 2px;
-  font-family: "Open Sans";
-  font-weight: 100;
-  letter-spacing: 2px;
-  color: #282828;
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
-}
 #page-header p {
 letter-spacing: 2px;
 font-family: "Open Sans";
@@ -1605,20 +1595,22 @@ margin-top: 3.5em;
 #learn-more {
   margin-bottom: 2.5em;
   text-align: center;
-  padding: 2em;
-  background-color: #fff;
-  background-size: cover;
-  overflow: hidden;
 }
 
-#learn-more h3 {
+#get-networking {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.standard-heading {
   color: #004b7e;
   font-family: "Open Sans";
   font-weight: 300;
-  margin-top: 1em;
+  margin-top: 1.5em;
   margin-bottom: 1.5em;
   letter-spacing: 2px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 #advisors-list {
@@ -1725,6 +1717,7 @@ a.button {
 .button {
 text-align: center;
 margin-bottom: 1.5em;
+margin-top: 1.5em;
 font-size: .80em;
 border-radius: 5px;
 padding-left: 2.5em;
@@ -1743,13 +1736,6 @@ width: 20em;
 background-color: #000;
 transition: all .3s ease-in-out;
 }
-
-#search-advisors-link {
-  text-align: center;
-  margin-bottom: 1em;
-}
-
-
 
 
 
