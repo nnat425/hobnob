@@ -15,7 +15,6 @@
 
   <div class="parallax-content">
 
-
     <div class="row" id="home-container">
       <div class="small-12 medium-12 large-4 columns" id="home-small-box">
         <div class="home-subheader" id="1">
@@ -23,8 +22,8 @@
             <h1><i class="fa fa-calendar-plus-o fa-lg"></i></h1>
           </div>
           <h3>Services</h3>
-          <p class="home-box-info" id="info-1">Networking and the informational interview are two of the most valuable tools in a successful career. Hob Nob makes it easy to expand your network and reach your goals.</p>
-          <p class="home-box-toggle"id="info1">Get valuable insight direct from the source!</p>
+          <p class="home-box-info" id="info-1">Get valuable insight direct from the source!</p>
+          <p class="home-box-toggle"id="info1">Networking and the informational interview are two of the most valuable tools in a successful career. Hob Nob makes it easy to expand your network and reach your goals.</p>
         </div>
       </div>
 
@@ -34,32 +33,31 @@
             <h1><i class="fa fa-users fa-lg"></i></h1>
           </div>
           <h3>Network</h3>
-          <p class="home-box-info" id="info-2">Our Professionals have volunteered their time and are prepared to answer your questions. A portion of each connection fee will be donated to a charity of their choice.</p>
-          <p class="home-box-toggle" id="info2">Help support the communities we live in!</p>
+          <p class="home-box-info" id="info-2">Help support the communities we live in!</p>
+          <p class="home-box-toggle" id="info2">Our Professionals have volunteered their time and are prepared to answer your questions. A portion of each connection fee will be donated to a charity of their choice.</p>
         </div>
       </div>
+
       <div class="small-12 medium-12 large-4 columns" id="home-small-box">
         <div class="home-subheader" id="3">
           <div class="home-icon" id="home-icon-3">
             <h1><i class="fa fa-phone fa-lg"></i></h1>
           </div>
           <h3>Connection</h3>
-          <p class="home-box-info" id="info-3">Search our Network, check for available dates, times and fees and get connected. Have a meaningful career discussion and make the best informed career decision possible.</p>
-          <p class="home-box-toggle" id="info3">Start building your Network today!</p>
+          <p class="home-box-info" id="info-3">Start building your Network today!</p>
+          <p class="home-box-toggle" id="info3">Search our Network, check for available dates, times and fees and get connected. Have a meaningful career discussion and make the best informed career decision possible.</p>
         </div>
       </div>
     </div>
 
 
-    <div class="row">
-      <h1 id="page-info-header">Ready to make your move?</h1>
-    </div>
-    <div class="row" id="search-advisors-link">
+    <div class="row" id="get-networking">
+      <h3 class="standard-heading">Ready to make your move?</h3>
       <%= link_to "Get Networking!", advisors_path, class: "button" %>
     </div>
     <div class="line-break"></div>
     <div class="row" id="learn-more">
-      <p>For step by step directions, click MORE below:</p>
+      <h3 class="standard-heading">Need more information?</h3>
       <%= link_to "More", root_path, class: "button", id: "home-learn-link" %>
     </div>
     <div class="row" id="learn-toggle">
@@ -100,27 +98,7 @@
       </div>
       <% end %>
     </div>
-    <div id="home-charity-box">
-      <div id="home-charity-header">
-        <h1>Help support</h1>
-        <h2>the communities we live in!</h2>
-      </div>
-      <% if @charities %>
-      <ul id="charity-list">
-      <% @charities.each do |charity| %>
-        <li><%= charity.body %></li>
-      <% end %>
-      </ul>
-      <% end %>
-      <% if admin_logged_in? %>
-      <div class="small-12 medium-12 large-6 large-centered columns" id="form-box">
-        <div class="form-holder" id="charities-form-holder">
-          <%= render partial: "charity_form" %>
-        </div>
-        <%= link_to "Add Charity", root_path, class: "button", id: "add-charity-btn" %>
-      </div>
-      <% end %>
-    </div>
+
 
 <footer class="footer" id="home-footer">
       <p class="slogan">HOBNOB</p>

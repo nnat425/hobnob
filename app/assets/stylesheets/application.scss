@@ -676,16 +676,6 @@ font-weight: 300;
 margin-bottom: 5px;
 }
 
-#page-info-header {
-  text-align: center;
-  letter-spacing: 2px;
-  font-family: "Open Sans";
-  font-weight: 100;
-  letter-spacing: 2px;
-  color: #282828;
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
-}
 #page-header p {
 letter-spacing: 2px;
 font-family: "Open Sans";
@@ -1479,7 +1469,7 @@ margin-top: 6em;
   border-radius: 50%;
   width: 100px;
   height: 100px;
-  padding-top: 1em;
+  padding-top: 1.5em;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -1499,7 +1489,7 @@ padding-top: 50px;
 padding-bottom: 50px;
 background-color: #fff;
 position: relative;
-top: 850px;
+top: 600px;
 
 }
 
@@ -1605,19 +1595,47 @@ margin-top: 3.5em;
 #learn-more {
   margin-bottom: 2.5em;
   text-align: center;
-  padding: 2em;
-  background-color: #fff;
-  background-size: cover;
-  overflow: hidden;
 }
 
-#learn-more p {
+#get-networking {
+  text-align: center;
+  margin-top: 2em;
+}
+
+#home-toggle-info {
+  text-align: center;
+  padding: 2em;
+}
+
+#home-toggle-info h1 {
+  color: #004b7e;
   font-family: "Open Sans";
-  font-weight: 300;
   letter-spacing: 2px;
   font-size: 1.5em;
-  margin-bottom: 2.5em;
-  color: #C0C0C0;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+#home-toggle-info p {
+  color: #404040;
+  letter-spacing: 1px;
+  font-size: 1.25em;
+  font-family: "Open Sans";
+  font-weight: 300;
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+
+
+.standard-heading {
+  color: #004b7e;
+  font-family: "Open Sans";
+  font-weight: 300;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 #advisors-list {
@@ -1703,64 +1721,9 @@ text-align: right;
 margin-bottom: -.3em;
 }
 
-#home-charity-box {
-
-  text-align: center;
-  margin-bottom: 0px;
-  margin-top: 0px;
-  padding-bottom: 2em;
-
-}
-
-#home-charity-header {
-
-  height: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background: linear-gradient(transparent, black 90%),asset_url("city_header5.jpg") no-repeat center center;
-  background-size: cover;
-  overflow: hidden;
-  padding-top: 2em;
-
-}
-
-#home-charity-header h1 {
 
 
-  font-size: 8em;
-  font-weight: bold;
-  letter-spacing: 2px;
-  color: #fff;
-  margin-top: 1em;
 
-  text-align: left;
-
-
-}
-#home-charity-header h2 {
-
-
-  font-size: 4.5em;
-  font-weight: bold;
-  letter-spacing: 2px;
-  color: #fff;
-  margin-bottom: -.34em;
-
-  text-align: left;
-
-
-}
-
-#home-charity-box li {
-  color: #282828;
-  font-family: "Open Sans";
-  font-size: 1.5em;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  list-style-type: none;
-
-}
 
 #home-footer {
   position: absolute;
@@ -1770,16 +1733,7 @@ margin-bottom: -.3em;
   widht: 100%;
 }
 
-#charity-list {
-    -webkit-column-count: 3;
-    -moz-column-count: 3;
-    column-count: 3;
-    padding: 2em;
-}
 
-#charity-list li {
-  font-size: 1em;
-}
 
 a.button {
   font-size: .8em;
@@ -1788,6 +1742,7 @@ a.button {
 .button {
 text-align: center;
 margin-bottom: 1.5em;
+margin-top: 1.5em;
 font-size: .80em;
 border-radius: 5px;
 padding-left: 2.5em;
@@ -1806,13 +1761,6 @@ width: 20em;
 background-color: #000;
 transition: all .3s ease-in-out;
 }
-
-#search-advisors-link {
-  text-align: center;
-  margin-bottom: 1em;
-}
-
-
 
 
 
@@ -2020,13 +1968,6 @@ transition: all .3s ease-in-out;
 .submit-comment:hover {
 background-color: #000;
 transition: all .3s ease-in-out;
-}
-
-#close-charity-btn {
-  float: right;
-  margin-top: -2em;
-  margin-right: -1.5em;
-  color: #C0C0C0;
 }
 
 #close-comment-btn {
