@@ -12,4 +12,9 @@ class UserMailer < ApplicationMailer
     mail :to => user.email, :subject => "Password Reset"
   end
 
+  def signup_confirmation(user)
+    @user = user
+    mail :to => user.email, :subject => "Welcome to Hobnob"
+  end
+
 end
