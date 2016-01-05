@@ -11,6 +11,7 @@ class OrdersController < ApplicationController
       if @order.purchase && current_cart.check_booked_status
         current_cart.update(checked_out?: true)
         current_cart.update_booked_status
+        UserMailer.receipt
       #   current_cart.potential_appointments.each do |appointment|
       #   UserMailer.confirmation_email(current_user,appointment).deliver_now
       #   AdvisorMailer.confirmation_email(current_user,appointment).deliver_now
@@ -32,11 +33,12 @@ def show
   @order.cart.potential_appointments.each do |pot_appointment|
     @advisors.push(Advisor.find_by(id: pot_appointment.advisor_id))
   end
+
   respond_to do |format|
     format.html
     format.pdf do
       render :pdf => 'file_name',
-      :template => 'forms/registration_show.pdf.erb',
+      :template => 'orders/show.pdf.erb',
       :layout => 'pdf.html.erb',
       :show_as_html => params[:debug].present?
     end
