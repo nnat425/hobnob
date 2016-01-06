@@ -183,10 +183,14 @@ footer {
           <td class="unit"><%='$' + appointment.advisor.regular_price.to_s %></td>
           <% end %>
         </tr>
-          <%end %>
+        <%end %>
         <tr>
           <td colspan="2" class="grand total">GRAND TOTAL</td>
-          <td class="grand total"></td>
+          <% if current_user.student == true %>
+          <td class="grand total"><%= '$' + @order.total_for_student.to_s%></td>
+          <% else %>
+          <td class="grand total"><%= '$' + @order.total_for_regular.to_s%></td>
+          <% end %>
         </tr>
       </tbody>
     </table>

@@ -32,6 +32,18 @@ class ApplicationController < ActionController::Base
     ["Boston","Calgary","Hong Kong","Houston","London","Montreal","NYC","San Francisco","Shanghai","Singapore","Toronto","UAE","Vancouver"]
   end
 
+def total_for_student
+  total = []
+  cart.potential_appoitments.each {|appointment|total.push(appointment.advisor.student_price)}
+  return total.reduce(:+)
+end
+
+def total_for_regular
+  total = []
+  cart.potential_appoitments.each {|appointment|total.push(appointment.advisor.regular_price)}
+  return total.reduce(:+)
+end
+
 
 end
 
