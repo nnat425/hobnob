@@ -11,7 +11,7 @@ class OrdersController < ApplicationController
       if @order.purchase && current_cart.check_booked_status
         current_cart.update(checked_out?: true)
         current_cart.update_booked_status
-        UserMailer.receipt
+        UserMailer.receipt(current_user)
       #   current_cart.potential_appointments.each do |appointment|
       #   UserMailer.confirmation_email(current_user,appointment).deliver_now
       #   AdvisorMailer.confirmation_email(current_user,appointment).deliver_now
@@ -29,9 +29,9 @@ end
 
 def show
   @order = Order.find_by(id: params[:id])
-  @advisors = []
+  @appointments = []
   @order.cart.potential_appointments.each do |pot_appointment|
-    @advisors.push(Advisor.find_by(id: pot_appointment.advisor_id))
+    @appointments.push(pot_appointment)
   end
 
   respond_to do |format|
