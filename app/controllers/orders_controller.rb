@@ -11,12 +11,12 @@ class OrdersController < ApplicationController
       if @order.purchase && current_cart.check_booked_status
         current_cart.update(checked_out?: true)
         current_cart.update_booked_status
-        UserMailer.receipt(current_user)
-      #   current_cart.potential_appointments.each do |appointment|
-      #   UserMailer.confirmation_email(current_user,appointment).deliver_now
-      #   AdvisorMailer.confirmation_email(current_user,appointment).deliver_now
-      #   AdminMailer.confirmation_email(current_user,appointment).deliver_now
-      # end
+        UserMailer.receipt(current_user, @order,current_cart.potential_appointments).deliver_now
+        current_cart.potential_appointments.each do |appointment|
+        UserMailer.confirmation_email(current_user,appointment).deliver_now
+        AdvisorMailer.confirmation_email(current_user,appointment).deliver_now
+        AdminMailer.confirmation_email(current_user,appointment).deliver_now
+      end
       current_user.carts.create
       render template: "success"
     else
