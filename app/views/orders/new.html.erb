@@ -9,7 +9,7 @@
 
       <p id='order_p'><%= "Order Summary (" + current_cart.potential_appointments.count.to_s + " items)" %></p>
       <% current_user.carts.last.potential_appointments.each do |appointment| %>
-      <div class='row' id='order_item'>
+      <div class='row' id='order_checkout'>
         <div class="small-3 medium-3 large-5 columns">
           <div class="advisor-checkout-avatar">
             <%= image_tag appointment.advisor.avatar.url(:medium) %>

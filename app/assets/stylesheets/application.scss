@@ -1265,11 +1265,16 @@ margin-bottom: 0px;
 }
 
 #order_item {
+padding: 1.5em;
+border: 1px solid #C0C0C0;
+border-radius: 5px;
+}
+
+#order_checkout{
 margin: 1em;
 padding: 1.5em;
 border: 1px solid #C0C0C0;
 border-radius: 5px;
-
 }
 
 #order-total {
@@ -2139,11 +2144,11 @@ font-weight: 300;
 }
 
 #pelikan-logo {
-  text-align: center;
-  margin-top: 0;
-  padding-bottom: 1.5em;
+text-align: center;
+margin-top: 0;
+padding-bottom: 1.5em;
 }
 #pelikan-logo img {
-  width: 25%;
-  height: 25%;
+width: 25%;
+height: 25%;
 }
