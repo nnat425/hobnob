@@ -25,6 +25,18 @@ class Order < ActiveRecord::Base
 end
 
 
+def total_for_student
+  total = []
+  cart.potential_appointments.each {|appointment|total.push(appointment.advisor.student_price)}
+  return total.reduce(:+)
+end
+
+def total_for_regular
+  total = []
+  cart.potential_appointments.each {|appointment|total.push(appointment.advisor.regular_price)}
+  return total.reduce(:+)
+end
+
 private
 
 def validate_card
@@ -46,4 +58,5 @@ def credit_card
     :last_name          => last_name
     )
 end
+
 end
