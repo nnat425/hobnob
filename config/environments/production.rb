@@ -8,7 +8,7 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address:              "smtp.mailgun.org",
-    domain:               "heroku.com",
+    domain:               "hob-nob.heroku.com",
     port:                 587,
     user_name:            ENV['USERNAME'],
     password:             ENV['PASSWORD'],
