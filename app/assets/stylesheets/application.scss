@@ -1464,19 +1464,23 @@ box-shadow:         4px 4px 4px 0px #ccc;
 
 
 .hero {
-background:
-linear-gradient(transparent, black 90%),
-url("http://s3.amazonaws.com/hobnob-bucket-assets/meeting_header1.png");
 height: 100%;
-background-repeat: no-repeat;
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
+
 width: 100%;
 position: fixed;
+overflow: hidden;
+
 
 }
+
+#main_hero {
+  background: linear-gradient(transparent, black 90%),
+   url("http://s3.amazonaws.com/hobnob-bucket-assets/meeting_header1.png");
+   height: 100%;
+   width: 100%;
+   background-size: cover;
+}
+
 
 #home-container {
 margin-top: 6em;
@@ -1506,7 +1510,7 @@ padding-top: 50px;
 padding-bottom: 50px;
 background-color: #fff;
 position: relative;
-top: 600px;
+top: 850px;
 
 }
 
