@@ -12,4 +12,10 @@ class AdvisorMailer < ApplicationMailer
     mail :to => advisor.email, :subject => "Password Reset"
   end
 
+    def signup_confirmation(advisor)
+    @advisor = advisor
+    mail :to => advisor.email, :subject => "Welcome to Hobnob"
+  end
+
+
 end
