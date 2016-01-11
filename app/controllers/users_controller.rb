@@ -11,6 +11,7 @@ class UsersController < ApplicationController
       session[:class_type] = "User"
       flash[:message] = "Thanks for signing up!"
       UserMailer.signup_confirmation(user).deliver_now
+      user.carts.create
       redirect_to user_path(user)
     else
       flash[:errors] = user.errors.full_messages

@@ -12,11 +12,11 @@ class User < ActiveRecord::Base
 
   has_secure_password
 
-  after_save :create_cart
+  # after_save :create_cart
 
-  def create_cart
-    self.carts.create
-  end
+  # def create_cart
+  #   self.carts.create
+  # end
 
   def booked_appointments
     booked_appointment = []
