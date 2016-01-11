@@ -23,6 +23,17 @@ class UsersController < ApplicationController
     @booked_appointments = @user.booked_appointments
   end
 
+  def verify
+    user = User.find_by(id: params[:id])
+    if user
+      user.update(email_verified:true, email_confirmation: user.email)
+      flash[:email_verified] = "Email has been verified"
+      redirect_to root_path
+    else
+      redirect_to about_path
+    end
+  end
+
   private
 
   def user_params

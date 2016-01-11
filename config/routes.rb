@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   resources :comments
   resources :password_resets, only: [:new, :create, :edit, :update]
 
+  patch 'users_verify/:id' => 'users#verify'
+
   get 'FinNetwork' => 'advisors#index', as: 'advisors'
   get 'FinNetwork/new' => 'advisors#new', as: 'advisor_new'
   post 'FinNetwork' => 'advisors#create'

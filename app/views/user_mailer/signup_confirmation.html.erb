@@ -6,7 +6,9 @@
 
 
 <p>1. Verify Your Email Address</p>
-
+<p><%= form_for @user, url:{action:"verify"}  do |f| %> </p>
+<%= f.submit 'Submit' %>
+<% end %>
 
 
 <br>
