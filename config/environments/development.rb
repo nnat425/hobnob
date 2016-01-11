@@ -58,6 +58,9 @@ end
 
   config.action_mailer.default_url_options = { :host => "localhost:3000" }
 
+
+  config.assets.precompile += %w( emailConfirm.js )
+
   # Adds additional error checking when serving assets at runtime.
   # Checks for improperly declared sprockets dependencies.
   # Raises helpful error messages.
