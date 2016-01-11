@@ -192,6 +192,7 @@ overflow: hidden;
 .edit_hero {
 background-size: cover;
 overflow: hidden;
+position: fixed;
 }
 
 
@@ -1475,10 +1476,13 @@ overflow: hidden;
 
 #main_hero {
   background: linear-gradient(transparent, black 90%),
-   url("http://s3.amazonaws.com/hobnob-bucket-assets/meeting_header1.png");
+   url("http://s3.amazonaws.com/hobnob-bucket-assets/meeting_header1.png") no-repeat center center;
    height: 100%;
    width: 100%;
    background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 }
 
 
@@ -1504,16 +1508,26 @@ color: #0198E1;
 font-size: 2em;
 }
 
+#about_hero {
+
+}
 .parallax-content {
 max-width: 100%;
 padding-top: 50px;
 padding-bottom: 50px;
 background-color: #fff;
 position: relative;
-top: 850px;
+
 
 }
 
+#home-parallax-content {
+  top: 850px;
+}
+
+#about_parallax_content {
+  top: 600px;
+}
 #intro-text {
 margin-top: 0em;
 text-align: center;
@@ -1746,8 +1760,9 @@ margin-bottom: -.3em;
 
 
 
-#home-footer {
+#parallax-footer {
 position: absolute;
+margin-top: 1.5em;
 bottom: 0;
 right:0;
 left: 0;
@@ -2151,6 +2166,7 @@ font-weight: 300;
 text-align: center;
 margin-top: 0;
 padding-bottom: 1.5em;
+margin-bottom: 5em;
 }
 #pelikan-logo img {
 width: 25%;

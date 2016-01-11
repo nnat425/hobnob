@@ -1,5 +1,5 @@
 
-<header class="edit_hero">
+<header class="edit_hero" id="about_hero">
   <img src="http://s3.amazonaws.com/hobnob-bucket-assets/city_header7-2.jpg"/>
   <div id="about-subtext">
     <p>Differentiate yourself in a competitive market</p>
@@ -8,84 +8,102 @@
   </div>
 </header>
 
-<div class="about_container_1">
-  <h1 id='network_over'>Network Overview</h1>
+<div class="parallax-content" id="about_parallax_content">
+  <div class="about_container_1">
+    <h1 id='network_over'>Network Overview</h1>
 
-  <div class="row">
+    <div class="row">
 
-    <div class="small-12 medium-12 large-12 columns" id="about_container_1_subtext">
-      <p>The informational interview and network connection is one of the most effective ways for you to differentiate yourself from other applicants in the very competitive Finance job market.</p>
+      <div class="small-12 medium-12 large-12 columns" id="about_container_1_subtext">
+        <p>The informational interview and network connection is one of the most effective ways for you to differentiate yourself from other applicants in the very competitive Finance job market.</p>
 
-      <p>Everyone on the network was selected because they have a great story to share, they have expertise in one or several categories of Finance, and they want to speak with you about your career. Each professional has volunteered their time and energy and is supporting their industry, community, and charity of choice. A portion of all fees represents a donation to that charity on behalf of the Finance professional.</p>
+        <p>Everyone on the network was selected because they have a great story to share, they have expertise in one or several categories of Finance, and they want to speak with you about your career. Each professional has volunteered their time and energy and is supporting their industry, community, and charity of choice. A portion of all fees represents a donation to that charity on behalf of the Finance professional.</p>
 
+      </div>
     </div>
   </div>
-</div>
 
 
-<h1 id="network_over">3 Simple Steps</h1>
-<div class="about_container_2">
-  <div class="row">
-    <div class="small-12 medium-12 large-4 columns" id="about-box">
-      <h1><i id='search' class="fa fa-search"></i></h1>
-      <h3>Search</h3>
-      <p>We divided our Network into 5 main Finance Categories and 3 Levels of Experience. The professionals in the Network were carefully chosen to represent different roles and titles,various companies, 3 levels of experience, locations throughout the world, and different areas of expertise – in career path and skill set.</p>
-      <p>If you are not sure which category to select, research the different areas to find one that matches your skills set and interest. If you are still not sure, make a connection with one of our Network professionals – they can help guide you to a career in Finance.</p>
-      <div class="hide-for-large-up">
+  <h1 id="network_over">3 Simple Steps</h1>
+  <div class="about_container_2">
+    <div class="row">
+      <div class="small-12 medium-12 large-4 columns" id="about-box">
+        <h1><i id='search' class="fa fa-search"></i></h1>
+        <h3>Search</h3>
+        <p>We divided our Network into 5 main Finance Categories and 3 Levels of Experience. The professionals in the Network were carefully chosen to represent different roles and titles,various companies, 3 levels of experience, locations throughout the world, and different areas of expertise – in career path and skill set.</p>
+        <p>If you are not sure which category to select, research the different areas to find one that matches your skills set and interest. If you are still not sure, make a connection with one of our Network professionals – they can help guide you to a career in Finance.</p>
+        <div class="hide-for-large-up">
+          <button id='my-button' class="button" type="button">Finance Categories</button>
+        </div>
+      </div>
+
+      <div class="small-12 medium-12 large-4 columns" id="about-box">
+        <h1><i id='pointer' class="fa fa-hand-pointer-o fa-lg"></i></h1>
+        <h3>Select</h3>
+        <p>Review the profiles that interest you and select one or more professionals that can provide you with the career answers you need to make the best decision possible.</p>
+        <p>Pay close attention to the number of years of experience. If you are just starting your career, we recommend that you speak with a professional that has 1-5 years of experience. These professionals will have an excellent idea of the challenges you are facing and their advice will be most relevant to your current situation.</p>
+        <div class="hide-for-large-up">
+          <button id='levels-btn' class="button" type="button">Finance Levels</button>
+        </div>
+      </div>
+
+      <div class="small-12 medium-12 large-4 columns" id="about-box">
+        <h1><i id='pointer' class="fa fa-globe fa-lg"></i></h1>
+        <h3>Connect</h3>
+        <p>You searched the Network and found the best finance category and person(s) to speak with about your career.</p>
+        <p>You will be asked to sign in at this point. We want to make sure that we can contact you if there is a scheduling issue. Everyone in the Network is a busy professional and it is always business first. Also, once you have your dream role, we may invite you to be part of the Network to share your story with other people.</p>
+        <div class="hide-for-large-up">
+          <%= link_to "Get Networking!", advisors_path, class: "button" %>
+        </div>
+      </div>
+
+    </div>
+    <div class="show-for-large-up" id="buttons-holder">
+      <div class="large-4 columns">
         <button id='my-button' class="button" type="button">Finance Categories</button>
       </div>
-    </div>
-
-    <div class="small-12 medium-12 large-4 columns" id="about-box">
-      <h1><i id='pointer' class="fa fa-hand-pointer-o fa-lg"></i></h1>
-      <h3>Select</h3>
-      <p>Review the profiles that interest you and select one or more professionals that can provide you with the career answers you need to make the best decision possible.</p>
-      <p>Pay close attention to the number of years of experience. If you are just starting your career, we recommend that you speak with a professional that has 1-5 years of experience. These professionals will have an excellent idea of the challenges you are facing and their advice will be most relevant to your current situation.</p>
-      <div class="hide-for-large-up">
+      <div class="large-4 columns">
         <button id='levels-btn' class="button" type="button">Finance Levels</button>
       </div>
-    </div>
-
-    <div class="small-12 medium-12 large-4 columns" id="about-box">
-      <h1><i id='pointer' class="fa fa-globe fa-lg"></i></h1>
-      <h3>Connect</h3>
-      <p>You searched the Network and found the best finance category and person(s) to speak with about your career.</p>
-      <p>You will be asked to sign in at this point. We want to make sure that we can contact you if there is a scheduling issue. Everyone in the Network is a busy professional and it is always business first. Also, once you have your dream role, we may invite you to be part of the Network to share your story with other people.</p>
-      <div class="hide-for-large-up">
+      <div class="large-4 columns">
         <%= link_to "Get Networking!", advisors_path, class: "button" %>
       </div>
     </div>
+  </div>
 
+
+  <%= render partial: "popup_categories" %>
+  <%= render partial: "popup_levels" %>
+
+
+    <div class="container" id="about-container">
+
+
+
+       <p>The more time you spend researching and speaking with professionals in your chosen field, the better chance you will have in uncovering an amazing career opportunity. You will save time and frustration by avoiding areas of Finance that don’t match your skill set or interest you and you will greatly increase your chances of being selected during the interview process. Knowledge about the role and industry you are entering is a very powerful resource.This is not an opportunity to ask for a job. This is an opportunity to network with working professionals to find out more about the people and opportunities in different areas of finance. Please respect the privacy and time of the busy professionals in the Network.</p>
+        <p>We have represented the Finance Industry in this format knowing that job titles, roles, and locations are subject to change and do not represent every option within Finance. Some companies have different titles and structures and may not match this exact configuration. Do not let that stop you from seeking information from our Network. If there is a specific role or area you would like to explore and we do not have anyone in the Network, please contact us and we will find you a connection.</p>
+        <p>Please contact karen@thepelikangroup.com</p>
+
+
+    </div>
+    <div id="pelikan-logo">
+      <img src="/assets/pelikan_logo.png"/>
+    </div>
+      <footer class="footer" id="parallax-footer">
+  <p class="slogan"><img id="nav_logo" src="/assets/hn_logo_small.png"/></p>
+
+        <div class="links">
+          <%= link_to "Home", root_path %>
+          <p>  •  </p>
+          <%= link_to "About", about_path %>
+          <p>  •  </p>
+          <%= link_to "The Network's Charities", "http://www.thepelikangroup.com/charities" , :target => "_blank" %>
+        </div>
+
+        <p class="copywrite">Pelikan Group Inc.</p>
+
+  </footer>s
   </div>
-  <div class="show-for-large-up" id="buttons-holder">
-    <div class="large-4 columns">
-      <button id='my-button' class="button" type="button">Finance Categories</button>
-    </div>
-    <div class="large-4 columns">
-      <button id='levels-btn' class="button" type="button">Finance Levels</button>
-    </div>
-    <div class="large-4 columns">
-      <%= link_to "Get Networking!", advisors_path, class: "button" %>
-    </div>
-  </div>
+
 </div>
 
-
-<%= render partial: "popup_categories" %>
-<%= render partial: "popup_levels" %>
-
-
-  <div class="container" id="about-container">
-
-
-
-     <p>The more time you spend researching and speaking with professionals in your chosen field, the better chance you will have in uncovering an amazing career opportunity. You will save time and frustration by avoiding areas of Finance that don’t match your skill set or interest you and you will greatly increase your chances of being selected during the interview process. Knowledge about the role and industry you are entering is a very powerful resource.This is not an opportunity to ask for a job. This is an opportunity to network with working professionals to find out more about the people and opportunities in different areas of finance. Please respect the privacy and time of the busy professionals in the Network.</p>
-      <p>We have represented the Finance Industry in this format knowing that job titles, roles, and locations are subject to change and do not represent every option within Finance. Some companies have different titles and structures and may not match this exact configuration. Do not let that stop you from seeking information from our Network. If there is a specific role or area you would like to explore and we do not have anyone in the Network, please contact us and we will find you a connection.</p>
-      <p>Please contact karen@thepelikangroup.com</p>
-
-
-  </div>
-   <div id="pelikan-logo">
-    <img src="/assets/pelikan_logo.png"/>
-  </div>
-</div>
