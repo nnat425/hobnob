@@ -7,9 +7,7 @@
 
 <p>1. Verify Your Email Address</p>
 
-
-<%= link_to "Confirm Email",{:action => :verify, :id  => @user.id}, :method => :patch %>
-
+<%= link_to "Confirm Email", email_confirm_user_url(@user) %>
 
 <br>
 <p>2. Customer Support</p>
@@ -22,3 +20,5 @@
 
 <p>Get Networking!</p>
 <p>The Hob Nob Team</p>
+
+

@@ -1,0 +1,6 @@
+ <p><%= link_to 'Email Confirm' , {:action => :update, :id => @user.id}, :method => :put, id: 'email_confirm' %> </p>
+ <script>
+ $(document).ready(function(){
+  document.getElementById('email_confirm').click();
+})
+ </script>

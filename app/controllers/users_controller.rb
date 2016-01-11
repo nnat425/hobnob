@@ -26,20 +26,18 @@ class UsersController < ApplicationController
     @booked_appointments = @user.booked_appointments
   end
 
-  def verify
+  def email_confirm
+    @user = User.find(params[:id])
+  end
+
+  def update
     user = User.find_by(id: params[:id])
     if user
       user.update(email_verified:true, email_confirmation: user.email)
       flash[:email_verified] = "Email has been verified"
       redirect_to root_path
-    else
-      redirect_to about_path
     end
   end
-
-# <p><%= form_for @user, :url => users_verify_path(@user.id) do |f| %> </p>
-# <%= f.submit 'Submit' %>
-# <% end %>
 
   private
 
@@ -48,3 +46,9 @@ class UsersController < ApplicationController
   end
 
 end
+
+
+
+ # <p><%= form_for @user, :url => users_verify_path(@user.id) do |f| %> </p>
+ # <%= f.submit 'Submit' %>
+ # <% end %>
