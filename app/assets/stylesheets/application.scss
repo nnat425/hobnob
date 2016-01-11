@@ -202,8 +202,7 @@ position: fixed;
 
 #session_background {
   background: url("city_header5.jpg") no-repeat center;
-  height: 100%;
-   width: 100%;
+
    background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -236,9 +235,10 @@ border-radius: 5px;
 border: 1px solid #ccc;
 padding: 2em;
 text-align:center;
-margin-top: 1em;
+margin-top: 10em;
 margin-bottom: 1em;
 background-color: #fff;
+opacity:0.9;
 }
 
 .signup-panel p {
