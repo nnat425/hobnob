@@ -1,7 +1,25 @@
 
-  <header class="hero">
-
-    <div class="row" id="main_hero">
+  <header class="hero" id="home-hero">
+    <img src="/assets/meeting_header1.png"/>
+    <div class="row hide-for-medium-down" id="main_hero">
+      <div class="small-12 medium-12 large-12 columns" id="intro-text">
+        <p id="header">HOB NOB</p>
+      </div>
+      <div class="small-12 medium-12 large-12 columns" id="intro-subtext">
+        <p>Make strong career decisions today and in the future</p>
+        <%= link_to "Get Networking!", advisors_path, class: "button" %>
+      </div>
+    </div>
+    <div class="row show-for-medium" id="main_hero_med">
+      <div class="small-12 medium-12 large-12 columns" id="intro-text">
+        <p id="header">HOB NOB</p>
+      </div>
+      <div class="small-12 medium-12 large-12 columns" id="intro-subtext">
+        <p>Make strong career decisions today and in the future</p>
+        <%= link_to "Get Networking!", advisors_path, class: "button" %>
+      </div>
+    </div>
+    <div class="row show-for-small" id="main_hero_small">
       <div class="small-12 medium-12 large-12 columns" id="intro-text">
         <p id="header">HOB NOB</p>
       </div>
