@@ -200,11 +200,16 @@ overflow: hidden;
 position: fixed;
 }
 
-#login_background{
-background-size: cover;
-overflow: hidden;
-position:absolute;
+#session_background {
+  background: url("city_header5.jpg") no-repeat center;
+  height: 100%;
+   width: 100%;
+   background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 }
+
 
 #home_header {
 margin-top: 6em;
