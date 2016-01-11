@@ -4,6 +4,8 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+
+
   def create
     user = User.new(user_params)
     if user.save && user.valid?
@@ -34,6 +36,10 @@ class UsersController < ApplicationController
       redirect_to about_path
     end
   end
+
+# <p><%= form_for @user, :url => users_verify_path(@user.id) do |f| %> </p>
+# <%= f.submit 'Submit' %>
+# <% end %>
 
   private
 
