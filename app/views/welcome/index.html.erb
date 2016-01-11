@@ -1,7 +1,7 @@
 
-
-  <div class="hero">
-    <div class="row">
+  <header class="hero" id="home-hero">
+    <img src="/assets/meeting_header1.png"/>
+    <div class="row hide-for-medium-down" id="main_hero">
       <div class="small-12 medium-12 large-12 columns" id="intro-text">
         <p id="header">HOB NOB</p>
       </div>
@@ -10,10 +10,28 @@
         <%= link_to "Get Networking!", advisors_path, class: "button" %>
       </div>
     </div>
-  </div>
+    <div class="row show-for-medium" id="main_hero_med">
+      <div class="small-12 medium-12 large-12 columns" id="intro-text">
+        <p id="header">HOB NOB</p>
+      </div>
+      <div class="small-12 medium-12 large-12 columns" id="intro-subtext">
+        <p>Make strong career decisions today and in the future</p>
+        <%= link_to "Get Networking!", advisors_path, class: "button" %>
+      </div>
+    </div>
+    <div class="row show-for-small" id="main_hero_small">
+      <div class="small-12 medium-12 large-12 columns" id="intro-text">
+        <p id="header">HOB NOB</p>
+      </div>
+      <div class="small-12 medium-12 large-12 columns" id="intro-subtext">
+        <p>Make strong career decisions today and in the future</p>
+        <%= link_to "Get Networking!", advisors_path, class: "button" %>
+      </div>
+    </div>
+  </header>
 
 
-  <div class="parallax-content">
+  <div class="parallax-content" id="home-parallax-content">
 
     <div class="row" id="home-container">
       <div class="small-12 medium-12 large-4 columns" id="home-small-box">
@@ -100,7 +118,7 @@
     </div>
 
 
-<footer class="footer" id="home-footer">
+<footer class="footer" id="parallax-footer">
 <p class="slogan"><img id="nav_logo" src="/assets/hn_logo_small.png"/></p>
 
       <div class="links">

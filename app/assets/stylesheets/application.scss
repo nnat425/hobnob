@@ -194,6 +194,12 @@ background-size: cover;
 overflow: hidden;
 }
 
+.hero {
+background-size: cover;
+overflow: hidden;
+position: fixed;
+}
+
 
 #home_header {
 margin-top: 6em;
@@ -1463,20 +1469,6 @@ box-shadow:         4px 4px 4px 0px #ccc;
 }
 
 
-.hero {
-background:
-linear-gradient(transparent, black 90%),
-url("http://s3.amazonaws.com/hobnob-bucket-assets/meeting_header1.png");
-height: 100%;
-background-repeat: no-repeat;
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
-width: 100%;
-position: fixed;
-
-}
 
 #home-container {
 margin-top: 6em;
@@ -1506,8 +1498,31 @@ padding-top: 50px;
 padding-bottom: 50px;
 background-color: #fff;
 position: relative;
-top: 600px;
 
+
+}
+
+#home-parallax-content {
+  top: 850px;
+}
+
+#about_parallax_content {
+  top: 600px;
+}
+
+
+#main_hero {
+  margin-top: -750px;
+  height: 850px;
+}
+
+#main_hero_med{
+  background-color: black;
+  margin-top: -100px;
+}
+
+#main_hero_small {
+  background-color: black;
 }
 
 #intro-text {
@@ -1525,7 +1540,7 @@ margin-top: 2em;
 }
 
 #intro-text #header {
-font-size: 5.5em;
+font-size: 5.5rem;
 color: #fff;
 margin-top: 11.5%;
 font-family: "Open Sans";
@@ -1538,7 +1553,7 @@ margin-bottom: -.5em;
 }
 
 #intro-subtext p {
-font-size: 1.5em;
+font-size: 1.5rem;
 font-family: "Open Sans";
 color: #fff;
 letter-spacing: 2px;
@@ -1742,8 +1757,9 @@ margin-bottom: -.3em;
 
 
 
-#home-footer {
+#parallax-footer {
 position: absolute;
+margin-top: 1.5em;
 bottom: 0;
 right:0;
 left: 0;
@@ -2147,6 +2163,7 @@ font-weight: 300;
 text-align: center;
 margin-top: 0;
 padding-bottom: 1.5em;
+margin-bottom: 5em;
 }
 #pelikan-logo img {
 width: 25%;
