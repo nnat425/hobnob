@@ -205,6 +205,12 @@ overflow: hidden;
 }
 
 .hero {
+background-size: cover;
+overflow: hidden;
+position: fixed;
+}
+
+#about_hero{
 position: fixed;
 }
 
