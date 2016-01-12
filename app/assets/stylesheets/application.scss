@@ -201,13 +201,21 @@ position: fixed;
 }
 
 #session_background {
+background: url("http://s3.amazonaws.com/hobnob-bucket-assets/city_header5.jpg") no-repeat center;
+padding-bottom:11em;
+background-size: cover;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+}
 
-  background: url("city_header5.jpg") no-repeat center;
-  padding-bottom:11em;
-   background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+#user_new_background{
+background: url("http://s3.amazonaws.com/hobnob-bucket-assets/city_header5.jpg") no-repeat center;
+background-size: cover;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+
 }
 
 
@@ -1514,26 +1522,26 @@ position: relative;
 }
 
 #home-parallax-content {
-  top: 850px;
+top: 850px;
 }
 
 #about_parallax_content {
-  top: 600px;
+top: 600px;
 }
 
 
 #main_hero {
-  margin-top: -750px;
-  height: 850px;
+margin-top: -750px;
+height: 850px;
 }
 
 #main_hero_med{
-  background-color: black;
-  margin-top: -100px;
+background-color: black;
+margin-top: -100px;
 }
 
 #main_hero_small {
-  background-color: black;
+background-color: black;
 }
 
 #intro-text {
