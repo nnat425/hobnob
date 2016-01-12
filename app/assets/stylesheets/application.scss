@@ -205,8 +205,6 @@ overflow: hidden;
 }
 
 .hero {
-background-size: cover;
-overflow: hidden;
 position: fixed;
 }
 
@@ -1560,7 +1558,7 @@ top: 850px;
 }
 
 #about_parallax_content {
-top: 600px;
+top: 800px;
 }
 
 
@@ -1618,14 +1616,13 @@ margin-top: -.5em;
 #about-subtext{
 color: #fff;
 margin-top: -40em;
-float: right;
-text-align: right;
+text-align: center;
 opacity: .9;
 padding: 2.5em;
 }
 
 #about-subtext p{
-font-size: 1.5em;
+font-size: 3em;
 font-family: "Open Sans";
 letter-spacing: 2px;
 font-weight: 300;
