@@ -1,19 +1,17 @@
-<header class="edit_hero">
-  <img src="http://s3.amazonaws.com/hobnob-bucket-assets/city_header2-1.jpg"/>
-</header>
 
+<div id='session_background' class="row">
 
-<div class="small-12 medium-10 medium-centered large-6 large-centered columns">
-  <div class="signup-panel">
+  <div class="small-12 medium-10 medium-centered large-6 large-centered columns">
+    <div class="signup-panel">
 
-    <div class="row">
-      <div class="small-12 medium-11 medium-centered large-10 large-centered columns">
-        <h2 id="signup_header"> Signup!</h2>
-        <p> Welcome to Hobnob, the easiest way to connect to a financial leader!</p>
+      <div class="row">
+        <div class="small-12 medium-11 medium-centered large-10 large-centered columns">
+          <h2 id="signup_header"> Signup!</h2>
+          <p> Welcome to HOB NOB, the easiest way to connect to a financial leader!</p>
+        </div>
       </div>
-    </div>
 
-    <%= form_for @user, url: users_path, html: { multipart: true } do |f| %>
+      <%= form_for @user, url: users_path, html: { multipart: true } do |f| %>
 
       <% if flash[:errors] %>
       <% flash[:errors].each do |msg| %>
@@ -21,87 +19,88 @@
       <% end %>
       <% end %>
 
-    <div class="row">
-      <div class="small-12 medium-11 medium-centered large-10 large-centered columns">
-        <%= f.text_field :first_name, placeholder: "First Name" %>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="small-12 medium-11 medium-centered large-10 large-centered columns">
-        <%= f.text_field :last_name, placeholder: "Last Name" %>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="small-12 medium-11 medium-centered large-10 large-centered columns">
-        <%= f.text_field :email, placeholder: "Email" %>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="small-12 medium-11 medium-centered large-10 large-centered columns">
-        <%= f.text_field :email_confirmation, placeholder: "Confirm Email" %>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="small-12 medium-11 medium-centered large-10 large-centered columns">
-        <%= f.password_field :password, placeholder: "Password" %>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="small-12 medium-11 medium-centered large-10 large-centered columns">
-        <%= f.password_field :password_confirmation, placeholder: "Password Confirmation" %>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="small-12 medium-11 medium-centered large-10 large-centered columns">
-        <div class="switch round">
-          <p class="choice_label">Current Student?</p>
-          <input id="yes-no" type="checkbox" name="user[student]">
-          <label for="yes-no">
-            <span class="switch-on" id="user_student_true">Yes</span>
-            <span class="switch-off" id="user_student_false">No</span>
-          </label>
+      <div class="row">
+        <div class="small-12 medium-11 medium-centered large-10 large-centered columns">
+          <%= f.text_field :first_name, placeholder: "First Name" %>
         </div>
       </div>
-    </div>
 
-
-
-    <div class="row">
-      <div class="small-12 medium-11 medium-centered large-10 large-centered columns">
-        <%= f.text_field :school, placeholder: "University"%>
-      </div>
-    </div>
-
-
-    <div class="row">
-      <div class="small-12 medium-11 medium-centered large-10 large-centered columns">
-        <%= f.text_field :program, placeholder: "Program"%>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="small-12 medium-11 medium-centered large-10 large-centered columns">
-        <div id='grad_date'>
-          <%= f.label "Expected Graduation Date" %>
-          <%= f.select :graduation_date, (2016..2030) %>
+      <div class="row">
+        <div class="small-12 medium-11 medium-centered large-10 large-centered columns">
+          <%= f.text_field :last_name, placeholder: "Last Name" %>
         </div>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="small-12 medium-11 medium-centered large-10 large-centered columns">
-        <%=f.submit "Register", :class => "full-button" %>
+      <div class="row">
+        <div class="small-12 medium-11 medium-centered large-10 large-centered columns">
+          <%= f.text_field :email, placeholder: "Email" %>
+        </div>
       </div>
-    </div>
 
-    <% end %>
+      <div class="row">
+        <div class="small-12 medium-11 medium-centered large-10 large-centered columns">
+          <%= f.text_field :email_confirmation, placeholder: "Confirm Email" %>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="small-12 medium-11 medium-centered large-10 large-centered columns">
+          <%= f.password_field :password, placeholder: "Password" %>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="small-12 medium-11 medium-centered large-10 large-centered columns">
+          <%= f.password_field :password_confirmation, placeholder: "Password Confirmation" %>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="small-12 medium-11 medium-centered large-10 large-centered columns">
+          <div class="switch round">
+            <p class="choice_label">Current Student?</p>
+            <input id="yes-no" type="checkbox" name="user[student]">
+            <label for="yes-no">
+              <span class="switch-on" id="user_student_true">Yes</span>
+              <span class="switch-off" id="user_student_false">No</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="row">
+        <div class="small-12 medium-11 medium-centered large-10 large-centered columns">
+          <%= f.text_field :school, placeholder: "University"%>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="small-12 medium-11 medium-centered large-10 large-centered columns">
+          <%= f.text_field :program, placeholder: "Program"%>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="small-12 medium-11 medium-centered large-10 large-centered columns">
+          <div id='grad_date'>
+            <%= f.label "Expected Graduation Date" %>
+            <%= f.select :graduation_date, (2016..2030) %>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="small-12 medium-11 medium-centered large-10 large-centered columns">
+          <%=f.submit "Register", :class => "full-button" %>
+        </div>
+      </div>
+
+      <% end %>
+
+    </div>
 
   </div>
-
 </div>
