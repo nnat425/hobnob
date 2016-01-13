@@ -210,6 +210,10 @@ overflow: hidden;
 position: fixed;
 }
 
+#about_hero{
+position: fixed;
+}
+
 #session_background {
 background: url("http://s3.amazonaws.com/hobnob-bucket-assets/city_header5.jpg") no-repeat center;
 padding-bottom:22em;
@@ -1560,7 +1564,7 @@ top: 850px;
 }
 
 #about_parallax_content {
-top: 600px;
+top: 800px;
 }
 
 
@@ -1618,15 +1622,14 @@ margin-top: -.5em;
 #about-subtext{
 color: #fff;
 margin-top: -40em;
-float: right;
-text-align: right;
+text-align: center;
 opacity: .9;
 padding: 2.5em;
+margin-top:-40em;
 }
 
 #about-subtext p{
-font-size: 1.5em;
-font-family: "Open Sans";
+font-size: 3em;
 letter-spacing: 2px;
 font-weight: 300;
 font-family: "Open Sans";
