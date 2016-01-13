@@ -2,6 +2,11 @@ class AdvisorsController < ApplicationController
 
   before_action :correct_advisor, only:[:edit, :update]
 
+
+  def search
+
+  end
+
   def index
     if params[:filter]
       if params[:filter][:category]
@@ -38,8 +43,7 @@ class AdvisorsController < ApplicationController
     end
   end
 
-  def results
-  end
+
 
   def new
     @advisor = Advisor.new
