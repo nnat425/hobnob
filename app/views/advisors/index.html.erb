@@ -1,5 +1,5 @@
 <header class="edit_hero">
-  <img src="http://s3.amazonaws.com/hobnob-bucket-assets/city_header2-2.jpg"/>
+  <img src="assets/network_photo.png"/>
 </header>
 
 <div class="row" id="advisors-index-container">
@@ -136,13 +136,11 @@
     </div>
     <% end %>
   </div>
-
-  <div class="row">
-    <div class="small-12 medium-12 large-12 columns">
-      <div class="row" id="advisors-list">
-        <%= render partial: "advisors/results_index" %>
-      </div>
+</div>
+<div class="row" id="advisors-list-holder">
+  <div class="small-12 medium-12 large-10 large-centered columns">
+    <div class="row" id="advisors-list">
+      <%= render partial: "advisors/results_index" %>
     </div>
   </div>
-
 </div>
