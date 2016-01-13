@@ -1569,7 +1569,7 @@ top: 850px;
 }
 
 #about_parallax_content {
-top: 800px;
+top: 700px;
 }
 
 
@@ -1588,16 +1588,17 @@ background-color: black;
 }
 #about_hero_small {
   background-color: black;
+  padding-bottom: 0px;
 
 }
 
 #about_hero_text {
   height: 20em;
   padding-top: 7em;
-  padding-bottom: 1em;
   padding-left: 1em;
   padding-right: 1em;
   text-align: center;
+  margin-bottom: -10px;
 }
 
 #about_hero_text p{
@@ -1647,17 +1648,18 @@ margin-top: -.5em;
 
 #about-subtext{
 color: #fff;
-text-align: center;
+text-align: right;
 opacity: .9;
 padding: 2.5em;
-margin-top:-50em;
+
 }
 
 #about-subtext p{
-font-size: 3em;
+font-size: 1.5rem;
 letter-spacing: 2px;
 font-weight: 300;
 font-family: "Open Sans";
+margin-top: -30em;
 }
 
 
