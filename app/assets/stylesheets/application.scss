@@ -204,6 +204,10 @@ background-size: cover;
 overflow: hidden;
 }
 
+#edit_advisor {
+height:12vh;
+}
+
 .hero {
 background-size: cover;
 overflow: hidden;
@@ -535,7 +539,7 @@ margin-bottom: 1.5em;
 }
 
 #ribbon-header {
-  background: url("ribbon-header.png");
+  background: url("http://s3.amazonaws.com/hobnob-bucket-assets/ribbon-header.png");
   height: 80px;
   background-size: cover;
 }
@@ -763,7 +767,7 @@ float: right;
 .calendar_page {
 background:url("http://s3.amazonaws.com/hobnob-bucket-assets/phone.jpeg");
 background-size: cover;
-height: 80vh;
+height: 12vh;
 overflow: hidden;
 }
 
@@ -1234,6 +1238,7 @@ margin-bottom: 1.5em;
 padding-top: 90px;
 background-color: #f0f1ee;
 padding-bottom: 10px;
+margin-bottom:13em;
 }
 
 #user-profile-panel {
@@ -1638,6 +1643,7 @@ font-family: "Open Sans";
 padding-left: 2em;
 padding-right: 2em;
 background-color: #fff;
+margin-bottom:28em;
 }
 
 #items-holder {
