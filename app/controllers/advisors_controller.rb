@@ -38,6 +38,9 @@ class AdvisorsController < ApplicationController
     end
   end
 
+  def results
+  end
+
   def new
     @advisor = Advisor.new
   end
