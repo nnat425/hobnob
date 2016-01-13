@@ -3,10 +3,6 @@ class AdvisorsController < ApplicationController
   before_action :correct_advisor, only:[:edit, :update]
 
 
-  def search
-
-  end
-
   def index
     if params[:filter]
       if params[:filter][:category]
@@ -31,15 +27,9 @@ class AdvisorsController < ApplicationController
         advisors_by_years = Advisor.all
       end
       @advisors = advisors_by_category & advisors_by_location & advisors_by_years
-      if request.xhr?
-        flash[:message] = "Search Results"
-        render partial: "results_index", layout: false
-      end
+      flash[:message] = "Search Results"
     else
       @advisors = Advisor.all
-      if request.xhr?
-        render partial: "results_index", layout: false
-      end
     end
   end
 
