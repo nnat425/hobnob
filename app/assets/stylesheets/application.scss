@@ -40,7 +40,7 @@ max-width: 100%;
 .menu {
 background-color: rgba(0,0,0,.2);
 padding: 1.5rem 3rem;
-height: auto;
+height: 80px;
 border-bottom: 1px solid #adadad;
 
 .inline-list {
@@ -141,8 +141,18 @@ color: #fff;
 text-transform: uppercase;
 }
 
+
+#search-results-flash p {
+  font-family: "Open Sans";
+  font-size: 2.5em;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 3px;
+  color: #000;
+}
 #small-header-dropdown {
-margin-top: 2em;
+  margin-top: 7.5px;
+  margin-bottom: auto;
 }
 #medium-header-dropdown {
 margin-top: .5em;
@@ -158,7 +168,7 @@ padding: 1em;
 
 #mobile-header-logo {
 float: left;
-margin-top: 1em;
+
 }
 
 .mobile-header-menu li{
@@ -524,6 +534,11 @@ margin-bottom: 1.5em;
 
 }
 
+#ribbon-header {
+  background: url("ribbon-header.png");
+  height: 80px;
+  background-size: cover;
+}
 #about-box p {
 color: #C0C0C0;
 font-family: "Open Sans";
@@ -533,46 +548,55 @@ font-size: 1em;
 }
 
 #advisor-index-panel {
-margin-top: 10px;
-margin-bottom: 10px;
-background-color: #fff;
-border: 1px solid #ccc;
 padding: 1em;
-display: inline-block;
-height: 220px;
-border-radius: 5px;
-
-
+height: 250px;
+width: 100%;
 }
 
+#advisor-list-holder {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #fff;
 
+}
 #advisor-index-price {
 text-align: right;
 }
 
 #advisor-index-price .advisor-price-number {
 font-size: 1.5em;
+font-family: "Open Sans";
+font-weight: 300;
 color: #2f5287;
 }
 
 
-#index-advisor-services p {
-font-size: .85em;
-display: inline;
-font-family: "Open Sans";
-text-transform: uppercase;
-color: #C0C0C0;
+
+p.advisors-index-categories {
+  font-size: .6em;
+  display: inline;
+  font-family: "Open Sans";
+  text-transform: uppercase;
+  color: #C0C0C0;
+
 
 }
 
-#index-advisor-title-location p {
+#index-advisor-services {
+  margin: 0;
+}
+p.index-advisor-title-location {
 font-family: "Open Sans";
 letter-spacing: 1px;
+font-size: .75em;
+margin-top: 0;
+margin-bottom: 0;
 
 }
 #advisor-index-price .advisor-price-session {
 color: #C0C0C0;
 font-size: .5em;
+margin-top: -1em;
 font-family: "Open Sans";
 }
 #advisor-appointment-box {
@@ -696,16 +720,21 @@ display: inline-block;
 text-transform: uppercase;
 }
 
-#index-advisor-name {
-display: inline-block;
-margin-left: 0px;
-}
-#index-advisor-name p {
+p.index-advisor-name  {
 font-family: "Open Sans";
 font-size: 1.5em;
 letter-spacing: 1px;
 font-weight: 300;
+margin-bottom: .25em;
 
+}
+
+p.index-advisor-years-of-experience {
+  font-family: "Open Sans";
+  font-size: .75em;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 #page-header {
@@ -741,7 +770,7 @@ overflow: hidden;
 #left-category-bar {
 background-color: #202020;
 text-align: center;
-padding: 2em;
+padding: 1.5em;
 
 }
 .advisors-filter-subheader {
@@ -753,7 +782,7 @@ margin-bottom: 1em;
 .advisors-filter-subheader p {
 font-family: "Open Sans";
 color: #C0C0C0;
-font-size: 1.25em;
+font-size: 1em;
 font-weight: 300;
 display: inline;
 letter-spacing: 3px;
@@ -764,27 +793,25 @@ text-transform: uppercase;
 
 .index-categories-list {
 display: inline-block;
-padding-top: .5em;
-padding-bottom: .5em;
-padding-left: 2em;
-padding-right: 2em;
+padding-top: .25em;
+padding-bottom: .25em;
+padding-left: 1em;
+padding-right: 1em;
 letter-spacing: 2px;
 font-family: "Open Sans";
-font-size: 1em;
 border-radius: 10px;
 background-color: #282828;
 color: #C0C0C0;
 text-transform: uppercase;
 margin: .5em;
-position: relative;
+
 }
 
 .index-categories-list label {
-font-size: .85em;
+font-size: .7em;
 display: inline;
-margin-top: 1em;
-margin-bottom: 1.5em;
 color: #fff;
+margin-top: -.5em;
 
 }
 
@@ -1691,9 +1718,19 @@ text-align: center;
 }
 
 #advisors-list {
-padding: auto;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  padding-right: auto;
+  padding-left: auto;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
+#advisors-list-holder {
+  background-color: #F8F8F8;
+}
 .signup_hero_6 {
 background-size: cover;
 overflow: hidden;
@@ -1820,13 +1857,29 @@ transition: all .3s ease-in-out;
 
 #book-appt-btn {
 float: right;
-padding-top: .5em;
-padding-bottom: .5em;
-padding-left: 1.5em;
-padding-right: 1.5em;
-color: #C0C0C0;
+text-align: center;
+font-size: .60em;
+border-radius: 5px;
+padding-left: 2.5em;
+padding-right: 2.5em;
+padding-top: 1em;
+padding-bottom: 1em;
+color:white;
+background-color: #2996cc;
+letter-spacing: 2px;
+text-transform: uppercase;
+border: 1px solid #2996cc;
+margin-top: 2em;
+margin-bottom: 2.5em;
+
 }
 
+#book-appt-btn:hover {
+background-color: #fff;
+color: #2996cc;
+border: 1px solid #2996cc;
+transition: all .3s ease-in-out;
+}
 #calendar-button-div {
 text-align: center;
 }
@@ -1908,11 +1961,12 @@ float: right;
 #advisor-search-btn {
 background-color: #2996cc;
 font-weight: 300;
+font-size: .8em;
 letter-spacing: 2px;
 border-radius: 10px;
 border: 1px solid #2996cc;
 color: #fff;
-margin-top: 2em;
+margin-top: 1.5em;
 padding-left: 5em;
 padding-right: 5em;
 

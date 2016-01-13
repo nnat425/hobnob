@@ -27,6 +27,7 @@ class AdvisorsController < ApplicationController
       end
       @advisors = advisors_by_category & advisors_by_location & advisors_by_years
       if request.xhr?
+        flash[:message] = "Search Results"
         render partial: "results_index", layout: false
       end
     else
