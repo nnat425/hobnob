@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get 'users/:id/email_confirm' => 'users#email_confirm', as: 'email_confirm_user'
 
   get 'FinNetwork' => 'advisors#index', as: 'advisors'
+  get 'FinNetwork/results' => 'advisors#results'
   get 'FinNetwork/new' => 'advisors#new', as: 'advisor_new'
   post 'FinNetwork' => 'advisors#create'
   get 'FinNetwork/:id' => 'advisors#show', as: 'advisor'
