@@ -3,7 +3,7 @@
 
 
 <div class="row">
-  <div class="small-12 medium-12 large-8 large-centered columns" >
+  <div class="small-12 medium-12 large-11 large-centered columns" >
     <div class="panel" id="edit-panel">
 
       <% if flash[:thank_you] %>
@@ -24,8 +24,8 @@
 
       <div class="row">
         <div class="small-11 small-centered medium-10 large-7 columns">
-          <p id="form_directions">Please take some time to fill in the following details:</p>
-          <p id="form_note">*Fields will not be shown on your profile page</p>
+          <p id="form_directions">In order for HOB NOB to reach you, please provide the following information.</p>
+          <p id="form_note">*The information in this section will not be shown on the website</p>
         </div>
       </div>
 
@@ -46,9 +46,32 @@
       <%= f.hidden_field :password_confirmation,:value => @advisor.password_digest %>
       <%= f.hidden_field :email_confirmation, :value => @advisor.email %>
 
+
       <div class="row">
         <div class="small-11 small-centered medium-10 large-7 columns">
+          <%= f.label "Alternative Email" %>
+          <%= f.text_field :alternative_email, placeholder: "Alternative email" %>
+          <div class="spacer"></div>
+        </div>
+      </div>
 
+      <div class="row">
+        <div class="small-11 small-centered medium-10 large-7 columns">
+          <%= f.label "Current Company" %>
+          <%= f.text_field :company, placeholder: "Company title" %>
+          <div class="spacer"></div>
+        </div>
+      </div>
+
+       <div class="row">
+        <div class="small-11 small-centered medium-10 large-7 columns">
+          <p class="form_subtitle">Part 1: Your Profile</p>
+          <p id="form_note">*Information in this section will be displayed on the website.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="small-11 small-centered medium-10 large-7 columns">
             <div id="advisor-index-avatar">
               <%= image_tag current_advisor.avatar.url(:medium) %>
             </div>
@@ -57,20 +80,15 @@
           <div class="spacer"></div>
         </div>
       </div>
+
       <div class="row">
         <div class="small-11 small-centered medium-10 large-7 columns">
-          <%= f.label "Alternative Email*" %>
-          <%= f.text_field :alternative_email, placeholder: "Alternative email" %>
+          <%= f.label "First Name" %>
+          <%= f.text_field :firstname, placeholder: "First Name" %>
           <div class="spacer"></div>
         </div>
       </div>
-      <div class="row">
-        <div class="small-11 small-centered medium-10 large-7 columns">
-          <%= f.label "Current Company*" %>
-          <%= f.text_field :company, placeholder: "Company title" %>
-          <div class="spacer"></div>
-        </div>
-      </div>
+
       <div class="row">
         <div class="small-11 small-centered medium-10 large-7 columns">
           <%= f.label "Current Title" %>
@@ -78,31 +96,10 @@
           <div class="spacer"></div>
         </div>
       </div>
-      <div class="row">
-        <div class="small-11 small-centered medium-10 large-7 columns">
-          <%= f.label "Job Description" %>
-          <%= f.text_area(:job_description, cols:10, rows: 10) %>
-          <div class="spacer"></div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="small-11 small-centered medium-10 large-7 columns">
-          <%= f.label "Charity/Organization(s)" %>
-          <%= f.text_field :charity, placeholder: "Charity of choice" %>
-          <div class="spacer"></div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="small-11 small-centered medium-10 large-7 columns">
-          <%= f.label "Location" %>
-          <%= f.select :location, options_for_select(cities) %>
-          <div class="spacer"></div>
-        </div>
-      </div>
 
       <div class="row">
         <div class="small-11 small-centered medium-10 large-7 columns">
-          <%= f.label "Areas of experience" %>
+          <%= f.label "Area of Expertise" %>
           <div class="row">
             <div class="small-1 medium-1 large-1 columns">
               <%= check_box_tag "category[name][]", "Investment Banking", @current_categories.find_by(name: "Investment Banking"), class: "category-checkbox" %>
@@ -145,12 +142,109 @@
           </div>
         </div>
       </div>
-      <div class="spacer"></div>
+
+
+
+      <div class="row">
+        <div class="small-11 small-centered medium-10 large-7 columns">
+          <%= f.label "Location" %>
+          <%= f.select :location, options_for_select(cities) %>
+          <div class="spacer"></div>
+        </div>
+      </div>
 
       <div class="row">
         <div class="small-11 small-centered medium-10 large-7 columns">
           <%= f.label "Years of experience" %>
           <%= f.select :years_of_experience,['< 5 years', '5 - 15 years', '> 15 years'] %>
+          <div class="spacer"></div>
+        </div>
+      </div>
+
+
+
+      <div class="row">
+        <div class="small-11 small-centered medium-10 large-7 columns">
+          <%= f.label "Favorite Charity for Donation" %>
+          <%= f.text_field :charity, placeholder: "Name of Charity" %>
+          <%= f.text_field :charity_url, placeholder: "URL for Charity" %>
+          <div class="spacer"></div>
+        </div>
+      </div>
+
+       <div class="row">
+        <div class="small-11 small-centered medium-10 large-7 columns">
+          <p class="form_subtitle">Part 2: Other Information</p>
+          <p id="form_note">*Information in this section will be displayed on the website.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="small-11 small-centered medium-10 large-7 columns">
+          <%= f.label "Other Areas of Expertise" %>
+          <div class="row">
+            <div class="small-1 medium-1 large-1 columns">
+              <%= check_box_tag "category[name][]", "Investment Banking", @current_categories.find_by(name: "Investment Banking"), class: "category-checkbox" %>
+            </div>
+            <div class="small-11 medium-11 large-11 columns">
+              <p class="checkbox-label">Investment Banking</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-1 medium-1 large-1 columns">
+              <%= check_box_tag "category[name][]", "Asset Management", @current_categories.find_by(name: "Asset Management"), class: "category-checkbox" %>
+            </div>
+            <div class="small-11 medium-11 large-11 columns">
+              <p class="checkbox-label">Asset Management</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-1 medium-1 large-1 columns">
+              <%= check_box_tag "category[name][]", "Corporate Finance Divisions", @current_categories.find_by(name: "Corporate Finance Divisions"), class: "category-checkbox"  %>
+            </div>
+            <div class="small-11 medium-11 large-11 columns">
+              <p class="checkbox-label">Corporate Finance Divisions</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-1 medium-1 large-1 columns">
+              <%= check_box_tag "category[name][]", "Other Finance Opportunities", @current_categories.find_by(name: "Other Finance Opportunities"), class: "category-checkbox" %>
+            </div>
+            <div class="small-11 medium-11 large-11 columns">
+              <p class="checkbox-label">Other Finance Opportunities</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-1 medium-1 large-1 columns">
+              <%= check_box_tag "category[name][]", "Resume & Interview Prep", @current_categories.find_by(name: "Resume & Interview Prep"), class: "category-checkbox" %>
+            </div>
+            <div class="small-11 medium-11 large-11 columns">
+              <p class="checkbox-label">Resume & Interview Prep</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="small-11 small-centered medium-10 large-7 columns">
+          <%= f.label "Current Company (General Listing)" %>
+          <%= f.text_field :company, placeholder: "Ex. Investment Bank, Mining Company, Retail Organization, etc." %>
+          <div class="spacer"></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="small-11 small-centered medium-10 large-7 columns">
+          <%= f.label "Current Title" %>
+          <%= f.text_field :current_title, placeholder: "Current title" %>
+          <div class="spacer"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-11 small-centered medium-10 large-7 columns">
+          <%= f.label "Job Description" %>
+          <%= f.text_area(:job_description, cols:10, rows: 10) %>
           <div class="spacer"></div>
         </div>
       </div>
@@ -177,14 +271,14 @@
       <div id='test' class="row"></div>
       <div class="row">
         <div class="small-11 small-centered medium-10 large-7 columns">
-          <%= f.label "Education" %>
-          <%= f.text_field :education, placeholder: "Education" %>
+          <%= f.label "University Attended" %>
+          <%= f.text_field :education, placeholder: "City, Country, & Degree Obtained" %>
           <div class="spacer"></div>
         </div>
       </div>
       <div class="row">
         <div class="small-11 small-centered medium-10 large-7 columns">
-          <%= f.label "Certification(s)" %>
+          <%= f.label "Finance Certification(s)" %>
           <%= f.text_field :certifications, placeholder: "Certification" %>
           <div class="spacer"></div>
         </div>

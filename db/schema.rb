@@ -11,8 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160114201626) do
-
+ActiveRecord::Schema.define(version: 20160114214340) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,6 +51,7 @@ ActiveRecord::Schema.define(version: 20160114201626) do
     t.boolean  "account_activated",      default: false
     t.datetime "activated_at"
     t.boolean  "email_verified",         default: false
+    t.string   "charity_url"
   end
 
   create_table "advisors_categories", force: :cascade do |t|
