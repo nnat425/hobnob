@@ -19,7 +19,8 @@ end
 
 def account_activation(advisor)
   @advisor = advisor
-  mail to: advisor.email, subject: "Account activation"
+  mail(:to => advisor.email, :subject => "Welcome to the Hob Nob Network",
+       :bcc => "nnat@umass.edu")
 end
 
 end

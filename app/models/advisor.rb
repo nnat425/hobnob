@@ -69,6 +69,22 @@ def send_password_reset
   AdvisorMailer.password_reset(self).deliver
 end
 
+def authenticated?(attribute, token)
+  digest = send("#{attribute}_digest")
+  return false if digest.nil?
+  BCrypt::Password.new(digest).is_password?(token)
+end
+
+def Advisor.new_token
+  SecureRandom.urlsafe_base64
+end
+
+def Advisor.digest(string)
+  cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
+  BCrypt::Engine.cost
+  BCrypt::Password.create(string, cost: cost)
+end
+
 private
 
 

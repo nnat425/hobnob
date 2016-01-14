@@ -47,6 +47,7 @@ class AdvisorsController < ApplicationController
     if advisor.save && advisor.valid?
       session[:user_or_advisor_id] = advisor.id
       session[:class_type] = advisor.class.name
+      AdvisorMailer.account_activation(advisor).deliver_now
       redirect_to edit_advisor_path(advisor)
     else
       flash[:errors] = advisor.errors.full_messages
