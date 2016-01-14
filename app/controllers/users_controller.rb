@@ -12,7 +12,7 @@ class UsersController < ApplicationController
       session[:user_or_advisor_id] = user.id
       session[:class_type] = "User"
       flash[:message] = "Thanks for signing up!"
-      UserMailer.signup_confirmation(user).deliver_now
+      UserMailer.account_activation(user).deliver_now
       user.carts.create
       redirect_to user_path(user)
     else

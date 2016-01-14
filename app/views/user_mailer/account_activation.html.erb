@@ -7,7 +7,7 @@
 
 <p>1. Verify Your Email Address</p>
 
-<%= link_to "Confirm Email", email_confirm_user_url(@user) %>
+<p><%= link_to "Confirm Email", edit_account_activation_url(@user.activation_token, email: @user.email) %><p>
 
 <br>
 <p>2. Customer Support</p>
