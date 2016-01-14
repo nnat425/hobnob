@@ -12,7 +12,7 @@ class UsersController < ApplicationController
       session[:user_or_advisor_id] = user.id
       session[:class_type] = "User"
       flash[:message] = "Thanks for signing up!"
-      UserMailer.signup_confirmation(user).deliver_now
+      UserMailer.email_verification(user).deliver_now
       user.carts.create
       redirect_to user_path(user)
     else
@@ -26,18 +26,6 @@ class UsersController < ApplicationController
     @booked_appointments = @user.booked_appointments
   end
 
-  def email_confirm
-    @user = User.find(params[:id])
-  end
-
-  def update
-    user = User.find_by(id: params[:id])
-    if user
-      user.update(email_verified:true, email_confirmation: user.email)
-      flash[:email_verified] = "Email has been verified"
-      redirect_to root_path
-    end
-  end
 
   private
 

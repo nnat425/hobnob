@@ -47,6 +47,7 @@ class AdvisorsController < ApplicationController
     if advisor.save && advisor.valid?
       session[:user_or_advisor_id] = advisor.id
       session[:class_type] = advisor.class.name
+      AdvisorMailer.email_verification(advisor).deliver_now
       redirect_to edit_advisor_path(advisor)
     else
       flash[:errors] = advisor.errors.full_messages
@@ -91,6 +92,19 @@ class AdvisorsController < ApplicationController
     end
   end
 
+  def activate
+    advisor = Advisor.find_by(id: params[:id])
+    advisor.update(account_activated: true, email_confirmation: advisor.email)
+    redirect_to network_members_path
+  end
+
+   def de_activate
+    advisor = Advisor.find_by(id: params[:id])
+    advisor.update(account_activated: false, email_confirmation: advisor.email)
+    redirect_to network_members_path
+  end
+
+
   def destroy
     advisor = Advisor.find_by(id: params[:id])
     advisor.destroy
@@ -99,13 +113,14 @@ class AdvisorsController < ApplicationController
 
   private
 
-    def advisor_params
-      params.require(:advisor).permit(:email, :email_confirmation, :password,:password_confirmation,  :firstname, :lastname, :avatar, :alternative_email, :current_title, :job_description, :charity, :location, :company, :years_of_experience, :other_companies, :education, :certifications, :interesting_facts)
-    end
+  def advisor_params
+    params.require(:advisor).permit(:email, :email_confirmation, :password,:password_confirmation,  :firstname, :lastname, :avatar, :alternative_email, :current_title, :job_description, :charity, :location, :company, :years_of_experience, :other_companies, :education, :certifications, :interesting_facts, :account_activated)
+  end
 
-    def correct_advisor
-      @advisor = Advisor.find(params[:id])
-      redirect_to(root_url) unless @advisor == current_advisor || session[:class_type] == "Admin"
-    end
+
+  def correct_advisor
+    @advisor = Advisor.find(params[:id])
+    redirect_to(root_url) unless @advisor == current_advisor || session[:class_type] == "Admin"
+  end
 
 end

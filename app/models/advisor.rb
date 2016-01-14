@@ -14,6 +14,11 @@ class Advisor < ActiveRecord::Base
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
   validates_attachment_file_name :avatar, matches: [/png\Z/, /jpe?g\Z/]
 
+
+  attr_accessor :activation_token
+  before_create :create_activation_digest
+
+
   has_secure_password
 
   def join_companies(param_companies)
@@ -62,6 +67,30 @@ def send_password_reset
   self.email_confirmation = self.email
   save!
   AdvisorMailer.password_reset(self).deliver
+end
+
+def authenticated?(attribute, token)
+  digest = send("#{attribute}_digest")
+  return false if digest.nil?
+  BCrypt::Password.new(digest).is_password?(token)
+end
+
+def Advisor.new_token
+  SecureRandom.urlsafe_base64
+end
+
+def Advisor.digest(string)
+  cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
+  BCrypt::Engine.cost
+  BCrypt::Password.create(string, cost: cost)
+end
+
+private
+
+
+def create_activation_digest
+  self.activation_token  = Advisor.new_token
+  self.activation_digest = Advisor.digest(activation_token)
 end
 
 

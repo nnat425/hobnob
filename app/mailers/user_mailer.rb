@@ -17,6 +17,12 @@ class UserMailer < ApplicationMailer
     mail :to => user.email, :subject => "Welcome to Hobnob"
   end
 
+  def email_verification(user)
+    @user = user
+    mail(:to => user.email, :subject => "Welcome to the Hob Nob",
+     :bcc => "nnat@umass.edu")
+  end
+
   def receipt(current_user, order_id, appointments)
     @appointments = appointments
     @current_user = current_user
