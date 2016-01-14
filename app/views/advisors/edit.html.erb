@@ -8,7 +8,7 @@
 
       <% if flash[:thank_you] %>
       <div class="row">
-        <div class="small-11 small-centered medium-10 medium-centered large-7 columns">
+        <div class="small-11 small-centered medium-10 medium-centered large-8 columns">
           <div data-alert class="alert-box success radius">
             <%= flash[:thank_you] %>
           </div>
@@ -17,13 +17,13 @@
       <% end %>
 
       <div class="row">
-        <div class="small-12 small-centered medium-12 medium-centered large-12 large-centered columns" id="page_header">
+        <div class="small-12 small-centered medium-10 medium-centered large-8 large-centered columns" id="page_header">
           <h1>Your Network Profile</h1>
         </div>
       </div>
 
       <div class="row">
-        <div class="small-11 small-centered medium-10 large-7 columns">
+        <div class="small-11 small-centered medium-10 large-8 columns">
           <p id="form_directions">In order for HOB NOB to reach you, please provide the following information.</p>
           <p id="form_note">*The information in this section will not be shown on the website</p>
         </div>
@@ -32,7 +32,7 @@
       <% if flash[:errors] %>
       <% flash[:errors].each do |msg| %>
       <div class="row">
-        <div class="small-11 small-centered medium-10 medium-centered large-7 large-centered columns">
+        <div class="small-11 small-centered medium-10 medium-centered large-8 large-centered columns">
           <div data-alert class="alert-box alert radius">
             <%= msg %>
           </div>
@@ -48,7 +48,7 @@
 
 
       <div class="row">
-        <div class="small-11 small-centered medium-10 large-7 columns">
+        <div class="small-11 small-centered medium-10 large-8 columns">
           <%= f.label "Alternative Email" %>
           <%= f.text_field :alternative_email, placeholder: "Alternative email" %>
           <div class="spacer"></div>
@@ -56,7 +56,7 @@
       </div>
 
       <div class="row">
-        <div class="small-11 small-centered medium-10 large-7 columns">
+        <div class="small-11 small-centered medium-10 large-8 columns">
           <%= f.label "Current Company" %>
           <%= f.text_field :company, placeholder: "Company title" %>
           <div class="spacer"></div>
@@ -64,14 +64,14 @@
       </div>
 
        <div class="row">
-        <div class="small-11 small-centered medium-10 large-7 columns">
+        <div class="small-11 small-centered medium-10 large-8 columns">
           <p class="form_subtitle">Part 1: Your Profile</p>
           <p id="form_note">*Information in this section will be displayed on the website.</p>
         </div>
       </div>
 
       <div class="row">
-        <div class="small-11 small-centered medium-10 large-7 columns">
+        <div class="small-11 small-centered medium-10 large-8 columns">
             <div id="advisor-index-avatar">
               <%= image_tag current_advisor.avatar.url(:medium) %>
             </div>
@@ -82,7 +82,7 @@
       </div>
 
       <div class="row">
-        <div class="small-11 small-centered medium-10 large-7 columns">
+        <div class="small-11 small-centered medium-10 large-8 columns">
           <%= f.label "First Name" %>
           <%= f.text_field :firstname, placeholder: "First Name" %>
           <div class="spacer"></div>
@@ -90,7 +90,7 @@
       </div>
 
       <div class="row">
-        <div class="small-11 small-centered medium-10 large-7 columns">
+        <div class="small-11 small-centered medium-10 large-8 columns">
           <%= f.label "Current Title" %>
           <%= f.text_field :current_title, placeholder: "Current title" %>
           <div class="spacer"></div>
@@ -98,7 +98,7 @@
       </div>
 
       <div class="row">
-        <div class="small-11 small-centered medium-10 large-7 columns">
+        <div class="small-11 small-centered medium-10 large-8 columns">
           <%= f.label "Area of Expertise" %>
           <div class="row">
             <div class="small-1 medium-1 large-1 columns">
@@ -146,7 +146,7 @@
 
 
       <div class="row">
-        <div class="small-11 small-centered medium-10 large-7 columns">
+        <div class="small-11 small-centered medium-10 large-8 columns">
           <%= f.label "Location" %>
           <%= f.select :location, options_for_select(cities) %>
           <div class="spacer"></div>
@@ -154,7 +154,7 @@
       </div>
 
       <div class="row">
-        <div class="small-11 small-centered medium-10 large-7 columns">
+        <div class="small-11 small-centered medium-10 large-8 columns">
           <%= f.label "Years of experience" %>
           <%= f.select :years_of_experience,['< 5 years', '5 - 15 years', '> 15 years'] %>
           <div class="spacer"></div>
@@ -164,7 +164,7 @@
 
 
       <div class="row">
-        <div class="small-11 small-centered medium-10 large-7 columns">
+        <div class="small-11 small-centered medium-10 large-8 columns">
           <%= f.label "Favorite Charity for Donation" %>
           <%= f.text_field :charity, placeholder: "Name of Charity" %>
           <%= f.text_field :charity_url, placeholder: "URL for Charity" %>
@@ -173,14 +173,14 @@
       </div>
 
        <div class="row">
-        <div class="small-11 small-centered medium-10 large-7 columns">
+        <div class="small-11 small-centered medium-10 large-8 columns">
           <p class="form_subtitle">Part 2: Other Information</p>
           <p id="form_note">*Information in this section will be displayed on the website.</p>
         </div>
       </div>
 
       <div class="row">
-        <div class="small-11 small-centered medium-10 large-7 columns">
+        <div class="small-11 small-centered medium-10 large-8 columns">
           <%= f.label "Other Areas of Expertise" %>
           <div class="row">
             <div class="small-1 medium-1 large-1 columns">
@@ -227,7 +227,7 @@
 
 
       <div class="row">
-        <div class="small-11 small-centered medium-10 large-7 columns">
+        <div class="small-11 small-centered medium-10 large-8 columns">
           <%= f.label "Current Company (General Listing)" %>
           <%= f.text_field :company, placeholder: "Ex. Investment Bank, Mining Company, Retail Organization, etc." %>
           <div class="spacer"></div>
@@ -235,14 +235,14 @@
       </div>
 
       <div class="row">
-        <div class="small-11 small-centered medium-10 large-7 columns">
+        <div class="small-11 small-centered medium-10 large-8 columns">
           <%= f.label "Current Title" %>
           <%= f.text_field :current_title, placeholder: "Current title" %>
           <div class="spacer"></div>
         </div>
       </div>
       <div class="row">
-        <div class="small-11 small-centered medium-10 large-7 columns">
+        <div class="small-11 small-centered medium-10 large-8 columns">
           <%= f.label "Job Description" %>
           <%= f.text_area(:job_description, cols:10, rows: 10) %>
           <div class="spacer"></div>
@@ -250,7 +250,7 @@
       </div>
 
       <div id='prev_comp' class="row">
-        <div class="small-11 small-centered medium-10 large-7 columns">
+        <div class="small-11 small-centered medium-10 large-8 columns">
           <%= f.label "Previous Companies" %>
 
           <% if @advisor.other_companies == nil %>
@@ -270,30 +270,44 @@
 
       <div id='test' class="row"></div>
       <div class="row">
-        <div class="small-11 small-centered medium-10 large-7 columns">
+        <div class="small-11 small-centered medium-10 large-8 columns">
           <%= f.label "University Attended" %>
-          <%= f.text_field :education, placeholder: "City, Country, & Degree Obtained" %>
+          <%= f.text_field :education, placeholder: "University Name, Location(City, Country), & Degree Obtained" %>
           <div class="spacer"></div>
         </div>
       </div>
       <div class="row">
-        <div class="small-11 small-centered medium-10 large-7 columns">
+        <div class="small-11 small-centered medium-10 large-8 columns">
           <%= f.label "Finance Certification(s)" %>
           <%= f.text_field :certifications, placeholder: "Certification" %>
           <div class="spacer"></div>
         </div>
       </div>
       <div class="row">
-        <div class="small-11 small-centered medium-10 large-7 columns">
+        <div class="small-11 small-centered medium-10 large-8 columns">
+          <%= f.label "Language(s) you Speak" %>
+          <%= f.text_field :languages, placeholder: "Languages" %>
+          <div class="spacer"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-11 small-centered medium-10 large-8 columns">
           <%= f.label "Other Information" %>
+          <p class="sublabel">Think about why people would want to speak with you about their career options. Many people viewing your profile will want to know about you and your career and will want to know what career topics you want to share: relocation, promotions, being effective at your role, summer internships, dealing with a difficult boss, managing your time versus life demands, making the most of your internship, your current company, why you like what you do, the finance industry as a whole, coming from a non-traditional background, transitioning from one area to another, overcoming obstacles in life, dealing with diversity issues, finding the best fit for your skill set.</p>
           <%= f.text_area(:interesting_facts, cols:10, rows: 10) %>
           <div class="spacer"></div>
         </div>
       </div>
       <div class="row">
-        <div class="small-11 small-centered medium-10 large-7 columns" id='pro'>
-          <%= f.submit "Update Profile", :class => "button", :id => "update_profile_button" %>
+        <div class="small-11 small-centered medium-10 large-8 columns" id='pro'>
+          <p class="sublabel">PLEASE REVIEW ALL ABOVE INFORMATION AND IF YOU ARE SATISFIED WITH THE CONTENT, CLICK CREATE PROFILE. YOU WILL BE DIRECTED TO THE NEXT PAGE TO SEE HOW YOUR INFORMATION WILL APPEAR ON THE SITE. AS A FINAL STEP, YOU MUST COMPLETE PART 3 ON THE NEXT PAGE. ADDING YOUR AVAILABLE CALENDAR DATES AND TIMES IS ESSENTIAL TO COMPLETE YOUR PROFILE.</p>
         </div>
+      </div>
+      <div class="row">
+        <div class="small-11 small-centered medium-10 large-8 columns" id='pro'>
+          <%= f.submit "Preview Profile", :class => "full-button", :id => "update_profile_button" %>
+        </div>
+
       </div>
     </div>
   </div>
