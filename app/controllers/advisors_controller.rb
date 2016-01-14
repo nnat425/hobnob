@@ -54,8 +54,13 @@ class AdvisorsController < ApplicationController
   end
 
   def show
-    @advisor = Advisor.find_by(id: params[:id])
-    @advisor_appointments = @advisor.potential_appointments
+    advisor = Advisor.find_by(id: params[:id])
+    if (advisor.publish == true) || (current_advisor == advisor)
+      @advisor = advisor
+      @advisor_appointments = @advisor.potential_appointments
+    else
+      flash[:message] = "This path does not exist"
+    end
   end
 
   def edit
