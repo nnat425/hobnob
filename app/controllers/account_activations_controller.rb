@@ -7,7 +7,7 @@ class AccountActivationsController < ApplicationController
       if advisor && !advisor.email_verified? && advisor.authenticated?(:activation, params[:id])
         advisor.update_attribute(:email_verified,    true)
         advisor.update_attribute(:activated_at, Time.zone.now)
-        flash[:success] = "Account activated!"
+        flash[:success] = "Email verified!"
         redirect_to edit_advisor_path(advisor)
       else
         flash[:danger] = "Invalid activation link"
@@ -17,12 +17,15 @@ class AccountActivationsController < ApplicationController
      if user && !user.email_verified? && user.authenticated?(:activation, params[:id])
       user.update_attribute(:email_verified,    true)
       user.update_attribute(:activated_at, Time.zone.now)
-      flash[:success] = "Account activated!"
-      redirect_to edit_user_path(user)
+      flash[:success] = "Email verified!"
+      redirect_to user_path(user)
     else
       flash[:danger] = "Invalid activation link"
       redirect_to root_url
     end
   end
+end
+
+
 
 end

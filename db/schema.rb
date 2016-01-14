@@ -156,6 +156,9 @@ ActiveRecord::Schema.define(version: 20160114201626) do
     t.string   "password_reset_token"
     t.datetime "password_reset_sent_at"
     t.boolean  "email_verified",         default: false
+    t.string   "activation_digest"
+    t.boolean  "account_activated",      default: false
+    t.datetime "activated_at"
   end
 
   add_foreign_key "advisors_categories", "advisors"

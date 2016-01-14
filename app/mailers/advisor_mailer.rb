@@ -17,7 +17,7 @@ def signup_confirmation(advisor)
   mail :to => advisor.email, :subject => "Welcome to Hobnob"
 end
 
-def account_activation(advisor)
+def email_verification(advisor)
   @advisor = advisor
   mail(:to => advisor.email, :subject => "Welcome to the Hob Nob Network",
        :bcc => "nnat@umass.edu")
