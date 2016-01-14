@@ -10,6 +10,9 @@ class User < ActiveRecord::Base
   validates_confirmation_of :email, :message => "should match email"
   validates_presence_of :email_confirmation
 
+  before_create :create_activation_digest
+
+
   has_secure_password
 
   # after_save :create_cart
