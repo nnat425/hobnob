@@ -5,11 +5,14 @@
 <div class="row">
   <div class="small-12 medium-12 large-8 large-centered columns" >
     <div class="panel" id="edit-panel">
-
-
+      <% if flash[:thank_you] %>
+        <div data-alert class="alert-box success radius">
+          <p><%= flash[:thank_you] %></p>
+        </div>
+      <% end %>
       <div class="row">
         <div class="small-12 small-centered medium-12 medium-centered large-12 large-centered columns" id="page_header">
-          <h1>Create Your Profile</h1>
+          <h1>Your Network Profile</h1>
         </div>
       </div>
 

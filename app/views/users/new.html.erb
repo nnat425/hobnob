@@ -15,7 +15,13 @@
 
       <% if flash[:errors] %>
       <% flash[:errors].each do |msg| %>
-      <p class="error-message"><%= msg %></p>
+      <div class="row">
+        <div class="small-12 medium-11 medium-centered large-10 large-centered columns">
+          <div data-alert class="alert-box alert radius">
+            <%= msg %>
+          </div>
+        </div>
+      </div>
       <% end %>
       <% end %>
 
