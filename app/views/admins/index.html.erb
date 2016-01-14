@@ -32,10 +32,12 @@
               <td><%= advisor.charity %></td>
               <td><%= advisor.location %></td>
               <td><%= link_to "", edit_advisor_path(advisor), class: "fa fa-edit" %></td>
-              <%if advisor.account_activated == true %>
-              <td><% link_to
+              <%if advisor.account_activated == false %>
+              <td><%= link_to "Not Live",  {:action => :activate, :controller => :advisors, :id => advisor.id}, :method => :patch %></td>
+              <% else %>
+              <td><%= link_to "Live",  {:action => :de_activate, :controller => :advisors, :id => advisor.id}, :method => :patch %></td>
+              <% end %>
               <td><%= link_to "", advisor, :data => {:confirm => 'Are you sure you want to remove this advisor from the Network? This cannot be undone.'}, :method => :delete, class: "fa fa-trash" %> </td>
-
             </tr>
           </tbody>
         </div>

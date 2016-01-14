@@ -94,9 +94,16 @@ class AdvisorsController < ApplicationController
 
   def activate
     advisor = Advisor.find_by(id: params[:id])
-    advisor.update(account_activated: true)
+    advisor.update(account_activated: true, email_confirmation: advisor.email)
     redirect_to network_members_path
   end
+
+   def de_activate
+    advisor = Advisor.find_by(id: params[:id])
+    advisor.update(account_activated: false, email_confirmation: advisor.email)
+    redirect_to network_members_path
+  end
+
 
   def destroy
     advisor = Advisor.find_by(id: params[:id])
@@ -107,8 +114,9 @@ class AdvisorsController < ApplicationController
   private
 
   def advisor_params
-    params.require(:advisor).permit(:email, :email_confirmation, :password,:password_confirmation,  :firstname, :lastname, :avatar, :alternative_email, :current_title, :job_description, :charity, :location, :company, :years_of_experience, :other_companies, :education, :certifications, :interesting_facts)
+    params.require(:advisor).permit(:email, :email_confirmation, :password,:password_confirmation,  :firstname, :lastname, :avatar, :alternative_email, :current_title, :job_description, :charity, :location, :company, :years_of_experience, :other_companies, :education, :certifications, :interesting_facts, :account_activated)
   end
+
 
   def correct_advisor
     @advisor = Advisor.find(params[:id])
