@@ -446,6 +446,15 @@ font-weight: 200;
 
 }
 
+.form_subtitle {
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: 1.25em;
+  color: #43c7f4;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
 
 #edit-panel {
 background-color: #fff;
@@ -637,12 +646,11 @@ margin-top: -1em;
 font-family: "Open Sans";
 }
 #advisor-appointment-box {
-margin-top: 2.5em;
-padding: 1.5em;
+padding: 1em;
 }
 
 #advisor-bio-box {
-padding: 1.5em;
+padding: 1em;
 }
 #profile-panel {
 background-color: #202020;
@@ -710,17 +718,19 @@ font-family: "Open Sans";
 
 .profile-subheader {
 font-family: "Open Sans";
-font-size: .85em;
+font-size: .75em;
 color: #203451;
 font-weight: bold;
 text-transform: uppercase;
 letter-spacing: 1px;
 margin-bottom: .5em;
+float: right;
 }
 
 .profile-info {
 margin-bottom: .5em;
-font-size: 1.1em;
+font-size: .9em;
+font-weight: 300;
 font-family: "Open Sans";
 
 }
@@ -1162,7 +1172,7 @@ border-radius: 10px;
 }
 
 .appointment-full-date {
-font-size: .85em;
+font-size: .7em;
 color: #C0C0C0;
 letter-spacing: 1px;
 text-transform: uppercase;
@@ -1170,7 +1180,7 @@ text-transform: uppercase;
 
 .appointment-time {
 font-family: "Open Sans";
-font-size: 1em;
+font-size: .9em;
 margin-bottom: -.2em;
 margin-top: .8em;
 font-weight: 300;
@@ -1448,7 +1458,7 @@ transition: all .3s ease-in-out;
 
 .edit-btn a {
   color: #004b7e;
-  font-size: .8em;
+  font-size: .7em;
   text-transform: uppercase;
 
 }
@@ -1473,7 +1483,7 @@ transition: all .3s ease-in-out;
 
 #edit-appt-btn a {
   color: #004b7e;
-  font-size: .8em;
+  font-size: .7em;
   text-transform: uppercase;
 
 }
