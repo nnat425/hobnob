@@ -1408,14 +1408,50 @@ margin-left:1em;
 }
 
 
-#edit-profile-btn {
-background: none;
-color: #004b7e;
-font-size: .8em;
-text-transform: uppercase;
-letter-spacing: 1px;
+.edit-btn {
+float: right;
+letter-spacing: 2px;
+
+
+text-align: right;
+
 }
 
+.edit-btn:hover {
+
+color: #2996cc;
+
+transition: all .3s ease-in-out;
+}
+
+.edit-btn a {
+  color: #004b7e;
+  font-size: .8em;
+  text-transform: uppercase;
+
+}
+
+.edit-appt-btn {
+float: right;
+letter-spacing: 2px;
+text-align: right;
+display: block;
+
+}
+
+.edit-appt-btn:hover {
+
+color: #2996cc;
+
+transition: all .3s ease-in-out;
+}
+
+.edit-appt-btn a {
+  color: #004b7e;
+  font-size: .8em;
+  text-transform: uppercase;
+
+}
 #create-appointment-btn {
 background: none;
 color: #004b7e;
@@ -2043,15 +2079,6 @@ background-color: #000;
 transition: all 0.2s ease;
 border: solid black 1px;
 color: #fff;
-}
-
-#profile-edit-appointment {
-display: inline;
-color: #004b7e;
-}
-
-#profile-delete-appointment {
-color: #004b7e;
 }
 
 

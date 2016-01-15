@@ -17,13 +17,29 @@
       <p id='flash_add_cart'><%=flash[:added_to_cart] %></p>
       <p id='flash_already_cart'><%=flash[:already_in_cart] %></p>
     </div>
+
+      <% if logged_in? && current_user %>
+        <div id="advisor-consultation-price-box">
+          <p class="dollar-sign">$</p>
+        <% if current_user.student == true %>
+          <p class="advisor-consultation-price"><%= @advisor.student_price %></p>
+          <p class="advisor-consultation-label"> / consultation</p>
+        <% else %>
+          <p class="advisor-consultation-price"><%= @advisor.regular_price %></p>
+          <p class="advisor-consultation-label"> / consultation</p>
+        <% end %>
+
+        </div>
+      <% end %>
   </div>
 
   <div class="small-12 medium-12 large-12 columns" id="advisor-bio-panel">
     <div class="row" id="advisor-bio-box">
       <p class="advisor-profile-header">About</p>
       <% if session[:user_or_advisor_id] == @advisor.id && session[:class_type] == @advisor.class.name %>
-      <%= link_to "Edit Profile", edit_advisor_path(@advisor), id: "edit-profile-btn", class: "fa fa-edit fa-lg" %>
+      <div class="edit-btn">
+        <%= link_to "Edit Profile", edit_advisor_path(@advisor), class: "fa fa-cog" %>
+      </div>
       <% end %>
       <div id="advisor-about">
         <div class="row">
@@ -98,23 +114,12 @@
     <div class="row" id="advisor-appointment-box">
       <p class="advisor-profile-header">Available Times</p>
       <% if session[:user_or_advisor_id] == @advisor.id && session[:class_type] == @advisor.class.name %>
-      <%= link_to "Create Appointment", new_potential_appointment_path, id: "create-appointment-btn", class: "fa fa-calendar-plus-o" %>
+      <div class="edit-btn">
+        <%= link_to "Create Appointment", new_potential_appointment_path, class: "fa fa-calendar-plus-o" %>
+      </div>
       <% end %>
 
 
-      <% if logged_in? && current_user %>
-        <div id="advisor-consultation-price-box">
-          <p class="dollar-sign">$</p>
-        <% if current_user.student == true %>
-          <p class="advisor-consultation-price"><%= @advisor.student_price %></p>
-          <p class="advisor-consultation-label"> / consultation</p>
-        <% else %>
-          <p class="advisor-consultation-price"><%= @advisor.regular_price %></p>
-          <p class="advisor-consultation-label"> / consultation</p>
-        <% end %>
-
-        </div>
-      <% end %>
 
 
 
@@ -142,8 +147,12 @@
             <% if current_advisor == nil %>
             <% elsif %>
             <% pot_appointment.advisor_id == current_advisor.id && session[:class_type] == current_advisor.class.name %>
-            <%= link_to "",edit_potential_appointment_path(pot_appointment), id: "profile-edit-appointment", class: "fa fa-edit" %>
-            <%= link_to "",{:controller => 'potential_appointments', :action => 'destroy', :potential_appointment => pot_appointment.id}, :method => :delete, id: "profile-delete-appointment", class: "fa fa-trash" %>
+            <div class="edit-appt-btn">
+              <%= link_to "Edit",edit_potential_appointment_path(pot_appointment), class: "fa fa-edit" %>
+            </div>
+            <div class="edit-appt-btn">
+              <%= link_to "Delete",{:controller => 'potential_appointments', :action => 'destroy', :potential_appointment => pot_appointment.id}, :method => :delete, class: "fa fa-trash" %>
+            </div>
             <% end %>
 
             <% if session[:class_type] != "Advisor" %>
