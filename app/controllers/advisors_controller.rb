@@ -6,30 +6,30 @@ class AdvisorsController < ApplicationController
   def index
     if params[:filter]
       if params[:filter][:category]
-        advisors_by_category = Category.find_by(name: params[:filter][:category]).advisors
+        advisors_by_category = Category.find_by(name: params[:filter][:category]).advisors.where("account_activated = ? AND publish = ?", true, true)
       else
-        advisors_by_category = Advisor.all
+        advisors_by_category = Advisor.where("account_activated = ? AND publish = ?", true, true)
       end
       if params[:filter][:location]
         advisors_by_location = params[:filter][:location].map do |location|
-          Advisor.where(location: location)
+          Advisor.where("account_activated = ? AND publish = ? AND location = ?", true, true, location)
         end
         advisors_by_location.flatten!.uniq!
       else
-        advisors_by_location = Advisor.all
+        advisors_by_location = Advisor.where("account_activated = ? AND published = ?", true, true)
       end
       if params[:filter][:years_of_experience]
         advisors_by_years = params[:filter][:years_of_experience].map do |range|
-          Advisor.where(years_of_experience: range)
+          Advisor.where("account_activated = ? AND publish = ? AND years_of_experience = ?", true, true, range)
         end
         advisors_by_years.flatten!.uniq!
       else
-        advisors_by_years = Advisor.all
+        advisors_by_years = Advisor.where("account_activated = ? AND publish = ?", true, true)
       end
       @advisors = advisors_by_category & advisors_by_location & advisors_by_years
       flash[:message] = "Search Results"
     else
-      @advisors = Advisor.all
+      @advisors = Advisor.where("account_activated = ? AND publish = ?", true, true)
     end
   end
 
