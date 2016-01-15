@@ -49,7 +49,7 @@ def update
 
   else
    flash[:pick_date_or_enter_title] = "Please pick a date/Enter a title"
-   redirect_to edit_potenital_appointment_path(potential_appointment)
+   redirect_to edit_potential_appointment_path(potential_appointment)
 
  end
 end
