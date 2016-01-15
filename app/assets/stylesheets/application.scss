@@ -1431,22 +1431,25 @@ transition: all .3s ease-in-out;
 
 }
 
-.edit-appt-btn {
+#edit-appt-btn {
 float: right;
 letter-spacing: 2px;
 text-align: right;
 display: block;
 
+
+
+
 }
 
-.edit-appt-btn:hover {
+#edit-appt-btn:hover {
 
 color: #2996cc;
 
 transition: all .3s ease-in-out;
 }
 
-.edit-appt-btn a {
+#edit-appt-btn a {
   color: #004b7e;
   font-size: .8em;
   text-transform: uppercase;
@@ -1498,7 +1501,7 @@ color: #505050;
 }
 
 
-.appointment-date {
+#appointment-date {
 
 border: 1px solid #C0C0C0;
 border-radius: 50%;
@@ -1511,12 +1514,12 @@ padding: auto;
 background-color: #fff;
 }
 
-.appointment-date .appointment-day {
+#appointment-date .appointment-day {
 color: #404040;
 font-size: 2.5em;
 font-family: "Open Sans";
 font-weight: 300;
-margin-bottom: 0px;
+margin-bottom: 10px;
 margin-top: .35em;
 }
 
@@ -1540,11 +1543,12 @@ font-weight: 300;
 margin-left:-9em;
 
 }
-.appointment-date .appointment-month {
+#appointment-date .appointment-month {
 color: #404040;
-margin-top: -.7em;
+margin-top: -1.5em;
 text-transform: uppercase;
 font-size: .8em;
+letter-spacing: 1px;
 }
 
 #advisors-index-container {

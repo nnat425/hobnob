@@ -130,28 +130,33 @@
         <div class="row" id="appointment-time-box">
 
           <div class="small-12 medium-4 large-2 columns">
-            <div class="appointment-date">
+
+            <div class="row" id="appointment-date">
               <p class="appointment-day"><%= pot_appointment.start_time.strftime("%d") %></p>
               <p class="appointment-month"><%= pot_appointment.start_time.strftime("%b") %></p>
             </div>
           </div>
           <div class="small-12 medium-8 large-7 columns">
-            <p class="appointment-time"><%= pot_appointment.start_time.strftime("%l:%M %p") %>
-              <%= pot_appointment.end_time.strftime("to %l:%M %p EST") %>
-            </p>
-            <p class='appointment_title'><%= pot_appointment.title %></p>
-            <p class="appointment-full-date"><%= pot_appointment.start_time.strftime("%A, %B %d, %Y") %>
-            </p>
+            <div class="row">
+              <p class="appointment-time"><%= pot_appointment.start_time.strftime("%l:%M %p") %>
+                <%= pot_appointment.end_time.strftime("to %l:%M %p EST") %>
+              </p>
+              <p class='appointment_title'><%= pot_appointment.title %></p>
+              <p class="appointment-full-date"><%= pot_appointment.start_time.strftime("%A, %B %d, %Y") %>
+              </p>
+            </div>
           </div>
           <div class="small-12 medium-12 large-3 columns" id="available-times-right-btn">
             <% if current_advisor == nil %>
             <% elsif %>
             <% pot_appointment.advisor_id == current_advisor.id && session[:class_type] == current_advisor.class.name %>
-            <div class="edit-appt-btn">
-              <%= link_to "Edit",edit_potential_appointment_path(pot_appointment), class: "fa fa-edit" %>
-            </div>
-            <div class="edit-appt-btn">
-              <%= link_to "Delete",{:controller => 'potential_appointments', :action => 'destroy', :potential_appointment => pot_appointment.id}, :method => :delete, class: "fa fa-trash" %>
+            <div class="row">
+              <div class="small-12 medium-12 large-12 columns" id="edit-appt-btn">
+                <%= link_to "Edit",edit_potential_appointment_path(pot_appointment), class: "fa fa-edit" %>
+              </div>
+              <div class="small-12 medium-12 large-12 columns" id="edit-appt-btn">
+                <%= link_to "Delete",{:controller => 'potential_appointments', :action => 'destroy', :potential_appointment => pot_appointment.id}, :method => :delete, class: "fa fa-trash" %>
+              </div>
             </div>
             <% end %>
 
