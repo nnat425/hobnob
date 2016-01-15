@@ -1227,7 +1227,13 @@ font-size: .75em;
 text-align: right;
 color: #505050;
 }
+.yes-no-choice-text {
+  font-size: .8em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 
+
+}
 #publish-profile-text {
   font-family: "Open Sans";
   font-weight: 300;
@@ -1236,6 +1242,8 @@ color: #505050;
   text-align: center;
   margin-top: 2em;
 }
+
+
 #order_div form i {
 float: right;
 }
@@ -2153,6 +2161,10 @@ padding: 1em;
 height: 3.5em;
 font-size: 1em;
 border-radius: 5px;
+}
+#publish-radio {
+  padding-right: 1em;
+  padding-left: 1em;
 }
 
 .form-holder input[type=text], textarea {

@@ -298,14 +298,31 @@
           <div class="spacer"></div>
         </div>
       </div>
+
+
+
       <div class="row">
-        <div class="small-11 small-centered medium-10 large-8 columns" id='pro'>
-          <p class="sublabel">PLEASE REVIEW ALL ABOVE INFORMATION AND IF YOU ARE SATISFIED WITH THE CONTENT, CLICK CREATE PROFILE. YOU WILL BE DIRECTED TO THE NEXT PAGE TO SEE HOW YOUR INFORMATION WILL APPEAR ON THE SITE. AS A FINAL STEP, YOU MUST COMPLETE PART 3 ON THE NEXT PAGE. ADDING YOUR AVAILABLE CALENDAR DATES AND TIMES IS ESSENTIAL TO COMPLETE YOUR PROFILE.</p>
+        <div class="small-11 small-centered medium-10 medium-centered large-8 large-centered columns">
+          <label>Publish?</label>
+          <div class="row" id="publish-radio">
+            <p class="yes-no-choice-text"><%= radio_button("advisor", "publish", true) %> Yes</p>
+          </div>
+          <div class="row" id="publish-radio">
+            <p class="yes-no-choice-text"><%= radio_button("advisor", "publish", false) %> No</p>
+          </div>
+          <p id="form_note">*Your profile will remain private until you have verified your email, published your profile, AND have been verified by the Admin.</p>
         </div>
       </div>
+
       <div class="row">
         <div class="small-11 small-centered medium-10 large-8 columns" id='pro'>
-          <%= f.submit "Preview Profile", :class => "full-button", :id => "update_profile_button" %>
+          <p class="sublabel">PLEASE REVIEW ALL ABOVE INFORMATION AND IF YOU ARE SATISFIED WITH THE CONTENT, CLICK ADD PROFILE. YOU WILL BE DIRECTED TO THE NEXT PAGE TO SEE HOW YOUR INFORMATION WILL APPEAR ON THE SITE. AS A FINAL STEP, YOU MUST CREATE AN APPOINTMENT ON THE NEXT PAGE. ADDING YOUR AVAILABLE CALENDAR DATES AND TIMES IS ESSENTIAL TO COMPLETE YOUR PROFILE.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="small-11 small-centered medium-10 large-8 columns" id='pro'>
+          <%= f.submit "Add Profile", :class => "full-button", :id => "update_profile_button" %>
         </div>
 
       </div>
