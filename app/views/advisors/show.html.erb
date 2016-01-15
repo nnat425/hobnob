@@ -14,9 +14,18 @@
       <p id="advisor-title-profile-page"><%= @advisor.current_title %> | <%= @advisor.location %></p>
     </div>
     <div class="flash-holder">
+      <% if current_advisor == @advisor && current_advisor.publish == false %>
+      <p id="publish-profile-text">Your profile is currently set to private. To save your changes and make it public, click publish below:</p>
+      <%= form_for @advisor,url: advisor_path(@advisor), method: "patch" do |f| %>
+        <%= f.submit "Publish", :class => "button" %>
+      <% end %>
+      <% end %>
       <p id='flash_add_cart'><%=flash[:added_to_cart] %></p>
       <p id='flash_already_cart'><%=flash[:already_in_cart] %></p>
     </div>
+
+  </div>
+
 
       <% if logged_in? && current_user %>
         <div id="advisor-consultation-price-box">
@@ -31,8 +40,6 @@
 
         </div>
       <% end %>
-  </div>
-
   <div class="small-12 medium-12 large-12 columns" id="advisor-bio-panel">
     <div class="row" id="advisor-bio-box">
       <p class="advisor-profile-header">About</p>
