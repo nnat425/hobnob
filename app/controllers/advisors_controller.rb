@@ -60,7 +60,6 @@ class AdvisorsController < ApplicationController
       @advisor_appointments = @advisor.potential_appointments
     else
       render :inactivated_advisor
-      flash[:message] = "This path does not exist"
     end
   end
 

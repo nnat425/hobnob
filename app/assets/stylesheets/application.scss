@@ -31,7 +31,26 @@ body, html{
 
 
 #inactive-container {
-  padding: 5em;
+  padding-top: 25%;
+  height: 100%;
+  background: url("http://s3.amazonaws.com/hobnob-bucket-assets/city_header5.jpg") no-repeat center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  text-align: center;
+}
+
+#inactive-container h2 {
+  font-family: "Open Sans";
+  font-weight: 300;
+  letter-spacing: 2px;
+  border-bottom: 1px solid black;
+  margin-right: 5em;
+  margin-left: 5em;
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+
 }
 .body-container {
 z-index: 1;
