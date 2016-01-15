@@ -47,14 +47,13 @@ ActiveRecord::Schema.define(version: 20160115193141) do
     t.integer  "regular_price"
     t.string   "password_reset_token"
     t.datetime "password_reset_sent_at"
-    t.boolean  "admin_verified",         default: false
-    t.string   "charity_url"
-    t.string   "languages"
-    t.boolean  "publish",                default: false
     t.string   "activation_digest"
     t.boolean  "account_activated",      default: false
     t.datetime "activated_at"
     t.boolean  "email_verified",         default: false
+    t.string   "charity_url"
+    t.string   "languages"
+    t.boolean  "publish",                default: false
     t.string   "general_company",        default: "f"
   end
 
