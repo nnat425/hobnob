@@ -2,6 +2,7 @@ class AdvisorsController < ApplicationController
 
   before_action :correct_advisor, only:[:edit, :update]
 
+
   def index
     if params[:filter]
       if params[:filter][:category]
@@ -26,17 +27,13 @@ class AdvisorsController < ApplicationController
         advisors_by_years = Advisor.all
       end
       @advisors = advisors_by_category & advisors_by_location & advisors_by_years
-      if request.xhr?
-        flash[:message] = "Search Results"
-        render partial: "results_index", layout: false
-      end
+      flash[:message] = "Search Results"
     else
       @advisors = Advisor.all
-      if request.xhr?
-        render partial: "results_index", layout: false
-      end
     end
   end
+
+
 
   def new
     @advisor = Advisor.new
@@ -48,6 +45,7 @@ class AdvisorsController < ApplicationController
       session[:user_or_advisor_id] = advisor.id
       session[:class_type] = advisor.class.name
       AdvisorMailer.email_verification(advisor).deliver_now
+      flash[:thank_you] = "Thank you! Please check your email to verify your account."
       redirect_to edit_advisor_path(advisor)
     else
       flash[:errors] = advisor.errors.full_messages
@@ -56,8 +54,13 @@ class AdvisorsController < ApplicationController
   end
 
   def show
-    @advisor = Advisor.find_by(id: params[:id])
-    @advisor_appointments = @advisor.potential_appointments
+    advisor = Advisor.find_by(id: params[:id])
+    if (advisor.publish == true) || (current_advisor == advisor)
+      @advisor = advisor
+      @advisor_appointments = @advisor.potential_appointments
+    else
+      render :inactivated_advisor
+    end
   end
 
   def edit

@@ -30,6 +30,28 @@ body, html{
 }
 
 
+#inactive-container {
+  padding-top: 25%;
+  height: 100%;
+  background: url("http://s3.amazonaws.com/hobnob-bucket-assets/city_header5.jpg") no-repeat center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  text-align: center;
+}
+
+#inactive-container h2 {
+  font-family: "Open Sans";
+  font-weight: 300;
+  letter-spacing: 2px;
+  border-bottom: 1px solid black;
+  margin-right: 5em;
+  margin-left: 5em;
+
+
+
+}
 .body-container {
 z-index: 1;
 }
@@ -773,7 +795,7 @@ float: right;
 .calendar_page {
 background:url("http://s3.amazonaws.com/hobnob-bucket-assets/phone.jpeg");
 background-size: cover;
-height: 12vh;
+height: 80px;
 overflow: hidden;
 }
 
@@ -1025,7 +1047,9 @@ font-weight: 400;
 }
 
 #flash_add_cart{
-color:blue;
+
+color: #4F8A10;
+
 }
 
 #flash_already_cart{
@@ -1037,6 +1061,11 @@ font-size: 1em;
 }
 
 .flash-holder {
+  text-align: center;
+}
+
+.flash-holder-cart {
+  padding-top: 2.5em;
   text-align: center;
 }
 
@@ -1379,14 +1408,53 @@ margin-left:1em;
 }
 
 
-#edit-profile-btn {
-background: none;
-color: #004b7e;
-font-size: .8em;
-text-transform: uppercase;
-letter-spacing: 1px;
+.edit-btn {
+float: right;
+letter-spacing: 2px;
+
+
+text-align: right;
+
 }
 
+.edit-btn:hover {
+
+color: #2996cc;
+
+transition: all .3s ease-in-out;
+}
+
+.edit-btn a {
+  color: #004b7e;
+  font-size: .8em;
+  text-transform: uppercase;
+
+}
+
+#edit-appt-btn {
+float: right;
+letter-spacing: 2px;
+text-align: right;
+display: block;
+
+
+
+
+}
+
+#edit-appt-btn:hover {
+
+color: #2996cc;
+
+transition: all .3s ease-in-out;
+}
+
+#edit-appt-btn a {
+  color: #004b7e;
+  font-size: .8em;
+  text-transform: uppercase;
+
+}
 #create-appointment-btn {
 background: none;
 color: #004b7e;
@@ -1433,7 +1501,7 @@ color: #505050;
 }
 
 
-.appointment-date {
+#appointment-date {
 
 border: 1px solid #C0C0C0;
 border-radius: 50%;
@@ -1446,12 +1514,12 @@ padding: auto;
 background-color: #fff;
 }
 
-.appointment-date .appointment-day {
+#appointment-date .appointment-day {
 color: #404040;
 font-size: 2.5em;
 font-family: "Open Sans";
 font-weight: 300;
-margin-bottom: 0px;
+margin-bottom: 10px;
 margin-top: .35em;
 }
 
@@ -1475,11 +1543,12 @@ font-weight: 300;
 margin-left:-9em;
 
 }
-.appointment-date .appointment-month {
+#appointment-date .appointment-month {
 color: #404040;
-margin-top: -.7em;
+margin-top: -1.5em;
 text-transform: uppercase;
 font-size: .8em;
+letter-spacing: 1px;
 }
 
 #advisors-index-container {
@@ -1773,11 +1842,6 @@ text-align: center;
 #advisors-list-holder {
   background-color: #F8F8F8;
 }
-.signup_hero_6 {
-background-size: cover;
-overflow: hidden;
-height: 80vh;
-}
 
 
 h1#about-page-header {
@@ -2019,15 +2083,6 @@ background-color: #000;
 transition: all 0.2s ease;
 border: solid black 1px;
 color: #fff;
-}
-
-#profile-edit-appointment {
-display: inline;
-color: #004b7e;
-}
-
-#profile-delete-appointment {
-color: #004b7e;
 }
 
 

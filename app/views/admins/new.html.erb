@@ -1,40 +1,36 @@
-
-<header class="signup_hero_6">
-  <img src="http://s3.amazonaws.com/hobnob-bucket-assets/city_header6.jpeg"/>
-</header>
-
-<div class="row">
-  <div class="small-12 medium-8 medium-centered large-6 large-centered columns">
-    <div class="signup-panel">
-      <div class="row">
-        <h2 id="signup_header"> Login!</h2>
-        <p id="signup_advisor">Admin</p>
-        <div class="small-12 medium-11 medium-centered large-10 large-centered columns">
-          <% if flash[:error] %>
-          <div data-alert class="alert-box alert radius">
-            <%= flash[:error] %>
+<div id='session_background' class="row">
+  <div class="row">
+    <div class="small-12 medium-8 medium-centered large-6 large-centered columns">
+      <div class="signup-panel">
+        <div class="row">
+          <h2 id="signup_header"> Login!</h2>
+          <p id="signup_advisor">Admin</p>
+          <div class="small-12 medium-11 medium-centered large-10 large-centered columns">
+            <% if flash[:error] %>
+            <div data-alert class="alert-box alert radius">
+              <%= flash[:error] %>
+            </div>
+            <% end %>
           </div>
-          <% end %>
         </div>
-      </div>
-      <%= form_for :session, url: '/admin_login', html: {id: "login"} do |f| %>
-      <div class="row">
-        <div class="small-12 medium-11 medium-centered large-10 large-centered columns">
-          <%= f.text_field :username, placeholder: "Username" %>
+        <%= form_for :session, url: '/admin_login', html: {id: "login"} do |f| %>
+        <div class="row">
+          <div class="small-12 medium-11 medium-centered large-10 large-centered columns">
+            <%= f.text_field :username, placeholder: "Username" %>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="small-12 medium-11 medium-centered large-10 large-centered columns">
-          <%= f.password_field :password, placeholder: "Password" %>
+        <div class="row">
+          <div class="small-12 medium-11 medium-centered large-10 large-centered columns">
+            <%= f.password_field :password, placeholder: "Password" %>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="small-12 medium-11 medium-centered large-10 large-centered columns">
-          <%=f.submit "Login", :class => "full-button" %>
+        <div class="row">
+          <div class="small-12 medium-11 medium-centered large-10 large-centered columns">
+            <%=f.submit "Login", :class => "full-button" %>
+          </div>
         </div>
+        <% end %>
       </div>
-      <% end %>
     </div>
   </div>
-</div>
 </div>

@@ -1,10 +1,9 @@
-<header class="edit_hero">
-  <img src="http://s3.amazonaws.com/hobnob-bucket-assets/ribbon-header.png"/>
-</header>
+<div class="row" id="ribbon-header">
+</div>
 
 <div class="container" id="shopping-cart-container">
- <div class="flash-holder">
-    <p id='flash_already_cart'><%=flash[:item_remove] %></p>
+ <div class="flash-holder-cart">
+    <p id='flash_add_cart'><%=flash[:item_remove] %></p>
  </div>
   <div class="small-12 medium-12 large-11 large-centered columns" id="items-holder">
     <% if @cart.potential_appointments.count > 0 %>
