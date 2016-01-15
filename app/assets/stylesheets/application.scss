@@ -286,7 +286,7 @@ border-radius: 5px;
 border: 1px solid #ccc;
 padding: 2em;
 text-align:center;
-margin-top: 10em;
+margin-top: 8em;
 margin-bottom: 1em;
 background-color: #fff;
 opacity:0.9;
@@ -566,6 +566,11 @@ margin-bottom: 1.5em;
 
 }
 
+#network-ribbon-header {
+  background-color: black;
+  height: 80px;
+  background-size: cover;
+}
 #ribbon-header {
   background: url("http://s3.amazonaws.com/hobnob-bucket-assets/ribbon-header.png");
   height: 80px;
@@ -1078,6 +1083,7 @@ overflow: hidden;
 
 
 
+
 #item_in_cart{
 margin-top:1.25em;
 border-bottom:solid grey 1px;
@@ -1172,7 +1178,7 @@ font-weight: 300;
 }
 
 #advisor-consultation-price-box {
-float: right;
+text-align: center;
 }
 
 #advisor-consultation-price-box p {
@@ -1221,6 +1227,22 @@ font-size: .75em;
 text-align: right;
 color: #505050;
 }
+.yes-no-choice-text {
+  font-size: .8em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+
+}
+#publish-profile-text {
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: 1em;
+  color: #0BB5FF;
+  text-align: center;
+  margin-top: 2em;
+}
+
 
 #order_div form i {
 float: right;
@@ -2139,6 +2161,10 @@ padding: 1em;
 height: 3.5em;
 font-size: 1em;
 border-radius: 5px;
+}
+#publish-radio {
+  padding-right: 1em;
+  padding-left: 1em;
 }
 
 .form-holder input[type=text], textarea {
