@@ -55,7 +55,7 @@ class AdvisorsController < ApplicationController
 
   def show
     advisor = Advisor.find_by(id: params[:id])
-    if (advisor.publish == true) || (current_advisor == advisor)
+    if (advisor.publish == true && advisor.account_activated == true) || (current_advisor == advisor)
       @advisor = advisor
       @advisor_appointments = @advisor.potential_appointments
     else
