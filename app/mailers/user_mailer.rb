@@ -20,7 +20,7 @@ class UserMailer < ApplicationMailer
   def email_verification(user)
     @user = user
     mail(:to => user.email, :subject => "Welcome to the Hob Nob",
-     :bcc => "nnat@umass.edu")
+     :bcc => "karen@thepelikangroup.com")
   end
 
   def receipt(current_user, order_id, appointments)

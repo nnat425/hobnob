@@ -20,7 +20,7 @@ end
 def email_verification(advisor)
   @advisor = advisor
   mail(:to => advisor.email, :subject => "Welcome to the Hob Nob Network",
-       :bcc => "nnat@umass.edu")
+       :bcc => "karen@thepelikangroup.com")
 end
 
 end
