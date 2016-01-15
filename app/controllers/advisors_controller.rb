@@ -117,7 +117,7 @@ class AdvisorsController < ApplicationController
   private
 
   def advisor_params
-    params.require(:advisor).permit(:email, :email_confirmation, :password,:password_confirmation,  :firstname, :lastname, :avatar, :alternative_email, :current_title, :job_description, :charity, :charity_url, :languages, :publish, :location, :company, :years_of_experience, :other_companies, :education, :certifications, :interesting_facts, :account_activated)
+    params.require(:advisor).permit(:email, :email_confirmation, :password,:password_confirmation,  :firstname, :lastname, :avatar, :alternative_email, :current_title, :job_description, :charity, :charity_url, :languages, :publish, :location, :company, :years_of_experience, :other_companies, :education, :certifications, :interesting_facts, :account_activated, :general_company)
   end
 
 
