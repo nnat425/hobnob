@@ -6,30 +6,30 @@ class AdvisorsController < ApplicationController
   def index
     if params[:filter]
       if params[:filter][:category]
-        advisors_by_category = Category.find_by(name: params[:filter][:category]).advisors
+        advisors_by_category = Category.find_by(name: params[:filter][:category]).advisors.where("account_activated = ? AND publish = ?", true, true)
       else
-        advisors_by_category = Advisor.all
+        advisors_by_category = Advisor.where("account_activated = ? AND publish = ?", true, true)
       end
       if params[:filter][:location]
         advisors_by_location = params[:filter][:location].map do |location|
-          Advisor.where(location: location)
+          Advisor.where("account_activated = ? AND publish = ? AND location = ?", true, true, location)
         end
         advisors_by_location.flatten!.uniq!
       else
-        advisors_by_location = Advisor.all
+        advisors_by_location = Advisor.where("account_activated = ? AND published = ?", true, true)
       end
       if params[:filter][:years_of_experience]
         advisors_by_years = params[:filter][:years_of_experience].map do |range|
-          Advisor.where(years_of_experience: range)
+          Advisor.where("account_activated = ? AND publish = ? AND years_of_experience = ?", true, true, range)
         end
         advisors_by_years.flatten!.uniq!
       else
-        advisors_by_years = Advisor.all
+        advisors_by_years = Advisor.where("account_activated = ? AND publish = ?", true, true)
       end
       @advisors = advisors_by_category & advisors_by_location & advisors_by_years
       flash[:message] = "Search Results"
     else
-      @advisors = Advisor.all
+      @advisors = Advisor.where("account_activated = ? AND publish = ?", true, true)
     end
   end
 
@@ -55,7 +55,7 @@ class AdvisorsController < ApplicationController
 
   def show
     advisor = Advisor.find_by(id: params[:id])
-    if (advisor.publish == true) || (current_advisor == advisor)
+    if (advisor.publish == true && advisor.account_activated == true) || (current_advisor == advisor)
       @advisor = advisor
       @advisor_appointments = @advisor.potential_appointments
     else
@@ -117,7 +117,7 @@ class AdvisorsController < ApplicationController
   private
 
   def advisor_params
-    params.require(:advisor).permit(:email, :email_confirmation, :password,:password_confirmation,  :firstname, :lastname, :avatar, :alternative_email, :current_title, :job_description, :charity, :location, :company, :years_of_experience, :other_companies, :education, :certifications, :interesting_facts, :account_activated)
+    params.require(:advisor).permit(:email, :email_confirmation, :password,:password_confirmation,  :firstname, :lastname, :avatar, :alternative_email, :current_title, :job_description, :charity, :charity_url, :languages, :publish, :location, :company, :years_of_experience, :other_companies, :education, :certifications, :interesting_facts, :account_activated, :general_company)
   end
 
 
