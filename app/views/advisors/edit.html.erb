@@ -97,51 +97,7 @@
         </div>
       </div>
 
-      <div class="row">
-        <div class="small-11 small-centered medium-10 large-8 columns">
-          <%= f.label "Area of Expertise" %>
-          <div class="row">
-            <div class="small-1 medium-1 large-1 columns">
-              <%= check_box_tag "category[name][]", "Investment Banking", @current_categories.find_by(name: "Investment Banking"), class: "category-checkbox" %>
-            </div>
-            <div class="small-11 medium-11 large-11 columns">
-              <p class="checkbox-label">Investment Banking</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="small-1 medium-1 large-1 columns">
-              <%= check_box_tag "category[name][]", "Asset Management", @current_categories.find_by(name: "Asset Management"), class: "category-checkbox" %>
-            </div>
-            <div class="small-11 medium-11 large-11 columns">
-              <p class="checkbox-label">Asset Management</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="small-1 medium-1 large-1 columns">
-              <%= check_box_tag "category[name][]", "Corporate Finance Divisions", @current_categories.find_by(name: "Corporate Finance Divisions"), class: "category-checkbox"  %>
-            </div>
-            <div class="small-11 medium-11 large-11 columns">
-              <p class="checkbox-label">Corporate Finance Divisions</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="small-1 medium-1 large-1 columns">
-              <%= check_box_tag "category[name][]", "Other Finance Opportunities", @current_categories.find_by(name: "Other Finance Opportunities"), class: "category-checkbox" %>
-            </div>
-            <div class="small-11 medium-11 large-11 columns">
-              <p class="checkbox-label">Other Finance Opportunities</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="small-1 medium-1 large-1 columns">
-              <%= check_box_tag "category[name][]", "Resume & Interview Prep", @current_categories.find_by(name: "Resume & Interview Prep"), class: "category-checkbox" %>
-            </div>
-            <div class="small-11 medium-11 large-11 columns">
-              <p class="checkbox-label">Resume & Interview Prep</p>
-            </div>
-          </div>
-        </div>
-      </div>
+
 
 
 
@@ -179,6 +135,51 @@
         </div>
       </div>
 
+       <div class="row">
+        <div class="small-11 small-centered medium-10 large-8 columns">
+          <%= f.label "Other Areas of Expertise" %>
+          <div class="row">
+            <div class="small-1 medium-1 large-1 columns">
+              <%= check_box_tag "other_expertise[]", "Investment Banking", @other_categories.include?("Investment Banking"), class: "category-checkbox" %>
+            </div>
+            <div class="small-11 medium-11 large-11 columns">
+              <p class="checkbox-label">Investment Banking</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-1 medium-1 large-1 columns">
+              <%= check_box_tag "other_expertise[]", "Asset Management", @other_categories.include?("Asset Management"), class: "category-checkbox" %>
+            </div>
+            <div class="small-11 medium-11 large-11 columns">
+              <p class="checkbox-label">Asset Management</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-1 medium-1 large-1 columns">
+              <%= check_box_tag "other_expertise[]", "Corporate Finance Divisions", @other_categories.include?("Corporate Finance Divisions"), class: "category-checkbox"  %>
+            </div>
+            <div class="small-11 medium-11 large-11 columns">
+              <p class="checkbox-label">Corporate Finance Divisions</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-1 medium-1 large-1 columns">
+              <%= check_box_tag "other_expertise[]", "Other Finance Opportunities", @other_categories.include?("Other Finance Opportunities"), class: "category-checkbox" %>
+            </div>
+            <div class="small-11 medium-11 large-11 columns">
+              <p class="checkbox-label">Other Finance Opportunities</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-1 medium-1 large-1 columns">
+              <%= check_box_tag "other_expertise[]", "Resume & Interview Prep", @other_categories.include?("Resume & Interview Prep"), class: "category-checkbox" %>
+            </div>
+            <div class="small-11 medium-11 large-11 columns">
+              <p class="checkbox-label">Resume & Interview Prep</p>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="row">
         <div class="small-11 small-centered medium-10 large-8 columns">
           <%= f.label "Current Company (General Listing)" %>
