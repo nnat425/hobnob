@@ -64,16 +64,16 @@ class AdvisorsController < ApplicationController
   end
 
   def edit
-    @advisor = Advisor.find_by(id: params[:id])
-    @current_category = @advisor.category
+    @advisor = current_advisor
+    @other_categories = @advisor.other_expertise
   end
 
   def update
     advisor = Advisor.find_by(id: params[:id])
-    if advisor_params && params[:category]
-      advisor.categories = []
-      params[:category][:name].each do |category_name|
-        advisor.categories << Category.find_or_create_by(name: category_name)
+    if advisor_params && params[:other_expertise]
+      advisor.other_expertise = []
+      params[:other_expertise].each do |category_name|
+        advisor.other_expertise << category_name
       end
       advisor.update(advisor_params)
       advisor.join_companies(params[:companies])
