@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 20160116222726) do
     t.string   "charity_url"
     t.string   "languages"
     t.boolean  "publish",                default: false
-    t.string   "general_company",        default: "f"
+    t.string   "general_company"
     t.string   "other_expertise",        default: "f"
     t.integer  "category_id"
   end

@@ -127,7 +127,7 @@
               <p class='profile-subheader'>Areas of Expertise</p>
             </div>
             <div class="small-6 medium-6 large-6 columns">
-              <% @advisor.categories.each do |category| %>
+              <% @advisor.other_expertise.each do |category| %>
               <p class="profile-info"><%= category.name %></p>
               <% end %>
             </div>
