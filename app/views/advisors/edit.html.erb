@@ -148,7 +148,11 @@
 
           <div class="row">
             <div class="small-1 medium-1 large-1 columns">
-              <%= check_box_tag "other_expertise[]", "Investment/Wholesale Banking (sell side)", @other_categories.include?("Investment/Wholesale Banking (sell side)"), class: "category-checkbox" %>
+              <% if @other_categories != nil %>
+                <%= check_box_tag "other_expertise[]", "Investment/Wholesale Banking (sell side)", @other_categories.include?("Investment/Wholesale Banking (sell side)"), class: "category-checkbox" %>
+              <% else %>
+                <%= check_box_tag "other_expertise[]", "Investment/Wholesale Banking (sell side)", false, class: "category-checkbox" %>
+              <% end %>
             </div>
             <div class="small-11 medium-11 large-11 columns">
               <p class="checkbox-label">Investment/Wholesale Banking (sell side)</p>
@@ -156,7 +160,11 @@
           </div>
           <div class="row">
             <div class="small-1 medium-1 large-1 columns">
+              <% if @other_categories != nil %>
               <%= check_box_tag "other_expertise[]", "Asset Management (buy side)", @other_categories.include?("Asset Management (buy side)"), class: "category-checkbox" %>
+              <% else %>
+              <%= check_box_tag "other_expertise[]", "Asset Management (buy side)", false, class: "category-checkbox" %>
+              <% end %>
             </div>
             <div class="small-11 medium-11 large-11 columns">
               <p class="checkbox-label">Asset Management (buy side)</p>
@@ -164,7 +172,11 @@
           </div>
           <div class="row">
             <div class="small-1 medium-1 large-1 columns">
+              <% if @other_categories != nil %>
               <%= check_box_tag "other_expertise[]", "Corporate Finance", @other_categories.include?("Corporate Finance"), class: "category-checkbox"  %>
+              <% else %>
+              <%= check_box_tag "other_expertise[]", "Corporate Finance", false, class: "category-checkbox"  %>
+              <% end %>
             </div>
             <div class="small-11 medium-11 large-11 columns">
               <p class="checkbox-label">Corporate Finance</p>
@@ -172,7 +184,11 @@
           </div>
           <div class="row">
             <div class="small-1 medium-1 large-1 columns">
+              <% if @other_categories != nil %>
               <%= check_box_tag "other_expertise[]", "Other Areas of Finance Expertise", @other_categories.include?("Other Areas of Finance Expertise"), class: "category-checkbox" %>
+              <% else %>
+              <%= check_box_tag "other_expertise[]", "Other Areas of Finance Expertise", false, class: "category-checkbox" %>
+              <% end %>
             </div>
             <div class="small-11 medium-11 large-11 columns">
               <p class="checkbox-label">Other Areas of Finance Expertise</p>
@@ -180,7 +196,11 @@
           </div>
           <div class="row">
             <div class="small-1 medium-1 large-1 columns">
+              <% if @other_categories != nil %>
               <%= check_box_tag "other_expertise[]", "Resume & Interview Preparation", @other_categories.include?("Resume & Interview Preparation"), class: "category-checkbox" %>
+              <% else %>
+              <%= check_box_tag "other_expertise[]", "Resume & Interview Preparation", false, class: "category-checkbox" %>
+              <% end %>
             </div>
             <div class="small-11 medium-11 large-11 columns">
               <p class="checkbox-label">Resume & Interview Preparation</p>

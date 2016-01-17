@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(version: 20160116222726) do
     t.string   "languages"
     t.boolean  "publish",                default: false
     t.string   "general_company"
-    t.string   "other_expertise",        default: "f"
+    t.string   "other_expertise"
     t.integer  "category_id"
   end
 
