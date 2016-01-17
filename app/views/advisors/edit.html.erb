@@ -97,8 +97,13 @@
         </div>
       </div>
 
-
-
+      <div class="row">
+        <div class="small-11 small-centered medium-10 large-8 columns">
+          <label>Current Area of Expertise</label>
+          <%= select(:category, :name,['Investment/Wholesale Banking (sell side)', 'Asset Management (buy side)', 'Corporate Finance', 'Other Areas of Finance Expertise', 'Resume & Interview Preparation']) %>
+          <div class="spacer"></div>
+        </div>
+      </div>
 
 
       <div class="row">
@@ -137,56 +142,60 @@
 
        <div class="row">
         <div class="small-11 small-centered medium-10 large-8 columns">
-          <%= f.label "Other Areas of Expertise" %>
+          <label>Other Areas of Expertise</label>
+
+            <p class="sublabel">Please select other areas, other than your current area, that you have experience or expertise in speaking with people.</p>
+
           <div class="row">
             <div class="small-1 medium-1 large-1 columns">
-              <%= check_box_tag "other_expertise[]", "Investment Banking", @other_categories.include?("Investment Banking"), class: "category-checkbox" %>
+              <%= check_box_tag "other_expertise[]", "Investment/Wholesale Banking (sell side)", @other_categories.include?("Investment/Wholesale Banking (sell side)"), class: "category-checkbox" %>
             </div>
             <div class="small-11 medium-11 large-11 columns">
-              <p class="checkbox-label">Investment Banking</p>
+              <p class="checkbox-label">Investment/Wholesale Banking (sell side)</p>
             </div>
           </div>
           <div class="row">
             <div class="small-1 medium-1 large-1 columns">
-              <%= check_box_tag "other_expertise[]", "Asset Management", @other_categories.include?("Asset Management"), class: "category-checkbox" %>
+              <%= check_box_tag "other_expertise[]", "Asset Management (buy side)", @other_categories.include?("Asset Management (buy side)"), class: "category-checkbox" %>
             </div>
             <div class="small-11 medium-11 large-11 columns">
-              <p class="checkbox-label">Asset Management</p>
+              <p class="checkbox-label">Asset Management (buy side)</p>
             </div>
           </div>
           <div class="row">
             <div class="small-1 medium-1 large-1 columns">
-              <%= check_box_tag "other_expertise[]", "Corporate Finance Divisions", @other_categories.include?("Corporate Finance Divisions"), class: "category-checkbox"  %>
+              <%= check_box_tag "other_expertise[]", "Corporate Finance", @other_categories.include?("Corporate Finance"), class: "category-checkbox"  %>
             </div>
             <div class="small-11 medium-11 large-11 columns">
-              <p class="checkbox-label">Corporate Finance Divisions</p>
+              <p class="checkbox-label">Corporate Finance</p>
             </div>
           </div>
           <div class="row">
             <div class="small-1 medium-1 large-1 columns">
-              <%= check_box_tag "other_expertise[]", "Other Finance Opportunities", @other_categories.include?("Other Finance Opportunities"), class: "category-checkbox" %>
+              <%= check_box_tag "other_expertise[]", "Other Areas of Finance Expertise", @other_categories.include?("Other Areas of Finance Expertise"), class: "category-checkbox" %>
             </div>
             <div class="small-11 medium-11 large-11 columns">
-              <p class="checkbox-label">Other Finance Opportunities</p>
+              <p class="checkbox-label">Other Areas of Finance Expertise</p>
             </div>
           </div>
           <div class="row">
             <div class="small-1 medium-1 large-1 columns">
-              <%= check_box_tag "other_expertise[]", "Resume & Interview Prep", @other_categories.include?("Resume & Interview Prep"), class: "category-checkbox" %>
+              <%= check_box_tag "other_expertise[]", "Resume & Interview Preparation", @other_categories.include?("Resume & Interview Preparation"), class: "category-checkbox" %>
             </div>
             <div class="small-11 medium-11 large-11 columns">
-              <p class="checkbox-label">Resume & Interview Prep</p>
+              <p class="checkbox-label">Resume & Interview Preparation</p>
             </div>
           </div>
         </div>
       </div>
+
       <div class="row">
         <div class="small-11 small-centered medium-10 large-8 columns">
           <%= f.label "Current Company (General Listing)" %>
-          <%= f.text_field :general_company, placeholder: "Ex. Investment Bank, Mining Company, Retail Organization, etc." %>
-          <div class="spacer"></div>
+          <%= f.text_field :general_company, placeholder: "Ex. Investment Bank, Mining Company, Retail Organization, etc" %>
         </div>
       </div>
+
 
       <div class="row">
         <div class="small-11 small-centered medium-10 large-8 columns">
@@ -195,6 +204,8 @@
           <div class="spacer"></div>
         </div>
       </div>
+
+
       <div class="row">
         <div class="small-11 small-centered medium-10 large-8 columns">
           <%= f.label "Job Description" %>
