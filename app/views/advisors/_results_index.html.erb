@@ -33,9 +33,7 @@
 
       <div class="row">
         <div class="small-12 medium-12 large-12 columns" id="index-advisor-services">
-          <% advisor.categories.each do |category| %>
-          <p class="advisors-index-categories"><%= category.name %></p>
-          <% end %>
+          <p class="advisors-index-categories"><%= advisor.category.name %></p>
         </div>
       </div>
     </div>
