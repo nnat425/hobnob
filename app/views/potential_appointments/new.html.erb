@@ -3,45 +3,6 @@
 
 
 <div id="calendar-container">
-<div class='row' id="appointment-calendar">
-  <div class='small-12 medium-3 large-4 columns' id="appointment-form">
-
-    <%= form_for @potential_appointment do |f| %>
-    <h2 id='appointment_header'>Create appointment </h2>
-    <%= flash[:pick_date_or_enter_title] %>
-
-
-
-
-    <div class="row">
-      <div class="small-11 small-centered medium-10 medium-centered large-8 large-centered columns">
-        <%= f.label :title %>
-        <%= f.select :title,['Investment Banking', 'Asset Management', 'Corporate Finance Divisions', 'Other Finance Opportunities', 'Resume & Interview Prep'] %>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="small-11 small-centered medium-10 medium-centered large-8 large-centered columns">
-        <%= f.label :date %>
-        <%= date_field(:appointment_date,"date") %>
-      </div>
-    </div>
-    <div class="row">
-      <div class="small-11 small-centered medium-10 medium-centered large-10 large-centered columns">
-        <%= f.label :Start_Time %>
-        <%= time_select 'potential_appointment', 'start_time', {ampm: true, :time_separator => ""}, class: "start_time"
-        %>
-
-        <%= f.label :End_Time %>
-        <%= time_select 'potential_appointment', 'end_time', {ampm: true, :time_separator => "" }, class: "end_time"
-    %>
-      </div>
-    </div>
-    <div class="row" id="calendar-button-div">
-      <%= f.submit "Create Appointment", { :class => "button", id: "calendar_button" } %>
-    </div>
-    <% end %>
-  </div>
 
 
 

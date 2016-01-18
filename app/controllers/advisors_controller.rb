@@ -58,6 +58,7 @@ class AdvisorsController < ApplicationController
     if (advisor.publish == true && advisor.account_activated == true) || (current_advisor == advisor)
       @advisor = advisor
       @advisor_appointments = @advisor.potential_appointments
+      @potential_appointment = PotentialAppointment.new
     else
       render :inactivated_advisor
     end

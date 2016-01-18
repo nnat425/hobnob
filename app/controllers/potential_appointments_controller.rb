@@ -1,11 +1,5 @@
 class PotentialAppointmentsController < ApplicationController
 
-  def new
-    @potential_appointment = PotentialAppointment.new
-
-    current_advisor = Advisor.find_by(id: session[:user_or_advisor_id])
-    @advisor_appointments = current_advisor.potential_appointments
-  end
 
   def create
 
