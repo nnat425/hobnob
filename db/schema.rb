@@ -54,12 +54,22 @@ ActiveRecord::Schema.define(version: 20160116222726) do
     t.string   "charity_url"
     t.string   "languages"
     t.boolean  "publish",                default: false
-    t.string   "general_company"
+    t.string   "general_company",        default: "f"
     t.string   "other_expertise"
     t.integer  "category_id"
   end
 
   add_index "advisors", ["category_id"], name: "index_advisors_on_category_id", using: :btree
+
+  create_table "advisors_categories", force: :cascade do |t|
+    t.integer  "advisor_id"
+    t.integer  "category_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "advisors_categories", ["advisor_id"], name: "index_advisors_categories_on_advisor_id", using: :btree
+  add_index "advisors_categories", ["category_id"], name: "index_advisors_categories_on_category_id", using: :btree
 
   create_table "carts", force: :cascade do |t|
     t.integer  "user_id",                      null: false
@@ -160,6 +170,8 @@ ActiveRecord::Schema.define(version: 20160116222726) do
   end
 
   add_foreign_key "advisors", "categories"
+  add_foreign_key "advisors_categories", "advisors"
+  add_foreign_key "advisors_categories", "categories"
   add_foreign_key "carts_potential_appointments", "carts"
   add_foreign_key "carts_potential_appointments", "potential_appointments"
   add_foreign_key "order_transactions", "orders"
