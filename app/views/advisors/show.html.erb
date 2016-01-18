@@ -12,6 +12,7 @@
     <div class="row" id="advisor-profile-bio">
       <p id="advisor-name-profile-page"><%= @advisor.firstname %></p>
       <p id="advisor-title-profile-page"><%= @advisor.current_title %> | <%= @advisor.location %></p>
+      <p id="advisor-category-profile-page"><%= @advisor.category.name %></p>
     </div>
     <div class="flash-holder">
       <% if current_advisor == @advisor && current_advisor.publish == false %>
