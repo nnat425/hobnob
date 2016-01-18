@@ -70,28 +70,32 @@ class AdvisorsController < ApplicationController
 
   def update
     advisor = Advisor.find_by(id: params[:id])
-    if advisor_params && params[:other_expertise]
-      advisor.other_expertise = []
+    if params[:other_expertise]
+      other_categories = []
       params[:other_expertise].each do |category_name|
-        advisor.other_expertise << category_name
+        other_categories << category_name
       end
-      advisor.update(advisor_params)
-      advisor.join_companies(params[:companies])
-      if advisor.years_of_experience == '< 5 years'
-        advisor.student_price = 25
-        advisor.regular_price = 40
-      elsif advisor.years_of_experience == '< 5 - 15 years'
-        advisor.student_price = 60
-        advisor.regular_price = 60
-      else
-        advisor.student_price = 60
-        advisor.regular_price = 75
-      end
-      advisor.save
+      advisor.other_expertise = other_categories.join(",")
+    end
+    advisor.category = Category.find_or_create_by(name: params[:category][:name])
+    advisor.update(advisor_params)
+    advisor.join_companies(params[:companies])
+    if advisor.years_of_experience == '< 5 years'
+      advisor.student_price = 25
+      advisor.regular_price = 40
+    elsif advisor.years_of_experience == '< 5 - 15 years'
+      advisor.student_price = 60
+      advisor.regular_price = 60
+    else
+      advisor.student_price = 60
+      advisor.regular_price = 75
+    end
+
+    if advisor.save
       redirect_to advisor_path(advisor)
     else
       flash[:error] = advisor.errors.full_messages
-      render :edit
+      redirect_to edit_advisor_path(current_advisor)
     end
   end
 
@@ -117,7 +121,7 @@ class AdvisorsController < ApplicationController
   private
 
   def advisor_params
-    params.require(:advisor).permit(:email, :email_confirmation, :password,:password_confirmation,  :firstname, :lastname, :avatar, :alternative_email, :current_title, :job_description, :charity, :charity_url, :languages, :publish, :location, :company, :years_of_experience, :other_companies, :education, :certifications, :interesting_facts, :account_activated, :general_company)
+    params.require(:advisor).permit(:email, :email_confirmation, :password,:password_confirmation,  :firstname, :lastname, :avatar, :alternative_email, :current_title, :job_description, :charity, :charity_url, :languages, :publish, :location, :company, :years_of_experience, :other_companies, :education, :certifications, :interesting_facts, :account_activated, :general_company, :other_expertise)
   end
 
 
