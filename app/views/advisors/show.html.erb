@@ -141,8 +141,50 @@
         </div>
       </div>
 
+       <div class='small-12 medium-12 large-6 columns' id="appointment-form">
+        <p class="advisor-profile-header">Create Connect Date & Time</p>
+        <%= form_for @potential_appointment do |f| %>
+        <%= flash[:pick_date_or_enter_title] %>
+        <div class="row">
+          <div class="small-11 small-centered medium-10 medium-centered large-10 large-centered columns">
+            <%= f.label :title %>
+            <p id="appointment-session">Session: <%= @advisor.potential_appointments.count + 1 %></p>
+          </div>
+        </div>
 
-      <div class="small-12 medium-12 large-6 columns" id="advisor-appointment-box">
+        <div class="row">
+          <div class="small-11 small-centered medium-10 medium-centered large-10 large-centered columns">
+            <%= f.label :date %>
+            <%= date_field(:appointment_date,"date") %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="small-11 small-centered medium-10 medium-centered large-10 large-centered columns">
+            <%= f.label :Start_Time %>
+            <%= time_select 'potential_appointment', 'start_time', {ampm: true, :time_separator => "", minute_step: 15 }, class: "start_time" %>
+
+            <%= f.label :Length %>
+            <% if @advisor.category.name == "Resume & Interview Preparation" %>
+            <p class="appt-length">1 Hour</p>
+            <% else %>
+            <p class="appt-length">30 Minutes</p>
+            <% end %>
+
+          </div>
+        </div>
+        <div class="row" id="calendar-button-div">
+          <div class="small-11 small-centered medium-10 medium-centered large-10 large-centered columns">
+            <%= f.submit "Create", :class => "full-button" %>
+          </div>
+        </div>
+        <% end %>
+      </div>
+
+
+    </div>
+
+    <div class="row">
+       <div class="small-12 medium-12 large-12 columns" id="advisor-appointment-box">
         <p class="advisor-profile-header">Available Times</p>
 
         <div id="advisor-times">
@@ -151,14 +193,14 @@
           <% if pot_appointment.booked_status? == false %>
           <div class="row" id="appointment-time-box">
 
-            <div class="small-12 medium-4 large-3 columns">
+            <div class="small-12 medium-3 large-2 columns">
 
               <div class="row" id="appointment-date">
                 <p class="appointment-day"><%= pot_appointment.start_time.strftime("%d") %></p>
                 <p class="appointment-month"><%= pot_appointment.start_time.strftime("%b") %></p>
               </div>
             </div>
-            <div class="small-12 medium-8 large-7 columns">
+            <div class="small-12 medium-7 large-7 columns">
               <div class="row">
                 <p class="appointment-time"><%= pot_appointment.start_time.strftime("%l:%M %p") %>
                   <%= pot_appointment.end_time.strftime("to %l:%M %p EST") %>
@@ -168,7 +210,7 @@
                 </p>
               </div>
             </div>
-            <div class="small-12 medium-12 large-2 columns" id="available-times-right-btn">
+            <div class="small-12 medium-12 large-3 columns" id="available-times-right-btn">
               <% if current_advisor == nil %>
               <% elsif %>
               <% pot_appointment.advisor_id == current_advisor.id && session[:class_type] == current_advisor.class.name %>
@@ -193,42 +235,6 @@
           <% end %>
           <% end %>
         </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class='small-12 medium-12 large-6 columns' id="appointment-form">
-        <p class="advisor-profile-header">Create Connect Date & Time</p>
-        <%= form_for @potential_appointment do |f| %>
-        <%= flash[:pick_date_or_enter_title] %>
-        <div class="row">
-          <div class="small-11 small-centered medium-10 medium-centered large-10 large-centered columns">
-            <%= f.label :title %>
-            <%= f.select :title,['Investment Banking', 'Asset Management', 'Corporate Finance Divisions', 'Other Finance Opportunities', 'Resume & Interview Prep'] %>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="small-11 small-centered medium-10 medium-centered large-10 large-centered columns">
-            <%= f.label :date %>
-            <%= date_field(:appointment_date,"date") %>
-          </div>
-        </div>
-        <div class="row">
-          <div class="small-11 small-centered medium-10 medium-centered large-10 large-centered columns">
-            <%= f.label :Start_Time %>
-            <%= time_select 'potential_appointment', 'start_time', {ampm: true, :time_separator => "", minute_step: 15 }, class: "start_time" %>
-
-            <%= f.label :End_Time %>
-            <%= time_select 'potential_appointment', 'end_time', {ampm: true, :time_separator => "", minute_step: 15 }, class: "end_time" %>
-          </div>
-        </div>
-        <div class="row" id="calendar-button-div">
-          <div class="small-11 small-centered medium-10 medium-centered large-10 large-centered columns">
-            <%= f.submit "Create", :class => "full-button" %>
-          </div>
-        </div>
-        <% end %>
       </div>
     </div>
   </div>

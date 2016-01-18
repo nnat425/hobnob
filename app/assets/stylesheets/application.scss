@@ -1151,16 +1151,33 @@ font-weight: 300;
 font-size: 1.25em;
 
 }
-
+#appointment-session {
+  font-family: "Open Sans";
+  font-size: 1.1em;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-bottom: 0px;
+}
 #appointment-time-box {
 margin: 1.5em;
-border: 1px solid #C0C0C0;
+border: 1px solid #ccc;
 padding: 2em;
+padding-right: 3em;
+padding-left: 3em;
 background-color: #fff;
-border-radius: 10px;
+-webkit-box-shadow: 1px 1px 1px 1px #ccc;
+-moz-box-shadow:    1px 1px 1px 1px #ccc;
+box-shadow:         1px 1px 1px 1px #ccc;
 
 }
 
+.appt-length {
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: 1.1em;
+  letter-spacing: 1px;
+
+}
 .appointment-full-date {
 font-size: .7em;
 color: #C0C0C0;
@@ -1475,14 +1492,13 @@ text-align: center;
 }
 
 #appointment-form {
-  padding-left: 1em;
-  padding-right: 1em;
+    padding: 1em;
 }
 #appointment-form form {
   border: 1px solid #C0C0C0;
   border-radius: 10px;
   background-color: #fff;
-  padding: 1em;
+  padding: 2em;
 
 }
 
@@ -2016,6 +2032,7 @@ transition: all .3s ease-in-out;
 #calendar-button-div {
 text-align: center;
 padding-top: 1em;
+
 }
 
 #simple-cal {
