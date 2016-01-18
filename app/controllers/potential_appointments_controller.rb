@@ -1,11 +1,5 @@
 class PotentialAppointmentsController < ApplicationController
 
-  def new
-    @potential_appointment = PotentialAppointment.new
-
-    current_advisor = Advisor.find_by(id: session[:user_or_advisor_id])
-    @advisor_appointments = current_advisor.potential_appointments
-  end
 
   def create
 
@@ -21,8 +15,7 @@ class PotentialAppointmentsController < ApplicationController
       redirect_to advisor_path(current_advisor)
     else
      flash[:pick_date_or_enter_title] = "Please pick a date/Enter a title"
-
-     redirect_to new_potential_appointment_path
+     redirect_to advisor_path(current_advisor)
 
    end
  end

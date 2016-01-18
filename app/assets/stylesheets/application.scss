@@ -446,6 +446,15 @@ font-weight: 200;
 
 }
 
+.form_subtitle {
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: 1.25em;
+  color: #43c7f4;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
 
 #edit-panel {
 background-color: #fff;
@@ -637,12 +646,11 @@ margin-top: -1em;
 font-family: "Open Sans";
 }
 #advisor-appointment-box {
-margin-top: 2.5em;
-padding: 1.5em;
+padding: 1em;
 }
 
 #advisor-bio-box {
-padding: 1.5em;
+padding: 1em;
 }
 #profile-panel {
 background-color: #202020;
@@ -710,17 +718,19 @@ font-family: "Open Sans";
 
 .profile-subheader {
 font-family: "Open Sans";
-font-size: .85em;
+font-size: .75em;
 color: #203451;
 font-weight: bold;
 text-transform: uppercase;
 letter-spacing: 1px;
 margin-bottom: .5em;
+float: right;
 }
 
 .profile-info {
 margin-bottom: .5em;
-font-size: 1.1em;
+font-size: .9em;
+font-weight: 300;
 font-family: "Open Sans";
 
 }
@@ -968,16 +978,6 @@ border: 1px solid #ccc;
 border-radius: 5px;
 }
 
-#new_potential_appointment {
-background-color: #F8F8F8;
-margin-top: 4em;
-margin-bottom: 1em;
-padding-top: 2em;
-padding-bottom: 2em;
-border-radius: 5px;
-border: 1px solid #ccc;
-}
-
 .edit_potential_appointment {
 background-color: #F8F8F8;
 margin-top: 4em;
@@ -1151,18 +1151,35 @@ font-weight: 300;
 font-size: 1.25em;
 
 }
-
+#appointment-session {
+  font-family: "Open Sans";
+  font-size: 1.1em;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-bottom: 0px;
+}
 #appointment-time-box {
 margin: 1.5em;
-border: 1px solid #C0C0C0;
+border: 1px solid #ccc;
 padding: 2em;
+padding-right: 3em;
+padding-left: 3em;
 background-color: #fff;
-border-radius: 10px;
+-webkit-box-shadow: 1px 1px 1px 1px #ccc;
+-moz-box-shadow:    1px 1px 1px 1px #ccc;
+box-shadow:         1px 1px 1px 1px #ccc;
 
 }
 
+.appt-length {
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: 1.1em;
+  letter-spacing: 1px;
+
+}
 .appointment-full-date {
-font-size: .85em;
+font-size: .7em;
 color: #C0C0C0;
 letter-spacing: 1px;
 text-transform: uppercase;
@@ -1170,7 +1187,7 @@ text-transform: uppercase;
 
 .appointment-time {
 font-family: "Open Sans";
-font-size: 1em;
+font-size: .9em;
 margin-bottom: -.2em;
 margin-top: .8em;
 font-weight: 300;
@@ -1430,29 +1447,6 @@ margin-left:1em;
 }
 
 
-.edit-btn {
-float: right;
-letter-spacing: 2px;
-
-
-text-align: right;
-
-}
-
-.edit-btn:hover {
-
-color: #2996cc;
-
-transition: all .3s ease-in-out;
-}
-
-.edit-btn a {
-  color: #004b7e;
-  font-size: .8em;
-  text-transform: uppercase;
-
-}
-
 #edit-appt-btn {
 float: right;
 letter-spacing: 2px;
@@ -1464,6 +1458,10 @@ display: block;
 
 }
 
+#advisor-edit-btn a{
+  color: #fff;
+}
+
 #edit-appt-btn:hover {
 
 color: #2996cc;
@@ -1473,7 +1471,7 @@ transition: all .3s ease-in-out;
 
 #edit-appt-btn a {
   color: #004b7e;
-  font-size: .8em;
+  font-size: .7em;
   text-transform: uppercase;
 
 }
@@ -1493,8 +1491,15 @@ text-align: center;
 
 }
 
-#calendar-container {
-padding: 1.5em;
+#appointment-form {
+    padding: 1em;
+}
+#appointment-form form {
+  border: 1px solid #C0C0C0;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 2em;
+
 }
 
 #appointment-form form input {
@@ -1727,6 +1732,22 @@ margin-bottom: -.5em;
 
 
 
+}
+
+#advisor-category-profile-page {
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: 1.2em;
+  color: #C0C0C0;
+  letter-spacing: 2px;
+
+}
+
+.sublabel {
+  font-family: "Open Sans";
+  font-size: .8em;
+  font-weight: 300;
+  letter-spacing: 1px;
 }
 
 #intro-subtext p {
@@ -2010,20 +2031,10 @@ transition: all .3s ease-in-out;
 }
 #calendar-button-div {
 text-align: center;
-}
-
-#calendar_button {
-font-size: .85em;
-margin-top: 1em;
-padding-left: 2em;
-padding-right: 2em;
-letter-spacing: 2px;
-background-color: #203451;
-color: #fff;
-border: 1px solid #203451;
-transition: all 0.2s ease;
+padding-top: 1em;
 
 }
+
 #simple-cal {
 text-align: center;
 
