@@ -15,27 +15,30 @@
       <p id="advisor-category-profile-page"><%= @advisor.category.name %></p>
     </div>
     <div class="flash-holder">
-      <% if current_advisor == @advisor && current_advisor.publish == false %>
-      <p id="publish-profile-text">*Your profile is currently set to private. To set it to public, click below and please check PUBLISH</p>
-      <%= link_to "Back to Edit", edit_advisor_path(current_advisor), :class => "button" %>
-      <% end %>
-
+      <% if current_advisor == @advisor %>
+        <% if current_advisor.publish == false %>
+          <p id="publish-profile-text">*Your profile is currently set to private. To set it to public, click below and please check PUBLISH</p>
+        <% end %>
+        <div class="button" id="advisor-edit-btn">
+          <%= link_to "Edit Profile", edit_advisor_path(current_advisor), class: "fa fa-cog" %>
+        </div>
+        <% end %>
       <p id='flash_add_cart'><%=flash[:added_to_cart] %></p>
       <p id='flash_already_cart'><%=flash[:already_in_cart] %></p>
     </div>
     <% if logged_in? && current_user %>
-        <div id="advisor-consultation-price-box">
-          <p class="dollar-sign">$</p>
-        <% if current_user.student == true %>
-          <p class="advisor-consultation-price"><%= @advisor.student_price %></p>
-          <p class="advisor-consultation-label"> / consultation</p>
-        <% else %>
-          <p class="advisor-consultation-price"><%= @advisor.regular_price %></p>
-          <p class="advisor-consultation-label"> / consultation</p>
-        <% end %>
-
-        </div>
+    <div id="advisor-consultation-price-box">
+      <p class="dollar-sign">$</p>
+      <% if current_user.student == true %>
+      <p class="advisor-consultation-price"><%= @advisor.student_price %></p>
+      <p class="advisor-consultation-label"> / consultation</p>
+      <% else %>
+      <p class="advisor-consultation-price"><%= @advisor.regular_price %></p>
+      <p class="advisor-consultation-label"> / consultation</p>
       <% end %>
+
+    </div>
+    <% end %>
   </div>
 
 
@@ -44,11 +47,7 @@
     <div class="row">
       <div class="small-12 medium-12 large-6 columns" id="advisor-bio-box">
         <p class="advisor-profile-header">About</p>
-        <% if session[:user_or_advisor_id] == @advisor.id && session[:class_type] == @advisor.class.name %>
-        <div class="edit-btn">
-          <%= link_to "Edit Profile", edit_advisor_path(@advisor), class: "fa fa-cog" %>
-        </div>
-        <% end %>
+
         <div id="advisor-about">
           <div class="row">
             <div class="small-6 medium-6 large-6 columns">
@@ -145,15 +144,6 @@
 
       <div class="small-12 medium-12 large-6 columns" id="advisor-appointment-box">
         <p class="advisor-profile-header">Available Times</p>
-        <% if session[:user_or_advisor_id] == @advisor.id && session[:class_type] == @advisor.class.name %>
-        <div class="edit-btn">
-          <%= link_to "Create Appointment", new_potential_appointment_path, class: "fa fa-calendar-plus-o" %>
-        </div>
-        <% end %>
-
-
-
-
 
         <div id="advisor-times">
           <% @advisor.potential_appointments.each do |pot_appointment| %>
@@ -203,53 +193,45 @@
           <% end %>
           <% end %>
         </div>
-
-
-
-      </div>
-    </div>
-
-
-  <div class='small-12 medium-12 large-6 columns' id="appointment-form">
-
-    <%= form_for @potential_appointment do |f| %>
-    <h2 id='appointment_header'>Create appointment </h2>
-    <%= flash[:pick_date_or_enter_title] %>
-
-
-
-
-    <div class="row">
-      <div class="small-11 small-centered medium-10 medium-centered large-8 large-centered columns">
-        <%= f.label :title %>
-        <%= f.select :title,['Investment Banking', 'Asset Management', 'Corporate Finance Divisions', 'Other Finance Opportunities', 'Resume & Interview Prep'] %>
       </div>
     </div>
 
     <div class="row">
-      <div class="small-11 small-centered medium-10 medium-centered large-8 large-centered columns">
-        <%= f.label :date %>
-        <%= date_field(:appointment_date,"date") %>
-      </div>
-    </div>
-    <div class="row">
-      <div class="small-11 small-centered medium-10 medium-centered large-10 large-centered columns">
-        <%= f.label :Start_Time %>
-        <%= time_select 'potential_appointment', 'start_time', {ampm: true, :time_separator => ""}, class: "start_time"
-        %>
+      <div class='small-12 medium-12 large-6 columns' id="appointment-form">
+        <p class="advisor-profile-header">Create Connect Date & Time</p>
+        <%= form_for @potential_appointment do |f| %>
+        <%= flash[:pick_date_or_enter_title] %>
+        <div class="row">
+          <div class="small-11 small-centered medium-10 medium-centered large-10 large-centered columns">
+            <%= f.label :title %>
+            <%= f.select :title,['Investment Banking', 'Asset Management', 'Corporate Finance Divisions', 'Other Finance Opportunities', 'Resume & Interview Prep'] %>
+          </div>
+        </div>
 
-        <%= f.label :End_Time %>
-        <%= time_select 'potential_appointment', 'end_time', {ampm: true, :time_separator => "" }, class: "end_time"
-    %>
+        <div class="row">
+          <div class="small-11 small-centered medium-10 medium-centered large-10 large-centered columns">
+            <%= f.label :date %>
+            <%= date_field(:appointment_date,"date") %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="small-11 small-centered medium-10 medium-centered large-10 large-centered columns">
+            <%= f.label :Start_Time %>
+            <%= time_select 'potential_appointment', 'start_time', {ampm: true, :time_separator => ""}, class: "start_time" %>
+
+            <%= f.label :End_Time %>
+            <%= time_select 'potential_appointment', 'end_time', {ampm: true, :time_separator => "" }, class: "end_time" %>
+          </div>
+        </div>
+        <div class="row" id="calendar-button-div">
+          <div class="small-11 small-centered medium-10 medium-centered large-10 large-centered columns">
+            <%= f.submit "Create Appointment", :class => "button" %>
+          </div>
+        </div>
+        <% end %>
       </div>
     </div>
-    <div class="row" id="calendar-button-div">
-      <%= f.submit "Create Appointment", { :class => "button", id: "calendar_button" } %>
-    </div>
-    <% end %>
   </div>
 
-
-  </div>
 </div>
 

@@ -978,16 +978,6 @@ border: 1px solid #ccc;
 border-radius: 5px;
 }
 
-#new_potential_appointment {
-background-color: #F8F8F8;
-margin-top: 4em;
-margin-bottom: 1em;
-padding-top: 2em;
-padding-bottom: 2em;
-border-radius: 5px;
-border: 1px solid #ccc;
-}
-
 .edit_potential_appointment {
 background-color: #F8F8F8;
 margin-top: 4em;
@@ -1440,29 +1430,6 @@ margin-left:1em;
 }
 
 
-.edit-btn {
-float: right;
-letter-spacing: 2px;
-
-
-text-align: right;
-
-}
-
-.edit-btn:hover {
-
-color: #2996cc;
-
-transition: all .3s ease-in-out;
-}
-
-.edit-btn a {
-  color: #004b7e;
-  font-size: .7em;
-  text-transform: uppercase;
-
-}
-
 #edit-appt-btn {
 float: right;
 letter-spacing: 2px;
@@ -1472,6 +1439,10 @@ display: block;
 
 
 
+}
+
+#advisor-edit-btn a{
+  color: #fff;
 }
 
 #edit-appt-btn:hover {
@@ -1500,6 +1471,18 @@ float: right;
 border-radius: 5px;
 border: 1px solid #ccc;
 text-align: center;
+
+}
+
+#appointment-form {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+#appointment-form form {
+  border: 1px solid #C0C0C0;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 1em;
 
 }
 
@@ -2034,18 +2017,6 @@ transition: all .3s ease-in-out;
 text-align: center;
 }
 
-#calendar_button {
-font-size: .85em;
-margin-top: 1em;
-padding-left: 2em;
-padding-right: 2em;
-letter-spacing: 2px;
-background-color: #203451;
-color: #fff;
-border: 1px solid #203451;
-transition: all 0.2s ease;
-
-}
 #simple-cal {
 text-align: center;
 
