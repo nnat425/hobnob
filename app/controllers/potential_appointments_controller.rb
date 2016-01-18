@@ -15,8 +15,7 @@ class PotentialAppointmentsController < ApplicationController
       redirect_to advisor_path(current_advisor)
     else
      flash[:pick_date_or_enter_title] = "Please pick a date/Enter a title"
-
-     redirect_to new_potential_appointment_path
+     redirect_to advisor_path(current_advisor)
 
    end
  end
