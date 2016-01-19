@@ -85,14 +85,14 @@ class AdvisorsController < ApplicationController
     advisor.update(advisor_params)
     advisor.join_companies(params[:companies])
     if advisor.years_of_experience == '< 5 years'
-      advisor.student_price = 25
+      advisor.student_price = 30
       advisor.regular_price = 40
     elsif advisor.years_of_experience == '< 5 - 15 years'
-      advisor.student_price = 60
-      advisor.regular_price = 60
+      advisor.student_price = 30
+      advisor.regular_price = 40
     else
-      advisor.student_price = 60
-      advisor.regular_price = 75
+      advisor.student_price = 50
+      advisor.regular_price = 60
     end
 
     if advisor.save
