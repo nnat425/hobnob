@@ -1040,7 +1040,7 @@ margin:10px;
 }
 
 #available-times-right-btn {
-margin-top: 2em;
+  padding: auto;
 }
 .appointment_title {
 font-size: 2.5em;
@@ -1057,6 +1057,9 @@ color: #4F8A10;
 
 }
 
+#add_to_cart {
+  border-radius: 10px;
+}
 #flash_already_cart{
 color:red;
 font-family: "Open Sans";
@@ -1993,6 +1996,8 @@ background-color: #2996cc;
 letter-spacing: 2px;
 text-transform: uppercase;
 width: 20em;
+font-family: "Open Sans";
+font-weight: 300;
 }
 
 
@@ -2074,19 +2079,6 @@ text-align: right;
 }
 
 
-#add_to_cart {
-background: #2996cc;
-border: 1px solid #fff;
-color: #fff;
-border-radius: 10px;
-}
-
-#add_to_cart:hover {
-background-color: #000;
-transition: all 0.2s ease;
-border: solid black 1px;
-color: #fff;
-}
 
 
 #edit-profile-btn {
@@ -2353,6 +2345,8 @@ letter-spacing: 2px;
 text-transform: uppercase;
 border: 1px solid #2996cc;
 width: 100%;
+font-family: "Open Sans";
+font-weight: 300;
 }
 
 .full-button:hover {
