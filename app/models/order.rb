@@ -24,6 +24,7 @@ class Order < ActiveRecord::Base
   end
 end
 
+def chece
 
 def total_for_student
   total = []

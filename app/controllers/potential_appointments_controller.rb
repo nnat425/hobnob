@@ -2,28 +2,20 @@ class PotentialAppointmentsController < ApplicationController
 
 
   def create
-
     date = params[:appointment_date][:date].split('-')
-    if date[0] != nil && params[:potential_appointment][:title] != ""
-
-      start_time = Time.new(date[0],date[1],date[2],params[:potential_appointment].values[4].to_i,params[:potential_appointment].values[5].to_i).to_s
-
-      end_time = Time.new(date[0],date[1],date[2],params[:potential_appointment].values[9].to_i,params[:potential_appointment].values[10].to_i).to_s
-# THE END TIME IS NO LONGER THERE
-# WE NEED CONDITIONAL HERE
-# If advisor.category == "Resume blahblah"
-#     end_time = start_time + 60 minutes
-#  else
-#      end_time = start_time + 30 mins
-# something like that....
-
-      potential_appointment = current_advisor.potential_appointments.create(title: params[:potential_appointment][:title],start_time: start_time, end_time: end_time)
-
+    time = params[:potential_appointment].to_a.flatten
+    if date[0] != nil
+      start_time = DateTime.new(date[0].to_i,date[1].to_i,date[2].to_i,time[7].to_i,time[9].to_i)
+      if current_advisor.category.name == "Resume & Interview Preparation"
+        end_time = start_time + 60.minutes
+      else
+        end_time = start_time + 30.minutes
+      end
+      potential_appointment = current_advisor.potential_appointments.create!(title:current_advisor.potential_appointments.count + 1,start_time: start_time, end_time: end_time)
       redirect_to advisor_path(current_advisor)
     else
      flash[:pick_date_or_enter_title] = "Please pick a date/Enter a title"
      redirect_to advisor_path(current_advisor)
-
    end
  end
 
