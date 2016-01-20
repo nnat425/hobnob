@@ -26,19 +26,7 @@
       <p id='flash_add_cart'><%=flash[:added_to_cart] %></p>
       <p id='flash_already_cart'><%=flash[:already_in_cart] %></p>
     </div>
-    <% if logged_in? %>
-    <div id="advisor-consultation-price-box">
-      <p class="dollar-sign">$</p>
-      <% if current_user && current_user.student == true %>
-      <p class="advisor-consultation-price"><%= @advisor.student_price %></p>
-      <p class="advisor-consultation-label"> / consultation</p>
-      <% else %>
-      <p class="advisor-consultation-price"><%= @advisor.regular_price %></p>
-      <p class="advisor-consultation-label"> / consultation</p>
-      <% end %>
 
-    </div>
-    <% end %>
   </div>
 
 
@@ -189,14 +177,14 @@
           <% if pot_appointment.booked_status? == false %>
           <div class="row" id="appointment-time-box">
 
-            <div class="small-12 medium-4 large-4 columns">
+            <div class="small-6 medium-4 large-3 columns">
 
               <div class="row" id="appointment-date">
                 <p class="appointment-day"><%= pot_appointment.start_time.strftime("%d") %></p>
                 <p class="appointment-month"><%= pot_appointment.start_time.strftime("%b") %></p>
               </div>
             </div>
-            <div class="small-12 medium-8 large-8 columns">
+            <div class="small-12 medium-6 large-6 columns">
               <div class="row">
                 <p class="appointment-time"><%= pot_appointment.start_time.strftime("%l:%M %p") %>
                   <%= pot_appointment.end_time.strftime("to %l:%M %p EST") %>
@@ -206,6 +194,20 @@
                 </p>
               </div>
             </div>
+
+              <% if logged_in? %>
+    <div class="hide-for-small small-6 medium-2 large-3 columns" id="advisor-consultation-price-box">
+      <p class="dollar-sign">$</p>
+      <% if current_user && current_user.student == true %>
+      <p class="advisor-consultation-price"><%= @advisor.student_price %></p>
+      <p class="advisor-consultation-label">consultation</p>
+      <% else %>
+      <p class="advisor-consultation-price"><%= @advisor.regular_price %></p>
+      <p class="advisor-consultation-label">consultation</p>
+      <% end %>
+
+    </div>
+    <% end %>
             <div class="small-12 medium-12 large-12 columns">
 
               <div class="row" id="available-times-right-btn">
@@ -276,6 +278,11 @@
               <% end %>
             </div>
           </div>
+ <div class="edit_appointment_form_holder" id="#{pot_appointment.id}">
+
+          </div>
+
+
           <% end %>
           <% end %>
         </div>

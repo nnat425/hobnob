@@ -1,64 +1,43 @@
-<header class="calendar_page">
-</header>
-
-
-<div id="calendar-container">
-<div class='row' id="appointment-calendar">
-  <div class='small-12 medium-3 large-4 columns' id="appointment-form">
-
-    <%= form_for @potential_appointment do |f| %>
-    <h2 id='appointment_header'>Edit appointment </h2>
-    <%= flash[:pick_date_or_enter_title] %>
-
-
-
-
-    <div class="row">
-      <div class="small-11 small-centered medium-10 medium-centered large-8 large-centered columns">
-        <%= f.label :title %>
-        <%= f.select :title,['Investment Banking', 'Asset Management', 'Corporate Finance Divisions', 'Other Finance Opportunities', 'Resume & Interview Prep'] %>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="small-11 small-centered medium-10 medium-centered large-8 large-centered columns">
-        <%= f.label :date %>
-        <%= date_field(:appointment_date,"date") %>
-      </div>
-    </div>
-    <div class="row">
-      <div class="small-11 small-centered medium-10 medium-centered large-10 large-centered columns">
-        <%= f.label :Start_Time %>
-        <%= time_select 'potential_appointment', 'start_time', {ampm: true, :time_separator => ""}, class: "start_time"
-        %>
-
-        <%= f.label :End_Time %>
-        <%= time_select 'potential_appointment', 'end_time', {ampm: true, :time_separator => "" }, class: "end_time"
-    %>
-      </div>
-    </div>
-    <div class="row" id="calendar-button-div">
-      <%= f.submit "Update Appointment", { :class => "button", id: "calendar_button" } %>
-    </div>
-    <% end %>
-  </div>
-
-
-
-  <div class='small-12 medium-9 large-8 columns'>
-    <%= month_calendar events: @advisor_appointments do |date, appointments| %>
-    <%= date.day %>
-
-    <% appointments.each do |appointment| %>
-    <div>
-
-      <%= appointment.title %>
-    </div>
-    <% end %>
-    <% end %>
-  </div>
-</div>
+<div class="row" id="ribbon-header">
 </div>
 
+<div class='small-12 medium-3 large-4 columns' id="appointment-form">
+
+  <%= form_for @potential_appointment do |f| %>
+  <h2 id='appointment_header'>Edit Connect Date & Time </h2>
+  <%= flash[:pick_date_or_enter_title] %>
 
 
+
+
+  <div class="row">
+    <div class="small-11 small-centered medium-10 medium-centered large-8 large-centered columns">
+      <%= f.label :title %>
+      <p id="appointment-session">Session: <%= @potential_appointment.title %></p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-11 small-centered medium-10 medium-centered large-8 large-centered columns">
+      <%= f.label :date %>
+      <%= date_field(:appointment_date,"date") %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-11 small-centered medium-10 medium-centered large-10 large-centered columns">
+      <%= f.label :Start_Time %>
+      <%= time_select 'potential_appointment', 'start_time', {ampm: true, :time_separator => "", minute_step: 15 }, class: "start_time" %>
+
+      <%= f.label :Length %>
+      <% if @potential_appointment.advisor.category.name == "Resume & Interview Preparation" %>
+      <p class="appt-length">1 Hour</p>
+      <% else %>
+      <p class="appt-length">30 Minutes</p>
+      <% end %>
+    </div>
+  </div>
+  <div class="row" id="calendar-button-div">
+    <%= f.submit "Update Appointment", { :class => "button", id: "calendar_button" } %>
+  </div>
+  <% end %>
+</div>

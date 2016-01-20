@@ -22,10 +22,10 @@
           <% if logged_in? %>
           <% if current_user && current_user.student == true %>
           <p class="advisor-price-number">$<%= advisor.student_price %></p>
-          <p class="advisor-price-session"> per session</p>
+          <p class="advisor-price-session">Consultation</p>
           <% else %>
           <p class="advisor-price-number">$<%= advisor.regular_price %></p>
-          <p class="advisor-price-session"> per session</p>
+          <p class="advisor-price-session">Consultation</p>
           <% end %>
           <% end %>
         </div>
