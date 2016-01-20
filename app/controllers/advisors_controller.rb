@@ -7,32 +7,32 @@ class AdvisorsController < ApplicationController
     if params[:filter]
       if params[:filter][:category]
         advisors_by_category = params[:filter][:category].map do |category|
-          Category.find_by(name: category).advisors.where("account_activated = ? AND publish = ?", false, false)
+          Category.find_by(name: category).advisors.where("account_activated = ? AND publish = ?", true, true)
         end
         advisors_by_category.flatten!
       else
-        advisors_by_category = Advisor.where("account_activated = ? AND publish = ?", false, false)
+        advisors_by_category = Advisor.where("account_activated = ? AND publish = ?", true, true)
       end
       if params[:filter][:location]
         advisors_by_location = params[:filter][:location].map do |location|
-          Advisor.where("account_activated = ? AND publish = ? AND location = ?", false, false, location)
+          Advisor.where("account_activated = ? AND publish = ? AND location = ?", true, true, location)
         end
         advisors_by_location.flatten!.uniq!
       else
-        advisors_by_location = Advisor.where("account_activated = ? AND publish = ?", false, false)
+        advisors_by_location = Advisor.where("account_activated = ? AND publish = ?", true, true)
       end
       if params[:filter][:years_of_experience]
         advisors_by_years = params[:filter][:years_of_experience].map do |range|
-          Advisor.where("account_activated = ? AND publish = ? AND years_of_experience = ?", false, false, range)
+          Advisor.where("account_activated = ? AND publish = ? AND years_of_experience = ?", true, true, range)
         end
         advisors_by_years.flatten!.uniq!
       else
-        advisors_by_years = Advisor.where("account_activated = ? AND publish = ?", false, false)
+        advisors_by_years = Advisor.where("account_activated = ? AND publish = ?", true, true)
       end
       @advisors = advisors_by_category & advisors_by_location & advisors_by_years
       flash[:message] = "Search Results"
     else
-      @advisors = Advisor.where("account_activated = ? AND publish = ?", false, false)
+      @advisors = Advisor.where("account_activated = ? AND publish = ?", true, true)
     end
   end
 
