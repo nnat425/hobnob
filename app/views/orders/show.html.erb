@@ -178,9 +178,17 @@ footer {
           <td class="service"><%= appointment.advisor.firstname + " " + appointment.advisor.lastname %></td>
           <td class="desc"><%= appointment.start_time.strftime("%A, %B %d, %Y") %><br><%= appointment.title %><br><%= appointment.start_time.strftime("%l:%M %p") %><%= appointment.end_time.strftime(" to %l:%M %p") %></td>
           <% if current_user.student == true %>
+          <% if appointment.advisor.category.name == "Resume & Interview Preparation" %>
+          <td class="unit"><%= '$' +  '50' %></td>
+          <% else %>
           <td class="unit"><%= '$' +  appointment.advisor.student_price.to_s%></td>
+          <% end %>
+          <% else %>
+          <% if appointment.advisor.category.name == "Resume & Interview Preparation" %>
+          <td class="unit"><%= '$' +  '60' %></td>
           <% else %>
           <td class="unit"><%='$' + appointment.advisor.regular_price.to_s %></td>
+          <% end %>
           <% end %>
         </tr>
         <%end %>
