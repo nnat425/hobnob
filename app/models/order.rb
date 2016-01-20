@@ -24,17 +24,27 @@ class Order < ActiveRecord::Base
   end
 end
 
-def chece
-
 def total_for_student
   total = []
-  cart.potential_appointments.each {|appointment|total.push(appointment.advisor.student_price)}
+  cart.potential_appointments.each do |appointment|
+    if appointment.advisor.category.name == "Resume & Interview Preparation"
+      total.push(50)
+    else
+      total.push(appointment.advisor.student_price)
+    end
+  end
   return total.reduce(:+)
 end
 
 def total_for_regular
   total = []
-  cart.potential_appointments.each {|appointment|total.push(appointment.advisor.regular_price)}
+  cart.potential_appointments.each do |appointment|
+    if appointment.advisor.category.name == "Resume & Interview Preparation"
+      total.push(60)
+    else
+      total.push(appointment.advisor.regular_price)
+    end
+  end
   return total.reduce(:+)
 end
 

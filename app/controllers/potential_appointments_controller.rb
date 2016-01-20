@@ -27,23 +27,21 @@ end
 
 def update
   potential_appointment = PotentialAppointment.find_by(id: params[:id])
-
   date = params[:appointment_date][:date].split('-')
-  if date[0] != nil && params[:potential_appointment][:title] != ""
-
-    start_time = Time.new(date[0],date[1],date[2],params[:potential_appointment].values[4].to_i,params[:potential_appointment].values[5].to_i).to_s
-
-    end_time = Time.new(date[0],date[1],date[2],params[:potential_appointment].values[9].to_i,params[:potential_appointment].values[10].to_i).to_s
-
-    potential_appointment.update(title: params[:potential_appointment][:title],start_time: start_time, end_time: end_time)
-
-    redirect_to advisor_path(current_advisor)
-
+  time = params[:potential_appointment].to_a.flatten
+  if date[0] != nil
+   start_time = DateTime.new(date[0].to_i,date[1].to_i,date[2].to_i,time[7].to_i,time[9].to_i)
+   if current_advisor.category.name == "Resume & Interview Preparation"
+    end_time = start_time + 60.minutes
   else
-   flash[:pick_date_or_enter_title] = "Please pick a date/Enter a title"
-   redirect_to edit_potential_appointment_path(potential_appointment)
-
- end
+    end_time = start_time + 30.minutes
+  end
+  potential_appointment.update(start_time: start_time, end_time: end_time)
+  redirect_to advisor_path(current_advisor)
+else
+ flash[:pick_date_or_enter_title] = "Please pick a date/Enter a title"
+ redirect_to edit_potential_appointment_path(potential_appointment)
+end
 end
 
 def destroy
