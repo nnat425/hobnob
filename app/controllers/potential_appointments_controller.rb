@@ -11,7 +11,6 @@ class PotentialAppointmentsController < ApplicationController
       else
         end_time = start_time + 30.minutes
       end
-      binding.pry
       potential_appointment = current_advisor.potential_appointments.create!(title:current_advisor.potential_appointments.count + 1,start_time: start_time, end_time: end_time)
       redirect_to advisor_path(current_advisor)
     else

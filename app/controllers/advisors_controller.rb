@@ -79,22 +79,26 @@ class AdvisorsController < ApplicationController
       params[:other_expertise].each do |category_name|
         other_categories << category_name
       end
-      advisor.other_expertise = other_categories.join(",")
+      advisor.other_expertise = other_categories.join(", ")
     end
     advisor.category = Category.find_or_create_by(name: params[:category][:name])
     advisor.update(advisor_params)
     advisor.join_companies(params[:companies])
-    if advisor.years_of_experience == '< 5 years'
-      advisor.student_price = 30
-      advisor.regular_price = 40
-    elsif advisor.years_of_experience == '< 5 - 15 years'
-      advisor.student_price = 30
-      advisor.regular_price = 40
-    else
+    if params[:category][:name] == "Resume & Interview Preparation"
       advisor.student_price = 50
       advisor.regular_price = 60
+    else
+      if advisor.years_of_experience == '< 5 years'
+        advisor.student_price = 30
+        advisor.regular_price = 40
+      elsif advisor.years_of_experience == '5 - 15 years'
+        advisor.student_price = 30
+        advisor.regular_price = 40
+      else
+        advisor.student_price = 50
+        advisor.regular_price = 60
+      end
     end
-
     if advisor.save
       redirect_to advisor_path(advisor)
     else
