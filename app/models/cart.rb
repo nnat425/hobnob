@@ -63,6 +63,7 @@ def check_booked_status
 end
 
 end
+
 #rake jobs:work ... to test timer in development
 
 #Need to clear items from shopping cart
