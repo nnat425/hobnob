@@ -25,7 +25,7 @@
         <div class="row">
           <tbody>
             <tr>
-              <td><%= advisor.firstname %> </td>
+              <td><%= link_to advisor.firstname, advisor_path(advisor) %> </td>
               <td><%= advisor.lastname %></td>
               <td><%= advisor.email %></td>
               <td><%= advisor.alternative_email %></td>
