@@ -1,12 +1,11 @@
-<header class="edit_hero">
-  <img src="http://s3.amazonaws.com/hobnob-bucket-assets/ribbon-header.png"/>
-</header>
+<div class="row" id="ribbon-header">
+</div>
 
 <div class="container" id="checkout-container">
   <div class="row" id="orders-div-wrapper">
     <div id='order_summary' class='small-12 medium-12 large-6 columns'>
 
-      <p id='order_p'><%= "Order Summary (" + current_cart.potential_appointments.count.to_s + " items)" %></p>
+      <p id='order_p'>Order Summary (<%= current_cart.potential_appointments.count.to_s %> items)</p>
       <% current_user.carts.last.potential_appointments.each do |appointment| %>
       <div class='row' id='order_checkout'>
         <div class="small-3 medium-3 large-5 columns">

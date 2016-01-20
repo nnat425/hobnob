@@ -976,6 +976,7 @@ margin-bottom:3em;
 .new_order {
 border: 1px solid #ccc;
 border-radius: 5px;
+padding: 2em;
 }
 
 .edit_potential_appointment {
@@ -1286,10 +1287,6 @@ margin-bottom: 1em;
 
 }
 
-#order_div form {
-padding: 2em;
-}
-
 #order_div form label {
 text-transform: uppercase;
 letter-spacing: 1px;
@@ -1348,7 +1345,7 @@ margin-bottom: 1em;
 font-size:0.8em;
 }
 
-#order_p {
+p#order_p {
 color: #203451;
 font-weight: 300;
 font-family: "Open Sans";

@@ -34,13 +34,13 @@ class ApplicationController < ActionController::Base
 
 def total_for_student
   total = []
-  cart.potential_appoitments.each {|appointment|total.push(appointment.advisor.student_price)}
+  cart.potential_appointments.each {|appointment|total.push(appointment.advisor.student_price)}
   return total.reduce(:+)
 end
 
 def total_for_regular
   total = []
-  cart.potential_appoitments.each {|appointment|total.push(appointment.advisor.regular_price)}
+  cart.potential_appointments.each {|appointment|total.push(appointment.advisor.regular_price)}
   return total.reduce(:+)
 end
 
