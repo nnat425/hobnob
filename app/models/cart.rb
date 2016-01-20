@@ -17,20 +17,29 @@ class Cart < ActiveRecord::Base
  handle_asynchronously :create_timer, :run_at => Proc.new { 10.seconds.from_now }
 
  def total_price_student
-  total_price = []
-  self.potential_appointments.each do |potential_appointment|
-    total_price.push(Advisor.find_by(id: potential_appointment.advisor_id).student_price)
+   total = []
+   cart.potential_appointments.each do |appointment|
+    if appointment.advisor.category.name == "Resume & Interview Preparation"
+      total.push(50)
+    else
+      total.push(appointment.advisor.student_price)
+    end
   end
-  return (total_price).reduce(:+)
+  return total.reduce(:+)
 end
 
 
+
 def total_price_regular
-  total_price = []
-  self.potential_appointments.each do |potential_appointment|
-    total_price.push(Advisor.find_by(id: potential_appointment.advisor_id).regular_price)
+ total = []
+ self.potential_appointments.each do |appointment|
+  if appointment.advisor.category.name == "Resume & Interview Preparation"
+    total.push(60)
+  else
+    total.push(appointment.advisor.regular_price)
   end
-  return (total_price).reduce(:+)
+end
+return total.reduce(:+)
 end
 
 def update_booked_status

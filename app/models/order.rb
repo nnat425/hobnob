@@ -32,40 +32,42 @@ def total_for_student
     else
       total.push(appointment.advisor.student_price)
     end
-    return total.reduce(:+)
   end
+  return total.reduce(:+)
+end
 
-  def total_for_regular
-    total = []
-    cart.potential_appointments.each do |appointment|
-      if appointment.advisor.category.name == "Resume & Interview Preparation"
-        total.push(60)
-      else
-        total.push(appointment.advisor.regular_price)
-      end
-      return total.reduce(:+)
+def total_for_regular
+  total = []
+  cart.potential_appointments.each do |appointment|
+    if appointment.advisor.category.name == "Resume & Interview Preparation"
+      total.push(60)
+    else
+      total.push(appointment.advisor.regular_price)
     end
-
-    private
-
-    def validate_card
-      unless credit_card.valid?
-        credit_card.errors.full_messages.each do |message|
-          errors[:base] << message
-        end
-      end
-    end
-
-    def credit_card
-      @credit_card ||= ActiveMerchant::Billing::CreditCard.new(
-        :type               => card_type,
-        :number             => card_number,
-        :verification_value => card_verification,
-        :month              => card_expires_on.month,
-        :year               => card_expires_on.year,
-        :first_name         => first_name,
-        :last_name          => last_name
-        )
-    end
-
   end
+  return total.reduce(:+)
+end
+
+private
+
+def validate_card
+  unless credit_card.valid?
+    credit_card.errors.full_messages.each do |message|
+      errors[:base] << message
+    end
+  end
+end
+
+def credit_card
+  @credit_card ||= ActiveMerchant::Billing::CreditCard.new(
+    :type               => card_type,
+    :number             => card_number,
+    :verification_value => card_verification,
+    :month              => card_expires_on.month,
+    :year               => card_expires_on.year,
+    :first_name         => first_name,
+    :last_name          => last_name
+    )
+end
+
+end
