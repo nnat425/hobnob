@@ -595,7 +595,7 @@ font-size: 1em;
 
 #advisor-index-panel {
 padding: 1em;
-height: 250px;
+
 width: 100%;
 }
 
@@ -1041,6 +1041,7 @@ margin:10px;
 
 #available-times-right-btn {
   padding: auto;
+
 }
 .appointment_title {
 font-size: 2.5em;
@@ -1057,9 +1058,58 @@ color: #4F8A10;
 
 }
 
-#add_to_cart {
-  border-radius: 10px;
+#add_to_cart_btn {
+border: 1px solid #2996cc;
+text-align: center;
+margin-bottom: .5em;
+margin-top: 1.5em;
+font-size: .70em;
+border-radius: 5px;
+padding-left: 2.5em;
+padding-right: 2.5em;
+padding-top: 1.5em;
+padding-bottom: 1.5em;
+color: #fff;
+background-color: #2996cc;
+letter-spacing: 2px;
+text-transform: uppercase;
+width: 50%;
+font-family: "Open Sans";
+font-weight: 300;
+float: right;
 }
+
+
+#add_to_cart_btn:hover {
+background-color: #000;
+transition: all .3s ease-in-out;
+}
+
+#add_to_cart_btn_small {
+  border: 1px solid #2996cc;
+text-align: center;
+margin-bottom: .5em;
+margin-top: 1.5em;
+font-size: .70em;
+border-radius: 5px;
+padding-top: 1.5em;
+padding-bottom: 1.5em;
+color: #fff;
+background-color: #2996cc;
+letter-spacing: 2px;
+text-transform: uppercase;
+width: 100%;
+font-family: "Open Sans";
+font-weight: 300;
+}
+
+
+#add_to_cart_btn_small:hover {
+background-color: #000;
+transition: all .3s ease-in-out;
+}
+
+
 #flash_already_cart{
 color:red;
 font-family: "Open Sans";
@@ -1206,20 +1256,21 @@ display: inline;
 }
 
 #advisor-consultation-price-box .dollar-sign {
-font-weight: 500;
+font-weight: 300;
+font-family: "Open Sans";
 color: #C0C0C0;
 
 }
 
 .advisor-consultation-price {
-font-size: 3.0em;
+font-size: 1.5em;
 font-family: "Open Sans";
-font-weight: 200;
+font-weight: 300;
 color: #C0C0C0;
 }
 
 .advisor-consultation-label {
-font-size: .85em;
+font-size: .6em;
 text-transform: uppercase;
 color: #C0C0C0;
 }
@@ -2023,8 +2074,8 @@ background-color: #2996cc;
 letter-spacing: 2px;
 text-transform: uppercase;
 border: 1px solid #2996cc;
-margin-top: 2em;
-margin-bottom: 2.5em;
+margin-top: 1em;
+margin-bottom: 1em;
 
 }
 
