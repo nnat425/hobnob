@@ -24,40 +24,48 @@ class Order < ActiveRecord::Base
   end
 end
 
-def chece
-
 def total_for_student
   total = []
-  cart.potential_appointments.each {|appointment|total.push(appointment.advisor.student_price)}
-  return total.reduce(:+)
-end
-
-def total_for_regular
-  total = []
-  cart.potential_appointments.each {|appointment|total.push(appointment.advisor.regular_price)}
-  return total.reduce(:+)
-end
-
-private
-
-def validate_card
-  unless credit_card.valid?
-    credit_card.errors.full_messages.each do |message|
-      errors[:base] << message
+  cart.potential_appointments.each do |appointment|
+    if appointment.advisor.category.name == "Resume & Interview Preparation"
+      total.push(50)
+    else
+      total.push(appointment.advisor.student_price)
     end
+    return total.reduce(:+)
   end
-end
 
-def credit_card
-  @credit_card ||= ActiveMerchant::Billing::CreditCard.new(
-    :type               => card_type,
-    :number             => card_number,
-    :verification_value => card_verification,
-    :month              => card_expires_on.month,
-    :year               => card_expires_on.year,
-    :first_name         => first_name,
-    :last_name          => last_name
-    )
-end
+  def total_for_regular
+    total = []
+    cart.potential_appointments.each do |appointment|
+      if appointment.advisor.category.name == "Resume & Interview Preparation"
+        total.push(60)
+      else
+        total.push(appointment.advisor.regular_price)
+      end
+      return total.reduce(:+)
+    end
 
-end
+    private
+
+    def validate_card
+      unless credit_card.valid?
+        credit_card.errors.full_messages.each do |message|
+          errors[:base] << message
+        end
+      end
+    end
+
+    def credit_card
+      @credit_card ||= ActiveMerchant::Billing::CreditCard.new(
+        :type               => card_type,
+        :number             => card_number,
+        :verification_value => card_verification,
+        :month              => card_expires_on.month,
+        :year               => card_expires_on.year,
+        :first_name         => first_name,
+        :last_name          => last_name
+        )
+    end
+
+  end
