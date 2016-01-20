@@ -5,13 +5,13 @@ class ApplicationController < ActionController::Base
   helper_method :current_user, :logged_in?, :current_advisor, :current_cart, :cities, :admin_logged_in?
 
   def current_user
-    if logged_in?
+    if logged_in? && session[:class_type] == "User"
       return User.find_by(id: session[:user_or_advisor_id])
     end
   end
 
   def current_advisor
-    if logged_in?
+    if logged_in? && session[:class_type] == "Advisor"
       return Advisor.find_by(id: session[:user_or_advisor_id])
     end
   end
