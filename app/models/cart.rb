@@ -18,7 +18,7 @@ class Cart < ActiveRecord::Base
 
  def total_price_student
    total = []
-   cart.potential_appointments.each do |appointment|
+   self.potential_appointments.each do |appointment|
     if appointment.advisor.category.name == "Resume & Interview Preparation"
       total.push(50)
     else
