@@ -17,7 +17,7 @@ class CartsController < ApplicationController
         redirect_to advisor_path
       end
     else
-      redirect_to new_user_path
+      redirect_to login_path
     end
   end
 

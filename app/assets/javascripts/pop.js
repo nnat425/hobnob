@@ -36,7 +36,8 @@
                 e.preventDefault();
 
                 $('.mobile-header-menu').bPopup();
-            })
+            });
+
 
         });
 
