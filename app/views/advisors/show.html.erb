@@ -16,20 +16,20 @@
     </div>
     <div class="flash-holder">
       <% if current_advisor == @advisor %>
-        <% if current_advisor.publish == false %>
-          <p id="publish-profile-text">*Your profile is currently set to private. To set it to public, click below and please check PUBLISH</p>
-        <% end %>
-        <div class="button" id="advisor-edit-btn">
-          <%= link_to "Edit Profile", edit_advisor_path(current_advisor), class: "fa fa-cog" %>
-        </div>
-        <% end %>
+      <% if current_advisor.publish == false %>
+      <p id="publish-profile-text">*Your profile is currently set to private. To set it to public, click below and please check PUBLISH</p>
+      <% end %>
+      <div class="button" id="advisor-edit-btn">
+        <%= link_to "Edit Profile", edit_advisor_path(current_advisor), class: "fa fa-cog" %>
+      </div>
+      <% end %>
       <p id='flash_add_cart'><%=flash[:added_to_cart] %></p>
       <p id='flash_already_cart'><%=flash[:already_in_cart] %></p>
       <% if current_user %>
-        <div class="button" id="advisor-edit-btn">
-          <%= link_to "Go to Briefcase", cart_path(current_user.carts.last), class: "fa fa-briefcase" %>
-        </div>
-        <% end %>
+      <div class="button" id="advisor-edit-btn">
+        <%= link_to "Go to Briefcase", cart_path(current_user.carts.last), class: "fa fa-briefcase" %>
+      </div>
+      <% end %>
     </div>
 
   </div>
@@ -176,7 +176,7 @@
       <% else %>
       <div class='small-12 medium-12 large-6 columns' id="advisor-appointment-box">
         <p class="advisor-profile-header">Available Times</p>
-                <div id="advisor-times">
+        <div id="advisor-times">
           <% @advisor.potential_appointments.each do |pot_appointment| %>
 
           <% if pot_appointment.booked_status? == false %>
@@ -200,101 +200,97 @@
               </div>
             </div>
 
-              <% if logged_in? %>
-    <div class="hide-for-small small-6 medium-2 large-3 columns" id="advisor-consultation-price-box">
-      <p class="dollar-sign">$</p>
-      <% if current_user && current_user.student == true %>
-      <p class="advisor-consultation-price"><%= @advisor.student_price %></p>
-      <p class="advisor-consultation-label">consultation</p>
-      <% else %>
-      <p class="advisor-consultation-price"><%= @advisor.regular_price %></p>
-      <p class="advisor-consultation-label">consultation</p>
-      <% end %>
+            <% if logged_in? %>
+            <div class="hide-for-small small-6 medium-2 large-3 columns" id="advisor-consultation-price-box">
+              <p class="dollar-sign">$</p>
+              <% if current_user && current_user.student == true %>
+              <p class="advisor-consultation-price"><%= @advisor.student_price %></p>
+              <p class="advisor-consultation-label">consultation</p>
+              <% else %>
+              <p class="advisor-consultation-price"><%= @advisor.regular_price %></p>
+              <p class="advisor-consultation-label">consultation</p>
+              <% end %>
 
-    </div>
-    <% end %>
+            </div>
+            <% end %>
+            <% if !current_advisor %>
             <div class="small-12 medium-12 large-12 columns">
 
               <div class="row" id="available-times-right-btn">
                <%= form_for @advisor, url: cart_path, method: "patch" do |f| %>
-              <%= f.hidden_field :appointment_id, :value => pot_appointment.id %>
-              <%= f.submit "Get Connected", class: "hide-for-small", :id => "add_to_cart_btn"%>
-              <%= f.submit "Connect", class: "show-for-small", :id => "add_to_cart_btn_small"%>
-              <% end %>
-              </div>
+               <%= f.hidden_field :appointment_id, :value => pot_appointment.id %>
+               <%= f.submit "Get Connected", class: "hide-for-small", :id => "add_to_cart_btn"%>
+               <%= f.submit "Connect", class: "show-for-small", :id => "add_to_cart_btn_small"%>
+               <% end %>
+             </div>
+           </div>
+           <% end %>
+         </div>
+         <% end %>
+         <% end %>
+       </div>
+     </div>
+
+     <% end %>
+
+   </div>
+
+   <% if current_advisor == @advisor %>
+
+   <div class="row">
+    <div class="small-12 medium-12 large-12 columns" id="advisor-appointment-box">
+      <p class="advisor-profile-header">Available Times</p>
+
+      <div id="advisor-times">
+        <% @advisor.potential_appointments.each do |pot_appointment| %>
+
+        <% if pot_appointment.booked_status? == false %>
+        <div class="row" id="appointment-time-box">
+
+          <div class="small-12 medium-3 large-2 columns">
+
+            <div class="row" id="appointment-date">
+              <p class="appointment-day"><%= pot_appointment.start_time.strftime("%d") %></p>
+              <p class="appointment-month"><%= pot_appointment.start_time.strftime("%b") %></p>
+            </div>
+          </div>
+          <div class="small-12 medium-7 large-7 columns">
+            <div class="row">
+              <p class="appointment-time"><%= pot_appointment.start_time.strftime("%l:%M %p") %>
+                <%= pot_appointment.end_time.strftime("to %l:%M %p EST") %>
+              </p>
+              <p class='appointment_title'>Session: <%= pot_appointment.title %></p>
+              <p class="appointment-full-date"><%= pot_appointment.start_time.strftime("%A, %B %d, %Y") %>
+              </p>
+            </div>
+          </div>
+          <div class="small-12 medium-12 large-3 columns">
+
+
+           <% if pot_appointment.advisor_id == current_advisor.id && session[:class_type] == current_advisor.class.name %>
+           <div class="row">
+            <div class="small-12 medium-12 large-12 columns" id="edit-appt-btn">
+              <%= link_to "Edit",edit_potential_appointment_path(pot_appointment), class: "fa fa-edit" %>
+            </div>
+            <div class="small-12 medium-12 large-12 columns" id="edit-appt-btn">
+              <%= link_to "Delete",{:controller => 'potential_appointments', :action => 'destroy', :potential_appointment => pot_appointment.id}, :method => :delete, class: "fa fa-trash" %>
             </div>
           </div>
           <% end %>
-          <% end %>
         </div>
       </div>
+      <div class="edit_appointment_form_holder" id="#{pot_appointment.id}">
+
+      </div>
+
 
       <% end %>
-
+      <% end %>
     </div>
-
-    <% if current_advisor == @advisor %>
-
-    <div class="row">
-      <div class="small-12 medium-12 large-12 columns" id="advisor-appointment-box">
-        <p class="advisor-profile-header">Available Times</p>
-
-        <div id="advisor-times">
-          <% @advisor.potential_appointments.each do |pot_appointment| %>
-
-          <% if pot_appointment.booked_status? == false %>
-          <div class="row" id="appointment-time-box">
-
-            <div class="small-12 medium-3 large-2 columns">
-
-              <div class="row" id="appointment-date">
-                <p class="appointment-day"><%= pot_appointment.start_time.strftime("%d") %></p>
-                <p class="appointment-month"><%= pot_appointment.start_time.strftime("%b") %></p>
-              </div>
-            </div>
-            <div class="small-12 medium-7 large-7 columns">
-              <div class="row">
-                <p class="appointment-time"><%= pot_appointment.start_time.strftime("%l:%M %p") %>
-                  <%= pot_appointment.end_time.strftime("to %l:%M %p EST") %>
-                </p>
-                <p class='appointment_title'>Session: <%= pot_appointment.title %></p>
-                <p class="appointment-full-date"><%= pot_appointment.start_time.strftime("%A, %B %d, %Y") %>
-                </p>
-              </div>
-            </div>
-            <div class="small-12 medium-12 large-3 columns">
-              <% if current_advisor == nil %>
-              <div class="row" id="available-times-right-btn">
-               <%= form_for @advisor, url: cart_path, method: "patch" do |f| %>
-              <%= f.hidden_field :appointment_id, :value => pot_appointment.id %>
-              <%= f.submit "Get Connected", {:class => "button", :id => "add_to_cart"} %>
-              <% end %>
-              </div>
-              <% elsif %>
-              <% pot_appointment.advisor_id == current_advisor.id && session[:class_type] == current_advisor.class.name %>
-              <div class="row">
-                <div class="small-12 medium-12 large-12 columns" id="edit-appt-btn">
-                  <%= link_to "Edit",edit_potential_appointment_path(pot_appointment), class: "fa fa-edit" %>
-                </div>
-                <div class="small-12 medium-12 large-12 columns" id="edit-appt-btn">
-                  <%= link_to "Delete",{:controller => 'potential_appointments', :action => 'destroy', :potential_appointment => pot_appointment.id}, :method => :delete, class: "fa fa-trash" %>
-                </div>
-              </div>
-              <% end %>
-            </div>
-          </div>
- <div class="edit_appointment_form_holder" id="#{pot_appointment.id}">
-
-          </div>
-
-
-          <% end %>
-          <% end %>
-        </div>
-      </div>
-    </div>
-    <% end %>
   </div>
+</div>
+<% end %>
+</div>
 
 </div>
 
