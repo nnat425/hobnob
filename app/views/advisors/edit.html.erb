@@ -60,7 +60,7 @@
         </div>
       </div>
 
-       <div class="row">
+      <div class="row">
         <div class="small-11 small-centered medium-10 large-8 columns">
           <p class="form_subtitle">Part 1: Your Profile</p>
           <p id="form_note">*Information in this section will be displayed on the website.</p>
@@ -69,9 +69,9 @@
 
       <div class="row">
         <div class="small-11 small-centered medium-10 large-8 columns">
-            <div id="advisor-index-avatar">
-              <%= image_tag current_advisor.avatar.url(:medium) %>
-            </div>
+          <div id="advisor-index-avatar">
+            <%= image_tag current_advisor.avatar.url(:medium) %>
+          </div>
           <%= f.label "Upload a photo" %>
           <%= f.file_field :avatar %>
           <div class="spacer"></div>
@@ -130,29 +130,30 @@
         </div>
       </div>
 
-       <div class="row">
+      <div class="row">
         <div class="small-11 small-centered medium-10 large-8 columns">
           <p class="form_subtitle">Part 2: Other Information</p>
           <p id="form_note">*Information in this section will be displayed on the website.</p>
         </div>
       </div>
 
-       <div class="row">
+      <div class="row">
+
         <div class="small-11 small-centered medium-10 large-8 columns">
           <label>Other Areas of Expertise</label>
 
-            <p class="sublabel">Please select other areas, other than your current area, that you have experience or expertise in speaking with people.</p>
+          <p class="sublabel">Please select other areas, other than your current area, that you have experience or expertise in speaking with people.</p>
 
           <div class="row">
             <div class="small-1 medium-1 large-1 columns">
               <% if @other_categories != nil %>
-                <%= check_box_tag "other_expertise[]", "Investment/Wholesale Banking (sell side)", @other_categories.include?("Investment/Wholesale Banking (sell side)"), class: "category-checkbox" %>
+              <%= check_box_tag "other_expertise[]", "Investment/Wholesale Banking (sell side)", @other_categories.include?("Investment/Wholesale Banking (sell side)"), class: "category-checkbox" %>
               <% else %>
-                <%= check_box_tag "other_expertise[]", "Investment/Wholesale Banking (sell side)", false, class: "category-checkbox" %>
+              <%= check_box_tag "other_expertise[]", "Investment/Wholesale Banking (sell side)", false, class: "category-checkbox" %>
               <% end %>
             </div>
             <div class="small-11 medium-11 large-11 columns">
-              <p class="checkbox-label">Investment/Wholesale Banking (sell side) <%= link_to "","#", class: "fa fa-info-circle" %></p>
+              <p class="checkbox-label">Investment/Wholesale Banking (sell side) <%= link_to "","#", class: "fa fa-info-circle", id: "investment_banking_info_pop" %></p>
             </div>
           </div>
           <div class="row">
@@ -164,7 +165,7 @@
               <% end %>
             </div>
             <div class="small-11 medium-11 large-11 columns">
-              <p class="checkbox-label">Asset Management (buy side) <%= link_to "","#", class: "fa fa-info-circle" %></p>
+              <p class="checkbox-label">Asset Management (buy side) <%= link_to "","#", class: "fa fa-info-circle", id: "asset_management_info_pop" %></p>
             </div>
           </div>
           <div class="row">
@@ -176,7 +177,7 @@
               <% end %>
             </div>
             <div class="small-11 medium-11 large-11 columns">
-              <p class="checkbox-label">Corporate Finance <%= link_to "","#", class: "fa fa-info-circle" %></p>
+              <p class="checkbox-label">Corporate Finance <%= link_to "","#", class: "fa fa-info-circle", id: "corporate_finance_info_pop" %></p>
             </div>
           </div>
           <div class="row">
@@ -188,7 +189,7 @@
               <% end %>
             </div>
             <div class="small-11 medium-11 large-11 columns">
-              <p class="checkbox-label">Other Areas of Finance Expertise <%= link_to "","#", class: "fa fa-info-circle" %></p>
+              <p class="checkbox-label">Other Areas of Finance Expertise <%= link_to "","#", class: "fa fa-info-circle", id: "other_finance_info_pop" %></p>
             </div>
           </div>
           <div class="row">
@@ -200,17 +201,12 @@
               <% end %>
             </div>
             <div class="small-11 medium-11 large-11 columns">
-              <p class="checkbox-label">Resume & Interview Preparation <%= link_to "","#", class: "fa fa-info-circle" %></p>
+              <p class="checkbox-label">Resume & Interview Preparation <%= link_to "","#", class: "fa fa-info-circle", id: "resume_info_pop" %></p>
             </div>
           </div>
         </div>
       </div>
 
-      <%= render partial: "/categories/investment_banking" %>
-      <%= render partial: "/categories/asset_management" %>
-      <%= render partial: "/categories/corporate_finance" %>
-      <%= render partial: "/categories/other_finance" %>
-      <%= render partial: "/categories/resume_interview" %>
 
       <div class="row">
         <div class="small-11 small-centered medium-10 large-8 columns">
@@ -319,3 +315,9 @@
 </div>
 <% end %>
 
+
+        <%= render partial: "/categories/investment_banking" %>
+        <%= render partial: "/categories/asset_management" %>
+        <%= render partial: "/categories/corporate_finance" %>
+        <%= render partial: "/categories/other_finance" %>
+        <%= render partial: "/categories/resume_interview" %>

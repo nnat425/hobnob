@@ -2242,7 +2242,7 @@ margin-bottom: 2em;
 }
 
 
-.popup_header_text{
+p.popup_header_text{
 color: #2996cc;
 font-family: "Open Sans";
 font-weight: 300;
@@ -2397,7 +2397,7 @@ width: 25%;
 height: 25%;
 }
 
-.popup_sub_header{
+li.popup_sub_header{
   color: #2996cc;
   font-size: .9em;
   letter-spacing: 1px;
@@ -2406,3 +2406,11 @@ height: 25%;
   font-weight: 300;
 
 }
+
+.popup_div {
+  display: none;
+  padding: 1.5em;
+  border: 1px solid #C0C0C0;
+  background-color: #fff;
+}
+
