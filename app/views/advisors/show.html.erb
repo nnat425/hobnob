@@ -138,7 +138,16 @@
       <div class='small-12 medium-12 large-6 columns' id="appointment-form">
         <p class="advisor-profile-header">Create Connect Date & Time</p>
         <%= form_for @potential_appointment do |f| %>
-        <%= flash[:pick_date_or_enter_title] %>
+        <% if flash[:pick_date_or_enter_title] %>
+        <div class="row">
+          <div class="small-11 small-centered medium-10 medium-centered large-10 large-centered columns">
+            <div data-alert class="alert-box alert radius">
+              <%= flash[:pick_date_or_enter_title] %>
+            </div>
+          </div>
+        </div>
+        <% end %>
+
         <div class="row">
           <div class="small-11 small-centered medium-10 medium-centered large-10 large-centered columns">
             <%= f.label :title %>
@@ -279,9 +288,7 @@
           <% end %>
         </div>
       </div>
-      <div class="edit_appointment_form_holder" id="#{pot_appointment.id}">
 
-      </div>
 
 
       <% end %>
