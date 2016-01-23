@@ -155,7 +155,9 @@
             <div class="small-11 medium-11 large-11 columns">
               <p class="checkbox-label">Investment/Wholesale Banking (sell side) <%= link_to "","#", class: "fa fa-info-circle", id: "investment_banking_info_pop" %></p>
             </div>
+            <%= render partial: "/categories/investment_banking" %>
           </div>
+
           <div class="row">
             <div class="small-1 medium-1 large-1 columns">
               <% if @other_categories != nil %>
@@ -167,7 +169,9 @@
             <div class="small-11 medium-11 large-11 columns">
               <p class="checkbox-label">Asset Management (buy side) <%= link_to "","#", class: "fa fa-info-circle", id: "asset_management_info_pop" %></p>
             </div>
+            <%= render partial: "/categories/asset_management" %>
           </div>
+
           <div class="row">
             <div class="small-1 medium-1 large-1 columns">
               <% if @other_categories != nil %>
@@ -179,6 +183,7 @@
             <div class="small-11 medium-11 large-11 columns">
               <p class="checkbox-label">Corporate Finance <%= link_to "","#", class: "fa fa-info-circle", id: "corporate_finance_info_pop" %></p>
             </div>
+            <%= render partial: "/categories/corporate_finance" %>
           </div>
           <div class="row">
             <div class="small-1 medium-1 large-1 columns">
@@ -191,6 +196,7 @@
             <div class="small-11 medium-11 large-11 columns">
               <p class="checkbox-label">Other Areas of Finance Expertise <%= link_to "","#", class: "fa fa-info-circle", id: "other_finance_info_pop" %></p>
             </div>
+            <%= render partial: "/categories/other_finance" %>
           </div>
           <div class="row">
             <div class="small-1 medium-1 large-1 columns">
@@ -203,6 +209,7 @@
             <div class="small-11 medium-11 large-11 columns">
               <p class="checkbox-label">Resume & Interview Preparation <%= link_to "","#", class: "fa fa-info-circle", id: "resume_info_pop" %></p>
             </div>
+            <%= render partial: "/categories/resume_interview" %>
           </div>
         </div>
       </div>
@@ -315,9 +322,3 @@
 </div>
 <% end %>
 
-
-        <%= render partial: "/categories/investment_banking" %>
-        <%= render partial: "/categories/asset_management" %>
-        <%= render partial: "/categories/corporate_finance" %>
-        <%= render partial: "/categories/other_finance" %>
-        <%= render partial: "/categories/resume_interview" %>
