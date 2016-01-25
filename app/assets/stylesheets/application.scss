@@ -2408,7 +2408,11 @@ li.popup_sub_header{
 }
 
 .popup_div {
+  display: none;
   padding: 1.5em;
   background-color: #fff;
 }
 
+.fa-info-circle {
+  color: #C0C0C0;
+}
