@@ -19,8 +19,8 @@
       <% if current_advisor.publish == false %>
       <p id="publish-profile-text">*Your profile is currently set to private. To set it to public, click below and please check PUBLISH</p>
       <% end %>
-      <div class="button" id="advisor-edit-btn">
-        <%= link_to "Edit Profile", edit_advisor_path(current_advisor), class: "fa fa-cog" %>
+      <div id="advisor-edit-btn">
+        <%= link_to "Edit Profile", edit_advisor_path(current_advisor), class: "button" %>
       </div>
       <% end %>
       <p id='flash_add_cart'><%=flash[:added_to_cart] %></p>

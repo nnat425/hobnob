@@ -2232,39 +2232,43 @@ color: #C0C0C0;
 
 #element_to_pop_up {
 display:none;
-
-border-radius: 1.5em;
+background-color: #fff;
+border: 1px solid #C0C0C0;
 padding: 1.5em;
+margin-top: 2em;
+margin-bottom: 2em;
 
 
 }
 
 
-.popup_header_text{
+p.popup_header_text{
 color: #2996cc;
 font-family: "Open Sans";
 font-weight: 300;
 letter-spacing: 1px;
 text-transform: uppercase;
-font-size: 1.25em;
+font-size: 1.1em;
 }
 
 .popup-subtopic-list{
-font-size:1em;
+font-size:.85em;
 font-family: "Open Sans";
 font-weight: 300;
 list-style-type:none;
 float:left;
 letter-spacing: 1px;
-color: #fff;
+color: #000;
 }
 
 
 #popup-levels {
 display:none;
-border-radius: 1.5em;
+border: 1px solid black;
 padding: 1.5em;
-background-color: #000;
+margin-top: 2em;
+margin-bottom: 2em;
+background-color: #fff;
 
 
 }
@@ -2274,16 +2278,16 @@ font-family: "Open Sans";
 font-weight: 300;
 letter-spacing: 1px;
 text-transform: uppercase;
-font-size: 2.5em;
+font-size: 1.1em;
 text-align: center;
 }
 
 .popup-info-text {
-font-size:1.25em;
+font-size: .9em;
 font-family: "Open Sans";
 font-weight: 300;
 letter-spacing: 1px;
-color: #C0C0C0;
+color: #000;
 text-align: center;
 }
 
@@ -2393,7 +2397,22 @@ width: 25%;
 height: 25%;
 }
 
-.popup_sub_header{
-  color:white
+li.popup_sub_header{
+  color: #2996cc;
+  font-size: .9em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: "Open Sans";
+  font-weight: 300;
 
+}
+
+.popup_div {
+  display: none;
+  padding: 1.5em;
+  background-color: #fff;
+}
+
+.fa-info-circle {
+  color: #C0C0C0;
 }

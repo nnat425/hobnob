@@ -68,7 +68,31 @@ $(document).ready(function(){
     var id = $(this).parent().parent().attr("id");
     $("#"+id).slideUp();
     $("#add-comment-btn").show();
+  });
 
+  $("#edit_signup").on("click", "#investment_banking_info_pop", function(event) {
+    event.preventDefault();
+    $("#investment_banking_popup").slideToggle();
+  });
+
+  $("#edit_signup").on("click", "#asset_management_info_pop", function(event) {
+    event.preventDefault();
+    $("#asset_management_popup").slideToggle();
+  });
+
+  $("#edit_signup").on("click", "#corporate_finance_info_pop", function(event) {
+    event.preventDefault();
+    $("#corporate_finance_popup").slideToggle();
+  });
+
+  $("#edit_signup").on("click", "#other_finance_info_pop", function(event) {
+    event.preventDefault();
+    $("#other_finance_popup").slideToggle();
+  });
+
+  $("#edit_signup").on("click", "#resume_info_pop", function(event) {
+    event.preventDefault();
+    $("#resume_popup").slideToggle();
   });
 
 });
