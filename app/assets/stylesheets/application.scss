@@ -522,7 +522,6 @@ padding: 2em;
 #about_container_1_subtext p {
 text-align:justify;
 font-family: "Open Sans";
-color: #000;
 font-weight: 300;
 letter-spacing: 1px;
 font-size: 1.1em;
@@ -1888,6 +1887,8 @@ padding-bottom: .5em;
 }
 
 
+
+
 .standard-heading {
 color: #004b7e;
 font-family: "Open Sans";
@@ -2416,4 +2417,8 @@ li.popup_sub_header{
 
 .fa-info-circle {
   color: #C0C0C0;
+}
+
+#about_toggle{
+  color:white;
 }
