@@ -51,6 +51,17 @@
 
             });
 
+               $('.about_container_2').on('click', '#fees',function(e) {
+
+                // Prevents the default action to be triggered.
+                e.preventDefault();
+
+                // Triggering bPopup when click event is fired
+                $('#fee_to_pop_up').bPopup();
+
+            });
+
+
             $(".menu").on('click', ".mobile-header-dropdown", function(e) {
 
                 e.preventDefault();
