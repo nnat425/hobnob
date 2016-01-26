@@ -21,6 +21,16 @@
 
             });
 
+            $('.about_container_2').on('click', '#locations',function(e) {
+
+                // Prevents the default action to be triggered.
+                e.preventDefault();
+
+                // Triggering bPopup when click event is fired
+                $('#location_to_pop_up').bPopup();
+
+            });
+
             $('.about_container_2').on('click', '#levels-btn',function(e) {
 
                 // Prevents the default action to be triggered.
