@@ -30,6 +30,15 @@ $(document).ready(function(){
     $('.b-modal').hide();
   });
 
+  $('#questions').on("click",function(){
+    $('#question_to_pop_up').show();
+    $('.b-modal').show();
+    console.log("WTF");
+  });
+  $('#question_to_pop_up').click(function(){
+    $('#question_to_pop_up').hide();
+    $('.b-modal').hide();
+  });
 
 
 
