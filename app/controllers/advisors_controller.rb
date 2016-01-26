@@ -48,7 +48,7 @@ class AdvisorsController < ApplicationController
       session[:user_or_advisor_id] = advisor.id
       session[:class_type] = advisor.class.name
       AdvisorMailer.email_verification(advisor).deliver_now
-      flash[:thank_you] = "Thank you! Please check your email to verify your account."
+      flash[:thank_you] = "Thank you!"
       redirect_to edit_advisor_path(advisor)
     else
       flash[:errors] = advisor.errors.full_messages

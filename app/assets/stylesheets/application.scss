@@ -275,11 +275,22 @@ background: none;
 background-color: #fff;
 color: #f04124;
 border-top: 1px solid #f04124;
-border-borrom: 1px solid #f04124;
+border-bottom: 1px solid #f04124;
+letter-spacing: 1px;
+text-align: center;
+}
+
+&.success {
+background-color: #fff;
+color: #43AC6A;
+border-top: 1px solid #43AC6A;
+border-bottom: 1px solid #43AC6A;
 letter-spacing: 1px;
 text-align: center;
 }
 }
+
+
 
 .signup-panel {
 border-radius: 5px;
@@ -434,14 +445,14 @@ font-size: 1.2em;
 #form_directions {
 letter-spacing: 1px;
 font-weight: 200;
-font-size: 1.2rem;
+font-size: .85rem;
 }
 
 #form_note {
 margin-top: -1.5rem;
 color: #C0C0C0;
 letter-spacing: 1px;
-font-size: 1rem;
+font-size: .85rem;
 font-weight: 200;
 
 }
@@ -455,38 +466,44 @@ margin-top: 1em;
 margin-bottom: 1em;
 }
 
-
+#edit-advisor-container {
+  background-color: #F8F8F8;
+}
 #edit-panel {
 background-color: #fff;
 border: 1px solid #ccc;
-padding: 15px;
+padding: 2em;
 margin: auto;
-margin-top: 1em;
-margin-bottom: 1em;
-padding-top: 2em;
--webkit-box-shadow: 4px 4px 4px 0px #ccc;
--moz-box-shadow:    4px 4px 4px 0px #ccc;
-box-shadow:         4px 4px 4px 0px #ccc;
+margin-top: 2em;
+margin-bottom: 2em;
 }
 
+#edit-panel form {
+  padding: 2em;
+}
 #edit-panel form input {
 padding: 1em;
-height: 3.5em;
-font-size: 1em;
+height: 3.25em;
+font-size: .75em;
 border-radius: 5px;
 }
 
 #edit-panel form select {
 padding: 1em;
-height: 3.5em;
-font-size: 1em;
+height: 3.25em;
+font-size: .75em;
 border-radius: 5px;
 }
 
 #edit-panel form label {
 font-weight: bold;
 letter-spacing: 1px;
+font-family: "Open Sans";
+font-size: .75em;
+float: right;
+
 }
+
 
 input[type=text], textarea {
 -webkit-transition: all 0.30s ease-in-out;
@@ -1671,20 +1688,6 @@ padding-bottom: 0.5rem;
 transition: all .3s ease-in-out;
 border-bottom: 2px solid #C0C0C0;
 }
-
-#edit-panel {
-background-color: #fff;
-border: 1px solid #ccc;
-padding: 15px;
-margin: auto;
-margin-top: 1em;
-margin-bottom: 1em;
-padding-top: 2em;
--webkit-box-shadow: 4px 4px 4px 0px #ccc;
--moz-box-shadow:    4px 4px 4px 0px #ccc;
-box-shadow:         4px 4px 4px 0px #ccc;
-}
-
 
 
 #home-container {
