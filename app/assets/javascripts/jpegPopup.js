@@ -20,6 +20,15 @@ $(document).ready(function(){
     $('.b-modal').hide();
   });
 
+  $('#years').on("click",function(){
+    $('#year_to_pop_up').show();
+    $('.b-modal').show();
+    console.log("WTF");
+  });
+  $('#year_to_pop_up').click(function(){
+    $('#year_to_pop_up').hide();
+    $('.b-modal').hide();
+  });
 
 
 
