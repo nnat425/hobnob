@@ -519,6 +519,10 @@ border-bottom: 1px solid #eeeeee;
 padding: 2em;
 }
 
+.about_container_1:hover{
+  color:black;
+}
+
 #about_container_1_subtext p {
 text-align:justify;
 font-family: "Open Sans";
@@ -2427,6 +2431,3 @@ li.popup_sub_header{
   color: #C0C0C0;
 }
 
-#about_toggle{
-  color:white;
-}

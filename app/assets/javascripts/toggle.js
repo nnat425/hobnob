@@ -18,8 +18,10 @@ $(document).ready(function(){
   });
 
   $(".home-box-toggle").hide();
+  $(".about-toggle").hide();
 
-  $( ".home-subheader").hover(function() {
+
+  $( ".home-subheader, .about_container_1").hover(function() {
     var id = $(this).attr('id');
     $(this).css('border','2px solid #87CEFF');
     $(this).css("box-shadow","0 0 5px rgba(81, 203, 238, 1)");
@@ -35,6 +37,8 @@ $(document).ready(function(){
     $( "#info-" + id).slideDown();
 
   });
+
+
 
   $("#categories-toggle").hide();
   $("#locations-toggle").hide();
