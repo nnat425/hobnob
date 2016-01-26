@@ -41,13 +41,13 @@
 
             });
 
-            $('.about_container_2').on('click', '#levels-btn',function(e) {
+            $('.about_container_2').on('click', '#questions',function(e) {
 
                 // Prevents the default action to be triggered.
                 e.preventDefault();
 
                 // Triggering bPopup when click event is fired
-                $('#popup-levels').bPopup();
+                $('#question_to_pop_up').bPopup();
 
             });
 
