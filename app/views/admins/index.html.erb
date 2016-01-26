@@ -37,7 +37,7 @@
               <% else %>
               <td><%= link_to "",  {:action => :de_activate, :controller => :advisors, :id => advisor.id}, :method => :patch, class: "fa fa-check" %></td>
               <% end %>
-              <td><%= link_to "", advisor, :data => {:confirm => 'Are you sure you want to remove this advisor from the Network? This cannot be undone.'}, :method => :destroy, class: "fa fa-trash" %> </td>
+              <td><%= link_to "", advisor, :data => {:confirm => 'Are you sure you want to remove this advisor from the Network? This cannot be undone.'}, :method => :destro, class: "fa fa-trash" %> </td>
             </tr>
           </tbody>
         </div>
