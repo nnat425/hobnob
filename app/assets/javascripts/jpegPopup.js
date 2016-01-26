@@ -1,46 +1,37 @@
 $(document).ready(function(){
 
   $('#area_of_expertise').on("click",function(){
-    $('#element_to_pop_up').show();
+    $('#blanket,#element_to_pop_up').show();
   });
-  $('#element_to_pop_up').click(function(){
-    $('#element_to_pop_up').hide();
-    $('.b-modal').hide();
+  $('#element_to_pop_up,#blanket').click(function(){
+    $('#element_to_pop_up,#blanket').hide();
   });
 
   $('#locations').on("click",function(){
-    $('#location_to_pop_up').show();
+    $('#blanket,#location_to_pop_up').show();
   });
-  $('#location_to_pop_up').click(function(){
-    $('#location_to_pop_up').hide();
-    $('.b-modal').hide();
+  $('#location_to_pop_up,#blanket').click(function(){
+    $('#location_to_pop_up,#blanket').hide();
   });
 
   $('#years').on("click",function(){
-    $('#year_to_pop_up').show();
+    $('#year_to_pop_up,#blanket').show();
   });
-  $('#year_to_pop_up').click(function(){
-    $('#year_to_pop_up').hide();
-    $('.b-modal').hide();
+  $('#year_to_pop_up,#blanket').click(function(){
+    $('#year_to_pop_up,#blanket').hide();
   });
 
   $('#questions').on("click",function(){
-    $('#question_to_pop_up').show();
+    $('#question_to_pop_up,#blanket').show();
   });
-  $('#question_to_pop_up').click(function(){
-    $('#question_to_pop_up').hide();
-    $('.b-modal').hide();
+  $('#question_to_pop_up,#blanket').click(function(){
+    $('#question_to_pop_up,#blanket').hide();
   });
 
   $('#fees').on("click",function(){
-    $('#fee_to_pop_up').show();
+    $('#fee_to_pop_up,#blanket').show();
   });
-  $('#fee_to_pop_up').click(function(){
-    $('#fee_to_pop_up').hide();
-    $('.b-modal').hide();
+  $('#fee_to_pop_up,#blanket').click(function(){
+    $('#fee_to_pop_up,#blanket').hide();
   });
-
-
-
-
 });
