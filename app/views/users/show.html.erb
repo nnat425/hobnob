@@ -12,7 +12,7 @@
       <div class="small-12 medium-12 large-12 columns" id="profile-header">
         <p>Basic Info</p>
         <% if session[:user_or_advisor_id] == @user.id && session[:class_type] == @user.class.name %>
-        <%= link_to "Edit Profile", edit_user_path(current_user), id: "user-edit-profile-btn", class: "fa fa-edit fa-lg" %>
+
         <% end %>
       </div>
       <div class="small-12 medium-12 large-12 columns">
