@@ -2276,7 +2276,8 @@ margin-top: 2em;
 margin-bottom: 2em;
 position: fixed;
 z-index:1000;
-top:1%;
+top:6%;
+left:5%;
 }
 
 #location_to_pop_up {
@@ -2286,7 +2287,8 @@ margin-top: 2em;
 margin-bottom: 2em;
 position: fixed;
 z-index:1000;
-top:1%;
+top:6%;
+left:5%;
 }
 
 #year_to_pop_up {
@@ -2296,11 +2298,17 @@ margin-top: 2em;
 margin-bottom: 2em;
 position: fixed;
 z-index:1000;
-top:1%;
+top:6%;
+left:5%;
 }
 
 #question_to_pop_up{
 display:none;
+position: fixed;
+z-index:1000;
+top:20%;
+left:20%;
+
 }
 
 .question-pic{
@@ -2309,7 +2317,10 @@ border: solid #2996cc 1px;;
 
 #fee_to_pop_up{
 display:none;
-margin-right:28em;
+left:2%;
+position: fixed;
+z-index:1000;
+top:12%;
 }
 
 .fee-pic{
