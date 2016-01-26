@@ -323,15 +323,16 @@
           <%= f.label "Previous Companies" %>
         </div>
         <div class="small-9 medium-9 large-9 columns">
-          <% if @advisor.other_companies == nil %>
-          <%= text_field_tag "companies[]",nil,placeholder: "1. Company Name" %>
-          <%= text_field_tag "companies[]",nil,placeholder: "2. Company Name" %>
-          <%= text_field_tag "companies[]",nil,placeholder: "3. Company Name" %>
+          <% if @advisor.previous_companies != [] %>
+          <% @advisor.previous_companies.each do |company|  %>
+            <%= text_field_tag "previous_company[name]",company.name,placeholder: company.name %>
+            <%= text_field_tag "prevous_company[job_title]",company.job_title, placeholder: company.job_title %>
+            <%= text_area("previous_company[roles]", company.roles, cols:10, rows: 10) %>
+            <% end %>
           <% else %>
-
-          <%= text_field_tag "companies[]",@advisor.other_companies.split(',')[0],placeholder: "1. Company Name" %>
-          <%= text_field_tag "companies[]",@advisor.other_companies.split(',')[1],placeholder: "2. Company Name" %>
-          <%= text_field_tag "companies[]",@advisor.other_companies.split(',')[2],placeholder: "3. Company Name" %>
+          <%= text_field_tag "previous_company[name]", "Company Name" %>
+          <%= text_field_tag "prevous_company[job_title]", "Job Title" %>
+          <%= text_area_tag "previous_company[roles]", 'Brief outline of role and responsibilities and/or what expertise you gained:', size: "10x10" %>
           <% end %>
         </div>
       </div>

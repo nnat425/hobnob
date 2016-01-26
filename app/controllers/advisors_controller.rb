@@ -99,6 +99,7 @@ class AdvisorsController < ApplicationController
         advisor.regular_price = 60
       end
     end
+
     if advisor.save
       redirect_to advisor_path(advisor)
     else
