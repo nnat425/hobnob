@@ -538,7 +538,7 @@ text-align: center;
 }
 
 .about_container_2 {
-background-color:#282828;
+background-color:black;
 background-size: cover;
 overflow: hidden;
 margin-top:5em;
@@ -559,7 +559,7 @@ letter-spacing: 2px;
 }
 
 #about-box{
-  border-right: solid
+  border-right: solid #2996cc;
 }
 
 #about-box h1 {
@@ -582,6 +582,28 @@ text-align: center;
 margin-bottom: 1.5em;
 
 }
+
+#about-box-3 h1 {
+text-align: center;
+margin-bottom: 1em;
+}
+
+#about-box-3 h1{
+color: #fff;
+font-weight: 300;
+}
+
+#about-box-3 h3 {
+color: #fff;
+font-family: "Open Sans";
+font-weight: 300;
+text-transform: uppercase;
+letter-spacing: 2px;
+text-align: center;
+margin-bottom: 1.5em;
+
+}
+
 
 #network-ribbon-header {
 background-color: black;
