@@ -68,7 +68,7 @@ class AdvisorsController < ApplicationController
   end
 
   def edit
-    @advisor = current_advisor
+    @advisor = Advisor.find_by(id: params[:id])
     @other_categories = @advisor.other_expertise
   end
 
