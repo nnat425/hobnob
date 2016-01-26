@@ -11,7 +11,7 @@
 
             // Binding a click event
             // From jQuery v.1.7.0 use .on() instead of .bind()
-            $('.about_container_2').on('click', '#my-button',function(e) {
+            $('.about_container_2').on('click', '#area_of_expertise',function(e) {
 
                 // Prevents the default action to be triggered.
                 e.preventDefault();
