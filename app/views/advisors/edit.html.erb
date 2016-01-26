@@ -332,7 +332,8 @@
           <% else %>
           <%= text_field_tag "previous_company[name]", "Company Name" %>
           <%= text_field_tag "prevous_company[job_title]", "Job Title" %>
-          <%= text_area_tag "previous_company[roles]", 'Brief outline of role and responsibilities and/or what expertise you gained:', size: "10x10" %>
+          <p class="sublabel">Brief outline of role and responsibilities and/or what expertise you gained:</p>
+          <%= text_area_tag "previous_company[roles]", '', size: "10x10" %>
           <% end %>
         </div>
       </div>

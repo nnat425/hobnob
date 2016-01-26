@@ -519,6 +519,8 @@ p.form-mini-info {
   color: #C0C0C0;
 
 }
+
+
 input[type=text], textarea {
 -webkit-transition: all 0.30s ease-in-out;
 -moz-transition: all 0.30s ease-in-out;
@@ -528,6 +530,8 @@ outline: none;
 padding: 3px 0px 3px 3px;
 margin: 5px 1px 3px 0px;
 border: 1px solid #DDDDDD;
+color: #C0C0C0;
+font-size: .75em;
 }
 
 input[type=text]:focus, textarea:focus {
