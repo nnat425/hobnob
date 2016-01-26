@@ -1,5 +1,5 @@
 class Advisor < ActiveRecord::Base
-  belongs_to :category
+  belongs_to :category, :dependent => :destroy
   has_many :potential_appointments
 
   validates :email, :presence => true
