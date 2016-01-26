@@ -99,7 +99,9 @@ class AdvisorsController < ApplicationController
         advisor.regular_price = 60
       end
     end
-
+    if params[:previous_company]
+      advisor.previous_companies.find_or_create_by(name: params[:previous_company][:name], job_title: params[:previous_company][:job_title], roles: params[:previous_company][:roles])
+    end
     if advisor.save
       redirect_to advisor_path(advisor)
     else
