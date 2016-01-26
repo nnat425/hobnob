@@ -16,36 +16,41 @@
       </div>
       <% end %>
 
+
+      <%= form_for @advisor, url: advisor_path(@advisor), html: { multipart: true, :class => "custom", :id => "edit_signup" } do |f| %>
+      <%= f.hidden_field :password_confirmation,:value => @advisor.password_digest %>
+      <%= f.hidden_field :email_confirmation, :value => @advisor.email %>
+
       <div class="row">
-        <div class="small-11 small-centered medium-10 medium-centered large-8 large-centered columns" id="page_header">
+        <div class="small-12 small-centered medium-12 medium-centered large-12 large-centered columns" id="page_header">
           <h1>Your Network Profile</h1>
         </div>
       </div>
 
-      <div class="row">
-        <div class="small-11 small-centered medium-10 large-8 columns">
-          <p id="form_directions">In order for HOB NOB to reach you, please provide the following information.</p>
-          <p id="form_note">*The information in this section will not be shown on the website</p>
-        </div>
-      </div>
+
 
       <% if flash[:errors] %>
       <% flash[:errors].each do |msg| %>
       <div class="row">
-        <div class="small-11 small-centered medium-10 medium-centered large-8 large-centered columns">
+        <div class="small-12 small-centered medium-12 medium-centered large-12 large-centered columns">
           <div data-alert class="alert-box alert radius">
             <%= msg %>
           </div>
         </div>
       </div>
-
       <% end %>
-
       <% end %>
-      <%= form_for @advisor, url: advisor_path(@advisor), html: { multipart: true, :class => "custom", :id => "edit_signup" } do |f| %>
-      <%= f.hidden_field :password_confirmation,:value => @advisor.password_digest %>
-      <%= f.hidden_field :email_confirmation, :value => @advisor.email %>
+      <div class="row">
+        <div class="small-12 small-centered medium-12 large-12 columns" id="line-break">
+        </div>
+      </div>
 
+      <div class="row">
+        <div class="small-12 small-centered medium-12 large-12 large-centered columns">
+          <p id="form_directions">In order for HOB NOB to reach you, please provide the following information.</p>
+          <p id="form_note">*The information in this section will not be shown on the website</p>
+        </div>
+      </div>
 
       <div class="row">
         <div class="small-3 medium-3 large-3 columns">
@@ -65,12 +70,31 @@
         </div>
       </div>
 
+
+
       <div class="row">
-        <div class="small-11 small-centered medium-10 large-8 columns">
-          <p class="form_subtitle">Part 1: Your Profile</p>
+        <div class="small-12 small-centered medium-12 large-12 columns" id="line-break">
+        </div>
+      </div>
+
+      <div class="row" id="edit-advisor-directions">
+        <div class="small-12 small-centered medium-12 large-12 columns">
+          <p id="form_directions">There are 3 parts to Creating Your Profile</p>
+          <p id="form_note">PART ONE: create a mini profile that will appear on the NETWORK page</p>
+          <p id="form_note">PART TWO: create a more detailed profile, that people will see when they click MORE DETAIL</p>
+          <p id="form_note">PART THREE: using the calendar, create available dates and times</p>
+        </div>
+      </div>
+
+
+
+      <div class="row">
+        <div class="small-12 small-centered medium-12 large-12 columns">
+          <p class="form_subtitle">Part 1: Creating Your Mini Profile</p>
           <p id="form_note">*Information in this section will be displayed on the website.</p>
         </div>
       </div>
+
 
       <div class="row">
         <div class="small-3 medium-3 large-3 columns">
@@ -102,19 +126,27 @@
         </div>
       </div>
 
+
       <div class="row">
         <div class="small-3 medium-3 large-3 columns">
           <label>Current Area of Expertise</label>
         </div>
         <div class="small-9 medium-9 large-9 columns">
           <%= select(:category, :name,['Investment/Wholesale Banking (sell side)', 'Asset Management (buy side)', 'Corporate Finance', 'Other Areas of Finance Expertise', 'Resume & Interview Preparation']) %>
+          <div class="row">
+            <div class="small-12 medium-12 large-12 columns">
+              <p class="form-mini-info">Please click <%= link_to "HERE","#" %> to see how we divided the Finance roles</p>
+            </div>
+          </div>
         </div>
       </div>
 
 
+
+
       <div class="row">
         <div class="small-3 medium-3 large-3 columns">
-          <%= f.label "Location" %>
+          <%= f.label "Current Location" %>
         </div>
         <div class="small-9 medium-9 large-9 columns">
           <%= f.select :location, options_for_select(cities) %>
@@ -143,8 +175,8 @@
       </div>
 
       <div class="row">
-        <div class="small-11 small-centered medium-10 large-8 columns">
-          <p class="form_subtitle">Part 2: Other Information</p>
+        <div class="small-12 medium-12 large-12 columns">
+          <p class="form_subtitle">Part 2: Creating Your More Detailed Profile</p>
           <p id="form_note">*Information in this section will be displayed on the website.</p>
         </div>
       </div>
@@ -155,7 +187,7 @@
           <label>Other Areas of Expertise</label>
         </div>
         <div class="small-9 medium-9 large-9 columns">
-          <p class="sublabel">Please select other areas, other than your current area, that you have experience or expertise in speaking with people.</p>
+          <p class="sublabel">Please select other areas of expertise.</p>
 
           <div class="row">
             <div class="small-2 medium-2 large-2 columns">
@@ -228,7 +260,12 @@
               <% end %>
             </div>
             <div class="small-10 medium-10 large-10 columns">
-              <p class="checkbox-label">Resume & Interview Preparation <%= link_to "","#", class: "fa fa-info-circle", id: "resume_info_pop" %></p>
+              <p class="checkbox-label">*Resume & Interview Preparation <%= link_to "","#", class: "fa fa-info-circle", id: "resume_info_pop" %></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-12 medium-12 large-12 columns">
+              <p class="form-mini-info">*Please note that we have experts in this area on the Network but if you feel that you would be willing to speak with people about these topics, please add it to your other area of expertise.</p>
             </div>
           </div>
           <div class="row">
@@ -240,18 +277,25 @@
 
       <div class="row">
         <div class="small-3 medium-3 large-3 columns">
-          <%= f.label "Current Company (General Listing)" %>
+          <%= f.label "Current Company*" %>
         </div>
         <div class="small-9 medium-9 large-9 columns">
           <%= f.text_field :general_company, placeholder: "Ex. Investment Bank, Mining Company, Retail Organization, etc" %>
+          <div class="row">
+            <div class="small-12 medium-12 large-12 columns">
+              <p class="form-mini-info">*Do not enter the actual company name. This will be a generic listing: Investment Bank or Mining company or Retail organization</p>
+            </div>
+          </div>
         </div>
       </div>
+
 
       <div class="row">
         <div class="small-3 medium-3 large-3 columns">
           <%= f.label "Job Description" %>
         </div>
         <div class="small-9 medium-9 large-9 columns">
+          <p class="sublabel">Current brief outline of role and responsibilities and/or what you are learning at your current role:</p>
           <%= f.text_area(:job_description, cols:10, rows: 10) %>
         </div>
       </div>
@@ -303,7 +347,7 @@
           <%= f.label "Other Information" %>
         </div>
         <div class="small-9 medium-9 large-9 columns">
-          <p class="sublabel">Think about why people would want to speak with you about their career options. Many people viewing your profile will want to know about you and your career and will want to know what career topics you want to share: relocation, promotions, being effective at your role, summer internships, dealing with a difficult boss, managing your time versus life demands, making the most of your internship, your current company, why you like what you do, the finance industry as a whole, coming from a non-traditional background, transitioning from one area to another, overcoming obstacles in life, dealing with diversity issues, finding the best fit for your skill set.</p>
+          <p class="sublabel">Many people viewing your profile will want to know about you and your career and will want to know what career topics you want to share: relocation, promotions, being effective at your role, summer internships, dealing with a difficult boss, work – life balance, making the most of your internship, your current company, why you like what you do, the finance industry as a whole, coming from a non-traditional background, transitioning from one area to another, overcoming obstacles in life, dealing with diversity in the workplace, finding the best fit for your skill set. These are examples and please add your own.</p>
           <%= f.text_area(:interesting_facts, cols:10, rows: 10) %>
         </div>
       </div>
@@ -312,7 +356,7 @@
 
       <div class="row">
         <div class="small-3 medium-3 large-3 columns">
-          <label>Publish?</label>
+          <label>Publish?*</label>
         </div>
         <div class="small-9 medium-9 large-9 columns">
           <div class="row" id="publish-radio">
@@ -321,19 +365,26 @@
           <div class="row" id="publish-radio">
             <p class="yes-no-choice-text"><%= radio_button("advisor", "publish", false) %> No</p>
           </div>
-          <p id="form_note">*Your profile will remain private until you have verified your email, published your profile, AND have been verified by the Admin.</p>
+          <p class="form-mini-info">*Your profile will remain private until you have published your profile, AND have been verified by the Admin.</p>
         </div>
       </div>
 
       <div class="row">
-        <div class="small-11 small-centered medium-10 large-8 columns" id='pro'>
-          <p class="sublabel">PLEASE REVIEW ALL ABOVE INFORMATION AND IF YOU ARE SATISFIED WITH THE CONTENT, CLICK ADD PROFILE. YOU WILL BE DIRECTED TO THE NEXT PAGE TO SEE HOW YOUR INFORMATION WILL APPEAR ON THE SITE. AS A FINAL STEP, YOU MUST CREATE AN APPOINTMENT ON THE NEXT PAGE. ADDING YOUR AVAILABLE CALENDAR DATES AND TIMES IS ESSENTIAL TO COMPLETE YOUR PROFILE.</p>
+        <div class="small-12 small-centered medium-12 large-12 columns" id='pro'>
+          <p class="sublabel">PLEASE REVIEW ALL ABOVE INFORMATION.IF YOU ARE SATISFIED WITH THE CONTENT, CLICK CREATE PROFILE. YOU WILL BE DIRECTED TO THE NEXT PAGE TO SEE HOW YOUR INFORMATION WILL APPEAR ON THE SITE.</p>
         </div>
       </div>
 
       <div class="row">
-        <div class="small-11 small-centered medium-10 large-8 columns" id='pro'>
-          <%= f.submit "Add Profile", :class => "full-button", :id => "update_profile_button" %>
+        <div class="small-12 medium-12 large-12 columns">
+          <p class="form_subtitle">Part 3: Creating Your Calendar Dates & Times</p>
+          <p id="form_note">Please complete part 3 on the next page. Add your availability with calendar dates and times.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="small-12 medium-12 large-12 columns" id='pro'>
+          <%= f.submit "Create Profile", :class => "full-button", :id => "update_profile_button" %>
         </div>
 
       </div>

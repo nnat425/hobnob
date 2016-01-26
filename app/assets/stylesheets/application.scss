@@ -440,7 +440,11 @@ height: 1em;
 font-size: 1.2em;
 }
 
-
+#line-break {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1.5em;
+  margin-top: 1.5em;
+}
 
 #form_directions {
 letter-spacing: 1px;
@@ -448,23 +452,27 @@ font-weight: 200;
 font-size: .85rem;
 }
 
-#form_note {
-margin-top: -1.5rem;
+p#form_note {
+margin-top: -1.25rem;
 color: #C0C0C0;
 letter-spacing: 1px;
 font-size: .85rem;
-font-weight: 200;
-
-}
-
-.form_subtitle {
-font-family: "Open Sans";
 font-weight: 300;
-font-size: 1.25em;
-color: #43c7f4;
-margin-top: 1em;
-margin-bottom: 1em;
+font-family: "Open Sans";
+
 }
+
+p.form_subtitle {
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: 1.25em;
+  color: #43c7f4;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid #ccc;
+
+}
+
 
 #edit-advisor-container {
   background-color: #F8F8F8;
@@ -479,7 +487,7 @@ margin-bottom: 2em;
 }
 
 #edit-panel form {
-  padding: 2em;
+  padding: 3em;
 }
 #edit-panel form input {
 padding: 1em;
@@ -500,11 +508,17 @@ font-weight: bold;
 letter-spacing: 1px;
 font-family: "Open Sans";
 font-size: .75em;
-float: right;
+float: left;
 
 }
 
+p.form-mini-info {
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: .7em;
+  color: #C0C0C0;
 
+}
 input[type=text], textarea {
 -webkit-transition: all 0.30s ease-in-out;
 -moz-transition: all 0.30s ease-in-out;
@@ -787,10 +801,10 @@ width: 20px;
 }
 
 .checkbox-label {
-font-size: 1em;
-padding-top: 15px;
+font-size: .85em;
 font-weight: 200;
 letter-spacing: 1px;
+padding-top: 7.5px;
 }
 
 
@@ -1402,7 +1416,14 @@ color: #203451;
 display: inline;
 }
 
+#pro {
+  text-align: center;
+}
 
+input#update_profile_button.full-button {
+  width: 50%;
+  height: 50px;
+}
 
 #profile-header {
 border-bottom: 1px solid #C0C0C0;
