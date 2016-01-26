@@ -32,6 +32,14 @@ $(document).ready(function(){
     $('.b-modal').hide();
   });
 
+  $('#fees').on("click",function(){
+    $('#fee_to_pop_up').show();
+  });
+  $('#fee_to_pop_up').click(function(){
+    $('#fee_to_pop_up').hide();
+    $('.b-modal').hide();
+  });
+
 
 
 
