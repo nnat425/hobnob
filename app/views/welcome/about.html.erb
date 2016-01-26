@@ -42,6 +42,7 @@
           <li>Over 100 professionals on the HOB NOB Network</li>
           <li>Use any GET NETWORKING! button to search</li>
           <li>Everyone has a great story to share with you</li>
+          <br>
           <li>Refine your search by area of expertise, level of experience,
             and location</li>
           </ul>
@@ -53,74 +54,87 @@
         <div class="small-12 medium-12 large-4 columns" id="about-box">
           <h1><i id='pointer' class="fa fa-hand-pointer-o fa-lg"></i></h1>
           <h3>Select</h3>
-          <p>Review the profiles that interest you and select one or more professionals that can provide you with the career answers you need to make the best decision possible.</p>
-          <p>Pay close attention to the number of years of experience. If you are just starting your career, we recommend that you speak with a professional that has 1-5 years of experience. These professionals will have an excellent idea of the challenges you are facing and their advice will be most relevant to your current situation.</p>
-          <div class="hide-for-large-up">
-            <button id='levels-btn' class="button" type="button">Finance Levels</button>
+          <ul class='search-list'>
+            <li>Review your search (RESULTS?) profiles</li>
+            <li>Check available dates & times</li>
+            <li>Select professionals that have the expertise you want</li>
+            <br>
+            <li>Think about the answers you seek and select a professional
+              with that best meets your needs</li>
+            </ul>
+            <div class="hide-for-large-up">
+              <button id='levels-btn' class="button" type="button">Finance Levels</button>
+            </div>
+          </div>
+
+          <div class="small-12 medium-12 large-4 columns" id="about-box">
+            <h1><i id='pointer' class="fa fa-globe fa-lg"></i></h1>
+            <h3>Connect</h3>
+            <ul class='search-list'>
+              <li>You searched the network</li>
+              <li>You selected the professionals you wanted to speak with</li>
+              <li>You verified your availability of date and time</li>
+              <br>
+              <li>The last steps: secure the connection by clicking GET
+                CONNECTED and then click CHECK OUT</li>
+              </ul>
+              <div class="hide-for-large-up">
+                <%= link_to "Get Networking!", advisors_path, class: "button" %>
+              </div>
+            </div>
+
+          </div>
+          <div class="show-for-large-up" id="buttons-holder">
+            <div class="large-4 columns">
+              <button id='area_of_expertise' class="button" type="button">AREAS OF EXPERTISE(5)</button>
+              <button id='my-button' class="button" type="button">LOCATIONS</button>
+              <button id='my-button' class="button" type="button">YEARS OF EXPERIENCE(3)</button>
+            </div>
+            <div class="large-4 columns">
+              <button id='levels-btn' class="button" type="button">Finance Levels</button>
+            </div>
+            <div class="large-4 columns">
+              <%= link_to "Get Networking!", advisors_path, class: "button" %>
+            </div>
           </div>
         </div>
 
-        <div class="small-12 medium-12 large-4 columns" id="about-box">
-          <h1><i id='pointer' class="fa fa-globe fa-lg"></i></h1>
-          <h3>Connect</h3>
-          <p>You searched the Network and found the best finance category and person(s) to speak with about your career.</p>
-          <p>You will be asked to sign in at this point. We want to make sure that we can contact you if there is a scheduling issue. Everyone in the Network is a busy professional and it is always business first. Also, once you have your dream role, we may invite you to be part of the Network to share your story with other people.</p>
-          <div class="hide-for-large-up">
-            <%= link_to "Get Networking!", advisors_path, class: "button" %>
-          </div>
+
+        <%= render partial: "popup_categories" %>
+        <%= render partial: "popup_levels" %>
+        <%= render partial: "popup_locations" %>
+
+
+        <div class="container" id="about-container">
+
+
+
+         <p>The more time you spend researching and speaking with professionals in your chosen field, the better chance you will have in uncovering an amazing career opportunity. You will save time and frustration by avoiding areas of Finance that don’t match your skill set or interest you and you will greatly increase your chances of being selected during the interview process. Knowledge about the role and industry you are entering is a very powerful resource.This is not an opportunity to ask for a job. This is an opportunity to network with working professionals to find out more about the people and opportunities in different areas of finance. Please respect the privacy and time of the busy professionals in the Network.</p>
+         <p>We have represented the Finance Industry in this format knowing that job titles, roles, and locations are subject to change and do not represent every option within Finance. Some companies have different titles and structures and may not match this exact configuration. Do not let that stop you from seeking information from our Network. If there is a specific role or area you would like to explore and we do not have anyone in the Network, please contact us and we will find you a connection.</p>
+         <p>Please contact karen@thepelikangroup.com</p>
+
+
+       </div>
+       <div id="pelikan-logo">
+        <img src="/assets/pelikan_logo.png"/>
+      </div>
+      <footer class="footer" id="parallax-footer">
+        <p class="slogan"><img id="nav_logo" src="/assets/hn_logo_small.png"/></p>
+
+        <div class="links">
+          <%= link_to "Home", root_path %>
+          <p>  •  </p>
+          <%= link_to "About", about_path %>
+          <p>  •  </p>
+          <%= link_to "Network", advisors_path %>
+          <p>  •  </p>
+          <%= link_to "The Network's Charities", " http://www.thepelikangroup.com/charities.html" , :target => "_blank" %>
         </div>
 
-      </div>
-      <div class="show-for-large-up" id="buttons-holder">
-        <div class="large-4 columns">
-          <button id='area_of_expertise' class="button" type="button">AREAS OF EXPERTISE(5)</button>
-          <button id='my-button' class="button" type="button">LOCATIONS</button>
-          <button id='my-button' class="button" type="button">YEARS OF EXPERIENCE(3)</button>
-        </div>
-        <div class="large-4 columns">
-          <button id='levels-btn' class="button" type="button">Finance Levels</button>
-        </div>
-        <div class="large-4 columns">
-          <%= link_to "Get Networking!", advisors_path, class: "button" %>
-        </div>
-      </div>
+        <p class="copywrite">Pelikan Group Inc.</p>
+
+      </footer>s
     </div>
 
-
-    <%= render partial: "popup_categories" %>
-    <%= render partial: "popup_levels" %>
-
-
-    <div class="container" id="about-container">
-
-
-
-     <p>The more time you spend researching and speaking with professionals in your chosen field, the better chance you will have in uncovering an amazing career opportunity. You will save time and frustration by avoiding areas of Finance that don’t match your skill set or interest you and you will greatly increase your chances of being selected during the interview process. Knowledge about the role and industry you are entering is a very powerful resource.This is not an opportunity to ask for a job. This is an opportunity to network with working professionals to find out more about the people and opportunities in different areas of finance. Please respect the privacy and time of the busy professionals in the Network.</p>
-     <p>We have represented the Finance Industry in this format knowing that job titles, roles, and locations are subject to change and do not represent every option within Finance. Some companies have different titles and structures and may not match this exact configuration. Do not let that stop you from seeking information from our Network. If there is a specific role or area you would like to explore and we do not have anyone in the Network, please contact us and we will find you a connection.</p>
-     <p>Please contact karen@thepelikangroup.com</p>
-
-
-   </div>
-   <div id="pelikan-logo">
-    <img src="/assets/pelikan_logo.png"/>
   </div>
-  <footer class="footer" id="parallax-footer">
-    <p class="slogan"><img id="nav_logo" src="/assets/hn_logo_small.png"/></p>
-
-    <div class="links">
-      <%= link_to "Home", root_path %>
-      <p>  •  </p>
-      <%= link_to "About", about_path %>
-      <p>  •  </p>
-      <%= link_to "Network", advisors_path %>
-      <p>  •  </p>
-      <%= link_to "The Network's Charities", " http://www.thepelikangroup.com/charities.html" , :target => "_blank" %>
-    </div>
-
-    <p class="copywrite">Pelikan Group Inc.</p>
-
-  </footer>s
-</div>
-
-</div>
 
