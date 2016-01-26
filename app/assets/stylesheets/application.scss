@@ -31,23 +31,23 @@ body, html{
 
 
 #inactive-container {
-  padding-top: 25%;
-  height: 100%;
-  background: url("http://s3.amazonaws.com/hobnob-bucket-assets/city_header5.jpg") no-repeat center;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  text-align: center;
+padding-top: 25%;
+height: 100%;
+background: url("http://s3.amazonaws.com/hobnob-bucket-assets/city_header5.jpg") no-repeat center;
+background-size: cover;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+text-align: center;
 }
 
 #inactive-container h2 {
-  font-family: "Open Sans";
-  font-weight: 300;
-  letter-spacing: 2px;
-  border-bottom: 1px solid black;
-  margin-right: 5em;
-  margin-left: 5em;
+font-family: "Open Sans";
+font-weight: 300;
+letter-spacing: 2px;
+border-bottom: 1px solid black;
+margin-right: 5em;
+margin-left: 5em;
 
 
 
@@ -165,16 +165,16 @@ text-transform: uppercase;
 
 
 #search-results-flash p {
-  font-family: "Open Sans";
-  font-size: 2.5em;
-  font-weight: 300;
-  text-align: center;
-  letter-spacing: 3px;
-  color: #000;
+font-family: "Open Sans";
+font-size: 2.5em;
+font-weight: 300;
+text-align: center;
+letter-spacing: 3px;
+color: #000;
 }
 #small-header-dropdown {
-  margin-top: 7.5px;
-  margin-bottom: auto;
+margin-top: 7.5px;
+margin-bottom: auto;
 }
 #medium-header-dropdown {
 margin-top: .5em;
@@ -447,12 +447,12 @@ font-weight: 200;
 }
 
 .form_subtitle {
-  font-family: "Open Sans";
-  font-weight: 300;
-  font-size: 1.25em;
-  color: #43c7f4;
-  margin-top: 1em;
-  margin-bottom: 1em;
+font-family: "Open Sans";
+font-weight: 300;
+font-size: 1.25em;
+color: #43c7f4;
+margin-top: 1em;
+margin-bottom: 1em;
 }
 
 
@@ -519,12 +519,17 @@ border-bottom: 1px solid #eeeeee;
 padding: 2em;
 }
 
+.about_container_1:hover{
+color:black;
+}
+
 #about_container_1_subtext p {
+text-align:justify;
 font-family: "Open Sans";
-color: #000;
 font-weight: 300;
 letter-spacing: 1px;
 font-size: 1.1em;
+margin-top:4em;
 }
 
 #about_container_1_subtext{
@@ -533,7 +538,7 @@ text-align: center;
 }
 
 .about_container_2 {
-background-color:#282828;
+background-color:black;
 background-size: cover;
 overflow: hidden;
 margin-top:5em;
@@ -541,7 +546,6 @@ padding-left: 1em;
 padding-right: 1em;
 padding-top: 2.5em;
 padding-bottom: 2.5em;
-text-align: center;
 }
 
 #simple-steps-header {
@@ -552,6 +556,10 @@ margin-bottom: 1em;
 font-family: "Open Sans";
 font-weight: 300;
 letter-spacing: 2px;
+}
+
+#about-box{
+border-right: solid #2996cc;
 }
 
 #about-box h1 {
@@ -575,15 +583,37 @@ margin-bottom: 1.5em;
 
 }
 
+#about-box-3 h1 {
+text-align: center;
+margin-bottom: 1em;
+}
+
+#about-box-3 h1{
+color: #fff;
+font-weight: 300;
+}
+
+#about-box-3 h3 {
+color: #fff;
+font-family: "Open Sans";
+font-weight: 300;
+text-transform: uppercase;
+letter-spacing: 2px;
+text-align: center;
+margin-bottom: 1.5em;
+
+}
+
+
 #network-ribbon-header {
-  background-color: black;
-  height: 80px;
-  background-size: cover;
+background-color: black;
+height: 80px;
+background-size: cover;
 }
 #ribbon-header {
-  background: url("http://s3.amazonaws.com/hobnob-bucket-assets/ribbon-header.png");
-  height: 80px;
-  background-size: cover;
+background: url("http://s3.amazonaws.com/hobnob-bucket-assets/ribbon-header.png");
+height: 80px;
+background-size: cover;
 }
 #about-box p {
 color: #C0C0C0;
@@ -600,9 +630,9 @@ width: 100%;
 }
 
 #advisor-list-holder {
-  float: left;
-  border: 1px solid #ccc;
-  background-color: #fff;
+float: left;
+border: 1px solid #ccc;
+background-color: #fff;
 
 }
 #advisor-index-price {
@@ -619,17 +649,17 @@ color: #2f5287;
 
 
 p.advisors-index-categories {
-  font-size: .6em;
-  display: inline;
-  font-family: "Open Sans";
-  text-transform: uppercase;
-  color: #C0C0C0;
+font-size: .6em;
+display: inline;
+font-family: "Open Sans";
+text-transform: uppercase;
+color: #C0C0C0;
 
 
 }
 
 #index-advisor-services {
-  margin: 0;
+margin: 0;
 }
 p.index-advisor-title-location {
 font-family: "Open Sans";
@@ -777,11 +807,11 @@ margin-bottom: .25em;
 }
 
 p.index-advisor-years-of-experience {
-  font-family: "Open Sans";
-  font-size: .75em;
-  font-weight: 300;
-  margin-top: 0;
-  margin-bottom: 0;
+font-family: "Open Sans";
+font-size: .75em;
+font-weight: 300;
+margin-top: 0;
+margin-bottom: 0;
 }
 
 #page-header {
@@ -1016,7 +1046,7 @@ margin:10px;
 }
 
 #available-times-right-btn {
-  padding: auto;
+padding: auto;
 
 }
 .appointment_title {
@@ -1062,7 +1092,7 @@ transition: all .3s ease-in-out;
 }
 
 #add_to_cart_btn_small {
-  border: 1px solid #2996cc;
+border: 1px solid #2996cc;
 text-align: center;
 margin-bottom: .5em;
 margin-top: 1.5em;
@@ -1095,12 +1125,12 @@ font-size: 1em;
 }
 
 .flash-holder {
-  text-align: center;
+text-align: center;
 }
 
 .flash-holder-cart {
-  padding-top: 2.5em;
-  text-align: center;
+padding-top: 2.5em;
+text-align: center;
 }
 
 #cart_page{
@@ -1181,11 +1211,11 @@ font-size: 1.25em;
 
 }
 #appointment-session {
-  font-family: "Open Sans";
-  font-size: 1.1em;
-  font-weight: 300;
-  letter-spacing: 1px;
-  margin-bottom: 0px;
+font-family: "Open Sans";
+font-size: 1.1em;
+font-weight: 300;
+letter-spacing: 1px;
+margin-bottom: 0px;
 }
 #appointment-time-box {
 margin: 1.5em;
@@ -1201,10 +1231,10 @@ box-shadow:         1px 1px 1px 1px #ccc;
 }
 
 .appt-length {
-  font-family: "Open Sans";
-  font-weight: 300;
-  font-size: 1.1em;
-  letter-spacing: 1px;
+font-family: "Open Sans";
+font-weight: 300;
+font-size: 1.1em;
+letter-spacing: 1px;
 
 }
 .appointment-full-date {
@@ -1271,19 +1301,19 @@ text-align: right;
 color: #505050;
 }
 .yes-no-choice-text {
-  font-size: .8em;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+font-size: .8em;
+letter-spacing: 1px;
+text-transform: uppercase;
 
 
 }
 #publish-profile-text {
-  font-family: "Open Sans";
-  font-weight: 300;
-  font-size: 1em;
-  color: #0BB5FF;
-  text-align: center;
-  margin-top: 2em;
+font-family: "Open Sans";
+font-weight: 300;
+font-size: 1em;
+color: #0BB5FF;
+text-align: center;
+margin-top: 2em;
 }
 
 
@@ -1485,7 +1515,7 @@ display: block;
 }
 
 #advisor-edit-btn a{
-  color: #fff;
+color: #fff;
 }
 
 #edit-appt-btn:hover {
@@ -1496,9 +1526,9 @@ transition: all .3s ease-in-out;
 }
 
 #edit-appt-btn a {
-  color: #004b7e;
-  font-size: .7em;
-  text-transform: uppercase;
+color: #004b7e;
+font-size: .7em;
+text-transform: uppercase;
 
 }
 #create-appointment-btn {
@@ -1518,13 +1548,13 @@ text-align: center;
 }
 
 #appointment-form {
-    padding: 1em;
+padding: 1em;
 }
 #appointment-form form {
-  border: 1px solid #C0C0C0;
-  border-radius: 10px;
-  background-color: #fff;
-  padding: 2em;
+border: 1px solid #C0C0C0;
+border-radius: 10px;
+background-color: #fff;
+padding: 2em;
 
 }
 
@@ -1685,9 +1715,16 @@ padding-top: 50px;
 padding-bottom: 50px;
 background-color: #fff;
 position: relative;
-
-
 }
+
+.about-parallax-content {
+max-width: 100%;
+padding-bottom: 50px;
+background-color: #fff;
+position: relative;
+margin-top:-40px;
+}
+
 
 #home-parallax-content {
 top: 850px;
@@ -1712,26 +1749,26 @@ margin-top: -100px;
 background-color: black;
 }
 #about_hero_small {
-  background-color: black;
-  padding-bottom: 0px;
+background-color: black;
+padding-bottom: 0px;
 
 }
 
 #about_hero_text {
-  height: 20em;
-  padding-top: 7em;
-  padding-left: 1em;
-  padding-right: 1em;
-  text-align: center;
-  margin-bottom: -10px;
+height: 20em;
+padding-top: 7em;
+padding-left: 1em;
+padding-right: 1em;
+text-align: center;
+margin-bottom: -10px;
 }
 
 #about_hero_text p{
-  color: white;
-  font-family: "Open Sans";
-  font-weight: 300;
-  font-size: 1.75em;
-  letter-spacing: 2px;
+color: white;
+font-family: "Open Sans";
+font-weight: 300;
+font-size: 1.75em;
+letter-spacing: 2px;
 
 }
 #intro-text {
@@ -1762,19 +1799,19 @@ margin-bottom: -.5em;
 }
 
 #advisor-category-profile-page {
-  font-family: "Open Sans";
-  font-weight: 300;
-  font-size: 1.2em;
-  color: #C0C0C0;
-  letter-spacing: 2px;
+font-family: "Open Sans";
+font-weight: 300;
+font-size: 1.2em;
+color: #C0C0C0;
+letter-spacing: 2px;
 
 }
 
 .sublabel {
-  font-family: "Open Sans";
-  font-size: .8em;
-  font-weight: 300;
-  letter-spacing: 1px;
+font-family: "Open Sans";
+font-size: .8em;
+font-weight: 300;
+letter-spacing: 1px;
 }
 
 #intro-subtext p {
@@ -1887,6 +1924,8 @@ padding-bottom: .5em;
 }
 
 
+
+
 .standard-heading {
 color: #004b7e;
 font-family: "Open Sans";
@@ -1899,18 +1938,18 @@ text-align: center;
 }
 
 #advisors-list {
-  padding-top: 1.5em;
-  padding-bottom: 1.5em;
-  padding-right: auto;
-  padding-left: auto;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+padding-top: 1.5em;
+padding-bottom: 1.5em;
+padding-right: auto;
+padding-left: auto;
+width: 100%;
+margin-left: auto;
+margin-right: auto;
 
 }
 
 #advisors-list-holder {
-  background-color: #F8F8F8;
+background-color: #F8F8F8;
 }
 
 
@@ -2186,8 +2225,8 @@ font-size: 1em;
 border-radius: 5px;
 }
 #publish-radio {
-  padding-right: 1em;
-  padding-left: 1em;
+padding-right: 1em;
+padding-left: 1em;
 }
 
 .form-holder input[type=text], textarea {
@@ -2232,14 +2271,65 @@ color: #C0C0C0;
 
 #element_to_pop_up {
 display:none;
-background-color: #fff;
-border: 1px solid #C0C0C0;
-padding: 1.5em;
+margin-left:25em;
 margin-top: 2em;
 margin-bottom: 2em;
+position: fixed;
+z-index:1000;
+top:6%;
+left:5%;
+}
 
+#location_to_pop_up {
+display:none;
+margin-left:25em;
+margin-top: 2em;
+margin-bottom: 2em;
+position: fixed;
+z-index:1000;
+top:6%;
+left:5%;
+}
+
+#year_to_pop_up {
+display:none;
+margin-left:25em;
+margin-top: 2em;
+margin-bottom: 2em;
+position: fixed;
+z-index:1000;
+top:6%;
+left:5%;
+}
+
+#question_to_pop_up{
+display:none;
+position: fixed;
+z-index:1000;
+top:20%;
+left:20%;
 
 }
+
+.question-pic{
+border: solid #2996cc 1px;;
+}
+
+#fee_to_pop_up{
+display:none;
+left:2%;
+position: fixed;
+z-index:1000;
+top:12%;
+}
+
+.fee-pic{
+border: solid #2996cc 1px;
+}
+
+
+
+
 
 
 p.popup_header_text{
@@ -2398,21 +2488,49 @@ height: 25%;
 }
 
 li.popup_sub_header{
-  color: #2996cc;
-  font-size: .9em;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-family: "Open Sans";
-  font-weight: 300;
+color: #2996cc;
+font-size: .9em;
+letter-spacing: 1px;
+text-transform: uppercase;
+font-family: "Open Sans";
+font-weight: 300;
 
 }
 
 .popup_div {
-  display: none;
-  padding: 1.5em;
-  background-color: #fff;
+display: none;
+padding: 1.5em;
+background-color: #fff;
 }
 
 .fa-info-circle {
-  color: #C0C0C0;
+color: #C0C0C0;
 }
+
+.search-list{
+color:white;
+}
+
+#buttons-holder{
+text-align:center;
+}
+
+#questions{
+margin-top:9em;
+}
+
+#fees{
+margin-top:9em;
+}
+
+#blanket {
+background-color:#111;
+opacity: 0.65;
+position:fixed;
+z-index: 999;
+top:0px;
+left:0px;
+width:100%;
+height:100%
+}
+

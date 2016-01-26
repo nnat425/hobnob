@@ -70,7 +70,7 @@
       <div class="row">
         <div class="small-11 small-centered medium-10 large-8 columns">
           <div id="advisor-index-avatar">
-            <%= image_tag current_advisor.avatar.url(:medium) %>
+            <%= image_tag @advisor.avatar.url(:medium) %>
           </div>
           <%= f.label "Upload a photo" %>
           <%= f.file_field :avatar %>
