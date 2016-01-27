@@ -167,7 +167,7 @@
           <%= f.label "Current Location" %>
         </div>
         <div class="small-9 medium-9 large-9 columns">
-          <%= f.select :location, options_for_select(cities), {prompt: "Select Location"} %>
+          <%= f.select :location, options_for_select(cities), {:include_blank => "Select"} %>
         </div>
       </div>
 
@@ -176,7 +176,7 @@
           <%= f.label "Years of experience" %>
         </div>
         <div class="small-9 medium-9 large-9 columns">
-          <%= f.select(:years_of_experience,['< 5 years', '5 - 15 years', '> 15 years'], {prompt: 'Select Range'}) %>
+          <%= f.select :years_of_experience,['< 5 years', '5 - 15 years', '> 15 years'], {:include_blank => "Select"} %>
         </div>
       </div>
 
