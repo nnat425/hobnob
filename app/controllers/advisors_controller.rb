@@ -83,7 +83,7 @@ class AdvisorsController < ApplicationController
     end
     advisor.category = Category.find_or_create_by(name: params[:category][:name])
     advisor.update(advisor_params)
-    advisor.join_companies(params[:companies])
+
     if params[:category][:name] == "Resume & Interview Preparation"
       advisor.student_price = 50
       advisor.regular_price = 60

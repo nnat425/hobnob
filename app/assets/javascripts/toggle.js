@@ -102,7 +102,7 @@ $(document).ready(function(){
   $("#edit_signup").on("click", "#pop-categories-link", function(event) {
     event.preventDefault();
     $("#categories-toggle").slideToggle();
-  })
+  });
 
 });
 
