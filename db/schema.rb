@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160116222726) do
+ActiveRecord::Schema.define(version: 20160126174344) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,7 +33,6 @@ ActiveRecord::Schema.define(version: 20160116222726) do
     t.string   "alternative_email"
     t.string   "company"
     t.string   "years_of_experience"
-    t.string   "other_companies"
     t.string   "education"
     t.string   "certifications"
     t.string   "interesting_facts"
@@ -57,6 +56,7 @@ ActiveRecord::Schema.define(version: 20160116222726) do
     t.string   "general_company"
     t.string   "other_expertise"
     t.integer  "category_id"
+    t.string   "phone_number"
   end
 
   add_index "advisors", ["category_id"], name: "index_advisors_on_category_id", using: :btree
@@ -138,6 +138,13 @@ ActiveRecord::Schema.define(version: 20160116222726) do
     t.boolean  "booked_status?", default: false
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
+  end
+
+  create_table "previous_companies", force: :cascade do |t|
+    t.integer "advisor_id"
+    t.string  "name"
+    t.string  "job_title"
+    t.string  "roles"
   end
 
   create_table "users", force: :cascade do |t|
