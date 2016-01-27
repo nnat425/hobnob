@@ -167,7 +167,7 @@
         <div class="row">
           <div class="small-11 small-centered medium-10 medium-centered large-10 large-centered columns">
             <%= f.label :title %>
-            <p id="appointment-session">Session: <%= @advisor.potential_appointments.count + 1 %></p>
+            <p id="appointment-session"><%= @advisor.category.name %></p>
           </div>
         </div>
 
