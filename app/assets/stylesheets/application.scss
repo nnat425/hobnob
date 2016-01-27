@@ -236,10 +236,12 @@ overflow: hidden;
 position: fixed;
 }
 
-#about_hero{
+#about_hero img {
+  width: 100%;
 }
 
-#home-hero{
+#home-hero img {
+  width: 100%;
 }
 
 #session_background {
@@ -275,11 +277,22 @@ background: none;
 background-color: #fff;
 color: #f04124;
 border-top: 1px solid #f04124;
-border-borrom: 1px solid #f04124;
+border-bottom: 1px solid #f04124;
+letter-spacing: 1px;
+text-align: center;
+}
+
+&.success {
+background-color: #fff;
+color: #43AC6A;
+border-top: 1px solid #43AC6A;
+border-bottom: 1px solid #43AC6A;
 letter-spacing: 1px;
 text-align: center;
 }
 }
+
+
 
 .signup-panel {
 border-radius: 5px;
@@ -429,64 +442,86 @@ height: 1em;
 font-size: 1.2em;
 }
 
-
+#line-break {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1.5em;
+  margin-top: 1.5em;
+}
 
 #form_directions {
 letter-spacing: 1px;
 font-weight: 200;
-font-size: 1.2rem;
+font-size: .85rem;
 }
 
-#form_note {
-margin-top: -1.5rem;
+p#form_note {
+margin-top: -1.25rem;
 color: #C0C0C0;
 letter-spacing: 1px;
-font-size: 1rem;
-font-weight: 200;
-
-}
-
-.form_subtitle {
-font-family: "Open Sans";
+font-size: .85rem;
 font-weight: 300;
-font-size: 1.25em;
-color: #43c7f4;
-margin-top: 1em;
-margin-bottom: 1em;
+font-family: "Open Sans";
+
+}
+
+p.form_subtitle {
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: 1.25em;
+  color: #43c7f4;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid #ccc;
+
 }
 
 
+#edit-advisor-container {
+  background-color: #F8F8F8;
+}
 #edit-panel {
 background-color: #fff;
 border: 1px solid #ccc;
-padding: 15px;
+padding: 2em;
 margin: auto;
-margin-top: 1em;
-margin-bottom: 1em;
-padding-top: 2em;
--webkit-box-shadow: 4px 4px 4px 0px #ccc;
--moz-box-shadow:    4px 4px 4px 0px #ccc;
-box-shadow:         4px 4px 4px 0px #ccc;
+margin-top: 2em;
+margin-bottom: 2em;
 }
 
+#edit-panel form {
+  padding: 3em;
+}
 #edit-panel form input {
 padding: 1em;
-height: 3.5em;
-font-size: 1em;
+height: 3.25em;
+font-size: .75em;
 border-radius: 5px;
 }
 
 #edit-panel form select {
 padding: 1em;
-height: 3.5em;
-font-size: 1em;
+height: 3.25em;
+font-size: .75em;
 border-radius: 5px;
 }
 
 #edit-panel form label {
 font-weight: bold;
 letter-spacing: 1px;
+font-family: "Open Sans";
+font-size: .75em;
+float: left;
+
 }
+
+p.form-mini-info {
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: .7em;
+  color: #C0C0C0;
+
+}
+
 
 input[type=text], textarea {
 -webkit-transition: all 0.30s ease-in-out;
@@ -497,6 +532,8 @@ outline: none;
 padding: 3px 0px 3px 3px;
 margin: 5px 1px 3px 0px;
 border: 1px solid #DDDDDD;
+
+font-size: .75em;
 }
 
 input[type=text]:focus, textarea:focus {
@@ -770,10 +807,10 @@ width: 20px;
 }
 
 .checkbox-label {
-font-size: 1em;
-padding-top: 15px;
+font-size: .85em;
 font-weight: 200;
 letter-spacing: 1px;
+padding-top: 7.5px;
 }
 
 
@@ -1385,7 +1422,15 @@ color: #203451;
 display: inline;
 }
 
+#pro {
+  padding-top: 2.5em;
+  text-align: center;
+}
 
+input#update_profile_button.full-button {
+  width: 50%;
+  height: 50px;
+}
 
 #profile-header {
 border-bottom: 1px solid #C0C0C0;
@@ -1671,20 +1716,6 @@ padding-bottom: 0.5rem;
 transition: all .3s ease-in-out;
 border-bottom: 2px solid #C0C0C0;
 }
-
-#edit-panel {
-background-color: #fff;
-border: 1px solid #ccc;
-padding: 15px;
-margin: auto;
-margin-top: 1em;
-margin-bottom: 1em;
-padding-top: 2em;
--webkit-box-shadow: 4px 4px 4px 0px #ccc;
--moz-box-shadow:    4px 4px 4px 0px #ccc;
-box-shadow:         4px 4px 4px 0px #ccc;
-}
-
 
 
 #home-container {
@@ -2099,42 +2130,12 @@ transition: all .3s ease-in-out;
 }
 
 
-#simple-cal {
-text-align: center;
-
-}
 
 
-#simple-cal a {
-font-size:1em;
-text-transform: uppercase;
-font-family: "Open Sans";
-letter-spacing: 2px;
-color: #C0C0C0;
-display: inline;
-font-weight: 300;
 
-}
 
 #table-holder table {
 width: 100%;
-}
-#simple-cal p {
-font-weight: 300;
-font-family: "Open Sans";
-font-size: 2.5em;
-display: inline;
-letter-spacing: 2px;
-color: #888888;
-}
-#simple-cal #previous-link {
-float: left;
-text-align: left;
-}
-
-#simple-cal #next-link {
-float: right;
-text-align: right;
 }
 
 

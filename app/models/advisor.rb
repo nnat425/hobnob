@@ -1,6 +1,7 @@
 class Advisor < ActiveRecord::Base
   belongs_to :category, :dependent => :destroy
   has_many :potential_appointments
+  has_many :previous_companies
 
   validates :email, :presence => true
   validates :email, uniqueness: true

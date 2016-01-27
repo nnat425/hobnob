@@ -48,7 +48,7 @@ class AdvisorsController < ApplicationController
       session[:user_or_advisor_id] = advisor.id
       session[:class_type] = advisor.class.name
       AdvisorMailer.email_verification(advisor).deliver_now
-      flash[:thank_you] = "Thank you! Please check your email to verify your account."
+      flash[:thank_you] = "Thank you!"
       redirect_to edit_advisor_path(advisor)
     else
       flash[:errors] = advisor.errors.full_messages
@@ -99,6 +99,9 @@ class AdvisorsController < ApplicationController
         advisor.regular_price = 60
       end
     end
+    if params[:previous_company]
+      advisor.previous_companies.find_or_create_by(name: params[:previous_company][:name], job_title: params[:previous_company][:job_title], roles: params[:previous_company][:roles])
+    end
     if advisor.save
       redirect_to advisor_path(advisor)
     else
@@ -129,7 +132,7 @@ class AdvisorsController < ApplicationController
   private
 
   def advisor_params
-    params.require(:advisor).permit(:email, :email_confirmation, :password,:password_confirmation,  :firstname, :lastname, :avatar, :alternative_email, :current_title, :job_description, :charity, :charity_url, :languages, :publish, :location, :company, :years_of_experience, :other_companies, :education, :certifications, :interesting_facts, :account_activated, :general_company, :other_expertise)
+    params.require(:advisor).permit(:email, :email_confirmation, :password,:password_confirmation,  :firstname, :lastname, :avatar, :alternative_email, :current_title, :job_description, :charity, :charity_url, :languages, :publish, :location, :company, :years_of_experience, :other_companies, :education, :certifications, :interesting_facts, :account_activated, :general_company, :other_expertise, :phone_number)
   end
 
 

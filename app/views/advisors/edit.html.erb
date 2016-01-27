@@ -2,157 +2,220 @@
 </div>
 
 
-<div class="row">
+<div class="row" id="edit-advisor-container">
   <div class="small-12 medium-12 large-11 large-centered columns" >
     <div class="panel" id="edit-panel">
 
       <% if flash[:thank_you] %>
       <div class="row">
         <div class="small-11 small-centered medium-10 medium-centered large-8 columns">
+          <div data-alert class="alert-box success radius">
+            <%= flash[:thank_you] %>
+          </div>
         </div>
       </div>
       <% end %>
 
+
+      <%= form_for @advisor, url: advisor_path(@advisor), html: { multipart: true, :class => "custom", :id => "edit_signup" } do |f| %>
+      <%= f.hidden_field :password_confirmation,:value => @advisor.password_digest %>
+      <%= f.hidden_field :email_confirmation, :value => @advisor.email %>
+
       <div class="row">
-        <div class="small-12 small-centered medium-10 medium-centered large-8 large-centered columns" id="page_header">
+        <div class="small-12 small-centered medium-12 medium-centered large-12 large-centered columns" id="page_header">
           <h1>Your Network Profile</h1>
         </div>
       </div>
 
-      <div class="row">
-        <div class="small-11 small-centered medium-10 large-8 columns">
-          <p id="form_directions">In order for HOB NOB to reach you, please provide the following information.</p>
-          <p id="form_note">*The information in this section will not be shown on the website</p>
-        </div>
-      </div>
+
 
       <% if flash[:errors] %>
       <% flash[:errors].each do |msg| %>
       <div class="row">
-        <div class="small-11 small-centered medium-10 medium-centered large-8 large-centered columns">
+        <div class="small-12 small-centered medium-12 medium-centered large-12 large-centered columns">
           <div data-alert class="alert-box alert radius">
             <%= msg %>
           </div>
         </div>
       </div>
-
       <% end %>
-
       <% end %>
-      <%= form_for @advisor, url: advisor_path(@advisor), html: { multipart: true, :class => "custom", :id => "edit_signup" } do |f| %>
-      <%= f.hidden_field :password_confirmation,:value => @advisor.password_digest %>
-      <%= f.hidden_field :email_confirmation, :value => @advisor.email %>
-
+      <div class="row">
+        <div class="small-12 small-centered medium-12 large-12 columns" id="line-break">
+        </div>
+      </div>
 
       <div class="row">
-        <div class="small-11 small-centered medium-10 large-8 columns">
+        <div class="small-12 small-centered medium-12 large-12 large-centered columns">
+          <p id="form_directions">In order for HOB NOB to reach you, please provide the following information.</p>
+          <p id="form_note">*The information in this section will not be shown on the website</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="small-3 medium-3 large-3 columns">
+          <%= f.label "Main Contact Email" %>
+        </div>
+        <div class="small-9 medium-9 large-9 columns">
+          <%= f.text_field :email, placeholder: "Main Contact Email" %>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="small-3 medium-3 large-3 columns">
           <%= f.label "Alternative Email" %>
+        </div>
+        <div class="small-9 medium-9 large-9 columns">
           <%= f.text_field :alternative_email, placeholder: "Alternative email" %>
-          <div class="spacer"></div>
         </div>
       </div>
 
       <div class="row">
-        <div class="small-11 small-centered medium-10 large-8 columns">
+        <div class="small-3 medium-3 large-3 columns">
+          <%= f.label "Main Contact Phone Number" %>
+        </div>
+        <div class="small-9 medium-9 large-9 columns">
+          <%= f.text_field :phone_number, placeholder: "(XXX)-XXX-XXXX" %>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="small-3 medium-3 large-3 columns">
           <%= f.label "Current Company" %>
+        </div>
+        <div class="small-9 medium-9 large-9 columns">
           <%= f.text_field :company, placeholder: "Company title" %>
-          <div class="spacer"></div>
         </div>
       </div>
 
+
+
       <div class="row">
-        <div class="small-11 small-centered medium-10 large-8 columns">
-          <p class="form_subtitle">Part 1: Your Profile</p>
+        <div class="small-12 small-centered medium-12 large-12 columns" id="line-break">
+        </div>
+      </div>
+
+      <div class="row" id="edit-advisor-directions">
+        <div class="small-12 small-centered medium-12 large-12 columns">
+          <p id="form_directions">There are 3 parts to Creating Your Profile</p>
+          <p id="form_note">PART ONE: create a mini profile that will appear on the NETWORK page</p>
+          <p id="form_note">PART TWO: create a more detailed profile, that people will see when they click MORE DETAIL</p>
+          <p id="form_note">PART THREE: using the calendar, create available dates and times</p>
+        </div>
+      </div>
+
+
+
+      <div class="row">
+        <div class="small-12 small-centered medium-12 large-12 columns">
+          <p class="form_subtitle">Part 1: Creating Your Mini Profile</p>
           <p id="form_note">*Information in this section will be displayed on the website.</p>
         </div>
       </div>
 
+
       <div class="row">
-        <div class="small-11 small-centered medium-10 large-8 columns">
+        <div class="small-3 medium-3 large-3 columns">
+          <%= f.label "Upload a photo" %>
+        </div>
+        <div class="small-9 medium-9 large-9 columns">
           <div id="advisor-index-avatar">
             <%= image_tag @advisor.avatar.url(:medium) %>
           </div>
-          <%= f.label "Upload a photo" %>
           <%= f.file_field :avatar %>
-          <div class="spacer"></div>
         </div>
       </div>
 
       <div class="row">
-        <div class="small-11 small-centered medium-10 large-8 columns">
+        <div class="small-3 medium-3 large-3 columns">
           <%= f.label "First Name" %>
+        </div>
+        <div class="small-9 medium-9 large-9 columns">
           <%= f.text_field :firstname, placeholder: "First Name" %>
-          <div class="spacer"></div>
         </div>
       </div>
 
       <div class="row">
-        <div class="small-11 small-centered medium-10 large-8 columns">
+        <div class="small-3 medium-3 large-3 columns">
           <%= f.label "Current Title" %>
+        </div>
+        <div class="small-9 medium-9 large-9 columns">
           <%= f.text_field :current_title, placeholder: "Current title" %>
-          <div class="spacer"></div>
         </div>
       </div>
 
+
       <div class="row">
-        <div class="small-11 small-centered medium-10 large-8 columns">
+        <div class="small-3 medium-3 large-3 columns">
           <label>Current Area of Expertise</label>
-          <%= select(:category, :name,['Investment/Wholesale Banking (sell side)', 'Asset Management (buy side)', 'Corporate Finance', 'Other Areas of Finance Expertise', 'Resume & Interview Preparation']) %>
-          <div class="spacer"></div>
+        </div>
+        <div class="small-9 medium-9 large-9 columns">
+          <%= select(:category, :name,['Investment/Wholesale Banking (sell side)', 'Asset Management (buy side)', 'Corporate Finance', 'Other Areas of Finance Expertise', 'Resume & Interview Preparation'], {prompt: 'Select Category'}) %>
+          <div class="row">
+            <div class="small-12 medium-12 large-12 columns">
+              <p class="form-mini-info">Please click <%= link_to "HERE","#" %> to see how we divided the Finance roles</p>
+            </div>
+          </div>
         </div>
       </div>
 
 
+
+
       <div class="row">
-        <div class="small-11 small-centered medium-10 large-8 columns">
-          <%= f.label "Location" %>
-          <%= f.select :location, options_for_select(cities) %>
-          <div class="spacer"></div>
+        <div class="small-3 medium-3 large-3 columns">
+          <%= f.label "Current Location" %>
+        </div>
+        <div class="small-9 medium-9 large-9 columns">
+          <%= f.select :location, options_for_select(cities), {prompt: "Select Location"} %>
         </div>
       </div>
 
       <div class="row">
-        <div class="small-11 small-centered medium-10 large-8 columns">
+        <div class="small-3 medium-3 large-3 columns">
           <%= f.label "Years of experience" %>
-          <%= f.select :years_of_experience,['< 5 years', '5 - 15 years', '> 15 years'] %>
-          <div class="spacer"></div>
+        </div>
+        <div class="small-9 medium-9 large-9 columns">
+          <%= f.select(:years_of_experience,['< 5 years', '5 - 15 years', '> 15 years'], {prompt: 'Select Range'}) %>
         </div>
       </div>
 
 
 
       <div class="row">
-        <div class="small-11 small-centered medium-10 large-8 columns">
+        <div class="small-3 medium-3 large-3 columns">
           <%= f.label "Favorite Charity for Donation" %>
+        </div>
+        <div class="small-9 medium-9 large-9 columns">
           <%= f.text_field :charity, placeholder: "Name of Charity" %>
           <%= f.text_field :charity_url, placeholder: "URL for Charity" %>
-          <div class="spacer"></div>
         </div>
       </div>
 
       <div class="row">
-        <div class="small-11 small-centered medium-10 large-8 columns">
-          <p class="form_subtitle">Part 2: Other Information</p>
+        <div class="small-12 medium-12 large-12 columns">
+          <p class="form_subtitle">Part 2: Creating Your More Detailed Profile</p>
           <p id="form_note">*Information in this section will be displayed on the website.</p>
         </div>
       </div>
 
       <div class="row">
 
-        <div class="small-11 small-centered medium-10 large-8 columns">
+        <div class="small-3 medium-3 large-3 columns">
           <label>Other Areas of Expertise</label>
-
-          <p class="sublabel">Please select other areas, other than your current area, that you have experience or expertise in speaking with people.</p>
+        </div>
+        <div class="small-9 medium-9 large-9 columns">
+          <p class="sublabel">Please select other areas of expertise.</p>
 
           <div class="row">
-            <div class="small-1 medium-1 large-1 columns">
+            <div class="small-2 medium-2 large-2 columns">
               <% if @other_categories != nil %>
               <%= check_box_tag "other_expertise[]", "Investment/Wholesale Banking (sell side)", @other_categories.include?("Investment/Wholesale Banking (sell side)"), class: "category-checkbox" %>
               <% else %>
               <%= check_box_tag "other_expertise[]", "Investment/Wholesale Banking (sell side)", false, class: "category-checkbox" %>
               <% end %>
             </div>
-            <div class="small-11 medium-11 large-11 columns">
+            <div class="small-10 medium-10 large-10 columns">
               <p class="checkbox-label">Investment/Wholesale Banking (sell side) <%= link_to "","#", class: "fa fa-info-circle", id: "investment_banking_info_pop" %></p>
             </div>
           </div>
@@ -161,14 +224,14 @@
           </div>
 
           <div class="row">
-            <div class="small-1 medium-1 large-1 columns">
+            <div class="small-2 medium-2 large-2 columns">
               <% if @other_categories != nil %>
               <%= check_box_tag "other_expertise[]", "Asset Management (buy side)", @other_categories.include?("Asset Management (buy side)"), class: "category-checkbox" %>
               <% else %>
               <%= check_box_tag "other_expertise[]", "Asset Management (buy side)", false, class: "category-checkbox" %>
               <% end %>
             </div>
-            <div class="small-11 medium-11 large-11 columns">
+            <div class="small-10 medium-10 large-10 columns">
               <p class="checkbox-label">Asset Management (buy side) <%= link_to "","#", class: "fa fa-info-circle", id: "asset_management_info_pop" %></p>
             </div>
           </div>
@@ -177,14 +240,14 @@
           </div>
 
           <div class="row">
-            <div class="small-1 medium-1 large-1 columns">
+            <div class="small-2 medium-2 large-2 columns">
               <% if @other_categories != nil %>
               <%= check_box_tag "other_expertise[]", "Corporate Finance", @other_categories.include?("Corporate Finance"), class: "category-checkbox"  %>
               <% else %>
               <%= check_box_tag "other_expertise[]", "Corporate Finance", false, class: "category-checkbox"  %>
               <% end %>
             </div>
-            <div class="small-11 medium-11 large-11 columns">
+            <div class="small-10 medium-10 large-10 columns">
               <p class="checkbox-label">Corporate Finance <%= link_to "","#", class: "fa fa-info-circle", id: "corporate_finance_info_pop" %></p>
             </div>
           </div>
@@ -192,14 +255,14 @@
             <%= render partial: "/categories/corporate_finance" %>
           </div>
           <div class="row">
-            <div class="small-1 medium-1 large-1 columns">
+            <div class="small-2 medium-2 large-2 columns">
               <% if @other_categories != nil %>
               <%= check_box_tag "other_expertise[]", "Other Areas of Finance Expertise", @other_categories.include?("Other Areas of Finance Expertise"), class: "category-checkbox" %>
               <% else %>
               <%= check_box_tag "other_expertise[]", "Other Areas of Finance Expertise", false, class: "category-checkbox" %>
               <% end %>
             </div>
-            <div class="small-11 medium-11 large-11 columns">
+            <div class="small-10 medium-10 large-10 columns">
               <p class="checkbox-label">Other Areas of Finance Expertise <%= link_to "","#", class: "fa fa-info-circle", id: "other_finance_info_pop" %></p>
             </div>
           </div>
@@ -207,15 +270,20 @@
             <%= render partial: "/categories/other_finance" %>
           </div>
           <div class="row">
-            <div class="small-1 medium-1 large-1 columns">
+            <div class="small-2 medium-2 large-2 columns">
               <% if @other_categories != nil %>
               <%= check_box_tag "other_expertise[]", "Resume & Interview Preparation", @other_categories.include?("Resume & Interview Preparation"), class: "category-checkbox" %>
               <% else %>
               <%= check_box_tag "other_expertise[]", "Resume & Interview Preparation", false, class: "category-checkbox" %>
               <% end %>
             </div>
-            <div class="small-11 medium-11 large-11 columns">
-              <p class="checkbox-label">Resume & Interview Preparation <%= link_to "","#", class: "fa fa-info-circle", id: "resume_info_pop" %></p>
+            <div class="small-10 medium-10 large-10 columns">
+              <p class="checkbox-label">*Resume & Interview Preparation <%= link_to "","#", class: "fa fa-info-circle", id: "resume_info_pop" %></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-12 medium-12 large-12 columns">
+              <p class="form-mini-info">*Please note that we have experts in this area on the Network but if you feel that you would be willing to speak with people about these topics, please add it to your other area of expertise.</p>
             </div>
           </div>
           <div class="row">
@@ -226,104 +294,117 @@
 
 
       <div class="row">
-        <div class="small-11 small-centered medium-10 large-8 columns">
-          <%= f.label "Current Company (General Listing)" %>
+        <div class="small-3 medium-3 large-3 columns">
+          <%= f.label "Current Company*" %>
+        </div>
+        <div class="small-9 medium-9 large-9 columns">
           <%= f.text_field :general_company, placeholder: "Ex. Investment Bank, Mining Company, Retail Organization, etc" %>
+          <div class="row">
+            <div class="small-12 medium-12 large-12 columns">
+              <p class="form-mini-info">*Do not enter the actual company name. This will be a generic listing: Investment Bank or Mining company or Retail organization</p>
+            </div>
+          </div>
         </div>
       </div>
 
 
       <div class="row">
-        <div class="small-11 small-centered medium-10 large-8 columns">
-          <%= f.label "Current Title" %>
-          <%= f.text_field :current_title, placeholder: "Current title" %>
-          <div class="spacer"></div>
-        </div>
-      </div>
-
-
-      <div class="row">
-        <div class="small-11 small-centered medium-10 large-8 columns">
+        <div class="small-3 medium-3 large-3 columns">
           <%= f.label "Job Description" %>
+        </div>
+        <div class="small-9 medium-9 large-9 columns">
+          <p class="sublabel">Current brief outline of role and responsibilities and/or what you are learning at your current role:</p>
           <%= f.text_area(:job_description, cols:10, rows: 10) %>
-          <div class="spacer"></div>
         </div>
       </div>
 
       <div id='prev_comp' class="row">
-        <div class="small-11 small-centered medium-10 large-8 columns">
+        <div class="small-3 medium-3 large-3 columns">
           <%= f.label "Previous Companies" %>
-
-          <% if @advisor.other_companies == nil %>
-          <%= text_field_tag "companies[]",nil,placeholder: "1. Company Name" %>
-          <%= text_field_tag "companies[]",nil,placeholder: "2. Company Name" %>
-          <%= text_field_tag "companies[]",nil,placeholder: "3. Company Name" %>
+        </div>
+        <div class="small-9 medium-9 large-9 columns">
+          <% if @advisor.previous_companies != [] %>
+          <% @advisor.previous_companies.each do |company|  %>
+            <%= text_field_tag "previous_company[name]",company.name,placeholder: company.name %>
+            <%= text_field_tag "prevous_company[job_title]",company.job_title, placeholder: company.job_title %>
+            <%= text_area("previous_company[roles]", company.roles, cols:10, rows: 10) %>
+            <% end %>
           <% else %>
-
-          <%= text_field_tag "companies[]",@advisor.other_companies.split(',')[0],placeholder: "1. Company Name" %>
-          <%= text_field_tag "companies[]",@advisor.other_companies.split(',')[1],placeholder: "2. Company Name" %>
-          <%= text_field_tag "companies[]",@advisor.other_companies.split(',')[2],placeholder: "3. Company Name" %>
+          <%= text_field_tag "previous_company[name]", '', placeholder: "Company Name" %>
+          <%= text_field_tag "prevous_company[job_title]",'', placeholder: "Job Title" %>
+          <p class="sublabel">Brief outline of role and responsibilities and/or what expertise you gained:</p>
+          <%= text_area_tag "previous_company[roles]", '', size: "10x10" %>
           <% end %>
-          <div class="spacer"></div>
         </div>
       </div>
 
-
-      <div id='test' class="row"></div>
       <div class="row">
-        <div class="small-11 small-centered medium-10 large-8 columns">
+        <div class="small-3 medium-3 large-3 columns">
           <%= f.label "University Attended" %>
+        </div>
+        <div class="small-9 medium-9 large-9 columns">
           <%= f.text_field :education, placeholder: "University Name, Location(City, Country), & Degree Obtained" %>
-          <div class="spacer"></div>
         </div>
       </div>
       <div class="row">
-        <div class="small-11 small-centered medium-10 large-8 columns">
+        <div class="small-3 medium-3 large-3 columns">
           <%= f.label "Finance Certification(s)" %>
+        </div>
+        <div class="small-9 medium-9 large-9 columns">
           <%= f.text_field :certifications, placeholder: "Certification" %>
-          <div class="spacer"></div>
         </div>
       </div>
       <div class="row">
-        <div class="small-11 small-centered medium-10 large-8 columns">
+        <div class="small-3 medium-3 large-3 columns">
           <%= f.label "Language(s) you Speak" %>
+        </div>
+        <div class="small-9 medium-9 large-9 columns">
           <%= f.text_field :languages, placeholder: "Languages" %>
-          <div class="spacer"></div>
         </div>
       </div>
       <div class="row">
-        <div class="small-11 small-centered medium-10 large-8 columns">
+        <div class="small-3 medium-3 large-3 columns">
           <%= f.label "Other Information" %>
-          <p class="sublabel">Think about why people would want to speak with you about their career options. Many people viewing your profile will want to know about you and your career and will want to know what career topics you want to share: relocation, promotions, being effective at your role, summer internships, dealing with a difficult boss, managing your time versus life demands, making the most of your internship, your current company, why you like what you do, the finance industry as a whole, coming from a non-traditional background, transitioning from one area to another, overcoming obstacles in life, dealing with diversity issues, finding the best fit for your skill set.</p>
+        </div>
+        <div class="small-9 medium-9 large-9 columns">
+          <p class="sublabel">Many people viewing your profile will want to know about you and your career and will want to know what career topics you want to share: relocation, promotions, being effective at your role, summer internships, dealing with a difficult boss, work – life balance, making the most of your internship, your current company, why you like what you do, the finance industry as a whole, coming from a non-traditional background, transitioning from one area to another, overcoming obstacles in life, dealing with diversity in the workplace, finding the best fit for your skill set. These are examples and please add your own.</p>
           <%= f.text_area(:interesting_facts, cols:10, rows: 10) %>
-          <div class="spacer"></div>
         </div>
       </div>
 
 
 
       <div class="row">
-        <div class="small-11 small-centered medium-10 medium-centered large-8 large-centered columns">
-          <label>Publish?</label>
+        <div class="small-3 medium-3 large-3 columns">
+          <label>Publish?*</label>
+        </div>
+        <div class="small-9 medium-9 large-9 columns">
           <div class="row" id="publish-radio">
             <p class="yes-no-choice-text"><%= radio_button("advisor", "publish", true) %> Yes</p>
           </div>
           <div class="row" id="publish-radio">
             <p class="yes-no-choice-text"><%= radio_button("advisor", "publish", false) %> No</p>
           </div>
-          <p id="form_note">*Your profile will remain private until you have verified your email, published your profile, AND have been verified by the Admin.</p>
+          <p class="form-mini-info">*Your profile will remain private until you have published your profile, AND have been verified by the Admin.</p>
         </div>
       </div>
 
       <div class="row">
-        <div class="small-11 small-centered medium-10 large-8 columns" id='pro'>
-          <p class="sublabel">PLEASE REVIEW ALL ABOVE INFORMATION AND IF YOU ARE SATISFIED WITH THE CONTENT, CLICK ADD PROFILE. YOU WILL BE DIRECTED TO THE NEXT PAGE TO SEE HOW YOUR INFORMATION WILL APPEAR ON THE SITE. AS A FINAL STEP, YOU MUST CREATE AN APPOINTMENT ON THE NEXT PAGE. ADDING YOUR AVAILABLE CALENDAR DATES AND TIMES IS ESSENTIAL TO COMPLETE YOUR PROFILE.</p>
+        <div class="small-12 small-centered medium-12 large-12 columns" id='pro'>
+          <p class="sublabel">PLEASE REVIEW ALL ABOVE INFORMATION.IF YOU ARE SATISFIED WITH THE CONTENT, CLICK CREATE PROFILE. YOU WILL BE DIRECTED TO THE NEXT PAGE TO SEE HOW YOUR INFORMATION WILL APPEAR ON THE SITE.</p>
         </div>
       </div>
 
       <div class="row">
-        <div class="small-11 small-centered medium-10 large-8 columns" id='pro'>
-          <%= f.submit "Add Profile", :class => "full-button", :id => "update_profile_button" %>
+        <div class="small-12 medium-12 large-12 columns">
+          <p class="form_subtitle">Part 3: Creating Your Calendar Dates & Times</p>
+          <p id="form_note">Please complete part 3 on the next page. Add your availability with calendar dates and times.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="small-12 medium-12 large-12 columns" id='pro'>
+          <%= f.submit "Create Profile", :class => "full-button", :id => "update_profile_button" %>
         </div>
 
       </div>
