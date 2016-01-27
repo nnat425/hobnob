@@ -150,7 +150,7 @@
           <label>Current Area of Expertise</label>
         </div>
         <div class="small-9 medium-9 large-9 columns">
-          <%= select(:category, :name,['Investment/Wholesale Banking (sell side)', 'Asset Management (buy side)', 'Corporate Finance', 'Other Areas of Finance Expertise', 'Resume & Interview Preparation'], {prompt: 'Select Category'}) %>
+          <%= select(:category, :name,['Investment/Wholesale Banking (sell side)', 'Asset Management (buy side)', 'Corporate Finance', 'Other Areas of Finance Expertise', 'Resume & Interview Preparation'], {include_blank: 'Select Category'}) %>
           <div class="row">
             <div class="small-12 medium-12 large-12 columns">
               <p class="form-mini-info">Please click <%= link_to "HERE","#",id:"pop-categories-link" %> to see how we divided the Finance roles</p>
@@ -331,7 +331,7 @@
             <%= text_field_tag "previous_company[name]", "#{company.name}" %>
             <%= text_field_tag "previous_company[job_title]", "#{company.job_title}" %>
             <p class="sublabel">Brief outline of role and responsibilities and/or what expertise you gained:</p>
-            <%= text_area_tag "previous_company[roles]", '', size: "10x10" %>
+            <%= text_area_tag "previous_company[roles]", company.roles, size: "10x10" %>
             <% end %>
           <% else %>
           <%= text_field_tag "previous_company[name]", '', placeholder: "Company Name" %>
