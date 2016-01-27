@@ -83,7 +83,6 @@ class AdvisorsController < ApplicationController
     end
     advisor.category = Category.find_or_create_by(name: params[:category][:name])
     advisor.update(advisor_params)
-    advisor.join_companies(params[:companies])
     if params[:category][:name] == "Resume & Interview Preparation"
       advisor.student_price = 50
       advisor.regular_price = 60
@@ -100,7 +99,7 @@ class AdvisorsController < ApplicationController
       end
     end
     if params[:previous_company]
-      advisor.previous_companies.find_or_create_by(name: params[:previous_company][:name], job_title: params[:previous_company][:job_title], roles: params[:previous_company][:roles])
+      advisor.previous_companies.find_or_initialize_by(name: params[:previous_company][:name]).update_attributes({name: params[:previous_company][:name], job_title: params[:previous_company][:job_title], roles: params[:previous_company][:roles]})
     end
     if advisor.save
       redirect_to advisor_path(advisor)

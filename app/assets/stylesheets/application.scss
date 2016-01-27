@@ -239,7 +239,10 @@ position: fixed;
 #about_hero img {
   width: 100%;
 }
-
+#home-hero {
+  background-size: cover;
+  overflow: hidden;
+}
 #home-hero img {
   width: 100%;
 }
@@ -475,6 +478,9 @@ p.form_subtitle {
 
 }
 
+#categories-toggle {
+  display: none;
+}
 
 #edit-advisor-container {
   background-color: #F8F8F8;

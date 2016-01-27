@@ -58,21 +58,37 @@
               <p class="profile-info"><%= @advisor.job_description %></p>
             </div>
           </div>
+
+          <% if @advisor.previous_companies != [] %>
+          <% @advisor.previous_companies.each do |company| %>
           <div class="row">
             <div class="small-6 medium-6 large-6 columns">
               <p class='profile-subheader'>Previous</p>
             </div>
             <div class="small-6 medium-6 large-6 columns">
               <p class="profile-info">
-                <% if @advisor.other_companies == nil %>
-                <% else %>
-                <% @advisor.other_companies.split(',').each do |company| %>
-                <%= company %>
-                <% end %>
-                <% end %>
+                <%= company.name %>
               </p>
             </div>
           </div>
+          <div class="row">
+            <div class="small-6 medium-6 large-6 columns">
+              <p class="profile-subheader">Previous Title</p>
+            </div>
+            <div class="small-6 medium-6 large-6 columns">
+              <p class="profile-info"><%= company.job_title %></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-6 medium-6 large-6 columns">
+              <p class="profile-subheader">Roles/Responsibilities</p>
+            </div>
+            <div class="small-6 medium-6 large-6 columns">
+              <p class="profile-info"><%= company.roles %></p>
+            </div>
+          </div>
+          <% end %>
+          <% end %>
 
           <div class="row">
             <div class="small-6 medium-6 large-6 columns">

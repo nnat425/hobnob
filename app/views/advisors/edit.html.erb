@@ -153,21 +153,24 @@
           <%= select(:category, :name,['Investment/Wholesale Banking (sell side)', 'Asset Management (buy side)', 'Corporate Finance', 'Other Areas of Finance Expertise', 'Resume & Interview Preparation'], {prompt: 'Select Category'}) %>
           <div class="row">
             <div class="small-12 medium-12 large-12 columns">
-              <p class="form-mini-info">Please click <%= link_to "HERE","#" %> to see how we divided the Finance roles</p>
+              <p class="form-mini-info">Please click <%= link_to "HERE","#",id:"pop-categories-link" %> to see how we divided the Finance roles</p>
             </div>
           </div>
         </div>
       </div>
-
-
-
-
+      <div class="row">
+        <div class="small-12 medium-12 large-12 columns">
+          <div id="categories-toggle">
+            <%= image_tag("AoE.png") %>
+          </div>
+        </div>
+      </div>
       <div class="row">
         <div class="small-3 medium-3 large-3 columns">
           <%= f.label "Current Location" %>
         </div>
         <div class="small-9 medium-9 large-9 columns">
-          <%= f.select :location, options_for_select(cities), {prompt: "Select Location"} %>
+          <%= f.select :location, options_for_select(cities), {:prompt => "Select City" } %>
         </div>
       </div>
 
@@ -176,7 +179,7 @@
           <%= f.label "Years of experience" %>
         </div>
         <div class="small-9 medium-9 large-9 columns">
-          <%= f.select(:years_of_experience,['< 5 years', '5 - 15 years', '> 15 years'], {prompt: 'Select Range'}) %>
+          <%= f.select :years_of_experience,['< 5 years', '5 - 15 years', '> 15 years'], {:prompt => "Select Years"} %>
         </div>
       </div>
 
@@ -325,9 +328,10 @@
         <div class="small-9 medium-9 large-9 columns">
           <% if @advisor.previous_companies != [] %>
           <% @advisor.previous_companies.each do |company|  %>
-            <%= text_field_tag "previous_company[name]",company.name,placeholder: company.name %>
-            <%= text_field_tag "prevous_company[job_title]",company.job_title, placeholder: company.job_title %>
-            <%= text_area("previous_company[roles]", company.roles, cols:10, rows: 10) %>
+            <%= text_field_tag "previous_company[name]", "#{company.name}" %>
+            <%= text_field_tag "previous_company[job_title]", "#{company.job_title}" %>
+            <p class="sublabel">Brief outline of role and responsibilities and/or what expertise you gained:</p>
+            <%= text_area_tag "previous_company[roles]", company.roles, size: "10x10" %>
             <% end %>
           <% else %>
           <%= text_field_tag "previous_company[name]", '', placeholder: "Company Name" %>

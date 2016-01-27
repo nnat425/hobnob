@@ -22,9 +22,6 @@ class Advisor < ActiveRecord::Base
 
   has_secure_password
 
-  def join_companies(param_companies)
-   self.update(other_companies:param_companies.join(","))
- end
 
 
 def generate_token(column)
