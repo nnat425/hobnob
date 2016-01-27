@@ -328,9 +328,10 @@
         <div class="small-9 medium-9 large-9 columns">
           <% if @advisor.previous_companies != [] %>
           <% @advisor.previous_companies.each do |company|  %>
-            <%= text_field_tag "previous_company[name]",company.name,placeholder: company.name %>
-            <%= text_field_tag "prevous_company[job_title]",company.job_title, placeholder: company.job_title %>
-            <%= text_area("previous_company[roles]", company.roles, cols:10, rows: 10) %>
+            <%= text_field_tag "previous_company[name]", "#{company.name}" %>
+            <%= text_field_tag "previous_company[job_title]", "#{company.job_title}" %>
+            <p class="sublabel">Brief outline of role and responsibilities and/or what expertise you gained:</p>
+            <%= text_area_tag "previous_company[roles]", '', size: "10x10" %>
             <% end %>
           <% else %>
           <%= text_field_tag "previous_company[name]", '', placeholder: "Company Name" %>
