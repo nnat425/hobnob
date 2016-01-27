@@ -153,15 +153,18 @@
           <%= select(:category, :name,['Investment/Wholesale Banking (sell side)', 'Asset Management (buy side)', 'Corporate Finance', 'Other Areas of Finance Expertise', 'Resume & Interview Preparation'], {prompt: 'Select Category'}) %>
           <div class="row">
             <div class="small-12 medium-12 large-12 columns">
-              <p class="form-mini-info">Please click <%= link_to "HERE","#" %> to see how we divided the Finance roles</p>
+              <p class="form-mini-info">Please click <%= link_to "HERE","#",id:"pop-categories-link" %> to see how we divided the Finance roles</p>
             </div>
           </div>
         </div>
       </div>
-
-
-
-
+      <div class="row">
+        <div class="small-12 medium-12 large-12 columns">
+          <div id="categories-toggle">
+            <%= image_tag("AoE.png") %>
+          </div>
+        </div>
+      </div>
       <div class="row">
         <div class="small-3 medium-3 large-3 columns">
           <%= f.label "Current Location" %>

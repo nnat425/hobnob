@@ -99,5 +99,10 @@ $(document).ready(function(){
     $("#resume_popup").slideToggle();
   });
 
+  $("#edit_signup").on("click", "#pop-categories-link", function(event) {
+    event.preventDefault();
+    $("#categories-toggle").slideToggle();
+  })
+
 });
 
