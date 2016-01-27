@@ -150,7 +150,7 @@
           <label>Current Area of Expertise</label>
         </div>
         <div class="small-9 medium-9 large-9 columns">
-          <%= select(:category, :name,['Investment/Wholesale Banking (sell side)', 'Asset Management (buy side)', 'Corporate Finance', 'Other Areas of Finance Expertise', 'Resume & Interview Preparation'], {include_blank: 'Select Category'}) %>
+          <%= select(:category, :name,['Investment/Wholesale Banking (sell side)', 'Asset Management (buy side)', 'Corporate Finance', 'Other Areas of Finance Expertise', 'Resume & Interview Preparation'], {prompt: 'Select Category'}) %>
           <div class="row">
             <div class="small-12 medium-12 large-12 columns">
               <p class="form-mini-info">Please click <%= link_to "HERE","#",id:"pop-categories-link" %> to see how we divided the Finance roles</p>
@@ -170,7 +170,7 @@
           <%= f.label "Current Location" %>
         </div>
         <div class="small-9 medium-9 large-9 columns">
-          <%= f.select :location, options_for_select(cities), {:include_blank => "Select"} %>
+          <%= f.select :location, options_for_select(cities), {:prompt => "Select City" } %>
         </div>
       </div>
 
@@ -179,7 +179,7 @@
           <%= f.label "Years of experience" %>
         </div>
         <div class="small-9 medium-9 large-9 columns">
-          <%= f.select :years_of_experience,['< 5 years', '5 - 15 years', '> 15 years'], {:include_blank => "Select"} %>
+          <%= f.select :years_of_experience,['< 5 years', '5 - 15 years', '> 15 years'], {:prompt => "Select Years"} %>
         </div>
       </div>
 

@@ -239,7 +239,10 @@ position: fixed;
 #about_hero img {
   width: 100%;
 }
-
+#home-hero {
+  background-size: cover;
+  overflow: hidden;
+}
 #home-hero img {
   width: 100%;
 }
