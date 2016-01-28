@@ -23,6 +23,7 @@ $(document).ready(function(){
       data: info
     }).done(function(data) {
       $("#previous_companies_holder").append(data);
+      $(".new_previous_company").val("").hide();
       console.log(data);
     }).fail(function(data) {
       console.log(data);
