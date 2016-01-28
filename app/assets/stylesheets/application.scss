@@ -637,7 +637,8 @@ letter-spacing: 2px;
 }
 
 #about-box{
-border-right: solid #2996cc;
+border: solid 1px #2996cc;
+padding:2em;
 }
 
 #about-box h1 {
@@ -2603,3 +2604,4 @@ height:100%
 .about-toggle{
   text-align:justify;
 }
+
