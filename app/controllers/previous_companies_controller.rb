@@ -19,10 +19,6 @@ class PreviousCompaniesController < ApplicationController
     else
       render :"advisors/edit"
     end
-    # respond_to do |fmt|
-    #   fmt.html { render :"advisors/edit" }
-    #   fmt.json { render partial: "new_previous_company" }
-    # end
   end
 
   private
