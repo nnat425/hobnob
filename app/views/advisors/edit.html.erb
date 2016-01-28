@@ -328,12 +328,30 @@
         <div class="small-9 medium-9 large-9 columns" id="previous_companies_holder">
           <% if @advisor.previous_companies != [] %>
           <% @advisor.previous_companies.each do |company|  %>
-            <%= f.label "Name" %>
-            <%= text_field_tag "previous_company[name]", "#{company.name}" %>
-            <%= f.label "Title" %>
-            <%= text_field_tag "previous_company[job_title]", "#{company.job_title}" %>
-            <%= f.label "Roles/Responsibilities" %>
-            <%= text_area_tag "previous_company[roles]", company.roles, size: "10x10" %>
+          <div class="row">
+            <div class="small-4 medium-3 large-3 columns">
+              <%= f.label "Name" %>
+            </div>
+            <div class="small-8 medium-9 large-9 columns">
+              <p class="previous_company_info"><%= company.name %></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-4 medium-3 large-3 columns">
+              <%= f.label "Title" %>
+            </div>
+            <div class="small-8 medium-9 large-9 columns">
+              <p class="previous_company_info"><%= company.job_title %></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-4 medium-3 large-3 columns">
+              <%= f.label "Roles/Responsibilities" %>
+            </div>
+            <div class="small-8 medium-9 large-9 columns">
+              <p class="previous_company_info"><%= company.roles %></p>
+            </div>
+          </div>
             <% end %>
           <% else %>
           <div class="previous-company-form-holder">
