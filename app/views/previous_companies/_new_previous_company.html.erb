@@ -1,7 +1,32 @@
 
-<label>Name</label>
-<p class="previous_company_info"> <%= @new_company.name %></p>
-<label>Title</label>
-<p class="previous_company_info"> <%= @new_company.job_title %></p>
-<label>Roles/Responsibilities</label>
-<p class="previous_company_info"> <%= @new_company.roles %></p>
+<div class="previous_company_holder">
+  <%= link_to "", "/previous_companies/#{@new_company.id}", method: :delete, class: "fa fa-times", id: "delete-previous-company-btn", data: { confirm: 'Are you sure?' } %>
+  <div class="row">
+    <div class="small-2 medium-2 large-2 columns">
+      <label>Name</label>
+    </div>
+    <div class="small-10 medium-10 large-10 columns">
+      <p class="previous_company_info"> <%= @new_company.name %></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-2 medium-2 large-2 columns">
+      <label>Title</label>
+    </div>
+    <div class="small-10 medium-10 large-10 columns">
+      <p class="previous_company_info"> <%= @new_company.job_title %></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-2 medium-2 large-2 columns">
+      <label>Roles</label>
+    </div>
+    <div class="small-10 medium-10 large-10 columns">
+      <p class="previous_company_info"> <%= @new_company.roles %></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-12 medium-12 large-12 columns">
+      <%= link_to "Edit", "#", class: "button" %>
+    </div>
+  </div>

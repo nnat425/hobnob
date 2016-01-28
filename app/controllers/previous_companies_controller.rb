@@ -1,7 +1,7 @@
 class PreviousCompaniesController < ApplicationController
 
   def index
-    redirect_to edit_advisor_path(current_advisor)
+    render partial: "new_previous_company"
   end
 
   def new
