@@ -328,28 +328,30 @@
         <div class="small-9 medium-9 large-9 columns" id="previous_companies_holder">
           <% if @advisor.previous_companies != [] %>
           <% @advisor.previous_companies.each do |company|  %>
-          <div class="row">
-            <div class="small-4 medium-3 large-3 columns">
-              <%= f.label "Name" %>
+          <div class="previous_company_holder">
+            <div class="row">
+              <div class="small-2 medium-2 large-2 columns">
+                <%= f.label "Name" %>
+              </div>
+              <div class="small-10 medium-10 large-10 columns">
+                <p class="previous_company_info"><%= company.name %></p>
+              </div>
             </div>
-            <div class="small-8 medium-9 large-9 columns">
-              <p class="previous_company_info"><%= company.name %></p>
+            <div class="row">
+              <div class="small-2 medium-2 large-2 columns">
+                <%= f.label "Title" %>
+              </div>
+              <div class="small-10 medium-10 large-10 columns">
+                <p class="previous_company_info"><%= company.job_title %></p>
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="small-4 medium-3 large-3 columns">
-              <%= f.label "Title" %>
-            </div>
-            <div class="small-8 medium-9 large-9 columns">
-              <p class="previous_company_info"><%= company.job_title %></p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="small-4 medium-3 large-3 columns">
-              <%= f.label "Roles/Responsibilities" %>
-            </div>
-            <div class="small-8 medium-9 large-9 columns">
-              <p class="previous_company_info"><%= company.roles %></p>
+            <div class="row">
+              <div class="small-2 medium-2 large-2 columns">
+                <%= f.label "Roles" %>
+              </div>
+              <div class="small-10 medium-10 large-10 columns">
+                <p class="previous_company_info"><%= company.roles %></p>
+              </div>
             </div>
           </div>
             <% end %>
