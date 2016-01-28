@@ -325,25 +325,30 @@
         <div class="small-3 medium-3 large-3 columns">
           <%= f.label "Previous Companies" %>
         </div>
-        <div class="small-9 medium-9 large-9 columns">
+        <div class="small-9 medium-9 large-9 columns" id="previous_companies_holder">
           <% if @advisor.previous_companies != [] %>
           <% @advisor.previous_companies.each do |company|  %>
+            <%= f.label "Name" %>
             <%= text_field_tag "previous_company[name]", "#{company.name}" %>
+            <%= f.label "Title" %>
             <%= text_field_tag "previous_company[job_title]", "#{company.job_title}" %>
-            <p class="sublabel">Brief outline of role and responsibilities and/or what expertise you gained:</p>
+            <%= f.label "Roles/Responsibilities" %>
             <%= text_area_tag "previous_company[roles]", company.roles, size: "10x10" %>
             <% end %>
           <% else %>
-          <%= text_field_tag "previous_company[name]", '', placeholder: "Company Name" %>
-          <%= text_field_tag "prevous_company[job_title]",'', placeholder: "Job Title" %>
-          <p class="sublabel">Brief outline of role and responsibilities and/or what expertise you gained:</p>
-          <%= text_area_tag "previous_company[roles]", '', size: "10x10" %>
+          <div class="previous-company-form-holder">
+            <%= render partial: "previous_companies/new_previous_company_form" %>
+          </div>
           <% end %>
+          <div class="previous-company-form-holder">
+
+          </div>
         </div>
       </div>
+
       <div class="row">
         <div class="small-12 medium-12 large-12 columns">
-          <%= link_to "Add Company +", "new_previous_company_path", id: "add-previous-company-btn" %>
+          <%= link_to "New Company +", new_previous_company_path, id: "add-previous-company-btn" %>
         </div>
       </div>
       <div class="row">

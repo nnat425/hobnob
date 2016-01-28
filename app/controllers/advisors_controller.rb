@@ -70,6 +70,7 @@ class AdvisorsController < ApplicationController
   def edit
     @advisor = Advisor.find_by(id: params[:id])
     @other_categories = @advisor.other_expertise
+    @previous_company = PreviousCompany.new
   end
 
   def update
