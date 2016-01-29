@@ -24,7 +24,6 @@ $(document).ready(function(){
       $("#previous_companies_holder").html(data);
       $(".new_previous_company").val("").hide();
     }).fail(function(data) {
-      console.log(data);
       console.log("did not ajax");
     })
   });
