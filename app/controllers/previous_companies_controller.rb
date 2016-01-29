@@ -21,6 +21,13 @@ class PreviousCompaniesController < ApplicationController
     end
   end
 
+  def destroy
+    company = PreviousCompany.find_by(id: params[:id])
+    current_advisor.previous_companies.delete(company)
+    flash[:message] = "Company Deleted"
+    redirect_to edit_advisor_path(current_advisor)
+  end
+
   private
 
   def previous_company_params
