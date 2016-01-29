@@ -1,6 +1,7 @@
 class PreviousCompaniesController < ApplicationController
 
   def index
+    @advisor = current_advisor
     render partial: "new_previous_company"
   end
 
@@ -25,7 +26,11 @@ class PreviousCompaniesController < ApplicationController
     company = PreviousCompany.find_by(id: params[:id])
     current_advisor.previous_companies.delete(company)
     flash[:message] = "Company Deleted"
-    redirect_to edit_advisor_path(current_advisor)
+    if request.xhr?
+      render partial: "new_previous_company"
+    else
+      redirect_to edit_advisor_path(current_advisor)
+    end
   end
 
   private
