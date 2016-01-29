@@ -1,6 +1,6 @@
 
 <div class="previous_company_holder">
-  <%= link_to "", "/previous_companies/#{@new_company.id}", method: :delete, class: "fa fa-times", id: "delete-previous-company-btn", data: { confirm: 'Are you sure?' } %>
+
   <div class="row">
     <div class="small-2 medium-2 large-2 columns">
       <label>Name</label>
@@ -26,7 +26,10 @@
     </div>
   </div>
   <div class="row">
-    <div class="small-12 medium-12 large-12 columns">
-      <%= link_to "Edit", "#", class: "button" %>
+    <div class="small-6 medium-6 large-6 columns">
+      <%= link_to "Edit", "#", class: "alternative-button" %>
+    </div>
+    <div class="small-6 medium-6 large-6 columns">
+      <%= link_to "Delete", "/previous_companies/#{@new_company.id}", method: :delete, class: "alternative-button", id: "delete-previous-company-btn", data: { confirm: 'Are you sure?' } %>
     </div>
   </div>
