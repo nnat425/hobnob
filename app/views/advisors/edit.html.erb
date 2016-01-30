@@ -326,24 +326,17 @@
           <%= f.label "Previous Companies" %>
         </div>
         <div class="small-9 medium-9 large-9 columns" id="previous_companies_holder">
+           <div class="row">
+        <div class="small-12 medium-12 large-12 columns">
+          <%= link_to "Add New Company +", new_previous_company_path, id: "add-previous-company-btn" %>
+        </div>
+      </div>
           <% if @advisor.previous_companies != [] %>
             <%= render partial: "previous_companies/new_previous_companies" %>
-            <% else %>
-              <div class="previous-company-form-holder">
-                <%= render partial: "previous_companies/new_previous_company_form" %>
-              </div>
             <% end %>
-          <div class="previous-company-form-holder">
-
-          </div>
         </div>
       </div>
 
-      <div class="row">
-        <div class="small-12 medium-12 large-12 columns">
-          <%= link_to "New Company +", new_previous_company_path, id: "add-previous-company-btn" %>
-        </div>
-      </div>
       <div class="row">
         <div class="small-3 medium-3 large-3 columns">
           <%= f.label "University Attended" %>
