@@ -1,4 +1,4 @@
-<% if @advisor.previous_companies != [] %>
+
 <% @advisor.previous_companies.each do |company|  %>
 <div class="previous_company_holder">
 
@@ -34,10 +34,5 @@
      <%= link_to "Delete", "/previous_companies/#{company.id}", method: :delete, class: "alternative-button", id: "delete-previous-company-btn", data: { confirm: 'Are you sure?' } %>
     </div>
   </div>
-</div>
-<% end %>
-<% else %>
-<div class="previous-company-form-holder">
-  <%= render partial: "previous_companies/new_previous_company_form" %>
 </div>
 <% end %>

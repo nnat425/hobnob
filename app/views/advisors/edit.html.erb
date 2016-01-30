@@ -212,8 +212,8 @@
 
           <div class="row">
             <div class="small-2 medium-2 large-2 columns">
-              <% if @other_categories != nil %>
-              <%= check_box_tag "other_expertise[]", "Investment/Wholesale Banking (sell side)", @other_categories.include?("Investment/Wholesale Banking (sell side)"), class: "category-checkbox" %>
+              <% if @advisor.other_expertise != nil %>
+              <%= check_box_tag "other_expertise[]", "Investment/Wholesale Banking (sell side)", @advisor.other_expertise.include?("Investment/Wholesale Banking (sell side)"), class: "category-checkbox" %>
               <% else %>
               <%= check_box_tag "other_expertise[]", "Investment/Wholesale Banking (sell side)", false, class: "category-checkbox" %>
               <% end %>
@@ -228,8 +228,8 @@
 
           <div class="row">
             <div class="small-2 medium-2 large-2 columns">
-              <% if @other_categories != nil %>
-              <%= check_box_tag "other_expertise[]", "Asset Management (buy side)", @other_categories.include?("Asset Management (buy side)"), class: "category-checkbox" %>
+              <% if @advisor.other_expertise != nil %>
+              <%= check_box_tag "other_expertise[]", "Asset Management (buy side)", @advisor.other_expertise.include?("Asset Management (buy side)"), class: "category-checkbox" %>
               <% else %>
               <%= check_box_tag "other_expertise[]", "Asset Management (buy side)", false, class: "category-checkbox" %>
               <% end %>
@@ -244,8 +244,8 @@
 
           <div class="row">
             <div class="small-2 medium-2 large-2 columns">
-              <% if @other_categories != nil %>
-              <%= check_box_tag "other_expertise[]", "Corporate Finance", @other_categories.include?("Corporate Finance"), class: "category-checkbox"  %>
+              <% if @advisor.other_expertise != nil %>
+              <%= check_box_tag "other_expertise[]", "Corporate Finance", @advisor.other_expertise.include?("Corporate Finance"), class: "category-checkbox"  %>
               <% else %>
               <%= check_box_tag "other_expertise[]", "Corporate Finance", false, class: "category-checkbox"  %>
               <% end %>
@@ -259,8 +259,8 @@
           </div>
           <div class="row">
             <div class="small-2 medium-2 large-2 columns">
-              <% if @other_categories != nil %>
-              <%= check_box_tag "other_expertise[]", "Other Areas of Finance Expertise", @other_categories.include?("Other Areas of Finance Expertise"), class: "category-checkbox" %>
+              <% if @advisor.other_expertise != nil %>
+              <%= check_box_tag "other_expertise[]", "Other Areas of Finance Expertise", @advisor.other_expertise.include?("Other Areas of Finance Expertise"), class: "category-checkbox" %>
               <% else %>
               <%= check_box_tag "other_expertise[]", "Other Areas of Finance Expertise", false, class: "category-checkbox" %>
               <% end %>
@@ -274,8 +274,8 @@
           </div>
           <div class="row">
             <div class="small-2 medium-2 large-2 columns">
-              <% if @other_categories != nil %>
-              <%= check_box_tag "other_expertise[]", "Resume & Interview Preparation", @other_categories.include?("Resume & Interview Preparation"), class: "category-checkbox" %>
+              <% if @advisor.other_expertise != nil %>
+              <%= check_box_tag "other_expertise[]", "Resume & Interview Preparation", @advisor.other_expertise.include?("Resume & Interview Preparation"), class: "category-checkbox" %>
               <% else %>
               <%= check_box_tag "other_expertise[]", "Resume & Interview Preparation", false, class: "category-checkbox" %>
               <% end %>
@@ -326,7 +326,13 @@
           <%= f.label "Previous Companies" %>
         </div>
         <div class="small-9 medium-9 large-9 columns" id="previous_companies_holder">
+          <% if @advisor.previous_companies != [] %>
             <%= render partial: "previous_companies/new_previous_companies" %>
+            <% else %>
+              <div class="previous-company-form-holder">
+                <%= render partial: "previous_companies/new_previous_company_form" %>
+              </div>
+            <% end %>
           <div class="previous-company-form-holder">
 
           </div>
