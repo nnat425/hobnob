@@ -27,10 +27,10 @@ class PreviousCompaniesController < ApplicationController
   end
 
   def destroy
-    @advisor = current_advisor
     @previous_company = PreviousCompany.new
     company = PreviousCompany.find_by(id: params[:id])
     current_advisor.previous_companies.delete(company)
+    @advisor = current_advisor
     flash[:message] = "Company Deleted"
     if request.xhr?
       render partial: "new_previous_companies"

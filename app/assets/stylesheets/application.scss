@@ -519,6 +519,8 @@ p.previous_company_info {
   margin-bottom: 1em;
   padding: 1em;
 }
+
+
 #edit-panel {
 background-color: #fff;
 border: 1px solid #ccc;
@@ -2141,6 +2143,26 @@ transition: all .3s ease-in-out;
 }
 
 
+a.alternative-button {
+text-align: center;
+margin-bottom: 1.5em;
+margin-top: 1.5em;
+margin-right: .25em;
+margin-left: .25em;
+font-size: .70em;
+border-radius: 5px;
+padding-left: 2.5em;
+padding-right: 2.5em;
+padding-top: 1em;
+padding-bottom: 1em;
+color:white;
+background-color: #2996cc;
+letter-spacing: 2px;
+text-transform: uppercase;
+font-family: "Open Sans";
+font-weight: 300;
+float: right;
+}
 
 
 #book-appt-btn {
