@@ -21,7 +21,7 @@ $(document).ready(function(){
   $(".about-toggle").hide();
 
 
-  $( ".home-subheader,.about-first-p").hover(function() {
+  $( ".home-subheader,.about-first-p,.about-first-p-small").hover(function() {
     var id = $(this).attr('id');
     $(this).css('border','2px solid #87CEFF');
     $(this).css("box-shadow","0 0 5px rgba(81, 203, 238, 1)");

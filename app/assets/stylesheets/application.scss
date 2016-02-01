@@ -621,8 +621,6 @@ overflow: hidden;
 margin-top:5em;
 padding-left: 1em;
 padding-right: 1em;
-padding-top: 2.5em;
-padding-bottom: 2.5em;
 }
 
 #simple-steps-header {
@@ -635,7 +633,13 @@ font-weight: 300;
 letter-spacing: 2px;
 }
 
-.about-box{
+#about-box{
+border-right:solid #2996cc 2px;
+padding-top:3em;
+}
+
+#about-box-fee{
+padding-top:3em;
 }
 
 #about-box h1 {
@@ -659,26 +663,6 @@ margin-bottom: 1.5em;
 
 }
 
-#about-box-3 h1 {
-text-align: center;
-margin-bottom: 1em;
-}
-
-#about-box-3 h1{
-color: #fff;
-font-weight: 300;
-}
-
-#about-box-3 h3 {
-color: #fff;
-font-family: "Open Sans";
-font-weight: 300;
-text-transform: uppercase;
-letter-spacing: 2px;
-text-align: center;
-margin-bottom: 1.5em;
-
-}
 
 
 #network-ribbon-header {
@@ -2621,7 +2605,13 @@ text-align:center;
 padding:2em;
 height:20.5em;
 border: 1px solid #87CEFF;
+}
 
+.about-first-p-small{
+text-align:center;
+padding:2em;
+border: 1px solid #87CEFF;
+height:40em;
 }
 
 #about_container_1_subtext{
@@ -2744,8 +2734,15 @@ background-color:black;
   margin-bottom:1em;
 }
 
-
+#info5{
+  font-size:0.6em;
+}
 
 #toronto{
   color: #2996cc;
+}
+
+#button-phone{
+  text-align:center;
+  margin:auto;
 }
