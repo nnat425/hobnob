@@ -151,9 +151,9 @@
         </div>
         <div class="small-9 medium-9 large-9 columns">
           <% if @advisor.category != [] %>
-          <%= select(:category, :name,['Investment/Wholesale Banking (sell side)', 'Asset Management (buy side)', 'Corporate Finance', 'Other Areas of Finance Expertise', 'Resume & Interview Preparation'], :selected => @advisor.category.name ) %>
+          <%= select(:category, :name,['Investment Bank/Capital Markets (Sell Side)', 'Asset Management (buy side)', 'Corporate Finance', 'Other Areas of Expertise in Finance', 'Resume & Interview Preparation'], :selected => @advisor.category.name ) %>
           <% else %>
-          <%= select(:category, :name,['Investment/Wholesale Banking (sell side)', 'Asset Management (buy side)', 'Corporate Finance', 'Other Areas of Finance Expertise', 'Resume & Interview Preparation'], {prompt: 'Select Category'}) %>
+          <%= select(:category, :name,['Investment Bank/Capital Markets (Sell Side)', 'Asset Management (buy side)', 'Corporate Finance', 'Other Areas of Expertise in Finance', 'Resume & Interview Preparation'], {prompt: 'Select Category'}) %>
           <% end %>
           <div class="row">
             <div class="small-12 medium-12 large-12 columns">
