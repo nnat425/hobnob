@@ -237,14 +237,14 @@ position: fixed;
 }
 
 #about_hero img {
-  width: 100%;
+width: 100%;
 }
 #home-hero {
   background-size: cover;
   overflow: hidden;
 }
 #home-hero img {
-  width: 100%;
+width: 100%;
 }
 
 #session_background {
@@ -446,9 +446,9 @@ font-size: 1.2em;
 }
 
 #line-break {
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 1.5em;
-  margin-top: 1.5em;
+border-bottom: 1px solid #ccc;
+margin-bottom: 1.5em;
+margin-top: 1.5em;
 }
 
 #form_directions {
@@ -468,13 +468,13 @@ font-family: "Open Sans";
 }
 
 p.form_subtitle {
-  font-family: "Open Sans";
-  font-weight: 300;
-  font-size: 1.25em;
-  color: #43c7f4;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  border-bottom: 1px solid #ccc;
+font-family: "Open Sans";
+font-weight: 300;
+font-size: 1.25em;
+color: #43c7f4;
+margin-top: 1em;
+margin-bottom: 1em;
+border-bottom: 1px solid #ccc;
 
 }
 
@@ -483,7 +483,7 @@ p.form_subtitle {
 }
 
 #edit-advisor-container {
-  background-color: #F8F8F8;
+background-color: #F8F8F8;
 }
 
 #add-previous-company-btn {
@@ -531,7 +531,7 @@ margin-bottom: 2em;
 }
 
 #edit-panel form {
-  padding: 3em;
+padding: 3em;
 }
 #edit-panel form input {
 padding: 1em;
@@ -557,10 +557,10 @@ float: left;
 }
 
 p.form-mini-info {
-  font-family: "Open Sans";
-  font-weight: 300;
-  font-size: .7em;
-  color: #C0C0C0;
+font-family: "Open Sans";
+font-weight: 300;
+font-size: .7em;
+color: #C0C0C0;
 
 }
 
@@ -603,18 +603,16 @@ color:black;
 }
 
 #about_container_1_subtext p {
-text-align:justify;
 font-family: "Open Sans";
 font-weight: 300;
 letter-spacing: 1px;
-font-size: 1.1em;
 margin-top:4em;
 }
 
 #about_container_1_subtext{
 text-align: center;
-
 }
+
 
 .about_container_2 {
 background-color:black;
@@ -623,8 +621,6 @@ overflow: hidden;
 margin-top:5em;
 padding-left: 1em;
 padding-right: 1em;
-padding-top: 2.5em;
-padding-bottom: 2.5em;
 }
 
 #simple-steps-header {
@@ -638,7 +634,11 @@ letter-spacing: 2px;
 }
 
 #about-box{
-border-right: solid #2996cc;
+padding-top:3em;
+}
+
+#about-box-fee{
+padding-top:3em;
 }
 
 #about-box h1 {
@@ -662,26 +662,6 @@ margin-bottom: 1.5em;
 
 }
 
-#about-box-3 h1 {
-text-align: center;
-margin-bottom: 1em;
-}
-
-#about-box-3 h1{
-color: #fff;
-font-weight: 300;
-}
-
-#about-box-3 h3 {
-color: #fff;
-font-family: "Open Sans";
-font-weight: 300;
-text-transform: uppercase;
-letter-spacing: 2px;
-text-align: center;
-margin-bottom: 1.5em;
-
-}
 
 
 #network-ribbon-header {
@@ -1465,13 +1445,13 @@ display: inline;
 }
 
 #pro {
-  padding-top: 2.5em;
-  text-align: center;
+padding-top: 2.5em;
+text-align: center;
 }
 
 input#update_profile_button.full-button {
-  width: 50%;
-  height: 50px;
+width: 50%;
+height: 50px;
 }
 
 #profile-header {
@@ -2339,7 +2319,7 @@ margin-top: 2em;
 margin-bottom: 2em;
 position: fixed;
 z-index:1000;
-top:6%;
+top:2%;
 left:5%;
 }
 
@@ -2404,6 +2384,18 @@ text-transform: uppercase;
 font-size: 1.1em;
 }
 
+p.popup_header_text_2{
+color: #2996cc;
+font-family: "Open Sans";
+font-weight: 300;
+letter-spacing: 1px;
+text-transform: uppercase;
+font-size: .9em;
+border-bottom:solid #2996cc 1px;
+}
+
+
+
 .popup-subtopic-list{
 font-size:.85em;
 font-family: "Open Sans";
@@ -2411,8 +2403,18 @@ font-weight: 300;
 list-style-type:none;
 float:left;
 letter-spacing: 1px;
-color: #000;
+color: white;
 }
+
+.popup-subtopic-list-question{
+font-size:.85em;
+font-family: "Open Sans";
+font-weight: 300;
+float:left;
+letter-spacing: 1px;
+color: white;
+}
+
 
 
 #popup-levels {
@@ -2595,5 +2597,154 @@ top:0px;
 left:0px;
 width:100%;
 height:100%
+}
+
+.about-first-p{
+text-align:center;
+padding:2em;
+height:20.5em;
+border: 1px solid #87CEFF;
+}
+
+.about-first-p-small{
+text-align:center;
+padding:2em;
+border: 1px solid #87CEFF;
+height:40em;
+}
+
+#about_container_1_subtext{
+margin-top:5em;
+}
+
+.about-toggle{
+text-align:justify;
+font-size:0.8em;
+}
+
+#info-4{
+margin-top:20em;
+}
+
+#category_pop_up_phone{
+display:none;
+z-index:9000;
+position: fixed;
+overflow:scroll;
+top:15%;
+height:500px;
+width:300px;
+background-color:black;
+color:white;
+border:solid #2996cc 1px;
+}
+
+#location_pop_up_phone{
+display:none;
+z-index:9000;
+position: fixed;
+overflow:scroll;
+top:15%;
+height:500px;
+width:300px;
+background-color:black;
+color:white;
+border:solid #2996cc 1px;
+}
+
+#year_pop_up_phone{
+display:none;
+z-index:9000;
+position: fixed;
+overflow:scroll;
+top:15%;
+height:500px;
+width:300px;
+background-color:black;
+color:white;
+border:solid #2996cc 1px;
+}
+
+#question_pop_up_phone{
+display:none;
+z-index:9000;
+position: fixed;
+overflow:scroll;
+top:15%;
+height:500px;
+width:300px;
+background-color:black;
+color:white;
+border:solid #2996cc 1px;
+}
+
+#fee_pop_up_phone{
+display:none;
+z-index:9000;
+position: fixed;
+overflow:scroll;
+top:15%;
+height:500px;
+width:300px;
+background-color:black;
+color:white;
+border:solid #2996cc 1px;
+}
+
+
+
+#close{
+color:red;
+float:right;
+margin-right:-0.7em;
+background-color:black;
+}
+
+#close_question{
+color:red;
+float:right;
+margin-right:-0.7em;
+background-color:black;
+}
+
+#close_location{
+color:red;
+float:right;
+margin-right:-0.7em;
+background-color:black;
+}
+
+#close_year{
+color:red;
+float:right;
+margin-right:-0.7em;
+background-color:black;
+}
+
+#close_fee{
+color:red;
+float:right;
+margin-right:-0.7em;
+background-color:black;
+}
+
+#fee-phone-row{
+  border-bottom:solid #2996cc 1px;
+  margin-bottom:1em;
+}
+
+#info5{
+  font-size:0.6em;
+}
+
+#toronto{
+  color: #2996cc;
+}
+
+#button-phone{
+  text-align:center;
+  margin:auto;
+  border-bottom:solid #2996cc 1px;
+  padding-bottom:1em;
 }
 
