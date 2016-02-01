@@ -1,0 +1,9 @@
+<%= form_for @previous_company do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, placeholder: "Company Name" %>
+  <%= f.label :job_title %>
+  <%= f.text_field :job_title, placeholder: "Previous Title" %>
+  <%= f.label "Roles/responsibilities" %>
+  <%= f.text_area :roles, size: "10x10" %>
+  <%= f.submit "Add Company", :class => "full-button", id: "add-company-btn" %>
+<% end %>

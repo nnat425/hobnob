@@ -239,7 +239,10 @@ position: fixed;
 #about_hero img {
   width: 100%;
 }
-
+#home-hero {
+  background-size: cover;
+  overflow: hidden;
+}
 #home-hero img {
   width: 100%;
 }
@@ -475,10 +478,49 @@ p.form_subtitle {
 
 }
 
+#categories-toggle {
+  display: none;
+}
 
 #edit-advisor-container {
   background-color: #F8F8F8;
 }
+
+#add-previous-company-btn {
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: .7em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  float: right;
+}
+
+#delete-previous-company-btn {
+  font-family: Arial;
+}
+#add-company-btn {
+  margin-top:1.5em;
+}
+.new_previous_company {
+  width: 100%;
+  border: 1px solid #ccc;
+}
+
+p.previous_company_info {
+  font-family: "Open Sans";
+  font-size: .8em;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-left: 1.5em;
+}
+.previous_company_holder {
+  border: 1px solid #ccc;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 1em;
+}
+
+
 #edit-panel {
 background-color: #fff;
 border: 1px solid #ccc;
@@ -790,7 +832,7 @@ font-weight: bold;
 text-transform: uppercase;
 letter-spacing: 1px;
 margin-bottom: .5em;
-float: right;
+float: left;
 }
 
 .profile-info {
@@ -1616,7 +1658,7 @@ height: 3.5em;
 font-size: 1em;
 border-radius: 5px;
 margin-bottom: .5em;
-width: 45%;
+width: 42.5%;
 }
 
 #appointment-form form label {
@@ -2100,6 +2142,26 @@ transition: all .3s ease-in-out;
 }
 
 
+a.alternative-button {
+text-align: center;
+margin-bottom: 1.5em;
+margin-top: 1.5em;
+margin-right: .25em;
+margin-left: .25em;
+font-size: .70em;
+border-radius: 5px;
+padding-left: 2.5em;
+padding-right: 2.5em;
+padding-top: 1em;
+padding-bottom: 1em;
+color:white;
+background-color: #2996cc;
+letter-spacing: 2px;
+text-transform: uppercase;
+font-family: "Open Sans";
+font-weight: 300;
+float: right;
+}
 
 
 #book-appt-btn {
