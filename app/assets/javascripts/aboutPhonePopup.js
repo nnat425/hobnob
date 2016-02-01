@@ -17,4 +17,10 @@ $(document).ready(function(){
   $('#close_year').on("click",function(){
     $('#year_pop_up_phone').hide();
   });
+  $('#question_phone').on("click",function(){
+    $('#question_pop_up_phone').show();
+  });
+  $('#close_question').on("click",function(){
+    $('#question_pop_up_phone').hide();
+  });
 });
