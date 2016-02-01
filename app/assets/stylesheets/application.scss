@@ -2401,6 +2401,15 @@ text-transform: uppercase;
 font-size: 1.1em;
 }
 
+p.popup_header_text_2{
+color: #2996cc;
+font-family: "Open Sans";
+font-weight: 300;
+letter-spacing: 1px;
+text-transform: uppercase;
+font-size: .9em;
+}
+
 .popup-subtopic-list{
 font-size:.85em;
 font-family: "Open Sans";
@@ -2629,6 +2638,19 @@ border:solid #2996cc 1px;
 }
 
 #location_pop_up_phone{
+display:none;
+z-index:9000;
+position: fixed;
+overflow:scroll;
+top:15%;
+height:500px;
+width:300px;
+background-color:black;
+color:white;
+border:solid #2996cc 1px;
+}
+
+#year_pop_up_year{
 display:none;
 z-index:9000;
 position: fixed;

@@ -11,4 +11,10 @@ $(document).ready(function(){
   $('#close_location').on("click",function(){
     $('#location_pop_up_phone').hide();
   });
+  $('#year_phone').on("click",function(){
+    $('#year_pop_up_phone').show();
+  });
+  $('#close_year').on("click",function(){
+    $('#year_pop_up_phone').hide();
+  });
 });
