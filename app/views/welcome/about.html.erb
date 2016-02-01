@@ -57,118 +57,126 @@
 
   <h3 class="standard-heading">3 Simple Steps</h3>
   <div class="about_container_2">
-    <div class="row">
-      <div class="small-12 medium-12 large-4 columns" id="about-box">
-        <h1><i id='search' class="fa fa-search"></i></h1>
-        <h3>Search</h3>
-        <ul class='search-list'>
-          <li>Over 100 professionals on the HOB NOB Network</li>
-          <li>Use any GET NETWORKING! button to search</li>
-          <li>Everyone has a great story to share with you</li>
-          <br>
-          <li>Refine your search by area of expertise, level of experience,
-            and location</li>
-          </ul>
-          <div id='button-phone' class="hide-for-large-up">
-            <button id='area_of_expertise_phone' class="button" type="button">AREAS OF EXPERTISE(5)</button>
-            <button id='locations_phone' class="button" type="button">LOCATIONS</button>
-            <button id='years_phone' class="button" type="button">YEARS OF EXPERIENCE(3)</button>
-          </div>
-        </div>
-
+      <div class="row">
         <div class="small-12 medium-12 large-4 columns" id="about-box">
-          <h1><i id='pointer' class="fa fa-hand-pointer-o fa-lg"></i></h1>
-          <h3>Select</h3>
+          <h1><i id='search' class="fa fa-search"></i></h1>
+          <h3>Search</h3>
           <ul class='search-list'>
-            <li>Review your search profiles</li>
-            <li>Check available dates & times</li>
-            <li>Select professionals that have the expertise you want</li>
+            <li>Over 100 professionals on the HOB NOB Network</li>
+            <li>Use any GET NETWORKING! button to search</li>
+            <li>Everyone has a great story to share with you</li>
             <br>
-            <li>Think about the answers you seek and select a professional
-              with that best meets your needs</li>
+            <li>Refine your search by area of expertise, level of experience,
+              and location</li>
             </ul>
             <div id='button-phone' class="hide-for-large-up">
-              <button id='question_phone' class="button" type="button">POSSIBLE QUESTIONS</button>
+              <button id='area_of_expertise_phone' class="button" type="button">AREAS OF EXPERTISE(5)</button>
+              <button id='locations_phone' class="button" type="button">LOCATIONS</button>
+              <button id='years_phone' class="button" type="button">YEARS OF EXPERIENCE(3)</button>
             </div>
           </div>
 
-
-          <div class="small-12 medium-12 large-4 columns" id="about-box" style='border-right:none'>
-            <h1><i id='pointer' class="fa fa-globe fa-lg"></i></h1>
-            <h3>Connect</h3>
+          <div class="small-12 medium-12 large-4 columns" id="about-box">
+            <h1><i id='pointer' class="fa fa-hand-pointer-o fa-lg"></i></h1>
+            <h3>Select</h3>
             <ul class='search-list'>
-              <li>You searched the network</li>
-              <li>You selected the professionals you wanted to speak with</li>
-              <li>You verified your availability of date and time</li>
+              <li>Review your search profiles</li>
+              <li>Check available dates & times</li>
+              <li>Select professionals that have the expertise you want</li>
               <br>
-              <li>The last steps: secure the connection by clicking GET
-                CONNECTED and then click CHECK OUT</li>
+              <li>Think about the answers you seek and select a professional
+                with that best meets your needs</li>
               </ul>
               <div id='button-phone' class="hide-for-large-up">
-                <button id='fee_phone' class="button" type="button">AREAS OF EXPERTISE(5)</button>
+                <button id='question_phone' class="button" type="button">POSSIBLE QUESTIONS</button>
               </div>
             </div>
 
-          </div>
-          <div class="show-for-large-up" id="buttons-holder">
-            <div class="large-4 columns" id='about-box'>
-              <button id='area_of_expertise' class="button" type="button">AREAS OF EXPERTISE(5)</button>
-              <button id='locations' class="button" type="button">LOCATIONS</button>
-              <button id='years' class="button" type="button">YEARS OF EXPERIENCE(3)</button>
+
+            <div class="small-12 medium-12 large-4 columns" id="about-box" style='border-right:none'>
+              <h1><i id='pointer' class="fa fa-globe fa-lg"></i></h1>
+              <h3>Connect</h3>
+              <ul class='search-list'>
+                <li>You searched the network</li>
+                <li>You selected the professionals you wanted to speak with</li>
+                <li>You verified your availability of date and time</li>
+                <br>
+                <li>The last steps: secure the connection by clicking GET
+                  CONNECTED and then click CHECK OUT</li>
+                </ul>
+                <div id='button-phone' class="hide-for-large-up">
+                  <button id='fee_phone' class="button" type="button">AREAS OF EXPERTISE(5)</button>
+                </div>
+              </div>
+
+
+              <div class="show-for-large-up" id="buttons-holder">
+                <div class="large-4 columns" id='about-box'>
+                  <button id='area_of_expertise' class="button" type="button">AREAS OF EXPERTISE(5)</button>
+                  <button id='locations' class="button" type="button">LOCATIONS</button>
+                  <button id='years' class="button" type="button">YEARS OF EXPERIENCE(3)</button>
+                </div>
+                <div class="large-4 columns" id='about-box'>
+                  <button id='questions' class="button" type="button">POSSIBLE QUESTIONS</button>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                </div>
+                <div class="show-for-large-up">
+                  <div id='about-box-fee' class="large-4 columns">
+                    <button id='fees' class="button" type="button">FEES</button>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="large-4 columns" id='about-box'>
-              <button id='questions' class="button" type="button">POSSIBLE QUESTIONS</button>
-            </div>
-            <div id='about-box-fee' class="large-4 columns">
-              <button id='fees' class="button" type="button">FEES</button>
-            </div>
-          </div>
-        </div>
-
-
-        <%= render partial: "popup_categories" %>
-        <%= render partial: "popup_levels" %>
-        <%= render partial: "popup_locations" %>
-        <%= render partial: "popup_years" %>
-        <%= render partial: "popup_questions" %>
-        <%= render partial: "popup_fees" %>
-        <%= render partial: "popup_categories_phone" %>
-        <%= render partial: "popup_locations_phone" %>
-        <%= render partial: "popup_years_phone" %>
-        <%= render partial: "popup_question_phone" %>
-        <%= render partial: "popup_question_fees" %>
-
-
-
-
-
-
-        <div id='blanket' style='display:none'></div>
-
-        <div class="container" id="about-container">
-         <p>If there is a specific role or area you would like to explore and we do not have anyone in the Network, please
-          contact us and we will find you a connection. Please contact karen@thepelikangroup.com</p>
-        </div>
-        <div id="pelikan-logo">
-          <img src="/assets/pelikan_logo.png"/>
-        </div>
-        <footer class="footer" id="parallax-footer">
-          <p class="slogan"><img id="nav_logo" src="/assets/hn_logo_small.png"/></p>
-
-          <div class="links">
-            <%= link_to "Home", root_path %>
-            <p>  •  </p>
-            <%= link_to "About", about_path %>
-            <p>  •  </p>
-            <%= link_to "Network", advisors_path %>
-            <p>  •  </p>
-            <%= link_to "The Network's Charities", " http://www.thepelikangroup.com/charities.html" , :target => "_blank" %>
           </div>
 
-          <p class="copywrite">Pelikan Group Inc.</p>
 
-        </footer>s
+          <%= render partial: "popup_categories" %>
+          <%= render partial: "popup_levels" %>
+          <%= render partial: "popup_locations" %>
+          <%= render partial: "popup_years" %>
+          <%= render partial: "popup_questions" %>
+          <%= render partial: "popup_fees" %>
+          <%= render partial: "popup_categories_phone" %>
+          <%= render partial: "popup_locations_phone" %>
+          <%= render partial: "popup_years_phone" %>
+          <%= render partial: "popup_question_phone" %>
+          <%= render partial: "popup_question_fees" %>
+
+
+
+
+
+
+          <div id='blanket' style='display:none'></div>
+
+          <div class="container" id="about-container">
+           <p>If there is a specific role or area you would like to explore and we do not have anyone in the Network, please
+            contact us and we will find you a connection. Please contact karen@thepelikangroup.com</p>
+          </div>
+          <div id="pelikan-logo">
+            <img src="/assets/pelikan_logo.png"/>
+          </div>
+          <footer class="footer" id="parallax-footer">
+            <p class="slogan"><img id="nav_logo" src="/assets/hn_logo_small.png"/></p>
+
+            <div class="links">
+              <%= link_to "Home", root_path %>
+              <p>  •  </p>
+              <%= link_to "About", about_path %>
+              <p>  •  </p>
+              <%= link_to "Network", advisors_path %>
+              <p>  •  </p>
+              <%= link_to "The Network's Charities", " http://www.thepelikangroup.com/charities.html" , :target => "_blank" %>
+            </div>
+
+            <p class="copywrite">Pelikan Group Inc.</p>
+
+          </footer>s
+        </div>
+
       </div>
-
-    </div>
 
