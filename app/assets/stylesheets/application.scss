@@ -2408,7 +2408,10 @@ font-weight: 300;
 letter-spacing: 1px;
 text-transform: uppercase;
 font-size: .9em;
+border-bottom:solid #2996cc 1px;
 }
+
+
 
 .popup-subtopic-list{
 font-size:.85em;
@@ -2650,7 +2653,7 @@ color:white;
 border:solid #2996cc 1px;
 }
 
-#year_pop_up_year{
+#year_pop_up_phone{
 display:none;
 z-index:9000;
 position: fixed;
