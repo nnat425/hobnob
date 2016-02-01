@@ -225,13 +225,13 @@
           <div class="row">
             <div class="small-2 medium-2 large-2 columns">
               <% if @advisor.other_expertise != nil %>
-              <%= check_box_tag "other_expertise[]", "Investment/Wholesale Banking (sell side)", @advisor.other_expertise.include?("Investment/Wholesale Banking (sell side)"), class: "category-checkbox" %>
+              <%= check_box_tag "other_expertise[]", "Investment Bank/Capital Markets (Sell Side)", @advisor.other_expertise.include?("Investment Bank/Capital Markets (Sell Side)"), class: "category-checkbox" %>
               <% else %>
-              <%= check_box_tag "other_expertise[]", "Investment/Wholesale Banking (sell side)", false, class: "category-checkbox" %>
+              <%= check_box_tag "other_expertise[]", "Investment Bank/Capital Markets (Sell Side)", false, class: "category-checkbox" %>
               <% end %>
             </div>
             <div class="small-10 medium-10 large-10 columns">
-              <p class="checkbox-label">Investment/Wholesale Banking (sell side) <%= link_to "","#", class: "fa fa-info-circle", id: "investment_banking_info_pop" %></p>
+              <p class="checkbox-label">Investment Bank/Capital Markets (Sell Side) <%= link_to "","#", class: "fa fa-info-circle", id: "investment_banking_info_pop" %></p>
             </div>
           </div>
           <div class="row">
@@ -272,13 +272,13 @@
           <div class="row">
             <div class="small-2 medium-2 large-2 columns">
               <% if @advisor.other_expertise != nil %>
-              <%= check_box_tag "other_expertise[]", "Other Areas of Finance Expertise", @advisor.other_expertise.include?("Other Areas of Finance Expertise"), class: "category-checkbox" %>
+              <%= check_box_tag "other_expertise[]", "Other Areas of Expertise in Finance", @advisor.other_expertise.include?("Other Areas of Expertise in Finance"), class: "category-checkbox" %>
               <% else %>
-              <%= check_box_tag "other_expertise[]", "Other Areas of Finance Expertise", false, class: "category-checkbox" %>
+              <%= check_box_tag "other_expertise[]", "Other Areas of Expertise in Finance", false, class: "category-checkbox" %>
               <% end %>
             </div>
             <div class="small-10 medium-10 large-10 columns">
-              <p class="checkbox-label">Other Areas of Finance Expertise <%= link_to "","#", class: "fa fa-info-circle", id: "other_finance_info_pop" %></p>
+              <p class="checkbox-label">Other Areas of Expertise in Finance <%= link_to "","#", class: "fa fa-info-circle", id: "other_finance_info_pop" %></p>
             </div>
           </div>
           <div class="row">
