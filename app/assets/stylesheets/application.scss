@@ -2689,6 +2689,20 @@ color:white;
 border:solid #2996cc 1px;
 }
 
+#fee_pop_up_phone{
+display:none;
+z-index:9000;
+position: fixed;
+overflow:scroll;
+top:15%;
+height:500px;
+width:300px;
+background-color:black;
+color:white;
+border:solid #2996cc 1px;
+}
+
+
 
 #close{
 color:red;
@@ -2717,6 +2731,20 @@ float:right;
 margin-right:-0.7em;
 background-color:black;
 }
+
+#close_fee{
+color:red;
+float:right;
+margin-right:-0.7em;
+background-color:black;
+}
+
+#fee-phone-row{
+  border-bottom:solid #2996cc 1px;
+  margin-bottom:1em;
+}
+
+
 
 #toronto{
   color: #2996cc;

@@ -84,72 +84,73 @@
                 CONNECTED and then click CHECK OUT</li>
               </ul>
               <div class="hide-for-large-up">
-                <%= link_to "Get Networking!", advisors_path, class: "button" %>
+                <button id='fee_phone' class="button" type="button">AREAS OF EXPERTISE(5)</button>              </div>
+              </div>
+
+            </div>
+            <div class="show-for-large-up" id="buttons-holder">
+              <div class="large-4 columns" id='about-box'>
+                <button id='area_of_expertise' class="button" type="button">AREAS OF EXPERTISE(5)</button>
+                <button id='locations' class="button" type="button">LOCATIONS</button>
+                <button id='years' class="button" type="button">YEARS OF EXPERIENCE(3)</button>
+              </div>
+              <div class="large-4 columns" id='about-box'>
+                <button id='questions' class="button" type="button">POSSIBLE QUESTIONS</button>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+              </div>
+              <div class="large-4 columns">
+                <button id='fees' class="button" type="button">FEES</button>            </div>
               </div>
             </div>
 
-          </div>
-          <div class="show-for-large-up" id="buttons-holder">
-            <div class="large-4 columns" id='about-box'>
-              <button id='area_of_expertise' class="button" type="button">AREAS OF EXPERTISE(5)</button>
-              <button id='locations' class="button" type="button">LOCATIONS</button>
-              <button id='years' class="button" type="button">YEARS OF EXPERIENCE(3)</button>
+
+            <%= render partial: "popup_categories" %>
+            <%= render partial: "popup_levels" %>
+            <%= render partial: "popup_locations" %>
+            <%= render partial: "popup_years" %>
+            <%= render partial: "popup_questions" %>
+            <%= render partial: "popup_fees" %>
+            <%= render partial: "popup_categories_phone" %>
+            <%= render partial: "popup_locations_phone" %>
+            <%= render partial: "popup_years_phone" %>
+            <%= render partial: "popup_question_phone" %>
+            <%= render partial: "popup_question_fees" %>
+
+
+
+
+
+
+            <div id='blanket' style='display:none'></div>
+
+            <div class="container" id="about-container">
+             <p>If there is a specific role or area you would like to explore and we do not have anyone in the Network, please
+              contact us and we will find you a connection. Please contact karen@thepelikangroup.com</p>
             </div>
-            <div class="large-4 columns" id='about-box'>
-              <button id='questions' class="button" type="button">POSSIBLE QUESTIONS</button>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
+            <div id="pelikan-logo">
+              <img src="/assets/pelikan_logo.png"/>
             </div>
-            <div class="large-4 columns">
-              <button id='fees' class="button" type="button">FEES</button>            </div>
-            </div>
+            <footer class="footer" id="parallax-footer">
+              <p class="slogan"><img id="nav_logo" src="/assets/hn_logo_small.png"/></p>
+
+              <div class="links">
+                <%= link_to "Home", root_path %>
+                <p>  •  </p>
+                <%= link_to "About", about_path %>
+                <p>  •  </p>
+                <%= link_to "Network", advisors_path %>
+                <p>  •  </p>
+                <%= link_to "The Network's Charities", " http://www.thepelikangroup.com/charities.html" , :target => "_blank" %>
+              </div>
+
+              <p class="copywrite">Pelikan Group Inc.</p>
+
+            </footer>s
           </div>
 
-
-          <%= render partial: "popup_categories" %>
-          <%= render partial: "popup_levels" %>
-          <%= render partial: "popup_locations" %>
-          <%= render partial: "popup_years" %>
-          <%= render partial: "popup_questions" %>
-          <%= render partial: "popup_fees" %>
-          <%= render partial: "popup_categories_phone" %>
-          <%= render partial: "popup_locations_phone" %>
-          <%= render partial: "popup_years_phone" %>
-          <%= render partial: "popup_question_phone" %>
-
-
-
-
-
-          <div id='blanket' style='display:none'></div>
-
-          <div class="container" id="about-container">
-           <p>If there is a specific role or area you would like to explore and we do not have anyone in the Network, please
-            contact us and we will find you a connection. Please contact karen@thepelikangroup.com</p>
-          </div>
-          <div id="pelikan-logo">
-            <img src="/assets/pelikan_logo.png"/>
-          </div>
-          <footer class="footer" id="parallax-footer">
-            <p class="slogan"><img id="nav_logo" src="/assets/hn_logo_small.png"/></p>
-
-            <div class="links">
-              <%= link_to "Home", root_path %>
-              <p>  •  </p>
-              <%= link_to "About", about_path %>
-              <p>  •  </p>
-              <%= link_to "Network", advisors_path %>
-              <p>  •  </p>
-              <%= link_to "The Network's Charities", " http://www.thepelikangroup.com/charities.html" , :target => "_blank" %>
-            </div>
-
-            <p class="copywrite">Pelikan Group Inc.</p>
-
-          </footer>s
         </div>
-
-      </div>
 

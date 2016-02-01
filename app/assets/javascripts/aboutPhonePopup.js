@@ -23,4 +23,10 @@ $(document).ready(function(){
   $('#close_question').on("click",function(){
     $('#question_pop_up_phone').hide();
   });
+  $('#fee_phone').on("click",function(){
+    $('#fee_pop_up_phone').show();
+  });
+  $('#close_fee').on("click",function(){
+    $('#fee_pop_up_phone').hide();
+  });
 });
