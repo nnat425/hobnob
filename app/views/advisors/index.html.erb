@@ -23,7 +23,7 @@
 
         <%= check_box_tag "filter[category][]", "Asset Management (buy side)", false, class: "advisors-filter-checkbox" %>
 
-        <label>Asset Management (buy side)</label>
+        <label>Asset Management (buy side) <div class='hide-for-large-up'><%= link_to "","#", class: "fa fa-info-circle", id: "asset_management_info_pop_network_phone" %> <%= render partial: "/categories/asset_management_network_phone" %></div></label>
       </div>
       <div class="index-categories-list" >
 
