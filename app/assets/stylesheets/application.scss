@@ -615,7 +615,7 @@ text-align: center;
 
 
 .about_container_2 {
-background-color:black;
+background-color: #292929;
 background-size: cover;
 overflow: hidden;
 margin-top:5em;
@@ -644,15 +644,17 @@ padding-top:3em;
 #about-box h1 {
 text-align: center;
 margin-bottom: 1em;
+
 }
 
 #about-box h1 i {
 color: #fff;
 font-weight: 300;
+
 }
 
 #about-box h3 {
-color: #fff;
+color: #2996cc;
 font-family: "Open Sans";
 font-weight: 300;
 text-transform: uppercase;
@@ -2564,6 +2566,15 @@ color: #C0C0C0;
 
 .search-list{
 color:white;
+text-align: center;
+list-style-type: none;
+}
+
+.search-list li {
+  font-family: "Open Sans";
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-size: 1em;
 }
 
 #buttons-holder{
