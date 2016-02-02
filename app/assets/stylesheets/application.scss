@@ -1013,11 +1013,12 @@ letter-spacing: 1px;
 #home-info-box {
 text-align: center;
 margin-top: 0em;
-margin-bottom: 1.5em;
+margin-bottom: 5em;
 background-color: #282828;
 background-size: cover;
 overflow: hidden;
 padding: 2em;
+height: 100%;
 
 
 }
@@ -2073,7 +2074,7 @@ margin-bottom: -.3em;
 
 #parallax-footer {
 position: absolute;
-margin-top: 1.5em;
+
 bottom: 0;
 right:0;
 left: 0;
