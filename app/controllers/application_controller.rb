@@ -29,7 +29,7 @@ class ApplicationController < ActionController::Base
   end
 
   def cities
-    ["Boston","Calgary","Hong Kong","Houston","London","Montreal","NYC","San Francisco","Shanghai","Singapore","Toronto","UAE","Vancouver"]
+    ["Toronto", "Calgary", "Vancouver","Montreal","NYC","Houston","San Francisco","Boston", "Chicago","London", "Singapore", " Hong Kong","Dubai", "Shanghai"]
   end
 
 def total_for_student
