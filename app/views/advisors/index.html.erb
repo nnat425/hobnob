@@ -43,10 +43,11 @@
       <p>Location</p><%= link_to "", advisors_path, class: "fa fa-angle-down fa-lg", id: "show-options-locations" %>
     </div>
     <div class="row" id="locations-toggle">
+
       <div class="index-categories-list" >
 
-        <%= check_box_tag "filter[location][]", "Boston", false, class: "advisors-filter-checkbox" %>
-        <label>Boston</label>
+        <%= check_box_tag "filter[location][]", "Toronto", false, class: "advisors-filter-checkbox" %>
+        <label>Toronto</label>
       </div>
       <div class="index-categories-list" >
 
@@ -56,8 +57,21 @@
       </div>
       <div class="index-categories-list" >
 
-        <%= check_box_tag "filter[location][]", "Hong Kong", false, class: "advisors-filter-checkbox" %>
-        <label>Hong Kong</label>
+        <%= check_box_tag "filter[location][]", "Vancouver", false, class: "advisors-filter-checkbox" %>
+        <label>Vancouver</label>
+      </div>
+
+       <div class="index-categories-list" >
+
+        <%= check_box_tag "filter[location][]", "Montreal", false, class: "advisors-filter-checkbox" %>
+        <label>Montreal</label>
+      </div>
+
+
+      <div class="index-categories-list" >
+
+        <%= check_box_tag "filter[location][]", "NYC", false, class: "advisors-filter-checkbox" %>
+        <label>NYC</label>
       </div>
       <div class="index-categories-list" >
 
@@ -66,29 +80,25 @@
       </div>
       <div class="index-categories-list" >
 
-        <%= check_box_tag "filter[location][]", "London", false, class: "advisors-filter-checkbox" %>
-        <label>London</label>
-      </div>
-      <div class="index-categories-list" >
-
-        <%= check_box_tag "filter[location][]", "Montreal", false, class: "advisors-filter-checkbox" %>
-        <label>Montreal</label>
-      </div>
-      <div class="index-categories-list" >
-
-        <%= check_box_tag "filter[location][]", "NYC", false, class: "advisors-filter-checkbox" %>
-        <label>NYC</label>
-      </div>
-      <div class="index-categories-list" >
-
         <%= check_box_tag "filter[location][]", "San Francisco", false, class: "advisors-filter-checkbox" %>
         <label>San Francisco</label>
       </div>
+       <div class="index-categories-list" >
+
+        <%= check_box_tag "filter[location][]", "Boston", false, class: "advisors-filter-checkbox" %>
+        <label>Boston</label>
+      </div>
       <div class="index-categories-list" >
 
-        <%= check_box_tag "filter[location][]", "Shanghai", false, class: "advisors-filter-checkbox" %>
-        <label>Shanghai</label>
+        <%= check_box_tag "filter[location][]", "Chicago", false, class: "advisors-filter-checkbox" %>
+        <label>Chicago</label>
       </div>
+       <div class="index-categories-list" >
+
+        <%= check_box_tag "filter[location][]", "London", false, class: "advisors-filter-checkbox" %>
+        <label>London</label>
+      </div>
+
       <div class="index-categories-list" >
 
         <%= check_box_tag "filter[location][]", "Singapore", false, class: "advisors-filter-checkbox" %>
@@ -96,19 +106,20 @@
       </div>
       <div class="index-categories-list" >
 
-        <%= check_box_tag "filter[location][]", "Toronto", false, class: "advisors-filter-checkbox" %>
-        <label>Toronto</label>
+        <%= check_box_tag "filter[location][]", "Hong Kong", false, class: "advisors-filter-checkbox" %>
+        <label>Hong Kong</label>
       </div>
       <div class="index-categories-list" >
 
-        <%= check_box_tag "filter[location][]", "UAE", false, class: "advisors-filter-checkbox" %>
-        <label>UAE</label>
+        <%= check_box_tag "filter[location][]", "Dubai", false, class: "advisors-filter-checkbox" %>
+        <label>Dubai</label>
       </div>
       <div class="index-categories-list" >
 
-        <%= check_box_tag "filter[location][]", "Vancouver", false, class: "advisors-filter-checkbox" %>
-        <label>Vancouver</label>
+        <%= check_box_tag "filter[location][]", "Shanghai", false, class: "advisors-filter-checkbox" %>
+        <label>Shanghai</label>
       </div>
+
     </div>
 
     <div class="advisors-filter-subheader">
