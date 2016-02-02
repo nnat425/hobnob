@@ -1,115 +1,114 @@
+<div class="row" id="ribbon-header">
+</div>
 
-<div class="container" id="user-profile-container">
-
-  <div class="row" id="profile_header">
+<div id="user-profile-container">
+  <div class="row">
     <div class="small-12 medium-12 large-12 columns">
-      <p class="alert-message"><%= flash[:message] %></p>
-    </div>
-  </div>
-
-  <div class="small-12 medium-10 medium-centered large-7 large-centered columns">
-    <div class="panel" id="user-profile-panel">
-      <div class="small-12 medium-12 large-12 columns" id="profile-header">
-        <p>Basic Info</p>
-      </div>
-      <div class="small-12 medium-12 large-12 columns">
-        <div class="row">
-          <div class="small-6 medium-6 large-4 columns">
-            <p class="profile-subheader">Name:</p>
-          </div>
-          <div class="small-6 medium-6 large-8 columns">
-            <p class="user-info"><%= @user.first_name %> <%= @user.last_name %></p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="small-6 medium-6 large-4 columns">
-            <p class="profile-subheader">Primary Email:</p>
-          </div>
-          <div class="small-6 medium-6 large-8 columns">
-            <p class="user-info"><%= @user.email %></p>
-          </div>
-        </div>
-        <% if @user.student == true %>
-        <div class="row">
-          <div class="small-6 medium-6 large-4 columns">
-            <p class="profile-subheader">University/School:</p>
-          </div>
-          <div class="small-6 medium-6 large-8 columns">
-            <p class="user-info"><%= @user.school %></p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="small-6 medium-6 large-4 columns">
-            <p class="profile-subheader">Program:</p>
-          </div>
-          <div class="small-6 medium-6 large-8 columns">
-            <p class="user-info"><%= @user.program %></p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="small-6 medium-6 large-4 columns">
-            <p class="profile-subheader">Graduation Date:</p>
-          </div>
-          <div class="small-6 medium-6 large-8 columns">
-            <p class="user-info"><%= @user.graduation_date %></p>
-          </div>
-        </div>
-        <% end %>
+      <div class="row">
+        <p class="alert-message"><%= flash[:message] %></p>
       </div>
       <div class="row">
-        <div class="small-12 medium-12 large-12 columns" id="profile-header">
-          <p>Your Appointments</p>
-        </div>
-
-        <% @booked_appointments.reverse.each do |appointment| %>
-        <div class='row' id='order_item'>
-          <div class="small-2 medium-3 large-4 columns">
-            <div class="advisor-checkout-avatar">
-              <%= image_tag appointment.advisor.avatar.url(:medium) %>
+        <div class="small-12 medium-12 large-6 columns">
+          <div class="user-panel">
+            <div class="row">
+              <p id="profile-header">Basic Info</p>
             </div>
+            <div class="row">
+              <div class="small-12 medium-6 large-4 columns">
+                <p class="profile-subheader">Name:</p>
+              </div>
+              <div class="small-12 medium-6 large-8 columns">
+                <p class="user-info"><%= @user.first_name %> <%= @user.last_name %></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="small-12 medium-6 large-4 columns">
+                <p class="profile-subheader">Primary Email:</p>
+              </div>
+              <div class="small-12 medium-6 large-8 columns">
+                <p class="user-info"><%= @user.email %></p>
+              </div>
+            </div>
+            <% if @user.student == true %>
+            <div class="row">
+              <div class="small-12 medium-6 large-4 columns">
+                <p class="profile-subheader">University/School:</p>
+              </div>
+              <div class="small-12 medium-6 large-8 columns">
+                <p class="user-info"><%= @user.school %></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="small-12 medium-6 large-4 columns">
+                <p class="profile-subheader">Program:</p>
+              </div>
+              <div class="small-12 medium-6 large-8 columns">
+                <p class="user-info"><%= @user.program %></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="small-12 medium-6 large-4 columns">
+                <p class="profile-subheader">Graduation Date:</p>
+              </div>
+              <div class="small-12 medium-6 large-8 columns">
+                <p class="user-info"><%= @user.graduation_date %></p>
+              </div>
+            </div>
+            <% end %>
           </div>
-
-          <div class="small-12 medium-9 large-8 columns">
-            <div class="row">
-              <div class="small-4 medium-3 large-2 columns">
-                <label class="user-appointment-label">Advisor:</label>
-              </div>
-              <div class="small-8 medium-9 large-10 columns">
-                <p class="user-appointment"><%= appointment.advisor.firstname %></p>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="small-5 medium-3 large-2 columns">
-                <label class="user-appointment-label">Appointment:</label>
-              </div>
-              <div class="small-7 medium-9 large-10 columns">
-                <p class="user-appointment"><%= appointment.title  %></p>
-              </div>
-            </div>
-            <div class='row'>
-              <div class="small-3 medium-3 large-2 columns">
-                <label class="user-appointment-label">Date:</label>
-              </div>
-              <div class="small-9 medium-9 large-10 columns">
-                <p class="user-appointment"><%= appointment.start_time.strftime("%A, %B %d, %Y") %></p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="small-3 medium-3 large-2 columns">
-                <label class="user-appointment-label">Time:</label>
-              </div>
-              <div class="small-9 medium-9 large-10 columns">
-                <p class="user-appointment"><%= appointment.start_time.strftime("%l:%M %p ") %></p>
-                <p class="user-appointment"> <%= appointment.end_time.strftime("-%l:%M %p") %></p>
-              </div>
-            </div>
-          </div>
         </div>
+        <div class="small-12 medium-12 large-6 columns">
+          <div class='user-panel'>
+          <div class="row">
+            <p id="profile-header">Your Appointments</p>
+          </div>
+          <% @booked_appointments.reverse.each do |appointment| %>
+            <div class='row' id='order_item'>
+              <div class="small-12 medium-3 large-3 columns">
+                <div class="advisor-checkout-avatar">
+                  <%= image_tag appointment.advisor.avatar.url(:medium) %>
+                </div>
+              </div>
 
+              <div class="small-12 medium-9 large-9 columns">
+                <div class="row">
+                  <div class="small-12 medium-3 large-4 columns">
+                    <label class="user-appointment-label">Advisor:</label>
+                  </div>
+                  <div class="small-12 medium-9 large-8 columns">
+                    <p class="user-appointment"><%= appointment.advisor.firstname %></p>
+                  </div>
+                </div>
 
-
-        <% end %>
+                <div class="row">
+                  <div class="small-12 medium-3 large-4 columns">
+                    <label class="user-appointment-label">Appointment:</label>
+                  </div>
+                  <div class="small-12 medium-9 large-8 columns">
+                    <p class="user-appointment"><%= appointment.title  %></p>
+                  </div>
+                </div>
+                <div class='row'>
+                  <div class="small-12 medium-3 large-4 columns">
+                    <label class="user-appointment-label">Date:</label>
+                  </div>
+                  <div class="small-12 medium-9 large-8 columns">
+                    <p class="user-appointment"><%= appointment.start_time.strftime("%A, %B %d, %Y") %></p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="small-12 medium-3 large-4 columns">
+                    <label class="user-appointment-label">Time:</label>
+                  </div>
+                  <div class="small-12 medium-9 large-8 columns">
+                    <p class="user-appointment"><%= appointment.start_time.strftime("%l:%M %p ") %> - <%= appointment.end_time.strftime("-%l:%M %p") %></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+           <% end %>
+         </div>
+        </div>
       </div>
     </div>
   </div>
