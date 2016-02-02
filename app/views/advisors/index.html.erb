@@ -15,7 +15,7 @@
       <div class="index-categories-list" >
 
         <%= check_box_tag "filter[category][]", "Investment Bank/Capital Markets (Sell Side)", false, class: "advisors-filter-checkbox" %>
-        <label>Investment Bank/Capital Markets (Sell Side) <div class='hide-for-large-up'><%= link_to "","#", class: "fa fa-info-circle", id: "investment_banking_info_pop_network_phone" %> <%= render partial: "/categories/investment_banking_network_phone" %></div></label>
+        <label>Investment Bank/Capital Markets (Sell Side) <%= link_to "","#", class: "fa fa-info-circle", id: "investment_banking_info_pop_network" %> <div class='hide-for-large-up'><%= link_to "","#", class: "fa fa-info-circle", id: "investment_banking_info_pop_network_phone" %> <%= render partial: "/categories/investment_banking_network_phone" %></div></label>
 
       </div>
 
@@ -152,6 +152,7 @@
   </div>
 </div>
 
+<%= render partial: "/categories/investment_banking_network" %>
 
 <div class="row" id="advisors-list-holder">
   <div class="small-12 medium-12 large-11 large-centered columns">
