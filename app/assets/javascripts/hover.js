@@ -42,6 +42,23 @@ $("#corporate_finance_info_pop_network" ).hover(
   }
   );
 
+$("#other_finance_info_pop_network" ).hover(
+  function() {
+    $('#other_finance_popup_network').fadeIn(500);
+  }, function() {
+    $('#other_finance_popup_network').fadeOut(500);
+  }
+  );
+
+$("#resume_interview_info_pop_network" ).hover(
+  function() {
+    $('#resume_interview_popup_network').fadeIn(500);
+  }, function() {
+    $('#resume_interview_popup_network').fadeOut(500);
+  }
+  );
+
+
 
 });
 
