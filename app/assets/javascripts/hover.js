@@ -34,6 +34,13 @@ $("#asset_management_info_pop_network" ).hover(
   }
   );
 
+$("#corporate_finance_info_pop_network" ).hover(
+  function() {
+    $('#corporate_finance_popup_network').fadeIn(500);
+  }, function() {
+    $('#corporate_finance_popup_network').fadeOut(500);
+  }
+  );
 
 
 });
