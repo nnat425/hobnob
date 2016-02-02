@@ -14,7 +14,7 @@
       <div class="index-categories-list" >
 
         <%= check_box_tag "filter[category][]", "Investment Bank/Capital Markets (Sell Side)", false, class: "advisors-filter-checkbox" %>
-        <label>Investment Bank/Capital Markets (Sell Side)</label>
+        <label>Investment Bank/Capital Markets (Sell Side) <%= link_to "","#", class: "fa fa-info-circle", id: "investment_banking_info_pop_network" %></label>
       </div>
       <div class="index-categories-list" >
 
@@ -61,7 +61,7 @@
         <label>Vancouver</label>
       </div>
 
-       <div class="index-categories-list" >
+      <div class="index-categories-list" >
 
         <%= check_box_tag "filter[location][]", "Montreal", false, class: "advisors-filter-checkbox" %>
         <label>Montreal</label>
@@ -83,7 +83,7 @@
         <%= check_box_tag "filter[location][]", "San Francisco", false, class: "advisors-filter-checkbox" %>
         <label>San Francisco</label>
       </div>
-       <div class="index-categories-list" >
+      <div class="index-categories-list" >
 
         <%= check_box_tag "filter[location][]", "Boston", false, class: "advisors-filter-checkbox" %>
         <label>Boston</label>
@@ -93,7 +93,7 @@
         <%= check_box_tag "filter[location][]", "Chicago", false, class: "advisors-filter-checkbox" %>
         <label>Chicago</label>
       </div>
-       <div class="index-categories-list" >
+      <div class="index-categories-list" >
 
         <%= check_box_tag "filter[location][]", "London", false, class: "advisors-filter-checkbox" %>
         <label>London</label>
