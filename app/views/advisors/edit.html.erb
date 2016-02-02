@@ -150,7 +150,11 @@
           <label>Current Area of Expertise</label>
         </div>
         <div class="small-9 medium-9 large-9 columns">
-          <%= select(:category, :name,['Investment/Wholesale Banking (sell side)', 'Asset Management (buy side)', 'Corporate Finance', 'Other Areas of Finance Expertise', 'Resume & Interview Preparation'], {prompt: 'Select Category'}) %>
+          <% if @advisor.category != [] %>
+          <%= select(:category, :name,['Investment Bank/Capital Markets (Sell Side)', 'Asset Management (buy side)', 'Corporate Finance', 'Other Areas of Expertise in Finance', 'Resume & Interview Preparation'], :selected => @advisor.category.name ) %>
+          <% else %>
+          <%= select(:category, :name,['Investment Bank/Capital Markets (Sell Side)', 'Asset Management (buy side)', 'Corporate Finance', 'Other Areas of Expertise in Finance', 'Resume & Interview Preparation'], {prompt: 'Select Category'}) %>
+          <% end %>
           <div class="row">
             <div class="small-12 medium-12 large-12 columns">
               <p class="form-mini-info">Please click <%= link_to "HERE","#",id:"pop-categories-link" %> to see how we divided the Finance roles</p>
@@ -170,7 +174,11 @@
           <%= f.label "Current Location" %>
         </div>
         <div class="small-9 medium-9 large-9 columns">
-          <%= f.select :location, options_for_select(cities), {:prompt => "Select City" } %>
+          <% if @advisor.location != [] %>
+          <%= f.select :location, options_for_select(cities, @advisor.location), :selected => @advisor.location %>
+          <% else %>
+            <%= f.select :location, options_for_select(cities), {:prompt => "Select City" } %>
+          <% end %>
         </div>
       </div>
 
@@ -179,7 +187,11 @@
           <%= f.label "Years of experience" %>
         </div>
         <div class="small-9 medium-9 large-9 columns">
+          <% if @advisor.years_of_experience != [] %>
+          <%= f.select :years_of_experience,['< 5 years', '5 - 15 years', '> 15 years'], :selected => @advisor.years_of_experience %>
+          <% else %>
           <%= f.select :years_of_experience,['< 5 years', '5 - 15 years', '> 15 years'], {:prompt => "Select Years"} %>
+          <% end %>
         </div>
       </div>
 
@@ -213,13 +225,13 @@
           <div class="row">
             <div class="small-2 medium-2 large-2 columns">
               <% if @advisor.other_expertise != nil %>
-              <%= check_box_tag "other_expertise[]", "Investment/Wholesale Banking (sell side)", @advisor.other_expertise.include?("Investment/Wholesale Banking (sell side)"), class: "category-checkbox" %>
+              <%= check_box_tag "other_expertise[]", "Investment Bank/Capital Markets (Sell Side)", @advisor.other_expertise.include?("Investment Bank/Capital Markets (Sell Side)"), class: "category-checkbox" %>
               <% else %>
-              <%= check_box_tag "other_expertise[]", "Investment/Wholesale Banking (sell side)", false, class: "category-checkbox" %>
+              <%= check_box_tag "other_expertise[]", "Investment Bank/Capital Markets (Sell Side)", false, class: "category-checkbox" %>
               <% end %>
             </div>
             <div class="small-10 medium-10 large-10 columns">
-              <p class="checkbox-label">Investment/Wholesale Banking (sell side) <%= link_to "","#", class: "fa fa-info-circle", id: "investment_banking_info_pop" %></p>
+              <p class="checkbox-label">Investment Bank/Capital Markets (Sell Side) <%= link_to "","#", class: "fa fa-info-circle", id: "investment_banking_info_pop" %></p>
             </div>
           </div>
           <div class="row">
@@ -260,13 +272,13 @@
           <div class="row">
             <div class="small-2 medium-2 large-2 columns">
               <% if @advisor.other_expertise != nil %>
-              <%= check_box_tag "other_expertise[]", "Other Areas of Finance Expertise", @advisor.other_expertise.include?("Other Areas of Finance Expertise"), class: "category-checkbox" %>
+              <%= check_box_tag "other_expertise[]", "Other Areas of Expertise in Finance", @advisor.other_expertise.include?("Other Areas of Expertise in Finance"), class: "category-checkbox" %>
               <% else %>
-              <%= check_box_tag "other_expertise[]", "Other Areas of Finance Expertise", false, class: "category-checkbox" %>
+              <%= check_box_tag "other_expertise[]", "Other Areas of Expertise in Finance", false, class: "category-checkbox" %>
               <% end %>
             </div>
             <div class="small-10 medium-10 large-10 columns">
-              <p class="checkbox-label">Other Areas of Finance Expertise <%= link_to "","#", class: "fa fa-info-circle", id: "other_finance_info_pop" %></p>
+              <p class="checkbox-label">Other Areas of Expertise in Finance <%= link_to "","#", class: "fa fa-info-circle", id: "other_finance_info_pop" %></p>
             </div>
           </div>
           <div class="row">
