@@ -1,3 +1,4 @@
+
 <header class="edit_hero">
   <img src="assets/network_photo.png"/>
 </header>
@@ -14,8 +15,10 @@
       <div class="index-categories-list" >
 
         <%= check_box_tag "filter[category][]", "Investment Bank/Capital Markets (Sell Side)", false, class: "advisors-filter-checkbox" %>
-        <label>Investment Bank/Capital Markets (Sell Side) <%= link_to "","#", class: "fa fa-info-circle", id: "investment_banking_info_pop_network" %></label>
+        <label>Investment Bank/Capital Markets (Sell Side) <div class='hide-for-large-up'><%= link_to "","#", class: "fa fa-info-circle", id: "investment_banking_info_pop_network" %> <%= render partial: "/categories/investment_banking_network" %></div></label>
+
       </div>
+
       <div class="index-categories-list" >
 
         <%= check_box_tag "filter[category][]", "Asset Management (buy side)", false, class: "advisors-filter-checkbox" %>
@@ -148,6 +151,8 @@
     <% end %>
   </div>
 </div>
+
+
 <div class="row" id="advisors-list-holder">
   <div class="small-12 medium-12 large-11 large-centered columns">
     <div class="row" id="advisors-list">
