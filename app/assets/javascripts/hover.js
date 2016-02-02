@@ -26,6 +26,14 @@ $("#investment_banking_info_pop_network" ).hover(
   }
   );
 
+$("#asset_management_info_pop_network" ).hover(
+  function() {
+    $('#asset_management_popup_network').fadeIn(500);
+  }, function() {
+    $('#asset_management_popup_network').fadeOut(500);
+  }
+  );
+
 
 
 });
