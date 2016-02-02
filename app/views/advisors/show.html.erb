@@ -12,7 +12,9 @@
     <div class="row" id="advisor-profile-bio">
       <p id="advisor-name-profile-page"><%= @advisor.firstname %></p>
       <p id="advisor-title-profile-page"><%= @advisor.current_title %> | <%= @advisor.location %></p>
+      <% if !@advisor.category.nil? %>
       <p id="advisor-category-profile-page"><%= @advisor.category.name %></p>
+      <% end %>
     </div>
     <div class="flash-holder">
       <% if current_advisor == @advisor %>
@@ -136,8 +138,10 @@
               <p class='profile-subheader'>Other Areas of Expertise</p>
             </div>
             <div class="small-12 medium-8 large-8 columns">
+              <% if !@advisor.other_expertise.nil? %>
               <% @advisor.other_expertise.split(",").each do |expertise| %>
               <p class="profile-info"><%= expertise %></p>
+              <% end %>
               <% end %>
             </div>
           </div>
@@ -152,7 +156,7 @@
         </div>
       </div>
 
-      <% if current_advisor == @advisor %>
+      <% if current_advisor == @advisor && !@advisor.category.nil? %>
       <div class='small-12 medium-12 large-6 columns' id="appointment-form">
         <p class="advisor-profile-header">Create Connect Date & Time</p>
         <%= form_for @potential_appointment do |f| %>
@@ -185,11 +189,13 @@
             <%= time_select 'potential_appointment', 'start_time', {ampm: true, :time_separator => "", minute_step: 15 }, class: "start_time" %>
 
             <%= f.label :Length %>
+
             <% if @advisor.category.name == "Resume & Interview Preparation" %>
             <p class="appt-length">1 Hour</p>
             <% else %>
             <p class="appt-length">30 Minutes</p>
             <% end %>
+
 
           </div>
         </div>
