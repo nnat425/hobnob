@@ -73,6 +73,7 @@ $(document).ready(function(){
     $("#add-comment-btn").show();
   });
 
+
   $("#edit_signup").on("click", "#investment_banking_info_pop", function(event) {
     event.preventDefault();
     $("#investment_banking_popup").slideToggle();
