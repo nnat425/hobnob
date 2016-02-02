@@ -136,7 +136,9 @@
               <p class='profile-subheader'>Other Areas of Expertise</p>
             </div>
             <div class="small-12 medium-8 large-8 columns">
-              <p class="profile-info"><%= @advisor.other_expertise %></p>
+              <% @advisor.other_expertise.split(",").each do |expertise| %>
+              <p class="profile-info"><%= expertise %></p>
+              <% end %>
             </div>
           </div>
           <div class="row">
