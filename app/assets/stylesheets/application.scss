@@ -240,8 +240,8 @@ position: fixed;
 width: 100%;
 }
 #home-hero {
-  background-size: cover;
-  overflow: hidden;
+background-size: cover;
+overflow: hidden;
 }
 #home-hero img {
 width: 100%;
@@ -479,7 +479,7 @@ border-bottom: 1px solid #ccc;
 }
 
 #categories-toggle {
-  display: none;
+display: none;
 }
 
 #edit-advisor-container {
@@ -487,37 +487,37 @@ background-color: #F8F8F8;
 }
 
 #add-previous-company-btn {
-  font-family: "Open Sans";
-  font-weight: 300;
-  font-size: .7em;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  float: right;
+font-family: "Open Sans";
+font-weight: 300;
+font-size: .7em;
+letter-spacing: 1px;
+text-transform: uppercase;
+float: right;
 }
 
 #delete-previous-company-btn {
-  font-family: Arial;
+font-family: Arial;
 }
 #add-company-btn {
-  margin-top:1.5em;
+margin-top:1.5em;
 }
 .new_previous_company {
-  width: 100%;
-  border: 1px solid #ccc;
+width: 100%;
+border: 1px solid #ccc;
 }
 
 p.previous_company_info {
-  font-family: "Open Sans";
-  font-size: .8em;
-  font-weight: 300;
-  letter-spacing: 1px;
-  margin-left: 1.5em;
+font-family: "Open Sans";
+font-size: .8em;
+font-weight: 300;
+letter-spacing: 1px;
+margin-left: 1.5em;
 }
 .previous_company_holder {
-  border: 1px solid #ccc;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  padding: 1em;
+border: 1px solid #ccc;
+margin-top: 1em;
+margin-bottom: 1em;
+padding: 1em;
 }
 
 
@@ -624,7 +624,7 @@ padding-right: 1em;
 }
 
 .about_container_2 .row {
-  padding-bottom: 2.5em;
+padding-bottom: 2.5em;
 }
 
 
@@ -1433,20 +1433,20 @@ padding-right: 2.5em;
 
 }
 .user-panel {
-  background-color: #fff;
-  border: 1px solid #C0C0C0;
-  padding: 2em;
-  height: 100%;
-  margin: 1em;
+background-color: #fff;
+border: 1px solid #C0C0C0;
+padding: 2em;
+height: 100%;
+margin: 1em;
 }
 p#profile-header {
-  font-family: "Open Sans";
-  font-weight: 300;
-  font-size: 1.5em;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-align: center;
-  border-bottom: 1px solid #C0C0C0;
+font-family: "Open Sans";
+font-weight: 300;
+font-size: 1.5em;
+letter-spacing: 2px;
+text-transform: uppercase;
+text-align: center;
+border-bottom: 1px solid #C0C0C0;
 }
 
 
@@ -2403,6 +2403,17 @@ letter-spacing: 1px;
 color: white;
 }
 
+.popup-subtopic-list-network{
+font-size:.85em;
+font-family: "Open Sans";
+font-weight: 300;
+list-style-type:none;
+float:left;
+letter-spacing: 1px;
+color: white;
+margin-right:4em;
+}
+
 .popup-subtopic-list-question{
 font-size:.85em;
 font-family: "Open Sans";
@@ -2574,10 +2585,10 @@ color: #FAFAFA;
 }
 
 .search-list li {
-  font-family: "Open Sans";
-  font-weight: 300;
-  letter-spacing: 1px;
-  font-size: 1em;
+font-family: "Open Sans";
+font-weight: 300;
+letter-spacing: 1px;
+font-size: 1em;
 }
 
 #buttons-holder{
@@ -2695,7 +2706,74 @@ color:white;
 border:solid #2996cc 1px;
 }
 
+#investment_banking_popup_network_phone{
+display:none;
+background-color:#121212;
+}
 
+#investment_banking_popup_network{
+bottom:90%;
+left:10%;
+display:none;
+background-color:#121212;
+border:solid #2996cc 1px;
+}
+
+#asset_management_popup_network{
+bottom:72%;
+left:10%;
+display:none;
+background-color:#121212;
+border:solid #2996cc 1px;
+}
+
+#corporate_finance_popup_network{
+bottom:80%;
+right:10%;
+display:none;
+background-color:#121212;
+border:solid #2996cc 1px;
+}
+
+#other_finance_popup_network{
+bottom:72%;
+right:10%;
+display:none;
+background-color:#121212;
+border:solid #2996cc 1px;
+}
+
+#resume_interview_popup_network{
+bottom:67%;
+right:10%;
+display:none;
+background-color:#121212;
+border:solid #2996cc 1px;
+}
+
+
+
+
+
+#asset_management_popup_network_phone{
+display:none;
+background-color:#121212;
+}
+
+#corporate_finance_popup_network_phone{
+display:none;
+background-color:#121212;
+}
+
+#other_finance_popup_network_phone{
+display:none;
+background-color:#121212;
+}
+
+#resume_interview_popup_network_phone{
+display:none;
+background-color:#121212;
+}
 
 #close{
 color:red;
@@ -2733,22 +2811,22 @@ background-color:black;
 }
 
 #fee-phone-row{
-  border-bottom:solid #2996cc 1px;
-  margin-bottom:1em;
+border-bottom:solid #2996cc 1px;
+margin-bottom:1em;
 }
 
 #info5{
-  font-size:0.6em;
+font-size:0.6em;
 }
 
 #toronto{
-  color: #2996cc;
+color: #2996cc;
 }
 
 #button-phone{
-  text-align:center;
-  margin:auto;
-  border-bottom:solid #2996cc 1px;
-  padding-bottom:1em;
+text-align:center;
+margin:auto;
+border-bottom:solid #2996cc 1px;
+padding-bottom:1em;
 }
 
