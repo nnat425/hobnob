@@ -33,7 +33,7 @@
       <div class="index-categories-list" >
 
         <%= check_box_tag "filter[category][]", "Other Areas of Expertise in Finance", false, class: "advisors-filter-checkbox" %>
-        <label>Other Areas of Expertise in Finance</label>
+        <label>Other Areas of Expertise <div class='hide-for-large-up'><%= link_to "","#", class: "fa fa-info-circle", id: "other_finance_info_pop_network_phone" %> <%= render partial: "/categories/other_finance_network_phone" %></div> </label>
       </div>
       <div class="index-categories-list" >
 

@@ -9,6 +9,9 @@ $(document).ready(function(){
   $('#corporate_finance_info_pop_network_phone').click(function(){
     $('#corporate_finance_popup_network_phone').slideToggle();
   });
+  $('#other_finance_info_pop_network_phone').click(function(){
+    $('#other_finance_popup_network_phone').slideToggle();
+  });
 });
 
 
