@@ -60,7 +60,9 @@ class AdvisorsController < ApplicationController
     advisor = Advisor.find_by(id: params[:id])
     if (advisor.publish == true && advisor.account_activated == true) || (current_advisor == advisor) || admin_logged_in?
       @advisor = advisor
-      @advisor_appointments = @advisor.potential_appointments
+      advisor_appointments = @advisor.potential_appointments
+      @advisor_appointments = advisor_appointments.sort_by { |appointment| appointment.start_time.strftime("%b,%d") }
+      # @advisor_appointments = advisor_appointments
       @potential_appointment = PotentialAppointment.new
     else
       render :inactivated_advisor
