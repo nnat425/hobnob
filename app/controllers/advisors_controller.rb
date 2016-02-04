@@ -57,15 +57,19 @@ class AdvisorsController < ApplicationController
   end
 
   def show
-    advisor = Advisor.find_by(id: params[:id])
-    if (advisor.publish == true && advisor.account_activated == true) || (current_advisor == advisor) || admin_logged_in?
-      @advisor = advisor
-      advisor_appointments = @advisor.potential_appointments
-      @advisor_appointments = advisor_appointments.sort_by { |appointment| appointment.start_time.strftime("%b,%d") }
-      # @advisor_appointments = advisor_appointments
-      @potential_appointment = PotentialAppointment.new
+    if logged_in? || admin_logged_in?
+      advisor = Advisor.find_by(id: params[:id])
+      if (advisor.publish == true && advisor.account_activated == true) || (current_advisor == advisor) || admin_logged_in?
+        @advisor = advisor
+        advisor_appointments = @advisor.potential_appointments
+        @advisor_appointments = advisor_appointments.sort_by { |appointment| appointment.start_time.strftime("%b,%d") }
+        @potential_appointment = PotentialAppointment.new
+      else
+        render :inactivated_advisor
+      end
     else
-      render :inactivated_advisor
+      flash[:message] = "Please Login or Signup to "
+      redirect_to login_path
     end
   end
 
