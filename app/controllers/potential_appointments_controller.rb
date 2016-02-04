@@ -11,7 +11,7 @@ class PotentialAppointmentsController < ApplicationController
       else
         end_time = start_time + 30.minutes
       end
-      potential_appointment = current_advisor.potential_appointments.create!(title:current_advisor.potential_appointments.count + 1,start_time: start_time, end_time: end_time)
+      potential_appointment = current_advisor.potential_appointments.create!(title: current_advisor.category.name,start_time: start_time, end_time: end_time)
       redirect_to advisor_path(current_advisor)
     else
      flash[:pick_date_or_enter_title] = "Please pick a date/Enter a title"
