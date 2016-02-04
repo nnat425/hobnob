@@ -68,7 +68,7 @@ class AdvisorsController < ApplicationController
         render :inactivated_advisor
       end
     else
-      flash[:message] = "Please Login or Signup to view this page"
+      flash[:acces_denied] = "Please Login or Signup to view this page"
       redirect_to login_path
     end
   end
