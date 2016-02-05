@@ -1348,6 +1348,18 @@ text-transform: uppercase;
 color: #C0C0C0;
 }
 
+#appointment-status{
+text-transform: uppercase;
+float:right;
+text-align:center;
+margin-bottom: .5em;
+margin-top: 1.5em;
+}
+
+#booked{
+color:#00ff00
+}
+
 #orders-div-wrapper {
 border-bottom: 1px solid #ccc;
 }
@@ -2820,6 +2832,7 @@ padding-bottom:1em;
 }
 
 .spacer {
-  height: 1em;
-  width: 100%;
+height: 1em;
+width: 100%;
 }
+
