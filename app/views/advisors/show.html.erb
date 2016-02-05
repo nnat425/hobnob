@@ -296,7 +296,6 @@
       <div id="advisor-times">
         <% @advisor_appointments.each do |pot_appointment| %>
 
-        <% if pot_appointment.booked_status? == false %>
         <div class="row" id="appointment-time-box">
 
           <div class="small-12 medium-3 large-2 columns">
@@ -318,8 +317,7 @@
           </div>
           <div class="small-12 medium-12 large-3 columns">
 
-
-           <% if pot_appointment.advisor_id == current_advisor.id && session[:class_type] == current_advisor.class.name %>
+           <% if pot_appointment.advisor_id == current_advisor.id && session[:class_type] == current_advisor.class.name && pot_appointment.booked_status? == false %>
            <div class="row">
             <div class="small-12 medium-12 large-12 columns" id="edit-appt-btn">
               <%= link_to "Edit",edit_potential_appointment_path(pot_appointment), class: "fa fa-edit" %>
@@ -330,11 +328,13 @@
           </div>
           <% end %>
         </div>
+        <% if pot_appointment.booked_status? == true %>
+        <p id="appointment-status">Appointment Status:<span id='booked'> Booked</p>
+        <% end %>
       </div>
 
 
 
-      <% end %>
       <% end %>
     </div>
   </div>
