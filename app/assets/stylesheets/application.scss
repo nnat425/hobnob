@@ -430,7 +430,7 @@ margin-bottom: 1rem;
 letter-spacing: 2px;
 font-family: "Open Sans";
 font-weight: 200;
-color: #43c7f4;
+color: #2996cc;
 text-transform: uppercase;
 }
 
@@ -471,7 +471,7 @@ p.form_subtitle {
 font-family: "Open Sans";
 font-weight: 300;
 font-size: 1.25em;
-color: #43c7f4;
+color: #2996cc;
 margin-top: 1em;
 margin-bottom: 1em;
 border-bottom: 1px solid #ccc;
@@ -1116,12 +1116,13 @@ margin:10px;
 padding: auto;
 
 }
-.appointment_title {
-font-size: 2.5em;
+
+p.appointment_title {
+font-size: 1em;
 margin-top: 0em;
 margin-bottom: 0em;
 font-family: "Open Sans";
-font-weight: 400;
+font-weight: 300;
 
 }
 
@@ -1352,12 +1353,16 @@ color: #C0C0C0;
 text-transform: uppercase;
 float:right;
 text-align:center;
+font-family: "Open Sans";
+font-weight: 300;
 margin-bottom: .5em;
 margin-top: 1.5em;
+font-size: .85em;
+letter-spacing: 1px;
 }
 
 #booked{
-color:#00ff00
+color: #43AC6A;
 }
 
 #orders-div-wrapper {
@@ -2138,19 +2143,27 @@ margin-bottom: 1.5em;
 margin-top: 1.5em;
 margin-right: .25em;
 margin-left: .25em;
+width: 100%;
 font-size: .70em;
 border-radius: 5px;
 padding-left: 2.5em;
 padding-right: 2.5em;
 padding-top: 1em;
 padding-bottom: 1em;
-color:white;
-background-color: #2996cc;
+color:#2996cc;
+background-color: #fff;
 letter-spacing: 2px;
 text-transform: uppercase;
 font-family: "Open Sans";
-font-weight: 300;
 float: right;
+border: 1px solid #2996cc;
+}
+
+a.alternative-button:hover {
+background-color: #2996cc;
+color: #fff;
+border: 1px solid #2996cc;
+transition: all .3s ease-in-out;
 }
 
 

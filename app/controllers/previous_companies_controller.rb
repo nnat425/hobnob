@@ -26,16 +26,34 @@ class PreviousCompaniesController < ApplicationController
     end
   end
 
-  def destroy
-    @previous_company = PreviousCompany.new
-    company = PreviousCompany.find_by(id: params[:id])
-    current_advisor.previous_companies.delete(company)
+
+  def edit
+    @previous_company = PreviousCompany.find_by(id: params[:id])
+    render partial: "edit_previous_company_form"
+  end
+
+  def update
     @advisor = current_advisor
-    flash[:message] = "Company Deleted"
+    previous_company = PreviousCompany.find_by(id: params[:id])
+    if previous_company.save
+      previous_company.update(previous_company_params)
+      render partial: "new_previous_companies"
+    else
+      flash[:error] = "Previous Company did not update"
+      redirect_to edit_advisor_path(@advisor)
+    end
+  end
+
+  def destroy
+    company = PreviousCompany.find_by(id: params[:id])
+    @advisor = current_advisor
+    if !company.nil?
+      company.destroy
+    end
     if request.xhr?
       render partial: "new_previous_companies"
     else
-      redirect_to edit_advisor_path(current_advisor)
+      redirect_to edit_advisor_path(@advisor)
     end
   end
 

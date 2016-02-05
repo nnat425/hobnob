@@ -343,13 +343,13 @@
 
           <% if @advisor.previous_companies != [] %>
             <%= render partial: "previous_companies/new_previous_companies" %>
-            <% end %>
+          <% end %>
           </div>
-            <div class="row">
-        <div class="small-12 medium-12 large-12 columns">
-          <%= link_to "Add New Company +", new_previous_company_path, id: "add-previous-company-btn" %>
-        </div>
-      </div>
+          <div class="row">
+            <div class="small-12 medium-12 large-12 columns">
+            <%= link_to "Add New Company +", new_previous_company_path, id: "add-previous-company-btn" %>
+            </div>
+          </div>
         </div>
       </div>
 

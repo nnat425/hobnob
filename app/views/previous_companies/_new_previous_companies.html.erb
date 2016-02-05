@@ -1,34 +1,36 @@
 
 <% @advisor.previous_companies.each do |company|  %>
-<div class="previous_company_holder" id="<%= company.id %>">
-
+<div class="previous_company_holder" id="company-<%= company.id %>">
   <div class="row">
-    <div class="small-2 medium-2 large-2 columns">
-      <label>Name</label>
+    <div class="small-12 medium-12 large-9 columns">
+      <div class="row">
+        <div class="small-2 medium-2 large-2 columns">
+          <label>Name</label>
+        </div>
+        <div class="small-10 medium-10 large-10 columns">
+          <p class="previous_company_info"><%= company.name %></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-2 medium-2 large-2 columns">
+          <label>Title</label>
+        </div>
+        <div class="small-10 medium-10 large-10 columns">
+          <p class="previous_company_info"><%= company.job_title %></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-2 medium-2 large-2 columns">
+          <label>Roles</label>
+        </div>
+        <div class="small-10 medium-10 large-10 columns">
+          <p class="previous_company_info"><%= company.roles %></p>
+        </div>
+      </div>
     </div>
-    <div class="small-10 medium-10 large-10 columns">
-      <p class="previous_company_info"><%= company.name %></p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="small-2 medium-2 large-2 columns">
-      <label>Title</label>
-    </div>
-    <div class="small-10 medium-10 large-10 columns">
-      <p class="previous_company_info"><%= company.job_title %></p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="small-2 medium-2 large-2 columns">
-      <label>Roles</label>
-    </div>
-    <div class="small-10 medium-10 large-10 columns">
-      <p class="previous_company_info"><%= company.roles %></p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="small-12 medium-12 large-12 columns">
-     <%= link_to "Delete", "/previous_companies/#{company.id}", method: :delete, class: "alternative-button", id: "delete-previous-company-btn" %>
+    <div class="small-12 medium-12 large-3 columns" id="<%= company.id %>">
+      <%= link_to "Edit", "/previous_companies/#{company.id}/edit", class: "alternative-button", id: "edit-previous-company-btn" %>
+      <%= link_to "Delete", "/previous_companies/#{company.id}", method: :delete, class: "alternative-button", id: "delete-previous-company-btn" %>
     </div>
   </div>
 </div>
