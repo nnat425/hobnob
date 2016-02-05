@@ -1,6 +1,6 @@
 
 <% @advisor.previous_companies.each do |company|  %>
-<div class="previous_company_holder" id="<%= company.id %>">
+<div class="previous_company_holder" id="company-<%= company.id %>">
   <div class="row">
     <div class="small-12 medium-12 large-9 columns">
       <div class="row">
@@ -28,7 +28,7 @@
         </div>
       </div>
     </div>
-    <div class="small-12 medium-12 large-3 columns">
+    <div class="small-12 medium-12 large-3 columns" id="<%= company.id %>">
       <%= link_to "Edit", "/previous_companies/#{company.id}/edit", class: "alternative-button", id: "edit-previous-company-btn" %>
       <%= link_to "Delete", "/previous_companies/#{company.id}", method: :delete, class: "alternative-button", id: "delete-previous-company-btn" %>
     </div>
