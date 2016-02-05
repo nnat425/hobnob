@@ -2138,19 +2138,27 @@ margin-bottom: 1.5em;
 margin-top: 1.5em;
 margin-right: .25em;
 margin-left: .25em;
+width: 100%;
 font-size: .70em;
 border-radius: 5px;
 padding-left: 2.5em;
 padding-right: 2.5em;
 padding-top: 1em;
 padding-bottom: 1em;
-color:white;
-background-color: #2996cc;
+color:#2996cc;
+background-color: #fff;
 letter-spacing: 2px;
 text-transform: uppercase;
 font-family: "Open Sans";
-font-weight: 300;
 float: right;
+border: 1px solid #2996cc;
+}
+
+a.alternative-button:hover {
+background-color: #2996cc;
+color: #fff;
+border: 1px solid #2996cc;
+transition: all .3s ease-in-out;
 }
 
 
