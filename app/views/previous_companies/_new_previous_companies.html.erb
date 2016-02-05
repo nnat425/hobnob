@@ -28,6 +28,7 @@
   </div>
   <div class="row">
     <div class="small-12 medium-12 large-12 columns">
+      <%= link_to "Edit", "/previous_companies/#{company.id}/edit", class: "alternative-button", id: "edit-previous-company-btn" %>
      <%= link_to "Delete", "/previous_companies/#{company.id}", method: :delete, class: "alternative-button", id: "delete-previous-company-btn" %>
     </div>
   </div>
