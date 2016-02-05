@@ -63,10 +63,10 @@
           </div>
           <% if @advisor.previous_companies != [] %>
           <% @advisor.previous_companies.each do |company| %>
-           <div class="row">
+          <div class="row">
             <div class="small-12 medium-4 large-4 columns">
               <% if company == @advisor.previous_companies.first %>
-                <p class='profile-subheader'>Previous Company(s)</p>
+              <p class='profile-subheader'>Previous Company(s)</p>
               <% end %>
             </div>
             <div class="small-12 medium-8 large-8 columns">
@@ -89,7 +89,7 @@
               <p class="profile-info"><%= company.roles %></p>
             </div>
           </div>
-           <div class="spacer">
+          <div class="spacer">
           </div>
 
           <% end %>
@@ -229,7 +229,6 @@
         <div id="advisor-times">
           <% @advisor_appointments.each do |pot_appointment| %>
 
-          <% if pot_appointment.booked_status? == false %>
           <div class="row" id="appointment-time-box">
 
             <div class="small-6 medium-4 large-3 columns">
@@ -280,7 +279,6 @@
            </div>
            <% end %>
          </div>
-         <% end %>
          <% end %>
        </div>
      </div>
