@@ -269,9 +269,12 @@
               <div class="row" id="available-times-right-btn">
                <%= form_for @advisor, url: cart_path, method: "patch" do |f| %>
                <%= f.hidden_field :appointment_id, :value => pot_appointment.id %>
+               <% if pot_appointment.booked_status? == true %>
                <p id="appointment-status">Appointment Status:<span id='booked'> Booked</p>
+               <% else %>
                <%= f.submit "Get Connected", class: "hide-for-small", :id => "add_to_cart_btn"%>
                <%= f.submit "Connect", class: "show-for-small", :id => "add_to_cart_btn_small"%>
+               <% end %>
                <% end %>
              </div>
            </div>
