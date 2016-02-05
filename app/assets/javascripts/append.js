@@ -62,22 +62,21 @@ $(document).ready(function(){
     })
   });
 
-  $("#edit-panel").on("click", "#delete-previous-company-btn", function(event) {
-    event.preventDefault();
-    console.log("prevented default");
-    var path = $(event.target).attr("href");
-    debugger
+  // $("#edit-panel").on("click", "#delete-previous-company-btn", function(event) {
+  //   event.preventDefault();
+  //   console.log("prevented default");
+  //   var path = $(event.target).attr("href");
 
-    $.ajax({
-      url: path,
-      // type: "delete"
-      type: "post",
-      data: {_method: "delete"}
-    }).done(function(data) {
-      $("#previous_companies_holder").html(data);
-    }).fail(function(data) {
-      console.log("did not ajax");
-    });
-  });
+  //   $.ajax({
+  //     url: path,
+  //     // type: "delete"
+  //     type: "post",
+  //     data: {_method: "delete"}
+  //   }).done(function(data) {
+  //     $("#previous_companies_holder").html(data);
+  //   }).fail(function(data) {
+  //     console.log("did not ajax");
+  //   });
+  // });
 
 });
