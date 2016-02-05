@@ -62,13 +62,15 @@ $(document).ready(function(){
     })
   });
 
-  $("#edit-panel").on("click", "a#delete-previous-company-btn", function(event) {
+  $("#edit-panel").on("click", "#delete-previous-company-btn", function(event) {
     event.preventDefault();
     console.log("prevented default");
     var path = $(event.target).attr("href");
+    debugger
 
     $.ajax({
       url: path,
+      // type: "delete"
       type: "post",
       data: {_method: "delete"}
     }).done(function(data) {

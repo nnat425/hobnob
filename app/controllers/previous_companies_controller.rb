@@ -45,15 +45,15 @@ class PreviousCompaniesController < ApplicationController
   end
 
   def destroy
-    @previous_company = PreviousCompany.new
     company = PreviousCompany.find_by(id: params[:id])
-    current_advisor.previous_companies.delete(company)
     @advisor = current_advisor
-    flash[:message] = "Company Deleted"
+    if !company.nil?
+      company.destroy
+    end
     if request.xhr?
       render partial: "new_previous_companies"
     else
-      redirect_to edit_advisor_path(current_advisor)
+      redirect_to edit_advisor_path(@advisor)
     end
   end
 
