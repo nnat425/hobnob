@@ -1116,12 +1116,13 @@ margin:10px;
 padding: auto;
 
 }
-.appointment_title {
-font-size: 2.5em;
+
+p.appointment_title {
+font-size: 1em;
 margin-top: 0em;
 margin-bottom: 0em;
 font-family: "Open Sans";
-font-weight: 400;
+font-weight: 300;
 
 }
 
@@ -1352,12 +1353,16 @@ color: #C0C0C0;
 text-transform: uppercase;
 float:right;
 text-align:center;
+font-family: "Open Sans";
+font-weight: 300;
 margin-bottom: .5em;
 margin-top: 1.5em;
+font-size: .85em;
+letter-spacing: 1px;
 }
 
 #booked{
-color:#00ff00
+color: #43AC6A;
 }
 
 #orders-div-wrapper {
