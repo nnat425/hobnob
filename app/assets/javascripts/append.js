@@ -2,8 +2,9 @@ $(document).ready(function(){
   $("#edit-panel").on("click", "#add-previous-company-btn", function(event) {
     event.preventDefault();
 
+   var id = $('#add-previous-company-btn').attr("data-advisor-id");
     $.ajax({
-      url: "/previous_companies/new",
+      url: "/advisors/" + id + "/previous_companies/new",
       method: "get"
     }).done(function(data) {
       $("#previous_companies_holder").append(data);
@@ -16,8 +17,9 @@ $(document).ready(function(){
   $("#edit-panel").on("click", "#add-company-btn", function(event) {
     event.preventDefault();
     var info = $(".new_previous_company").serialize();
+    var id = $('#advisor-id').attr("data-advisor-id");
     $.ajax({
-      url:"/previous_companies",
+      url:"/advisors/" + id + "/previous_companies",
       method: "post",
       data: info
     }).done(function(data) {

@@ -13,9 +13,8 @@ class PreviousCompaniesController < ApplicationController
   end
 
   def create
-    binding.pry
-    @advisor = current_advisor
-    created_company = current_advisor.previous_companies.build(previous_company_params)
+    @advisor = Advisor.find_by(id: params[:advisor_id])
+    created_company = @advisor.previous_companies.build(previous_company_params)
     if created_company.save
       if request.xhr?
         render partial: "new_previous_companies"

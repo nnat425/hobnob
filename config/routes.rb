@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :orders
   resources :comments
   resources :password_resets, only: [:new, :create, :edit, :update]
-  resources :previous_companies
+  # resources :previous_companies
 
   patch 'users/:id' => 'users#verify', as: 'users_verify'
   get 'users/:id/email_confirm' => 'users#email_confirm', as: 'email_confirm_user'
