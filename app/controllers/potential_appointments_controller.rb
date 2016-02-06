@@ -49,8 +49,9 @@ end
 
 def destroy
   potential_appointment = PotentialAppointment.find_by(id: params[:potential_appointment])
+  advisor = potential_appointment.advisor
   potential_appointment.destroy
-  redirect_to advisor_path(current_advisor)
+  redirect_to advisor_path(advisor)
 
 end
 
