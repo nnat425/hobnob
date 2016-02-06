@@ -17,12 +17,12 @@
       <% end %>
     </div>
     <div class="flash-holder">
-      <% if current_advisor == @advisor %>
-      <% if current_advisor.publish == false %>
+      <% if current_advisor == @advisor || session[:class_type] == "Admin" %>
+      <% if @advisor.publish == false %>
       <p id="publish-profile-text">*Your profile is currently set to private. To set it to public, click below and please check PUBLISH</p>
       <% end %>
       <div id="advisor-edit-btn">
-        <%= link_to "Edit Profile", edit_advisor_path(current_advisor), class: "button" %>
+        <%= link_to "Edit Profile", edit_advisor_path(@advisor), class: "button" %>
       </div>
       <% end %>
       <p id='flash_add_cart'><%=flash[:added_to_cart] %></p>
@@ -173,7 +173,7 @@
         </div>
       </div>
 
-      <% if current_advisor == @advisor && !@advisor.category.nil? %>
+      <% if current_advisor == @advisor && !@advisor.category.nil? || session[:class_type] == "Admin" %>
       <div class='small-12 medium-12 large-6 columns' id="appointment-form">
         <p class="advisor-profile-header">Create Connect Date & Time</p>
         <%= form_for @potential_appointment do |f| %>
@@ -186,6 +186,8 @@
           </div>
         </div>
         <% end %>
+
+        <%= f.hidden_field :advisor_id, :value => @advisor.id %>
 
         <div class="row">
           <div class="small-11 small-centered medium-10 medium-centered large-10 large-centered columns">
@@ -287,7 +289,7 @@
 
    </div>
 
-   <% if current_advisor == @advisor %>
+   <% if current_advisor == @advisor || session[:class_type] == "Admin" %>
 
    <div class="row">
     <div class="small-12 medium-12 large-12 columns" id="advisor-appointment-box">
@@ -317,7 +319,7 @@
           </div>
           <div class="small-12 medium-12 large-3 columns">
 
-           <% if pot_appointment.advisor_id == current_advisor.id && session[:class_type] == current_advisor.class.name && pot_appointment.booked_status? == false %>
+           <% if pot_appointment.advisor == current_advisor && session[:class_type] == current_advisor.class.name && pot_appointment.booked_status? == false || session[:class_type] == "Admin" && pot_appointment.booked_status? == false %>
            <div class="row">
             <div class="small-12 medium-12 large-12 columns" id="edit-appt-btn">
               <%= link_to "Edit",edit_potential_appointment_path(pot_appointment), class: "fa fa-edit" %>
@@ -326,11 +328,10 @@
               <%= link_to "Delete",{:controller => 'potential_appointments', :action => 'destroy', :potential_appointment => pot_appointment.id}, :method => :delete, class: "fa fa-trash" %>
             </div>
           </div>
+          <% else %>
+          <p id="appointment-status">Appointment Status:<span id='booked'> Booked</p>
           <% end %>
         </div>
-        <% if pot_appointment.booked_status? == true %>
-        <p id="appointment-status">Appointment Status:<span id='booked'> Booked</p>
-        <% end %>
       </div>
 
 
