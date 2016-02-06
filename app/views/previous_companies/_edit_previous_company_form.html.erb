@@ -1,4 +1,4 @@
-<%= form_for @previous_company, html: { method: "patch", class: "edit_previous_company_form" } do |f| %>
+<%= form_for [@advisor , @previous_company], html: { method: "patch", class: "edit_previous_company_form" } do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name, placeholder: "Company Name" %>
   <%= f.label :job_title %>

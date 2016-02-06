@@ -349,10 +349,12 @@
             <div class="small-12 medium-12 large-12 columns">
             <%= link_to "Add New Company +", new_advisor_previous_company_path(@advisor), id: "add-previous-company-btn", :data => {:advisor_id => @advisor.id} %>
             </div>
-            <div style='display:none' id='advisor-id' data-advisor-id=<%= @advisor.id %>></div>
           </div>
         </div>
       </div>
+
+  <div style='display:none' id='advisor-id' data-advisor-id=<%= @advisor.id %>></div>
+
 
       <div class="row">
         <div class="small-3 medium-3 large-3 columns">

@@ -51,7 +51,8 @@ $(document).ready(function(){
 
     var info = $(event.target).siblings().serialize();
     var id = $(event.target).parent().attr("id").split("-")[1];
-    var path = "/previous_companies/" + id;
+    var advisor_id = $('#advisor-id').attr("data-advisor-id");
+    var path = "/advisors/" + advisor_id + "/previous_companies/" + id;
 
     $.ajax({
       url: path,

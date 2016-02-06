@@ -28,6 +28,7 @@ class PreviousCompaniesController < ApplicationController
 
 
   def edit
+    @advisor = Advisor.find_by(id: params[:advisor_id])
     @previous_company = PreviousCompany.find_by(id: params[:id])
     render partial: "edit_previous_company_form"
   end
