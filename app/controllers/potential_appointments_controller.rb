@@ -22,7 +22,8 @@ class PotentialAppointmentsController < ApplicationController
 
  def edit
   @potential_appointment = PotentialAppointment.find_by(id: params[:id])
-  @advisor_appointments = current_advisor.potential_appointments
+  advisor = Advisor.find_by(id: @potential_appointment.advisor.id)
+  @advisor_appointments = advisor.potential_appointments
 end
 
 
