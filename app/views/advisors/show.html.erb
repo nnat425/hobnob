@@ -319,8 +319,7 @@
           </div>
           <div class="small-12 medium-12 large-3 columns">
 
-           <% if pot_appointment.advisor == current_advisor && session[:class_type] == current_advisor.class.name && pot_appointment.booked_status? == false || session[:class_type] == "Admin" %>
-           <% if pot_appointment.booked_status? == false %>
+           <% if pot_appointment.advisor == current_advisor && session[:class_type] == current_advisor.class.name && pot_appointment.booked_status? == false || session[:class_type] == "Admin" && pot_appointment.booked_status? == false %>
            <div class="row">
             <div class="small-12 medium-12 large-12 columns" id="edit-appt-btn">
               <%= link_to "Edit",edit_potential_appointment_path(pot_appointment), class: "fa fa-edit" %>
@@ -331,7 +330,6 @@
           </div>
           <% else %>
           <p id="appointment-status">Appointment Status:<span id='booked'> Booked</p>
-          <% end %>
           <% end %>
         </div>
       </div>
