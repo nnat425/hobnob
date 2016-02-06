@@ -13,6 +13,7 @@ class PreviousCompaniesController < ApplicationController
   end
 
   def create
+    binding.pry
     @advisor = current_advisor
     created_company = current_advisor.previous_companies.build(previous_company_params)
     if created_company.save
@@ -33,8 +34,8 @@ class PreviousCompaniesController < ApplicationController
   end
 
   def update
-    @advisor = current_advisor
     previous_company = PreviousCompany.find_by(id: params[:id])
+    @advisor = previous_company.advisor
     if previous_company.save
       previous_company.update(previous_company_params)
       render partial: "new_previous_companies"
@@ -46,7 +47,7 @@ class PreviousCompaniesController < ApplicationController
 
   def destroy
     company = PreviousCompany.find_by(id: params[:id])
-    @advisor = current_advisor
+    @advisor = company.advisor
     if !company.nil?
       company.destroy
     end

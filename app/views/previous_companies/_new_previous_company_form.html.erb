@@ -1,4 +1,5 @@
 <%= form_for @previous_company do |f| %>
+  <%= f.hidden_field :advisor_id, :value => request.original_url %>
   <%= f.label :name %>
   <%= f.text_field :name, placeholder: "Company Name" %>
   <%= f.label :job_title %>
