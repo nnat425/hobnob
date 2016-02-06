@@ -30,7 +30,7 @@
     </div>
     <div class="small-12 medium-12 large-3 columns" id="<%= company.id %>">
       <%= link_to "Edit", "/advisors/" + @advisor.id.to_s + "/previous_companies/#{company.id}/edit", class: "alternative-button", id: "edit-previous-company-btn" %>
-      <%= link_to "Delete", "/previous_companies/#{company.id}", method: :delete, class: "alternative-button", id: "delete-previous-company-btn" %>
+      <%= link_to "Delete", "/advisors/" + @advisor.id.to_s + "/previous_companies/#{company.id}", method: :delete, class: "alternative-button", id: "delete-previous-company-btn" %>
     </div>
   </div>
 </div>
