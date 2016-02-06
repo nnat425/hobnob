@@ -29,17 +29,18 @@ end
 
 def update
   potential_appointment = PotentialAppointment.find_by(id: params[:id])
+  advisor = potential_appointment.advisor
   date = params[:appointment_date][:date].split('-')
   time = params[:potential_appointment].to_a.flatten
   if date[0] != nil
    start_time = DateTime.new(date[0].to_i,date[1].to_i,date[2].to_i,time[7].to_i,time[9].to_i)
-   if current_advisor.category.name == "Resume & Interview Preparation"
+   if advisor.category.name == "Resume & Interview Preparation"
     end_time = start_time + 60.minutes
   else
     end_time = start_time + 30.minutes
   end
   potential_appointment.update(start_time: start_time, end_time: end_time)
-  redirect_to advisor_path(current_advisor)
+  redirect_to advisor_path(advisor)
 else
  flash[:pick_date_or_enter_title] = "Please pick a date/Enter a title"
  redirect_to edit_potential_appointment_path(potential_appointment)
