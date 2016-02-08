@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
       session[:user_or_advisor_id] = user.id
       session[:class_type] = user.class.name
       if request.xhr?
-        render partial: "login_success"
+        render partial: "layouts/header"
       else
         redirect_to advisors_path
       end
@@ -26,7 +26,7 @@ class SessionsController < ApplicationController
     session[:user_or_advisor_id] = advisor.id
     session[:class_type] = advisor.class.name
     if request.xhr?
-      render partial: "login_success"
+      render partial: "layouts/header"
     else
       redirect_to advisors_path
     end

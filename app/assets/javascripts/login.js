@@ -13,7 +13,7 @@ $(document).ready(function(){
       }).done(function(data) {
         console.log(data)
         $("#login-pop").bPopup().close();
-        $("#advisors-index-container").append(data);
+        $("#nav-bar-holder").replaceWith(data);
       }).fail(function() {
         console.log("did not work");
       });
