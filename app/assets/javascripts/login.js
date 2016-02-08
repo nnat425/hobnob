@@ -2,16 +2,18 @@ $(document).ready(function(){
   $("#advisors-list").on("click", "#must-login", function(event) {
     event.preventDefault();
 
-    $("#login-pop").bPopup();
-    $("#login-pop").on("submit", "#submit-login", function(event) {
+    $("#login-pop").bPopup().on("click", "#submit-login", function(event) {
       event.preventDefault();
-      var data = $(event.target).serialize();
+      var data = $("form#login").serialize();
+
       $.ajax({
-        url: '/sessions',
+        url: '/login',
         method: 'post',
         data: data
-      }).done(function() {
+      }).done(function(data) {
+        console.log(data)
         $("#login-pop").bPopup().close();
+        $("#advisors-index-container").append(data);
       }).fail(function() {
         console.log("did not work");
       });
