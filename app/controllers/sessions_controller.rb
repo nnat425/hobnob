@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
       end
       session[:user_or_advisor_id] = user.id
       session[:class_type] = user.class.name
-      redirect_to root_path
+      redirect_to advisors_path
     else
       flash[:login_fail] = "Please input the correct email/password!"
       redirect_to login_path
