@@ -2867,10 +2867,24 @@ width: 100%;
   padding: 0px;
 }
 
-#login-success-message {
+#signup-pop {
+  display: none;
+}
+
+#signup-link-holder {
+  text-align: center;
+}
+a#pop-signup-link {
+  font-family: "Open Sans";
+  font-size: 1em;
+  font-weight: 300;
   text-align: center;
 }
 
-#login-success-message p {
-
+#close-signup {
+  background-color: #fff;
+  color: #2996cc;
+  float: right;
+  margin: 0px;
+  padding: 0px;
 }

@@ -6,7 +6,10 @@
       <div class="row">
         <h2 id="login-header"> Login!</h2>
       </div>
+
       <div class="small-12 medium-11 medium-centered large-10 large-centered columns">
+
+
       <% if flash[:login_fail] || flash[:access_denied] %>
           <div data-alert class="alert-box alert radius">
             <%= flash[:access_denied] %>
@@ -15,6 +18,12 @@
         <% end %>
         </div>
       <%= form_for :session, url: '/login', html: {id: "login"} do |f| %>
+
+      <div class="row">
+        <div class="small-12 medium-11 medium-centered large-10 large-centered columns" id="signup-link-holder">
+          <%= link_to "Signup", new_user_path, id: "pop-signup-link" %>
+        </div>
+      </div>
       <div class="row">
         <div class="small-12 medium-11 medium-centered large-10 large-centered columns">
           <%= f.label "Email" %>
@@ -43,6 +52,9 @@
         </div>
       </div>
       <% end %>
+
+
+
     </div>
 
 

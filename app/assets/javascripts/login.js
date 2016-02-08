@@ -21,7 +21,18 @@ $(document).ready(function(){
     });
     $("#close-btn-holder").on("click", "#close-login", function() {
       $("#login-pop").bPopup().close();
-    })
+    });
+
+    $("#signup-link-holder").on("click", "#pop-signup-link", function(event) {
+
+      event.preventDefault();
+
+      $("#login-pop").bPopup().close();
+      $("#signup-pop").bPopup();
+    });
+    $("#close-btn-holder").on("click", "#close-signup", function() {
+      $("#signup-pop").bPopup().close();
+    });
   });
 
 });
