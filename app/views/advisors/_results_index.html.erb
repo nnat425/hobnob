@@ -1,4 +1,4 @@
-<% if @advisors == [] || @advisors == nil %>
+<% if @advisors == [] || @advisors.nil? %>
 <p id="no-matches-message">Sorry, there were no professionals that matched your search!</p>
 <% else %>
 <div id="search-results-flash"><p><%= flash[:message] %></p></div>

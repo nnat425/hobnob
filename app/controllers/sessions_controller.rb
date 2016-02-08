@@ -21,7 +21,7 @@ class SessionsController < ApplicationController
   elsif advisor.try(:authenticate, session_params[:password])
     session[:user_or_advisor_id] = advisor.id
     session[:class_type] = advisor.class.name
-    redirect_to root_path
+    redirect_to advisors_path
   else
     flash[:login_fail] = "Please input the correct email/password!"
     redirect_to login_path
