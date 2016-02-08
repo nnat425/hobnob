@@ -42,7 +42,7 @@
         <% if logged_in? || admin_logged_in? %>
           <%= link_to "More Details", advisor_path(advisor), class: "book-appt-btn" %>
           <% else %>
-          <%= link_to "More Details", login_path, class: "book-appt-btn", id: "must-login" %>
+          <%= link_to "More Details", advisor_path(advisor), class: "book-appt-btn", id: "must-login" %>
           <% end %>
       </div>
     </div>

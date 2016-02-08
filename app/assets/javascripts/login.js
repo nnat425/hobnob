@@ -14,6 +14,7 @@ $(document).ready(function(){
         console.log(data)
         $("#login-pop").bPopup().close();
         $("#nav-bar-holder").replaceWith(data);
+        $("a.book-appt-btn").removeAttr("id");
       }).fail(function() {
         console.log("did not work");
       });
