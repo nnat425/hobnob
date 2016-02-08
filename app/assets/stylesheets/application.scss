@@ -2849,6 +2849,20 @@ height: 1em;
 width: 100%;
 }
 
-.login-pop {
+#login-pop {
   display: none;
+}
+
+#close-login {
+  background-color: #fff;
+  color: #2996cc;
+  float: right;
+  margin: 0px;
+  padding: 0px;
+
+}
+
+#close-btn-holder {
+  margin: 0px;
+  padding: 0px;
 }
