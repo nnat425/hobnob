@@ -15,6 +15,7 @@ class PreviousCompaniesController < ApplicationController
   def create
     @advisor = Advisor.find_by(id: params[:advisor_id])
     created_company = @advisor.previous_companies.build(previous_company_params)
+    @previous_companies = @advisor.previous_companies.order("created_at")
     if created_company.save
       if request.xhr?
         render partial: "new_previous_companies"
