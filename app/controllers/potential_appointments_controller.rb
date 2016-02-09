@@ -5,8 +5,9 @@ class PotentialAppointmentsController < ApplicationController
     advisor  = Advisor.find_by(id: params[:potential_appointment][:advisor_id])
     date = params[:appointment_date][:date].split('-')
     time = params[:potential_appointment].to_a.flatten
+
     if date[0] != nil
-      start_time = DateTime.new(date[0].to_i,date[1].to_i,date[2].to_i,time[7].to_i,time[9].to_i)
+      start_time = DateTime.new(date[0].to_i,date[1].to_i,date[2].to_i,time[9].to_i,time[11].to_i)
       if advisor.category.name == "Resume & Interview Preparation"
         end_time = start_time + 60.minutes
       else
