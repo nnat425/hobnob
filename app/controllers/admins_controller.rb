@@ -4,6 +4,7 @@ class AdminsController < ApplicationController
 
   def index #Shows Network Members
     @advisors = Advisor.all
+    @users = User.all
   end
 
   def new

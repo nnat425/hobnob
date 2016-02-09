@@ -173,7 +173,7 @@
         </div>
       </div>
 
-      <% if current_advisor == @advisor && !@advisor.category.nil? || session[:class_type] == "Admin" %>
+      <% if current_advisor == @advisor || session[:class_type] == "Admin" && !@advisor.category.nil?  %>
       <div class='small-12 medium-12 large-6 columns' id="appointment-form">
         <p class="advisor-profile-header">Create Connect Date & Time</p>
         <%= form_for @potential_appointment do |f| %>
@@ -322,14 +322,14 @@
            <% if pot_appointment.advisor == current_advisor && session[:class_type] == current_advisor.class.name && pot_appointment.booked_status? == false || session[:class_type] == "Admin" && pot_appointment.booked_status? == false %>
            <div class="row">
             <div class="small-12 medium-12 large-12 columns" id="edit-appt-btn">
-              <%= link_to "Edit",edit_potential_appointment_path(pot_appointment), class: "fa fa-edit" %>
+              <%= link_to "Edit",edit_potential_appointment_path(pot_appointment), class: "alternative-button" %>
             </div>
             <div class="small-12 medium-12 large-12 columns" id="edit-appt-btn">
-              <%= link_to "Delete",{:controller => 'potential_appointments', :action => 'destroy', :potential_appointment => pot_appointment.id}, :method => :delete, class: "fa fa-trash" %>
+              <%= link_to "Delete",{:controller => 'potential_appointments', :action => 'destroy', :potential_appointment => pot_appointment.id}, :method => :delete, class: "alternative-button" %>
             </div>
           </div>
           <% else %>
-          <p id="appointment-status">Appointment Status:<span id='booked'> Booked</p>
+          <p id="appointment-status">Status:<span id='booked'> Booked</p>
           <% end %>
         </div>
       </div>

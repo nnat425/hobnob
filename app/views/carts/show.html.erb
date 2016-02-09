@@ -56,6 +56,7 @@
     <% else %>
     <p class="subtotal-checkout"><%= "Subtotal (" + @cart.potential_appointments.count.to_s + " items): $" + @cart.total_price_regular.to_s %></p>
     <% end %>
+    <p id="cdn-notice-text">*All fees are in CDN dollars tax included.</p>
     <%= link_to "Checkout", new_order_path, class: "button" %>
     <% else %>
     <h1 id='cart-empty'>Your briefcase is empty!</h1>

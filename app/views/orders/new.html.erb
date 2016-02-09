@@ -48,6 +48,9 @@
         </div>
       </div>
       <% end %>
+      <div class="row" id="cdn-notice-holder">
+        <p id="cdn-notice-text">*All fees are in CDN dollars tax included.</p>
+      </div>
       <div class="row" id="order-total">
         <label>Order Total:</label>
         <% if current_user.student == true %>
@@ -56,6 +59,7 @@
         <p><%= "$" + current_cart.total_price_regular.to_s %></p>
         <% end %>
       </div>
+
     </div>
 
     <div id='order_div' class="small-12 medium-12 large-6 columns">

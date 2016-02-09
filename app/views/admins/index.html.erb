@@ -1,12 +1,12 @@
-<header class="edit_hero">
-  <img src="http://s3.amazonaws.com/hobnob-bucket-assets/city_header8.jpg"/>
-  <h1 id='net_mem_header'> Network Members </h1>
-</header>
+<div class="row" id="ribbon-header">
+</div>
+
 <div id="network-members-container">
 
 
   <div class="row">
     <div class="small-12 medium-12 large-12 columns">
+      <p class="table-name">Professionals</p>
       <table class="members-table">
         <thead>
           <th>First Name</th>
@@ -37,7 +37,43 @@
               <% else %>
               <td><%= link_to "",  {:action => :de_activate, :controller => :advisors, :id => advisor.id}, :method => :patch, class: "fa fa-check" %></td>
               <% end %>
-              <td><%= link_to "", advisor, :data => {:confirm => 'Are you sure you want to remove this advisor from the Network? This cannot be undone.'}, :method => :delete, class: "fa fa-trash" %> </td>
+              <td><%= link_to "", advisor, :data => {:confirm => 'Are you sure you want to remove this professional from the Network? This cannot be undone.'}, :method => :delete, class: "fa fa-trash" %> </td>
+            </tr>
+          </tbody>
+        </div>
+        <% end %>
+      </table>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-12 medium-12 large-12 columns">
+      <p class="table-name">Hob Nob Users</p>
+      <table class="members-table">
+        <thead>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Student</th>
+          <th>School</th>
+          <th>Program</th>
+          <th>Graduation Date</th>
+          <th>Delete</th>
+        </thead>
+
+        <% @users.each do |user| %>
+
+        <div class="row">
+          <tbody>
+            <tr>
+              <td><%= link_to user.first_name, user_path(user) %> </td>
+              <td><%= user.last_name %></td>
+              <td><%= user.email %></td>
+              <td><%= user.student %></td>
+              <td><%= user.school %></td>
+              <td><%= user.program %></td>
+              <td><%= user.graduation_date %></td>
+              <td><%= link_to "", user, :data => {:confirm => 'Are you sure you want to remove this user? This cannot be undone.'}, :method => :delete, class: "fa fa-trash" %> </td>
             </tr>
           </tbody>
         </div>
