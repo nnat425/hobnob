@@ -1,4 +1,4 @@
-<% if @advisors == [] || @advisors == nil %>
+<% if @advisors == [] || @advisors.nil? %>
 <p id="no-matches-message">Sorry, there were no professionals that matched your search!</p>
 <% else %>
 <div id="search-results-flash"><p><%= flash[:message] %></p></div>
@@ -39,7 +39,11 @@
     </div>
     <div class="row">
       <div class="small-12 medium-12 large-12 columns">
-        <%= link_to "More Details", advisor_path(advisor), id: "book-appt-btn" %>
+        <% if logged_in? || admin_logged_in? %>
+          <%= link_to "More Details", advisor_path(advisor), class: "book-appt-btn" %>
+          <% else %>
+          <%= link_to "More Details", advisor_path(advisor), class: "book-appt-btn", id: "must-login" %>
+          <% end %>
       </div>
     </div>
   </div>

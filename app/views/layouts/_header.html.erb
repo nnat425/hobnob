@@ -1,4 +1,4 @@
-<div class='fixed'>
+<div class='fixed' id="nav-bar-holder">
   <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
 
   <nav class="menu show-for-large-up ">
@@ -29,7 +29,7 @@
       <li><%= link_to "Show Network", network_members_path %>
         <li><%= link_to "Logout", admin_logout_path, method: :delete, id: "logout-link" %></li>
         <% else %>
-        <li><%= link_to "Login", login_path %></li>
+        <li><%= link_to "Login", login_path, id: "login-link" %></li>
         <li class=""><a class="signup" href="/users/new" data-reveal-id="myModal">Signup</a></li>
         <% end %>
       </ul>

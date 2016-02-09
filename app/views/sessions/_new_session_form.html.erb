@@ -1,0 +1,61 @@
+<div class="small-12 medium-8 medium-centered large-4 large-centered columns">
+    <div class="login-panel">
+      <div class="row" id="close-btn-holder">
+        <button id='close-login' class='fa fa-times'></button>
+      </div>
+      <div class="row">
+        <h2 id="login-header"> Login!</h2>
+      </div>
+
+      <div class="small-12 medium-11 medium-centered large-10 large-centered columns">
+
+
+      <% if flash[:login_fail] || flash[:access_denied] %>
+          <div data-alert class="alert-box alert radius">
+            <%= flash[:access_denied] %>
+            <%= flash[:login_fail] %>
+          </div>
+        <% end %>
+        </div>
+      <%= form_for :session, url: '/login', html: {id: "login"} do |f| %>
+
+      <div class="row">
+        <div class="small-12 medium-11 medium-centered large-10 large-centered columns" id="signup-link-holder">
+          <%= link_to "Signup", new_user_path, id: "pop-signup-link" %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-12 medium-11 medium-centered large-10 large-centered columns">
+          <%= f.label "Email" %>
+          <%= f.text_field :email, placeholder: "Email" %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-12 medium-11 medium-centered large-10 large-centered columns">
+          <%= f.label "Password" %>
+          <%= f.password_field :password, placeholder: "Password" %>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="large-10 large-centered small-11 small-centered columns">
+            <%= link_to "Forgot Password?", new_password_reset_path, id:"forgot-password-link" %>
+          </div>
+        </div>
+
+
+
+      <div class="row">
+        <div class="small-12 medium-11 medium-centered large-10 large-centered columns">
+          <%=f.submit "Login", :class => "full-button", id: "submit-login" %>
+        </div>
+      </div>
+      <% end %>
+
+
+
+    </div>
+
+
+  </div>

@@ -13,7 +13,11 @@ class SessionsController < ApplicationController
       end
       session[:user_or_advisor_id] = user.id
       session[:class_type] = user.class.name
-      redirect_to root_path
+      if request.xhr?
+        render partial: "layouts/header"
+      else
+        redirect_to advisors_path
+      end
     else
       flash[:login_fail] = "Please input the correct email/password!"
       redirect_to login_path
@@ -21,7 +25,11 @@ class SessionsController < ApplicationController
   elsif advisor.try(:authenticate, session_params[:password])
     session[:user_or_advisor_id] = advisor.id
     session[:class_type] = advisor.class.name
-    redirect_to root_path
+    if request.xhr?
+      render partial: "layouts/header"
+    else
+      redirect_to advisors_path
+    end
   else
     flash[:login_fail] = "Please input the correct email/password!"
     redirect_to login_path
