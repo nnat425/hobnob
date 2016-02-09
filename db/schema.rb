@@ -11,14 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160209180001) do
+ActiveRecord::Schema.define(version: 20160209180430) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "admins", force: :cascade do |t|
-    t.string "username",        null: false
-    t.string "password_digest", null: false
+    t.string   "username",        null: false
+    t.string   "password_digest", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "advisors", force: :cascade do |t|
@@ -122,12 +124,14 @@ ActiveRecord::Schema.define(version: 20160209180001) do
   add_index "order_transactions", ["order_id"], name: "index_order_transactions_on_order_id", using: :btree
 
   create_table "orders", force: :cascade do |t|
-    t.integer "cart_id"
-    t.string  "ip_address"
-    t.string  "first_name"
-    t.string  "last_name"
-    t.string  "card_type"
-    t.date    "card_expires_on"
+    t.integer  "cart_id"
+    t.string   "ip_address"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "card_type"
+    t.date     "card_expires_on"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "potential_appointments", force: :cascade do |t|
@@ -141,10 +145,12 @@ ActiveRecord::Schema.define(version: 20160209180001) do
   end
 
   create_table "previous_companies", force: :cascade do |t|
-    t.integer "advisor_id"
-    t.string  "name"
-    t.string  "job_title"
-    t.string  "roles"
+    t.integer  "advisor_id"
+    t.string   "name"
+    t.string   "job_title"
+    t.string   "roles"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: :cascade do |t|
