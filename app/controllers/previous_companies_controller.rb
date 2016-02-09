@@ -37,7 +37,7 @@ class PreviousCompaniesController < ApplicationController
   def update
     previous_company = PreviousCompany.find_by(id: params[:id])
     @advisor = previous_company.advisor
-    @previous_companies = @advisor.previous_companies.order("created_at")
+    @previous_companies = @advisor.previous_companies.order("id ASC")
     if previous_company.save
       previous_company.update(previous_company_params)
       render partial: "new_previous_companies"
@@ -50,6 +50,7 @@ class PreviousCompaniesController < ApplicationController
   def destroy
     company = PreviousCompany.find_by(id: params[:id])
     @advisor = company.advisor
+    @previous_companies = @advisor.previous_companies.order("id ASC")
     if !company.nil?
       company.destroy
     end

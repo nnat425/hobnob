@@ -62,7 +62,7 @@ class AdvisorsController < ApplicationController
       if (advisor.publish == true && advisor.account_activated == true) || (current_advisor == advisor) || admin_logged_in?
         @advisor = advisor
         advisor_appointments = @advisor.potential_appointments
-        @previous_companies = @advisor.previous_companies.order("created_at DESC")
+        @previous_companies = @advisor.previous_companies.order("id ASC")
         @advisor_appointments = advisor_appointments.sort_by { |appointment| appointment.start_time.strftime("%b,%d") }
         @potential_appointment = PotentialAppointment.new
       else
@@ -76,7 +76,7 @@ class AdvisorsController < ApplicationController
 
   def edit
     @advisor = Advisor.find_by(id: params[:id])
-    @previous_companies = @advisor.previous_companies.order("created_at DESC")
+    @previous_companies = @advisor.previous_companies.order("id ASC")
     @previous_company = PreviousCompany.new
   end
 
