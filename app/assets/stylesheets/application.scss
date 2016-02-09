@@ -2894,3 +2894,15 @@ p#cdn-notice-text {
   font-size: .7em;
   letter-spacing: 0px;
 }
+#cdn-notice-holder {
+  text-align: right;
+  padding-right: 1em;
+}
+
+#cdn-notice-holder p {
+  color: #282828;
+  font-size: .7em;
+  letter-spacing: 0px;
+  font-family: "Open Sans";
+  font-weight: 300;
+}
