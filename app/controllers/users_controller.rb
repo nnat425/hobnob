@@ -14,7 +14,11 @@ class UsersController < ApplicationController
       flash[:message] = "Thanks for signing up!"
       UserMailer.email_verification(user).deliver_now
       user.carts.create
-      redirect_to user_path(user)
+      if request.xhr?
+        render partial: "layouts/header"
+      else
+        redirect_to user_path(user)
+      end
     else
       flash[:errors] = user.errors.full_messages
       redirect_to new_user_path
