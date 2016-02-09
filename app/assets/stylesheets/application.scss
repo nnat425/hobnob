@@ -2033,7 +2033,7 @@ margin-top: -1.05em;
 background-color: #fff;
 }
 table.members-table {
-margin-top: 1.5em;
+
 margin-bottom: 1.5em;
 margin-left: auto;
 margin-right: auto;
@@ -2080,21 +2080,19 @@ color: #0198E1;
 color: #000;
 transition: all .3s ease-in-out;
 }
-#net_mem_header{
-text-align:center;
-margin-top: -3em;
-font-family: "Open Sans";
-font-weight: bold;
-letter-spacing: 2px;
-color: #fff;
-font-size: 5em;
-text-align: right;
-margin-bottom: -.3em;
+
+
+p.table-name {
+  font-family: "Open Sans";
+  font-size: 1.75em;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #525C65;
+  margin-top: 1em;
+
+
 }
-
-
-
-
 
 #parallax-footer {
 position: absolute;
