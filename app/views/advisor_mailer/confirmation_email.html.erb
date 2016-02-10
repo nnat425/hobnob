@@ -1,7 +1,6 @@
 <p><%= "Hi " + @advisor.firstname + "!" %></p>
 <br>
 <p><%="Your appointment was booked by " + @user.first_name  %></p>
-<br>
 <p><%="Appointment title: " + @appointment.title %></p>
 <p><%="Date & Time: " +  @appointment.start_time.strftime("%A, %B %d, %Y at %l:%M %p") +""+ @appointment.end_time.strftime(" to %l:%M %p") %> </p>
 
