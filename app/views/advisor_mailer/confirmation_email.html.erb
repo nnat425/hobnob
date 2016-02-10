@@ -1,11 +1,10 @@
-<h5><%= "Hi " + @advisor.firstname + "!" %></h5>
+<p><%= "Hi " + @advisor.firstname + "!" %></p>
 <br>
 <p><%="Your appointment was booked by " + @user.first_name  %></p>
 <br>
 <p><%="Appointment title: " + @appointment.title %></p>
-<br>
 <p><%="Date & Time: " +  @appointment.start_time.strftime("%A, %B %d, %Y at %l:%M %p") +""+ @appointment.end_time.strftime(" to %l:%M %p") %> </p>
 
 <h5>Within 24 hours you will be notified with the next steps!</h5>
 <br>
-<h3>Thank you for using Hobnob </h3>
+<p>Thank you for using Hobnob </p>
