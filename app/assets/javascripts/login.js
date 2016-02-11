@@ -17,7 +17,7 @@ $(document).ready(function(){
         console.log("did not work");
       });
     });
-    $("#close-btn-holder").on("click", "#close-login", function() {
+    $("#login-pop").on("click", "#close-login", function() {
       $("#login-pop").bPopup().close();
     });
 
