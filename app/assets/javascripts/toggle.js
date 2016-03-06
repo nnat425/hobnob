@@ -68,6 +68,29 @@ $(document).ready(function(){
   });
 
 
+
+
+  $(".edit-comment").on("click",function(event){
+    event.preventDefault();
+    var id = $(this).attr('data-form-id');
+    console.log(id);
+    $.ajax({
+      url: "/comments/" + id + "/edit",
+      method: 'get'
+    }).done(function(data){
+      var form = $(data).filter('.edit_comment')
+      $('#content').html(form);
+      $("#close-comment-btn").on("click", function(
+        event){
+        event.preventDefault();
+        form.slideUp();
+      });
+    });
+  });
+
+
+
+
   $("#edit_signup").on("click", "#investment_banking_info_pop", function(event) {
     event.preventDefault();
     $("#investment_banking_popup").slideToggle();
@@ -99,25 +122,25 @@ $(document).ready(function(){
   });
 
   $('#investment_banking_info_pop_network_phone').on("click",function(event){
-  event.preventDefault();
-  $('#investment_banking_popup_network_phone').slideToggle();
-});
-$('#asset_management_info_pop_network_phone').on("click", function(event){
-  event.preventDefault();
-  $('#asset_management_popup_network_phone').slideToggle();
-});
-$('#corporate_finance_info_pop_network_phone').on("click", function(event){
-  event.preventDefault();
-  $('#corporate_finance_popup_network_phone').slideToggle();
-});
-$('#other_finance_info_pop_network_phone').on("click", function(event){
-  event.preventDefault();
-  $('#other_finance_popup_network_phone').slideToggle();
-});
-$('#resume_interview_info_pop_network_phone').on("click", function(event){
-  event.preventDefault();
-  $('#resume_interview_popup_network_phone').slideToggle();
-});
+    event.preventDefault();
+    $('#investment_banking_popup_network_phone').slideToggle();
+  });
+  $('#asset_management_info_pop_network_phone').on("click", function(event){
+    event.preventDefault();
+    $('#asset_management_popup_network_phone').slideToggle();
+  });
+  $('#corporate_finance_info_pop_network_phone').on("click", function(event){
+    event.preventDefault();
+    $('#corporate_finance_popup_network_phone').slideToggle();
+  });
+  $('#other_finance_info_pop_network_phone').on("click", function(event){
+    event.preventDefault();
+    $('#other_finance_popup_network_phone').slideToggle();
+  });
+  $('#resume_interview_info_pop_network_phone').on("click", function(event){
+    event.preventDefault();
+    $('#resume_interview_popup_network_phone').slideToggle();
+  });
 
 
 

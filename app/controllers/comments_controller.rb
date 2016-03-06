@@ -9,7 +9,18 @@ class CommentsController < ApplicationController
   end
 
   def edit
-  @comment = Comment.find_by(id: params[:id])
+    @comment = Comment.find_by(id: params[:id])
+    if request.xhr?
+      render "welcome/_comments_edit_form"
+    else
+      puts "Something failed"
+    end
+  end
+
+  def update
+    comment = Comment.find_by(id: params[:id])
+    comment.update(comment_params)
+    redirect_to root_path
   end
 
   def destroy
