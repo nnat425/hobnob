@@ -11,12 +11,6 @@ $(document).ready(function(){
 
   $("#learn-toggle").hide();
 
-  $("#learn-more").on("click", "#home-learn-link", function(event) {
-    event.preventDefault();
-    $("#learn-toggle").fadeToggle();
-
-  });
-
   $(".home-box-toggle").hide();
   $(".about-toggle").hide();
 

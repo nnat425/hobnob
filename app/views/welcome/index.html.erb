@@ -75,7 +75,7 @@
     <div class="line-break"></div>
     <div class="row" id="learn-more">
       <h3 class="standard-heading">Need more information?</h3>
-      <%= link_to "More", root_path, class: "button", id: "home-learn-link" %>
+      <%= link_to "About", about_path, class: "button", id: "home-learn-link" %>
     </div>
     <div class="row" id="learn-toggle">
       <div class="small-12 medium-12 large-10 large-centered columns" id="home-toggle-info">
@@ -102,7 +102,8 @@
       <div id="comment-holder">
         <% @user_comments.each do |comment| %>
         <p class="hn-comment">"<%= comment.body %>"</p>
-        <p class="commenter-name">- <%= comment.subtext %></p>
+        <p class="commenter-name">- <%= comment.subtext %> <%= link_to "", comment, :data => {:confirm => 'Are you sure you want to remove this comment?'}, :method => :delete, class: "fa fa-trash" %></p>
+
         <% end %>
       </div>
       <% end %>

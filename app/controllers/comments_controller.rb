@@ -8,7 +8,19 @@ class CommentsController < ApplicationController
     end
   end
 
-private
+  def edit
+  @comment = Comment.find_by(id: params[:id])
+  end
+
+  def destroy
+    comment = Comment.find_by(id: params[:id])
+    comment.destroy
+    redirect_to root_path
+  end
+
+
+
+  private
 
   def comment_params
     params.require(:comment).permit(:subtext,:body,:charity)
