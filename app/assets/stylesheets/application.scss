@@ -240,10 +240,17 @@ position: fixed;
   background-size: cover;
   overflow: hidden;
   position: fixed;
+  background-color: #232323;
+  width: 100%;
+  height: 300px;
 }
 
-#about_hero img {
-width: 100%;
+#about-header {
+  font-size: 3.5em;
+  font-family: "Open Sans";
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-align: center;
 }
 #home-hero {
 background-size: cover;
@@ -604,10 +611,6 @@ border-bottom: 1px solid #eeeeee;
 padding: 2em;
 }
 
-.about_container_1:hover{
-color:black;
-}
-
 #about_container_1_subtext p {
 font-family: "Open Sans";
 font-weight: 300;
@@ -621,18 +624,32 @@ text-align: center;
 
 
 .about_container_2 {
-background-color: #000;
+background-color: #f7f7f7;
 background-size: cover;
 overflow: hidden;
-margin-top:5em;
-padding-left: 1em;
-padding-right: 1em;
+padding: 1em;
+padding-top: 2em;
 }
 
-.about_container_2 .row {
-padding-bottom: 2.5em;
+.steps-info-header {
+  font-size: 2em;
+  font-family: "Open Sans";
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #282828;
 }
 
+.steps-info {
+  color: #404040;
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: .85em;
+}
+
+#fees-info {
+  text-align: center;
+}
 
 #simple-steps-header {
 text-align: center;
@@ -646,32 +663,27 @@ letter-spacing: 2px;
 
 #about-box{
 padding-top:3em;
+padding: 1em;
 }
 
-#about-box-fee{
-padding-top:3em;
+
+#about-box h2 {
+  margin-left: 18.5px;
 }
-
-#about-box h1 {
-text-align: center;
-margin-bottom: 1em;
-
-}
-
-#about-box h1 i {
-color: #fff;
-font-weight: 300;
+#about-box h2 i {
+color: #2996cc;
+text-align: left;
 
 }
 
 #about-box h3 {
-color: #2996cc;
+color: #282828;
 font-family: "Open Sans";
 font-weight: 300;
-text-transform: uppercase;
 letter-spacing: 2px;
-text-align: center;
-margin-bottom: 1.5em;
+text-align: left;
+font-size: 1.5em;
+margin-left: 18.5px;
 
 }
 
@@ -686,13 +698,6 @@ background-size: cover;
 background: url("http://s3.amazonaws.com/hobnob-bucket-assets/ribbon-header.png");
 height: 80px;
 background-size: cover;
-}
-#about-box p {
-color: #C0C0C0;
-font-family: "Open Sans";
-font-weight: 300;
-letter-spacing: 1px;
-font-size: 1em;
 }
 
 #advisor-index-panel {
@@ -1796,12 +1801,11 @@ top: 850px;
 }
 
 #about_parallax_content {
-top: 700px;
+top: 300px;
 max-width: 100%;
 padding-bottom: 50px;
 background-color: #fff;
 position: relative;
-margin-top:-40px;
 }
 
 
@@ -1818,29 +1822,8 @@ margin-top: -100px;
 #main_hero_small {
 background-color: black;
 }
-#about_hero_small {
-background-color: black;
-padding-bottom: 0px;
 
-}
 
-#about_hero_text {
-height: 20em;
-padding-top: 7em;
-padding-left: 1em;
-padding-right: 1em;
-text-align: center;
-margin-bottom: -10px;
-}
-
-#about_hero_text p{
-color: white;
-font-family: "Open Sans";
-font-weight: 300;
-font-size: 1.75em;
-letter-spacing: 2px;
-
-}
 #intro-text {
 margin-top: 0em;
 text-align: center;
@@ -1895,20 +1878,18 @@ margin-top: -.5em;
 }
 
 #about-subtext{
-color: #fff;
-text-align: right;
-opacity: .9;
-padding: 2.5em;
-
+text-align: center;
+padding-top: 10.5em;
 
 }
 
 #about-subtext p{
-font-size: 1.5rem;
+font-size: 2rem;
 letter-spacing: 2px;
 font-weight: 300;
 font-family: "Open Sans";
-margin-top: -30em;
+opacity: .9;
+color: #fff;
 }
 
 
@@ -2022,15 +2003,6 @@ margin-right: auto;
 background-color: #F8F8F8;
 }
 
-
-h1#about-page-header {
-color: #fff;
-font-size: 8em;
-font-weight: bold;
-margin-top: -1.05em;
-
-
-}
 
 #network-members-container {
 background-color: #fff;
@@ -2595,40 +2567,99 @@ background-color: #fff;
 color: #C0C0C0;
 }
 
-.search-list{
-color: #FAFAFA;
-}
+.search-list {
 
+}
 .search-list li {
 font-family: "Open Sans";
 font-weight: 300;
-letter-spacing: 1px;
-font-size: 1em;
+letter-spacing: .5px;
+font-size: .85em;
+list-style: none;
+color: #696969;
+
 }
 
-#buttons-holder{
-text-align:center;
+.possible-questions-list li {
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: .85em;
+
+}
+.steps-links {
+  float: left;
+  margin-left: 18.5px;
+}
+.steps-link {
+  color: #2996cc;
+  letter-spacing: 1px;
+  font-size: .75em;
+  background: none;
+  padding: 0;
+  display: block;
+  margin-right: 0;
 }
 
-#questions{
-margin-top:9em;
+.steps-link:hover {
+  color: #282828;
+  transition: all .3s ease-in-out;
+  background: none;
+
 }
 
-#fees{
-margin-top:9em;
+div.steps-info-box {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
 }
 
-#blanket {
-background-color:#111;
-opacity: 0.65;
-position:fixed;
-z-index: 999;
-top:0px;
-left:0px;
-width:100%;
-height:100%
+#steps-box-years {
+  padding-left: 5em;
+  padding-right: 5em;
 }
 
+#steps-box-fees {
+  padding-left: 5em;
+  padding-right: 5em;
+}
+#steps-box-fees {
+
+}
+
+.box-rate {
+  font-family: "Open Sans";
+  font-size: .85em;
+  letter-spacing: 1px;
+}
+.triple-box {
+  border-radius: 5px;
+  border: 1px solid #dedede;
+  padding: 2em;
+  height: 350px;
+}
+.box-info-text {
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: .85em;
+  letter-spacing: .5px;
+  color: #8a8a8a;
+}
+
+.box-subheader {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: .85em;
+  letter-spacing: 1px;
+  color: #282828;
+
+
+}
+.small-info-text {
+  color: #bebebe;
+  font-size: .7em;
+  font-family: "Open Sans";
+  font-weight: 300;
+
+}
 .about-first-p{
 text-align:center;
 padding:2em;
@@ -2838,12 +2869,6 @@ font-size:0.6em;
 color: #2996cc;
 }
 
-#button-phone{
-text-align:center;
-margin:auto;
-border-bottom:solid #2996cc 1px;
-padding-bottom:1em;
-}
 
 .spacer {
 height: 1em;
@@ -2909,9 +2934,10 @@ p#cdn-notice-text {
 }
 
 p#cdn-notice-about {
-  color: #cccccc;
+  color: #282828;
+  text-align: left;
+  margin-left: 35px;
 }
-
 .edit_comment{
 width:600px;
 text-align:center;
