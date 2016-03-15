@@ -3,9 +3,10 @@
   <img src="assets/network_photo.png"/>
 </header>
 
+
 <div class="row" id="advisors-index-container">
 
-  <div class="small-12 medium-12 large-12 columns" id="left-category-bar">
+  <div class="small-12 medium-12 large-12 hide-for-small columns" id="left-category-bar">
     <%= form_tag(advisors_path, :method => "get", id: "advisors-filter-form") do %>
     <div class="advisors-filter-subheader">
       <p>AREAS of EXPERTISE</p><%= link_to "", advisors_path, class: "fa fa-angle-down fa-lg", id: "show-options-categories" %>
@@ -163,8 +164,169 @@
     </div>
     <% end %>
   </div>
+
+
+
 </div>
 
+<div class="small-12 medium-12 large-12 show-for-small-only columns" id="phone-left-category-bar">
+    <%= form_tag(advisors_path, :method => "get", id: "advisors-filter-form") do %>
+    <div class="advisors-filter-subheader">
+      <p>AREAS of EXPERTISE</p><%= link_to "", advisors_path, class: "fa fa-angle-down fa-lg", id: "phone-show-options-categories" %>
+
+    </div>
+    <div class="row" id="phone-categories-toggle">
+      <div class="index-categories-list" >
+        <%= check_box_tag "filter[category][]", "Investment Bank/Capital Markets (Sell Side)", false, class: "advisors-filter-checkbox" %>
+        <label>Investment Bank/Capital Markets (Sell Side)<%= link_to "","#", class: "fa fa-info-circle", id: "investment_banking_info_pop_network_phone" %></label>
+        <div class="row">
+          <%= render partial: "/categories/investment_banking_network_phone" %>
+        </div>
+      </div>
+
+      <div class="index-categories-list" >
+
+        <%= check_box_tag "filter[category][]", "Asset Management (buy side)", false, class: "advisors-filter-checkbox" %>
+
+        <label>Asset Management (buy side)<%= link_to "","#", class: "fa fa-info-circle", id: "asset_management_info_pop_network_phone" %></label>
+        <div class="row">
+          <%= render partial: "/categories/asset_management_network_phone" %>
+        </div>
+      </div>
+      <div class="index-categories-list" >
+
+        <%= check_box_tag "filter[category][]", "Corporate Finance", false, class: "advisors-filter-checkbox" %>
+        <label>Corporate Finance<%= link_to "","#", class: "fa fa-info-circle", id: "corporate_finance_info_pop_network_phone" %></label>
+        <div class="row">
+          <%= render partial: "/categories/corporate_finance_network_phone" %>
+        </div>
+      </div>
+      <div class="index-categories-list" >
+
+        <%= check_box_tag "filter[category][]", "Other Areas of Expertise in Finance", false, class: "advisors-filter-checkbox" %>
+        <label>Other Areas of Expertise in Finance<%= link_to "","#", class: "fa fa-info-circle", id: "other_finance_info_pop_network_phone" %></label>
+        <div class="row">
+          <%= render partial: "/categories/other_finance_network_phone" %>
+        </div>
+      </div>
+      <div class="index-categories-list" >
+
+        <%= check_box_tag "filter[category][]", "Resume & Interview Preparation", false, class: "advisors-filter-checkbox" %>
+        <label>Resume & Interview Prep<%= link_to "","#", class: "fa fa-info-circle", id: "resume_interview_info_pop_network_phone" %></label>
+        <div class="row">
+          <%= render partial: "/categories/resume_interview_network_phone" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="advisors-filter-subheader">
+      <p>Location</p><%= link_to "", advisors_path, class: "fa fa-angle-down fa-lg", id: "phone-show-options-locations" %>
+    </div>
+    <div class="row" id="phone-locations-toggle">
+
+      <div class="index-categories-list" >
+
+        <%= check_box_tag "filter[location][]", "Toronto", false, class: "advisors-filter-checkbox" %>
+        <label>Toronto</label>
+      </div>
+      <div class="index-categories-list" >
+
+        <%= check_box_tag "filter[location][]", "Calgary", false, class: "advisors-filter-checkbox" %>
+
+        <label>Calgary</label>
+      </div>
+      <div class="index-categories-list" >
+
+        <%= check_box_tag "filter[location][]", "Vancouver", false, class: "advisors-filter-checkbox" %>
+        <label>Vancouver</label>
+      </div>
+
+      <div class="index-categories-list" >
+
+        <%= check_box_tag "filter[location][]", "Montreal", false, class: "advisors-filter-checkbox" %>
+        <label>Montreal</label>
+      </div>
+
+
+      <div class="index-categories-list" >
+
+        <%= check_box_tag "filter[location][]", "NYC", false, class: "advisors-filter-checkbox" %>
+        <label>NYC</label>
+      </div>
+      <div class="index-categories-list" >
+
+        <%= check_box_tag "filter[location][]", "Houston", false, class: "advisors-filter-checkbox" %>
+        <label>Houston</label>
+      </div>
+      <div class="index-categories-list" >
+
+        <%= check_box_tag "filter[location][]", "San Francisco", false, class: "advisors-filter-checkbox" %>
+        <label>San Francisco</label>
+      </div>
+      <div class="index-categories-list" >
+
+        <%= check_box_tag "filter[location][]", "Boston", false, class: "advisors-filter-checkbox" %>
+        <label>Boston</label>
+      </div>
+      <div class="index-categories-list" >
+
+        <%= check_box_tag "filter[location][]", "Chicago", false, class: "advisors-filter-checkbox" %>
+        <label>Chicago</label>
+      </div>
+      <div class="index-categories-list" >
+
+        <%= check_box_tag "filter[location][]", "London", false, class: "advisors-filter-checkbox" %>
+        <label>London</label>
+      </div>
+
+      <div class="index-categories-list" >
+
+        <%= check_box_tag "filter[location][]", "Singapore", false, class: "advisors-filter-checkbox" %>
+        <label>Singapore</label>
+      </div>
+      <div class="index-categories-list" >
+
+        <%= check_box_tag "filter[location][]", "Hong Kong", false, class: "advisors-filter-checkbox" %>
+        <label>Hong Kong</label>
+      </div>
+      <div class="index-categories-list" >
+
+        <%= check_box_tag "filter[location][]", "Dubai", false, class: "advisors-filter-checkbox" %>
+        <label>Dubai</label>
+      </div>
+      <div class="index-categories-list" >
+
+        <%= check_box_tag "filter[location][]", "Shanghai", false, class: "advisors-filter-checkbox" %>
+        <label>Shanghai</label>
+      </div>
+
+    </div>
+
+    <div class="advisors-filter-subheader">
+      <p>Years of Experience</p><%= link_to "", advisors_path, class: "fa fa-angle-down fa-lg", id: "phone-show-options-years" %>
+    </div>
+    <div class="row" id="phone-experience-toggle">
+      <div class="index-categories-list" >
+
+        <%= check_box_tag "filter[years_of_experience][]", "< 5 years", false, class: "advisors-filter-checkbox" %>
+        <label>Less than 5 years</label>
+      </div>
+      <div class="index-categories-list" >
+
+        <%= check_box_tag "filter[years_of_experience][]", "5 - 15 years", false, class: "advisors-filter-checkbox" %>
+        <label>5 to 15 years</label>
+      </div>
+      <div class="index-categories-list" >
+
+        <%= check_box_tag "filter[years_of_experience][]", "> 15 years", false, class: "advisors-filter-checkbox" %>
+        <label>More than 15 years</label>
+      </div>
+    </div>
+    <div class="row">
+      <button class="fa fa-search" id="advisor-search-btn" type="submit"> SEARCH</button>
+    </div>
+    <% end %>
+  </div>
 <div class="row" id="login-pop">
   <%= render partial: "sessions/new_session_form" %>
 </div>

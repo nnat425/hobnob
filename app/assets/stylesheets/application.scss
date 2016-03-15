@@ -934,9 +934,20 @@ overflow: hidden;
 }
 
 #left-category-bar {
-background-color: #000;
+background-color: transparent;
 text-align: center;
 padding: 1.5em;
+
+
+}
+
+#phone-left-category-bar {
+background-color: #000;
+text-align: center;
+margin-top: 150px;
+position: relative;
+
+
 
 }
 .advisors-filter-subheader {
@@ -1731,7 +1742,8 @@ letter-spacing: 1px;
 }
 
 #advisors-index-container {
-background-color: #F8F8F8;
+background-color: #000;
+margin-top: -10em;
 
 }
 

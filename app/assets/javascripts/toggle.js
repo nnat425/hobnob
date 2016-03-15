@@ -54,6 +54,27 @@ $(document).ready(function(){
   });
 
 
+  $("#phone-categories-toggle").hide();
+  $("#phone-locations-toggle").hide();
+  $("#phone-experience-toggle").hide();
+
+  $("#phone-show-options-categories").on("click", function(event) {
+    event.preventDefault();
+    $("#phone-categories-toggle").slideToggle();
+
+  });
+
+  $("#phone-show-options-locations").on("click", function(event) {
+    event.preventDefault();
+    $("#phone-locations-toggle").slideToggle();
+
+  });
+  $("#phone-show-options-years").on("click", function(event) {
+    event.preventDefault();
+    $("#phone-experience-toggle").slideToggle();
+  });
+
+
   $("#add-comment-btn").on("click", function(event) {
     event.preventDefault();
     $("#comments-form-holder").slideDown();
