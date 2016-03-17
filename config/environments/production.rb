@@ -20,13 +20,13 @@ Rails.application.configure do
   # your application in memory, allowing both threaded web servers
   # and those relying on copy on write to perform better.
 
-  config.after_initialize do
-    ActiveMerchant::Billing::Base.mode = :production
-    ::GATEWAY = ActiveMerchant::Billing::PaypalGateway.new(
-     :login => ENV["PAYPAL_LOGIN"],
-     :password => ENV["PAYPAL_PASSWORD"],
-     :signature => ENV["PAYPAL_SIGNATURE"]
-     )
+  # config.after_initialize do
+  #   ActiveMerchant::Billing::Base.mode = :production
+  #   ::GATEWAY = ActiveMerchant::Billing::PaypalGateway.new(
+  #    :login => ENV["PAYPAL_LOGIN"],
+  #    :password => ENV["PAYPAL_PASSWORD"],
+  #    :signature => ENV["PAYPAL_SIGNATURE"]
+  #    )
   end
 
   # Rake tasks automatically ignore this option for performance.
