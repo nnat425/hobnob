@@ -17,7 +17,7 @@ gem 'delayed_job_active_record'
 gem "daemons"
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-gem 'activemerchant'
+# gem 'activemerchant'
 
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
