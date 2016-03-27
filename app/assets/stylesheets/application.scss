@@ -672,6 +672,7 @@ letter-spacing: 2px;
 
 .about-box{
 padding:1em;
+padding-top: 2em;
 border: 1px solid #ccc;
 border-radius: 5px;
 background-color: #fff;
@@ -3033,4 +3034,8 @@ text-align:center;
 margin:auto;
 background-color: #F8F8F8;
 padding: 2.5em;
+}
+
+a.fa-info-circle {
+  color: #2996cc;
 }
