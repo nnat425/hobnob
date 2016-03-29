@@ -20,7 +20,6 @@
 
       <% if session[:class_type] == "User" %>
       <li><%= link_to "Profile",user_path(session[:user_or_advisor_id]) %></li>
-      <%= link_to " My Briefcase", cart_path(current_user.carts.last), class: "fa fa-briefcase"%>
       <% else %>
       <li><%= link_to "Profile", advisor_path(session[:user_or_advisor_id]) %></li>
       <% end %>
@@ -55,7 +54,6 @@
       <% if logged_in? %>
       <% if session[:class_type] == "User" %>
       <li><%= link_to "Profile",user_path(session[:user_or_advisor_id]) %></li>
-      <li><%= link_to " My Briefcase", cart_path(current_user.carts.last), class: "fa fa-briefcase"%></li>
       <% else %>
       <li><%= link_to "Profile", advisor_path(session[:user_or_advisor_id]) %></li>
       <% end %>
