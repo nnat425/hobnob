@@ -13,8 +13,7 @@ class CartsController < ApplicationController
       else
         current_cart.potential_appointments.push(potential_appointment)
         current_cart.update(checked_out?: false)
-        flash[:added_to_cart] = "Successfully Added To Briefcase!"
-        redirect_to advisor_path
+        redirect_to new_order_path
       end
     else
       redirect_to login_path
@@ -23,9 +22,11 @@ class CartsController < ApplicationController
 
 #Deleting an item from cart
 def destroy
-  current_cart.potential_appointments.delete(PotentialAppointment.find_by(id: params[:potential_appointment]))
-  flash[:item_remove] = 'The appointment has been removed your briefcase'
-  redirect_to cart_path(params[:id])
+  current_cart.potential_appointments = []
+  redirect_to advisors_path
+  # current_cart.potential_appointments.delete(PotentialAppointment.find_by(id: params[:potential_appointment]))
+  # flash[:item_remove] = 'The appointment has been removed your briefcase'
+  # redirect_to cart_path(params[:id])
 end
 
 
